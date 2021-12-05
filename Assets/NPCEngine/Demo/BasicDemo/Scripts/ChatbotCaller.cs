@@ -6,6 +6,7 @@ using UnityEngine.UI;
 using NPCEngine;
 using NPCEngine.API;
 using NPCEngine.Utility;
+using NPCEngine.Components;
 
 public class ChatbotCaller : MonoBehaviour
 {

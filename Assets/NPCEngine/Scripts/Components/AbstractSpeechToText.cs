@@ -29,6 +29,7 @@ namespace NPCEngine.Components
 
         // PlayerCharacter subscribes to this event to get the Speech-to-Text result
         public event Action<string> OnSpeechRecognized = new Action<string>(s => { });
+        public event Action<string> OnSpeechRecognitionFailed = new Action<string>(s => { });
 
         private string context = "_";
         protected void SpeechRecognized(string result)

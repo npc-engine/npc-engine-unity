@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This script is used to rotate characters towards the camera during dialogue.
+/// </summary>
 public class LerpRotate : MonoBehaviour
 {
     public Vector3 axis;

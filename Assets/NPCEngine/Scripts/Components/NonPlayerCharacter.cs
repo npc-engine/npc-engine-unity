@@ -18,7 +18,7 @@ namespace NPCEngine.Components
 
         [Range(0, 2)]
         public float temperature = 1;
-        public int topk = 0;
+        public int topK = 0;
 
         public int nChunksTextGeneration = 7;
 
@@ -77,6 +77,10 @@ namespace NPCEngine.Components
             if (history == null)
             {
                 history = new List<ChatLine>();
+            }
+            if (dialogueSystem == null)
+            {
+                dialogueSystem = GetComponent<AbstractDialogueSystem>();
             }
         }
 
@@ -177,7 +181,7 @@ namespace NPCEngine.Components
                 history = history,
             };
             string reply = "";
-            yield return Chatbot<FantasyChatbotContext>.GenerateReplyCoroutine(context, (output) => { reply = output; }, temperature, topk);
+            yield return Chatbot<FantasyChatbotContext>.GenerateReplyCoroutine(context, (output) => { reply = output; }, temperature, topK);
 
             OnDialogueLine?.Invoke(new ChatLine { speaker = characterName, line = reply }, false);
             history.Add(new ChatLine { speaker = characterName, line = reply });

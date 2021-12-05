@@ -18140,7 +18140,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8445985810613168456, guid: 649bd79ce63a6e9449715449439999df, type: 3}
       propertyPath: connectToExistingServer
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 649bd79ce63a6e9449715449439999df, type: 3}

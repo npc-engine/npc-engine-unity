@@ -18,6 +18,7 @@ public class SemanticSimilarityCaller : MonoBehaviour
         if (result != null && result.ResultReady)
         {
             outputLabel.text = result.Result[0].ToString();
+            result = null;
         }
     }
 

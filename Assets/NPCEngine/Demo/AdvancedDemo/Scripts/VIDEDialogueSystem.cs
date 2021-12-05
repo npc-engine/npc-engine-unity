@@ -4,6 +4,10 @@ using UnityEngine;
 using NPCEngine.Components;
 using VIDE_Data;
 
+
+/// <summary>
+/// This is an example implementation of an abstract dialogue system to be used with NPCEngine components.
+/// </summary>
 [RequireComponent(typeof(NonPlayerCharacter))]
 [RequireComponent(typeof(VIDE_Assign))]
 public class VIDEDialogueSystem : AbstractDialogueSystem

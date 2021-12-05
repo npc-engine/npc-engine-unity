@@ -50,6 +50,10 @@ namespace NPCEngine.Components
         void Start()
         {
             activeDialogAgents = new List<NonPlayerCharacter>();
+            if (SpeechToText == null)
+            {
+                SpeechToText = GetComponent<AbstractSpeechToText>();
+            }
             SpeechToText.OnSpeechRecognized += HandleUtterance;
         }
 

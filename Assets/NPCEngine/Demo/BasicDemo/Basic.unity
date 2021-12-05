@@ -4292,6 +4292,10 @@ PrefabInstance:
       value: /.npc-engine/cli.exe
       objectReference: {fileID: 0}
     - target: {fileID: 8445985810613168456, guid: 649bd79ce63a6e9449715449439999df, type: 3}
+      propertyPath: initializeOnStart
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8445985810613168456, guid: 649bd79ce63a6e9449715449439999df, type: 3}
       propertyPath: connectToExistingServer
       value: 0
       objectReference: {fileID: 0}

@@ -131,7 +131,7 @@ namespace NPCEngine.Server
     }
 
     /// <summary>
-    /// Class <c>InferenceEngine</c> manages inference engine sidecart process lifetime and communication.
+    /// Class <c>NPCEngineServer</c> manages inference engine sidecart process lifetime and communication.
     ///</summary>
     public class NPCEngineServer : Singleton<NPCEngineServer>
     {
@@ -142,7 +142,7 @@ namespace NPCEngine.Server
         [Tooltip("Relative to StreamingAssets folder")]
         public string npcEnginePath = "/.npc-engine/cli.exe";
 
-        public bool runOnStart = true;
+        public bool initializeOnStart = true;
         public bool debug = false;
         public bool connectToExistingServer = false;
         private RequestSocket zmqClient;
@@ -189,6 +189,10 @@ namespace NPCEngine.Server
         public ResultFuture<R> Run<P, R>(String methodName, P parameters)
         where P : new()
         {
+            if (!initialized)
+            {
+                throw new NPCEngineException("NPCEngineServer not initialized");
+            }
             var result = new ResultFuture<R>();
             var request = new RPCRequstMessage<P>();
             request.method = methodName;
@@ -310,7 +314,7 @@ namespace NPCEngine.Server
             AsyncIO.ForceDotNet.Force();
 
             taskQueue = new Queue<Tuple<string, Action<string>>>();
-            if (runOnStart)
+            if (initializeOnStart)
             {
                 StartInferenceEngine();
                 ConnectToServer();
