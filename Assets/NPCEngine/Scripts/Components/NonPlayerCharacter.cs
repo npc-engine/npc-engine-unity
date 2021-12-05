@@ -191,8 +191,10 @@ namespace NPCEngine.Components
         public IEnumerator SayNPCLines()
         {
             string line = dialogueSystem.CurrentNodeNPCLine();
-            while (!dialogueSystem.CurrentNodeIsPlayer() && line != lastLine)
+            bool firstLine = true;
+            while (!dialogueSystem.CurrentNodeIsPlayer() && (line != lastLine || firstLine))
             {
+                firstLine = false;
                 lastLine = line;
                 var audio = dialogueSystem.CurrentNodeNPCAudio();
                 history.Add(new ChatLine { speaker = characterName, line = line });

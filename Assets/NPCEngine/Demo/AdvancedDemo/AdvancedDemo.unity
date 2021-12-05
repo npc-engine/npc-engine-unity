@@ -2828,9 +2828,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   temperature: 1
-  topk: 30
+  topK: 40
   nChunksTextGeneration: 7
-  defaultThreshold: 0.7
+  defaultThreshold: 0.87
   characterName: Poorman Teilo
   persona: 'I am a drunkard.
 
@@ -2840,7 +2840,7 @@ MonoBehaviour:
     just to get a drink.
 
     Sometimes I steal to get a drink.'
-  voiceId: 10
+  voiceId: 109
   history: []
   OnDialogueStart:
     m_PersistentCalls:
@@ -4013,9 +4013,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   temperature: 1
-  topk: 30
+  topK: 40
   nChunksTextGeneration: 7
-  defaultThreshold: 0.7
+  defaultThreshold: 0.87
   characterName: Village guard Mael
   persona: 'I like being a guard in a small village because its safe.
 
@@ -4023,7 +4023,7 @@ MonoBehaviour:
     drinking a lot.
 
     I don''t like to do work.'
-  voiceId: 10
+  voiceId: 111
   history: []
   OnDialogueStart:
     m_PersistentCalls:
@@ -4142,6 +4142,7 @@ MonoBehaviour:
   - Laura
   - MrCube
   - NPCOnly
+  - Placeholder
   - QuestChartDemo
   - Tavernkeeper
   - TriggeredDude
@@ -5518,9 +5519,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   temperature: 1
-  topk: 30
+  topK: 40
   nChunksTextGeneration: 7
-  defaultThreshold: 0.7
+  defaultThreshold: 0.87
   characterName: Village Elder's son Brice
   persona: 'I am an older son of a village elder.
 
@@ -5528,7 +5529,7 @@ MonoBehaviour:
 
     I
     like it here.'
-  voiceId: 10
+  voiceId: 114
   history: []
   OnDialogueStart:
     m_PersistentCalls:
@@ -16733,9 +16734,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   temperature: 1
-  topk: 30
+  topK: 40
   nChunksTextGeneration: 7
-  defaultThreshold: 0.7
+  defaultThreshold: 0.87
   characterName: Tavernkeeper Gawain
   persona: 'I own a tavern called "Brokeback Mountain".
 
@@ -16743,7 +16744,7 @@ MonoBehaviour:
 
     I
     sell beer and food.'
-  voiceId: 10
+  voiceId: 107
   history: []
   OnDialogueStart:
     m_PersistentCalls:
@@ -18968,9 +18969,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   temperature: 1
-  topk: 30
+  topK: 40
   nChunksTextGeneration: 7
-  defaultThreshold: 0.7
+  defaultThreshold: 0.87
   characterName: Village Elder's son Conwy
   persona: 'I am a younger son of a village elder.
 
@@ -18978,7 +18979,7 @@ MonoBehaviour:
 
     I
     want to go on an adventure.'
-  voiceId: 10
+  voiceId: 34
   history: []
   OnDialogueStart:
     m_PersistentCalls:
@@ -19092,11 +19093,14 @@ MonoBehaviour:
   - demo_Narration
   - Example3Dialogue
   - Example4_dialogue
+  - Guard
   - Item_LookUp
   - Laura
   - MrCube
   - NPCOnly
+  - Placeholder
   - QuestChartDemo
+  - Tavernkeeper
   - TriggeredDude
   - VillageElder
   - Witch
@@ -20219,9 +20223,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   temperature: 1
-  topk: 30
+  topK: 40
   nChunksTextGeneration: 7
-  defaultThreshold: 0.7
+  defaultThreshold: 0.87
   characterName: Village Elder Crowford
   persona: 'I am an elder of Mournstead village.
 
@@ -20232,7 +20236,7 @@ MonoBehaviour:
 
     I don''t want my younger son to go on the
     adventure.'
-  voiceId: 83
+  voiceId: 23
   history: []
   OnDialogueStart:
     m_PersistentCalls:
@@ -20346,15 +20350,18 @@ MonoBehaviour:
   - demo_Narration
   - Example3Dialogue
   - Example4_dialogue
+  - Guard
   - Item_LookUp
   - Laura
   - MrCube
   - NPCOnly
+  - Placeholder
   - QuestChartDemo
+  - Tavernkeeper
   - TriggeredDude
   - VillageElder
   - Witch
-  assignedIndex: 13
+  assignedIndex: 16
   assignedID: 31356
   assignedDialogue: VillageElder
   interactionCount: 0
@@ -20721,9 +20728,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   temperature: 1
-  topk: 30
+  topK: 40
   nChunksTextGeneration: 7
-  defaultThreshold: 0.7
+  defaultThreshold: 0.87
   characterName: Village guard Idwal
   persona: 'I like being a guard in a small village because its safe.
 
@@ -20731,7 +20738,7 @@ MonoBehaviour:
     drinking a lot.
 
     I don''t like to do work.'
-  voiceId: 10
+  voiceId: 110
   history: []
   OnDialogueStart:
     m_PersistentCalls:
@@ -20845,11 +20852,14 @@ MonoBehaviour:
   - demo_Narration
   - Example3Dialogue
   - Example4_dialogue
+  - Guard
   - Item_LookUp
   - Laura
   - MrCube
   - NPCOnly
+  - Placeholder
   - QuestChartDemo
+  - Tavernkeeper
   - TriggeredDude
   - VillageElder
   - Witch
