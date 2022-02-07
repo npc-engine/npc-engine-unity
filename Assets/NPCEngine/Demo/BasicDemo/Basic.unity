@@ -4281,7 +4281,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8445985810613168456, guid: 649bd79ce63a6e9449715449439999df, type: 3}
       propertyPath: modelsPath
-      value: /.models/
+      value: .models/
       objectReference: {fileID: 0}
     - target: {fileID: 8445985810613168456, guid: 649bd79ce63a6e9449715449439999df, type: 3}
       propertyPath: runOnStart
@@ -4289,7 +4289,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8445985810613168456, guid: 649bd79ce63a6e9449715449439999df, type: 3}
       propertyPath: npcEnginePath
-      value: /.npc-engine/cli.exe
+      value: .npc-engine/cli.exe
       objectReference: {fileID: 0}
     - target: {fileID: 8445985810613168456, guid: 649bd79ce63a6e9449715449439999df, type: 3}
       propertyPath: initializeOnStart

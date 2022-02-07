@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 using System.Collections;
 using System.Runtime.Serialization;
 using System.Collections.Generic;
@@ -137,10 +138,10 @@ namespace NPCEngine.Server
     {
 
         [Tooltip("Relative to StreamingAssets folder")]
-        public string modelsPath = "/.models/";
+        public string modelsPath = ".models/";
 
         [Tooltip("Relative to StreamingAssets folder")]
-        public string npcEnginePath = "/.npc-engine/cli.exe";
+        public string npcEnginePath = ".npc-engine/cli.exe";
 
         public bool initializeOnStart = true;
         public bool debug = false;
@@ -255,12 +256,11 @@ namespace NPCEngine.Server
                         myProcess.StartInfo.CreateNoWindow = false;
                         myProcess.StartInfo.UseShellExecute = true;
                         myProcess.StartInfo.FileName = "CMD.EXE";
-                        myProcess.StartInfo.Arguments = (
-                            " /k "
-                            + Application.streamingAssetsPath + npcEnginePath
-                            + " run "
-                            + " --models-path " + Application.streamingAssetsPath + modelsPath
-                            + " --port 5555"
+                        myProcess.StartInfo.Arguments = String.Format(
+                            " /k \"\"{0}\" run --port {1} --models-path \"{2}\"\"",
+                            Path.Combine(Application.streamingAssetsPath, npcEnginePath),
+                            "5555",
+                            Path.Combine(Application.streamingAssetsPath, modelsPath)
                         );
                         myProcess.EnableRaisingEvents = true;
                         myProcess.Start();
@@ -270,11 +270,11 @@ namespace NPCEngine.Server
                         myProcess.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
                         myProcess.StartInfo.CreateNoWindow = true;
                         myProcess.StartInfo.UseShellExecute = false;
-                        myProcess.StartInfo.FileName = Application.streamingAssetsPath + npcEnginePath;
-                        myProcess.StartInfo.Arguments = (
-                            " run "
-                            + " --models-path " + Application.streamingAssetsPath + modelsPath
-                            + " --port 5555"
+                        myProcess.StartInfo.FileName = Path.Combine(Application.streamingAssetsPath, npcEnginePath);
+                        myProcess.StartInfo.Arguments = String.Format(
+                            "\"run --port {0} --models-path \"{1}\"\"",
+                            "5555",
+                            Path.Combine(Application.streamingAssetsPath, modelsPath)
                         );
                         myProcess.EnableRaisingEvents = true;
                         myProcess.Start();

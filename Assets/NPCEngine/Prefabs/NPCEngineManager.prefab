@@ -43,4 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a4e2dad63d287d47b74a8d98c4cc196, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debug: 0
+  modelsPath: .models/
+  npcEnginePath: .npc-engine/cli.exe
+  initializeOnStart: 1
+  debug: 1
+  connectToExistingServer: 0

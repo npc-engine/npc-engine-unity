@@ -36,13 +36,11 @@ public class NPCEngineWelcomeWindow : EditorWindow
 
     private static GUIStyle headerStyle = new GUIStyle();
     private static GUIStyle descriptionStyle = new GUIStyle();
-    private const string displayWelcomeScreenID = "NPC_ENGINE_WS";
-
-    private const string welcomeScreenSeen = "NPC_ENGINE_WS_SEEN";
 
     private const string npcEngineURL = "https://github.com/npc-engine/npc-engine/releases/latest/download/npc-engine-.zip";
     private const string githubURL = "https://github.com/npc-engine/npc-engine";
     private const string docsURL = "https://npc-engine.github.io/npc-engine/";
+
 
     private static Texture2D logo = null;
     private static Texture2D docsLogo = null;
@@ -57,26 +55,10 @@ public class NPCEngineWelcomeWindow : EditorWindow
     {
         get
         {
-            return EditorPrefs.GetBool(displayWelcomeScreenID, true);
-        }
-        set
-        {
-            EditorPrefs.SetBool(displayWelcomeScreenID, value);
+            return File.Exists(Path.Combine(Application.streamingAssetsPath, ".npc-engine/cli.exe"));
         }
     }
 
-
-    public static bool WelcomeScreenSeen
-    {
-        get
-        {
-            return EditorPrefs.GetBool(welcomeScreenSeen, false);
-        }
-        set
-        {
-            EditorPrefs.SetBool(welcomeScreenSeen, value);
-        }
-    }
 
     /// <summary>
     /// Executes on Unity loading.
@@ -86,13 +68,12 @@ public class NPCEngineWelcomeWindow : EditorWindow
         EditorApplication.delayCall += () =>
         {
             if (
-                !WelcomeScreenSeen
+                !DisplayWelcomeScreen
                 &&
                 !Application.isPlaying
             )
             {
                 InitWindow();
-                WelcomeScreenSeen = true;
             }
         };
     }
@@ -100,7 +81,7 @@ public class NPCEngineWelcomeWindow : EditorWindow
 
     void OnGUI()
     {
-        downloadFinished = File.Exists(Application.streamingAssetsPath + "/.npc-engine/cli.exe");
+        downloadFinished = File.Exists(Path.Combine(Application.streamingAssetsPath, ".npc-engine/cli.exe"));
         DrawWelcomeScreenGUI();
     }
 
@@ -220,7 +201,7 @@ public class NPCEngineWelcomeWindow : EditorWindow
         GUILayout.FlexibleSpace();
         if (GUILayout.Button("Download default models", GUILayout.Width(160)))
         {
-            DownloadDefaultModels("/.models");
+            DownloadDefaultModels(".models");
         }
         GUILayout.FlexibleSpace();
         GUILayout.EndHorizontal();
@@ -236,12 +217,13 @@ public class NPCEngineWelcomeWindow : EditorWindow
         myProcess.StartInfo.CreateNoWindow = false;
         myProcess.StartInfo.UseShellExecute = true;
         myProcess.StartInfo.FileName = "CMD.EXE";
-        myProcess.StartInfo.Arguments = (
-            " /c "
-            + Application.streamingAssetsPath + "/.npc-engine/cli.exe"
-            + " download-default-models "
-            + " --models-path " + Application.streamingAssetsPath + path
+        myProcess.StartInfo.Arguments = String.Format(
+            " /c \"\"{0}\" download-default-models --models-path \"{1}\"\"",
+            Path.Combine(Application.streamingAssetsPath, ".npc-engine/cli.exe"),
+            Path.Combine(Application.streamingAssetsPath, path)
         );
+
+        UnityEngine.Debug.Log(myProcess.StartInfo.Arguments);
         myProcess.EnableRaisingEvents = true;
         myProcess.Start();
     }
@@ -251,7 +233,7 @@ public class NPCEngineWelcomeWindow : EditorWindow
     {
 
         progressId = Progress.Start("Downloading NPC Engine", "Downloading npc-engine", 0);
-        string path = Application.streamingAssetsPath + "/.npc-engine.zip";
+        string path = Path.Combine(Application.streamingAssetsPath, ".npc-engine.zip");
 
         DownLoadFileInBackground(address, path);
 
@@ -263,9 +245,10 @@ public class NPCEngineWelcomeWindow : EditorWindow
         // The task is finished. Remove the associated progress indicator.
         Progress.Remove(progressId);
         byte[] file = System.IO.File.ReadAllBytes(path);
-
+        UnityEngine.Debug.Log("Downloaded " + file.Length + " bytes");
         progressId = Progress.Start("Extracting NPC Engine", "Downloading npc-engine", 0);
-        yield return ExtractZipFile(file, Application.streamingAssetsPath + "/.npc-engine");
+        UnityEngine.Debug.Log("Extracting " + Path.Combine(Application.streamingAssetsPath, ".npc-engine"));
+        yield return ExtractZipFile(file, Path.Combine(Application.streamingAssetsPath, ".npc-engine"));
         Progress.Remove(progressId);
 
         File.Delete(path);
@@ -311,6 +294,7 @@ public class NPCEngineWelcomeWindow : EditorWindow
             foreach (ZipEntry entry in zipFile)
             {
                 string targetFile = Path.Combine(targetDirectory, entry.Name);
+
                 if (entry.IsFile)
                 {
                     using (FileStream outputFile = File.Create(targetFile))
