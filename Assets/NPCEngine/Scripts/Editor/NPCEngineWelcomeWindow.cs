@@ -218,7 +218,7 @@ public class NPCEngineWelcomeWindow : EditorWindow
         myProcess.StartInfo.UseShellExecute = true;
         myProcess.StartInfo.FileName = "CMD.EXE";
         myProcess.StartInfo.Arguments = String.Format(
-            " /c \"\"{0}\" download-default-models --models-path \"{1}\"\"",
+            " /k \"\"{0}\" download-default-models --models-path \"{1}\"\"",
             Path.Combine(Application.streamingAssetsPath, ".npc-engine/cli.exe"),
             Path.Combine(Application.streamingAssetsPath, path)
         );
@@ -233,6 +233,7 @@ public class NPCEngineWelcomeWindow : EditorWindow
     {
 
         progressId = Progress.Start("Downloading NPC Engine", "Downloading npc-engine", 0);
+        Directory.CreateDirectory(Application.streamingAssetsPath);
         string path = Path.Combine(Application.streamingAssetsPath, ".npc-engine.zip");
 
         DownLoadFileInBackground(address, path);
