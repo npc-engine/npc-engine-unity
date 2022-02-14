@@ -218,7 +218,7 @@ public class NPCEngineWelcomeWindow : EditorWindow
         myProcess.StartInfo.UseShellExecute = true;
         myProcess.StartInfo.FileName = "CMD.EXE";
         myProcess.StartInfo.Arguments = String.Format(
-            " /k \"\"{0}\" download-default-models --models-path \"{1}\"\"",
+            " /c \"\"{0}\" download-default-models --models-path \"{1}\"\"",
             Path.Combine(Application.streamingAssetsPath, ".npc-engine/cli.exe"),
             Path.Combine(Application.streamingAssetsPath, path)
         );
