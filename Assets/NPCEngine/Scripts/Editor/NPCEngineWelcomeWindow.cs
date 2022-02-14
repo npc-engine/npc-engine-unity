@@ -233,6 +233,7 @@ public class NPCEngineWelcomeWindow : EditorWindow
     {
 
         progressId = Progress.Start("Downloading NPC Engine", "Downloading npc-engine", 0);
+        Directory.CreateDirectory(Application.streamingAssetsPath);
         string path = Path.Combine(Application.streamingAssetsPath, ".npc-engine.zip");
 
         DownLoadFileInBackground(address, path);

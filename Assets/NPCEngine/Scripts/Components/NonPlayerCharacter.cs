@@ -6,7 +6,6 @@ using UnityEngine.Events;
 using NPCEngine.Server;
 using NPCEngine.API;
 using NPCEngine.Utility;
-using VIDE_Data;
 
 
 namespace NPCEngine.Components
