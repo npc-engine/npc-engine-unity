@@ -1,0 +1,787 @@
+{
+  "sitemap": {
+    "fileOptions": {
+      "api/*": {
+        "baseUrl": "https://npc-engine.github.io/npc-engine-unity/",
+        "changefreq": "daily"
+      }
+    },
+    "baseUrl": "https://npc-engine.github.io/npc-engine-unity/",
+    "changefreq": "weekly"
+  },
+  "homepages": [],
+  "source_base_path": "D:/a/npc-engine-unity/npc-engine-unity/Documentation",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      },
+      "is_incremental": false
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NPCEngine.API.Chatbot-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NPCEngine.API.Chatbot-1.html",
+          "hash": "VdYt5y01YY4kUNfIRulVlitPpNQdr4Eb7gAVRPEeM/M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NPCEngine.API.SemanticQuery.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NPCEngine.API.SemanticQuery.html",
+          "hash": "XLX1xNv/cbxTlTJCm+4oOUf2dUb6RN4vVngsmC8fyqg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NPCEngine.API.SpeechToText.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NPCEngine.API.SpeechToText.html",
+          "hash": "SoPv09x8Lm3H4aLs0CVc+bNBsknnwqiHK3Hyn8qQ/FM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NPCEngine.API.TextToSpeech.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NPCEngine.API.TextToSpeech.html",
+          "hash": "jISFp3eIrn0S8BPGEAo8VOmuenS4OBbNq9i803AhQ2s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NPCEngine.API.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NPCEngine.API.html",
+          "hash": "3788IKS0RyAXjPOYTg05EptgSFIo/Jw6Me3fd7dvexY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NPCEngine.Components.AbstractDialogueSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NPCEngine.Components.AbstractDialogueSystem.html",
+          "hash": "KGHb0Xy//I4SA0jbGEZNRzucbABKFfis6TAUR+Yr8jo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NPCEngine.Components.AbstractSpeechToText.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NPCEngine.Components.AbstractSpeechToText.html",
+          "hash": "s32t6L/yxzckEAgj41SMFClyHLJ5PANMz/k+Uiixjsc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NPCEngine.Components.ChatLine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NPCEngine.Components.ChatLine.html",
+          "hash": "KYKgl+n47PXN8J2k+pgN+olMPVPX0rKobbP8z7whiI8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NPCEngine.Components.ColliderLocationTrigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NPCEngine.Components.ColliderLocationTrigger.html",
+          "hash": "FhK/drJS28t9Xs9m3ymszUkrUm+tCiQClgiL9hUgMwc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NPCEngine.Components.DialogueUI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NPCEngine.Components.DialogueUI.html",
+          "hash": "UWKBSUF8dz8Fg9y/rdz/1rxDdsXwiR6XZSiW0eekt2o="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NPCEngine.Components.DictationRecognizerSTT.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NPCEngine.Components.DictationRecognizerSTT.html",
+          "hash": "ywFwatqIiMBm6qLPiOIdW9HCnUAiL+n7ajtHMIzxHwc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NPCEngine.Components.FantasyChatbotContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NPCEngine.Components.FantasyChatbotContext.html",
+          "hash": "aGI41F09KXSPdMJsg5AmzxKY/gOVZon4d9A3MZ6KINk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NPCEngine.Components.NPCEngineSTT.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NPCEngine.Components.NPCEngineSTT.html",
+          "hash": "0Eb+Im5sttfrxm/y3r4UCz9jqKGGqSMan+0J1KgjdoY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NPCEngine.Components.NonPlayerCharacter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NPCEngine.Components.NonPlayerCharacter.html",
+          "hash": "qWFmtDp8mn3tEuCh/jgkmflevhCJ3YhvDQrj7bDkCw8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NPCEngine.Components.PlayerCharacter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NPCEngine.Components.PlayerCharacter.html",
+          "hash": "B4xhtLo8vcBvvhfoPRl1cLGBl0p35Gj+Upb58xLxzPc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NPCEngine.Components.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NPCEngine.Components.html",
+          "hash": "mxYLcF/oz/P8oTQafsbWtsDYt3+72iYJHsvw3uLkd9Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NPCEngine.NPCEngineException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NPCEngine.NPCEngineException.html",
+          "hash": "0S6j2xCNgZF9ObQE7MAgfOmSN3brTzRhUtZ0163M09k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NPCEngine.ResultFuture-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NPCEngine.ResultFuture-1.html",
+          "hash": "Up4DifY1OIC0qeHFGR+R2TzqK6zxeKkIqZsDcw/N0oY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NPCEngine.Server.NPCEngineServer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NPCEngine.Server.NPCEngineServer.html",
+          "hash": "JDbthWAGTGmYWxKSzTqk8HDmypXoRlIEA2Y+WZ92cNs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NPCEngine.Server.RPCRequstMessage-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NPCEngine.Server.RPCRequstMessage-1.html",
+          "hash": "QC3q0OrbyOMDe0VW78cb1uaRf1ZhlidVruivrdobrzk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NPCEngine.Server.RPCResponseError.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NPCEngine.Server.RPCResponseError.html",
+          "hash": "ooIDVT+mymzJayi2rEgCeWGS99RdSUz2LZzHD6rSN7I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NPCEngine.Server.RPCResponseMessage-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NPCEngine.Server.RPCResponseMessage-1.html",
+          "hash": "fN0DJhuhQdjiXpbOuaCJ9guS94SMNS2SjGekloMlSl4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NPCEngine.Server.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NPCEngine.Server.html",
+          "hash": "LwTkFO0nXqP9g7h1xK9LrDHDMz6exAIeLYVEmmag8xU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NPCEngine.Utility.AudioSourceQueue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NPCEngine.Utility.AudioSourceQueue.html",
+          "hash": "Jq1CugG3WcciMW3wppczWczhSeDeNbG6EpiFgWdnFzs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NPCEngine.Utility.Singleton-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NPCEngine.Utility.Singleton-1.html",
+          "hash": "SVHN/V3k6N7uN1ahUUHWWxc6gdl6ZtEPFaSqZMzswrw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NPCEngine.Utility.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NPCEngine.Utility.html",
+          "hash": "sHhVtbZqX/e9EQtzBLaHHGUVQ1D2bscGwjTDWaX35HY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NPCEngine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NPCEngine.html",
+          "hash": "UHmeWt9DxK/+aOL6tLxe33GDM9AroGi/dotkx99PS88="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "L8sjlqmIbI2G0TYESzXSh0xOtcGqt4RyCXqopGBWBSo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "e9ccDZPdgbqIqEmz6yRBGtqIAeyLJ6UWbkwh71kn+3M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/basic_scene_first.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/basic_scene_first.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/callbacks.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/callbacks.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/chatbot_chat.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/chatbot_chat.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/chatbot_context.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/chatbot_context.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/fav.svg",
+      "output": {
+        "resource": {
+          "relative_path": "resources/fav.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/favicon.ico",
+      "output": {
+        "resource": {
+          "relative_path": "resources/favicon.ico"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/logo.svg",
+      "output": {
+        "resource": {
+          "relative_path": "resources/logo.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/npc_engine_console.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/npc_engine_console.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/npc_engine_server_script.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/npc_engine_server_script.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/player_character.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/player_character.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/scene-setup-audio-source.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "resources/scene-setup-audio-source.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/scene-setup-cube.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/scene-setup-cube.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/scene-setup-how-it-should-look.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/scene-setup-how-it-should-look.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/scene-setup-npc-component.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "resources/scene-setup-npc-component.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/scene-setup-player.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/scene-setup-player.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/scene-setup-result.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/scene-setup-result.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/scene-setup-stt.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/scene-setup-stt.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/scene-setup-testing.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/scene-setup-testing.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/scene-setup-ui.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/scene-setup-ui.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/semantic_sim_caller.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/semantic_sim_caller.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/semantic_similarity.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/semantic_similarity.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/settings.svg",
+      "output": {
+        "resource": {
+          "relative_path": "resources/settings.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/setup-scene-cube-persona.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/setup-scene-cube-persona.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/speech_to_text.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/speech_to_text.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/text_to_speech.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/text_to_speech.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/threshold.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/threshold.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/topics.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/topics.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "EIK2x6mgHzn9/KW4/7luDwnFsGR0IWScoeIEsuqkkJA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/advanced_demo.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/advanced_demo.html",
+          "hash": "DmQrEW8DAzm0nWFfWfrUM/VZS331AjrQKgaqJIXQQUk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/basic_demo.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/basic_demo.html",
+          "hash": "P+pUf9DjOrOBPK3fuGQTTH/BejY5BSfS/KwUIkaHcS0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "tutorials/scene_setup.md",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/scene_setup.html",
+          "hash": "qB913MiyW/DEsppjyviv2kpB2flnoJv5JDRFDvhxx88="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "tutorials/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "tutorials/toc.html",
+          "hash": "fDqcM+9PqzneoMDPrwqfIcjtT+R+8FbSjenMLPsf73k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 4,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 27,
+          "skipped_file_count": 0
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: should not trace intermediate info.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
