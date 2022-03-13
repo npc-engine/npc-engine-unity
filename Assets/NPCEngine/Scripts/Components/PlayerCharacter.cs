@@ -69,9 +69,16 @@ namespace NPCEngine.Components
             activeDialogAgents.Remove(agent);
         }
 
+        public bool IsRegistered(NonPlayerCharacter agent)
+        {
+            return activeDialogAgents.Contains(agent);
+        }
+
         public bool CheckIsSeen(Vector3 dialogAgentPosition)
         {
             var cameraPoint = PlayerCharacter.Instance.CheckCamera.WorldToViewportPoint(dialogAgentPosition);
+
+            Debug.Log(cameraPoint);
             return (
                 cameraPoint.x > HorizontalMargin && cameraPoint.x < (1f - HorizontalMargin)
                 && cameraPoint.y > VerticalMargin && cameraPoint.y < (1f - VerticalMargin)

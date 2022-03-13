@@ -5,11 +5,21 @@ using UnityEngine;
 namespace NPCEngine.Components
 {
 
+    /// <summary>
+    /// Abstract class for dialogue system integration. 
+    /// Concrete implementations are used by NonPlayerCharacter component for scripted replies. 
+    /// </summary>
     public abstract class AbstractDialogueSystem : MonoBehaviour
     {
 
+        /// <summary>
+        /// Will be called when dialogue starts.
+        /// </summary>
         public abstract void StartDialogue();
 
+        /// <summary>
+        /// Will be called when dialogue ends.
+        /// </summary>
         public abstract void EndDialog();
 
         /// <summary>

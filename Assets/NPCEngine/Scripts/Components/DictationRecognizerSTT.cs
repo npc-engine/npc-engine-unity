@@ -135,6 +135,19 @@ namespace NPCEngine.Components
             isListening = false;
         }
 
+        private void Update()
+        {
+            if (hypotheses != null && lastHypothesesTime + 2 < Time.time)
+            {
+                if (debugLogs)
+                    Debug.LogFormat("Dictation result: {0}", hypotheses);
+                if (isListening)
+                    SpeechRecognized(hypotheses);
+                hypothesisCounter = 0;
+                hypotheses = null;
+            }
+        }
+
     }
 
 }

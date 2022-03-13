@@ -1,0 +1,356 @@
+### YamlMime:ManagedReference
+items:
+- uid: NPCEngine.Components.AbstractSpeechToText
+  commentId: T:NPCEngine.Components.AbstractSpeechToText
+  id: AbstractSpeechToText
+  parent: NPCEngine.Components
+  children:
+  - NPCEngine.Components.AbstractSpeechToText.Context
+  - NPCEngine.Components.AbstractSpeechToText.OnSpeechRecognitionFailed
+  - NPCEngine.Components.AbstractSpeechToText.OnSpeechRecognized
+  - NPCEngine.Components.AbstractSpeechToText.SpeechRecognized(System.String)
+  - NPCEngine.Components.AbstractSpeechToText.StartListening
+  - NPCEngine.Components.AbstractSpeechToText.StopListening
+  langs:
+  - csharp
+  - vb
+  name: AbstractSpeechToText
+  nameWithType: AbstractSpeechToText
+  fullName: NPCEngine.Components.AbstractSpeechToText
+  type: Class
+  source:
+    id: AbstractSpeechToText
+    path: ''
+    startLine: 856
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  summary: "\nAbstract class for speech to text system.\nConcrete implementations are used by PlayerCharacter \ncomponent for receiving speech.\n"
+  example: []
+  syntax:
+    content: 'public abstract class AbstractSpeechToText : MonoBehaviour'
+    content.vb: >-
+      Public MustInherit Class AbstractSpeechToText
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - NPCEngine.Components.DictationRecognizerSTT
+  - NPCEngine.Components.NPCEngineSTT
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+- uid: NPCEngine.Components.AbstractSpeechToText.Context
+  commentId: P:NPCEngine.Components.AbstractSpeechToText.Context
+  id: Context
+  parent: NPCEngine.Components.AbstractSpeechToText
+  langs:
+  - csharp
+  - vb
+  name: Context
+  nameWithType: AbstractSpeechToText.Context
+  fullName: NPCEngine.Components.AbstractSpeechToText.Context
+  type: Property
+  source:
+    id: Context
+    path: ''
+    startLine: 862
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  summary: "\nConsumed context to be used in the next STT request\n"
+  example: []
+  syntax:
+    content: public string Context { protected get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Context As String
+  overload: NPCEngine.Components.AbstractSpeechToText.Context*
+  modifiers.csharp:
+  - public
+  - protected get
+  - set
+  modifiers.vb:
+  - Public
+  - Protected Get
+  - Set
+- uid: NPCEngine.Components.AbstractSpeechToText.StartListening
+  commentId: M:NPCEngine.Components.AbstractSpeechToText.StartListening
+  id: StartListening
+  parent: NPCEngine.Components.AbstractSpeechToText
+  langs:
+  - csharp
+  - vb
+  name: StartListening()
+  nameWithType: AbstractSpeechToText.StartListening()
+  fullName: NPCEngine.Components.AbstractSpeechToText.StartListening()
+  type: Method
+  source:
+    id: StartListening
+    path: ''
+    startLine: 879
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  summary: "\nCalled when system must start listening for speech.\n"
+  example: []
+  syntax:
+    content: public abstract void StartListening()
+    content.vb: Public MustOverride Sub StartListening
+  overload: NPCEngine.Components.AbstractSpeechToText.StartListening*
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
+- uid: NPCEngine.Components.AbstractSpeechToText.StopListening
+  commentId: M:NPCEngine.Components.AbstractSpeechToText.StopListening
+  id: StopListening
+  parent: NPCEngine.Components.AbstractSpeechToText
+  langs:
+  - csharp
+  - vb
+  name: StopListening()
+  nameWithType: AbstractSpeechToText.StopListening()
+  fullName: NPCEngine.Components.AbstractSpeechToText.StopListening()
+  type: Method
+  source:
+    id: StopListening
+    path: ''
+    startLine: 884
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  summary: "\nCalled when system should stop listening for speech.\n"
+  example: []
+  syntax:
+    content: public abstract void StopListening()
+    content.vb: Public MustOverride Sub StopListening
+  overload: NPCEngine.Components.AbstractSpeechToText.StopListening*
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
+- uid: NPCEngine.Components.AbstractSpeechToText.OnSpeechRecognized
+  commentId: E:NPCEngine.Components.AbstractSpeechToText.OnSpeechRecognized
+  id: OnSpeechRecognized
+  parent: NPCEngine.Components.AbstractSpeechToText
+  langs:
+  - csharp
+  - vb
+  name: OnSpeechRecognized
+  nameWithType: AbstractSpeechToText.OnSpeechRecognized
+  fullName: NPCEngine.Components.AbstractSpeechToText.OnSpeechRecognized
+  type: Event
+  source:
+    id: OnSpeechRecognized
+    path: ''
+    startLine: 889
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  summary: "\nPlayerCharacter subscribes to this event to get the Speech-to-Text result\n"
+  example: []
+  syntax:
+    content: public event Action<string> OnSpeechRecognized
+    return:
+      type: Global.Action{System.String}
+    content.vb: Public Event OnSpeechRecognized As Action(Of String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.Components.AbstractSpeechToText.OnSpeechRecognitionFailed
+  commentId: E:NPCEngine.Components.AbstractSpeechToText.OnSpeechRecognitionFailed
+  id: OnSpeechRecognitionFailed
+  parent: NPCEngine.Components.AbstractSpeechToText
+  langs:
+  - csharp
+  - vb
+  name: OnSpeechRecognitionFailed
+  nameWithType: AbstractSpeechToText.OnSpeechRecognitionFailed
+  fullName: NPCEngine.Components.AbstractSpeechToText.OnSpeechRecognitionFailed
+  type: Event
+  source:
+    id: OnSpeechRecognitionFailed
+    path: ''
+    startLine: 893
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  summary: "\nCan be used to handle speech recogintion errors\n"
+  example: []
+  syntax:
+    content: public event Action<string> OnSpeechRecognitionFailed
+    return:
+      type: Global.Action{System.String}
+    content.vb: Public Event OnSpeechRecognitionFailed As Action(Of String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.Components.AbstractSpeechToText.SpeechRecognized(System.String)
+  commentId: M:NPCEngine.Components.AbstractSpeechToText.SpeechRecognized(System.String)
+  id: SpeechRecognized(System.String)
+  parent: NPCEngine.Components.AbstractSpeechToText
+  langs:
+  - csharp
+  - vb
+  name: SpeechRecognized(String)
+  nameWithType: AbstractSpeechToText.SpeechRecognized(String)
+  fullName: NPCEngine.Components.AbstractSpeechToText.SpeechRecognized(System.String)
+  type: Method
+  source:
+    id: SpeechRecognized
+    path: ''
+    startLine: 896
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  syntax:
+    content: protected void SpeechRecognized(string result)
+    parameters:
+    - id: result
+      type: System.String
+    content.vb: Protected Sub SpeechRecognized(result As String)
+  overload: NPCEngine.Components.AbstractSpeechToText.SpeechRecognized*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+references:
+- uid: NPCEngine.Components
+  commentId: N:NPCEngine.Components
+  name: NPCEngine.Components
+  nameWithType: NPCEngine.Components
+  fullName: NPCEngine.Components
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: NPCEngine.Components.AbstractSpeechToText.Context*
+  commentId: Overload:NPCEngine.Components.AbstractSpeechToText.Context
+  name: Context
+  nameWithType: AbstractSpeechToText.Context
+  fullName: NPCEngine.Components.AbstractSpeechToText.Context
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: NPCEngine.Components.AbstractSpeechToText.StartListening*
+  commentId: Overload:NPCEngine.Components.AbstractSpeechToText.StartListening
+  name: StartListening
+  nameWithType: AbstractSpeechToText.StartListening
+  fullName: NPCEngine.Components.AbstractSpeechToText.StartListening
+- uid: NPCEngine.Components.AbstractSpeechToText.StopListening*
+  commentId: Overload:NPCEngine.Components.AbstractSpeechToText.StopListening
+  name: StopListening
+  nameWithType: AbstractSpeechToText.StopListening
+  fullName: NPCEngine.Components.AbstractSpeechToText.StopListening
+- uid: Global.Action{System.String}
+  commentId: '!:Global.Action{System.String}'
+  definition: Global.Action`1
+  name: Action<String>
+  nameWithType: Action<String>
+  fullName: Action<System.String>
+  nameWithType.vb: Action(Of String)
+  fullName.vb: Action(Of System.String)
+  name.vb: Action(Of String)
+  spec.csharp:
+  - uid: Global.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.Action`1
+  isExternal: true
+  name: Action<>
+  nameWithType: Action<>
+  fullName: Action<>
+  nameWithType.vb: Action(Of )
+  fullName.vb: Action(Of )
+  name.vb: Action(Of )
+  spec.csharp:
+  - uid: Global.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NPCEngine.Components.AbstractSpeechToText.SpeechRecognized*
+  commentId: Overload:NPCEngine.Components.AbstractSpeechToText.SpeechRecognized
+  name: SpeechRecognized
+  nameWithType: AbstractSpeechToText.SpeechRecognized
+  fullName: NPCEngine.Components.AbstractSpeechToText.SpeechRecognized

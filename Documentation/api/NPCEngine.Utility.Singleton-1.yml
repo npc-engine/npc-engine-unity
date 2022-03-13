@@ -1,0 +1,112 @@
+### YamlMime:ManagedReference
+items:
+- uid: NPCEngine.Utility.Singleton`1
+  commentId: T:NPCEngine.Utility.Singleton`1
+  id: Singleton`1
+  parent: NPCEngine.Utility
+  children:
+  - NPCEngine.Utility.Singleton`1.Instance
+  langs:
+  - csharp
+  - vb
+  name: Singleton<T>
+  nameWithType: Singleton<T>
+  fullName: NPCEngine.Utility.Singleton<T>
+  type: Class
+  source:
+    id: Singleton
+    path: ''
+    startLine: 2777
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Utility
+  syntax:
+    content: 'public class Singleton<T> : MonoBehaviour where T : MonoBehaviour'
+    typeParameters:
+    - id: T
+    content.vb: >-
+      Public Class Singleton(Of T As MonoBehaviour)
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  nameWithType.vb: Singleton(Of T)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+  fullName.vb: NPCEngine.Utility.Singleton(Of T)
+  name.vb: Singleton(Of T)
+- uid: NPCEngine.Utility.Singleton`1.Instance
+  commentId: P:NPCEngine.Utility.Singleton`1.Instance
+  id: Instance
+  parent: NPCEngine.Utility.Singleton`1
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: Singleton<T>.Instance
+  fullName: NPCEngine.Utility.Singleton<T>.Instance
+  type: Property
+  source:
+    id: Instance
+    path: ''
+    startLine: 2781
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Utility
+  syntax:
+    content: public static T Instance { get; }
+    parameters: []
+    return:
+      type: '{T}'
+    content.vb: Public Shared ReadOnly Property Instance As T
+  overload: NPCEngine.Utility.Singleton`1.Instance*
+  nameWithType.vb: Singleton(Of T).Instance
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+  fullName.vb: NPCEngine.Utility.Singleton(Of T).Instance
+references:
+- uid: NPCEngine.Utility
+  commentId: N:NPCEngine.Utility
+  name: NPCEngine.Utility
+  nameWithType: NPCEngine.Utility
+  fullName: NPCEngine.Utility
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: NPCEngine.Utility.Singleton`1.Instance*
+  commentId: Overload:NPCEngine.Utility.Singleton`1.Instance
+  name: Instance
+  nameWithType: Singleton<T>.Instance
+  fullName: NPCEngine.Utility.Singleton<T>.Instance
+  nameWithType.vb: Singleton(Of T).Instance
+  fullName.vb: NPCEngine.Utility.Singleton(Of T).Instance
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  commentId: '!:T'
+  name: T
+  nameWithType: T
+  fullName: T

@@ -1,0 +1,71 @@
+### YamlMime:ManagedReference
+items:
+- uid: NPCEngine.API
+  commentId: N:NPCEngine.API
+  id: NPCEngine.API
+  children:
+  - NPCEngine.API.Chatbot`1
+  - NPCEngine.API.SemanticQuery
+  - NPCEngine.API.SpeechToText
+  - NPCEngine.API.TextToSpeech
+  langs:
+  - csharp
+  - vb
+  name: NPCEngine.API
+  nameWithType: NPCEngine.API
+  fullName: NPCEngine.API
+  type: Namespace
+  assemblies:
+  - cs.temp.dll
+references:
+- uid: NPCEngine.API.Chatbot`1
+  commentId: T:NPCEngine.API.Chatbot`1
+  name: Chatbot<ContextType>
+  nameWithType: Chatbot<ContextType>
+  fullName: NPCEngine.API.Chatbot<ContextType>
+  nameWithType.vb: Chatbot(Of ContextType)
+  fullName.vb: NPCEngine.API.Chatbot(Of ContextType)
+  name.vb: Chatbot(Of ContextType)
+  spec.csharp:
+  - uid: NPCEngine.API.Chatbot`1
+    name: Chatbot
+    nameWithType: Chatbot
+    fullName: NPCEngine.API.Chatbot
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ContextType
+    nameWithType: ContextType
+    fullName: ContextType
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: NPCEngine.API.Chatbot`1
+    name: Chatbot
+    nameWithType: Chatbot
+    fullName: NPCEngine.API.Chatbot
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ContextType
+    nameWithType: ContextType
+    fullName: ContextType
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NPCEngine.API.SemanticQuery
+  commentId: T:NPCEngine.API.SemanticQuery
+  name: SemanticQuery
+  nameWithType: SemanticQuery
+  fullName: NPCEngine.API.SemanticQuery
+- uid: NPCEngine.API.SpeechToText
+  commentId: T:NPCEngine.API.SpeechToText
+  name: SpeechToText
+  nameWithType: SpeechToText
+  fullName: NPCEngine.API.SpeechToText
+- uid: NPCEngine.API.TextToSpeech
+  commentId: T:NPCEngine.API.TextToSpeech
+  name: TextToSpeech
+  nameWithType: TextToSpeech
+  fullName: NPCEngine.API.TextToSpeech

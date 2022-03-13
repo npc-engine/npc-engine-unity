@@ -1,0 +1,65 @@
+### YamlMime:TableOfContent
+- uid: NPCEngine
+  name: NPCEngine
+  items:
+  - uid: NPCEngine.NPCEngineException
+    name: NPCEngineException
+  - uid: NPCEngine.ResultFuture`1
+    name: ResultFuture<ReturnType>
+    name.vb: ResultFuture(Of ReturnType)
+- uid: NPCEngine.API
+  name: NPCEngine.API
+  items:
+  - uid: NPCEngine.API.Chatbot`1
+    name: Chatbot<ContextType>
+    name.vb: Chatbot(Of ContextType)
+  - uid: NPCEngine.API.SemanticQuery
+    name: SemanticQuery
+  - uid: NPCEngine.API.SpeechToText
+    name: SpeechToText
+  - uid: NPCEngine.API.TextToSpeech
+    name: TextToSpeech
+- uid: NPCEngine.Components
+  name: NPCEngine.Components
+  items:
+  - uid: NPCEngine.Components.AbstractDialogueSystem
+    name: AbstractDialogueSystem
+  - uid: NPCEngine.Components.AbstractSpeechToText
+    name: AbstractSpeechToText
+  - uid: NPCEngine.Components.ChatLine
+    name: ChatLine
+  - uid: NPCEngine.Components.ColliderLocationTrigger
+    name: ColliderLocationTrigger
+  - uid: NPCEngine.Components.DialogueUI
+    name: DialogueUI
+  - uid: NPCEngine.Components.DictationRecognizerSTT
+    name: DictationRecognizerSTT
+  - uid: NPCEngine.Components.FantasyChatbotContext
+    name: FantasyChatbotContext
+  - uid: NPCEngine.Components.NonPlayerCharacter
+    name: NonPlayerCharacter
+  - uid: NPCEngine.Components.NPCEngineSTT
+    name: NPCEngineSTT
+  - uid: NPCEngine.Components.PlayerCharacter
+    name: PlayerCharacter
+- uid: NPCEngine.Server
+  name: NPCEngine.Server
+  items:
+  - uid: NPCEngine.Server.NPCEngineServer
+    name: NPCEngineServer
+  - uid: NPCEngine.Server.RPCRequstMessage`1
+    name: RPCRequstMessage<ParametersType>
+    name.vb: RPCRequstMessage(Of ParametersType)
+  - uid: NPCEngine.Server.RPCResponseError
+    name: RPCResponseError
+  - uid: NPCEngine.Server.RPCResponseMessage`1
+    name: RPCResponseMessage<ReturnType>
+    name.vb: RPCResponseMessage(Of ReturnType)
+- uid: NPCEngine.Utility
+  name: NPCEngine.Utility
+  items:
+  - uid: NPCEngine.Utility.AudioSourceQueue
+    name: AudioSourceQueue
+  - uid: NPCEngine.Utility.Singleton`1
+    name: Singleton<T>
+    name.vb: Singleton(Of T)

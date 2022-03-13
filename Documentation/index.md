@@ -46,3 +46,4 @@ These steps are usually done automatically by the welcome dialogue buttons from 
 ```
 Assets/StreamingAssets/.npc-engine/cli.exe download-default-models --models-path Assets/StreamingAssets/.models
 ```
+Or you can download or export your own models (Tutorials coming soon).

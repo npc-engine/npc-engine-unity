@@ -1,0 +1,495 @@
+### YamlMime:ManagedReference
+items:
+- uid: NPCEngine.Components.DialogueUI
+  commentId: T:NPCEngine.Components.DialogueUI
+  id: DialogueUI
+  parent: NPCEngine.Components
+  children:
+  - NPCEngine.Components.DialogueUI.AddLine(NPCEngine.Components.ChatLine,System.Boolean)
+  - NPCEngine.Components.DialogueUI.dialogueHistory
+  - NPCEngine.Components.DialogueUI.dialogueTopics
+  - NPCEngine.Components.DialogueUI.Disable
+  - NPCEngine.Components.DialogueUI.Enable
+  - NPCEngine.Components.DialogueUI.highlightColor
+  - NPCEngine.Components.DialogueUI.lineLimit
+  - NPCEngine.Components.DialogueUI.uiObject
+  - NPCEngine.Components.DialogueUI.UpdateTopics(System.Collections.Generic.List{System.String})
+  - NPCEngine.Components.DialogueUI.usernameColor
+  langs:
+  - csharp
+  - vb
+  name: DialogueUI
+  nameWithType: DialogueUI
+  fullName: NPCEngine.Components.DialogueUI
+  type: Class
+  source:
+    id: DialogueUI
+    path: ''
+    startLine: 946
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  summary: "\nSimple UI script that uses NonPlayerCharacter callbacks.\n"
+  example: []
+  syntax:
+    content: 'public class DialogueUI : MonoBehaviour'
+    content.vb: >-
+      Public Class DialogueUI
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: NPCEngine.Components.DialogueUI.uiObject
+  commentId: F:NPCEngine.Components.DialogueUI.uiObject
+  id: uiObject
+  parent: NPCEngine.Components.DialogueUI
+  langs:
+  - csharp
+  - vb
+  name: uiObject
+  nameWithType: DialogueUI.uiObject
+  fullName: NPCEngine.Components.DialogueUI.uiObject
+  type: Field
+  source:
+    id: uiObject
+    path: ''
+    startLine: 952
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  summary: "\nGameobject that will be enabled, disabled and oriented towards the player.\n"
+  example: []
+  syntax:
+    content: public GameObject uiObject
+    return:
+      type: Global.GameObject
+    content.vb: Public uiObject As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.Components.DialogueUI.lineLimit
+  commentId: F:NPCEngine.Components.DialogueUI.lineLimit
+  id: lineLimit
+  parent: NPCEngine.Components.DialogueUI
+  langs:
+  - csharp
+  - vb
+  name: lineLimit
+  nameWithType: DialogueUI.lineLimit
+  fullName: NPCEngine.Components.DialogueUI.lineLimit
+  type: Field
+  source:
+    id: lineLimit
+    path: ''
+    startLine: 957
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  summary: "\nLine limit for the text field.\n"
+  example: []
+  syntax:
+    content: public int lineLimit
+    return:
+      type: System.Int32
+    content.vb: Public lineLimit As Integer
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.Components.DialogueUI.dialogueHistory
+  commentId: F:NPCEngine.Components.DialogueUI.dialogueHistory
+  id: dialogueHistory
+  parent: NPCEngine.Components.DialogueUI
+  langs:
+  - csharp
+  - vb
+  name: dialogueHistory
+  nameWithType: DialogueUI.dialogueHistory
+  fullName: NPCEngine.Components.DialogueUI.dialogueHistory
+  type: Field
+  source:
+    id: dialogueHistory
+    path: ''
+    startLine: 964
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  summary: "\nText field for the dialogue.\n"
+  example: []
+  syntax:
+    content: protected Text dialogueHistory
+    return:
+      type: Global.Text
+    content.vb: Protected dialogueHistory As Text
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: NPCEngine.Components.DialogueUI.dialogueTopics
+  commentId: F:NPCEngine.Components.DialogueUI.dialogueTopics
+  id: dialogueTopics
+  parent: NPCEngine.Components.DialogueUI
+  langs:
+  - csharp
+  - vb
+  name: dialogueTopics
+  nameWithType: DialogueUI.dialogueTopics
+  fullName: NPCEngine.Components.DialogueUI.dialogueTopics
+  type: Field
+  source:
+    id: dialogueTopics
+    path: ''
+    startLine: 970
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  summary: "\nText field for the topics of the possible dialogue options.\n"
+  example: []
+  syntax:
+    content: protected Text dialogueTopics
+    return:
+      type: Global.Text
+    content.vb: Protected dialogueTopics As Text
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: NPCEngine.Components.DialogueUI.usernameColor
+  commentId: F:NPCEngine.Components.DialogueUI.usernameColor
+  id: usernameColor
+  parent: NPCEngine.Components.DialogueUI
+  langs:
+  - csharp
+  - vb
+  name: usernameColor
+  nameWithType: DialogueUI.usernameColor
+  fullName: NPCEngine.Components.DialogueUI.usernameColor
+  type: Field
+  source:
+    id: usernameColor
+    path: ''
+    startLine: 972
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  syntax:
+    content: public Color usernameColor
+    return:
+      type: Global.Color
+    content.vb: Public usernameColor As Color
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.Components.DialogueUI.highlightColor
+  commentId: F:NPCEngine.Components.DialogueUI.highlightColor
+  id: highlightColor
+  parent: NPCEngine.Components.DialogueUI
+  langs:
+  - csharp
+  - vb
+  name: highlightColor
+  nameWithType: DialogueUI.highlightColor
+  fullName: NPCEngine.Components.DialogueUI.highlightColor
+  type: Field
+  source:
+    id: highlightColor
+    path: ''
+    startLine: 973
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  syntax:
+    content: public Color highlightColor
+    return:
+      type: Global.Color
+    content.vb: Public highlightColor As Color
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.Components.DialogueUI.AddLine(NPCEngine.Components.ChatLine,System.Boolean)
+  commentId: M:NPCEngine.Components.DialogueUI.AddLine(NPCEngine.Components.ChatLine,System.Boolean)
+  id: AddLine(NPCEngine.Components.ChatLine,System.Boolean)
+  parent: NPCEngine.Components.DialogueUI
+  langs:
+  - csharp
+  - vb
+  name: AddLine(ChatLine, Boolean)
+  nameWithType: DialogueUI.AddLine(ChatLine, Boolean)
+  fullName: NPCEngine.Components.DialogueUI.AddLine(NPCEngine.Components.ChatLine, System.Boolean)
+  type: Method
+  source:
+    id: AddLine
+    path: ''
+    startLine: 978
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  syntax:
+    content: public void AddLine(ChatLine chatLine, bool highlight = false)
+    parameters:
+    - id: chatLine
+      type: NPCEngine.Components.ChatLine
+    - id: highlight
+      type: System.Boolean
+    content.vb: Public Sub AddLine(chatLine As ChatLine, highlight As Boolean = False)
+  overload: NPCEngine.Components.DialogueUI.AddLine*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.Components.DialogueUI.UpdateTopics(System.Collections.Generic.List{System.String})
+  commentId: M:NPCEngine.Components.DialogueUI.UpdateTopics(System.Collections.Generic.List{System.String})
+  id: UpdateTopics(System.Collections.Generic.List{System.String})
+  parent: NPCEngine.Components.DialogueUI
+  langs:
+  - csharp
+  - vb
+  name: UpdateTopics(List<String>)
+  nameWithType: DialogueUI.UpdateTopics(List<String>)
+  fullName: NPCEngine.Components.DialogueUI.UpdateTopics(System.Collections.Generic.List<System.String>)
+  type: Method
+  source:
+    id: UpdateTopics
+    path: ''
+    startLine: 995
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  syntax:
+    content: public void UpdateTopics(List<string> topics)
+    parameters:
+    - id: topics
+      type: System.Collections.Generic.List{System.String}
+    content.vb: Public Sub UpdateTopics(topics As List(Of String))
+  overload: NPCEngine.Components.DialogueUI.UpdateTopics*
+  nameWithType.vb: DialogueUI.UpdateTopics(List(Of String))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: NPCEngine.Components.DialogueUI.UpdateTopics(System.Collections.Generic.List(Of System.String))
+  name.vb: UpdateTopics(List(Of String))
+- uid: NPCEngine.Components.DialogueUI.Enable
+  commentId: M:NPCEngine.Components.DialogueUI.Enable
+  id: Enable
+  parent: NPCEngine.Components.DialogueUI
+  langs:
+  - csharp
+  - vb
+  name: Enable()
+  nameWithType: DialogueUI.Enable()
+  fullName: NPCEngine.Components.DialogueUI.Enable()
+  type: Method
+  source:
+    id: Enable
+    path: ''
+    startLine: 1000
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  syntax:
+    content: public void Enable()
+    content.vb: Public Sub Enable
+  overload: NPCEngine.Components.DialogueUI.Enable*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.Components.DialogueUI.Disable
+  commentId: M:NPCEngine.Components.DialogueUI.Disable
+  id: Disable
+  parent: NPCEngine.Components.DialogueUI
+  langs:
+  - csharp
+  - vb
+  name: Disable()
+  nameWithType: DialogueUI.Disable()
+  fullName: NPCEngine.Components.DialogueUI.Disable()
+  type: Method
+  source:
+    id: Disable
+    path: ''
+    startLine: 1007
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  syntax:
+    content: public void Disable()
+    content.vb: Public Sub Disable
+  overload: NPCEngine.Components.DialogueUI.Disable*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: NPCEngine.Components
+  commentId: N:NPCEngine.Components
+  name: NPCEngine.Components
+  nameWithType: NPCEngine.Components
+  fullName: NPCEngine.Components
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.GameObject
+  commentId: '!:Global.GameObject'
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: GameObject
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Global.Text
+  isExternal: true
+  name: Text
+  nameWithType: Text
+  fullName: Text
+- uid: Global.Color
+  isExternal: true
+  name: Color
+  nameWithType: Color
+  fullName: Color
+- uid: NPCEngine.Components.DialogueUI.AddLine*
+  commentId: Overload:NPCEngine.Components.DialogueUI.AddLine
+  name: AddLine
+  nameWithType: DialogueUI.AddLine
+  fullName: NPCEngine.Components.DialogueUI.AddLine
+- uid: NPCEngine.Components.ChatLine
+  commentId: T:NPCEngine.Components.ChatLine
+  parent: NPCEngine.Components
+  name: ChatLine
+  nameWithType: ChatLine
+  fullName: NPCEngine.Components.ChatLine
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: NPCEngine.Components.DialogueUI.UpdateTopics*
+  commentId: Overload:NPCEngine.Components.DialogueUI.UpdateTopics
+  name: UpdateTopics
+  nameWithType: DialogueUI.UpdateTopics
+  fullName: NPCEngine.Components.DialogueUI.UpdateTopics
+- uid: System.Collections.Generic.List{System.String}
+  commentId: T:System.Collections.Generic.List{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<String>
+  nameWithType: List<String>
+  fullName: System.Collections.Generic.List<System.String>
+  nameWithType.vb: List(Of String)
+  fullName.vb: System.Collections.Generic.List(Of System.String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: NPCEngine.Components.DialogueUI.Enable*
+  commentId: Overload:NPCEngine.Components.DialogueUI.Enable
+  name: Enable
+  nameWithType: DialogueUI.Enable
+  fullName: NPCEngine.Components.DialogueUI.Enable
+- uid: NPCEngine.Components.DialogueUI.Disable*
+  commentId: Overload:NPCEngine.Components.DialogueUI.Disable
+  name: Disable
+  nameWithType: DialogueUI.Disable
+  fullName: NPCEngine.Components.DialogueUI.Disable

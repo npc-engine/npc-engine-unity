@@ -1,0 +1,127 @@
+### YamlMime:ManagedReference
+items:
+- uid: NPCEngine.Utility.AudioSourceQueue
+  commentId: T:NPCEngine.Utility.AudioSourceQueue
+  id: AudioSourceQueue
+  parent: NPCEngine.Utility
+  children:
+  - NPCEngine.Utility.AudioSourceQueue.audioSource
+  - NPCEngine.Utility.AudioSourceQueue.PlaySound(AudioClip)
+  langs:
+  - csharp
+  - vb
+  name: AudioSourceQueue
+  nameWithType: AudioSourceQueue
+  fullName: NPCEngine.Utility.AudioSourceQueue
+  type: Class
+  source:
+    id: AudioSourceQueue
+    path: ''
+    startLine: 2540
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Utility
+  syntax:
+    content: 'public class AudioSourceQueue : MonoBehaviour'
+    content.vb: >-
+      Public Class AudioSourceQueue
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: NPCEngine.Utility.AudioSourceQueue.audioSource
+  commentId: F:NPCEngine.Utility.AudioSourceQueue.audioSource
+  id: audioSource
+  parent: NPCEngine.Utility.AudioSourceQueue
+  langs:
+  - csharp
+  - vb
+  name: audioSource
+  nameWithType: AudioSourceQueue.audioSource
+  fullName: NPCEngine.Utility.AudioSourceQueue.audioSource
+  type: Field
+  source:
+    id: audioSource
+    path: ''
+    startLine: 2543
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Utility
+  syntax:
+    content: public AudioSource audioSource
+    return:
+      type: Global.AudioSource
+    content.vb: Public audioSource As AudioSource
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.Utility.AudioSourceQueue.PlaySound(AudioClip)
+  commentId: M:NPCEngine.Utility.AudioSourceQueue.PlaySound(AudioClip)
+  id: PlaySound(AudioClip)
+  parent: NPCEngine.Utility.AudioSourceQueue
+  langs:
+  - csharp
+  - vb
+  name: PlaySound(AudioClip)
+  nameWithType: AudioSourceQueue.PlaySound(AudioClip)
+  fullName: NPCEngine.Utility.AudioSourceQueue.PlaySound(AudioClip)
+  type: Method
+  source:
+    id: PlaySound
+    path: ''
+    startLine: 2560
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Utility
+  syntax:
+    content: public void PlaySound(AudioClip clip)
+    parameters:
+    - id: clip
+      type: Global.AudioClip
+    content.vb: Public Sub PlaySound(clip As AudioClip)
+  overload: NPCEngine.Utility.AudioSourceQueue.PlaySound*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: NPCEngine.Utility
+  commentId: N:NPCEngine.Utility
+  name: NPCEngine.Utility
+  nameWithType: NPCEngine.Utility
+  fullName: NPCEngine.Utility
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.AudioSource
+  commentId: '!:Global.AudioSource'
+  isExternal: true
+  name: AudioSource
+  nameWithType: AudioSource
+  fullName: AudioSource
+- uid: NPCEngine.Utility.AudioSourceQueue.PlaySound*
+  commentId: Overload:NPCEngine.Utility.AudioSourceQueue.PlaySound
+  name: PlaySound
+  nameWithType: AudioSourceQueue.PlaySound
+  fullName: NPCEngine.Utility.AudioSourceQueue.PlaySound
+- uid: Global.AudioClip
+  isExternal: true
+  name: AudioClip
+  nameWithType: AudioClip
+  fullName: AudioClip

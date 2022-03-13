@@ -66,6 +66,19 @@ crashlytics-build.properties
 # Packed Addressables
 /[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
 
+/[Aa]ssets/[Ss]treamingAssets/*
+/[Aa]ssets/VIDE
+/[Aa]ssets/RPGPP_LT
+/[Aa]ssets/Polytope\ Studio
+/[Aa]ssets/ModularFirstPersonController
+/[Aa]ssets/VIDE.meta
+/[Aa]ssets/RPGPP_LT.meta
+/[Aa]ssets/Polytope\ Studio.meta
+/[Aa]ssets/ModularFirstPersonController.meta
+
+_site/**
+**/.cache/**
+Documentation/obj/**    
 /[Aa]ssets/*
 !/[Aa]ssets/NPCEngine
 /Packages/packages-lock.json

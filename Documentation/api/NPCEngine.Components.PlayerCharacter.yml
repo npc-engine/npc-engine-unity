@@ -1,0 +1,526 @@
+### YamlMime:ManagedReference
+items:
+- uid: NPCEngine.Components.PlayerCharacter
+  commentId: T:NPCEngine.Components.PlayerCharacter
+  id: PlayerCharacter
+  parent: NPCEngine.Components
+  children:
+  - NPCEngine.Components.PlayerCharacter.characterName
+  - NPCEngine.Components.PlayerCharacter.CheckCamera
+  - NPCEngine.Components.PlayerCharacter.CheckIsSeen(Vector3)
+  - NPCEngine.Components.PlayerCharacter.DeregisterDialogueCandidate(NPCEngine.Components.NonPlayerCharacter)
+  - NPCEngine.Components.PlayerCharacter.HorizontalMargin
+  - NPCEngine.Components.PlayerCharacter.IsRegistered(NPCEngine.Components.NonPlayerCharacter)
+  - NPCEngine.Components.PlayerCharacter.LeaveDialog
+  - NPCEngine.Components.PlayerCharacter.MaxRange
+  - NPCEngine.Components.PlayerCharacter.persona
+  - NPCEngine.Components.PlayerCharacter.RegisterDialogueCandidate(NPCEngine.Components.NonPlayerCharacter)
+  - NPCEngine.Components.PlayerCharacter.settingDescription
+  - NPCEngine.Components.PlayerCharacter.settingName
+  - NPCEngine.Components.PlayerCharacter.SpeechToText
+  - NPCEngine.Components.PlayerCharacter.VerticalMargin
+  langs:
+  - csharp
+  - vb
+  name: PlayerCharacter
+  nameWithType: PlayerCharacter
+  fullName: NPCEngine.Components.PlayerCharacter
+  type: Class
+  source:
+    id: PlayerCharacter
+    path: ''
+    startLine: 1526
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  syntax:
+    content: 'public class PlayerCharacter : Singleton<PlayerCharacter>'
+    content.vb: >-
+      Public Class PlayerCharacter
+          Inherits Singleton(Of PlayerCharacter)
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: NPCEngine.Components.PlayerCharacter.settingName
+  commentId: F:NPCEngine.Components.PlayerCharacter.settingName
+  id: settingName
+  parent: NPCEngine.Components.PlayerCharacter
+  langs:
+  - csharp
+  - vb
+  name: settingName
+  nameWithType: PlayerCharacter.settingName
+  fullName: NPCEngine.Components.PlayerCharacter.settingName
+  type: Field
+  source:
+    id: settingName
+    path: ''
+    startLine: 1534
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  syntax:
+    content: public string settingName
+    return:
+      type: System.String
+    content.vb: Public settingName As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.Components.PlayerCharacter.settingDescription
+  commentId: F:NPCEngine.Components.PlayerCharacter.settingDescription
+  id: settingDescription
+  parent: NPCEngine.Components.PlayerCharacter
+  langs:
+  - csharp
+  - vb
+  name: settingDescription
+  nameWithType: PlayerCharacter.settingDescription
+  fullName: NPCEngine.Components.PlayerCharacter.settingDescription
+  type: Field
+  source:
+    id: settingDescription
+    path: ''
+    startLine: 1536
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  syntax:
+    content: public string settingDescription
+    return:
+      type: System.String
+    content.vb: Public settingDescription As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.Components.PlayerCharacter.characterName
+  commentId: F:NPCEngine.Components.PlayerCharacter.characterName
+  id: characterName
+  parent: NPCEngine.Components.PlayerCharacter
+  langs:
+  - csharp
+  - vb
+  name: characterName
+  nameWithType: PlayerCharacter.characterName
+  fullName: NPCEngine.Components.PlayerCharacter.characterName
+  type: Field
+  source:
+    id: characterName
+    path: ''
+    startLine: 1538
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  syntax:
+    content: public string characterName
+    return:
+      type: System.String
+    content.vb: Public characterName As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.Components.PlayerCharacter.persona
+  commentId: F:NPCEngine.Components.PlayerCharacter.persona
+  id: persona
+  parent: NPCEngine.Components.PlayerCharacter
+  langs:
+  - csharp
+  - vb
+  name: persona
+  nameWithType: PlayerCharacter.persona
+  fullName: NPCEngine.Components.PlayerCharacter.persona
+  type: Field
+  source:
+    id: persona
+    path: ''
+    startLine: 1541
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  syntax:
+    content: public string persona
+    return:
+      type: System.String
+    content.vb: Public persona As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.Components.PlayerCharacter.CheckCamera
+  commentId: F:NPCEngine.Components.PlayerCharacter.CheckCamera
+  id: CheckCamera
+  parent: NPCEngine.Components.PlayerCharacter
+  langs:
+  - csharp
+  - vb
+  name: CheckCamera
+  nameWithType: PlayerCharacter.CheckCamera
+  fullName: NPCEngine.Components.PlayerCharacter.CheckCamera
+  type: Field
+  source:
+    id: CheckCamera
+    path: ''
+    startLine: 1544
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  syntax:
+    content: public Camera CheckCamera
+    return:
+      type: Global.Camera
+    content.vb: Public CheckCamera As Camera
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.Components.PlayerCharacter.MaxRange
+  commentId: F:NPCEngine.Components.PlayerCharacter.MaxRange
+  id: MaxRange
+  parent: NPCEngine.Components.PlayerCharacter
+  langs:
+  - csharp
+  - vb
+  name: MaxRange
+  nameWithType: PlayerCharacter.MaxRange
+  fullName: NPCEngine.Components.PlayerCharacter.MaxRange
+  type: Field
+  source:
+    id: MaxRange
+    path: ''
+    startLine: 1547
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  syntax:
+    content: public float MaxRange
+    return:
+      type: System.Single
+    content.vb: Public MaxRange As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.Components.PlayerCharacter.VerticalMargin
+  commentId: F:NPCEngine.Components.PlayerCharacter.VerticalMargin
+  id: VerticalMargin
+  parent: NPCEngine.Components.PlayerCharacter
+  langs:
+  - csharp
+  - vb
+  name: VerticalMargin
+  nameWithType: PlayerCharacter.VerticalMargin
+  fullName: NPCEngine.Components.PlayerCharacter.VerticalMargin
+  type: Field
+  source:
+    id: VerticalMargin
+    path: ''
+    startLine: 1551
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  syntax:
+    content: public float VerticalMargin
+    return:
+      type: System.Single
+    content.vb: Public VerticalMargin As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.Components.PlayerCharacter.HorizontalMargin
+  commentId: F:NPCEngine.Components.PlayerCharacter.HorizontalMargin
+  id: HorizontalMargin
+  parent: NPCEngine.Components.PlayerCharacter
+  langs:
+  - csharp
+  - vb
+  name: HorizontalMargin
+  nameWithType: PlayerCharacter.HorizontalMargin
+  fullName: NPCEngine.Components.PlayerCharacter.HorizontalMargin
+  type: Field
+  source:
+    id: HorizontalMargin
+    path: ''
+    startLine: 1555
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  syntax:
+    content: public float HorizontalMargin
+    return:
+      type: System.Single
+    content.vb: Public HorizontalMargin As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.Components.PlayerCharacter.SpeechToText
+  commentId: F:NPCEngine.Components.PlayerCharacter.SpeechToText
+  id: SpeechToText
+  parent: NPCEngine.Components.PlayerCharacter
+  langs:
+  - csharp
+  - vb
+  name: SpeechToText
+  nameWithType: PlayerCharacter.SpeechToText
+  fullName: NPCEngine.Components.PlayerCharacter.SpeechToText
+  type: Field
+  source:
+    id: SpeechToText
+    path: ''
+    startLine: 1557
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  syntax:
+    content: public AbstractSpeechToText SpeechToText
+    return:
+      type: NPCEngine.Components.AbstractSpeechToText
+    content.vb: Public SpeechToText As AbstractSpeechToText
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.Components.PlayerCharacter.RegisterDialogueCandidate(NPCEngine.Components.NonPlayerCharacter)
+  commentId: M:NPCEngine.Components.PlayerCharacter.RegisterDialogueCandidate(NPCEngine.Components.NonPlayerCharacter)
+  id: RegisterDialogueCandidate(NPCEngine.Components.NonPlayerCharacter)
+  parent: NPCEngine.Components.PlayerCharacter
+  langs:
+  - csharp
+  - vb
+  name: RegisterDialogueCandidate(NonPlayerCharacter)
+  nameWithType: PlayerCharacter.RegisterDialogueCandidate(NonPlayerCharacter)
+  fullName: NPCEngine.Components.PlayerCharacter.RegisterDialogueCandidate(NPCEngine.Components.NonPlayerCharacter)
+  type: Method
+  source:
+    id: RegisterDialogueCandidate
+    path: ''
+    startLine: 1576
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  syntax:
+    content: public void RegisterDialogueCandidate(NonPlayerCharacter agent)
+    parameters:
+    - id: agent
+      type: NPCEngine.Components.NonPlayerCharacter
+    content.vb: Public Sub RegisterDialogueCandidate(agent As NonPlayerCharacter)
+  overload: NPCEngine.Components.PlayerCharacter.RegisterDialogueCandidate*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.Components.PlayerCharacter.DeregisterDialogueCandidate(NPCEngine.Components.NonPlayerCharacter)
+  commentId: M:NPCEngine.Components.PlayerCharacter.DeregisterDialogueCandidate(NPCEngine.Components.NonPlayerCharacter)
+  id: DeregisterDialogueCandidate(NPCEngine.Components.NonPlayerCharacter)
+  parent: NPCEngine.Components.PlayerCharacter
+  langs:
+  - csharp
+  - vb
+  name: DeregisterDialogueCandidate(NonPlayerCharacter)
+  nameWithType: PlayerCharacter.DeregisterDialogueCandidate(NonPlayerCharacter)
+  fullName: NPCEngine.Components.PlayerCharacter.DeregisterDialogueCandidate(NPCEngine.Components.NonPlayerCharacter)
+  type: Method
+  source:
+    id: DeregisterDialogueCandidate
+    path: ''
+    startLine: 1581
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  syntax:
+    content: public void DeregisterDialogueCandidate(NonPlayerCharacter agent)
+    parameters:
+    - id: agent
+      type: NPCEngine.Components.NonPlayerCharacter
+    content.vb: Public Sub DeregisterDialogueCandidate(agent As NonPlayerCharacter)
+  overload: NPCEngine.Components.PlayerCharacter.DeregisterDialogueCandidate*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.Components.PlayerCharacter.IsRegistered(NPCEngine.Components.NonPlayerCharacter)
+  commentId: M:NPCEngine.Components.PlayerCharacter.IsRegistered(NPCEngine.Components.NonPlayerCharacter)
+  id: IsRegistered(NPCEngine.Components.NonPlayerCharacter)
+  parent: NPCEngine.Components.PlayerCharacter
+  langs:
+  - csharp
+  - vb
+  name: IsRegistered(NonPlayerCharacter)
+  nameWithType: PlayerCharacter.IsRegistered(NonPlayerCharacter)
+  fullName: NPCEngine.Components.PlayerCharacter.IsRegistered(NPCEngine.Components.NonPlayerCharacter)
+  type: Method
+  source:
+    id: IsRegistered
+    path: ''
+    startLine: 1586
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  syntax:
+    content: public bool IsRegistered(NonPlayerCharacter agent)
+    parameters:
+    - id: agent
+      type: NPCEngine.Components.NonPlayerCharacter
+    return:
+      type: System.Boolean
+    content.vb: Public Function IsRegistered(agent As NonPlayerCharacter) As Boolean
+  overload: NPCEngine.Components.PlayerCharacter.IsRegistered*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.Components.PlayerCharacter.CheckIsSeen(Vector3)
+  commentId: M:NPCEngine.Components.PlayerCharacter.CheckIsSeen(Vector3)
+  id: CheckIsSeen(Vector3)
+  parent: NPCEngine.Components.PlayerCharacter
+  langs:
+  - csharp
+  - vb
+  name: CheckIsSeen(Vector3)
+  nameWithType: PlayerCharacter.CheckIsSeen(Vector3)
+  fullName: NPCEngine.Components.PlayerCharacter.CheckIsSeen(Vector3)
+  type: Method
+  source:
+    id: CheckIsSeen
+    path: ''
+    startLine: 1591
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  syntax:
+    content: public bool CheckIsSeen(Vector3 dialogAgentPosition)
+    parameters:
+    - id: dialogAgentPosition
+      type: Global.Vector3
+    return:
+      type: System.Boolean
+    content.vb: Public Function CheckIsSeen(dialogAgentPosition As Vector3) As Boolean
+  overload: NPCEngine.Components.PlayerCharacter.CheckIsSeen*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.Components.PlayerCharacter.LeaveDialog
+  commentId: M:NPCEngine.Components.PlayerCharacter.LeaveDialog
+  id: LeaveDialog
+  parent: NPCEngine.Components.PlayerCharacter
+  langs:
+  - csharp
+  - vb
+  name: LeaveDialog()
+  nameWithType: PlayerCharacter.LeaveDialog()
+  fullName: NPCEngine.Components.PlayerCharacter.LeaveDialog()
+  type: Method
+  source:
+    id: LeaveDialog
+    path: ''
+    startLine: 1603
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  syntax:
+    content: public void LeaveDialog()
+    content.vb: Public Sub LeaveDialog
+  overload: NPCEngine.Components.PlayerCharacter.LeaveDialog*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: NPCEngine.Components
+  commentId: N:NPCEngine.Components
+  name: NPCEngine.Components
+  nameWithType: NPCEngine.Components
+  fullName: NPCEngine.Components
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Global.Camera
+  commentId: '!:Global.Camera'
+  isExternal: true
+  name: Camera
+  nameWithType: Camera
+  fullName: Camera
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: NPCEngine.Components.AbstractSpeechToText
+  commentId: T:NPCEngine.Components.AbstractSpeechToText
+  parent: NPCEngine.Components
+  name: AbstractSpeechToText
+  nameWithType: AbstractSpeechToText
+  fullName: NPCEngine.Components.AbstractSpeechToText
+- uid: NPCEngine.Components.PlayerCharacter.RegisterDialogueCandidate*
+  commentId: Overload:NPCEngine.Components.PlayerCharacter.RegisterDialogueCandidate
+  name: RegisterDialogueCandidate
+  nameWithType: PlayerCharacter.RegisterDialogueCandidate
+  fullName: NPCEngine.Components.PlayerCharacter.RegisterDialogueCandidate
+- uid: NPCEngine.Components.NonPlayerCharacter
+  commentId: T:NPCEngine.Components.NonPlayerCharacter
+  parent: NPCEngine.Components
+  name: NonPlayerCharacter
+  nameWithType: NonPlayerCharacter
+  fullName: NPCEngine.Components.NonPlayerCharacter
+- uid: NPCEngine.Components.PlayerCharacter.DeregisterDialogueCandidate*
+  commentId: Overload:NPCEngine.Components.PlayerCharacter.DeregisterDialogueCandidate
+  name: DeregisterDialogueCandidate
+  nameWithType: PlayerCharacter.DeregisterDialogueCandidate
+  fullName: NPCEngine.Components.PlayerCharacter.DeregisterDialogueCandidate
+- uid: NPCEngine.Components.PlayerCharacter.IsRegistered*
+  commentId: Overload:NPCEngine.Components.PlayerCharacter.IsRegistered
+  name: IsRegistered
+  nameWithType: PlayerCharacter.IsRegistered
+  fullName: NPCEngine.Components.PlayerCharacter.IsRegistered
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: NPCEngine.Components.PlayerCharacter.CheckIsSeen*
+  commentId: Overload:NPCEngine.Components.PlayerCharacter.CheckIsSeen
+  name: CheckIsSeen
+  nameWithType: PlayerCharacter.CheckIsSeen
+  fullName: NPCEngine.Components.PlayerCharacter.CheckIsSeen
+- uid: Global.Vector3
+  commentId: '!:Global.Vector3'
+  isExternal: true
+  name: Vector3
+  nameWithType: Vector3
+  fullName: Vector3
+- uid: NPCEngine.Components.PlayerCharacter.LeaveDialog*
+  commentId: Overload:NPCEngine.Components.PlayerCharacter.LeaveDialog
+  name: LeaveDialog
+  nameWithType: PlayerCharacter.LeaveDialog
+  fullName: NPCEngine.Components.PlayerCharacter.LeaveDialog

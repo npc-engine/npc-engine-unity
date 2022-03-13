@@ -1,0 +1,341 @@
+### YamlMime:ManagedReference
+items:
+- uid: NPCEngine.Components.FantasyChatbotContext
+  commentId: T:NPCEngine.Components.FantasyChatbotContext
+  id: FantasyChatbotContext
+  parent: NPCEngine.Components
+  children:
+  - NPCEngine.Components.FantasyChatbotContext.history
+  - NPCEngine.Components.FantasyChatbotContext.location
+  - NPCEngine.Components.FantasyChatbotContext.location_name
+  - NPCEngine.Components.FantasyChatbotContext.name
+  - NPCEngine.Components.FantasyChatbotContext.other_name
+  - NPCEngine.Components.FantasyChatbotContext.other_persona
+  - NPCEngine.Components.FantasyChatbotContext.persona
+  langs:
+  - csharp
+  - vb
+  name: FantasyChatbotContext
+  nameWithType: FantasyChatbotContext
+  fullName: NPCEngine.Components.FantasyChatbotContext
+  type: Class
+  source:
+    id: FantasyChatbotContext
+    path: ''
+    startLine: 1669
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  syntax:
+    content: public class FantasyChatbotContext
+    content.vb: Public Class FantasyChatbotContext
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: NPCEngine.Components.FantasyChatbotContext.location_name
+  commentId: F:NPCEngine.Components.FantasyChatbotContext.location_name
+  id: location_name
+  parent: NPCEngine.Components.FantasyChatbotContext
+  langs:
+  - csharp
+  - vb
+  name: location_name
+  nameWithType: FantasyChatbotContext.location_name
+  fullName: NPCEngine.Components.FantasyChatbotContext.location_name
+  type: Field
+  source:
+    id: location_name
+    path: ''
+    startLine: 1683
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  syntax:
+    content: public string location_name
+    return:
+      type: System.String
+    content.vb: Public location_name As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.Components.FantasyChatbotContext.location
+  commentId: F:NPCEngine.Components.FantasyChatbotContext.location
+  id: location
+  parent: NPCEngine.Components.FantasyChatbotContext
+  langs:
+  - csharp
+  - vb
+  name: location
+  nameWithType: FantasyChatbotContext.location
+  fullName: NPCEngine.Components.FantasyChatbotContext.location
+  type: Field
+  source:
+    id: location
+    path: ''
+    startLine: 1684
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  syntax:
+    content: public string location
+    return:
+      type: System.String
+    content.vb: Public location As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.Components.FantasyChatbotContext.name
+  commentId: F:NPCEngine.Components.FantasyChatbotContext.name
+  id: name
+  parent: NPCEngine.Components.FantasyChatbotContext
+  langs:
+  - csharp
+  - vb
+  name: name
+  nameWithType: FantasyChatbotContext.name
+  fullName: NPCEngine.Components.FantasyChatbotContext.name
+  type: Field
+  source:
+    id: name
+    path: ''
+    startLine: 1685
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  syntax:
+    content: public string name
+    return:
+      type: System.String
+    content.vb: Public name As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.Components.FantasyChatbotContext.persona
+  commentId: F:NPCEngine.Components.FantasyChatbotContext.persona
+  id: persona
+  parent: NPCEngine.Components.FantasyChatbotContext
+  langs:
+  - csharp
+  - vb
+  name: persona
+  nameWithType: FantasyChatbotContext.persona
+  fullName: NPCEngine.Components.FantasyChatbotContext.persona
+  type: Field
+  source:
+    id: persona
+    path: ''
+    startLine: 1686
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  syntax:
+    content: public string persona
+    return:
+      type: System.String
+    content.vb: Public persona As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.Components.FantasyChatbotContext.other_name
+  commentId: F:NPCEngine.Components.FantasyChatbotContext.other_name
+  id: other_name
+  parent: NPCEngine.Components.FantasyChatbotContext
+  langs:
+  - csharp
+  - vb
+  name: other_name
+  nameWithType: FantasyChatbotContext.other_name
+  fullName: NPCEngine.Components.FantasyChatbotContext.other_name
+  type: Field
+  source:
+    id: other_name
+    path: ''
+    startLine: 1687
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  syntax:
+    content: public string other_name
+    return:
+      type: System.String
+    content.vb: Public other_name As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.Components.FantasyChatbotContext.other_persona
+  commentId: F:NPCEngine.Components.FantasyChatbotContext.other_persona
+  id: other_persona
+  parent: NPCEngine.Components.FantasyChatbotContext
+  langs:
+  - csharp
+  - vb
+  name: other_persona
+  nameWithType: FantasyChatbotContext.other_persona
+  fullName: NPCEngine.Components.FantasyChatbotContext.other_persona
+  type: Field
+  source:
+    id: other_persona
+    path: ''
+    startLine: 1688
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  syntax:
+    content: public string other_persona
+    return:
+      type: System.String
+    content.vb: Public other_persona As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.Components.FantasyChatbotContext.history
+  commentId: F:NPCEngine.Components.FantasyChatbotContext.history
+  id: history
+  parent: NPCEngine.Components.FantasyChatbotContext
+  langs:
+  - csharp
+  - vb
+  name: history
+  nameWithType: FantasyChatbotContext.history
+  fullName: NPCEngine.Components.FantasyChatbotContext.history
+  type: Field
+  source:
+    id: history
+    path: ''
+    startLine: 1690
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  syntax:
+    content: public List<ChatLine> history
+    return:
+      type: System.Collections.Generic.List{NPCEngine.Components.ChatLine}
+    content.vb: Public history As List(Of ChatLine)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: NPCEngine.Components
+  commentId: N:NPCEngine.Components
+  name: NPCEngine.Components
+  nameWithType: NPCEngine.Components
+  fullName: NPCEngine.Components
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Collections.Generic.List{NPCEngine.Components.ChatLine}
+  commentId: T:System.Collections.Generic.List{NPCEngine.Components.ChatLine}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<ChatLine>
+  nameWithType: List<ChatLine>
+  fullName: System.Collections.Generic.List<NPCEngine.Components.ChatLine>
+  nameWithType.vb: List(Of ChatLine)
+  fullName.vb: System.Collections.Generic.List(Of NPCEngine.Components.ChatLine)
+  name.vb: List(Of ChatLine)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: NPCEngine.Components.ChatLine
+    name: ChatLine
+    nameWithType: ChatLine
+    fullName: NPCEngine.Components.ChatLine
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: NPCEngine.Components.ChatLine
+    name: ChatLine
+    nameWithType: ChatLine
+    fullName: NPCEngine.Components.ChatLine
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic

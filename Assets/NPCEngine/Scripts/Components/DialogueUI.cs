@@ -5,16 +5,32 @@ using UnityEngine.UI;
 
 namespace NPCEngine.Components
 {
+    /// <summary>
+    /// Simple UI script that uses NonPlayerCharacter callbacks.
+    /// </summary>
     public class DialogueUI : MonoBehaviour
     {
 
+        /// <summary>
+        /// Gameobject that will be enabled, disabled and oriented towards the player.
+        /// </summary>
         public GameObject uiObject;
+
+        /// <summary>
+        /// Line limit for the text field.
+        /// </summary>
         public int lineLimit = 10;
 
 
+        /// <summary>
+        /// Text field for the dialogue.
+        /// </summary>
         [SerializeField]
         protected Text dialogueHistory;
 
+        /// <summary>
+        /// Text field for the topics of the possible dialogue options.
+        /// </summary>
         [SerializeField]
         protected Text dialogueTopics;
 

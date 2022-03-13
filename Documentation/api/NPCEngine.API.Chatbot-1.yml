@@ -1,0 +1,859 @@
+### YamlMime:ManagedReference
+items:
+- uid: NPCEngine.API.Chatbot`1
+  commentId: T:NPCEngine.API.Chatbot`1
+  id: Chatbot`1
+  parent: NPCEngine.API
+  children:
+  - NPCEngine.API.Chatbot`1.GenerateReply(`0,System.Single,System.Int32)
+  - NPCEngine.API.Chatbot`1.GenerateReplyCoroutine(`0,Action{System.String},System.Single,System.Int32)
+  - NPCEngine.API.Chatbot`1.GetPromptTemplate
+  - NPCEngine.API.Chatbot`1.GetPromptTemplateCoroutine(Action{System.String})
+  - NPCEngine.API.Chatbot`1.GetSpecialTokens
+  - NPCEngine.API.Chatbot`1.GetSpecialTokensCoroutine(Action{System.Collections.Generic.Dictionary{System.String,System.String}})
+  langs:
+  - csharp
+  - vb
+  name: Chatbot<ContextType>
+  nameWithType: Chatbot<ContextType>
+  fullName: NPCEngine.API.Chatbot<ContextType>
+  type: Class
+  source:
+    id: Chatbot
+    path: ''
+    startLine: 542
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.API
+  summary: "\nStatic class <code>Chatbot</code> provides remote procedure calls \nto inference engine&apos;s chatbot model.\n"
+  example: []
+  syntax:
+    content: >-
+      public static class Chatbot<ContextType>
+          where ContextType : new()
+    typeParameters:
+    - id: ContextType
+    content.vb: Public Module Chatbot(Of ContextType As New)
+  inheritance:
+  - System.Object
+  nameWithType.vb: Chatbot(Of ContextType)
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+  fullName.vb: NPCEngine.API.Chatbot(Of ContextType)
+  name.vb: Chatbot(Of ContextType)
+- uid: NPCEngine.API.Chatbot`1.GenerateReply(`0,System.Single,System.Int32)
+  commentId: M:NPCEngine.API.Chatbot`1.GenerateReply(`0,System.Single,System.Int32)
+  id: GenerateReply(`0,System.Single,System.Int32)
+  parent: NPCEngine.API.Chatbot`1
+  langs:
+  - csharp
+  - vb
+  name: GenerateReply(ContextType, Single, Int32)
+  nameWithType: Chatbot<ContextType>.GenerateReply(ContextType, Single, Int32)
+  fullName: NPCEngine.API.Chatbot<ContextType>.GenerateReply(ContextType, System.Single, System.Int32)
+  type: Method
+  source:
+    id: GenerateReply
+    path: ''
+    startLine: 555
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.API
+  syntax:
+    content: public static ResultFuture<string> GenerateReply(ContextType context, float temperature = 0.8F, int topk = 5)
+    parameters:
+    - id: context
+      type: '{ContextType}'
+    - id: temperature
+      type: System.Single
+    - id: topk
+      type: System.Int32
+    return:
+      type: NPCEngine.ResultFuture{System.String}
+    content.vb: Public Shared Function GenerateReply(context As ContextType, temperature As Single = 0.8F, topk As Integer = 5) As ResultFuture(Of String)
+  overload: NPCEngine.API.Chatbot`1.GenerateReply*
+  nameWithType.vb: Chatbot(Of ContextType).GenerateReply(ContextType, Single, Int32)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: NPCEngine.API.Chatbot(Of ContextType).GenerateReply(ContextType, System.Single, System.Int32)
+- uid: NPCEngine.API.Chatbot`1.GetSpecialTokens
+  commentId: M:NPCEngine.API.Chatbot`1.GetSpecialTokens
+  id: GetSpecialTokens
+  parent: NPCEngine.API.Chatbot`1
+  langs:
+  - csharp
+  - vb
+  name: GetSpecialTokens()
+  nameWithType: Chatbot<ContextType>.GetSpecialTokens()
+  fullName: NPCEngine.API.Chatbot<ContextType>.GetSpecialTokens()
+  type: Method
+  source:
+    id: GetSpecialTokens
+    path: ''
+    startLine: 566
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.API
+  syntax:
+    content: public static ResultFuture<Dictionary<string, string>> GetSpecialTokens()
+    return:
+      type: NPCEngine.ResultFuture{System.Collections.Generic.Dictionary{System.String,System.String}}
+    content.vb: Public Shared Function GetSpecialTokens As ResultFuture(Of Dictionary(Of String, String))
+  overload: NPCEngine.API.Chatbot`1.GetSpecialTokens*
+  nameWithType.vb: Chatbot(Of ContextType).GetSpecialTokens()
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: NPCEngine.API.Chatbot(Of ContextType).GetSpecialTokens()
+- uid: NPCEngine.API.Chatbot`1.GetPromptTemplate
+  commentId: M:NPCEngine.API.Chatbot`1.GetPromptTemplate
+  id: GetPromptTemplate
+  parent: NPCEngine.API.Chatbot`1
+  langs:
+  - csharp
+  - vb
+  name: GetPromptTemplate()
+  nameWithType: Chatbot<ContextType>.GetPromptTemplate()
+  fullName: NPCEngine.API.Chatbot<ContextType>.GetPromptTemplate()
+  type: Method
+  source:
+    id: GetPromptTemplate
+    path: ''
+    startLine: 571
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.API
+  syntax:
+    content: public static ResultFuture<string> GetPromptTemplate()
+    return:
+      type: NPCEngine.ResultFuture{System.String}
+    content.vb: Public Shared Function GetPromptTemplate As ResultFuture(Of String)
+  overload: NPCEngine.API.Chatbot`1.GetPromptTemplate*
+  nameWithType.vb: Chatbot(Of ContextType).GetPromptTemplate()
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: NPCEngine.API.Chatbot(Of ContextType).GetPromptTemplate()
+- uid: NPCEngine.API.Chatbot`1.GenerateReplyCoroutine(`0,Action{System.String},System.Single,System.Int32)
+  commentId: M:NPCEngine.API.Chatbot`1.GenerateReplyCoroutine(`0,Action{System.String},System.Single,System.Int32)
+  id: GenerateReplyCoroutine(`0,Action{System.String},System.Single,System.Int32)
+  parent: NPCEngine.API.Chatbot`1
+  langs:
+  - csharp
+  - vb
+  name: GenerateReplyCoroutine(ContextType, Action<String>, Single, Int32)
+  nameWithType: Chatbot<ContextType>.GenerateReplyCoroutine(ContextType, Action<String>, Single, Int32)
+  fullName: NPCEngine.API.Chatbot<ContextType>.GenerateReplyCoroutine(ContextType, Action<System.String>, System.Single, System.Int32)
+  type: Method
+  source:
+    id: GenerateReplyCoroutine
+    path: ''
+    startLine: 577
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.API
+  syntax:
+    content: public static IEnumerator<string> GenerateReplyCoroutine(ContextType context, Action<string> outputCallback, float temperature = 0.8F, int topk = 5)
+    parameters:
+    - id: context
+      type: '{ContextType}'
+    - id: outputCallback
+      type: Global.Action{System.String}
+    - id: temperature
+      type: System.Single
+    - id: topk
+      type: System.Int32
+    return:
+      type: System.Collections.Generic.IEnumerator{System.String}
+    content.vb: Public Shared Function GenerateReplyCoroutine(context As ContextType, outputCallback As Action(Of String), temperature As Single = 0.8F, topk As Integer = 5) As IEnumerator(Of String)
+  overload: NPCEngine.API.Chatbot`1.GenerateReplyCoroutine*
+  nameWithType.vb: Chatbot(Of ContextType).GenerateReplyCoroutine(ContextType, Action(Of String), Single, Int32)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: NPCEngine.API.Chatbot(Of ContextType).GenerateReplyCoroutine(ContextType, Action(Of System.String), System.Single, System.Int32)
+  name.vb: GenerateReplyCoroutine(ContextType, Action(Of String), Single, Int32)
+- uid: NPCEngine.API.Chatbot`1.GetSpecialTokensCoroutine(Action{System.Collections.Generic.Dictionary{System.String,System.String}})
+  commentId: M:NPCEngine.API.Chatbot`1.GetSpecialTokensCoroutine(Action{System.Collections.Generic.Dictionary{System.String,System.String}})
+  id: GetSpecialTokensCoroutine(Action{System.Collections.Generic.Dictionary{System.String,System.String}})
+  parent: NPCEngine.API.Chatbot`1
+  langs:
+  - csharp
+  - vb
+  name: GetSpecialTokensCoroutine(Action<Dictionary<String, String>>)
+  nameWithType: Chatbot<ContextType>.GetSpecialTokensCoroutine(Action<Dictionary<String, String>>)
+  fullName: NPCEngine.API.Chatbot<ContextType>.GetSpecialTokensCoroutine(Action<System.Collections.Generic.Dictionary<System.String, System.String>>)
+  type: Method
+  source:
+    id: GetSpecialTokensCoroutine
+    path: ''
+    startLine: 594
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.API
+  syntax:
+    content: public static IEnumerator<Dictionary<string, string>> GetSpecialTokensCoroutine(Action<Dictionary<string, string>> outputCallback)
+    parameters:
+    - id: outputCallback
+      type: Global.Action{System.Collections.Generic.Dictionary{System.String,System.String}}
+    return:
+      type: System.Collections.Generic.IEnumerator{System.Collections.Generic.Dictionary{System.String,System.String}}
+    content.vb: Public Shared Function GetSpecialTokensCoroutine(outputCallback As Action(Of Dictionary(Of String, String))) As IEnumerator(Of Dictionary(Of String, String))
+  overload: NPCEngine.API.Chatbot`1.GetSpecialTokensCoroutine*
+  nameWithType.vb: Chatbot(Of ContextType).GetSpecialTokensCoroutine(Action(Of Dictionary(Of String, String)))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: NPCEngine.API.Chatbot(Of ContextType).GetSpecialTokensCoroutine(Action(Of System.Collections.Generic.Dictionary(Of System.String, System.String)))
+  name.vb: GetSpecialTokensCoroutine(Action(Of Dictionary(Of String, String)))
+- uid: NPCEngine.API.Chatbot`1.GetPromptTemplateCoroutine(Action{System.String})
+  commentId: M:NPCEngine.API.Chatbot`1.GetPromptTemplateCoroutine(Action{System.String})
+  id: GetPromptTemplateCoroutine(Action{System.String})
+  parent: NPCEngine.API.Chatbot`1
+  langs:
+  - csharp
+  - vb
+  name: GetPromptTemplateCoroutine(Action<String>)
+  nameWithType: Chatbot<ContextType>.GetPromptTemplateCoroutine(Action<String>)
+  fullName: NPCEngine.API.Chatbot<ContextType>.GetPromptTemplateCoroutine(Action<System.String>)
+  type: Method
+  source:
+    id: GetPromptTemplateCoroutine
+    path: ''
+    startLine: 605
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.API
+  syntax:
+    content: public static IEnumerator GetPromptTemplateCoroutine(Action<string> outputCallback)
+    parameters:
+    - id: outputCallback
+      type: Global.Action{System.String}
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Public Shared Function GetPromptTemplateCoroutine(outputCallback As Action(Of String)) As IEnumerator
+  overload: NPCEngine.API.Chatbot`1.GetPromptTemplateCoroutine*
+  nameWithType.vb: Chatbot(Of ContextType).GetPromptTemplateCoroutine(Action(Of String))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: NPCEngine.API.Chatbot(Of ContextType).GetPromptTemplateCoroutine(Action(Of System.String))
+  name.vb: GetPromptTemplateCoroutine(Action(Of String))
+references:
+- uid: NPCEngine.API
+  commentId: N:NPCEngine.API
+  name: NPCEngine.API
+  nameWithType: NPCEngine.API
+  fullName: NPCEngine.API
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: NPCEngine.API.Chatbot`1.GenerateReply*
+  commentId: Overload:NPCEngine.API.Chatbot`1.GenerateReply
+  name: GenerateReply
+  nameWithType: Chatbot<ContextType>.GenerateReply
+  fullName: NPCEngine.API.Chatbot<ContextType>.GenerateReply
+  nameWithType.vb: Chatbot(Of ContextType).GenerateReply
+  fullName.vb: NPCEngine.API.Chatbot(Of ContextType).GenerateReply
+- uid: '{ContextType}'
+  commentId: '!:ContextType'
+  definition: ContextType
+  name: ContextType
+  nameWithType: ContextType
+  fullName: ContextType
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: NPCEngine.ResultFuture{System.String}
+  commentId: T:NPCEngine.ResultFuture{System.String}
+  parent: NPCEngine
+  definition: NPCEngine.ResultFuture`1
+  name: ResultFuture<String>
+  nameWithType: ResultFuture<String>
+  fullName: NPCEngine.ResultFuture<System.String>
+  nameWithType.vb: ResultFuture(Of String)
+  fullName.vb: NPCEngine.ResultFuture(Of System.String)
+  name.vb: ResultFuture(Of String)
+  spec.csharp:
+  - uid: NPCEngine.ResultFuture`1
+    name: ResultFuture
+    nameWithType: ResultFuture
+    fullName: NPCEngine.ResultFuture
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: NPCEngine.ResultFuture`1
+    name: ResultFuture
+    nameWithType: ResultFuture
+    fullName: NPCEngine.ResultFuture
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ContextType
+  name: ContextType
+  nameWithType: ContextType
+  fullName: ContextType
+- uid: NPCEngine.ResultFuture`1
+  commentId: T:NPCEngine.ResultFuture`1
+  name: ResultFuture<ReturnType>
+  nameWithType: ResultFuture<ReturnType>
+  fullName: NPCEngine.ResultFuture<ReturnType>
+  nameWithType.vb: ResultFuture(Of ReturnType)
+  fullName.vb: NPCEngine.ResultFuture(Of ReturnType)
+  name.vb: ResultFuture(Of ReturnType)
+  spec.csharp:
+  - uid: NPCEngine.ResultFuture`1
+    name: ResultFuture
+    nameWithType: ResultFuture
+    fullName: NPCEngine.ResultFuture
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ReturnType
+    nameWithType: ReturnType
+    fullName: ReturnType
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: NPCEngine.ResultFuture`1
+    name: ResultFuture
+    nameWithType: ResultFuture
+    fullName: NPCEngine.ResultFuture
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ReturnType
+    nameWithType: ReturnType
+    fullName: ReturnType
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NPCEngine
+  commentId: N:NPCEngine
+  name: NPCEngine
+  nameWithType: NPCEngine
+  fullName: NPCEngine
+- uid: NPCEngine.API.Chatbot`1.GetSpecialTokens*
+  commentId: Overload:NPCEngine.API.Chatbot`1.GetSpecialTokens
+  name: GetSpecialTokens
+  nameWithType: Chatbot<ContextType>.GetSpecialTokens
+  fullName: NPCEngine.API.Chatbot<ContextType>.GetSpecialTokens
+  nameWithType.vb: Chatbot(Of ContextType).GetSpecialTokens
+  fullName.vb: NPCEngine.API.Chatbot(Of ContextType).GetSpecialTokens
+- uid: NPCEngine.ResultFuture{System.Collections.Generic.Dictionary{System.String,System.String}}
+  commentId: T:NPCEngine.ResultFuture{System.Collections.Generic.Dictionary{System.String,System.String}}
+  parent: NPCEngine
+  definition: NPCEngine.ResultFuture`1
+  name: ResultFuture<Dictionary<String, String>>
+  nameWithType: ResultFuture<Dictionary<String, String>>
+  fullName: NPCEngine.ResultFuture<System.Collections.Generic.Dictionary<System.String, System.String>>
+  nameWithType.vb: ResultFuture(Of Dictionary(Of String, String))
+  fullName.vb: NPCEngine.ResultFuture(Of System.Collections.Generic.Dictionary(Of System.String, System.String))
+  name.vb: ResultFuture(Of Dictionary(Of String, String))
+  spec.csharp:
+  - uid: NPCEngine.ResultFuture`1
+    name: ResultFuture
+    nameWithType: ResultFuture
+    fullName: NPCEngine.ResultFuture
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: NPCEngine.ResultFuture`1
+    name: ResultFuture
+    nameWithType: ResultFuture
+    fullName: NPCEngine.ResultFuture
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NPCEngine.API.Chatbot`1.GetPromptTemplate*
+  commentId: Overload:NPCEngine.API.Chatbot`1.GetPromptTemplate
+  name: GetPromptTemplate
+  nameWithType: Chatbot<ContextType>.GetPromptTemplate
+  fullName: NPCEngine.API.Chatbot<ContextType>.GetPromptTemplate
+  nameWithType.vb: Chatbot(Of ContextType).GetPromptTemplate
+  fullName.vb: NPCEngine.API.Chatbot(Of ContextType).GetPromptTemplate
+- uid: NPCEngine.API.Chatbot`1.GenerateReplyCoroutine*
+  commentId: Overload:NPCEngine.API.Chatbot`1.GenerateReplyCoroutine
+  name: GenerateReplyCoroutine
+  nameWithType: Chatbot<ContextType>.GenerateReplyCoroutine
+  fullName: NPCEngine.API.Chatbot<ContextType>.GenerateReplyCoroutine
+  nameWithType.vb: Chatbot(Of ContextType).GenerateReplyCoroutine
+  fullName.vb: NPCEngine.API.Chatbot(Of ContextType).GenerateReplyCoroutine
+- uid: Global.Action{System.String}
+  commentId: '!:Global.Action{System.String}'
+  definition: Global.Action`1
+  name: Action<String>
+  nameWithType: Action<String>
+  fullName: Action<System.String>
+  nameWithType.vb: Action(Of String)
+  fullName.vb: Action(Of System.String)
+  name.vb: Action(Of String)
+  spec.csharp:
+  - uid: Global.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerator{System.String}
+  commentId: T:System.Collections.Generic.IEnumerator{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerator`1
+  name: IEnumerator<String>
+  nameWithType: IEnumerator<String>
+  fullName: System.Collections.Generic.IEnumerator<System.String>
+  nameWithType.vb: IEnumerator(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerator(Of System.String)
+  name.vb: IEnumerator(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerator`1
+    name: IEnumerator
+    nameWithType: IEnumerator
+    fullName: System.Collections.Generic.IEnumerator
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerator`1
+    name: IEnumerator
+    nameWithType: IEnumerator
+    fullName: System.Collections.Generic.IEnumerator
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.Action`1
+  isExternal: true
+  name: Action<>
+  nameWithType: Action<>
+  fullName: Action<>
+  nameWithType.vb: Action(Of )
+  fullName.vb: Action(Of )
+  name.vb: Action(Of )
+  spec.csharp:
+  - uid: Global.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerator`1
+  commentId: T:System.Collections.Generic.IEnumerator`1
+  isExternal: true
+  name: IEnumerator<T>
+  nameWithType: IEnumerator<T>
+  fullName: System.Collections.Generic.IEnumerator<T>
+  nameWithType.vb: IEnumerator(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerator(Of T)
+  name.vb: IEnumerator(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerator`1
+    name: IEnumerator
+    nameWithType: IEnumerator
+    fullName: System.Collections.Generic.IEnumerator
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerator`1
+    name: IEnumerator
+    nameWithType: IEnumerator
+    fullName: System.Collections.Generic.IEnumerator
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: NPCEngine.API.Chatbot`1.GetSpecialTokensCoroutine*
+  commentId: Overload:NPCEngine.API.Chatbot`1.GetSpecialTokensCoroutine
+  name: GetSpecialTokensCoroutine
+  nameWithType: Chatbot<ContextType>.GetSpecialTokensCoroutine
+  fullName: NPCEngine.API.Chatbot<ContextType>.GetSpecialTokensCoroutine
+  nameWithType.vb: Chatbot(Of ContextType).GetSpecialTokensCoroutine
+  fullName.vb: NPCEngine.API.Chatbot(Of ContextType).GetSpecialTokensCoroutine
+- uid: Global.Action{System.Collections.Generic.Dictionary{System.String,System.String}}
+  commentId: '!:Global.Action{System.Collections.Generic.Dictionary{System.String,System.String}}'
+  definition: Global.Action`1
+  name: Action<Dictionary<String, String>>
+  nameWithType: Action<Dictionary<String, String>>
+  fullName: Action<System.Collections.Generic.Dictionary<System.String, System.String>>
+  nameWithType.vb: Action(Of Dictionary(Of String, String))
+  fullName.vb: Action(Of System.Collections.Generic.Dictionary(Of System.String, System.String))
+  name.vb: Action(Of Dictionary(Of String, String))
+  spec.csharp:
+  - uid: Global.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerator{System.Collections.Generic.Dictionary{System.String,System.String}}
+  commentId: T:System.Collections.Generic.IEnumerator{System.Collections.Generic.Dictionary{System.String,System.String}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerator`1
+  name: IEnumerator<Dictionary<String, String>>
+  nameWithType: IEnumerator<Dictionary<String, String>>
+  fullName: System.Collections.Generic.IEnumerator<System.Collections.Generic.Dictionary<System.String, System.String>>
+  nameWithType.vb: IEnumerator(Of Dictionary(Of String, String))
+  fullName.vb: System.Collections.Generic.IEnumerator(Of System.Collections.Generic.Dictionary(Of System.String, System.String))
+  name.vb: IEnumerator(Of Dictionary(Of String, String))
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerator`1
+    name: IEnumerator
+    nameWithType: IEnumerator
+    fullName: System.Collections.Generic.IEnumerator
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerator`1
+    name: IEnumerator
+    nameWithType: IEnumerator
+    fullName: System.Collections.Generic.IEnumerator
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NPCEngine.API.Chatbot`1.GetPromptTemplateCoroutine*
+  commentId: Overload:NPCEngine.API.Chatbot`1.GetPromptTemplateCoroutine
+  name: GetPromptTemplateCoroutine
+  nameWithType: Chatbot<ContextType>.GetPromptTemplateCoroutine
+  fullName: NPCEngine.API.Chatbot<ContextType>.GetPromptTemplateCoroutine
+  nameWithType.vb: Chatbot(Of ContextType).GetPromptTemplateCoroutine
+  fullName.vb: NPCEngine.API.Chatbot(Of ContextType).GetPromptTemplateCoroutine
+- uid: System.Collections.IEnumerator
+  commentId: T:System.Collections.IEnumerator
+  parent: System.Collections
+  isExternal: true
+  name: IEnumerator
+  nameWithType: IEnumerator
+  fullName: System.Collections.IEnumerator
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections

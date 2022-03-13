@@ -1,0 +1,357 @@
+### YamlMime:ManagedReference
+items:
+- uid: NPCEngine.Components.DictationRecognizerSTT
+  commentId: T:NPCEngine.Components.DictationRecognizerSTT
+  id: DictationRecognizerSTT
+  parent: NPCEngine.Components
+  children:
+  - NPCEngine.Components.DictationRecognizerSTT.debugLogs
+  - NPCEngine.Components.DictationRecognizerSTT.PolicyNotAccepted
+  - NPCEngine.Components.DictationRecognizerSTT.RecognizerStarted
+  - NPCEngine.Components.DictationRecognizerSTT.StartListening
+  - NPCEngine.Components.DictationRecognizerSTT.StopListening
+  langs:
+  - csharp
+  - vb
+  name: DictationRecognizerSTT
+  nameWithType: DictationRecognizerSTT
+  fullName: NPCEngine.Components.DictationRecognizerSTT
+  type: Class
+  source:
+    id: DictationRecognizerSTT
+    path: ''
+    startLine: 1036
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  syntax:
+    content: 'public class DictationRecognizerSTT : AbstractSpeechToText'
+    content.vb: >-
+      Public Class DictationRecognizerSTT
+          Inherits AbstractSpeechToText
+  inheritance:
+  - System.Object
+  - NPCEngine.Components.AbstractSpeechToText
+  inheritedMembers:
+  - NPCEngine.Components.AbstractSpeechToText.Context
+  - NPCEngine.Components.AbstractSpeechToText.OnSpeechRecognized
+  - NPCEngine.Components.AbstractSpeechToText.OnSpeechRecognitionFailed
+  - NPCEngine.Components.AbstractSpeechToText.SpeechRecognized(System.String)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: NPCEngine.Components.DictationRecognizerSTT.debugLogs
+  commentId: F:NPCEngine.Components.DictationRecognizerSTT.debugLogs
+  id: debugLogs
+  parent: NPCEngine.Components.DictationRecognizerSTT
+  langs:
+  - csharp
+  - vb
+  name: debugLogs
+  nameWithType: DictationRecognizerSTT.debugLogs
+  fullName: NPCEngine.Components.DictationRecognizerSTT.debugLogs
+  type: Field
+  source:
+    id: debugLogs
+    path: ''
+    startLine: 1038
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  syntax:
+    content: public bool debugLogs
+    return:
+      type: System.Boolean
+    content.vb: Public debugLogs As Boolean
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.Components.DictationRecognizerSTT.PolicyNotAccepted
+  commentId: P:NPCEngine.Components.DictationRecognizerSTT.PolicyNotAccepted
+  id: PolicyNotAccepted
+  parent: NPCEngine.Components.DictationRecognizerSTT
+  langs:
+  - csharp
+  - vb
+  name: PolicyNotAccepted
+  nameWithType: DictationRecognizerSTT.PolicyNotAccepted
+  fullName: NPCEngine.Components.DictationRecognizerSTT.PolicyNotAccepted
+  type: Property
+  source:
+    id: PolicyNotAccepted
+    path: ''
+    startLine: 1040
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  syntax:
+    content: public bool PolicyNotAccepted { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property PolicyNotAccepted As Boolean
+  overload: NPCEngine.Components.DictationRecognizerSTT.PolicyNotAccepted*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: NPCEngine.Components.DictationRecognizerSTT.RecognizerStarted
+  commentId: P:NPCEngine.Components.DictationRecognizerSTT.RecognizerStarted
+  id: RecognizerStarted
+  parent: NPCEngine.Components.DictationRecognizerSTT
+  langs:
+  - csharp
+  - vb
+  name: RecognizerStarted
+  nameWithType: DictationRecognizerSTT.RecognizerStarted
+  fullName: NPCEngine.Components.DictationRecognizerSTT.RecognizerStarted
+  type: Property
+  source:
+    id: RecognizerStarted
+    path: ''
+    startLine: 1048
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  syntax:
+    content: public bool RecognizerStarted { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property RecognizerStarted As Boolean
+  overload: NPCEngine.Components.DictationRecognizerSTT.RecognizerStarted*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: NPCEngine.Components.DictationRecognizerSTT.StartListening
+  commentId: M:NPCEngine.Components.DictationRecognizerSTT.StartListening
+  id: StartListening
+  parent: NPCEngine.Components.DictationRecognizerSTT
+  langs:
+  - csharp
+  - vb
+  name: StartListening()
+  nameWithType: DictationRecognizerSTT.StartListening()
+  fullName: NPCEngine.Components.DictationRecognizerSTT.StartListening()
+  type: Method
+  source:
+    id: StartListening
+    path: ''
+    startLine: 1155
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  syntax:
+    content: public override void StartListening()
+    content.vb: Public Overrides Sub StartListening
+  overridden: NPCEngine.Components.AbstractSpeechToText.StartListening
+  overload: NPCEngine.Components.DictationRecognizerSTT.StartListening*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: NPCEngine.Components.DictationRecognizerSTT.StopListening
+  commentId: M:NPCEngine.Components.DictationRecognizerSTT.StopListening
+  id: StopListening
+  parent: NPCEngine.Components.DictationRecognizerSTT
+  langs:
+  - csharp
+  - vb
+  name: StopListening()
+  nameWithType: DictationRecognizerSTT.StopListening()
+  fullName: NPCEngine.Components.DictationRecognizerSTT.StopListening()
+  type: Method
+  source:
+    id: StopListening
+    path: ''
+    startLine: 1160
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  syntax:
+    content: public override void StopListening()
+    content.vb: Public Overrides Sub StopListening
+  overridden: NPCEngine.Components.AbstractSpeechToText.StopListening
+  overload: NPCEngine.Components.DictationRecognizerSTT.StopListening*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: NPCEngine.Components
+  commentId: N:NPCEngine.Components
+  name: NPCEngine.Components
+  nameWithType: NPCEngine.Components
+  fullName: NPCEngine.Components
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: NPCEngine.Components.AbstractSpeechToText
+  commentId: T:NPCEngine.Components.AbstractSpeechToText
+  parent: NPCEngine.Components
+  name: AbstractSpeechToText
+  nameWithType: AbstractSpeechToText
+  fullName: NPCEngine.Components.AbstractSpeechToText
+- uid: NPCEngine.Components.AbstractSpeechToText.Context
+  commentId: P:NPCEngine.Components.AbstractSpeechToText.Context
+  parent: NPCEngine.Components.AbstractSpeechToText
+  name: Context
+  nameWithType: AbstractSpeechToText.Context
+  fullName: NPCEngine.Components.AbstractSpeechToText.Context
+- uid: NPCEngine.Components.AbstractSpeechToText.OnSpeechRecognized
+  commentId: E:NPCEngine.Components.AbstractSpeechToText.OnSpeechRecognized
+  parent: NPCEngine.Components.AbstractSpeechToText
+  name: OnSpeechRecognized
+  nameWithType: AbstractSpeechToText.OnSpeechRecognized
+  fullName: NPCEngine.Components.AbstractSpeechToText.OnSpeechRecognized
+- uid: NPCEngine.Components.AbstractSpeechToText.OnSpeechRecognitionFailed
+  commentId: E:NPCEngine.Components.AbstractSpeechToText.OnSpeechRecognitionFailed
+  parent: NPCEngine.Components.AbstractSpeechToText
+  name: OnSpeechRecognitionFailed
+  nameWithType: AbstractSpeechToText.OnSpeechRecognitionFailed
+  fullName: NPCEngine.Components.AbstractSpeechToText.OnSpeechRecognitionFailed
+- uid: NPCEngine.Components.AbstractSpeechToText.SpeechRecognized(System.String)
+  commentId: M:NPCEngine.Components.AbstractSpeechToText.SpeechRecognized(System.String)
+  parent: NPCEngine.Components.AbstractSpeechToText
+  isExternal: true
+  name: SpeechRecognized(String)
+  nameWithType: AbstractSpeechToText.SpeechRecognized(String)
+  fullName: NPCEngine.Components.AbstractSpeechToText.SpeechRecognized(System.String)
+  spec.csharp:
+  - uid: NPCEngine.Components.AbstractSpeechToText.SpeechRecognized(System.String)
+    name: SpeechRecognized
+    nameWithType: AbstractSpeechToText.SpeechRecognized
+    fullName: NPCEngine.Components.AbstractSpeechToText.SpeechRecognized
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: NPCEngine.Components.AbstractSpeechToText.SpeechRecognized(System.String)
+    name: SpeechRecognized
+    nameWithType: AbstractSpeechToText.SpeechRecognized
+    fullName: NPCEngine.Components.AbstractSpeechToText.SpeechRecognized
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: NPCEngine.Components.DictationRecognizerSTT.PolicyNotAccepted*
+  commentId: Overload:NPCEngine.Components.DictationRecognizerSTT.PolicyNotAccepted
+  name: PolicyNotAccepted
+  nameWithType: DictationRecognizerSTT.PolicyNotAccepted
+  fullName: NPCEngine.Components.DictationRecognizerSTT.PolicyNotAccepted
+- uid: NPCEngine.Components.DictationRecognizerSTT.RecognizerStarted*
+  commentId: Overload:NPCEngine.Components.DictationRecognizerSTT.RecognizerStarted
+  name: RecognizerStarted
+  nameWithType: DictationRecognizerSTT.RecognizerStarted
+  fullName: NPCEngine.Components.DictationRecognizerSTT.RecognizerStarted
+- uid: NPCEngine.Components.AbstractSpeechToText.StartListening
+  commentId: M:NPCEngine.Components.AbstractSpeechToText.StartListening
+  parent: NPCEngine.Components.AbstractSpeechToText
+  name: StartListening()
+  nameWithType: AbstractSpeechToText.StartListening()
+  fullName: NPCEngine.Components.AbstractSpeechToText.StartListening()
+  spec.csharp:
+  - uid: NPCEngine.Components.AbstractSpeechToText.StartListening
+    name: StartListening
+    nameWithType: AbstractSpeechToText.StartListening
+    fullName: NPCEngine.Components.AbstractSpeechToText.StartListening
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: NPCEngine.Components.AbstractSpeechToText.StartListening
+    name: StartListening
+    nameWithType: AbstractSpeechToText.StartListening
+    fullName: NPCEngine.Components.AbstractSpeechToText.StartListening
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NPCEngine.Components.DictationRecognizerSTT.StartListening*
+  commentId: Overload:NPCEngine.Components.DictationRecognizerSTT.StartListening
+  name: StartListening
+  nameWithType: DictationRecognizerSTT.StartListening
+  fullName: NPCEngine.Components.DictationRecognizerSTT.StartListening
+- uid: NPCEngine.Components.AbstractSpeechToText.StopListening
+  commentId: M:NPCEngine.Components.AbstractSpeechToText.StopListening
+  parent: NPCEngine.Components.AbstractSpeechToText
+  name: StopListening()
+  nameWithType: AbstractSpeechToText.StopListening()
+  fullName: NPCEngine.Components.AbstractSpeechToText.StopListening()
+  spec.csharp:
+  - uid: NPCEngine.Components.AbstractSpeechToText.StopListening
+    name: StopListening
+    nameWithType: AbstractSpeechToText.StopListening
+    fullName: NPCEngine.Components.AbstractSpeechToText.StopListening
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: NPCEngine.Components.AbstractSpeechToText.StopListening
+    name: StopListening
+    nameWithType: AbstractSpeechToText.StopListening
+    fullName: NPCEngine.Components.AbstractSpeechToText.StopListening
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NPCEngine.Components.DictationRecognizerSTT.StopListening*
+  commentId: Overload:NPCEngine.Components.DictationRecognizerSTT.StopListening
+  name: StopListening
+  nameWithType: DictationRecognizerSTT.StopListening
+  fullName: NPCEngine.Components.DictationRecognizerSTT.StopListening
