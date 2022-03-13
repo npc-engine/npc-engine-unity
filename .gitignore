@@ -79,3 +79,8 @@ crashlytics-build.properties
 _site/**
 **/.cache/**
 Documentation/obj/**    
+/[Aa]ssets/*
+!/[Aa]ssets/NPCEngine
+/Packages/packages-lock.json
+/Packages/manifest.json
+/ProjectSettings/ProjectVersion.txt
