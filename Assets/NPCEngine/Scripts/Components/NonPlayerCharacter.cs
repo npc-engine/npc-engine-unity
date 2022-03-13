@@ -82,6 +82,8 @@ namespace NPCEngine.Components
             {
                 dialogueSystem = GetComponent<AbstractDialogueSystem>();
             }
+
+            StartCoroutine(DialogueCheckCoroutine());
         }
 
         public void StartDialogue()
@@ -239,22 +241,35 @@ namespace NPCEngine.Components
         {
             if (NPCEngineServer.Instance.Initialized && !initialized)
                 initialized = true;
-            if (!inDialog)
+
+        }
+
+        IEnumerator DialogueCheckCoroutine()
+        {
+            while (true)
             {
-                if (!active && PlayerCharacter.Instance.CheckIsSeen(audioSourceQueue.audioSource.transform.position))
+                if (!inDialog)
                 {
-                    PlayerCharacter.Instance.RegisterDialogueCandidate(this);
-                    active = true;
+                    if (
+                        !active
+                        && !PlayerCharacter.Instance.IsRegistered(this)
+                        && PlayerCharacter.Instance.CheckIsSeen(audioSourceQueue.audioSource.transform.position)
+                    )
+                    {
+                        PlayerCharacter.Instance.RegisterDialogueCandidate(this);
+                        active = true;
+                    }
+                    else if (!inDialog && active && !PlayerCharacter.Instance.CheckIsSeen(audioSourceQueue.audioSource.transform.position))
+                    {
+                        PlayerCharacter.Instance.DeregisterDialogueCandidate(this);
+                        active = false;
+                    }
                 }
-                else if (!inDialog && active && !PlayerCharacter.Instance.CheckIsSeen(audioSourceQueue.audioSource.transform.position))
+                else if ((PlayerCharacter.Instance.transform.position - audioSourceQueue.audioSource.transform.position).magnitude > PlayerCharacter.Instance.MaxRange)
                 {
-                    PlayerCharacter.Instance.DeregisterDialogueCandidate(this);
-                    active = false;
+                    EndDialog();
                 }
-            }
-            else if ((PlayerCharacter.Instance.transform.position - audioSourceQueue.audioSource.transform.position).magnitude > PlayerCharacter.Instance.MaxRange)
-            {
-                EndDialog();
+                yield return new WaitForSeconds(0.5f);
             }
         }
     }

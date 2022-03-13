@@ -192,7 +192,8 @@ namespace NPCEngine.Server
         {
             if (!initialized)
             {
-                throw new NPCEngineException("NPCEngineServer not initialized");
+                UnityEngine.Debug.LogError("NPCEngineServer not initialized, empty result is returned");
+                return new ResultFuture<R>();
             }
             var result = new ResultFuture<R>();
             var request = new RPCRequstMessage<P>();

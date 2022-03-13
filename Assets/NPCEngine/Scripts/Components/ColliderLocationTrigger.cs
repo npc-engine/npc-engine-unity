@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace NPCEngine.Components
 {
+    /// <summary>
+    /// Simple collider trigger that sets location in PlayerCharacter
+    /// </summary>
     public class ColliderLocationTrigger : MonoBehaviour
     {
 
