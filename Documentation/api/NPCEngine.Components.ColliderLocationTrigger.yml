@@ -1,0 +1,152 @@
+### YamlMime:ManagedReference
+items:
+- uid: NPCEngine.Components.ColliderLocationTrigger
+  commentId: T:NPCEngine.Components.ColliderLocationTrigger
+  id: ColliderLocationTrigger
+  parent: NPCEngine.Components
+  children:
+  - NPCEngine.Components.ColliderLocationTrigger.locationCollider
+  - NPCEngine.Components.ColliderLocationTrigger.locationDescription
+  - NPCEngine.Components.ColliderLocationTrigger.locationName
+  langs:
+  - csharp
+  - vb
+  name: ColliderLocationTrigger
+  nameWithType: ColliderLocationTrigger
+  fullName: NPCEngine.Components.ColliderLocationTrigger
+  type: Class
+  source:
+    id: ColliderLocationTrigger
+    path: ''
+    startLine: 913
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  summary: "\nSimple collider trigger that sets location in PlayerCharacter\n"
+  example: []
+  syntax:
+    content: 'public class ColliderLocationTrigger : MonoBehaviour'
+    content.vb: >-
+      Public Class ColliderLocationTrigger
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: NPCEngine.Components.ColliderLocationTrigger.locationName
+  commentId: F:NPCEngine.Components.ColliderLocationTrigger.locationName
+  id: locationName
+  parent: NPCEngine.Components.ColliderLocationTrigger
+  langs:
+  - csharp
+  - vb
+  name: locationName
+  nameWithType: ColliderLocationTrigger.locationName
+  fullName: NPCEngine.Components.ColliderLocationTrigger.locationName
+  type: Field
+  source:
+    id: locationName
+    path: ''
+    startLine: 916
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  syntax:
+    content: public string locationName
+    return:
+      type: System.String
+    content.vb: Public locationName As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.Components.ColliderLocationTrigger.locationDescription
+  commentId: F:NPCEngine.Components.ColliderLocationTrigger.locationDescription
+  id: locationDescription
+  parent: NPCEngine.Components.ColliderLocationTrigger
+  langs:
+  - csharp
+  - vb
+  name: locationDescription
+  nameWithType: ColliderLocationTrigger.locationDescription
+  fullName: NPCEngine.Components.ColliderLocationTrigger.locationDescription
+  type: Field
+  source:
+    id: locationDescription
+    path: ''
+    startLine: 918
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  syntax:
+    content: public string locationDescription
+    return:
+      type: System.String
+    content.vb: Public locationDescription As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.Components.ColliderLocationTrigger.locationCollider
+  commentId: F:NPCEngine.Components.ColliderLocationTrigger.locationCollider
+  id: locationCollider
+  parent: NPCEngine.Components.ColliderLocationTrigger
+  langs:
+  - csharp
+  - vb
+  name: locationCollider
+  nameWithType: ColliderLocationTrigger.locationCollider
+  fullName: NPCEngine.Components.ColliderLocationTrigger.locationCollider
+  type: Field
+  source:
+    id: locationCollider
+    path: ''
+    startLine: 920
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  syntax:
+    content: public Collider locationCollider
+    return:
+      type: Global.Collider
+    content.vb: Public locationCollider As Collider
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: NPCEngine.Components
+  commentId: N:NPCEngine.Components
+  name: NPCEngine.Components
+  nameWithType: NPCEngine.Components
+  fullName: NPCEngine.Components
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Global.Collider
+  commentId: '!:Global.Collider'
+  isExternal: true
+  name: Collider
+  nameWithType: Collider
+  fullName: Collider

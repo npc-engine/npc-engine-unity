@@ -1,0 +1,7 @@
+apiRules:
+  - include:
+      uidRegex: ^NPCEngine
+      type: Namespace
+  - exclude:
+      uidRegex: .*
+      type: Namespace

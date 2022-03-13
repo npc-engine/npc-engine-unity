@@ -1,0 +1,59 @@
+### YamlMime:ManagedReference
+items:
+- uid: NPCEngine.Utility
+  commentId: N:NPCEngine.Utility
+  id: NPCEngine.Utility
+  children:
+  - NPCEngine.Utility.AudioSourceQueue
+  - NPCEngine.Utility.Singleton`1
+  langs:
+  - csharp
+  - vb
+  name: NPCEngine.Utility
+  nameWithType: NPCEngine.Utility
+  fullName: NPCEngine.Utility
+  type: Namespace
+  assemblies:
+  - cs.temp.dll
+references:
+- uid: NPCEngine.Utility.AudioSourceQueue
+  commentId: T:NPCEngine.Utility.AudioSourceQueue
+  name: AudioSourceQueue
+  nameWithType: AudioSourceQueue
+  fullName: NPCEngine.Utility.AudioSourceQueue
+- uid: NPCEngine.Utility.Singleton`1
+  commentId: T:NPCEngine.Utility.Singleton`1
+  name: Singleton<T>
+  nameWithType: Singleton<T>
+  fullName: NPCEngine.Utility.Singleton<T>
+  nameWithType.vb: Singleton(Of T)
+  fullName.vb: NPCEngine.Utility.Singleton(Of T)
+  name.vb: Singleton(Of T)
+  spec.csharp:
+  - uid: NPCEngine.Utility.Singleton`1
+    name: Singleton
+    nameWithType: Singleton
+    fullName: NPCEngine.Utility.Singleton
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: NPCEngine.Utility.Singleton`1
+    name: Singleton
+    nameWithType: Singleton
+    fullName: NPCEngine.Utility.Singleton
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )

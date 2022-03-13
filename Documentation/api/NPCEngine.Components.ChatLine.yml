@@ -1,0 +1,114 @@
+### YamlMime:ManagedReference
+items:
+- uid: NPCEngine.Components.ChatLine
+  commentId: T:NPCEngine.Components.ChatLine
+  id: ChatLine
+  parent: NPCEngine.Components
+  children:
+  - NPCEngine.Components.ChatLine.line
+  - NPCEngine.Components.ChatLine.speaker
+  langs:
+  - csharp
+  - vb
+  name: ChatLine
+  nameWithType: ChatLine
+  fullName: NPCEngine.Components.ChatLine
+  type: Class
+  source:
+    id: ChatLine
+    path: ''
+    startLine: 1694
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  syntax:
+    content: public class ChatLine
+    content.vb: Public Class ChatLine
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: NPCEngine.Components.ChatLine.speaker
+  commentId: F:NPCEngine.Components.ChatLine.speaker
+  id: speaker
+  parent: NPCEngine.Components.ChatLine
+  langs:
+  - csharp
+  - vb
+  name: speaker
+  nameWithType: ChatLine.speaker
+  fullName: NPCEngine.Components.ChatLine.speaker
+  type: Field
+  source:
+    id: speaker
+    path: ''
+    startLine: 1697
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  syntax:
+    content: public string speaker
+    return:
+      type: System.String
+    content.vb: Public speaker As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.Components.ChatLine.line
+  commentId: F:NPCEngine.Components.ChatLine.line
+  id: line
+  parent: NPCEngine.Components.ChatLine
+  langs:
+  - csharp
+  - vb
+  name: line
+  nameWithType: ChatLine.line
+  fullName: NPCEngine.Components.ChatLine.line
+  type: Field
+  source:
+    id: line
+    path: ''
+    startLine: 1698
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  syntax:
+    content: public string line
+    return:
+      type: System.String
+    content.vb: Public line As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: NPCEngine.Components
+  commentId: N:NPCEngine.Components
+  name: NPCEngine.Components
+  nameWithType: NPCEngine.Components
+  fullName: NPCEngine.Components
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

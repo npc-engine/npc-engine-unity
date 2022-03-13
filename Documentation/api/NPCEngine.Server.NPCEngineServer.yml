@@ -1,0 +1,452 @@
+### YamlMime:ManagedReference
+items:
+- uid: NPCEngine.Server.NPCEngineServer
+  commentId: T:NPCEngine.Server.NPCEngineServer
+  id: NPCEngineServer
+  parent: NPCEngine.Server
+  children:
+  - NPCEngine.Server.NPCEngineServer.connectToExistingServer
+  - NPCEngine.Server.NPCEngineServer.ConnectToServer
+  - NPCEngine.Server.NPCEngineServer.debug
+  - NPCEngine.Server.NPCEngineServer.Initialized
+  - NPCEngine.Server.NPCEngineServer.initializeOnStart
+  - NPCEngine.Server.NPCEngineServer.modelsPath
+  - NPCEngine.Server.NPCEngineServer.npcEnginePath
+  - NPCEngine.Server.NPCEngineServer.Run``2(String,``0)
+  - NPCEngine.Server.NPCEngineServer.StartInferenceEngine
+  langs:
+  - csharp
+  - vb
+  name: NPCEngineServer
+  nameWithType: NPCEngineServer
+  fullName: NPCEngine.Server.NPCEngineServer
+  type: Class
+  source:
+    id: NPCEngineServer
+    path: ''
+    startLine: 2307
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Server
+  summary: "\nClass <code>NPCEngineServer</code> manages inference engine sidecart process lifetime and communication.\n"
+  example: []
+  syntax:
+    content: 'public class NPCEngineServer : Singleton<NPCEngineServer>'
+    content.vb: >-
+      Public Class NPCEngineServer
+          Inherits Singleton(Of NPCEngineServer)
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: NPCEngine.Server.NPCEngineServer.modelsPath
+  commentId: F:NPCEngine.Server.NPCEngineServer.modelsPath
+  id: modelsPath
+  parent: NPCEngine.Server.NPCEngineServer
+  langs:
+  - csharp
+  - vb
+  name: modelsPath
+  nameWithType: NPCEngineServer.modelsPath
+  fullName: NPCEngine.Server.NPCEngineServer.modelsPath
+  type: Field
+  source:
+    id: modelsPath
+    path: ''
+    startLine: 2311
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Server
+  syntax:
+    content: public string modelsPath
+    return:
+      type: System.String
+    content.vb: Public modelsPath As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.Server.NPCEngineServer.npcEnginePath
+  commentId: F:NPCEngine.Server.NPCEngineServer.npcEnginePath
+  id: npcEnginePath
+  parent: NPCEngine.Server.NPCEngineServer
+  langs:
+  - csharp
+  - vb
+  name: npcEnginePath
+  nameWithType: NPCEngineServer.npcEnginePath
+  fullName: NPCEngine.Server.NPCEngineServer.npcEnginePath
+  type: Field
+  source:
+    id: npcEnginePath
+    path: ''
+    startLine: 2314
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Server
+  syntax:
+    content: public string npcEnginePath
+    return:
+      type: System.String
+    content.vb: Public npcEnginePath As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.Server.NPCEngineServer.initializeOnStart
+  commentId: F:NPCEngine.Server.NPCEngineServer.initializeOnStart
+  id: initializeOnStart
+  parent: NPCEngine.Server.NPCEngineServer
+  langs:
+  - csharp
+  - vb
+  name: initializeOnStart
+  nameWithType: NPCEngineServer.initializeOnStart
+  fullName: NPCEngine.Server.NPCEngineServer.initializeOnStart
+  type: Field
+  source:
+    id: initializeOnStart
+    path: ''
+    startLine: 2316
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Server
+  syntax:
+    content: public bool initializeOnStart
+    return:
+      type: System.Boolean
+    content.vb: Public initializeOnStart As Boolean
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.Server.NPCEngineServer.debug
+  commentId: F:NPCEngine.Server.NPCEngineServer.debug
+  id: debug
+  parent: NPCEngine.Server.NPCEngineServer
+  langs:
+  - csharp
+  - vb
+  name: debug
+  nameWithType: NPCEngineServer.debug
+  fullName: NPCEngine.Server.NPCEngineServer.debug
+  type: Field
+  source:
+    id: debug
+    path: ''
+    startLine: 2317
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Server
+  syntax:
+    content: public bool debug
+    return:
+      type: System.Boolean
+    content.vb: Public debug As Boolean
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.Server.NPCEngineServer.connectToExistingServer
+  commentId: F:NPCEngine.Server.NPCEngineServer.connectToExistingServer
+  id: connectToExistingServer
+  parent: NPCEngine.Server.NPCEngineServer
+  langs:
+  - csharp
+  - vb
+  name: connectToExistingServer
+  nameWithType: NPCEngineServer.connectToExistingServer
+  fullName: NPCEngine.Server.NPCEngineServer.connectToExistingServer
+  type: Field
+  source:
+    id: connectToExistingServer
+    path: ''
+    startLine: 2318
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Server
+  syntax:
+    content: public bool connectToExistingServer
+    return:
+      type: System.Boolean
+    content.vb: Public connectToExistingServer As Boolean
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.Server.NPCEngineServer.Initialized
+  commentId: P:NPCEngine.Server.NPCEngineServer.Initialized
+  id: Initialized
+  parent: NPCEngine.Server.NPCEngineServer
+  langs:
+  - csharp
+  - vb
+  name: Initialized
+  nameWithType: NPCEngineServer.Initialized
+  fullName: NPCEngine.Server.NPCEngineServer.Initialized
+  type: Property
+  source:
+    id: Initialized
+    path: ''
+    startLine: 2325
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Server
+  syntax:
+    content: public bool Initialized { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property Initialized As Boolean
+  overload: NPCEngine.Server.NPCEngineServer.Initialized*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: NPCEngine.Server.NPCEngineServer.Run``2(String,``0)
+  commentId: M:NPCEngine.Server.NPCEngineServer.Run``2(String,``0)
+  id: Run``2(String,``0)
+  parent: NPCEngine.Server.NPCEngineServer
+  langs:
+  - csharp
+  - vb
+  name: Run<P, R>(String, P)
+  nameWithType: NPCEngineServer.Run<P, R>(String, P)
+  fullName: NPCEngine.Server.NPCEngineServer.Run<P, R>(String, P)
+  type: Method
+  source:
+    id: Run
+    path: ''
+    startLine: 2360
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Server
+  syntax:
+    content: >-
+      public ResultFuture<R> Run<P, R>(String methodName, P parameters)
+          where P : new()
+    parameters:
+    - id: methodName
+      type: Global.String
+    - id: parameters
+      type: '{P}'
+    typeParameters:
+    - id: P
+    - id: R
+    return:
+      type: NPCEngine.ResultFuture{{R}}
+    content.vb: Public Function Run(Of P As New, R)(methodName As String, parameters As P) As ResultFuture(Of R)
+  overload: NPCEngine.Server.NPCEngineServer.Run*
+  nameWithType.vb: NPCEngineServer.Run(Of P, R)(String, P)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: NPCEngine.Server.NPCEngineServer.Run(Of P, R)(String, P)
+  name.vb: Run(Of P, R)(String, P)
+- uid: NPCEngine.Server.NPCEngineServer.StartInferenceEngine
+  commentId: M:NPCEngine.Server.NPCEngineServer.StartInferenceEngine
+  id: StartInferenceEngine
+  parent: NPCEngine.Server.NPCEngineServer
+  langs:
+  - csharp
+  - vb
+  name: StartInferenceEngine()
+  nameWithType: NPCEngineServer.StartInferenceEngine()
+  fullName: NPCEngine.Server.NPCEngineServer.StartInferenceEngine()
+  type: Method
+  source:
+    id: StartInferenceEngine
+    path: ''
+    startLine: 2416
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Server
+  syntax:
+    content: public void StartInferenceEngine()
+    content.vb: Public Sub StartInferenceEngine
+  overload: NPCEngine.Server.NPCEngineServer.StartInferenceEngine*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.Server.NPCEngineServer.ConnectToServer
+  commentId: M:NPCEngine.Server.NPCEngineServer.ConnectToServer
+  id: ConnectToServer
+  parent: NPCEngine.Server.NPCEngineServer
+  langs:
+  - csharp
+  - vb
+  name: ConnectToServer()
+  nameWithType: NPCEngineServer.ConnectToServer()
+  fullName: NPCEngine.Server.NPCEngineServer.ConnectToServer()
+  type: Method
+  source:
+    id: ConnectToServer
+    path: ''
+    startLine: 2495
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Server
+  syntax:
+    content: public void ConnectToServer()
+    content.vb: Public Sub ConnectToServer
+  overload: NPCEngine.Server.NPCEngineServer.ConnectToServer*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: NPCEngine.Server
+  commentId: N:NPCEngine.Server
+  name: NPCEngine.Server
+  nameWithType: NPCEngine.Server
+  fullName: NPCEngine.Server
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: NPCEngine.Server.NPCEngineServer.Initialized*
+  commentId: Overload:NPCEngine.Server.NPCEngineServer.Initialized
+  name: Initialized
+  nameWithType: NPCEngineServer.Initialized
+  fullName: NPCEngine.Server.NPCEngineServer.Initialized
+- uid: NPCEngine.Server.NPCEngineServer.Run*
+  commentId: Overload:NPCEngine.Server.NPCEngineServer.Run
+  name: Run
+  nameWithType: NPCEngineServer.Run
+  fullName: NPCEngine.Server.NPCEngineServer.Run
+- uid: Global.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: String
+- uid: '{P}'
+  commentId: '!:P'
+  definition: P
+  name: P
+  nameWithType: P
+  fullName: P
+- uid: NPCEngine.ResultFuture{{R}}
+  commentId: T:NPCEngine.ResultFuture{``1}
+  parent: NPCEngine
+  definition: NPCEngine.ResultFuture`1
+  name: ResultFuture<R>
+  nameWithType: ResultFuture<R>
+  fullName: NPCEngine.ResultFuture<R>
+  nameWithType.vb: ResultFuture(Of R)
+  fullName.vb: NPCEngine.ResultFuture(Of R)
+  name.vb: ResultFuture(Of R)
+  spec.csharp:
+  - uid: NPCEngine.ResultFuture`1
+    name: ResultFuture
+    nameWithType: ResultFuture
+    fullName: NPCEngine.ResultFuture
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: R
+    nameWithType: R
+    fullName: R
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: NPCEngine.ResultFuture`1
+    name: ResultFuture
+    nameWithType: ResultFuture
+    fullName: NPCEngine.ResultFuture
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: R
+    nameWithType: R
+    fullName: R
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: P
+  commentId: '!:P'
+  name: P
+  nameWithType: P
+  fullName: P
+- uid: NPCEngine.ResultFuture`1
+  commentId: T:NPCEngine.ResultFuture`1
+  name: ResultFuture<ReturnType>
+  nameWithType: ResultFuture<ReturnType>
+  fullName: NPCEngine.ResultFuture<ReturnType>
+  nameWithType.vb: ResultFuture(Of ReturnType)
+  fullName.vb: NPCEngine.ResultFuture(Of ReturnType)
+  name.vb: ResultFuture(Of ReturnType)
+  spec.csharp:
+  - uid: NPCEngine.ResultFuture`1
+    name: ResultFuture
+    nameWithType: ResultFuture
+    fullName: NPCEngine.ResultFuture
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ReturnType
+    nameWithType: ReturnType
+    fullName: ReturnType
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: NPCEngine.ResultFuture`1
+    name: ResultFuture
+    nameWithType: ResultFuture
+    fullName: NPCEngine.ResultFuture
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ReturnType
+    nameWithType: ReturnType
+    fullName: ReturnType
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NPCEngine
+  commentId: N:NPCEngine
+  name: NPCEngine
+  nameWithType: NPCEngine
+  fullName: NPCEngine
+- uid: NPCEngine.Server.NPCEngineServer.StartInferenceEngine*
+  commentId: Overload:NPCEngine.Server.NPCEngineServer.StartInferenceEngine
+  name: StartInferenceEngine
+  nameWithType: NPCEngineServer.StartInferenceEngine
+  fullName: NPCEngine.Server.NPCEngineServer.StartInferenceEngine
+- uid: NPCEngine.Server.NPCEngineServer.ConnectToServer*
+  commentId: Overload:NPCEngine.Server.NPCEngineServer.ConnectToServer
+  name: ConnectToServer
+  nameWithType: NPCEngineServer.ConnectToServer
+  fullName: NPCEngine.Server.NPCEngineServer.ConnectToServer

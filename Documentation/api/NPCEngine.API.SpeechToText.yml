@@ -1,0 +1,507 @@
+### YamlMime:ManagedReference
+items:
+- uid: NPCEngine.API.SpeechToText
+  commentId: T:NPCEngine.API.SpeechToText
+  id: SpeechToText
+  parent: NPCEngine.API
+  children:
+  - NPCEngine.API.SpeechToText.GetDevices
+  - NPCEngine.API.SpeechToText.InitializeMicrophoneInput
+  - NPCEngine.API.SpeechToText.Listen(System.String)
+  - NPCEngine.API.SpeechToText.SetDevice(System.Int32)
+  - NPCEngine.API.SpeechToText.Transcribe(System.Collections.Generic.List{System.Single})
+  langs:
+  - csharp
+  - vb
+  name: SpeechToText
+  nameWithType: SpeechToText
+  fullName: NPCEngine.API.SpeechToText
+  type: Class
+  source:
+    id: SpeechToText
+    path: ''
+    startLine: 685
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.API
+  summary: "\nStatic class <code>SpeechToText</code> provides remote procedure calls \nto inference engine&apos;s speech to text module.\n"
+  example: []
+  syntax:
+    content: public static class SpeechToText
+    content.vb: Public Module SpeechToText
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: NPCEngine.API.SpeechToText.Listen(System.String)
+  commentId: M:NPCEngine.API.SpeechToText.Listen(System.String)
+  id: Listen(System.String)
+  parent: NPCEngine.API.SpeechToText
+  langs:
+  - csharp
+  - vb
+  name: Listen(String)
+  nameWithType: SpeechToText.Listen(String)
+  fullName: NPCEngine.API.SpeechToText.Listen(System.String)
+  type: Method
+  source:
+    id: Listen
+    path: ''
+    startLine: 688
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.API
+  syntax:
+    content: public static ResultFuture<string> Listen(string context)
+    parameters:
+    - id: context
+      type: System.String
+    return:
+      type: NPCEngine.ResultFuture{System.String}
+    content.vb: Public Shared Function Listen(context As String) As ResultFuture(Of String)
+  overload: NPCEngine.API.SpeechToText.Listen*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: NPCEngine.API.SpeechToText.Transcribe(System.Collections.Generic.List{System.Single})
+  commentId: M:NPCEngine.API.SpeechToText.Transcribe(System.Collections.Generic.List{System.Single})
+  id: Transcribe(System.Collections.Generic.List{System.Single})
+  parent: NPCEngine.API.SpeechToText
+  langs:
+  - csharp
+  - vb
+  name: Transcribe(List<Single>)
+  nameWithType: SpeechToText.Transcribe(List<Single>)
+  fullName: NPCEngine.API.SpeechToText.Transcribe(System.Collections.Generic.List<System.Single>)
+  type: Method
+  source:
+    id: Transcribe
+    path: ''
+    startLine: 693
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.API
+  syntax:
+    content: public static ResultFuture<string> Transcribe(List<float> audio)
+    parameters:
+    - id: audio
+      type: System.Collections.Generic.List{System.Single}
+    return:
+      type: NPCEngine.ResultFuture{System.String}
+    content.vb: Public Shared Function Transcribe(audio As List(Of Single)) As ResultFuture(Of String)
+  overload: NPCEngine.API.SpeechToText.Transcribe*
+  nameWithType.vb: SpeechToText.Transcribe(List(Of Single))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: NPCEngine.API.SpeechToText.Transcribe(System.Collections.Generic.List(Of System.Single))
+  name.vb: Transcribe(List(Of Single))
+- uid: NPCEngine.API.SpeechToText.GetDevices
+  commentId: M:NPCEngine.API.SpeechToText.GetDevices
+  id: GetDevices
+  parent: NPCEngine.API.SpeechToText
+  langs:
+  - csharp
+  - vb
+  name: GetDevices()
+  nameWithType: SpeechToText.GetDevices()
+  fullName: NPCEngine.API.SpeechToText.GetDevices()
+  type: Method
+  source:
+    id: GetDevices
+    path: ''
+    startLine: 698
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.API
+  syntax:
+    content: public static ResultFuture<List<string>> GetDevices()
+    return:
+      type: NPCEngine.ResultFuture{System.Collections.Generic.List{System.String}}
+    content.vb: Public Shared Function GetDevices As ResultFuture(Of List(Of String))
+  overload: NPCEngine.API.SpeechToText.GetDevices*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: NPCEngine.API.SpeechToText.InitializeMicrophoneInput
+  commentId: M:NPCEngine.API.SpeechToText.InitializeMicrophoneInput
+  id: InitializeMicrophoneInput
+  parent: NPCEngine.API.SpeechToText
+  langs:
+  - csharp
+  - vb
+  name: InitializeMicrophoneInput()
+  nameWithType: SpeechToText.InitializeMicrophoneInput()
+  fullName: NPCEngine.API.SpeechToText.InitializeMicrophoneInput()
+  type: Method
+  source:
+    id: InitializeMicrophoneInput
+    path: ''
+    startLine: 703
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.API
+  syntax:
+    content: public static IEnumerator InitializeMicrophoneInput()
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Public Shared Function InitializeMicrophoneInput As IEnumerator
+  overload: NPCEngine.API.SpeechToText.InitializeMicrophoneInput*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: NPCEngine.API.SpeechToText.SetDevice(System.Int32)
+  commentId: M:NPCEngine.API.SpeechToText.SetDevice(System.Int32)
+  id: SetDevice(System.Int32)
+  parent: NPCEngine.API.SpeechToText
+  langs:
+  - csharp
+  - vb
+  name: SetDevice(Int32)
+  nameWithType: SpeechToText.SetDevice(Int32)
+  fullName: NPCEngine.API.SpeechToText.SetDevice(System.Int32)
+  type: Method
+  source:
+    id: SetDevice
+    path: ''
+    startLine: 714
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.API
+  syntax:
+    content: public static void SetDevice(int deviceId)
+    parameters:
+    - id: deviceId
+      type: System.Int32
+    content.vb: Public Shared Sub SetDevice(deviceId As Integer)
+  overload: NPCEngine.API.SpeechToText.SetDevice*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: NPCEngine.API
+  commentId: N:NPCEngine.API
+  name: NPCEngine.API
+  nameWithType: NPCEngine.API
+  fullName: NPCEngine.API
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: NPCEngine.API.SpeechToText.Listen*
+  commentId: Overload:NPCEngine.API.SpeechToText.Listen
+  name: Listen
+  nameWithType: SpeechToText.Listen
+  fullName: NPCEngine.API.SpeechToText.Listen
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: NPCEngine.ResultFuture{System.String}
+  commentId: T:NPCEngine.ResultFuture{System.String}
+  parent: NPCEngine
+  definition: NPCEngine.ResultFuture`1
+  name: ResultFuture<String>
+  nameWithType: ResultFuture<String>
+  fullName: NPCEngine.ResultFuture<System.String>
+  nameWithType.vb: ResultFuture(Of String)
+  fullName.vb: NPCEngine.ResultFuture(Of System.String)
+  name.vb: ResultFuture(Of String)
+  spec.csharp:
+  - uid: NPCEngine.ResultFuture`1
+    name: ResultFuture
+    nameWithType: ResultFuture
+    fullName: NPCEngine.ResultFuture
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: NPCEngine.ResultFuture`1
+    name: ResultFuture
+    nameWithType: ResultFuture
+    fullName: NPCEngine.ResultFuture
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NPCEngine.ResultFuture`1
+  commentId: T:NPCEngine.ResultFuture`1
+  name: ResultFuture<ReturnType>
+  nameWithType: ResultFuture<ReturnType>
+  fullName: NPCEngine.ResultFuture<ReturnType>
+  nameWithType.vb: ResultFuture(Of ReturnType)
+  fullName.vb: NPCEngine.ResultFuture(Of ReturnType)
+  name.vb: ResultFuture(Of ReturnType)
+  spec.csharp:
+  - uid: NPCEngine.ResultFuture`1
+    name: ResultFuture
+    nameWithType: ResultFuture
+    fullName: NPCEngine.ResultFuture
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ReturnType
+    nameWithType: ReturnType
+    fullName: ReturnType
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: NPCEngine.ResultFuture`1
+    name: ResultFuture
+    nameWithType: ResultFuture
+    fullName: NPCEngine.ResultFuture
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ReturnType
+    nameWithType: ReturnType
+    fullName: ReturnType
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NPCEngine
+  commentId: N:NPCEngine
+  name: NPCEngine
+  nameWithType: NPCEngine
+  fullName: NPCEngine
+- uid: NPCEngine.API.SpeechToText.Transcribe*
+  commentId: Overload:NPCEngine.API.SpeechToText.Transcribe
+  name: Transcribe
+  nameWithType: SpeechToText.Transcribe
+  fullName: NPCEngine.API.SpeechToText.Transcribe
+- uid: System.Collections.Generic.List{System.Single}
+  commentId: T:System.Collections.Generic.List{System.Single}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<Single>
+  nameWithType: List<Single>
+  fullName: System.Collections.Generic.List<System.Single>
+  nameWithType.vb: List(Of Single)
+  fullName.vb: System.Collections.Generic.List(Of System.Single)
+  name.vb: List(Of Single)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: NPCEngine.API.SpeechToText.GetDevices*
+  commentId: Overload:NPCEngine.API.SpeechToText.GetDevices
+  name: GetDevices
+  nameWithType: SpeechToText.GetDevices
+  fullName: NPCEngine.API.SpeechToText.GetDevices
+- uid: NPCEngine.ResultFuture{System.Collections.Generic.List{System.String}}
+  commentId: T:NPCEngine.ResultFuture{System.Collections.Generic.List{System.String}}
+  parent: NPCEngine
+  definition: NPCEngine.ResultFuture`1
+  name: ResultFuture<List<String>>
+  nameWithType: ResultFuture<List<String>>
+  fullName: NPCEngine.ResultFuture<System.Collections.Generic.List<System.String>>
+  nameWithType.vb: ResultFuture(Of List(Of String))
+  fullName.vb: NPCEngine.ResultFuture(Of System.Collections.Generic.List(Of System.String))
+  name.vb: ResultFuture(Of List(Of String))
+  spec.csharp:
+  - uid: NPCEngine.ResultFuture`1
+    name: ResultFuture
+    nameWithType: ResultFuture
+    fullName: NPCEngine.ResultFuture
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: NPCEngine.ResultFuture`1
+    name: ResultFuture
+    nameWithType: ResultFuture
+    fullName: NPCEngine.ResultFuture
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NPCEngine.API.SpeechToText.InitializeMicrophoneInput*
+  commentId: Overload:NPCEngine.API.SpeechToText.InitializeMicrophoneInput
+  name: InitializeMicrophoneInput
+  nameWithType: SpeechToText.InitializeMicrophoneInput
+  fullName: NPCEngine.API.SpeechToText.InitializeMicrophoneInput
+- uid: System.Collections.IEnumerator
+  commentId: T:System.Collections.IEnumerator
+  parent: System.Collections
+  isExternal: true
+  name: IEnumerator
+  nameWithType: IEnumerator
+  fullName: System.Collections.IEnumerator
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections
+- uid: NPCEngine.API.SpeechToText.SetDevice*
+  commentId: Overload:NPCEngine.API.SpeechToText.SetDevice
+  name: SetDevice
+  nameWithType: SpeechToText.SetDevice
+  fullName: NPCEngine.API.SpeechToText.SetDevice
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32

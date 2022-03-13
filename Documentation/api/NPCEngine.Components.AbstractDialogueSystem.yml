@@ -1,0 +1,554 @@
+### YamlMime:ManagedReference
+items:
+- uid: NPCEngine.Components.AbstractDialogueSystem
+  commentId: T:NPCEngine.Components.AbstractDialogueSystem
+  id: AbstractDialogueSystem
+  parent: NPCEngine.Components
+  children:
+  - NPCEngine.Components.AbstractDialogueSystem.CurrentNodeIsPlayer
+  - NPCEngine.Components.AbstractDialogueSystem.CurrentNodeNPCAudio
+  - NPCEngine.Components.AbstractDialogueSystem.CurrentNodeNPCLine
+  - NPCEngine.Components.AbstractDialogueSystem.CurrentNodeThreshold
+  - NPCEngine.Components.AbstractDialogueSystem.EndDialog
+  - NPCEngine.Components.AbstractDialogueSystem.GetCurrentNodeOptions
+  - NPCEngine.Components.AbstractDialogueSystem.GetCurrentNodeTopics
+  - NPCEngine.Components.AbstractDialogueSystem.Next
+  - NPCEngine.Components.AbstractDialogueSystem.SelectOption(System.Int32)
+  - NPCEngine.Components.AbstractDialogueSystem.StartDialogue
+  langs:
+  - csharp
+  - vb
+  name: AbstractDialogueSystem
+  nameWithType: AbstractDialogueSystem
+  fullName: NPCEngine.Components.AbstractDialogueSystem
+  type: Class
+  source:
+    id: AbstractDialogueSystem
+    path: ''
+    startLine: 785
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  summary: "\nAbstract class for dialogue system integration. \nConcrete implementations are used by NonPlayerCharacter component for scripted replies. \n"
+  example: []
+  syntax:
+    content: 'public abstract class AbstractDialogueSystem : MonoBehaviour'
+    content.vb: >-
+      Public MustInherit Class AbstractDialogueSystem
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+- uid: NPCEngine.Components.AbstractDialogueSystem.StartDialogue
+  commentId: M:NPCEngine.Components.AbstractDialogueSystem.StartDialogue
+  id: StartDialogue
+  parent: NPCEngine.Components.AbstractDialogueSystem
+  langs:
+  - csharp
+  - vb
+  name: StartDialogue()
+  nameWithType: AbstractDialogueSystem.StartDialogue()
+  fullName: NPCEngine.Components.AbstractDialogueSystem.StartDialogue()
+  type: Method
+  source:
+    id: StartDialogue
+    path: ''
+    startLine: 791
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  summary: "\nWill be called when dialogue starts.\n"
+  example: []
+  syntax:
+    content: public abstract void StartDialogue()
+    content.vb: Public MustOverride Sub StartDialogue
+  overload: NPCEngine.Components.AbstractDialogueSystem.StartDialogue*
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
+- uid: NPCEngine.Components.AbstractDialogueSystem.EndDialog
+  commentId: M:NPCEngine.Components.AbstractDialogueSystem.EndDialog
+  id: EndDialog
+  parent: NPCEngine.Components.AbstractDialogueSystem
+  langs:
+  - csharp
+  - vb
+  name: EndDialog()
+  nameWithType: AbstractDialogueSystem.EndDialog()
+  fullName: NPCEngine.Components.AbstractDialogueSystem.EndDialog()
+  type: Method
+  source:
+    id: EndDialog
+    path: ''
+    startLine: 796
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  summary: "\nWill be called when dialogue ends.\n"
+  example: []
+  syntax:
+    content: public abstract void EndDialog()
+    content.vb: Public MustOverride Sub
+  overload: NPCEngine.Components.AbstractDialogueSystem.EndDialog*
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
+- uid: NPCEngine.Components.AbstractDialogueSystem.CurrentNodeIsPlayer
+  commentId: M:NPCEngine.Components.AbstractDialogueSystem.CurrentNodeIsPlayer
+  id: CurrentNodeIsPlayer
+  parent: NPCEngine.Components.AbstractDialogueSystem
+  langs:
+  - csharp
+  - vb
+  name: CurrentNodeIsPlayer()
+  nameWithType: AbstractDialogueSystem.CurrentNodeIsPlayer()
+  fullName: NPCEngine.Components.AbstractDialogueSystem.CurrentNodeIsPlayer()
+  type: Method
+  source:
+    id: CurrentNodeIsPlayer
+    path: ''
+    startLine: 801
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  summary: "\nReturns true if it&apos;s players turn in the dialogue.\n"
+  example: []
+  syntax:
+    content: public abstract bool CurrentNodeIsPlayer()
+    return:
+      type: System.Boolean
+    content.vb: Public MustOverride Function CurrentNodeIsPlayer As Boolean
+  overload: NPCEngine.Components.AbstractDialogueSystem.CurrentNodeIsPlayer*
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
+- uid: NPCEngine.Components.AbstractDialogueSystem.GetCurrentNodeOptions
+  commentId: M:NPCEngine.Components.AbstractDialogueSystem.GetCurrentNodeOptions
+  id: GetCurrentNodeOptions
+  parent: NPCEngine.Components.AbstractDialogueSystem
+  langs:
+  - csharp
+  - vb
+  name: GetCurrentNodeOptions()
+  nameWithType: AbstractDialogueSystem.GetCurrentNodeOptions()
+  fullName: NPCEngine.Components.AbstractDialogueSystem.GetCurrentNodeOptions()
+  type: Method
+  source:
+    id: GetCurrentNodeOptions
+    path: ''
+    startLine: 806
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  summary: "\nGet the lines associated with the current node in the dialogue.\n"
+  example: []
+  syntax:
+    content: public abstract List<string> GetCurrentNodeOptions()
+    return:
+      type: System.Collections.Generic.List{System.String}
+    content.vb: Public MustOverride Function GetCurrentNodeOptions As List(Of String)
+  overload: NPCEngine.Components.AbstractDialogueSystem.GetCurrentNodeOptions*
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
+- uid: NPCEngine.Components.AbstractDialogueSystem.GetCurrentNodeTopics
+  commentId: M:NPCEngine.Components.AbstractDialogueSystem.GetCurrentNodeTopics
+  id: GetCurrentNodeTopics
+  parent: NPCEngine.Components.AbstractDialogueSystem
+  langs:
+  - csharp
+  - vb
+  name: GetCurrentNodeTopics()
+  nameWithType: AbstractDialogueSystem.GetCurrentNodeTopics()
+  fullName: NPCEngine.Components.AbstractDialogueSystem.GetCurrentNodeTopics()
+  type: Method
+  source:
+    id: GetCurrentNodeTopics
+    path: ''
+    startLine: 811
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  summary: "\nGet the short abstract descriptions of the lines associated with the current node in the dialogue.\n"
+  example: []
+  syntax:
+    content: public abstract List<string> GetCurrentNodeTopics()
+    return:
+      type: System.Collections.Generic.List{System.String}
+    content.vb: Public MustOverride Function GetCurrentNodeTopics As List(Of String)
+  overload: NPCEngine.Components.AbstractDialogueSystem.GetCurrentNodeTopics*
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
+- uid: NPCEngine.Components.AbstractDialogueSystem.SelectOption(System.Int32)
+  commentId: M:NPCEngine.Components.AbstractDialogueSystem.SelectOption(System.Int32)
+  id: SelectOption(System.Int32)
+  parent: NPCEngine.Components.AbstractDialogueSystem
+  langs:
+  - csharp
+  - vb
+  name: SelectOption(Int32)
+  nameWithType: AbstractDialogueSystem.SelectOption(Int32)
+  fullName: NPCEngine.Components.AbstractDialogueSystem.SelectOption(System.Int32)
+  type: Method
+  source:
+    id: SelectOption
+    path: ''
+    startLine: 816
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  summary: "\nSelect a line from the current node in the dialogue.\n"
+  example: []
+  syntax:
+    content: public abstract void SelectOption(int optionId)
+    parameters:
+    - id: optionId
+      type: System.Int32
+    content.vb: Public MustOverride Sub SelectOption(optionId As Integer)
+  overload: NPCEngine.Components.AbstractDialogueSystem.SelectOption*
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
+- uid: NPCEngine.Components.AbstractDialogueSystem.Next
+  commentId: M:NPCEngine.Components.AbstractDialogueSystem.Next
+  id: Next
+  parent: NPCEngine.Components.AbstractDialogueSystem
+  langs:
+  - csharp
+  - vb
+  name: Next()
+  nameWithType: AbstractDialogueSystem.Next()
+  fullName: NPCEngine.Components.AbstractDialogueSystem.Next()
+  type: Method
+  source:
+    id: Next
+    path: ''
+    startLine: 821
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  summary: "\nMove to the next node in the dialogue.\n"
+  example: []
+  syntax:
+    content: public abstract void Next()
+    content.vb: Public MustOverride Sub Next
+  overload: NPCEngine.Components.AbstractDialogueSystem.Next*
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
+- uid: NPCEngine.Components.AbstractDialogueSystem.CurrentNodeThreshold
+  commentId: M:NPCEngine.Components.AbstractDialogueSystem.CurrentNodeThreshold
+  id: CurrentNodeThreshold
+  parent: NPCEngine.Components.AbstractDialogueSystem
+  langs:
+  - csharp
+  - vb
+  name: CurrentNodeThreshold()
+  nameWithType: AbstractDialogueSystem.CurrentNodeThreshold()
+  fullName: NPCEngine.Components.AbstractDialogueSystem.CurrentNodeThreshold()
+  type: Method
+  source:
+    id: CurrentNodeThreshold
+    path: ''
+    startLine: 827
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  summary: "\nGet the semantic similarity threshold for the current node in the dialogue.\nReturn -1 if no threshold is set.\n"
+  example: []
+  syntax:
+    content: public abstract float CurrentNodeThreshold()
+    return:
+      type: System.Single
+    content.vb: Public MustOverride Function CurrentNodeThreshold As Single
+  overload: NPCEngine.Components.AbstractDialogueSystem.CurrentNodeThreshold*
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
+- uid: NPCEngine.Components.AbstractDialogueSystem.CurrentNodeNPCLine
+  commentId: M:NPCEngine.Components.AbstractDialogueSystem.CurrentNodeNPCLine
+  id: CurrentNodeNPCLine
+  parent: NPCEngine.Components.AbstractDialogueSystem
+  langs:
+  - csharp
+  - vb
+  name: CurrentNodeNPCLine()
+  nameWithType: AbstractDialogueSystem.CurrentNodeNPCLine()
+  fullName: NPCEngine.Components.AbstractDialogueSystem.CurrentNodeNPCLine()
+  type: Method
+  source:
+    id: CurrentNodeNPCLine
+    path: ''
+    startLine: 833
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  summary: "\nIf the current node is NPC, return the NPC&apos;s line.\nelse return empty string.\n"
+  example: []
+  syntax:
+    content: public abstract string CurrentNodeNPCLine()
+    return:
+      type: System.String
+    content.vb: Public MustOverride Function CurrentNodeNPCLine As String
+  overload: NPCEngine.Components.AbstractDialogueSystem.CurrentNodeNPCLine*
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
+- uid: NPCEngine.Components.AbstractDialogueSystem.CurrentNodeNPCAudio
+  commentId: M:NPCEngine.Components.AbstractDialogueSystem.CurrentNodeNPCAudio
+  id: CurrentNodeNPCAudio
+  parent: NPCEngine.Components.AbstractDialogueSystem
+  langs:
+  - csharp
+  - vb
+  name: CurrentNodeNPCAudio()
+  nameWithType: AbstractDialogueSystem.CurrentNodeNPCAudio()
+  fullName: NPCEngine.Components.AbstractDialogueSystem.CurrentNodeNPCAudio()
+  type: Method
+  source:
+    id: CurrentNodeNPCAudio
+    path: ''
+    startLine: 839
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  summary: "\nGet the current node&apos;s audio for the NPC line (Never called for player).\nReturn null if no audio is set or if the node is player.\n"
+  example: []
+  syntax:
+    content: public abstract AudioClip CurrentNodeNPCAudio()
+    return:
+      type: Global.AudioClip
+    content.vb: Public MustOverride Function CurrentNodeNPCAudio As AudioClip
+  overload: NPCEngine.Components.AbstractDialogueSystem.CurrentNodeNPCAudio*
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
+references:
+- uid: NPCEngine.Components
+  commentId: N:NPCEngine.Components
+  name: NPCEngine.Components
+  nameWithType: NPCEngine.Components
+  fullName: NPCEngine.Components
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: NPCEngine.Components.AbstractDialogueSystem.StartDialogue*
+  commentId: Overload:NPCEngine.Components.AbstractDialogueSystem.StartDialogue
+  name: StartDialogue
+  nameWithType: AbstractDialogueSystem.StartDialogue
+  fullName: NPCEngine.Components.AbstractDialogueSystem.StartDialogue
+- uid: NPCEngine.Components.AbstractDialogueSystem.EndDialog*
+  commentId: Overload:NPCEngine.Components.AbstractDialogueSystem.EndDialog
+  name: EndDialog
+  nameWithType: AbstractDialogueSystem.EndDialog
+  fullName: NPCEngine.Components.AbstractDialogueSystem.EndDialog
+- uid: NPCEngine.Components.AbstractDialogueSystem.CurrentNodeIsPlayer*
+  commentId: Overload:NPCEngine.Components.AbstractDialogueSystem.CurrentNodeIsPlayer
+  name: CurrentNodeIsPlayer
+  nameWithType: AbstractDialogueSystem.CurrentNodeIsPlayer
+  fullName: NPCEngine.Components.AbstractDialogueSystem.CurrentNodeIsPlayer
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: NPCEngine.Components.AbstractDialogueSystem.GetCurrentNodeOptions*
+  commentId: Overload:NPCEngine.Components.AbstractDialogueSystem.GetCurrentNodeOptions
+  name: GetCurrentNodeOptions
+  nameWithType: AbstractDialogueSystem.GetCurrentNodeOptions
+  fullName: NPCEngine.Components.AbstractDialogueSystem.GetCurrentNodeOptions
+- uid: System.Collections.Generic.List{System.String}
+  commentId: T:System.Collections.Generic.List{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<String>
+  nameWithType: List<String>
+  fullName: System.Collections.Generic.List<System.String>
+  nameWithType.vb: List(Of String)
+  fullName.vb: System.Collections.Generic.List(Of System.String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: NPCEngine.Components.AbstractDialogueSystem.GetCurrentNodeTopics*
+  commentId: Overload:NPCEngine.Components.AbstractDialogueSystem.GetCurrentNodeTopics
+  name: GetCurrentNodeTopics
+  nameWithType: AbstractDialogueSystem.GetCurrentNodeTopics
+  fullName: NPCEngine.Components.AbstractDialogueSystem.GetCurrentNodeTopics
+- uid: NPCEngine.Components.AbstractDialogueSystem.SelectOption*
+  commentId: Overload:NPCEngine.Components.AbstractDialogueSystem.SelectOption
+  name: SelectOption
+  nameWithType: AbstractDialogueSystem.SelectOption
+  fullName: NPCEngine.Components.AbstractDialogueSystem.SelectOption
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: NPCEngine.Components.AbstractDialogueSystem.Next*
+  commentId: Overload:NPCEngine.Components.AbstractDialogueSystem.Next
+  name: Next
+  nameWithType: AbstractDialogueSystem.Next
+  fullName: NPCEngine.Components.AbstractDialogueSystem.Next
+- uid: NPCEngine.Components.AbstractDialogueSystem.CurrentNodeThreshold*
+  commentId: Overload:NPCEngine.Components.AbstractDialogueSystem.CurrentNodeThreshold
+  name: CurrentNodeThreshold
+  nameWithType: AbstractDialogueSystem.CurrentNodeThreshold
+  fullName: NPCEngine.Components.AbstractDialogueSystem.CurrentNodeThreshold
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: NPCEngine.Components.AbstractDialogueSystem.CurrentNodeNPCLine*
+  commentId: Overload:NPCEngine.Components.AbstractDialogueSystem.CurrentNodeNPCLine
+  name: CurrentNodeNPCLine
+  nameWithType: AbstractDialogueSystem.CurrentNodeNPCLine
+  fullName: NPCEngine.Components.AbstractDialogueSystem.CurrentNodeNPCLine
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: NPCEngine.Components.AbstractDialogueSystem.CurrentNodeNPCAudio*
+  commentId: Overload:NPCEngine.Components.AbstractDialogueSystem.CurrentNodeNPCAudio
+  name: CurrentNodeNPCAudio
+  nameWithType: AbstractDialogueSystem.CurrentNodeNPCAudio
+  fullName: NPCEngine.Components.AbstractDialogueSystem.CurrentNodeNPCAudio
+- uid: Global.AudioClip
+  isExternal: true
+  name: AudioClip
+  nameWithType: AudioClip
+  fullName: AudioClip
