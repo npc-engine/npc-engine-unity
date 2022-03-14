@@ -59,5 +59,37 @@
     ],
     "xrefService": ["https://xref.docs.microsoft.com/query?uid={uid}"],
     "dest": "../_site"
+  },
+  "pdf": {
+    "content": [
+      {
+        "files": ["toc.yml", "index.md"]
+      },
+      {
+        "src": "api",
+        "files": ["*.yml"],
+        "dest": "api"
+      },
+      {
+        "src": "tutorials",
+        "files": ["toc.yml", "*.md"],
+        "dest": "tutorials"
+      }
+    ],
+    "overwrite": [
+      {
+        "src": "..",
+        "files": ["Assets/NPCEngine/Scripts/**/*.md"]
+      }
+    ],
+    "resource": [
+      {
+        "files": ["resources/**/*"]
+      }
+    ],
+    "wkhtmltopdf": {
+      "additionalArguments": "--enable-local-file-access"
+    },
+    "dest": "_site_pdf"
   }
 }
