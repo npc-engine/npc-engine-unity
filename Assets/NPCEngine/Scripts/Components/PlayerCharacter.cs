@@ -71,6 +71,11 @@ namespace NPCEngine.Components
 
         public bool IsRegistered(NonPlayerCharacter agent)
         {
+            if (activeDialogAgents == null)
+            {
+                return false;
+            }
+
             return activeDialogAgents.Contains(agent);
         }
 
@@ -78,7 +83,6 @@ namespace NPCEngine.Components
         {
             var cameraPoint = PlayerCharacter.Instance.CheckCamera.WorldToViewportPoint(dialogAgentPosition);
 
-            Debug.Log(cameraPoint);
             return (
                 cameraPoint.x > HorizontalMargin && cameraPoint.x < (1f - HorizontalMargin)
                 && cameraPoint.y > VerticalMargin && cameraPoint.y < (1f - VerticalMargin)

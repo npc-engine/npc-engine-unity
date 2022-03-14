@@ -170,7 +170,7 @@ namespace NPCEngine.Server
                     yield return null;
                 }
                 Tuple<string, Action<string>> task = taskQueue.Dequeue();
-                UnityEngine.Debug.Log(string.Format("SendMessage, {0}", task.Item1));
+                if (debug) UnityEngine.Debug.Log(string.Format("SendMessage, {0}", task.Item1));
 
                 while (!zmqClient.TrySendFrame(task.Item1))
                 {
@@ -224,7 +224,7 @@ namespace NPCEngine.Server
                     messageString,
                     (string reply) =>
                     {
-                        UnityEngine.Debug.LogFormat("Received message: {0}", reply);
+                        if (debug) UnityEngine.Debug.LogFormat("Received message: {0}", reply);
                         var response = JsonConvert.DeserializeObject<RPCResponseMessage<R>>(reply);
                         if (response.error.code != 0)
                         {
@@ -325,10 +325,10 @@ namespace NPCEngine.Server
         public void ConnectToServer()
         {
 
-            UnityEngine.Debug.Log("binding zmqClient");
+            if (debug) UnityEngine.Debug.Log("binding zmqClient");
             zmqClient = new RequestSocket();
             zmqClient.Connect("tcp://localhost:5555");
-            UnityEngine.Debug.Log("binding successful");
+            if (debug) UnityEngine.Debug.Log("binding successful");
 
             Action<string> initialize = (string response) =>
             {
