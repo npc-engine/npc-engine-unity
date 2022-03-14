@@ -37,7 +37,7 @@ public class NPCEngineWelcomeWindow : EditorWindow
     private static GUIStyle headerStyle = new GUIStyle();
     private static GUIStyle descriptionStyle = new GUIStyle();
 
-    private const string npcEngineURL = "https://github.com/npc-engine/npc-engine/releases/latest/download/npc-engine-.zip";
+    private const string npcEngineURL = "https://github.com/npc-engine/npc-engine/releases/download/v0.0.2/npc-engine-v0.0.2.zip";
     private const string githubURL = "https://github.com/npc-engine/npc-engine";
     private const string docsURL = "https://npc-engine.github.io/npc-engine/";
 
