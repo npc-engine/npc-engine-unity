@@ -40,7 +40,7 @@ items:
   source:
     id: NonPlayerCharacter
     path: ''
-    startLine: 1195
+    startLine: 1194
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -71,7 +71,7 @@ items:
   source:
     id: temperature
     path: ''
-    startLine: 1200
+    startLine: 1199
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -98,7 +98,7 @@ items:
   source:
     id: topK
     path: ''
-    startLine: 1201
+    startLine: 1200
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -125,7 +125,7 @@ items:
   source:
     id: nChunksTextGeneration
     path: ''
-    startLine: 1203
+    startLine: 1202
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -152,7 +152,7 @@ items:
   source:
     id: defaultThreshold
     path: ''
-    startLine: 1205
+    startLine: 1204
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -179,7 +179,7 @@ items:
   source:
     id: Initialized
     path: ''
-    startLine: 1208
+    startLine: 1207
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -210,7 +210,7 @@ items:
   source:
     id: characterName
     path: ''
-    startLine: 1216
+    startLine: 1215
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -237,7 +237,7 @@ items:
   source:
     id: persona
     path: ''
-    startLine: 1218
+    startLine: 1217
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -264,7 +264,7 @@ items:
   source:
     id: voiceId
     path: ''
-    startLine: 1219
+    startLine: 1218
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -291,7 +291,7 @@ items:
   source:
     id: history
     path: ''
-    startLine: 1221
+    startLine: 1220
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -318,7 +318,7 @@ items:
   source:
     id: OnDialogueStart
     path: ''
-    startLine: 1224
+    startLine: 1223
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -345,7 +345,7 @@ items:
   source:
     id: OnDialogueLine
     path: ''
-    startLine: 1228
+    startLine: 1227
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -372,7 +372,7 @@ items:
   source:
     id: OnProcessingStart
     path: ''
-    startLine: 1231
+    startLine: 1230
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -399,7 +399,7 @@ items:
   source:
     id: OnProcessingEnd
     path: ''
-    startLine: 1234
+    startLine: 1233
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -426,7 +426,7 @@ items:
   source:
     id: OnTopicHintsUpdate
     path: ''
-    startLine: 1237
+    startLine: 1236
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -453,7 +453,7 @@ items:
   source:
     id: OnDialogueEnd
     path: ''
-    startLine: 1240
+    startLine: 1239
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -480,7 +480,7 @@ items:
   source:
     id: audioSourceQueue
     path: ''
-    startLine: 1242
+    startLine: 1241
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -507,7 +507,7 @@ items:
   source:
     id: dialogueSystem
     path: ''
-    startLine: 1244
+    startLine: 1243
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -534,7 +534,7 @@ items:
   source:
     id: StartDialogue
     path: ''
-    startLine: 1269
+    startLine: 1268
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -560,7 +560,7 @@ items:
   source:
     id: EndDialog
     path: ''
-    startLine: 1278
+    startLine: 1277
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -586,7 +586,7 @@ items:
   source:
     id: HandleLine
     path: ''
-    startLine: 1291
+    startLine: 1290
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -619,7 +619,7 @@ items:
   source:
     id: HandleLineCoroutine
     path: ''
-    startLine: 1298
+    startLine: 1297
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -654,7 +654,7 @@ items:
   source:
     id: HandlePlayerLineCoroutine
     path: ''
-    startLine: 1323
+    startLine: 1322
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -689,7 +689,7 @@ items:
   source:
     id: GenerateReply
     path: ''
-    startLine: 1353
+    startLine: 1352
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -724,7 +724,7 @@ items:
   source:
     id: SayNPCLines
     path: ''
-    startLine: 1373
+    startLine: 1372
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -752,7 +752,7 @@ items:
   source:
     id: GenerateAndPlaySpeech
     path: ''
-    startLine: 1397
+    startLine: 1396
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
