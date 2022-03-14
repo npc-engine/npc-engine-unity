@@ -90,6 +90,7 @@
     "wkhtmltopdf": {
       "additionalArguments": "--enable-local-file-access"
     },
+    "noStdin": true,
     "dest": "_site_pdf"
   }
 }
