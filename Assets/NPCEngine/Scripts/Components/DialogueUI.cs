@@ -40,6 +40,9 @@ namespace NPCEngine.Components
 
         private Camera cam;
 
+        /// <summary>
+        /// Adds the given text to the dialogue history. Used with the OnDialogueLine callback.
+        /// </summary>
         public void AddLine(ChatLine chatLine, bool highlight = false)
         {
 
@@ -57,6 +60,9 @@ namespace NPCEngine.Components
             }
         }
 
+        /// <summary>
+        /// Updates the dialogue topics. Used with NonPlayerCharacter.OnTopicHintsUpdate.
+        /// </summary>
         public void UpdateTopics(List<string> topics)
         {
             dialogueTopics.text = string.Join("\n", topics);
