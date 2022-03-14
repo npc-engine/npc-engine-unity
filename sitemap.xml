@@ -2,187 +2,187 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://npc-engine.github.io/npc-engine-unity/api/NPCEngine.API.Chatbot-1.html</loc>
-    <lastmod>2022-03-14T03:48:30+00:00</lastmod>
+    <lastmod>2022-03-14T04:30:34+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://npc-engine.github.io/npc-engine-unity/api/NPCEngine.API.SemanticQuery.html</loc>
-    <lastmod>2022-03-14T03:48:30+00:00</lastmod>
+    <lastmod>2022-03-14T04:30:34+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://npc-engine.github.io/npc-engine-unity/api/NPCEngine.API.SpeechToText.html</loc>
-    <lastmod>2022-03-14T03:48:30+00:00</lastmod>
+    <lastmod>2022-03-14T04:30:34+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://npc-engine.github.io/npc-engine-unity/api/NPCEngine.API.TextToSpeech.html</loc>
-    <lastmod>2022-03-14T03:48:30+00:00</lastmod>
+    <lastmod>2022-03-14T04:30:34+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://npc-engine.github.io/npc-engine-unity/api/NPCEngine.API.html</loc>
-    <lastmod>2022-03-14T03:48:30+00:00</lastmod>
+    <lastmod>2022-03-14T04:30:34+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://npc-engine.github.io/npc-engine-unity/api/NPCEngine.Components.AbstractDialogueSystem.html</loc>
-    <lastmod>2022-03-14T03:48:30+00:00</lastmod>
+    <lastmod>2022-03-14T04:30:34+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://npc-engine.github.io/npc-engine-unity/api/NPCEngine.Components.AbstractSpeechToText.html</loc>
-    <lastmod>2022-03-14T03:48:30+00:00</lastmod>
+    <lastmod>2022-03-14T04:30:34+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://npc-engine.github.io/npc-engine-unity/api/NPCEngine.Components.ChatLine.html</loc>
-    <lastmod>2022-03-14T03:48:30+00:00</lastmod>
+    <lastmod>2022-03-14T04:30:34+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://npc-engine.github.io/npc-engine-unity/api/NPCEngine.Components.ColliderLocationTrigger.html</loc>
-    <lastmod>2022-03-14T03:48:30+00:00</lastmod>
+    <lastmod>2022-03-14T04:30:34+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://npc-engine.github.io/npc-engine-unity/api/NPCEngine.Components.DialogueUI.html</loc>
-    <lastmod>2022-03-14T03:48:30+00:00</lastmod>
+    <lastmod>2022-03-14T04:30:34+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://npc-engine.github.io/npc-engine-unity/api/NPCEngine.Components.DictationRecognizerSTT.html</loc>
-    <lastmod>2022-03-14T03:48:30+00:00</lastmod>
+    <lastmod>2022-03-14T04:30:34+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://npc-engine.github.io/npc-engine-unity/api/NPCEngine.Components.FantasyChatbotContext.html</loc>
-    <lastmod>2022-03-14T03:48:30+00:00</lastmod>
+    <lastmod>2022-03-14T04:30:34+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://npc-engine.github.io/npc-engine-unity/api/NPCEngine.Components.NonPlayerCharacter.html</loc>
-    <lastmod>2022-03-14T03:48:30+00:00</lastmod>
+    <lastmod>2022-03-14T04:30:34+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://npc-engine.github.io/npc-engine-unity/api/NPCEngine.Components.NPCEngineSTT.html</loc>
-    <lastmod>2022-03-14T03:48:30+00:00</lastmod>
+    <lastmod>2022-03-14T04:30:34+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://npc-engine.github.io/npc-engine-unity/api/NPCEngine.Components.PlayerCharacter.html</loc>
-    <lastmod>2022-03-14T03:48:30+00:00</lastmod>
+    <lastmod>2022-03-14T04:30:34+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://npc-engine.github.io/npc-engine-unity/api/NPCEngine.Components.html</loc>
-    <lastmod>2022-03-14T03:48:30+00:00</lastmod>
+    <lastmod>2022-03-14T04:30:34+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://npc-engine.github.io/npc-engine-unity/api/NPCEngine.NPCEngineException.html</loc>
-    <lastmod>2022-03-14T03:48:30+00:00</lastmod>
+    <lastmod>2022-03-14T04:30:34+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://npc-engine.github.io/npc-engine-unity/api/NPCEngine.ResultFuture-1.html</loc>
-    <lastmod>2022-03-14T03:48:30+00:00</lastmod>
+    <lastmod>2022-03-14T04:30:34+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://npc-engine.github.io/npc-engine-unity/api/NPCEngine.Server.NPCEngineServer.html</loc>
-    <lastmod>2022-03-14T03:48:30+00:00</lastmod>
+    <lastmod>2022-03-14T04:30:34+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://npc-engine.github.io/npc-engine-unity/api/NPCEngine.Server.RPCRequstMessage-1.html</loc>
-    <lastmod>2022-03-14T03:48:30+00:00</lastmod>
+    <lastmod>2022-03-14T04:30:34+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://npc-engine.github.io/npc-engine-unity/api/NPCEngine.Server.RPCResponseError.html</loc>
-    <lastmod>2022-03-14T03:48:30+00:00</lastmod>
+    <lastmod>2022-03-14T04:30:34+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://npc-engine.github.io/npc-engine-unity/api/NPCEngine.Server.RPCResponseMessage-1.html</loc>
-    <lastmod>2022-03-14T03:48:30+00:00</lastmod>
+    <lastmod>2022-03-14T04:30:34+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://npc-engine.github.io/npc-engine-unity/api/NPCEngine.Server.html</loc>
-    <lastmod>2022-03-14T03:48:30+00:00</lastmod>
+    <lastmod>2022-03-14T04:30:34+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://npc-engine.github.io/npc-engine-unity/api/NPCEngine.Utility.AudioSourceQueue.html</loc>
-    <lastmod>2022-03-14T03:48:30+00:00</lastmod>
+    <lastmod>2022-03-14T04:30:34+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://npc-engine.github.io/npc-engine-unity/api/NPCEngine.Utility.Singleton-1.html</loc>
-    <lastmod>2022-03-14T03:48:30+00:00</lastmod>
+    <lastmod>2022-03-14T04:30:34+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://npc-engine.github.io/npc-engine-unity/api/NPCEngine.Utility.html</loc>
-    <lastmod>2022-03-14T03:48:30+00:00</lastmod>
+    <lastmod>2022-03-14T04:30:34+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://npc-engine.github.io/npc-engine-unity/api/NPCEngine.html</loc>
-    <lastmod>2022-03-14T03:48:30+00:00</lastmod>
+    <lastmod>2022-03-14T04:30:34+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://npc-engine.github.io/npc-engine-unity/index.html</loc>
-    <lastmod>2022-03-14T03:48:30+00:00</lastmod>
+    <lastmod>2022-03-14T04:30:34+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://npc-engine.github.io/npc-engine-unity/tutorials/advanced_demo.html</loc>
-    <lastmod>2022-03-14T03:48:30+00:00</lastmod>
+    <lastmod>2022-03-14T04:30:34+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://npc-engine.github.io/npc-engine-unity/tutorials/basic_demo.html</loc>
-    <lastmod>2022-03-14T03:48:30+00:00</lastmod>
+    <lastmod>2022-03-14T04:30:34+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://npc-engine.github.io/npc-engine-unity/tutorials/scene_setup.html</loc>
-    <lastmod>2022-03-14T03:48:30+00:00</lastmod>
+    <lastmod>2022-03-14T04:30:34+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
