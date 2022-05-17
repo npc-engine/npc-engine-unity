@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Newtonsoft.Json;
+using NPCEngine.Utility;
 
 
 /// <summary>
@@ -14,13 +15,13 @@ namespace NPCEngine.RPC
     /// <summary>
     /// Class <c>NPCEngineManager</c> manages inference engine sidecart process lifetime and communication.
     ///</summary>
-    public abstract class RPCBase : MonoBehaviour
+    public abstract class RPCBase : Singleton<RPCBase>
     {
         public ServerType serverType = ServerType.HTTP;
 
         public string serviceId = "Undefined";
-        public static string port = "5555";
-        public static bool debug;
+        public string port = "5555";
+        public bool debug;
 
 
         private RequestDispatcherImpl impl;
