@@ -11,11 +11,11 @@ namespace NPCEngine.RPC
     public abstract class RequestDispatcherImpl
     {
         protected string id;
-        protected string port;
+        protected string address;
         protected bool debug = false;
-        public RequestDispatcherImpl(string port, string id, bool debug = false)
+        public RequestDispatcherImpl(string address, string id, bool debug = false)
         {
-            this.port = port;
+            this.address = address;
             this.id = id;
             this.debug = debug;
         }
@@ -26,14 +26,14 @@ namespace NPCEngine.RPC
     {
         private RequestSocket zmqClient;
 
-        public APICommunicatorZMQImpl(string port, string id, bool debug = false) : base(port, id, debug)
+        public APICommunicatorZMQImpl(string address, string id, bool debug = false) : base(address, id, debug)
         {
-            if (debug) UnityEngine.Debug.Log(String.Format("ZMQ Service client {0} connecting to port {1}", id, port));
+            if (debug) UnityEngine.Debug.Log(String.Format("ZMQ Service client {0} connecting to address {1}", id, address));
             zmqClient = new RequestSocket();
             zmqClient.Options.Identity =
                         Encoding.Unicode.GetBytes(id);
-            zmqClient.Connect("tcp://localhost:" + port);
-            if (debug) UnityEngine.Debug.Log(String.Format("ZMQ Service client {0} connected to port {1} successfully", id, port));
+            zmqClient.Connect("tcp://" + address);
+            if (debug) UnityEngine.Debug.Log(String.Format("ZMQ Service client {0} connected to address {1} successfully", id, address));
         }
 
         ~APICommunicatorZMQImpl()
@@ -70,7 +70,7 @@ namespace NPCEngine.RPC
     public class APICommunicatorHTTPImpl : RequestDispatcherImpl
     {
 
-        public APICommunicatorHTTPImpl(string port, string id, bool debug = false) : base(port, id, debug)
+        public APICommunicatorHTTPImpl(string address, string id, bool debug = false) : base(address, id, debug)
         {
 
         }

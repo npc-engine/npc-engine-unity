@@ -17,16 +17,9 @@ namespace NPCEngine.RPC
     ///</summary>
     public abstract class RPCBase : Singleton<RPCBase>
     {
-        public ServerType serverType = ServerType.HTTP;
-
-        public string serviceId = "Undefined";
-        public string port = "5555";
-        public bool debug;
-
-
+        protected virtual string ServiceId { get { return ""; } }
         private RequestDispatcherImpl impl;
         private IEnumerator implCoroutine;
-        private bool initialized = false;
 
         Queue<Request> taskQueue;
 
@@ -62,7 +55,7 @@ namespace NPCEngine.RPC
                     messageString,
                     (string reply) =>
                     {
-                        if (debug) UnityEngine.Debug.LogFormat("Received message: {0}", reply);
+                        if (RPCConfig.Instance.debug) UnityEngine.Debug.LogFormat("Received message: {0}", reply);
                         var response = JsonConvert.DeserializeObject<RPCResponseMessage<R>>(reply);
                         if (response.error.code != 0)
                         {
@@ -84,13 +77,13 @@ namespace NPCEngine.RPC
 
         private void Awake()
         {
-            switch (serverType)
+            switch (RPCConfig.Instance.serverType)
             {
                 case ServerType.HTTP:
-                    impl = new APICommunicatorHTTPImpl(port, serviceId, debug);
+                    impl = new APICommunicatorHTTPImpl(RPCConfig.Instance.serverAddress, ServiceId, RPCConfig.Instance.debug);
                     break;
                 case ServerType.ZMQ:
-                    impl = new APICommunicatorZMQImpl(port, serviceId, debug);
+                    impl = new APICommunicatorZMQImpl(RPCConfig.Instance.serverAddress, ServiceId, RPCConfig.Instance.debug);
                     break;
                 default:
                     throw new NPCEngineException("Unknown server type");
