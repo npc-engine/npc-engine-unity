@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 using UnityEngine;
-using NPCEngine.Server;
+using NPCEngine.RPC;
 
 namespace NPCEngine.API
 {
@@ -12,27 +12,27 @@ namespace NPCEngine.API
     /// Static class <c>SpeechToText</c> provides remote procedure calls 
     /// to inference engine's speech to text module.
     ///</summary>
-    public static class SpeechToText
+    public class SpeechToText : RPCBase
     {
 
-        public static ResultFuture<string> Listen(string context)
+        public ResultFuture<string> Listen(string context)
         {
-            return NPCEngineServer.Instance.Run<List<string>, string>("listen", new List<string> { context });
+            return this.Run<List<string>, string>("listen", new List<string> { context });
         }
 
-        public static ResultFuture<string> Transcribe(List<float> audio)
+        public ResultFuture<string> Transcribe(List<float> audio)
         {
-            return NPCEngineServer.Instance.Run<List<float>, string>("stt", audio);
+            return this.Run<List<float>, string>("stt", audio);
         }
 
-        public static ResultFuture<List<string>> GetDevices()
+        public ResultFuture<List<string>> GetDevices()
         {
-            return NPCEngineServer.Instance.Run<List<string>, List<string>>("get_devices", new List<string>());
+            return this.Run<List<string>, List<string>>("get_devices", new List<string>());
         }
 
-        public static IEnumerator InitializeMicrophoneInput()
+        public IEnumerator InitializeMicrophoneInput()
         {
-            var result = NPCEngineServer.Instance.Run<List<string>, List<string>>("initialize_microphone_input", new List<string>());
+            var result = this.Run<List<string>, List<string>>("initialize_microphone_input", new List<string>());
             while (!result.ResultReady)
             {
                 yield return null;
@@ -41,9 +41,9 @@ namespace NPCEngine.API
             yield return new WaitForSeconds(1);
         }
 
-        public static void SetDevice(int deviceId)
+        public void SetDevice(int deviceId)
         {
-            NPCEngineServer.Instance.Run<int, List<string>>("select_device", deviceId);
+            this.Run<int, List<string>>("select_device", deviceId);
         }
     }
 }
