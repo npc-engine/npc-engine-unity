@@ -11,7 +11,7 @@ namespace NPCEngine.API
     /// Static class <c>TextToSpeech</c> provides remote procedure calls 
     /// to inference engine's text to speech module.
     ///</summary>
-    public class TextToSpeech : RPCBase
+    public class TextToSpeech : RPCBase<TextToSpeech>
     {
         [Serializable()]
         private class TTSMessage

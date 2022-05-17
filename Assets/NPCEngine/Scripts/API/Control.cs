@@ -67,7 +67,7 @@ namespace NPCEngine.API
     /// <summary>
     /// <c>Control</c> provides RPC interface to control service.
     ///</summary>
-    public class Control : RPCBase
+    public class Control : RPCBase<Control>
 
     {
 

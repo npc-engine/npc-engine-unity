@@ -14,7 +14,7 @@ namespace NPCEngine.API
     /// Prefer predefining queries via <c>PredefineQuery</c> and then using
     /// <c>QueryPredefined</c> instead of directly using <c>Query</c>
     ///</summary>
-    public class SemanticQuery : RPCBase
+    public class SemanticQuery : RPCBase<SemanticQuery>
     {
 
         [Serializable()]

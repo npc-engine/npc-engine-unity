@@ -12,7 +12,7 @@ namespace NPCEngine.API
     /// <c>Chatbot</c> provides remote procedure calls 
     /// to inference engine's TextGeneration services.
     ///</summary>
-    public class TextGeneration<ContextType> : RPCBase
+    public class TextGeneration<ContextType> : RPCBase<TextGeneration<ContextType>>
     where ContextType : new()
     {
 

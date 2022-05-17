@@ -15,7 +15,7 @@ namespace NPCEngine.RPC
     /// <summary>
     /// Class <c>NPCEngineManager</c> manages inference engine sidecart process lifetime and communication.
     ///</summary>
-    public abstract class RPCBase : Singleton<RPCBase>
+    public abstract class RPCBase<T> : Singleton<T> where T : MonoBehaviour
     {
         protected virtual string ServiceId { get { return ""; } }
         private RequestDispatcherImpl impl;
