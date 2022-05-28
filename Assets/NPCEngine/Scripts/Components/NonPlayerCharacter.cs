@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using NPCEngine.Server;
+using NPCEngine.RPC;
 using NPCEngine.API;
 using NPCEngine.Utility;
 
@@ -145,7 +145,7 @@ namespace NPCEngine.Components
             var dialogueLines = dialogueSystem.GetCurrentNodeOptions();
             if (dialogueLines.Count != 0)
             {
-                yield return SemanticQuery.CompareCoroutine(line, dialogueLines, (output) => { scores = output; });
+                yield return NPCEngineManager.Instance.GetAPI<SemanticQuery>().CompareCoroutine(line, dialogueLines, (output) => { scores = output; });
                 var maxScore = scores.Max();
                 var customThreshold = dialogueSystem.CurrentNodeThreshold();
                 var threshold = customThreshold != -1f ? customThreshold : defaultThreshold;
@@ -182,7 +182,8 @@ namespace NPCEngine.Components
                 history = history,
             };
             string reply = "";
-            yield return Chatbot<FantasyChatbotContext>.GenerateReplyCoroutine(context, (output) => { reply = output; }, temperature, topK);
+            yield return NPCEngineManager.Instance.GetAPI<TextGeneration<FantasyChatbotContext>>()
+                .GenerateReplyCoroutine(context, (output) => { reply = output; }, temperature, topK);
 
             OnDialogueLine?.Invoke(new ChatLine { speaker = characterName, line = reply }, false);
             history.Add(new ChatLine { speaker = characterName, line = reply });
@@ -215,13 +216,13 @@ namespace NPCEngine.Components
 
         public IEnumerator GenerateAndPlaySpeech(string line)
         {
-            TextToSpeech.StartTTS(voiceId, line, nChunksTextGeneration);
+            NPCEngineManager.Instance.GetAPI<TextToSpeech>().StartTTS(voiceId, line, nChunksTextGeneration);
 
             List<float> audioData;
             do
             {
                 audioData = new List<float>();
-                yield return TextToSpeech.GetNextResultCoroutine((output) => { audioData = output; });
+                yield return NPCEngineManager.Instance.GetAPI<TextToSpeech>().GetNextResultCoroutine((output) => { audioData = output; });
 
                 if (audioData.Count > 0)
                 {
@@ -238,7 +239,7 @@ namespace NPCEngine.Components
 
         private void Update()
         {
-            if (NPCEngineServer.Instance.Initialized && !initialized)
+            if (NPCEngineManager.Instance.Initialized && !initialized)
                 initialized = true;
 
         }

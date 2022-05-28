@@ -11,8 +11,9 @@ namespace NPCEngine.API
     /// Static class <c>TextToSpeech</c> provides remote procedure calls 
     /// to inference engine's text to speech module.
     ///</summary>
-    public class TextToSpeech : RPCBase<TextToSpeech>
+    public class TextToSpeech : RPCBase
     {
+        public override string ServiceId { get { return "TextToSpeechAPI"; } }
         [Serializable()]
         private class TTSMessage
         {
@@ -20,6 +21,7 @@ namespace NPCEngine.API
             public string text;
             public int n_chunks;
         }
+
 
         public void StartTTS(string voiceId, string line, int n_chunks)
         {

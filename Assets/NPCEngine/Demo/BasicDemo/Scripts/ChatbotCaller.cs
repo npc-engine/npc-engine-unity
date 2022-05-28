@@ -48,7 +48,7 @@ public class ChatbotCaller : MonoBehaviour
             other_persona = OtherPersona.text,
             history = this.history
         };
-        result = Chatbot<FantasyChatbotContext>.GenerateReply(context, float.Parse(Temperature.text), Int32.Parse(TopK.text));
+        result = NPCEngineManager.Instance.GetAPI<TextGeneration<FantasyChatbotContext>>().GenerateReply(context, float.Parse(Temperature.text), Int32.Parse(TopK.text));
         SendButton.interactable = false;
     }
 

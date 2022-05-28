@@ -20,7 +20,7 @@ namespace NPCEngine.Components
 
         IEnumerator InitializationCoroutine()
         {
-            yield return SpeechToText.InitializeMicrophoneInput();
+            yield return NPCEngineManager.Instance.GetAPI<SpeechToText>().InitializeMicrophoneInput();
             CallSpeechToText();
         }
 
@@ -42,7 +42,7 @@ namespace NPCEngine.Components
 
         public void CallSpeechToText()
         {
-            result = SpeechToText.Listen(Context);
+            result = NPCEngineManager.Instance.GetAPI<SpeechToText>().Listen(Context);
         }
 
         public override void StartListening()

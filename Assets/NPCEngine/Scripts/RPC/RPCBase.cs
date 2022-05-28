@@ -2,8 +2,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using Newtonsoft.Json;
 using NPCEngine.Utility;
+
+#if UNITY_EDITOR
+using Unity.EditorCoroutines.Editor;
+#endif
 
 
 /// <summary>
@@ -12,16 +17,22 @@ using NPCEngine.Utility;
 namespace NPCEngine.RPC
 {
 
+
     /// <summary>
     /// Class <c>NPCEngineManager</c> manages inference engine sidecart process lifetime and communication.
     ///</summary>
-    public abstract class RPCBase<T> : Singleton<T> where T : MonoBehaviour
+    public abstract class RPCBase : MonoBehaviour
     {
-        protected virtual string ServiceId { get { return ""; } }
+
+        public virtual string ServiceId { get { return ""; } }
+        Queue<Request> taskQueue = new Queue<Request>();
         private RequestDispatcherImpl impl;
         private IEnumerator implCoroutine;
 
-        Queue<Request> taskQueue;
+#if UNITY_EDITOR
+        private EditorCoroutine editorCoroutine;
+#endif
+
 
         public ResultFuture<R> Run<P, R>(String methodName, P parameters)
         where P : new()
@@ -55,47 +66,87 @@ namespace NPCEngine.RPC
                     messageString,
                     (string reply) =>
                     {
-                        if (RPCConfig.Instance.debug) UnityEngine.Debug.LogFormat("Received message: {0}", reply);
-                        var response = JsonConvert.DeserializeObject<RPCResponseMessage<R>>(reply);
-                        if (response.error.code != 0)
+                        if (NPCEngineConfig.Instance.debug) UnityEngine.Debug.LogFormat("Received message: {0}", reply);
+                        if (reply == null)
                         {
                             errorCallback(
                                 new NPCEngineException(
-                                    "Error code: "
-                                    + response.error.code.ToString()
-                                    + " Message: " + response.error.message
+                                    "Empty reply from inference engine"
                                 )
                             );
-                            return;
                         }
-                        replyCallback(response.result);
+                        var response = JsonConvert.DeserializeObject<RPCResponseMessage<R>>(reply);
+                        if (response != null)
+                        {
+                            if (response.error.code != 0)
+                            {
+                                errorCallback(
+                                    new NPCEngineException(
+                                        "Error code: "
+                                        + response.error.code.ToString()
+                                        + " Message: " + response.error.message
+                                    )
+                                );
+                                return;
+                            }
+                            replyCallback(response.result);
+                        }
+                        else
+                        {
+                            errorCallback(
+                                new NPCEngineException(
+                                    "Empty reply from inference engine"
+                                )
+                            );
+                        }
                     }
                 )
             );
         }
 
-
-        private void Awake()
+        public void Connect()
         {
-            switch (RPCConfig.Instance.serverType)
+            switch (NPCEngineConfig.Instance.serverType)
             {
                 case ServerType.HTTP:
-                    impl = new APICommunicatorHTTPImpl(RPCConfig.Instance.serverAddress, ServiceId, RPCConfig.Instance.debug);
+                    impl = new APICommunicatorHTTPImpl(NPCEngineConfig.Instance.serverAddress, ServiceId);
                     break;
                 case ServerType.ZMQ:
-                    impl = new APICommunicatorZMQImpl(RPCConfig.Instance.serverAddress, ServiceId, RPCConfig.Instance.debug);
+                    impl = new APICommunicatorZMQImpl(NPCEngineConfig.Instance.serverAddress, ServiceId);
                     break;
                 default:
                     throw new NPCEngineException("Unknown server type");
             }
-            taskQueue = new Queue<Request>();
-            implCoroutine = this.impl.DispatchRequestsCoroutine(taskQueue);
-            StartCoroutine(implCoroutine);
+            if (Application.isPlaying)
+            {
+                if (implCoroutine != null)
+                    StopCoroutine(implCoroutine);
+                implCoroutine = this.impl.DispatchRequestsCoroutine(taskQueue);
+                StartCoroutine(implCoroutine);
+            }
+            else
+            {
+                UnityEngine.Debug.Log("RPCBase.Start()");
+#if UNITY_EDITOR
+                if (editorCoroutine != null)
+                    EditorCoroutineUtility.StopCoroutine(editorCoroutine);
+                editorCoroutine = EditorCoroutineUtility.StartCoroutineOwnerless(this.impl.DispatchRequestsCoroutine(taskQueue));
+#endif
+            }
         }
 
-        private void OnDestroy()
+        public void Disconnect()
         {
-            StopCoroutine(implCoroutine);
+            impl = null;
+#if UNITY_EDITOR
+            if (editorCoroutine != null)
+                EditorCoroutineUtility.StopCoroutine(editorCoroutine);
+#else
+            if (implCoroutine != null)
+                StopCoroutine(implCoroutine);
+#endif
+            taskQueue.Clear();
         }
+
     }
 }

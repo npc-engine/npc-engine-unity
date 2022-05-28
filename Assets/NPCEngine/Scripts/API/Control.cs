@@ -56,6 +56,7 @@ namespace NPCEngine.API
     /// </summary>
     public enum ServiceStatus
     {
+        UNKNOWN,
         STARTING,
         RUNNING,
         STOPPED,
@@ -67,9 +68,11 @@ namespace NPCEngine.API
     /// <summary>
     /// <c>Control</c> provides RPC interface to control service.
     ///</summary>
-    public class Control : RPCBase<Control>
+    public class Control : RPCBase
 
     {
+
+        public override string ServiceId { get { return "control"; } }
 
         //Compare in a coroutine   
         public IEnumerator StartService(string service_id)
@@ -81,6 +84,7 @@ namespace NPCEngine.API
                 yield return null;
             }
         }
+
         public IEnumerator StopService(string service_id)
         {
             var result = this.Run<List<string>, List<string>>("stop_service", new List<string> { service_id, });
@@ -179,5 +183,19 @@ namespace NPCEngine.API
             outputCallback(result.Result);
         }
 
+        public ResultFuture<List<ServiceMetadata>> GetServicesMetadataFuture()
+        {
+            return this.Run<List<string>, List<ServiceMetadata>>("get_services_metadata", new List<string> { });
+        }
+
+        public ResultFuture<ServiceMetadata> GetServiceMetadataFuture(string service_id)
+        {
+            return this.Run<List<string>, ServiceMetadata>("get_service_metadata", new List<string> { service_id, });
+        }
+
+        public ResultFuture<ServiceStatus> GetServiceStatusFuture(string service_id)
+        {
+            return this.Run<List<string>, ServiceStatus>("get_service_status", new List<string> { service_id, });
+        }
     }
 }

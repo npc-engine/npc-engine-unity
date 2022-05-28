@@ -18125,6 +18125,42 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 649bd79ce63a6e9449715449439999df, type: 3}
+--- !u!1 &1480138457 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 826819703477927490, guid: 649bd79ce63a6e9449715449439999df, type: 3}
+  m_PrefabInstance: {fileID: 1480138456}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1480138458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1480138457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d35e6742b85850f48ae09c2f8be9ec8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serverType: 0
+  serverAddress: localhost:8080
+  modelsPath: .models/
+  npcEnginePath: .npc-engine/cli.exe
+  debug: 0
+  connectToExistingServer: 0
+  inferenceEngineProcessId: -1
+--- !u!114 &1480138459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1480138457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6268b6a12312234e8b06335c4087020, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1500069761
 PrefabInstance:
   m_ObjectHideFlags: 0

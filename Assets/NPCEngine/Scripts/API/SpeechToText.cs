@@ -12,9 +12,10 @@ namespace NPCEngine.API
     /// Static class <c>SpeechToText</c> provides remote procedure calls 
     /// to inference engine's speech to text module.
     ///</summary>
-    public class SpeechToText : RPCBase<SpeechToText>
+    public class SpeechToText : RPCBase
     {
 
+        public override string ServiceId { get { return "SpeechToTextAPI"; } }
         public ResultFuture<string> Listen(string context)
         {
             return this.Run<List<string>, string>("listen", new List<string> { context });

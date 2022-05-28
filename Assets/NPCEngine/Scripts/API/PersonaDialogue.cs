@@ -12,8 +12,10 @@ namespace NPCEngine.API
     /// <c>Chatbot</c> provides remote procedure calls 
     /// to inference engine's TextGeneration services.
     ///</summary>
-    public class PersonaDialogue : RPCBase<PersonaDialogue>
+    public class PersonaDialogue : RPCBase
     {
+
+        public override string ServiceId { get { return "PersonaDialogueAPI"; } }
 
         [Serializable()]
         class StartDialogueMessage

@@ -30,5 +30,6 @@ namespace NPCEngine.Utility
                 return instance;
             }
         }
+
     }
 }

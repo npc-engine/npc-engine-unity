@@ -11,8 +11,10 @@ namespace NPCEngine.API
     /// <summary>
     /// Classification services RPC Interface.
     ///</summary>
-    public class Classification : RPCBase<Classification>
+    public class Classification : RPCBase
     {
+
+        public override string ServiceId { get { return "ClassificationAPI"; } }
 
         [Serializable()]
         private class ClassifyMessage
