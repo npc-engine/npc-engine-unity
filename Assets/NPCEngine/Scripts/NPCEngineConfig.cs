@@ -1,16 +1,19 @@
+using System;
+using UnityEngine;
 using NPCEngine.Utility;
 using NPCEngine.RPC;
-using UnityEngine;
 using System.IO;
 using System.Collections.Generic;
 
 namespace NPCEngine
 {
 
+    [Serializable]
     public class ServiceConfigDescriptor
     {
         public string name;
         public string type;
+        public string path;
         public bool start;
     }
     /// <summary>
@@ -18,7 +21,7 @@ namespace NPCEngine
     /// </summary>
     public class NPCEngineConfig : Singleton<NPCEngineConfig>
     {
-
+        [HideInInspector]
         public List<ServiceConfigDescriptor> services = null;
 
         public ServerType serverType = ServerType.HTTP;
@@ -39,10 +42,10 @@ namespace NPCEngine
         [Tooltip("Relative to StreamingAssets folder")]
         public string npcEnginePath = ".npc-engine/cli.exe";
 
-        public bool debug = false;
+        public bool debugLogs = false;
+        public bool serverConsole = false;
         public bool connectToExistingServer = false;
 
-        public int inferenceEngineProcessId = -1;
 
         private void Awake()
         {
