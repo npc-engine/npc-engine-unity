@@ -301,12 +301,17 @@ namespace NPCEngine.Components
 
         public T GetAPI<T>(string id) where T : RPCBase
         {
-            var api = GetComponents<T>();
-            if (api == null)
+            var apis = GetComponents<T>();
+            foreach (var api in apis)
             {
-                api = gameObject.AddComponent<T>();
+                if (api.serviceId == id)
+                {
+                    return api;
+                }
             }
-            return api;
+            var api2 = gameObject.AddComponent<T>();
+            api2.serviceId = id;
+            return api2;   
         }
 
 
