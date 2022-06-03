@@ -1,11 +1,12 @@
 
 #if UNITY_EDITOR
+using System.Net.Mime;
 using System.Diagnostics;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
-using NPCEngine;
+using NPCEngine.Utility;
 using NPCEngine.Components;
 using NPCEngine.API;
 using Unity.EditorCoroutines.Editor;
@@ -14,20 +15,17 @@ using Unity.EditorCoroutines.Editor;
 [CustomEditor(typeof(NPCEngineManager))]
 public class NPCEngineManagerEditor : Editor
 {
-    private List<ServiceMetadata> services;
-    private List<ServiceStatus> serviceStatuses;
     private double time;
 
     private bool[] serviceShow;
 
-    EditorCoroutine statusCoroutine;
-    EditorCoroutine servicesCoroutine;
+    NPCEngineManager manager;
 
 
     public override void OnInspectorGUI()
     {
         base.DrawDefaultInspector();
-        NPCEngineManager manager = (NPCEngineManager)target;
+        manager = (NPCEngineManager)target;
 
         if (!manager.InferenceEngineRunning)
         {
@@ -38,17 +36,6 @@ public class NPCEngineManagerEditor : Editor
             GUILayout.FlexibleSpace();
             if (GUILayout.Button("Start Inference Engine", GUILayout.Width(200), GUILayout.Height(35)))
             {
-                if (servicesCoroutine != null)
-                {
-                    EditorCoroutineUtility.StopCoroutine(servicesCoroutine);
-                }
-                servicesCoroutine = EditorCoroutineUtility.StartCoroutineOwnerless(UpdateServices());
-
-                if (statusCoroutine != null)
-                {
-                    EditorCoroutineUtility.StopCoroutine(statusCoroutine);
-                }
-                statusCoroutine = EditorCoroutineUtility.StartCoroutineOwnerless(UpdateServiceStatuses());
                 manager.StartInferenceEngine();
             }
             GUILayout.FlexibleSpace();
@@ -64,16 +51,6 @@ public class NPCEngineManagerEditor : Editor
             if (GUILayout.Button("Stop Inference Engine", GUILayout.Width(200), GUILayout.Height(35)))
             {
                 manager.StopInferenceEngine();
-                if (statusCoroutine != null)
-                {
-                    EditorCoroutineUtility.StopCoroutine(statusCoroutine);
-                }
-                if (servicesCoroutine != null)
-                {
-                    EditorCoroutineUtility.StopCoroutine(servicesCoroutine);
-                }
-                serviceStatuses = null;
-                services = null;
             }
             GUILayout.FlexibleSpace();
             GUILayout.EndVertical();
@@ -84,7 +61,7 @@ public class NPCEngineManagerEditor : Editor
     private void DrawServicesInspector()
     {
 
-        if (services == null)
+        if (manager.Services == null)
         {
             GUILayout.Box("Loading services metadata...", GUILayout.Width(300), GUILayout.Height(35));
         }
@@ -102,15 +79,12 @@ public class NPCEngineManagerEditor : Editor
 
         GUILayout.Box("Service name", EditorStyles.boldLabel, GUILayout.MinWidth(10));
         int i = 0;
-        if (serviceShow == null || serviceShow.Length != services.Count)
+        if (serviceShow == null || serviceShow.Length != manager.Services.Count)
         {
-            serviceShow = new bool[services.Count];
+            serviceShow = new bool[manager.Services.Count];
         }
-        if (serviceStatuses == null || serviceStatuses.Count != services.Count)
-        {
-            serviceStatuses = new List<ServiceStatus>();
-        }
-        foreach (var service in services)
+
+        foreach (var service in manager.Services)
         {
             if (!serviceShow[i])
             {
@@ -121,8 +95,8 @@ public class NPCEngineManagerEditor : Editor
                         service.id.Substring(0, 50) + "..." :
                         service.id
                 );
-                ServiceStatusBox(serviceStatuses[i]);
-                GUILayout.Button("Stop", GUILayout.MaxWidth(40));
+                ServiceStatusBox(manager.ServiceStatuses[i]);
+                StatusButton(i);
                 GUILayout.EndHorizontal();
             }
             else
@@ -148,7 +122,7 @@ public class NPCEngineManagerEditor : Editor
                 GUILayout.Box(service.readme, wrappedLabel, GUILayout.MinWidth(10));
 
                 GUILayout.Box("Status:", EditorStyles.boldLabel, GUILayout.MaxWidth(60));
-                ServiceStatusBox(serviceStatuses[i]);
+                ServiceStatusBox(manager.ServiceStatuses[i]);
                 GUILayout.Space(10f);
                 GUILayout.Button("Stop", GUILayout.MaxWidth(80));
                 GUILayout.EndVertical();
@@ -174,47 +148,6 @@ public class NPCEngineManagerEditor : Editor
         GUI.color = c;
     }
 
-    public IEnumerator UpdateServiceStatuses()
-    {
-        UnityEngine.Debug.Log("Updating service statuses...");
-        while (true)
-        {
-            if (services != null)
-            {
-                if (serviceStatuses == null || serviceStatuses.Count != services.Count)
-                {
-                    serviceStatuses = new List<ServiceStatus>();
-                    for (int i = 0; i < services.Count; i++)
-                    {
-                        serviceStatuses.Add(new ServiceStatus());
-                    }
-                }
-                for (int i = 0; i < services.Count; i++)
-                {
-                    ServiceStatus status = serviceStatuses[i];
-                    serviceStatuses[i] = status;
-                    yield return NPCEngineManager.Instance.GetAPI<Control>().GetServiceStatus(services[i].id, (ServiceStatus s) =>
-                    {
-                        serviceStatuses[i] = s;
-                    });
-                }
-            }
-            yield return new EditorWaitForSeconds(4);
-        }
-    }
-
-    public IEnumerator UpdateServices()
-    {
-        UnityEngine.Debug.Log("Updating services...");
-        while (true)
-        {
-            yield return NPCEngineManager.Instance.GetAPI<Control>().GetServicesMetadata((List<ServiceMetadata> s) =>
-            {
-                services = s;
-            });
-            yield return new EditorWaitForSeconds(4);
-        }
-    }
 
     void ServiceStatusBox(ServiceStatus status)
     {
@@ -249,6 +182,34 @@ public class NPCEngineManagerEditor : Editor
                 GUI.color = Color.grey;
                 GUILayout.Box("UNKNOWN", EditorStyles.boldLabel, GUILayout.MaxWidth(80));
                 GUI.color = prev_color5;
+                break;
+        }
+    }
+
+    void StatusButton(int serviceIndex)
+    {
+        switch (manager.ServiceStatuses[serviceIndex])
+        {
+            case ServiceStatus.RUNNING:
+                if (GUILayout.Button("Stop", GUILayout.MaxWidth(80)))
+                {
+                    CoroutineUtility.StartCoroutine(
+                        NPCEngineManager.Instance.GetAPI<Control>().StopService(manager.Services[serviceIndex].id), manager, "EditorStopService"
+                    );
+                }
+                break;
+            case ServiceStatus.STOPPED:
+                if (GUILayout.Button("Start", GUILayout.MaxWidth(80)))
+                {
+                    CoroutineUtility.StartCoroutine(
+                        NPCEngineManager.Instance.GetAPI<Control>().StartService(manager.Services[serviceIndex].id), manager, "EditorStartService"
+                    );
+                }
+                break;
+            default:
+                GUI.enabled = false;
+                GUILayout.Button("Start", GUILayout.MaxWidth(80));
+                GUI.enabled = true;
                 break;
         }
     }
