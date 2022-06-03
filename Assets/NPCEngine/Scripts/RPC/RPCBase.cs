@@ -17,21 +17,17 @@ using Unity.EditorCoroutines.Editor;
 namespace NPCEngine.RPC
 {
 
-
+    [ExecuteInEditMode]
     /// <summary>
     /// Class <c>NPCEngineManager</c> manages inference engine sidecart process lifetime and communication.
     ///</summary>
     public abstract class RPCBase : MonoBehaviour
     {
 
-        public virtual string ServiceId { get { return ""; } }
+        public string serviceId = "";
+
         Queue<Request> taskQueue = new Queue<Request>();
         private RequestDispatcherImpl impl;
-        private IEnumerator implCoroutine;
-
-#if UNITY_EDITOR
-        private EditorCoroutine editorCoroutine;
-#endif
 
 
         public ResultFuture<R> Run<P, R>(String methodName, P parameters)
@@ -66,87 +62,81 @@ namespace NPCEngine.RPC
                     messageString,
                     (string reply) =>
                     {
-                        if (NPCEngineConfig.Instance.debug) UnityEngine.Debug.LogFormat("Received message: {0}", reply);
-                        if (reply == null)
+                        if (NPCEngineConfig.Instance.debugLogs) UnityEngine.Debug.LogFormat("Received message: {0}", reply);
+                        try
                         {
-                            errorCallback(
-                                new NPCEngineException(
-                                    "Empty reply from inference engine"
-                                )
-                            );
-                        }
-                        var response = JsonConvert.DeserializeObject<RPCResponseMessage<R>>(reply);
-                        if (response != null)
-                        {
-                            if (response.error.code != 0)
+                            var response = JsonConvert.DeserializeObject<RPCResponseMessage<R>>(reply);
+                            if (response != null)
+                            {
+                                if (response.error.code != 0)
+                                {
+                                    errorCallback(
+                                        new NPCEngineException(
+                                            "Error code: "
+                                            + response.error.code.ToString()
+                                            + " Message: " + response.error.message
+                                        )
+                                    );
+                                    return;
+                                }
+                                replyCallback(response.result);
+                            }
+                            else
                             {
                                 errorCallback(
                                     new NPCEngineException(
-                                        "Error code: "
-                                        + response.error.code.ToString()
-                                        + " Message: " + response.error.message
+                                        "Empty reply from inference engine"
                                     )
                                 );
-                                return;
                             }
-                            replyCallback(response.result);
                         }
-                        else
+                        catch (Exception)
                         {
                             errorCallback(
-                                new NPCEngineException(
-                                    "Empty reply from inference engine"
-                                )
-                            );
+                                    new NPCEngineException(
+                                        "Error: " + reply
+                                    )
+                                );
+                            return;
                         }
                     }
                 )
             );
         }
 
-        public void Connect()
+        private void Connect()
         {
             switch (NPCEngineConfig.Instance.serverType)
             {
                 case ServerType.HTTP:
-                    impl = new APICommunicatorHTTPImpl(NPCEngineConfig.Instance.serverAddress, ServiceId);
+                    impl = new APICommunicatorHTTPImpl(NPCEngineConfig.Instance.serverAddress, serviceId);
                     break;
                 case ServerType.ZMQ:
-                    impl = new APICommunicatorZMQImpl(NPCEngineConfig.Instance.serverAddress, ServiceId);
+                    impl = new APICommunicatorZMQImpl(NPCEngineConfig.Instance.serverAddress, serviceId);
                     break;
                 default:
                     throw new NPCEngineException("Unknown server type");
             }
-            if (Application.isPlaying)
-            {
-                if (implCoroutine != null)
-                    StopCoroutine(implCoroutine);
-                implCoroutine = this.impl.DispatchRequestsCoroutine(taskQueue);
-                StartCoroutine(implCoroutine);
-            }
-            else
-            {
-                UnityEngine.Debug.Log("RPCBase.Start()");
-#if UNITY_EDITOR
-                if (editorCoroutine != null)
-                    EditorCoroutineUtility.StopCoroutine(editorCoroutine);
-                editorCoroutine = EditorCoroutineUtility.StartCoroutineOwnerless(this.impl.DispatchRequestsCoroutine(taskQueue));
-#endif
-            }
+            CoroutineUtility.StartCoroutine(this.impl.DispatchRequestsCoroutine(taskQueue), this, "implCoroutine");
         }
 
-        public void Disconnect()
+
+        private void Disconnect()
         {
             impl = null;
-#if UNITY_EDITOR
-            if (editorCoroutine != null)
-                EditorCoroutineUtility.StopCoroutine(editorCoroutine);
-#else
-            if (implCoroutine != null)
-                StopCoroutine(implCoroutine);
-#endif
+
+            CoroutineUtility.StopCoroutine("implCoroutine", this);
             taskQueue.Clear();
         }
 
+        void OnEnable()
+        {
+            Connect();
+        }
+
+        void OnDisable()
+        {
+            Disconnect();
+        }
     }
 }

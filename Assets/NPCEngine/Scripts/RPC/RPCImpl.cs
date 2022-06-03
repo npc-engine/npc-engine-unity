@@ -28,12 +28,12 @@ namespace NPCEngine.RPC
 
         public APICommunicatorZMQImpl(string address, string id) : base(address, id)
         {
-            if (NPCEngineConfig.Instance.debug) UnityEngine.Debug.Log(String.Format("ZMQ Service client {0} connecting to address {1}", id, address));
+            if (NPCEngineConfig.Instance.debugLogs) UnityEngine.Debug.Log(String.Format("ZMQ Service client {0} connecting to address {1}", id, address));
             zmqClient = new RequestSocket();
             zmqClient.Options.Identity =
                         Encoding.Unicode.GetBytes(id);
             zmqClient.Connect("tcp://" + address);
-            if (NPCEngineConfig.Instance.debug) UnityEngine.Debug.Log(String.Format("ZMQ Service client {0} connected to address {1} successfully", id, address));
+            if (NPCEngineConfig.Instance.debugLogs) UnityEngine.Debug.Log(String.Format("ZMQ Service client {0} connected to address {1} successfully", id, address));
         }
 
         ~APICommunicatorZMQImpl()
@@ -51,7 +51,7 @@ namespace NPCEngine.RPC
                     yield return null;
                 }
                 Tuple<string, Action<string>> task = taskQueue.Dequeue();
-                if (NPCEngineConfig.Instance.debug) UnityEngine.Debug.Log(string.Format("SendMessage, {0}", task.Item1));
+                if (NPCEngineConfig.Instance.debugLogs) UnityEngine.Debug.Log(string.Format("SendMessage, {0}", task.Item1));
 
                 while (!zmqClient.TrySendFrame(task.Item1))
                 {
@@ -89,7 +89,6 @@ namespace NPCEngine.RPC
 
         public override IEnumerator DispatchRequestsCoroutine(Queue<Request> taskQueue)
         {
-            UnityEngine.Debug.Log("Running DispatchRequestsCoroutine");
             while (true)
             {
                 while (taskQueue.Count == 0)
@@ -102,7 +101,7 @@ namespace NPCEngine.RPC
                 try
                 {
 
-                    if (NPCEngineConfig.Instance.debug) UnityEngine.Debug.Log(string.Format("SendMessage, {0}", task.Item1));
+                    if (NPCEngineConfig.Instance.debugLogs) UnityEngine.Debug.Log(string.Format("SendMessage, {0}", task.Item1));
                     request = CreateUnityWebRequest(this.id != "" ? ("http://" + address + "/" + this.id) : "http://" + address, task.Item1);
                     requestOp = request.SendWebRequest();
                 }
@@ -115,9 +114,17 @@ namespace NPCEngine.RPC
                     yield return null;
                 }
                 string reply;
+
                 try
                 {
-                    reply = request.downloadHandler.text;
+                    if (request.error != null)
+                    {
+                        reply = request.error;
+                    }
+                    else
+                    {
+                        reply = request.downloadHandler.text;
+                    }
                 }
                 catch (Exception e)
                 {
