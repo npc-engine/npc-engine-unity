@@ -1,13 +1,9 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.IO;
-using Unity.EditorCoroutines.Editor;
 using UnityEngine;
 using UnityEditor;
-using NPCEngine;
 using NPCEngine.Components;
-using NPCEngine.API;
 
 namespace NPCEngine
 {
@@ -16,6 +12,8 @@ namespace NPCEngine
     public class NPCEngineConfigEditor : Editor
     {
         NPCEngineConfig config;
+        bool showDownload = false;
+        private string downloadModelID;
 
         public override void OnInspectorGUI()
         {
@@ -34,6 +32,11 @@ namespace NPCEngine
             {
                 config.services = GetServicesManually();
             }
+            showDownload = EditorGUILayout.Foldout(showDownload, "Add New Services");
+            if (showDownload)
+            {
+                DrawAddNewService();
+            }
         }
 
         private void DrawServicesInspector()
@@ -46,6 +49,7 @@ namespace NPCEngine
             foreach (var service in config.services)
             {
                 GUILayout.Box(service.name.Length > 50 ? service.name.Substring(0, 50) + "..." : service.name, EditorStyles.label, GUILayout.MinWidth(10));
+                GUILayout.FlexibleSpace();
             }
             GUILayout.EndVertical();
             VerticalLine(Color.black);
@@ -54,6 +58,7 @@ namespace NPCEngine
             foreach (var service in config.services)
             {
                 GUILayout.Box(service.type, EditorStyles.label, GUILayout.MinWidth(10));
+                GUILayout.FlexibleSpace();
             }
             GUILayout.EndVertical();
             VerticalLine(Color.black);
@@ -69,8 +74,30 @@ namespace NPCEngine
                 {
                     service.start = false;
                 }
+                GUILayout.FlexibleSpace();
             }
             GUILayout.EndVertical();
+
+            VerticalLine(Color.black);
+            GUILayout.BeginVertical();
+            GUILayout.Box("", EditorStyles.boldLabel);
+            foreach (var service in config.services)
+            {
+                if (GUILayout.Button("Remove", EditorStyles.miniButtonLeft))
+                {
+                    bool decision = EditorUtility.DisplayDialog(
+                        "Remove Service", // title
+                        String.Format("Are you sure want to remove all {0} files?", service.name), // description
+                        "Yes", // OK button
+                        "No" // Cancel button
+                    );
+                    if (decision)
+                        clearFolder(service.path);
+                }
+                GUILayout.FlexibleSpace();
+            }
+            GUILayout.EndVertical();
+
             GUILayout.EndHorizontal();
 
         }
@@ -84,6 +111,7 @@ namespace NPCEngine
                 ServiceConfigDescriptor service = new ServiceConfigDescriptor();
                 service.name = Path.GetFileName(directory);
                 string[] lines = System.IO.File.ReadAllLines(Path.Combine(directory, "config.yml"));
+                service.path = directory;
                 foreach (var line in lines)
                 {
                     if (line.StartsWith("type:"))
@@ -114,6 +142,50 @@ namespace NPCEngine
             return services;
         }
 
+        private void DrawAddNewService()
+        {
+            GUIStyle wrappedLabel = new GUIStyle(GUI.skin.GetStyle("label"))
+            {
+                wordWrap = true
+            };
+            GUILayout.Label("Download Service", EditorStyles.boldLabel);
+            if (GUILayout.Button("To find services, go to https://huggingface.co/models?other=npc-engine"
+            + " and enter model ID you want to download below", wrappedLabel))
+            {
+                Application.OpenURL("https://huggingface.co/models?other=npc-engine");
+            }
+            GUILayout.BeginHorizontal();
+            GUILayout.Label("Model ID:", GUILayout.Width(80));
+            downloadModelID = GUILayout.TextField(downloadModelID);
+
+            GUILayout.EndHorizontal();
+            if (GUILayout.Button("Download", EditorStyles.miniButtonLeft, GUILayout.MaxWidth(80)))
+            {
+                if (downloadModelID.Length > 0)
+                {
+                    NPCEngineManager.Instance.DownloadModel(downloadModelID);
+                }
+            }
+
+            GUILayout.Label("Import Service", EditorStyles.boldLabel);
+            GUILayout.Label("Or you can import services from your computer:", wrappedLabel);
+            if (GUILayout.Button("Import", EditorStyles.miniButtonLeft, GUILayout.MaxWidth(80)))
+            {
+                string path = EditorUtility.OpenFolderPanel("Select model", ".", "");
+                if (path.Length > 0)
+                {
+                    var config_file = Path.Combine(path, "config.yml");
+                    if (!File.Exists(config_file))
+                    {
+                        EditorUtility.DisplayDialog("Error", "Service config file not found. Not a valid service.", "OK");
+                        return;
+                    }
+                    copyFolder(path, Path.Combine(Application.streamingAssetsPath, NPCEngineConfig.Instance.modelsPath));
+                }
+            }
+
+        }
+
         static void VerticalLine(Color color)
         {
             GUIStyle horizontalLine;
@@ -127,5 +199,50 @@ namespace NPCEngine
             GUILayout.Box(GUIContent.none, horizontalLine);
             GUI.color = c;
         }
+
+        private void clearFolder(string FolderName)
+        {
+            DirectoryInfo dir = new DirectoryInfo(FolderName);
+
+            foreach (FileInfo fi in dir.GetFiles())
+            {
+                fi.Delete();
+            }
+
+            foreach (DirectoryInfo di in dir.GetDirectories())
+            {
+                clearFolder(di.FullName);
+                di.Delete();
+            }
+            dir.Delete();
+        }
+
+        private void copyFolder(string folder, string to_path, bool recursive = true)
+        {
+            DirectoryInfo dir = new DirectoryInfo(folder);
+
+            to_path = Path.Combine(to_path, dir.Name);
+            if (!dir.Exists)
+            {
+                Debug.LogError("Folder " + folder + " does not exist");
+                return;
+            }
+            if (!Directory.Exists(to_path))
+            {
+                Directory.CreateDirectory(to_path);
+            }
+            foreach (FileInfo fi in dir.GetFiles())
+            {
+                fi.CopyTo(Path.Combine(to_path, fi.Name), true);
+            }
+            if (recursive)
+            {
+                foreach (DirectoryInfo di in dir.GetDirectories())
+                {
+                    copyFolder(di.FullName, Path.Combine(to_path, di.Name), recursive);
+                }
+            }
+        }
+
     }
 }
