@@ -42,7 +42,7 @@ namespace NPCEngine.Components
 
         public void CallSpeechToText()
         {
-            result = NPCEngineManager.Instance.GetAPI<SpeechToText>().Listen(Context);
+            result = NPCEngineManager.Instance.GetAPI<SpeechToText>().ListenFuture(Context);
         }
 
         public override void StartListening()
