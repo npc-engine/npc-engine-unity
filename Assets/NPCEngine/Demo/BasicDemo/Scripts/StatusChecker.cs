@@ -51,7 +51,7 @@ public class StatusChecker : MonoBehaviour
     {
         if (!InitializedIndicator.activeSelf)
         {
-            if (NPCEngineManager.Instance.Initialized)
+            if (NPCEngineManager.Instance.InferenceEngineRunning)
             {
                 InitializedIndicator.SetActive(true);
                 NotInitializedIndicator.SetActive(false);

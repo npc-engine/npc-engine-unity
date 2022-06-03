@@ -24,7 +24,7 @@ public class TextToSpeechCaller : MonoBehaviour
     // Start is called before the first frame update
     void OnEnable()
     {
-        speakerIdsResult = NPCEngineManager.Instance.GetAPI<TextToSpeech>().GetSpeakerIds();
+        speakerIdsResult = NPCEngineManager.Instance.GetAPI<TextToSpeech>().GetSpeakerIdsFuture();
     }
 
     // Update is called once per frame
@@ -46,7 +46,7 @@ public class TextToSpeechCaller : MonoBehaviour
                 var clip = AudioClip.Create("tmp", result.Count, 1, 22050, false);
                 clip.SetData(result.ToArray(), 0);
                 audioQueue.PlaySound(clip);
-                textToSpeechResult = NPCEngineManager.Instance.GetAPI<TextToSpeech>().GetNextResult();
+                textToSpeechResult = NPCEngineManager.Instance.GetAPI<TextToSpeech>().GetNextResultFuture();
             }
             catch (NPCEngineException)
             {
@@ -57,7 +57,7 @@ public class TextToSpeechCaller : MonoBehaviour
 
     public void RunTextToSpeech()
     {
-        NPCEngineManager.Instance.GetAPI<TextToSpeech>().StartTTS(speakerId.text, text.text, Int32.Parse(nChunks.text));
-        textToSpeechResult = NPCEngineManager.Instance.GetAPI<TextToSpeech>().GetNextResult();
+        NPCEngineManager.Instance.GetAPI<TextToSpeech>().StartTTSFuture(speakerId.text, text.text, Int32.Parse(nChunks.text));
+        textToSpeechResult = NPCEngineManager.Instance.GetAPI<TextToSpeech>().GetNextResultFuture();
     }
 }

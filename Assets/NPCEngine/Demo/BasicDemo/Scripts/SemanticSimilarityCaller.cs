@@ -24,7 +24,7 @@ public class SemanticSimilarityCaller : MonoBehaviour
 
     public void CallSemanticSimilarity()
     {
-        result = NPCEngineManager.Instance.GetAPI<SemanticQuery>().Compare(prompt1.text, new List<string> { prompt2.text });
+        result = NPCEngineManager.Instance.GetAPI<SemanticQuery>().CompareFuture(prompt1.text, new List<string> { prompt2.text });
     }
 
 

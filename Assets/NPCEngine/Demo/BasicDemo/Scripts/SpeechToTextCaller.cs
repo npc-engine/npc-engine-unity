@@ -43,7 +43,7 @@ public class SpeechToTextCaller : MonoBehaviour
 
     public void CallSpeechToText()
     {
-        result = NPCEngineManager.Instance.GetAPI<SpeechToText>().Listen("_");
+        result = NPCEngineManager.Instance.GetAPI<SpeechToText>().ListenFuture("_");
         listenButton.interactable = false;
     }
 
