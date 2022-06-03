@@ -13,8 +13,13 @@ namespace NPCEngine.API
     ///</summary>
     public class Classification : RPCBase
     {
-
-        public override string ServiceId { get { return "ClassificationAPI"; } }
+        void Awake()
+        {
+            if(serviceId == "")
+            {
+                serviceId = "ClassificationAPI";
+            }
+        }
 
         [Serializable()]
         private class ClassifyMessage

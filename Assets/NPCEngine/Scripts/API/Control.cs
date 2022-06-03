@@ -72,26 +72,62 @@ namespace NPCEngine.API
 
     {
 
-        public override string ServiceId { get { return "control"; } }
+        void Awake()
+        {
+            if (serviceId == "")
+            {
+                serviceId = "control";
+            }
+        }
 
         //Compare in a coroutine   
         public IEnumerator StartService(string service_id)
         {
             var result = this.Run<List<string>, List<string>>("start_service", new List<string> { service_id, });
 
-            while (!result.ResultReady)
+
+
+            for (int i = 0; i < 3; i++)
             {
-                yield return null;
+                while (!result.ResultReady)
+                {
+                    yield return null;
+                }
+                try
+                {
+                    var test_result = result.Result;
+                }
+                catch (NPCEngineException e)
+                {
+                    Debug.LogWarning(e.Message + " Retrying... " + i.ToString());
+                    result = this.Run<List<string>, List<string>>("start_service", new List<string> { service_id, });
+                    continue;
+                }
+                break;
             }
+
         }
 
         public IEnumerator StopService(string service_id)
         {
             var result = this.Run<List<string>, List<string>>("stop_service", new List<string> { service_id, });
-
-            while (!result.ResultReady)
+            for (int i = 0; i < 3; i++)
             {
-                yield return null;
+                while (!result.ResultReady)
+                {
+                    yield return null;
+                }
+                try
+                {
+                    var test_result = result.Result;
+                }
+                catch (NPCEngineException e)
+                {
+                    Debug.LogWarning(e.Message + " Retrying... " + i.ToString());
+                    result = this.Run<List<string>, List<string>>("stop_service", new List<string> { service_id, });
+                    continue;
+                }
+                break;
             }
         }
 
@@ -148,6 +184,7 @@ namespace NPCEngine.API
             {
                 yield return null;
             }
+            var test_result = result.Result;
         }
 
         /// <summary>
@@ -197,5 +234,15 @@ namespace NPCEngine.API
         {
             return this.Run<List<string>, ServiceStatus>("get_service_status", new List<string> { service_id, });
         }
-    }
+
+        public void StopServiceNoConfirm(string service_id)
+        {
+            this.Run<List<string>, string>("stop_service", new List<string> { service_id, });
+        }
+
+        public void StartServiceNoConfirm(string service_id)
+        {
+            this.Run<List<string>, string>("stop_service", new List<string> { service_id, });
+        }
+    }   
 }

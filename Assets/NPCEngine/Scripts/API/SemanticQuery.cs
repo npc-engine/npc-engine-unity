@@ -17,7 +17,14 @@ namespace NPCEngine.API
     public class SemanticQuery : RPCBase
     {
 
-        public override string ServiceId { get { return "SimilarityAPI"; } }
+        void Awake()
+        {
+            if (this.serviceId == "")
+            {
+                this.serviceId = "SimilarityAPI";
+            }
+        }
+
         [Serializable()]
         private class QueryMessage
         {
@@ -26,7 +33,7 @@ namespace NPCEngine.API
         }
 
 
-        public ResultFuture<List<float>> Compare(string query, List<string> context)
+        public ResultFuture<List<float>> CompareFuture(string query, List<string> context)
         {
             var message = new QueryMessage { query = query, context = context };
             return this.Run<QueryMessage, List<float>>("compare", message);
@@ -39,7 +46,7 @@ namespace NPCEngine.API
         }
 
         //Compare in a coroutine   
-        public IEnumerator CompareCoroutine(string query, List<string> context, Action<List<float>> outputCallback)
+        public IEnumerator Compare(string query, List<string> context, Action<List<float>> outputCallback)
         {
             var message = new QueryMessage { query = query, context = context };
             var result = this.Run<QueryMessage, List<float>>("compare", message);

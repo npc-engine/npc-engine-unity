@@ -16,7 +16,15 @@ namespace NPCEngine.API
     where ContextType : new()
     {
 
-        public override string ServiceId { get { return "TextGenerationAPI"; } }
+
+        void Awake()
+        {
+            if (this.serviceId == "")
+            {
+                this.serviceId = "TextGenerationAPI";
+            }
+        }
+
         [Serializable()]
         class ChatbotMessage
         {
@@ -26,7 +34,7 @@ namespace NPCEngine.API
         }
 
 
-        public ResultFuture<string> GenerateReply(ContextType context, float temperature = 0.8f, int topk = 5)
+        public ResultFuture<string> GenerateReplyFuture(ContextType context, float temperature = 0.8f, int topk = 5)
         {
             var msg = new ChatbotMessage
             {
@@ -37,18 +45,18 @@ namespace NPCEngine.API
             return this.Run<ChatbotMessage, string>("generate_reply", msg);
         }
 
-        public ResultFuture<Dictionary<string, string>> GetSpecialTokens()
+        public ResultFuture<Dictionary<string, string>> GetSpecialTokensFuture()
         {
             return this.Run<List<string>, Dictionary<string, string>>("get_special_tokens", new List<string>());
         }
 
-        public ResultFuture<string> GetPromptTemplate()
+        public ResultFuture<string> GetPromptTemplateFuture()
         {
             return this.Run<List<string>, string>("get_prompt_template", new List<string>());
         }
 
         // GenerateReply in a coroutine
-        public IEnumerator GenerateReplyCoroutine(ContextType context, Action<string> outputCallback, float temperature = 0.8f, int topk = 5)
+        public IEnumerator GenerateReply(ContextType context, Action<string> outputCallback, float temperature = 0.8f, int topk = 5)
         {
             var msg = new ChatbotMessage
             {
@@ -65,7 +73,7 @@ namespace NPCEngine.API
         }
 
         // GetSpecialTokens in a coroutine
-        public IEnumerator GetSpecialTokensCoroutine(Action<Dictionary<string, string>> outputCallback)
+        public IEnumerator GetSpecialTokens(Action<Dictionary<string, string>> outputCallback)
         {
             var result = this.Run<List<string>, Dictionary<string, string>>("get_special_tokens", new List<string>());
             while (!result.ResultReady)
@@ -76,7 +84,7 @@ namespace NPCEngine.API
         }
 
         //GetPromptTemplate in a coroutine
-        public IEnumerator GetPromptTemplateCoroutine(Action<string> outputCallback)
+        public IEnumerator GetPromptTemplate(Action<string> outputCallback)
         {
             var result = this.Run<List<string>, string>("get_prompt_template", new List<string>());
             while (!result.ResultReady)

@@ -13,7 +13,15 @@ namespace NPCEngine.API
     ///</summary>
     public class TextToSpeech : RPCBase
     {
-        public override string ServiceId { get { return "TextToSpeechAPI"; } }
+
+        void Awake()
+        {
+            if (this.serviceId == "")
+            {
+                this.serviceId = "TextToSpeechAPI";
+            }
+        }
+
         [Serializable()]
         private class TTSMessage
         {
@@ -23,24 +31,42 @@ namespace NPCEngine.API
         }
 
 
-        public void StartTTS(string voiceId, string line, int n_chunks)
+        public void StartTTSFuture(string speaker_id, string text, int n_chunks = 1)
         {
-            var msg = new TTSMessage { speaker_id = voiceId, text = line, n_chunks = n_chunks };
-            this.Run<TTSMessage, bool?>("tts_start", msg);
+            var msg = new TTSMessage
+            {
+                speaker_id = speaker_id,
+                text = text,
+                n_chunks = n_chunks
+            };
+            this.Run<TTSMessage, string>("start_tts", msg);
         }
 
-        public ResultFuture<List<string>> GetSpeakerIds()
+        public ResultFuture<List<string>> GetSpeakerIdsFuture()
         {
             return this.Run<List<string>, List<string>>("get_speaker_ids", new List<string>());
         }
 
-        public ResultFuture<List<float>> GetNextResult()
+        public ResultFuture<List<float>> GetNextResultFuture()
         {
             return this.Run<List<string>, List<float>>("tts_get_results", new List<string>());
         }
 
-        // GetNextResult in a coroutine
-        public IEnumerator GetNextResultCoroutine(Action<List<float>> outputCallback)
+
+        public IEnumerator StartTTS(string voiceId, string line, int n_chunks, Action outputCallback)
+        {
+            var msg = new TTSMessage { speaker_id = voiceId, text = line, n_chunks = n_chunks };
+            var result = this.Run<TTSMessage, bool?>("tts_start", msg);
+
+            while (!result.ResultReady)
+            {
+                yield return null;
+            }
+            var test_result = result.Result;
+            outputCallback();
+        }
+
+        public IEnumerator GetNextResult(Action<List<float>> outputCallback)
         {
             var result = this.Run<List<string>, List<float>>("tts_get_results", new List<string>());
             while (!result.ResultReady)

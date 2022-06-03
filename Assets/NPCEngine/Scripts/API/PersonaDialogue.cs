@@ -15,7 +15,13 @@ namespace NPCEngine.API
     public class PersonaDialogue : RPCBase
     {
 
-        public override string ServiceId { get { return "PersonaDialogueAPI"; } }
+        void Awake()
+        {
+            if (this.serviceId == "")
+            {
+                this.serviceId = "PersonaDialogueAPI";
+            }
+        }
 
         [Serializable()]
         class StartDialogueMessage
