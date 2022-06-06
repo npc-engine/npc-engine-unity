@@ -10,7 +10,7 @@ namespace NPCEngine.Utility
         {
             get
             {
-                if ((object)instance == null)
+                if (instance == null)
                 {
                     instance = (T)FindObjectOfType(typeof(T));
 
@@ -29,6 +29,28 @@ namespace NPCEngine.Utility
 
                 return instance;
             }
+        }
+
+        public static T GetInstance()
+        {
+            if (instance == null)
+            {
+                instance = (T)FindObjectOfType(typeof(T));
+
+                if (instance == null)
+                {
+                    var subsysObj = GameObject.Find("Subsystems");
+                    if (subsysObj == null)
+                    {
+                        subsysObj = new GameObject("Subsystems");
+                    }
+                    GameObject singletonObject = new GameObject(typeof(T).ToString());
+                    singletonObject.transform.parent = subsysObj.transform;
+                    instance = singletonObject.AddComponent<T>();
+                }
+            }
+
+            return instance;
         }
 
     }
