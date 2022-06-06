@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using NPCEngine;
 using NPCEngine.API;
-using NPCEngine.Utility;
+using NPCEngine.Components;
 
 public class SpeechToTextCaller : MonoBehaviour
 {
@@ -20,7 +20,7 @@ public class SpeechToTextCaller : MonoBehaviour
 
     IEnumerator InitializationCoroutine()
     {
-        yield return SpeechToText.InitializeMicrophoneInput();
+        yield return NPCEngineManager.Instance.GetAPI<SpeechToText>().InitializeMicrophoneInput();
         listenButton.interactable = true;
     }
 
@@ -43,7 +43,7 @@ public class SpeechToTextCaller : MonoBehaviour
 
     public void CallSpeechToText()
     {
-        result = SpeechToText.Listen("_");
+        result = NPCEngineManager.Instance.GetAPI<SpeechToText>().ListenFuture("_");
         listenButton.interactable = false;
     }
 

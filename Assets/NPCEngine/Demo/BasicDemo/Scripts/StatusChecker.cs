@@ -1,8 +1,9 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using NPCEngine.Server;
+using NPCEngine.Components;
+using NPCEngine;
+
 public class StatusChecker : MonoBehaviour
 {
 
@@ -12,14 +13,12 @@ public class StatusChecker : MonoBehaviour
 
     public List<Button> Interactables;
 
-    public Button ConnectToServerButton;
     public Button StartServerButton;
     private void Start()
     {
         InitializedIndicator.SetActive(false);
         NotInitializedIndicator.SetActive(false);
         NotStartedIndicator.SetActive(true);
-        ConnectToServerButton.interactable = true;
         StartServerButton.interactable = true;
         foreach (var button in Interactables)
         {
@@ -29,25 +28,21 @@ public class StatusChecker : MonoBehaviour
 
     public void StartServer()
     {
-        NPCEngineServer.Instance.StartInferenceEngine();
-        NPCEngineServer.Instance.ConnectToServer();
+        NPCEngineManager.Instance.StartInferenceEngine();
 
         InitializedIndicator.SetActive(false);
         NotInitializedIndicator.SetActive(true);
         NotStartedIndicator.SetActive(false);
-        ConnectToServerButton.interactable = false;
         StartServerButton.interactable = false;
     }
 
     public void ConnectToExistingServer()
     {
-        NPCEngineServer.Instance.connectToExistingServer = true;
-        NPCEngineServer.Instance.ConnectToServer();
+        NPCEngineConfig.Instance.connectToExistingServer = true;
 
         InitializedIndicator.SetActive(false);
         NotInitializedIndicator.SetActive(true);
         NotStartedIndicator.SetActive(false);
-        ConnectToServerButton.interactable = false;
         StartServerButton.interactable = false;
     }
 
@@ -56,7 +51,7 @@ public class StatusChecker : MonoBehaviour
     {
         if (!InitializedIndicator.activeSelf)
         {
-            if (NPCEngineServer.Instance.Initialized)
+            if (NPCEngineManager.Instance.InferenceEngineRunning)
             {
                 InitializedIndicator.SetActive(true);
                 NotInitializedIndicator.SetActive(false);

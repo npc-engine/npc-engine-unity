@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using NPCEngine.Server;
+using NPCEngine.RPC;
 
 
 namespace NPCEngine.API
@@ -14,8 +14,16 @@ namespace NPCEngine.API
     /// Prefer predefining queries via <c>PredefineQuery</c> and then using
     /// <c>QueryPredefined</c> instead of directly using <c>Query</c>
     ///</summary>
-    public static class SemanticQuery
+    public class SemanticQuery : RPCBase
     {
+
+        void Awake()
+        {
+            if (this.serviceId == "")
+            {
+                this.serviceId = "SimilarityAPI";
+            }
+        }
 
         [Serializable()]
         private class QueryMessage
@@ -25,23 +33,23 @@ namespace NPCEngine.API
         }
 
 
-        public static ResultFuture<List<float>> Compare(string query, List<string> context)
+        public ResultFuture<List<float>> CompareFuture(string query, List<string> context)
         {
             var message = new QueryMessage { query = query, context = context };
-            return NPCEngineServer.Instance.Run<QueryMessage, List<float>>("compare", message);
+            return this.Run<QueryMessage, List<float>>("compare", message);
         }
 
 
-        public static void Cache(List<string> queryIds)
+        public void Cache(List<string> queryIds)
         {
-            NPCEngineServer.Instance.Run<List<string>, bool>("compare", queryIds);
+            this.Run<List<string>, bool>("compare", queryIds);
         }
 
         //Compare in a coroutine   
-        public static IEnumerator CompareCoroutine(string query, List<string> context, Action<List<float>> outputCallback)
+        public IEnumerator Compare(string query, List<string> context, Action<List<float>> outputCallback)
         {
             var message = new QueryMessage { query = query, context = context };
-            var result = NPCEngineServer.Instance.Run<QueryMessage, List<float>>("compare", message);
+            var result = this.Run<QueryMessage, List<float>>("compare", message);
 
             while (!result.ResultReady)
             {
