@@ -24,7 +24,6 @@ This is Unity integration package for NPC-Engine.
 - [Advanced Demo](https://npc-engine.github.io/npc-engine-unity/tutorials/advanced_demo.html) to understand how higher-level components work and how to integrate NPC Engine into your game.
 - [Scene Setup Tutorial](https://npc-engine.github.io/npc-engine-unity/tutorials/scene_setup.html) to learn how to setup your scene from the ground up.
 
-
 ## Dependencies
 
 - Advanced demo scene requires these free asset store packages:
@@ -46,3 +45,7 @@ These steps are usually done automatically by the welcome dialogue buttons from 
 ```
 Assets/StreamingAssets/.npc-engine/cli.exe download-default-models --models-path Assets/StreamingAssets/.models
 ```
+
+## Community
+
+We now have a [Discord server](https://discord.gg/R4zBNmnfrU) :) 
