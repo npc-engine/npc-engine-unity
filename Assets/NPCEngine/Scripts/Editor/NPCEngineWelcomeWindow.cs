@@ -75,6 +75,8 @@ public class NPCEngineWelcomeWindow : EditorWindow
     {
         EditorApplication.delayCall += () =>
         {
+            version = GetVersion();
+            versionOK = SemVersionGreaterOrEqualsThan(version, npcEngineVersion);
             if (
                 DisplayWelcomeScreen
                 &&
@@ -148,15 +150,14 @@ public class NPCEngineWelcomeWindow : EditorWindow
         GUILayout.FlexibleSpace();
         GUILayout.EndHorizontal();
 
-        GUI.enabled = !downloading && !DisplayWelcomeScreen;
-        GUI.enabled |= !versionOK;
+        GUI.enabled = !downloading && DisplayWelcomeScreen;
 
         GUILayout.FlexibleSpace();
 
         GUILayout.BeginHorizontal();
         GUILayout.FlexibleSpace();
 
-        if (DisplayWelcomeScreen && versionOK)
+        if (!DisplayWelcomeScreen && versionOK)
         {
             GUILayout.Label("(Already downloaded) To start using it you need to download the inference engine server.");
         }
@@ -206,15 +207,16 @@ public class NPCEngineWelcomeWindow : EditorWindow
         GUILayout.FlexibleSpace();
         GUILayout.EndHorizontal();
 
-        GUI.enabled = DisplayWelcomeScreen;
+        GUI.enabled = !DisplayWelcomeScreen;
 
         GUILayout.FlexibleSpace();
 
         GUILayout.BeginHorizontal();
         GUILayout.FlexibleSpace();
-        if (DisplayWelcomeScreen)
+        if (!DisplayWelcomeScreen)
         {
             GUILayout.Label("You can also download default deep learning models (they are required unless you have your own)\n");
+
         }
         else
         {
@@ -294,7 +296,7 @@ public class NPCEngineWelcomeWindow : EditorWindow
 
         File.Delete(path);
         downloading = false;
-
+        version = GetVersion();
     }
 
     public static string GetVersion()
