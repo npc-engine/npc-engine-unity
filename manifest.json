@@ -24,11 +24,35 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/NPCEngine.API.Chatbot-1.yml",
+      "source_relative_path": "api/NPCEngine.API.Classification.yml",
       "output": {
         ".html": {
-          "relative_path": "api/NPCEngine.API.Chatbot-1.html",
-          "hash": "VdYt5y01YY4kUNfIRulVlitPpNQdr4Eb7gAVRPEeM/M="
+          "relative_path": "api/NPCEngine.API.Classification.html",
+          "hash": "uqJohe8whivBcsTdio+P2A0v+wH87zymRFQfFoU5y9g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NPCEngine.API.Control.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NPCEngine.API.Control.html",
+          "hash": "e8K/qwOUtje5M+WCaMhsEYWIq5Q2S1BMlNHDrPDSk4k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NPCEngine.API.PersonaDialogue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NPCEngine.API.PersonaDialogue.html",
+          "hash": "i+eXkaDh+gvTYru7+MugXEEBUcgku8tklYGcTZVG9HE="
         }
       },
       "is_incremental": false,
@@ -40,7 +64,31 @@
       "output": {
         ".html": {
           "relative_path": "api/NPCEngine.API.SemanticQuery.html",
-          "hash": "XLX1xNv/cbxTlTJCm+4oOUf2dUb6RN4vVngsmC8fyqg="
+          "hash": "nqVpnj8YRPCm/mmeytvHxn7y3bWD6+dogu2dIP4GlEI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NPCEngine.API.ServiceMetadata.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NPCEngine.API.ServiceMetadata.html",
+          "hash": "JpCoalWHhFrlk4Yvu/vfnYqIqwp2uUIgVJeJwYYcb5g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NPCEngine.API.ServiceStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NPCEngine.API.ServiceStatus.html",
+          "hash": "K+k0ilA5/KFcCABzHOzrYH3XPYIsnXU4Id8kKzfqKh4="
         }
       },
       "is_incremental": false,
@@ -52,7 +100,19 @@
       "output": {
         ".html": {
           "relative_path": "api/NPCEngine.API.SpeechToText.html",
-          "hash": "SoPv09x8Lm3H4aLs0CVc+bNBsknnwqiHK3Hyn8qQ/FM="
+          "hash": "yO6OW7FwesxuwceDa34oaoyU6S6l004SlUtsM45ydeI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NPCEngine.API.TextGeneration-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NPCEngine.API.TextGeneration-1.html",
+          "hash": "Sm4ixrQsvN0fYaD2Z6t5yFq4eFl8qdSzyN4iFg7WzZo="
         }
       },
       "is_incremental": false,
@@ -64,7 +124,7 @@
       "output": {
         ".html": {
           "relative_path": "api/NPCEngine.API.TextToSpeech.html",
-          "hash": "jISFp3eIrn0S8BPGEAo8VOmuenS4OBbNq9i803AhQ2s="
+          "hash": "dLPaMAMWPYl/ze2uii1abLNd/zX46GqgYUxL/9VmuFk="
         }
       },
       "is_incremental": false,
@@ -76,7 +136,7 @@
       "output": {
         ".html": {
           "relative_path": "api/NPCEngine.API.html",
-          "hash": "3788IKS0RyAXjPOYTg05EptgSFIo/Jw6Me3fd7dvexY="
+          "hash": "mfZSOxTqDbtbxC6YynkT7vc4xvfMw8CRF9ihLUFrNYA="
         }
       },
       "is_incremental": false,
@@ -88,7 +148,7 @@
       "output": {
         ".html": {
           "relative_path": "api/NPCEngine.Components.AbstractDialogueSystem.html",
-          "hash": "KGHb0Xy//I4SA0jbGEZNRzucbABKFfis6TAUR+Yr8jo="
+          "hash": "lixqYP8MavtvrAI8U84U4QBAPUISrIbX4ZShGoh3HJg="
         }
       },
       "is_incremental": false,
@@ -100,7 +160,7 @@
       "output": {
         ".html": {
           "relative_path": "api/NPCEngine.Components.AbstractSpeechToText.html",
-          "hash": "s32t6L/yxzckEAgj41SMFClyHLJ5PANMz/k+Uiixjsc="
+          "hash": "72cl7lmk/C8dK8nLRkNVU47n2uurxL8ZzEH+xa2PwC4="
         }
       },
       "is_incremental": false,
@@ -112,7 +172,7 @@
       "output": {
         ".html": {
           "relative_path": "api/NPCEngine.Components.ChatLine.html",
-          "hash": "KYKgl+n47PXN8J2k+pgN+olMPVPX0rKobbP8z7whiI8="
+          "hash": "Qu1Udzlk59prV0FjpWG9I8VLSNQWbFY4AuLmcTa6fiY="
         }
       },
       "is_incremental": false,
@@ -124,7 +184,7 @@
       "output": {
         ".html": {
           "relative_path": "api/NPCEngine.Components.ColliderLocationTrigger.html",
-          "hash": "FhK/drJS28t9Xs9m3ymszUkrUm+tCiQClgiL9hUgMwc="
+          "hash": "zv2j6aP/ziF6Chdug+IYv2nf1/u4TRLTTLUS21MiM+4="
         }
       },
       "is_incremental": false,
@@ -136,7 +196,7 @@
       "output": {
         ".html": {
           "relative_path": "api/NPCEngine.Components.DialogueUI.html",
-          "hash": "WWqs4QsvN6QT8lO9xHvsBBVByRiZg7wtLJmGjiGluhs="
+          "hash": "09dljr9xfenSxtqF/B6GgzjUaAhWRWDHfqexbn7ehrI="
         }
       },
       "is_incremental": false,
@@ -148,7 +208,7 @@
       "output": {
         ".html": {
           "relative_path": "api/NPCEngine.Components.DictationRecognizerSTT.html",
-          "hash": "ywFwatqIiMBm6qLPiOIdW9HCnUAiL+n7ajtHMIzxHwc="
+          "hash": "5Z4YKOFTaQc2IuaxPKl91r+IrAVYlC5+5akQUaD8Yg4="
         }
       },
       "is_incremental": false,
@@ -160,7 +220,31 @@
       "output": {
         ".html": {
           "relative_path": "api/NPCEngine.Components.FantasyChatbotContext.html",
-          "hash": "aGI41F09KXSPdMJsg5AmzxKY/gOVZon4d9A3MZ6KINk="
+          "hash": "ES3bWjBQ1HyfQo+UxMjVXcV3YbqOzix/fhOtOnBfCU8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NPCEngine.Components.FantasyChatbotTextGeneration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NPCEngine.Components.FantasyChatbotTextGeneration.html",
+          "hash": "dJNXEV5Ze+EYh4BFmZy36jafuDz/OYpEV/smdXHl8HQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NPCEngine.Components.NPCEngineManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NPCEngine.Components.NPCEngineManager.html",
+          "hash": "o2rkl6tJVegUa18MI4SYZKDTOePwxSLj8B/d7f6Zvow="
         }
       },
       "is_incremental": false,
@@ -172,7 +256,7 @@
       "output": {
         ".html": {
           "relative_path": "api/NPCEngine.Components.NPCEngineSTT.html",
-          "hash": "0Eb+Im5sttfrxm/y3r4UCz9jqKGGqSMan+0J1KgjdoY="
+          "hash": "kcMqq9IqefP8kj2NM1rWPZ0t2naBDC07Ta5EVYv8hd4="
         }
       },
       "is_incremental": false,
@@ -184,7 +268,7 @@
       "output": {
         ".html": {
           "relative_path": "api/NPCEngine.Components.NonPlayerCharacter.html",
-          "hash": "qWFmtDp8mn3tEuCh/jgkmflevhCJ3YhvDQrj7bDkCw8="
+          "hash": "V0XHqVRxInksFLmsb5/v5eRgRrS5gIonSnSpeJytn1o="
         }
       },
       "is_incremental": false,
@@ -196,7 +280,7 @@
       "output": {
         ".html": {
           "relative_path": "api/NPCEngine.Components.PlayerCharacter.html",
-          "hash": "B4xhtLo8vcBvvhfoPRl1cLGBl0p35Gj+Upb58xLxzPc="
+          "hash": "JJMyroXKvKg9flI59Hgz7bI3qUo70O0XX20UNeVmxcI="
         }
       },
       "is_incremental": false,
@@ -208,7 +292,31 @@
       "output": {
         ".html": {
           "relative_path": "api/NPCEngine.Components.html",
-          "hash": "mxYLcF/oz/P8oTQafsbWtsDYt3+72iYJHsvw3uLkd9Q="
+          "hash": "t0wgyrzrMr+/kqUR/jXcCrZxfx0femt2C42h3YIrNU4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NPCEngine.NPCEngineConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NPCEngine.NPCEngineConfig.html",
+          "hash": "vokL9qNa7zSBz/fsHqRIbSXu07N9rny/3N582VDdQzY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NPCEngine.NPCEngineConfigEditor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NPCEngine.NPCEngineConfigEditor.html",
+          "hash": "DXhiBoeOKfT+Ix3mX6D9okJaSIdfmEejTpdPgfp931I="
         }
       },
       "is_incremental": false,
@@ -220,7 +328,139 @@
       "output": {
         ".html": {
           "relative_path": "api/NPCEngine.NPCEngineException.html",
-          "hash": "0S6j2xCNgZF9ObQE7MAgfOmSN3brTzRhUtZ0163M09k="
+          "hash": "rZCvwDtnYZsx7dZwQkCIMglAYHXg9Aw93k1SKs471H4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NPCEngine.NonPlayerCharacterEditor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NPCEngine.NonPlayerCharacterEditor.html",
+          "hash": "VR9RsgABGlvp33W0KlYZT6p9sy5WlCb6ccwL3TXNCoA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NPCEngine.RPC.APICommunicatorHTTPImpl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NPCEngine.RPC.APICommunicatorHTTPImpl.html",
+          "hash": "UYc0oV9tR9f+bFTKU1ElbmLTBpYqRYzSJU9JhM0+y1g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NPCEngine.RPC.APICommunicatorZMQImpl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NPCEngine.RPC.APICommunicatorZMQImpl.html",
+          "hash": "5IDZJmpeC1HO2GpVBB+Q53FH1ib5s4rBOs+JxIwTjTU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NPCEngine.RPC.RPCBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NPCEngine.RPC.RPCBase.html",
+          "hash": "2I0ckbY2Mwc3msxooEhcacxncVMLK/zwL1GXEYAk+2Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NPCEngine.RPC.RPCRequestMessage-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NPCEngine.RPC.RPCRequestMessage-1.html",
+          "hash": "ZwwkLlbqMmk8ws3yweayy7x9ZZcpR0bFs8ahVxaY5KU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NPCEngine.RPC.RPCResponseError.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NPCEngine.RPC.RPCResponseError.html",
+          "hash": "L+tnlmfslsIsTUiP2dIB4T8Di2q1cUrFGaDn34V4Ea4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NPCEngine.RPC.RPCResponseMessage-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NPCEngine.RPC.RPCResponseMessage-1.html",
+          "hash": "NyTXWDtYj53Bw9YH1oO/0r29clKbjw06EBPKOtyZi3M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NPCEngine.RPC.Request.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NPCEngine.RPC.Request.html",
+          "hash": "4CFfEA+q9a/cakv0ogssjkHnaCiyB8RDSMQ238SrtpE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NPCEngine.RPC.RequestDispatcherImpl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NPCEngine.RPC.RequestDispatcherImpl.html",
+          "hash": "EfBRQA4CnZO757Hcb4jvN0sk5PJNAsCB/trh9yq32Xk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NPCEngine.RPC.ServerType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NPCEngine.RPC.ServerType.html",
+          "hash": "gmHgXtbrFRRwXbKDjcmX+mA71LUTVVQ5AAanT8NPkX4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NPCEngine.RPC.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NPCEngine.RPC.html",
+          "hash": "CxLbYBsZO26W0XjqEhI/ta2RS2L0WkByA6i1YbmvGBE="
         }
       },
       "is_incremental": false,
@@ -232,7 +472,7 @@
       "output": {
         ".html": {
           "relative_path": "api/NPCEngine.ResultFuture-1.html",
-          "hash": "Up4DifY1OIC0qeHFGR+R2TzqK6zxeKkIqZsDcw/N0oY="
+          "hash": "W3dHxeEvD5FY23i5VBuuuhN1IluyphodBF6QgpQZpvY="
         }
       },
       "is_incremental": false,
@@ -240,59 +480,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/NPCEngine.Server.NPCEngineServer.yml",
+      "source_relative_path": "api/NPCEngine.ServiceConfigDescriptor.yml",
       "output": {
         ".html": {
-          "relative_path": "api/NPCEngine.Server.NPCEngineServer.html",
-          "hash": "JDbthWAGTGmYWxKSzTqk8HDmypXoRlIEA2Y+WZ92cNs="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/NPCEngine.Server.RPCRequstMessage-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/NPCEngine.Server.RPCRequstMessage-1.html",
-          "hash": "QC3q0OrbyOMDe0VW78cb1uaRf1ZhlidVruivrdobrzk="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/NPCEngine.Server.RPCResponseError.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/NPCEngine.Server.RPCResponseError.html",
-          "hash": "ooIDVT+mymzJayi2rEgCeWGS99RdSUz2LZzHD6rSN7I="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/NPCEngine.Server.RPCResponseMessage-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/NPCEngine.Server.RPCResponseMessage-1.html",
-          "hash": "fN0DJhuhQdjiXpbOuaCJ9guS94SMNS2SjGekloMlSl4="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/NPCEngine.Server.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/NPCEngine.Server.html",
-          "hash": "LwTkFO0nXqP9g7h1xK9LrDHDMz6exAIeLYVEmmag8xU="
+          "relative_path": "api/NPCEngine.ServiceConfigDescriptor.html",
+          "hash": "0qzXeddJbb4xdWAChXHjO+7bL6uxTyNoEoYg54giPLE="
         }
       },
       "is_incremental": false,
@@ -304,7 +496,19 @@
       "output": {
         ".html": {
           "relative_path": "api/NPCEngine.Utility.AudioSourceQueue.html",
-          "hash": "Jq1CugG3WcciMW3wppczWczhSeDeNbG6EpiFgWdnFzs="
+          "hash": "NkQ8CCT5T01dWySTk/xWZIOk+1DphOSDoVyD8Mnh5gw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/NPCEngine.Utility.CoroutineUtility.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/NPCEngine.Utility.CoroutineUtility.html",
+          "hash": "BvpHLc/w/uUoeXtSH8deDFGVBfBwfaYURFXvfmz0KBU="
         }
       },
       "is_incremental": false,
@@ -316,7 +520,7 @@
       "output": {
         ".html": {
           "relative_path": "api/NPCEngine.Utility.Singleton-1.html",
-          "hash": "SVHN/V3k6N7uN1ahUUHWWxc6gdl6ZtEPFaSqZMzswrw="
+          "hash": "2mbGNZNq4/u+OmfKdZXcoWWUGNZuzdibV17MJDkVIMM="
         }
       },
       "is_incremental": false,
@@ -328,7 +532,7 @@
       "output": {
         ".html": {
           "relative_path": "api/NPCEngine.Utility.html",
-          "hash": "sHhVtbZqX/e9EQtzBLaHHGUVQ1D2bscGwjTDWaX35HY="
+          "hash": "M1Cy5FPHxm95U0hsC1xUjkLazLUITdrh0aJZ4eZfxqY="
         }
       },
       "is_incremental": false,
@@ -340,7 +544,7 @@
       "output": {
         ".html": {
           "relative_path": "api/NPCEngine.html",
-          "hash": "UHmeWt9DxK/+aOL6tLxe33GDM9AroGi/dotkx99PS88="
+          "hash": "Oj5Kdk3jcznV6/cfiTRN7D7wryy19SIa9y6j+qMdEnU="
         }
       },
       "is_incremental": false,
@@ -352,7 +556,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "L8sjlqmIbI2G0TYESzXSh0xOtcGqt4RyCXqopGBWBSo="
+          "hash": "gsffbCJWVTik3rPBvt6bmvcch3f9j/r05eoNcPuMnMc="
         }
       },
       "is_incremental": false,
@@ -364,7 +568,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "e9ccDZPdgbqIqEmz6yRBGtqIAeyLJ6UWbkwh71kn+3M="
+          "hash": "h2fVhcLFNyhqYDewu5y1FlZz8SwgT07yO5zNphxlnJU="
         }
       },
       "is_incremental": false,
@@ -685,7 +889,7 @@
       "output": {
         ".html": {
           "relative_path": "tutorials/advanced_demo.html",
-          "hash": "DmQrEW8DAzm0nWFfWfrUM/VZS331AjrQKgaqJIXQQUk="
+          "hash": "TvM4R6bhRtRJ8eB83KGsg6M3V5IficEPYUTkEYSZbEU="
         }
       },
       "is_incremental": false,
@@ -697,19 +901,22 @@
       "output": {
         ".html": {
           "relative_path": "tutorials/basic_demo.html",
-          "hash": "P+pUf9DjOrOBPK3fuGQTTH/BejY5BSfS/KwUIkaHcS0="
+          "hash": "vYdWP8JcrSRGBqzchv7pP0QTH2+PmO3pA2/UczMm1Ac="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "tutorials/scene_setup.md",
       "output": {
         ".html": {
           "relative_path": "tutorials/scene_setup.html",
-          "hash": "qB913MiyW/DEsppjyviv2kpB2flnoJv5JDRFDvhxx88="
+          "hash": "SMkMo3dfJqTUesEl3ASqBE0sZmugS0ERvu0mM7HrA3I="
         }
       },
       "is_incremental": false,
@@ -748,7 +955,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 27,
+          "total_file_count": 44,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

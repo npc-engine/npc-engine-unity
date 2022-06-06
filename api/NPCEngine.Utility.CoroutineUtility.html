@@ -5,12 +5,12 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class NPCEngineServer
+    <title>Class CoroutineUtility
    | npc-engine Unity integration </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class NPCEngineServer
+    <meta name="title" content="Class CoroutineUtility
    | npc-engine Unity integration ">
-    <meta name="generator" content="docfx 2.59.0.0">
+    <meta name="generator" content="docfx 2.59.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,196 +78,45 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="NPCEngine.Server.NPCEngineServer">
+            <article class="content wrap" id="_content" data-uid="NPCEngine.Utility.CoroutineUtility">
   
   
-  <h1 id="NPCEngine_Server_NPCEngineServer" data-uid="NPCEngine.Server.NPCEngineServer" class="text-break">Class NPCEngineServer
+  <h1 id="NPCEngine_Utility_CoroutineUtility" data-uid="NPCEngine.Utility.CoroutineUtility" class="text-break">Class CoroutineUtility
   </h1>
-  <div class="markdown level0 summary"><p>Class <code>NPCEngineServer</code> manages inference engine sidecart process lifetime and communication.</p>
-</div>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
-    <div class="level1"><span class="xref">NPCEngineServer</span></div>
+    <div class="level1"><a class="xref" href="NPCEngine.Utility.Singleton-1.html">Singleton</a>&lt;<a class="xref" href="NPCEngine.Utility.CoroutineUtility.html">CoroutineUtility</a>&gt;</div>
+    <div class="level2"><span class="xref">CoroutineUtility</span></div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="NPCEngine.Server.html">NPCEngine.Server</a></h6>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="NPCEngine.Utility.Singleton-1.html#NPCEngine_Utility_Singleton_1_Instance">Singleton&lt;CoroutineUtility&gt;.Instance</a>
+    </div>
+    <div>
+      <a class="xref" href="NPCEngine.Utility.Singleton-1.html#NPCEngine_Utility_Singleton_1_GetInstance">Singleton&lt;CoroutineUtility&gt;.GetInstance()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NPCEngine.Utility.html">NPCEngine.Utility</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="NPCEngine_Server_NPCEngineServer_syntax">Syntax</h5>
+  <h5 id="NPCEngine_Utility_CoroutineUtility_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class NPCEngineServer : Singleton&lt;NPCEngineServer&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class CoroutineUtility : Singleton&lt;CoroutineUtility&gt;</code></pre>
   </div>
-  <h3 id="fields">Fields
-  </h3>
-  
-  
-  <h4 id="NPCEngine_Server_NPCEngineServer_connectToExistingServer" data-uid="NPCEngine.Server.NPCEngineServer.connectToExistingServer">connectToExistingServer</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool connectToExistingServer</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="NPCEngine_Server_NPCEngineServer_debug" data-uid="NPCEngine.Server.NPCEngineServer.debug">debug</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool debug</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="NPCEngine_Server_NPCEngineServer_initializeOnStart" data-uid="NPCEngine.Server.NPCEngineServer.initializeOnStart">initializeOnStart</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool initializeOnStart</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="NPCEngine_Server_NPCEngineServer_modelsPath" data-uid="NPCEngine.Server.NPCEngineServer.modelsPath">modelsPath</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string modelsPath</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="NPCEngine_Server_NPCEngineServer_npcEnginePath" data-uid="NPCEngine.Server.NPCEngineServer.npcEnginePath">npcEnginePath</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string npcEnginePath</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="properties">Properties
-  </h3>
-  
-  
-  <a id="NPCEngine_Server_NPCEngineServer_Initialized_" data-uid="NPCEngine.Server.NPCEngineServer.Initialized*"></a>
-  <h4 id="NPCEngine_Server_NPCEngineServer_Initialized" data-uid="NPCEngine.Server.NPCEngineServer.Initialized">Initialized</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Initialized { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="methods">Methods
   </h3>
   
   
-  <a id="NPCEngine_Server_NPCEngineServer_ConnectToServer_" data-uid="NPCEngine.Server.NPCEngineServer.ConnectToServer*"></a>
-  <h4 id="NPCEngine_Server_NPCEngineServer_ConnectToServer" data-uid="NPCEngine.Server.NPCEngineServer.ConnectToServer">ConnectToServer()</h4>
+  <a id="NPCEngine_Utility_CoroutineUtility_GetGameObjectPath_" data-uid="NPCEngine.Utility.CoroutineUtility.GetGameObjectPath*"></a>
+  <h4 id="NPCEngine_Utility_CoroutineUtility_GetGameObjectPath_MonoBehaviour_" data-uid="NPCEngine.Utility.CoroutineUtility.GetGameObjectPath(MonoBehaviour)">GetGameObjectPath(MonoBehaviour)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void ConnectToServer()</code></pre>
-  </div>
-  
-  
-  <a id="NPCEngine_Server_NPCEngineServer_Run_" data-uid="NPCEngine.Server.NPCEngineServer.Run*"></a>
-  <h4 id="NPCEngine_Server_NPCEngineServer_Run__2_String___0_" data-uid="NPCEngine.Server.NPCEngineServer.Run``2(String,``0)">Run&lt;P, R&gt;(String, P)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ResultFuture&lt;R&gt; Run&lt;P, R&gt;(String methodName, P parameters)
-    where P : new()</code></pre>
+    <pre><code class="lang-csharp hljs">public static string GetGameObjectPath(MonoBehaviour behaviour)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -280,13 +129,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">String</span></td>
-        <td><span class="parametername">methodName</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">P</span></td>
-        <td><span class="parametername">parameters</span></td>
+        <td><span class="xref">MonoBehaviour</span></td>
+        <td><span class="parametername">behaviour</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -301,40 +145,233 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="NPCEngine.ResultFuture-1.html">ResultFuture</a>&lt;R&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 class="typeParameters">Type Parameters</h5>
+  
+  
+  <a id="NPCEngine_Utility_CoroutineUtility_IsRunning_" data-uid="NPCEngine.Utility.CoroutineUtility.IsRunning*"></a>
+  <h4 id="NPCEngine_Utility_CoroutineUtility_IsRunning_MonoBehaviour_System_String_" data-uid="NPCEngine.Utility.CoroutineUtility.IsRunning(MonoBehaviour,System.String)">IsRunning(MonoBehaviour, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsRunning(MonoBehaviour owner, string name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
+        <th>Type</th>
         <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="parametername">P</span></td>
+        <td><span class="xref">MonoBehaviour</span></td>
+        <td><span class="parametername">owner</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="parametername">R</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="NPCEngine_Server_NPCEngineServer_StartInferenceEngine_" data-uid="NPCEngine.Server.NPCEngineServer.StartInferenceEngine*"></a>
-  <h4 id="NPCEngine_Server_NPCEngineServer_StartInferenceEngine" data-uid="NPCEngine.Server.NPCEngineServer.StartInferenceEngine">StartInferenceEngine()</h4>
+  <a id="NPCEngine_Utility_CoroutineUtility_StartCoroutine_" data-uid="NPCEngine.Utility.CoroutineUtility.StartCoroutine*"></a>
+  <h4 id="NPCEngine_Utility_CoroutineUtility_StartCoroutine_System_Collections_IEnumerator_MonoBehaviour_System_String_" data-uid="NPCEngine.Utility.CoroutineUtility.StartCoroutine(System.Collections.IEnumerator,MonoBehaviour,System.String)">StartCoroutine(IEnumerator, MonoBehaviour, String)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void StartInferenceEngine()</code></pre>
+    <pre><code class="lang-csharp hljs">public static void StartCoroutine(IEnumerator routine, MonoBehaviour owner, string id)</code></pre>
   </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.ienumerator">IEnumerator</a></td>
+        <td><span class="parametername">routine</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">MonoBehaviour</span></td>
+        <td><span class="parametername">owner</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">id</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NPCEngine_Utility_CoroutineUtility_StopAllEditorCoroutines_" data-uid="NPCEngine.Utility.CoroutineUtility.StopAllEditorCoroutines*"></a>
+  <h4 id="NPCEngine_Utility_CoroutineUtility_StopAllEditorCoroutines" data-uid="NPCEngine.Utility.CoroutineUtility.StopAllEditorCoroutines">StopAllEditorCoroutines()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void StopAllEditorCoroutines()</code></pre>
+  </div>
+  
+  
+  <a id="NPCEngine_Utility_CoroutineUtility_StopAllEditorCoroutines_" data-uid="NPCEngine.Utility.CoroutineUtility.StopAllEditorCoroutines*"></a>
+  <h4 id="NPCEngine_Utility_CoroutineUtility_StopAllEditorCoroutines_MonoBehaviour_" data-uid="NPCEngine.Utility.CoroutineUtility.StopAllEditorCoroutines(MonoBehaviour)">StopAllEditorCoroutines(MonoBehaviour)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void StopAllEditorCoroutines(MonoBehaviour owner)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">MonoBehaviour</span></td>
+        <td><span class="parametername">owner</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NPCEngine_Utility_CoroutineUtility_StopAllPlayingCoroutines_" data-uid="NPCEngine.Utility.CoroutineUtility.StopAllPlayingCoroutines*"></a>
+  <h4 id="NPCEngine_Utility_CoroutineUtility_StopAllPlayingCoroutines_MonoBehaviour_" data-uid="NPCEngine.Utility.CoroutineUtility.StopAllPlayingCoroutines(MonoBehaviour)">StopAllPlayingCoroutines(MonoBehaviour)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void StopAllPlayingCoroutines(MonoBehaviour owner)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">MonoBehaviour</span></td>
+        <td><span class="parametername">owner</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NPCEngine_Utility_CoroutineUtility_StopCoroutine_" data-uid="NPCEngine.Utility.CoroutineUtility.StopCoroutine*"></a>
+  <h4 id="NPCEngine_Utility_CoroutineUtility_StopCoroutine_System_String_MonoBehaviour_" data-uid="NPCEngine.Utility.CoroutineUtility.StopCoroutine(System.String,MonoBehaviour)">StopCoroutine(String, MonoBehaviour)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void StopCoroutine(string id, MonoBehaviour owner)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">id</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">MonoBehaviour</span></td>
+        <td><span class="parametername">owner</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NPCEngine_Utility_CoroutineUtility_WaitForSeconds_" data-uid="NPCEngine.Utility.CoroutineUtility.WaitForSeconds*"></a>
+  <h4 id="NPCEngine_Utility_CoroutineUtility_WaitForSeconds_System_Single_" data-uid="NPCEngine.Utility.CoroutineUtility.WaitForSeconds(System.Single)">WaitForSeconds(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IEnumerator WaitForSeconds(float seconds)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">seconds</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.ienumerator">IEnumerator</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           

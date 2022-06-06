@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class SpeechToText
+    <title>Class Control
    | npc-engine Unity integration </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class SpeechToText
+    <meta name="title" content="Class Control
    | npc-engine Unity integration ">
     <meta name="generator" content="docfx 2.59.2.0">
     
@@ -78,129 +78,37 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="NPCEngine.API.SpeechToText">
+            <article class="content wrap" id="_content" data-uid="NPCEngine.API.Control">
   
   
-  <h1 id="NPCEngine_API_SpeechToText" data-uid="NPCEngine.API.SpeechToText" class="text-break">Class SpeechToText
+  <h1 id="NPCEngine_API_Control" data-uid="NPCEngine.API.Control" class="text-break">Class Control
   </h1>
-  <div class="markdown level0 summary"><p>Static class <code>SpeechToText</code> provides remote procedure calls 
-to inference engine&apos;s speech to text module.</p>
+  <div class="markdown level0 summary"><p><code>Control</code> provides RPC interface to control service.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
-    <div class="level1"><span class="xref">SpeechToText</span></div>
+    <div class="level1"><span class="xref">Control</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="NPCEngine.API.html">NPCEngine.API</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="NPCEngine_API_SpeechToText_syntax">Syntax</h5>
+  <h5 id="NPCEngine_API_Control_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class SpeechToText : RPCBase</code></pre>
+    <pre><code class="lang-csharp hljs">public class Control : RPCBase</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
   
   
-  <a id="NPCEngine_API_SpeechToText_GetDevices_" data-uid="NPCEngine.API.SpeechToText.GetDevices*"></a>
-  <h4 id="NPCEngine_API_SpeechToText_GetDevices_Action_System_Collections_Generic_List_System_String___" data-uid="NPCEngine.API.SpeechToText.GetDevices(Action{System.Collections.Generic.List{System.String}})">GetDevices(Action&lt;List&lt;String&gt;&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="NPCEngine_API_Control_GetServiceMetadata_" data-uid="NPCEngine.API.Control.GetServiceMetadata*"></a>
+  <h4 id="NPCEngine_API_Control_GetServiceMetadata_System_String_Action_NPCEngine_API_ServiceMetadata__" data-uid="NPCEngine.API.Control.GetServiceMetadata(System.String,Action{NPCEngine.API.ServiceMetadata})">GetServiceMetadata(String, Action&lt;ServiceMetadata&gt;)</h4>
+  <div class="markdown level1 summary"><p>Get metadata for one service.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEnumerator GetDevices(Action&lt;List&lt;string&gt;&gt; outputCallback)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Action</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;&gt;</td>
-        <td><span class="parametername">outputCallback</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.ienumerator">IEnumerator</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="NPCEngine_API_SpeechToText_GetDevicesFuture_" data-uid="NPCEngine.API.SpeechToText.GetDevicesFuture*"></a>
-  <h4 id="NPCEngine_API_SpeechToText_GetDevicesFuture" data-uid="NPCEngine.API.SpeechToText.GetDevicesFuture">GetDevicesFuture()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ResultFuture&lt;List&lt;string&gt;&gt; GetDevicesFuture()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="NPCEngine.ResultFuture-1.html">ResultFuture</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="NPCEngine_API_SpeechToText_InitializeMicrophoneInput_" data-uid="NPCEngine.API.SpeechToText.InitializeMicrophoneInput*"></a>
-  <h4 id="NPCEngine_API_SpeechToText_InitializeMicrophoneInput" data-uid="NPCEngine.API.SpeechToText.InitializeMicrophoneInput">InitializeMicrophoneInput()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEnumerator InitializeMicrophoneInput()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.ienumerator">IEnumerator</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="NPCEngine_API_SpeechToText_Listen_" data-uid="NPCEngine.API.SpeechToText.Listen*"></a>
-  <h4 id="NPCEngine_API_SpeechToText_Listen_System_String_Action_System_String__" data-uid="NPCEngine.API.SpeechToText.Listen(System.String,Action{System.String})">Listen(String, Action&lt;String&gt;)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEnumerator Listen(string context, Action&lt;string&gt; outputCallback)</code></pre>
+    <pre><code class="lang-csharp hljs">public IEnumerator GetServiceMetadata(string service_id, Action&lt;ServiceMetadata&gt; outputCallback)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -214,13 +122,15 @@ to inference engine&apos;s speech to text module.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">context</span></td>
-        <td></td>
+        <td><span class="parametername">service_id</span></td>
+        <td><p>Resolvable service name (i.e. id, type or API name)</p>
+</td>
       </tr>
       <tr>
-        <td><span class="xref">Action</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="NPCEngine.API.ServiceMetadata.html">ServiceMetadata</a>&gt;</td>
         <td><span class="parametername">outputCallback</span></td>
-        <td></td>
+        <td><p>Callback action to consume results.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -235,19 +145,20 @@ to inference engine&apos;s speech to text module.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.ienumerator">IEnumerator</a></td>
-        <td></td>
+        <td><p><code>ServiceMetadata</code> for resolved service.</p>
+</td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="NPCEngine_API_SpeechToText_ListenFuture_" data-uid="NPCEngine.API.SpeechToText.ListenFuture*"></a>
-  <h4 id="NPCEngine_API_SpeechToText_ListenFuture_System_String_" data-uid="NPCEngine.API.SpeechToText.ListenFuture(System.String)">ListenFuture(String)</h4>
+  <a id="NPCEngine_API_Control_GetServiceMetadataFuture_" data-uid="NPCEngine.API.Control.GetServiceMetadataFuture*"></a>
+  <h4 id="NPCEngine_API_Control_GetServiceMetadataFuture_System_String_" data-uid="NPCEngine.API.Control.GetServiceMetadataFuture(System.String)">GetServiceMetadataFuture(String)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ResultFuture&lt;string&gt; ListenFuture(string context)</code></pre>
+    <pre><code class="lang-csharp hljs">public ResultFuture&lt;ServiceMetadata&gt; GetServiceMetadataFuture(string service_id)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -261,7 +172,7 @@ to inference engine&apos;s speech to text module.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">context</span></td>
+        <td><span class="parametername">service_id</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -276,20 +187,21 @@ to inference engine&apos;s speech to text module.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="NPCEngine.ResultFuture-1.html">ResultFuture</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><a class="xref" href="NPCEngine.ResultFuture-1.html">ResultFuture</a>&lt;<a class="xref" href="NPCEngine.API.ServiceMetadata.html">ServiceMetadata</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="NPCEngine_API_SpeechToText_SetDevice_" data-uid="NPCEngine.API.SpeechToText.SetDevice*"></a>
-  <h4 id="NPCEngine_API_SpeechToText_SetDevice_System_Int32_Action_System_Collections_Generic_List_System_String___" data-uid="NPCEngine.API.SpeechToText.SetDevice(System.Int32,Action{System.Collections.Generic.List{System.String}})">SetDevice(Int32, Action&lt;List&lt;String&gt;&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="NPCEngine_API_Control_GetServicesMetadata_" data-uid="NPCEngine.API.Control.GetServicesMetadata*"></a>
+  <h4 id="NPCEngine_API_Control_GetServicesMetadata_Action_System_Collections_Generic_List_NPCEngine_API_ServiceMetadata___" data-uid="NPCEngine.API.Control.GetServicesMetadata(Action{System.Collections.Generic.List{NPCEngine.API.ServiceMetadata}})">GetServicesMetadata(Action&lt;List&lt;ServiceMetadata&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Get metadata for all the services.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEnumerator SetDevice(int deviceId, Action&lt;List&lt;string&gt;&gt; outputCallback)</code></pre>
+    <pre><code class="lang-csharp hljs">public IEnumerator GetServicesMetadata(Action&lt;List&lt;ServiceMetadata&gt;&gt; outputCallback)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -302,12 +214,82 @@ to inference engine&apos;s speech to text module.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><span class="parametername">deviceId</span></td>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="NPCEngine.API.ServiceMetadata.html">ServiceMetadata</a>&gt;&gt;</td>
+        <td><span class="parametername">outputCallback</span></td>
+        <td><p>Callback action to consume results.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.ienumerator">IEnumerator</a></td>
+        <td><p>A list of <code>ServiceMetadata</code> for each service.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NPCEngine_API_Control_GetServicesMetadataFuture_" data-uid="NPCEngine.API.Control.GetServicesMetadataFuture*"></a>
+  <h4 id="NPCEngine_API_Control_GetServicesMetadataFuture" data-uid="NPCEngine.API.Control.GetServicesMetadataFuture">GetServicesMetadataFuture()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ResultFuture&lt;List&lt;ServiceMetadata&gt;&gt; GetServicesMetadataFuture()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NPCEngine.ResultFuture-1.html">ResultFuture</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="NPCEngine.API.ServiceMetadata.html">ServiceMetadata</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NPCEngine_API_Control_GetServiceStatus_" data-uid="NPCEngine.API.Control.GetServiceStatus*"></a>
+  <h4 id="NPCEngine_API_Control_GetServiceStatus_System_String_Action_NPCEngine_API_ServiceStatus__" data-uid="NPCEngine.API.Control.GetServiceStatus(System.String,Action{NPCEngine.API.ServiceStatus})">GetServiceStatus(String, Action&lt;ServiceStatus&gt;)</h4>
+  <div class="markdown level1 summary"><p>Get service status.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerator GetServiceStatus(string service_id, Action&lt;ServiceStatus&gt; outputCallback)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">service_id</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Action</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;&gt;</td>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="NPCEngine.API.ServiceStatus.html">ServiceStatus</a>&gt;</td>
         <td><span class="parametername">outputCallback</span></td>
         <td></td>
       </tr>
@@ -330,13 +312,13 @@ to inference engine&apos;s speech to text module.</p>
   </table>
   
   
-  <a id="NPCEngine_API_SpeechToText_SetDeviceFuture_" data-uid="NPCEngine.API.SpeechToText.SetDeviceFuture*"></a>
-  <h4 id="NPCEngine_API_SpeechToText_SetDeviceFuture_System_Int32_" data-uid="NPCEngine.API.SpeechToText.SetDeviceFuture(System.Int32)">SetDeviceFuture(Int32)</h4>
+  <a id="NPCEngine_API_Control_GetServiceStatusFuture_" data-uid="NPCEngine.API.Control.GetServiceStatusFuture*"></a>
+  <h4 id="NPCEngine_API_Control_GetServiceStatusFuture_System_String_" data-uid="NPCEngine.API.Control.GetServiceStatusFuture(System.String)">GetServiceStatusFuture(String)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ResultFuture&lt;List&lt;string&gt;&gt; SetDeviceFuture(int deviceId)</code></pre>
+    <pre><code class="lang-csharp hljs">public ResultFuture&lt;ServiceStatus&gt; GetServiceStatusFuture(string service_id)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -349,8 +331,8 @@ to inference engine&apos;s speech to text module.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><span class="parametername">deviceId</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">service_id</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -365,20 +347,21 @@ to inference engine&apos;s speech to text module.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="NPCEngine.ResultFuture-1.html">ResultFuture</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;&gt;</td>
+        <td><a class="xref" href="NPCEngine.ResultFuture-1.html">ResultFuture</a>&lt;<a class="xref" href="NPCEngine.API.ServiceStatus.html">ServiceStatus</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="NPCEngine_API_SpeechToText_Transcribe_" data-uid="NPCEngine.API.SpeechToText.Transcribe*"></a>
-  <h4 id="NPCEngine_API_SpeechToText_Transcribe_System_Collections_Generic_List_System_Single__Action_System_String__" data-uid="NPCEngine.API.SpeechToText.Transcribe(System.Collections.Generic.List{System.Single},Action{System.String})">Transcribe(List&lt;Single&gt;, Action&lt;String&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="NPCEngine_API_Control_RestartService_" data-uid="NPCEngine.API.Control.RestartService*"></a>
+  <h4 id="NPCEngine_API_Control_RestartService_System_String_" data-uid="NPCEngine.API.Control.RestartService(System.String)">RestartService(String)</h4>
+  <div class="markdown level1 summary"><p>Restart service.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEnumerator Transcribe(List&lt;float&gt; audio, Action&lt;string&gt; outputCallback)</code></pre>
+    <pre><code class="lang-csharp hljs">public IEnumerator RestartService(string service_id)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -391,13 +374,51 @@ to inference engine&apos;s speech to text module.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a>&gt;</td>
-        <td><span class="parametername">audio</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">service_id</span></td>
+        <td><p>Resolvable service name (i.e. id, type or API name)</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.ienumerator">IEnumerator</a></td>
         <td></td>
       </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NPCEngine_API_Control_StartService_" data-uid="NPCEngine.API.Control.StartService*"></a>
+  <h4 id="NPCEngine_API_Control_StartService_System_String_" data-uid="NPCEngine.API.Control.StartService(System.String)">StartService(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerator StartService(string service_id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
       <tr>
-        <td><span class="xref">Action</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
-        <td><span class="parametername">outputCallback</span></td>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">service_id</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -419,13 +440,13 @@ to inference engine&apos;s speech to text module.</p>
   </table>
   
   
-  <a id="NPCEngine_API_SpeechToText_TranscribeFuture_" data-uid="NPCEngine.API.SpeechToText.TranscribeFuture*"></a>
-  <h4 id="NPCEngine_API_SpeechToText_TranscribeFuture_System_Collections_Generic_List_System_Single__" data-uid="NPCEngine.API.SpeechToText.TranscribeFuture(System.Collections.Generic.List{System.Single})">TranscribeFuture(List&lt;Single&gt;)</h4>
+  <a id="NPCEngine_API_Control_StartServiceNoConfirm_" data-uid="NPCEngine.API.Control.StartServiceNoConfirm*"></a>
+  <h4 id="NPCEngine_API_Control_StartServiceNoConfirm_System_String_" data-uid="NPCEngine.API.Control.StartServiceNoConfirm(System.String)">StartServiceNoConfirm(String)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ResultFuture&lt;string&gt; TranscribeFuture(List&lt;float&gt; audio)</code></pre>
+    <pre><code class="lang-csharp hljs">public void StartServiceNoConfirm(string service_id)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -438,8 +459,35 @@ to inference engine&apos;s speech to text module.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a>&gt;</td>
-        <td><span class="parametername">audio</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">service_id</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NPCEngine_API_Control_StopService_" data-uid="NPCEngine.API.Control.StopService*"></a>
+  <h4 id="NPCEngine_API_Control_StopService_System_String_" data-uid="NPCEngine.API.Control.StopService(System.String)">StopService(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerator StopService(string service_id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">service_id</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -454,7 +502,34 @@ to inference engine&apos;s speech to text module.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="NPCEngine.ResultFuture-1.html">ResultFuture</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.ienumerator">IEnumerator</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="NPCEngine_API_Control_StopServiceNoConfirm_" data-uid="NPCEngine.API.Control.StopServiceNoConfirm*"></a>
+  <h4 id="NPCEngine_API_Control_StopServiceNoConfirm_System_String_" data-uid="NPCEngine.API.Control.StopServiceNoConfirm(System.String)">StopServiceNoConfirm(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StopServiceNoConfirm(string service_id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">service_id</span></td>
         <td></td>
       </tr>
     </tbody>

@@ -5,12 +5,12 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class RPCResponseError
+    <title>Class RPCBase
    | npc-engine Unity integration </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class RPCResponseError
+    <meta name="title" content="Class RPCBase
    | npc-engine Unity integration ">
-    <meta name="generator" content="docfx 2.59.0.0">
+    <meta name="generator" content="docfx 2.59.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -78,34 +78,34 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="NPCEngine.Server.RPCResponseError">
+            <article class="content wrap" id="_content" data-uid="NPCEngine.RPC.RPCBase">
   
   
-  <h1 id="NPCEngine_Server_RPCResponseError" data-uid="NPCEngine.Server.RPCResponseError" class="text-break">Class RPCResponseError
+  <h1 id="NPCEngine_RPC_RPCBase" data-uid="NPCEngine.RPC.RPCBase" class="text-break">Class RPCBase
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
-    <div class="level1"><span class="xref">RPCResponseError</span></div>
+    <div class="level1"><span class="xref">RPCBase</span></div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="NPCEngine.Server.html">NPCEngine.Server</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="NPCEngine.RPC.html">NPCEngine.RPC</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="NPCEngine_Server_RPCResponseError_syntax">Syntax</h5>
+  <h5 id="NPCEngine_RPC_RPCBase_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class RPCResponseError</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class RPCBase : MonoBehaviour</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
   
   
-  <h4 id="NPCEngine_Server_RPCResponseError_code" data-uid="NPCEngine.Server.RPCResponseError.code">code</h4>
+  <h4 id="NPCEngine_RPC_RPCBase_serviceId" data-uid="NPCEngine.RPC.RPCBase.serviceId">serviceId</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int code</code></pre>
+    <pre><code class="lang-csharp hljs">public string serviceId</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -117,31 +117,76 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <h3 id="methods">Methods
+  </h3>
   
   
-  <h4 id="NPCEngine_Server_RPCResponseError_message" data-uid="NPCEngine.Server.RPCResponseError.message">message</h4>
+  <a id="NPCEngine_RPC_RPCBase_Run_" data-uid="NPCEngine.RPC.RPCBase.Run*"></a>
+  <h4 id="NPCEngine_RPC_RPCBase_Run__2_String___0_" data-uid="NPCEngine.RPC.RPCBase.Run``2(String,``0)">Run&lt;P, R&gt;(String, P)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public String message</code></pre>
+    <pre><code class="lang-csharp hljs">public ResultFuture&lt;R&gt; Run&lt;P, R&gt;(String methodName, P parameters)
+    where P : new()</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
+  <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
+        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">String</span></td>
+        <td><span class="parametername">methodName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">P</span></td>
+        <td><span class="parametername">parameters</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NPCEngine.ResultFuture-1.html">ResultFuture</a>&lt;R&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">P</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">R</span></td>
         <td></td>
       </tr>
     </tbody>

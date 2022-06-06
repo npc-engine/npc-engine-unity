@@ -13,120 +13,224 @@ references:
   commentId: N:NPCEngine.API
   fullName: NPCEngine.API
   nameWithType: NPCEngine.API
-- uid: NPCEngine.API.Chatbot`1
-  name: Chatbot<ContextType>
-  href: api/NPCEngine.API.Chatbot-1.html
-  commentId: T:NPCEngine.API.Chatbot`1
-  name.vb: Chatbot(Of ContextType)
-  fullName: NPCEngine.API.Chatbot<ContextType>
-  fullName.vb: NPCEngine.API.Chatbot(Of ContextType)
-  nameWithType: Chatbot<ContextType>
-  nameWithType.vb: Chatbot(Of ContextType)
-- uid: NPCEngine.API.Chatbot`1.GenerateReply(`0,System.Single,System.Int32)
-  name: GenerateReply(ContextType, Single, Int32)
-  href: api/NPCEngine.API.Chatbot-1.html#NPCEngine_API_Chatbot_1_GenerateReply__0_System_Single_System_Int32_
-  commentId: M:NPCEngine.API.Chatbot`1.GenerateReply(`0,System.Single,System.Int32)
-  fullName: NPCEngine.API.Chatbot<ContextType>.GenerateReply(ContextType, System.Single, System.Int32)
-  fullName.vb: NPCEngine.API.Chatbot(Of ContextType).GenerateReply(ContextType, System.Single, System.Int32)
-  nameWithType: Chatbot<ContextType>.GenerateReply(ContextType, Single, Int32)
-  nameWithType.vb: Chatbot(Of ContextType).GenerateReply(ContextType, Single, Int32)
-- uid: NPCEngine.API.Chatbot`1.GenerateReply*
-  name: GenerateReply
-  href: api/NPCEngine.API.Chatbot-1.html#NPCEngine_API_Chatbot_1_GenerateReply_
-  commentId: Overload:NPCEngine.API.Chatbot`1.GenerateReply
+- uid: NPCEngine.API.Classification
+  name: Classification
+  href: api/NPCEngine.API.Classification.html
+  commentId: T:NPCEngine.API.Classification
+  fullName: NPCEngine.API.Classification
+  nameWithType: Classification
+- uid: NPCEngine.API.Classification.Classify(System.String,System.Collections.Generic.List{System.String},Action{System.Collections.Generic.List{System.Collections.Generic.List{System.Single}}})
+  name: Classify(String, List<String>, Action<List<List<Single>>>)
+  href: api/NPCEngine.API.Classification.html#NPCEngine_API_Classification_Classify_System_String_System_Collections_Generic_List_System_String__Action_System_Collections_Generic_List_System_Collections_Generic_List_System_Single____
+  commentId: M:NPCEngine.API.Classification.Classify(System.String,System.Collections.Generic.List{System.String},Action{System.Collections.Generic.List{System.Collections.Generic.List{System.Single}}})
+  name.vb: Classify(String, List(Of String), Action(Of List(Of List(Of Single))))
+  fullName: NPCEngine.API.Classification.Classify(System.String, System.Collections.Generic.List<System.String>, Action<System.Collections.Generic.List<System.Collections.Generic.List<System.Single>>>)
+  fullName.vb: NPCEngine.API.Classification.Classify(System.String, System.Collections.Generic.List(Of System.String), Action(Of System.Collections.Generic.List(Of System.Collections.Generic.List(Of System.Single))))
+  nameWithType: Classification.Classify(String, List<String>, Action<List<List<Single>>>)
+  nameWithType.vb: Classification.Classify(String, List(Of String), Action(Of List(Of List(Of Single))))
+- uid: NPCEngine.API.Classification.Classify*
+  name: Classify
+  href: api/NPCEngine.API.Classification.html#NPCEngine_API_Classification_Classify_
+  commentId: Overload:NPCEngine.API.Classification.Classify
   isSpec: "True"
-  fullName: NPCEngine.API.Chatbot<ContextType>.GenerateReply
-  fullName.vb: NPCEngine.API.Chatbot(Of ContextType).GenerateReply
-  nameWithType: Chatbot<ContextType>.GenerateReply
-  nameWithType.vb: Chatbot(Of ContextType).GenerateReply
-- uid: NPCEngine.API.Chatbot`1.GenerateReplyCoroutine(`0,Action{System.String},System.Single,System.Int32)
-  name: GenerateReplyCoroutine(ContextType, Action<String>, Single, Int32)
-  href: api/NPCEngine.API.Chatbot-1.html#NPCEngine_API_Chatbot_1_GenerateReplyCoroutine__0_Action_System_String__System_Single_System_Int32_
-  commentId: M:NPCEngine.API.Chatbot`1.GenerateReplyCoroutine(`0,Action{System.String},System.Single,System.Int32)
-  name.vb: GenerateReplyCoroutine(ContextType, Action(Of String), Single, Int32)
-  fullName: NPCEngine.API.Chatbot<ContextType>.GenerateReplyCoroutine(ContextType, Action<System.String>, System.Single, System.Int32)
-  fullName.vb: NPCEngine.API.Chatbot(Of ContextType).GenerateReplyCoroutine(ContextType, Action(Of System.String), System.Single, System.Int32)
-  nameWithType: Chatbot<ContextType>.GenerateReplyCoroutine(ContextType, Action<String>, Single, Int32)
-  nameWithType.vb: Chatbot(Of ContextType).GenerateReplyCoroutine(ContextType, Action(Of String), Single, Int32)
-- uid: NPCEngine.API.Chatbot`1.GenerateReplyCoroutine*
-  name: GenerateReplyCoroutine
-  href: api/NPCEngine.API.Chatbot-1.html#NPCEngine_API_Chatbot_1_GenerateReplyCoroutine_
-  commentId: Overload:NPCEngine.API.Chatbot`1.GenerateReplyCoroutine
+  fullName: NPCEngine.API.Classification.Classify
+  nameWithType: Classification.Classify
+- uid: NPCEngine.API.Control
+  name: Control
+  href: api/NPCEngine.API.Control.html
+  commentId: T:NPCEngine.API.Control
+  fullName: NPCEngine.API.Control
+  nameWithType: Control
+- uid: NPCEngine.API.Control.GetServiceMetadata(System.String,Action{NPCEngine.API.ServiceMetadata})
+  name: GetServiceMetadata(String, Action<ServiceMetadata>)
+  href: api/NPCEngine.API.Control.html#NPCEngine_API_Control_GetServiceMetadata_System_String_Action_NPCEngine_API_ServiceMetadata__
+  commentId: M:NPCEngine.API.Control.GetServiceMetadata(System.String,Action{NPCEngine.API.ServiceMetadata})
+  name.vb: GetServiceMetadata(String, Action(Of ServiceMetadata))
+  fullName: NPCEngine.API.Control.GetServiceMetadata(System.String, Action<NPCEngine.API.ServiceMetadata>)
+  fullName.vb: NPCEngine.API.Control.GetServiceMetadata(System.String, Action(Of NPCEngine.API.ServiceMetadata))
+  nameWithType: Control.GetServiceMetadata(String, Action<ServiceMetadata>)
+  nameWithType.vb: Control.GetServiceMetadata(String, Action(Of ServiceMetadata))
+- uid: NPCEngine.API.Control.GetServiceMetadata*
+  name: GetServiceMetadata
+  href: api/NPCEngine.API.Control.html#NPCEngine_API_Control_GetServiceMetadata_
+  commentId: Overload:NPCEngine.API.Control.GetServiceMetadata
   isSpec: "True"
-  fullName: NPCEngine.API.Chatbot<ContextType>.GenerateReplyCoroutine
-  fullName.vb: NPCEngine.API.Chatbot(Of ContextType).GenerateReplyCoroutine
-  nameWithType: Chatbot<ContextType>.GenerateReplyCoroutine
-  nameWithType.vb: Chatbot(Of ContextType).GenerateReplyCoroutine
-- uid: NPCEngine.API.Chatbot`1.GetPromptTemplate
-  name: GetPromptTemplate()
-  href: api/NPCEngine.API.Chatbot-1.html#NPCEngine_API_Chatbot_1_GetPromptTemplate
-  commentId: M:NPCEngine.API.Chatbot`1.GetPromptTemplate
-  fullName: NPCEngine.API.Chatbot<ContextType>.GetPromptTemplate()
-  fullName.vb: NPCEngine.API.Chatbot(Of ContextType).GetPromptTemplate()
-  nameWithType: Chatbot<ContextType>.GetPromptTemplate()
-  nameWithType.vb: Chatbot(Of ContextType).GetPromptTemplate()
-- uid: NPCEngine.API.Chatbot`1.GetPromptTemplate*
-  name: GetPromptTemplate
-  href: api/NPCEngine.API.Chatbot-1.html#NPCEngine_API_Chatbot_1_GetPromptTemplate_
-  commentId: Overload:NPCEngine.API.Chatbot`1.GetPromptTemplate
+  fullName: NPCEngine.API.Control.GetServiceMetadata
+  nameWithType: Control.GetServiceMetadata
+- uid: NPCEngine.API.Control.GetServiceMetadataFuture(System.String)
+  name: GetServiceMetadataFuture(String)
+  href: api/NPCEngine.API.Control.html#NPCEngine_API_Control_GetServiceMetadataFuture_System_String_
+  commentId: M:NPCEngine.API.Control.GetServiceMetadataFuture(System.String)
+  fullName: NPCEngine.API.Control.GetServiceMetadataFuture(System.String)
+  nameWithType: Control.GetServiceMetadataFuture(String)
+- uid: NPCEngine.API.Control.GetServiceMetadataFuture*
+  name: GetServiceMetadataFuture
+  href: api/NPCEngine.API.Control.html#NPCEngine_API_Control_GetServiceMetadataFuture_
+  commentId: Overload:NPCEngine.API.Control.GetServiceMetadataFuture
   isSpec: "True"
-  fullName: NPCEngine.API.Chatbot<ContextType>.GetPromptTemplate
-  fullName.vb: NPCEngine.API.Chatbot(Of ContextType).GetPromptTemplate
-  nameWithType: Chatbot<ContextType>.GetPromptTemplate
-  nameWithType.vb: Chatbot(Of ContextType).GetPromptTemplate
-- uid: NPCEngine.API.Chatbot`1.GetPromptTemplateCoroutine(Action{System.String})
-  name: GetPromptTemplateCoroutine(Action<String>)
-  href: api/NPCEngine.API.Chatbot-1.html#NPCEngine_API_Chatbot_1_GetPromptTemplateCoroutine_Action_System_String__
-  commentId: M:NPCEngine.API.Chatbot`1.GetPromptTemplateCoroutine(Action{System.String})
-  name.vb: GetPromptTemplateCoroutine(Action(Of String))
-  fullName: NPCEngine.API.Chatbot<ContextType>.GetPromptTemplateCoroutine(Action<System.String>)
-  fullName.vb: NPCEngine.API.Chatbot(Of ContextType).GetPromptTemplateCoroutine(Action(Of System.String))
-  nameWithType: Chatbot<ContextType>.GetPromptTemplateCoroutine(Action<String>)
-  nameWithType.vb: Chatbot(Of ContextType).GetPromptTemplateCoroutine(Action(Of String))
-- uid: NPCEngine.API.Chatbot`1.GetPromptTemplateCoroutine*
-  name: GetPromptTemplateCoroutine
-  href: api/NPCEngine.API.Chatbot-1.html#NPCEngine_API_Chatbot_1_GetPromptTemplateCoroutine_
-  commentId: Overload:NPCEngine.API.Chatbot`1.GetPromptTemplateCoroutine
+  fullName: NPCEngine.API.Control.GetServiceMetadataFuture
+  nameWithType: Control.GetServiceMetadataFuture
+- uid: NPCEngine.API.Control.GetServicesMetadata(Action{System.Collections.Generic.List{NPCEngine.API.ServiceMetadata}})
+  name: GetServicesMetadata(Action<List<ServiceMetadata>>)
+  href: api/NPCEngine.API.Control.html#NPCEngine_API_Control_GetServicesMetadata_Action_System_Collections_Generic_List_NPCEngine_API_ServiceMetadata___
+  commentId: M:NPCEngine.API.Control.GetServicesMetadata(Action{System.Collections.Generic.List{NPCEngine.API.ServiceMetadata}})
+  name.vb: GetServicesMetadata(Action(Of List(Of ServiceMetadata)))
+  fullName: NPCEngine.API.Control.GetServicesMetadata(Action<System.Collections.Generic.List<NPCEngine.API.ServiceMetadata>>)
+  fullName.vb: NPCEngine.API.Control.GetServicesMetadata(Action(Of System.Collections.Generic.List(Of NPCEngine.API.ServiceMetadata)))
+  nameWithType: Control.GetServicesMetadata(Action<List<ServiceMetadata>>)
+  nameWithType.vb: Control.GetServicesMetadata(Action(Of List(Of ServiceMetadata)))
+- uid: NPCEngine.API.Control.GetServicesMetadata*
+  name: GetServicesMetadata
+  href: api/NPCEngine.API.Control.html#NPCEngine_API_Control_GetServicesMetadata_
+  commentId: Overload:NPCEngine.API.Control.GetServicesMetadata
   isSpec: "True"
-  fullName: NPCEngine.API.Chatbot<ContextType>.GetPromptTemplateCoroutine
-  fullName.vb: NPCEngine.API.Chatbot(Of ContextType).GetPromptTemplateCoroutine
-  nameWithType: Chatbot<ContextType>.GetPromptTemplateCoroutine
-  nameWithType.vb: Chatbot(Of ContextType).GetPromptTemplateCoroutine
-- uid: NPCEngine.API.Chatbot`1.GetSpecialTokens
-  name: GetSpecialTokens()
-  href: api/NPCEngine.API.Chatbot-1.html#NPCEngine_API_Chatbot_1_GetSpecialTokens
-  commentId: M:NPCEngine.API.Chatbot`1.GetSpecialTokens
-  fullName: NPCEngine.API.Chatbot<ContextType>.GetSpecialTokens()
-  fullName.vb: NPCEngine.API.Chatbot(Of ContextType).GetSpecialTokens()
-  nameWithType: Chatbot<ContextType>.GetSpecialTokens()
-  nameWithType.vb: Chatbot(Of ContextType).GetSpecialTokens()
-- uid: NPCEngine.API.Chatbot`1.GetSpecialTokens*
-  name: GetSpecialTokens
-  href: api/NPCEngine.API.Chatbot-1.html#NPCEngine_API_Chatbot_1_GetSpecialTokens_
-  commentId: Overload:NPCEngine.API.Chatbot`1.GetSpecialTokens
+  fullName: NPCEngine.API.Control.GetServicesMetadata
+  nameWithType: Control.GetServicesMetadata
+- uid: NPCEngine.API.Control.GetServicesMetadataFuture
+  name: GetServicesMetadataFuture()
+  href: api/NPCEngine.API.Control.html#NPCEngine_API_Control_GetServicesMetadataFuture
+  commentId: M:NPCEngine.API.Control.GetServicesMetadataFuture
+  fullName: NPCEngine.API.Control.GetServicesMetadataFuture()
+  nameWithType: Control.GetServicesMetadataFuture()
+- uid: NPCEngine.API.Control.GetServicesMetadataFuture*
+  name: GetServicesMetadataFuture
+  href: api/NPCEngine.API.Control.html#NPCEngine_API_Control_GetServicesMetadataFuture_
+  commentId: Overload:NPCEngine.API.Control.GetServicesMetadataFuture
   isSpec: "True"
-  fullName: NPCEngine.API.Chatbot<ContextType>.GetSpecialTokens
-  fullName.vb: NPCEngine.API.Chatbot(Of ContextType).GetSpecialTokens
-  nameWithType: Chatbot<ContextType>.GetSpecialTokens
-  nameWithType.vb: Chatbot(Of ContextType).GetSpecialTokens
-- uid: NPCEngine.API.Chatbot`1.GetSpecialTokensCoroutine(Action{System.Collections.Generic.Dictionary{System.String,System.String}})
-  name: GetSpecialTokensCoroutine(Action<Dictionary<String, String>>)
-  href: api/NPCEngine.API.Chatbot-1.html#NPCEngine_API_Chatbot_1_GetSpecialTokensCoroutine_Action_System_Collections_Generic_Dictionary_System_String_System_String___
-  commentId: M:NPCEngine.API.Chatbot`1.GetSpecialTokensCoroutine(Action{System.Collections.Generic.Dictionary{System.String,System.String}})
-  name.vb: GetSpecialTokensCoroutine(Action(Of Dictionary(Of String, String)))
-  fullName: NPCEngine.API.Chatbot<ContextType>.GetSpecialTokensCoroutine(Action<System.Collections.Generic.Dictionary<System.String, System.String>>)
-  fullName.vb: NPCEngine.API.Chatbot(Of ContextType).GetSpecialTokensCoroutine(Action(Of System.Collections.Generic.Dictionary(Of System.String, System.String)))
-  nameWithType: Chatbot<ContextType>.GetSpecialTokensCoroutine(Action<Dictionary<String, String>>)
-  nameWithType.vb: Chatbot(Of ContextType).GetSpecialTokensCoroutine(Action(Of Dictionary(Of String, String)))
-- uid: NPCEngine.API.Chatbot`1.GetSpecialTokensCoroutine*
-  name: GetSpecialTokensCoroutine
-  href: api/NPCEngine.API.Chatbot-1.html#NPCEngine_API_Chatbot_1_GetSpecialTokensCoroutine_
-  commentId: Overload:NPCEngine.API.Chatbot`1.GetSpecialTokensCoroutine
+  fullName: NPCEngine.API.Control.GetServicesMetadataFuture
+  nameWithType: Control.GetServicesMetadataFuture
+- uid: NPCEngine.API.Control.GetServiceStatus(System.String,Action{NPCEngine.API.ServiceStatus})
+  name: GetServiceStatus(String, Action<ServiceStatus>)
+  href: api/NPCEngine.API.Control.html#NPCEngine_API_Control_GetServiceStatus_System_String_Action_NPCEngine_API_ServiceStatus__
+  commentId: M:NPCEngine.API.Control.GetServiceStatus(System.String,Action{NPCEngine.API.ServiceStatus})
+  name.vb: GetServiceStatus(String, Action(Of ServiceStatus))
+  fullName: NPCEngine.API.Control.GetServiceStatus(System.String, Action<NPCEngine.API.ServiceStatus>)
+  fullName.vb: NPCEngine.API.Control.GetServiceStatus(System.String, Action(Of NPCEngine.API.ServiceStatus))
+  nameWithType: Control.GetServiceStatus(String, Action<ServiceStatus>)
+  nameWithType.vb: Control.GetServiceStatus(String, Action(Of ServiceStatus))
+- uid: NPCEngine.API.Control.GetServiceStatus*
+  name: GetServiceStatus
+  href: api/NPCEngine.API.Control.html#NPCEngine_API_Control_GetServiceStatus_
+  commentId: Overload:NPCEngine.API.Control.GetServiceStatus
   isSpec: "True"
-  fullName: NPCEngine.API.Chatbot<ContextType>.GetSpecialTokensCoroutine
-  fullName.vb: NPCEngine.API.Chatbot(Of ContextType).GetSpecialTokensCoroutine
-  nameWithType: Chatbot<ContextType>.GetSpecialTokensCoroutine
-  nameWithType.vb: Chatbot(Of ContextType).GetSpecialTokensCoroutine
+  fullName: NPCEngine.API.Control.GetServiceStatus
+  nameWithType: Control.GetServiceStatus
+- uid: NPCEngine.API.Control.GetServiceStatusFuture(System.String)
+  name: GetServiceStatusFuture(String)
+  href: api/NPCEngine.API.Control.html#NPCEngine_API_Control_GetServiceStatusFuture_System_String_
+  commentId: M:NPCEngine.API.Control.GetServiceStatusFuture(System.String)
+  fullName: NPCEngine.API.Control.GetServiceStatusFuture(System.String)
+  nameWithType: Control.GetServiceStatusFuture(String)
+- uid: NPCEngine.API.Control.GetServiceStatusFuture*
+  name: GetServiceStatusFuture
+  href: api/NPCEngine.API.Control.html#NPCEngine_API_Control_GetServiceStatusFuture_
+  commentId: Overload:NPCEngine.API.Control.GetServiceStatusFuture
+  isSpec: "True"
+  fullName: NPCEngine.API.Control.GetServiceStatusFuture
+  nameWithType: Control.GetServiceStatusFuture
+- uid: NPCEngine.API.Control.RestartService(System.String)
+  name: RestartService(String)
+  href: api/NPCEngine.API.Control.html#NPCEngine_API_Control_RestartService_System_String_
+  commentId: M:NPCEngine.API.Control.RestartService(System.String)
+  fullName: NPCEngine.API.Control.RestartService(System.String)
+  nameWithType: Control.RestartService(String)
+- uid: NPCEngine.API.Control.RestartService*
+  name: RestartService
+  href: api/NPCEngine.API.Control.html#NPCEngine_API_Control_RestartService_
+  commentId: Overload:NPCEngine.API.Control.RestartService
+  isSpec: "True"
+  fullName: NPCEngine.API.Control.RestartService
+  nameWithType: Control.RestartService
+- uid: NPCEngine.API.Control.StartService(System.String)
+  name: StartService(String)
+  href: api/NPCEngine.API.Control.html#NPCEngine_API_Control_StartService_System_String_
+  commentId: M:NPCEngine.API.Control.StartService(System.String)
+  fullName: NPCEngine.API.Control.StartService(System.String)
+  nameWithType: Control.StartService(String)
+- uid: NPCEngine.API.Control.StartService*
+  name: StartService
+  href: api/NPCEngine.API.Control.html#NPCEngine_API_Control_StartService_
+  commentId: Overload:NPCEngine.API.Control.StartService
+  isSpec: "True"
+  fullName: NPCEngine.API.Control.StartService
+  nameWithType: Control.StartService
+- uid: NPCEngine.API.Control.StartServiceNoConfirm(System.String)
+  name: StartServiceNoConfirm(String)
+  href: api/NPCEngine.API.Control.html#NPCEngine_API_Control_StartServiceNoConfirm_System_String_
+  commentId: M:NPCEngine.API.Control.StartServiceNoConfirm(System.String)
+  fullName: NPCEngine.API.Control.StartServiceNoConfirm(System.String)
+  nameWithType: Control.StartServiceNoConfirm(String)
+- uid: NPCEngine.API.Control.StartServiceNoConfirm*
+  name: StartServiceNoConfirm
+  href: api/NPCEngine.API.Control.html#NPCEngine_API_Control_StartServiceNoConfirm_
+  commentId: Overload:NPCEngine.API.Control.StartServiceNoConfirm
+  isSpec: "True"
+  fullName: NPCEngine.API.Control.StartServiceNoConfirm
+  nameWithType: Control.StartServiceNoConfirm
+- uid: NPCEngine.API.Control.StopService(System.String)
+  name: StopService(String)
+  href: api/NPCEngine.API.Control.html#NPCEngine_API_Control_StopService_System_String_
+  commentId: M:NPCEngine.API.Control.StopService(System.String)
+  fullName: NPCEngine.API.Control.StopService(System.String)
+  nameWithType: Control.StopService(String)
+- uid: NPCEngine.API.Control.StopService*
+  name: StopService
+  href: api/NPCEngine.API.Control.html#NPCEngine_API_Control_StopService_
+  commentId: Overload:NPCEngine.API.Control.StopService
+  isSpec: "True"
+  fullName: NPCEngine.API.Control.StopService
+  nameWithType: Control.StopService
+- uid: NPCEngine.API.Control.StopServiceNoConfirm(System.String)
+  name: StopServiceNoConfirm(String)
+  href: api/NPCEngine.API.Control.html#NPCEngine_API_Control_StopServiceNoConfirm_System_String_
+  commentId: M:NPCEngine.API.Control.StopServiceNoConfirm(System.String)
+  fullName: NPCEngine.API.Control.StopServiceNoConfirm(System.String)
+  nameWithType: Control.StopServiceNoConfirm(String)
+- uid: NPCEngine.API.Control.StopServiceNoConfirm*
+  name: StopServiceNoConfirm
+  href: api/NPCEngine.API.Control.html#NPCEngine_API_Control_StopServiceNoConfirm_
+  commentId: Overload:NPCEngine.API.Control.StopServiceNoConfirm
+  isSpec: "True"
+  fullName: NPCEngine.API.Control.StopServiceNoConfirm
+  nameWithType: Control.StopServiceNoConfirm
+- uid: NPCEngine.API.PersonaDialogue
+  name: PersonaDialogue
+  href: api/NPCEngine.API.PersonaDialogue.html
+  commentId: T:NPCEngine.API.PersonaDialogue
+  fullName: NPCEngine.API.PersonaDialogue
+  nameWithType: PersonaDialogue
+- uid: NPCEngine.API.PersonaDialogue.StartDialogue(System.String,System.String,System.String,System.String,System.String,System.String,Action{System.String},System.String)
+  name: StartDialogue(String, String, String, String, String, String, Action<String>, String)
+  href: api/NPCEngine.API.PersonaDialogue.html#NPCEngine_API_PersonaDialogue_StartDialogue_System_String_System_String_System_String_System_String_System_String_System_String_Action_System_String__System_String_
+  commentId: M:NPCEngine.API.PersonaDialogue.StartDialogue(System.String,System.String,System.String,System.String,System.String,System.String,Action{System.String},System.String)
+  name.vb: StartDialogue(String, String, String, String, String, String, Action(Of String), String)
+  fullName: NPCEngine.API.PersonaDialogue.StartDialogue(System.String, System.String, System.String, System.String, System.String, System.String, Action<System.String>, System.String)
+  fullName.vb: NPCEngine.API.PersonaDialogue.StartDialogue(System.String, System.String, System.String, System.String, System.String, System.String, Action(Of System.String), System.String)
+  nameWithType: PersonaDialogue.StartDialogue(String, String, String, String, String, String, Action<String>, String)
+  nameWithType.vb: PersonaDialogue.StartDialogue(String, String, String, String, String, String, Action(Of String), String)
+- uid: NPCEngine.API.PersonaDialogue.StartDialogue*
+  name: StartDialogue
+  href: api/NPCEngine.API.PersonaDialogue.html#NPCEngine_API_PersonaDialogue_StartDialogue_
+  commentId: Overload:NPCEngine.API.PersonaDialogue.StartDialogue
+  isSpec: "True"
+  fullName: NPCEngine.API.PersonaDialogue.StartDialogue
+  nameWithType: PersonaDialogue.StartDialogue
+- uid: NPCEngine.API.PersonaDialogue.StepDialogue(System.String,System.String,System.Boolean,Action{Tuple{System.String,System.Boolean}},System.Single,System.Collections.Generic.List{System.String},System.String)
+  name: StepDialogue(String, String, Boolean, Action<Tuple<String, Boolean>>, Single, List<String>, String)
+  href: api/NPCEngine.API.PersonaDialogue.html#NPCEngine_API_PersonaDialogue_StepDialogue_System_String_System_String_System_Boolean_Action_Tuple_System_String_System_Boolean___System_Single_System_Collections_Generic_List_System_String__System_String_
+  commentId: M:NPCEngine.API.PersonaDialogue.StepDialogue(System.String,System.String,System.Boolean,Action{Tuple{System.String,System.Boolean}},System.Single,System.Collections.Generic.List{System.String},System.String)
+  name.vb: StepDialogue(String, String, Boolean, Action(Of Tuple(Of String, Boolean)), Single, List(Of String), String)
+  fullName: NPCEngine.API.PersonaDialogue.StepDialogue(System.String, System.String, System.Boolean, Action<Tuple<System.String, System.Boolean>>, System.Single, System.Collections.Generic.List<System.String>, System.String)
+  fullName.vb: NPCEngine.API.PersonaDialogue.StepDialogue(System.String, System.String, System.Boolean, Action(Of Tuple(Of System.String, System.Boolean)), System.Single, System.Collections.Generic.List(Of System.String), System.String)
+  nameWithType: PersonaDialogue.StepDialogue(String, String, Boolean, Action<Tuple<String, Boolean>>, Single, List<String>, String)
+  nameWithType.vb: PersonaDialogue.StepDialogue(String, String, Boolean, Action(Of Tuple(Of String, Boolean)), Single, List(Of String), String)
+- uid: NPCEngine.API.PersonaDialogue.StepDialogue*
+  name: StepDialogue
+  href: api/NPCEngine.API.PersonaDialogue.html#NPCEngine_API_PersonaDialogue_StepDialogue_
+  commentId: Overload:NPCEngine.API.PersonaDialogue.StepDialogue
+  isSpec: "True"
+  fullName: NPCEngine.API.PersonaDialogue.StepDialogue
+  nameWithType: PersonaDialogue.StepDialogue
 - uid: NPCEngine.API.SemanticQuery
   name: SemanticQuery
   href: api/NPCEngine.API.SemanticQuery.html
@@ -149,15 +253,15 @@ references:
   isSpec: "True"
   fullName: NPCEngine.API.SemanticQuery.Cache
   nameWithType: SemanticQuery.Cache
-- uid: NPCEngine.API.SemanticQuery.Compare(System.String,System.Collections.Generic.List{System.String})
-  name: Compare(String, List<String>)
-  href: api/NPCEngine.API.SemanticQuery.html#NPCEngine_API_SemanticQuery_Compare_System_String_System_Collections_Generic_List_System_String__
-  commentId: M:NPCEngine.API.SemanticQuery.Compare(System.String,System.Collections.Generic.List{System.String})
-  name.vb: Compare(String, List(Of String))
-  fullName: NPCEngine.API.SemanticQuery.Compare(System.String, System.Collections.Generic.List<System.String>)
-  fullName.vb: NPCEngine.API.SemanticQuery.Compare(System.String, System.Collections.Generic.List(Of System.String))
-  nameWithType: SemanticQuery.Compare(String, List<String>)
-  nameWithType.vb: SemanticQuery.Compare(String, List(Of String))
+- uid: NPCEngine.API.SemanticQuery.Compare(System.String,System.Collections.Generic.List{System.String},Action{System.Collections.Generic.List{System.Single}})
+  name: Compare(String, List<String>, Action<List<Single>>)
+  href: api/NPCEngine.API.SemanticQuery.html#NPCEngine_API_SemanticQuery_Compare_System_String_System_Collections_Generic_List_System_String__Action_System_Collections_Generic_List_System_Single___
+  commentId: M:NPCEngine.API.SemanticQuery.Compare(System.String,System.Collections.Generic.List{System.String},Action{System.Collections.Generic.List{System.Single}})
+  name.vb: Compare(String, List(Of String), Action(Of List(Of Single)))
+  fullName: NPCEngine.API.SemanticQuery.Compare(System.String, System.Collections.Generic.List<System.String>, Action<System.Collections.Generic.List<System.Single>>)
+  fullName.vb: NPCEngine.API.SemanticQuery.Compare(System.String, System.Collections.Generic.List(Of System.String), Action(Of System.Collections.Generic.List(Of System.Single)))
+  nameWithType: SemanticQuery.Compare(String, List<String>, Action<List<Single>>)
+  nameWithType.vb: SemanticQuery.Compare(String, List(Of String), Action(Of List(Of Single)))
 - uid: NPCEngine.API.SemanticQuery.Compare*
   name: Compare
   href: api/NPCEngine.API.SemanticQuery.html#NPCEngine_API_SemanticQuery_Compare_
@@ -165,34 +269,133 @@ references:
   isSpec: "True"
   fullName: NPCEngine.API.SemanticQuery.Compare
   nameWithType: SemanticQuery.Compare
-- uid: NPCEngine.API.SemanticQuery.CompareCoroutine(System.String,System.Collections.Generic.List{System.String},Action{System.Collections.Generic.List{System.Single}})
-  name: CompareCoroutine(String, List<String>, Action<List<Single>>)
-  href: api/NPCEngine.API.SemanticQuery.html#NPCEngine_API_SemanticQuery_CompareCoroutine_System_String_System_Collections_Generic_List_System_String__Action_System_Collections_Generic_List_System_Single___
-  commentId: M:NPCEngine.API.SemanticQuery.CompareCoroutine(System.String,System.Collections.Generic.List{System.String},Action{System.Collections.Generic.List{System.Single}})
-  name.vb: CompareCoroutine(String, List(Of String), Action(Of List(Of Single)))
-  fullName: NPCEngine.API.SemanticQuery.CompareCoroutine(System.String, System.Collections.Generic.List<System.String>, Action<System.Collections.Generic.List<System.Single>>)
-  fullName.vb: NPCEngine.API.SemanticQuery.CompareCoroutine(System.String, System.Collections.Generic.List(Of System.String), Action(Of System.Collections.Generic.List(Of System.Single)))
-  nameWithType: SemanticQuery.CompareCoroutine(String, List<String>, Action<List<Single>>)
-  nameWithType.vb: SemanticQuery.CompareCoroutine(String, List(Of String), Action(Of List(Of Single)))
-- uid: NPCEngine.API.SemanticQuery.CompareCoroutine*
-  name: CompareCoroutine
-  href: api/NPCEngine.API.SemanticQuery.html#NPCEngine_API_SemanticQuery_CompareCoroutine_
-  commentId: Overload:NPCEngine.API.SemanticQuery.CompareCoroutine
+- uid: NPCEngine.API.SemanticQuery.CompareFuture(System.String,System.Collections.Generic.List{System.String})
+  name: CompareFuture(String, List<String>)
+  href: api/NPCEngine.API.SemanticQuery.html#NPCEngine_API_SemanticQuery_CompareFuture_System_String_System_Collections_Generic_List_System_String__
+  commentId: M:NPCEngine.API.SemanticQuery.CompareFuture(System.String,System.Collections.Generic.List{System.String})
+  name.vb: CompareFuture(String, List(Of String))
+  fullName: NPCEngine.API.SemanticQuery.CompareFuture(System.String, System.Collections.Generic.List<System.String>)
+  fullName.vb: NPCEngine.API.SemanticQuery.CompareFuture(System.String, System.Collections.Generic.List(Of System.String))
+  nameWithType: SemanticQuery.CompareFuture(String, List<String>)
+  nameWithType.vb: SemanticQuery.CompareFuture(String, List(Of String))
+- uid: NPCEngine.API.SemanticQuery.CompareFuture*
+  name: CompareFuture
+  href: api/NPCEngine.API.SemanticQuery.html#NPCEngine_API_SemanticQuery_CompareFuture_
+  commentId: Overload:NPCEngine.API.SemanticQuery.CompareFuture
   isSpec: "True"
-  fullName: NPCEngine.API.SemanticQuery.CompareCoroutine
-  nameWithType: SemanticQuery.CompareCoroutine
+  fullName: NPCEngine.API.SemanticQuery.CompareFuture
+  nameWithType: SemanticQuery.CompareFuture
+- uid: NPCEngine.API.ServiceMetadata
+  name: ServiceMetadata
+  href: api/NPCEngine.API.ServiceMetadata.html
+  commentId: T:NPCEngine.API.ServiceMetadata
+  fullName: NPCEngine.API.ServiceMetadata
+  nameWithType: ServiceMetadata
+- uid: NPCEngine.API.ServiceMetadata.api_name
+  name: api_name
+  href: api/NPCEngine.API.ServiceMetadata.html#NPCEngine_API_ServiceMetadata_api_name
+  commentId: F:NPCEngine.API.ServiceMetadata.api_name
+  fullName: NPCEngine.API.ServiceMetadata.api_name
+  nameWithType: ServiceMetadata.api_name
+- uid: NPCEngine.API.ServiceMetadata.id
+  name: id
+  href: api/NPCEngine.API.ServiceMetadata.html#NPCEngine_API_ServiceMetadata_id
+  commentId: F:NPCEngine.API.ServiceMetadata.id
+  fullName: NPCEngine.API.ServiceMetadata.id
+  nameWithType: ServiceMetadata.id
+- uid: NPCEngine.API.ServiceMetadata.path
+  name: path
+  href: api/NPCEngine.API.ServiceMetadata.html#NPCEngine_API_ServiceMetadata_path
+  commentId: F:NPCEngine.API.ServiceMetadata.path
+  fullName: NPCEngine.API.ServiceMetadata.path
+  nameWithType: ServiceMetadata.path
+- uid: NPCEngine.API.ServiceMetadata.readme
+  name: readme
+  href: api/NPCEngine.API.ServiceMetadata.html#NPCEngine_API_ServiceMetadata_readme
+  commentId: F:NPCEngine.API.ServiceMetadata.readme
+  fullName: NPCEngine.API.ServiceMetadata.readme
+  nameWithType: ServiceMetadata.readme
+- uid: NPCEngine.API.ServiceMetadata.service
+  name: service
+  href: api/NPCEngine.API.ServiceMetadata.html#NPCEngine_API_ServiceMetadata_service
+  commentId: F:NPCEngine.API.ServiceMetadata.service
+  fullName: NPCEngine.API.ServiceMetadata.service
+  nameWithType: ServiceMetadata.service
+- uid: NPCEngine.API.ServiceMetadata.service_description
+  name: service_description
+  href: api/NPCEngine.API.ServiceMetadata.html#NPCEngine_API_ServiceMetadata_service_description
+  commentId: F:NPCEngine.API.ServiceMetadata.service_description
+  fullName: NPCEngine.API.ServiceMetadata.service_description
+  nameWithType: ServiceMetadata.service_description
+- uid: NPCEngine.API.ServiceMetadata.service_short_description
+  name: service_short_description
+  href: api/NPCEngine.API.ServiceMetadata.html#NPCEngine_API_ServiceMetadata_service_short_description
+  commentId: F:NPCEngine.API.ServiceMetadata.service_short_description
+  fullName: NPCEngine.API.ServiceMetadata.service_short_description
+  nameWithType: ServiceMetadata.service_short_description
+- uid: NPCEngine.API.ServiceStatus
+  name: ServiceStatus
+  href: api/NPCEngine.API.ServiceStatus.html
+  commentId: T:NPCEngine.API.ServiceStatus
+  fullName: NPCEngine.API.ServiceStatus
+  nameWithType: ServiceStatus
+- uid: NPCEngine.API.ServiceStatus.AWAITING
+  name: AWAITING
+  href: api/NPCEngine.API.ServiceStatus.html#NPCEngine_API_ServiceStatus_AWAITING
+  commentId: F:NPCEngine.API.ServiceStatus.AWAITING
+  fullName: NPCEngine.API.ServiceStatus.AWAITING
+  nameWithType: ServiceStatus.AWAITING
+- uid: NPCEngine.API.ServiceStatus.ERROR
+  name: ERROR
+  href: api/NPCEngine.API.ServiceStatus.html#NPCEngine_API_ServiceStatus_ERROR
+  commentId: F:NPCEngine.API.ServiceStatus.ERROR
+  fullName: NPCEngine.API.ServiceStatus.ERROR
+  nameWithType: ServiceStatus.ERROR
+- uid: NPCEngine.API.ServiceStatus.RUNNING
+  name: RUNNING
+  href: api/NPCEngine.API.ServiceStatus.html#NPCEngine_API_ServiceStatus_RUNNING
+  commentId: F:NPCEngine.API.ServiceStatus.RUNNING
+  fullName: NPCEngine.API.ServiceStatus.RUNNING
+  nameWithType: ServiceStatus.RUNNING
+- uid: NPCEngine.API.ServiceStatus.STARTING
+  name: STARTING
+  href: api/NPCEngine.API.ServiceStatus.html#NPCEngine_API_ServiceStatus_STARTING
+  commentId: F:NPCEngine.API.ServiceStatus.STARTING
+  fullName: NPCEngine.API.ServiceStatus.STARTING
+  nameWithType: ServiceStatus.STARTING
+- uid: NPCEngine.API.ServiceStatus.STOPPED
+  name: STOPPED
+  href: api/NPCEngine.API.ServiceStatus.html#NPCEngine_API_ServiceStatus_STOPPED
+  commentId: F:NPCEngine.API.ServiceStatus.STOPPED
+  fullName: NPCEngine.API.ServiceStatus.STOPPED
+  nameWithType: ServiceStatus.STOPPED
+- uid: NPCEngine.API.ServiceStatus.TIMEOUT
+  name: TIMEOUT
+  href: api/NPCEngine.API.ServiceStatus.html#NPCEngine_API_ServiceStatus_TIMEOUT
+  commentId: F:NPCEngine.API.ServiceStatus.TIMEOUT
+  fullName: NPCEngine.API.ServiceStatus.TIMEOUT
+  nameWithType: ServiceStatus.TIMEOUT
+- uid: NPCEngine.API.ServiceStatus.UNKNOWN
+  name: UNKNOWN
+  href: api/NPCEngine.API.ServiceStatus.html#NPCEngine_API_ServiceStatus_UNKNOWN
+  commentId: F:NPCEngine.API.ServiceStatus.UNKNOWN
+  fullName: NPCEngine.API.ServiceStatus.UNKNOWN
+  nameWithType: ServiceStatus.UNKNOWN
 - uid: NPCEngine.API.SpeechToText
   name: SpeechToText
   href: api/NPCEngine.API.SpeechToText.html
   commentId: T:NPCEngine.API.SpeechToText
   fullName: NPCEngine.API.SpeechToText
   nameWithType: SpeechToText
-- uid: NPCEngine.API.SpeechToText.GetDevices
-  name: GetDevices()
-  href: api/NPCEngine.API.SpeechToText.html#NPCEngine_API_SpeechToText_GetDevices
-  commentId: M:NPCEngine.API.SpeechToText.GetDevices
-  fullName: NPCEngine.API.SpeechToText.GetDevices()
-  nameWithType: SpeechToText.GetDevices()
+- uid: NPCEngine.API.SpeechToText.GetDevices(Action{System.Collections.Generic.List{System.String}})
+  name: GetDevices(Action<List<String>>)
+  href: api/NPCEngine.API.SpeechToText.html#NPCEngine_API_SpeechToText_GetDevices_Action_System_Collections_Generic_List_System_String___
+  commentId: M:NPCEngine.API.SpeechToText.GetDevices(Action{System.Collections.Generic.List{System.String}})
+  name.vb: GetDevices(Action(Of List(Of String)))
+  fullName: NPCEngine.API.SpeechToText.GetDevices(Action<System.Collections.Generic.List<System.String>>)
+  fullName.vb: NPCEngine.API.SpeechToText.GetDevices(Action(Of System.Collections.Generic.List(Of System.String)))
+  nameWithType: SpeechToText.GetDevices(Action<List<String>>)
+  nameWithType.vb: SpeechToText.GetDevices(Action(Of List(Of String)))
 - uid: NPCEngine.API.SpeechToText.GetDevices*
   name: GetDevices
   href: api/NPCEngine.API.SpeechToText.html#NPCEngine_API_SpeechToText_GetDevices_
@@ -200,6 +403,19 @@ references:
   isSpec: "True"
   fullName: NPCEngine.API.SpeechToText.GetDevices
   nameWithType: SpeechToText.GetDevices
+- uid: NPCEngine.API.SpeechToText.GetDevicesFuture
+  name: GetDevicesFuture()
+  href: api/NPCEngine.API.SpeechToText.html#NPCEngine_API_SpeechToText_GetDevicesFuture
+  commentId: M:NPCEngine.API.SpeechToText.GetDevicesFuture
+  fullName: NPCEngine.API.SpeechToText.GetDevicesFuture()
+  nameWithType: SpeechToText.GetDevicesFuture()
+- uid: NPCEngine.API.SpeechToText.GetDevicesFuture*
+  name: GetDevicesFuture
+  href: api/NPCEngine.API.SpeechToText.html#NPCEngine_API_SpeechToText_GetDevicesFuture_
+  commentId: Overload:NPCEngine.API.SpeechToText.GetDevicesFuture
+  isSpec: "True"
+  fullName: NPCEngine.API.SpeechToText.GetDevicesFuture
+  nameWithType: SpeechToText.GetDevicesFuture
 - uid: NPCEngine.API.SpeechToText.InitializeMicrophoneInput
   name: InitializeMicrophoneInput()
   href: api/NPCEngine.API.SpeechToText.html#NPCEngine_API_SpeechToText_InitializeMicrophoneInput
@@ -213,12 +429,15 @@ references:
   isSpec: "True"
   fullName: NPCEngine.API.SpeechToText.InitializeMicrophoneInput
   nameWithType: SpeechToText.InitializeMicrophoneInput
-- uid: NPCEngine.API.SpeechToText.Listen(System.String)
-  name: Listen(String)
-  href: api/NPCEngine.API.SpeechToText.html#NPCEngine_API_SpeechToText_Listen_System_String_
-  commentId: M:NPCEngine.API.SpeechToText.Listen(System.String)
-  fullName: NPCEngine.API.SpeechToText.Listen(System.String)
-  nameWithType: SpeechToText.Listen(String)
+- uid: NPCEngine.API.SpeechToText.Listen(System.String,Action{System.String})
+  name: Listen(String, Action<String>)
+  href: api/NPCEngine.API.SpeechToText.html#NPCEngine_API_SpeechToText_Listen_System_String_Action_System_String__
+  commentId: M:NPCEngine.API.SpeechToText.Listen(System.String,Action{System.String})
+  name.vb: Listen(String, Action(Of String))
+  fullName: NPCEngine.API.SpeechToText.Listen(System.String, Action<System.String>)
+  fullName.vb: NPCEngine.API.SpeechToText.Listen(System.String, Action(Of System.String))
+  nameWithType: SpeechToText.Listen(String, Action<String>)
+  nameWithType.vb: SpeechToText.Listen(String, Action(Of String))
 - uid: NPCEngine.API.SpeechToText.Listen*
   name: Listen
   href: api/NPCEngine.API.SpeechToText.html#NPCEngine_API_SpeechToText_Listen_
@@ -226,12 +445,28 @@ references:
   isSpec: "True"
   fullName: NPCEngine.API.SpeechToText.Listen
   nameWithType: SpeechToText.Listen
-- uid: NPCEngine.API.SpeechToText.SetDevice(System.Int32)
-  name: SetDevice(Int32)
-  href: api/NPCEngine.API.SpeechToText.html#NPCEngine_API_SpeechToText_SetDevice_System_Int32_
-  commentId: M:NPCEngine.API.SpeechToText.SetDevice(System.Int32)
-  fullName: NPCEngine.API.SpeechToText.SetDevice(System.Int32)
-  nameWithType: SpeechToText.SetDevice(Int32)
+- uid: NPCEngine.API.SpeechToText.ListenFuture(System.String)
+  name: ListenFuture(String)
+  href: api/NPCEngine.API.SpeechToText.html#NPCEngine_API_SpeechToText_ListenFuture_System_String_
+  commentId: M:NPCEngine.API.SpeechToText.ListenFuture(System.String)
+  fullName: NPCEngine.API.SpeechToText.ListenFuture(System.String)
+  nameWithType: SpeechToText.ListenFuture(String)
+- uid: NPCEngine.API.SpeechToText.ListenFuture*
+  name: ListenFuture
+  href: api/NPCEngine.API.SpeechToText.html#NPCEngine_API_SpeechToText_ListenFuture_
+  commentId: Overload:NPCEngine.API.SpeechToText.ListenFuture
+  isSpec: "True"
+  fullName: NPCEngine.API.SpeechToText.ListenFuture
+  nameWithType: SpeechToText.ListenFuture
+- uid: NPCEngine.API.SpeechToText.SetDevice(System.Int32,Action{System.Collections.Generic.List{System.String}})
+  name: SetDevice(Int32, Action<List<String>>)
+  href: api/NPCEngine.API.SpeechToText.html#NPCEngine_API_SpeechToText_SetDevice_System_Int32_Action_System_Collections_Generic_List_System_String___
+  commentId: M:NPCEngine.API.SpeechToText.SetDevice(System.Int32,Action{System.Collections.Generic.List{System.String}})
+  name.vb: SetDevice(Int32, Action(Of List(Of String)))
+  fullName: NPCEngine.API.SpeechToText.SetDevice(System.Int32, Action<System.Collections.Generic.List<System.String>>)
+  fullName.vb: NPCEngine.API.SpeechToText.SetDevice(System.Int32, Action(Of System.Collections.Generic.List(Of System.String)))
+  nameWithType: SpeechToText.SetDevice(Int32, Action<List<String>>)
+  nameWithType.vb: SpeechToText.SetDevice(Int32, Action(Of List(Of String)))
 - uid: NPCEngine.API.SpeechToText.SetDevice*
   name: SetDevice
   href: api/NPCEngine.API.SpeechToText.html#NPCEngine_API_SpeechToText_SetDevice_
@@ -239,15 +474,28 @@ references:
   isSpec: "True"
   fullName: NPCEngine.API.SpeechToText.SetDevice
   nameWithType: SpeechToText.SetDevice
-- uid: NPCEngine.API.SpeechToText.Transcribe(System.Collections.Generic.List{System.Single})
-  name: Transcribe(List<Single>)
-  href: api/NPCEngine.API.SpeechToText.html#NPCEngine_API_SpeechToText_Transcribe_System_Collections_Generic_List_System_Single__
-  commentId: M:NPCEngine.API.SpeechToText.Transcribe(System.Collections.Generic.List{System.Single})
-  name.vb: Transcribe(List(Of Single))
-  fullName: NPCEngine.API.SpeechToText.Transcribe(System.Collections.Generic.List<System.Single>)
-  fullName.vb: NPCEngine.API.SpeechToText.Transcribe(System.Collections.Generic.List(Of System.Single))
-  nameWithType: SpeechToText.Transcribe(List<Single>)
-  nameWithType.vb: SpeechToText.Transcribe(List(Of Single))
+- uid: NPCEngine.API.SpeechToText.SetDeviceFuture(System.Int32)
+  name: SetDeviceFuture(Int32)
+  href: api/NPCEngine.API.SpeechToText.html#NPCEngine_API_SpeechToText_SetDeviceFuture_System_Int32_
+  commentId: M:NPCEngine.API.SpeechToText.SetDeviceFuture(System.Int32)
+  fullName: NPCEngine.API.SpeechToText.SetDeviceFuture(System.Int32)
+  nameWithType: SpeechToText.SetDeviceFuture(Int32)
+- uid: NPCEngine.API.SpeechToText.SetDeviceFuture*
+  name: SetDeviceFuture
+  href: api/NPCEngine.API.SpeechToText.html#NPCEngine_API_SpeechToText_SetDeviceFuture_
+  commentId: Overload:NPCEngine.API.SpeechToText.SetDeviceFuture
+  isSpec: "True"
+  fullName: NPCEngine.API.SpeechToText.SetDeviceFuture
+  nameWithType: SpeechToText.SetDeviceFuture
+- uid: NPCEngine.API.SpeechToText.Transcribe(System.Collections.Generic.List{System.Single},Action{System.String})
+  name: Transcribe(List<Single>, Action<String>)
+  href: api/NPCEngine.API.SpeechToText.html#NPCEngine_API_SpeechToText_Transcribe_System_Collections_Generic_List_System_Single__Action_System_String__
+  commentId: M:NPCEngine.API.SpeechToText.Transcribe(System.Collections.Generic.List{System.Single},Action{System.String})
+  name.vb: Transcribe(List(Of Single), Action(Of String))
+  fullName: NPCEngine.API.SpeechToText.Transcribe(System.Collections.Generic.List<System.Single>, Action<System.String>)
+  fullName.vb: NPCEngine.API.SpeechToText.Transcribe(System.Collections.Generic.List(Of System.Single), Action(Of System.String))
+  nameWithType: SpeechToText.Transcribe(List<Single>, Action<String>)
+  nameWithType.vb: SpeechToText.Transcribe(List(Of Single), Action(Of String))
 - uid: NPCEngine.API.SpeechToText.Transcribe*
   name: Transcribe
   href: api/NPCEngine.API.SpeechToText.html#NPCEngine_API_SpeechToText_Transcribe_
@@ -255,18 +503,151 @@ references:
   isSpec: "True"
   fullName: NPCEngine.API.SpeechToText.Transcribe
   nameWithType: SpeechToText.Transcribe
+- uid: NPCEngine.API.SpeechToText.TranscribeFuture(System.Collections.Generic.List{System.Single})
+  name: TranscribeFuture(List<Single>)
+  href: api/NPCEngine.API.SpeechToText.html#NPCEngine_API_SpeechToText_TranscribeFuture_System_Collections_Generic_List_System_Single__
+  commentId: M:NPCEngine.API.SpeechToText.TranscribeFuture(System.Collections.Generic.List{System.Single})
+  name.vb: TranscribeFuture(List(Of Single))
+  fullName: NPCEngine.API.SpeechToText.TranscribeFuture(System.Collections.Generic.List<System.Single>)
+  fullName.vb: NPCEngine.API.SpeechToText.TranscribeFuture(System.Collections.Generic.List(Of System.Single))
+  nameWithType: SpeechToText.TranscribeFuture(List<Single>)
+  nameWithType.vb: SpeechToText.TranscribeFuture(List(Of Single))
+- uid: NPCEngine.API.SpeechToText.TranscribeFuture*
+  name: TranscribeFuture
+  href: api/NPCEngine.API.SpeechToText.html#NPCEngine_API_SpeechToText_TranscribeFuture_
+  commentId: Overload:NPCEngine.API.SpeechToText.TranscribeFuture
+  isSpec: "True"
+  fullName: NPCEngine.API.SpeechToText.TranscribeFuture
+  nameWithType: SpeechToText.TranscribeFuture
+- uid: NPCEngine.API.TextGeneration`1
+  name: TextGeneration<ContextType>
+  href: api/NPCEngine.API.TextGeneration-1.html
+  commentId: T:NPCEngine.API.TextGeneration`1
+  name.vb: TextGeneration(Of ContextType)
+  fullName: NPCEngine.API.TextGeneration<ContextType>
+  fullName.vb: NPCEngine.API.TextGeneration(Of ContextType)
+  nameWithType: TextGeneration<ContextType>
+  nameWithType.vb: TextGeneration(Of ContextType)
+- uid: NPCEngine.API.TextGeneration`1.GenerateReply(`0,Action{System.String},System.Single,System.Int32)
+  name: GenerateReply(ContextType, Action<String>, Single, Int32)
+  href: api/NPCEngine.API.TextGeneration-1.html#NPCEngine_API_TextGeneration_1_GenerateReply__0_Action_System_String__System_Single_System_Int32_
+  commentId: M:NPCEngine.API.TextGeneration`1.GenerateReply(`0,Action{System.String},System.Single,System.Int32)
+  name.vb: GenerateReply(ContextType, Action(Of String), Single, Int32)
+  fullName: NPCEngine.API.TextGeneration<ContextType>.GenerateReply(ContextType, Action<System.String>, System.Single, System.Int32)
+  fullName.vb: NPCEngine.API.TextGeneration(Of ContextType).GenerateReply(ContextType, Action(Of System.String), System.Single, System.Int32)
+  nameWithType: TextGeneration<ContextType>.GenerateReply(ContextType, Action<String>, Single, Int32)
+  nameWithType.vb: TextGeneration(Of ContextType).GenerateReply(ContextType, Action(Of String), Single, Int32)
+- uid: NPCEngine.API.TextGeneration`1.GenerateReply*
+  name: GenerateReply
+  href: api/NPCEngine.API.TextGeneration-1.html#NPCEngine_API_TextGeneration_1_GenerateReply_
+  commentId: Overload:NPCEngine.API.TextGeneration`1.GenerateReply
+  isSpec: "True"
+  fullName: NPCEngine.API.TextGeneration<ContextType>.GenerateReply
+  fullName.vb: NPCEngine.API.TextGeneration(Of ContextType).GenerateReply
+  nameWithType: TextGeneration<ContextType>.GenerateReply
+  nameWithType.vb: TextGeneration(Of ContextType).GenerateReply
+- uid: NPCEngine.API.TextGeneration`1.GenerateReplyFuture(`0,System.Single,System.Int32)
+  name: GenerateReplyFuture(ContextType, Single, Int32)
+  href: api/NPCEngine.API.TextGeneration-1.html#NPCEngine_API_TextGeneration_1_GenerateReplyFuture__0_System_Single_System_Int32_
+  commentId: M:NPCEngine.API.TextGeneration`1.GenerateReplyFuture(`0,System.Single,System.Int32)
+  fullName: NPCEngine.API.TextGeneration<ContextType>.GenerateReplyFuture(ContextType, System.Single, System.Int32)
+  fullName.vb: NPCEngine.API.TextGeneration(Of ContextType).GenerateReplyFuture(ContextType, System.Single, System.Int32)
+  nameWithType: TextGeneration<ContextType>.GenerateReplyFuture(ContextType, Single, Int32)
+  nameWithType.vb: TextGeneration(Of ContextType).GenerateReplyFuture(ContextType, Single, Int32)
+- uid: NPCEngine.API.TextGeneration`1.GenerateReplyFuture*
+  name: GenerateReplyFuture
+  href: api/NPCEngine.API.TextGeneration-1.html#NPCEngine_API_TextGeneration_1_GenerateReplyFuture_
+  commentId: Overload:NPCEngine.API.TextGeneration`1.GenerateReplyFuture
+  isSpec: "True"
+  fullName: NPCEngine.API.TextGeneration<ContextType>.GenerateReplyFuture
+  fullName.vb: NPCEngine.API.TextGeneration(Of ContextType).GenerateReplyFuture
+  nameWithType: TextGeneration<ContextType>.GenerateReplyFuture
+  nameWithType.vb: TextGeneration(Of ContextType).GenerateReplyFuture
+- uid: NPCEngine.API.TextGeneration`1.GetPromptTemplate(Action{System.String})
+  name: GetPromptTemplate(Action<String>)
+  href: api/NPCEngine.API.TextGeneration-1.html#NPCEngine_API_TextGeneration_1_GetPromptTemplate_Action_System_String__
+  commentId: M:NPCEngine.API.TextGeneration`1.GetPromptTemplate(Action{System.String})
+  name.vb: GetPromptTemplate(Action(Of String))
+  fullName: NPCEngine.API.TextGeneration<ContextType>.GetPromptTemplate(Action<System.String>)
+  fullName.vb: NPCEngine.API.TextGeneration(Of ContextType).GetPromptTemplate(Action(Of System.String))
+  nameWithType: TextGeneration<ContextType>.GetPromptTemplate(Action<String>)
+  nameWithType.vb: TextGeneration(Of ContextType).GetPromptTemplate(Action(Of String))
+- uid: NPCEngine.API.TextGeneration`1.GetPromptTemplate*
+  name: GetPromptTemplate
+  href: api/NPCEngine.API.TextGeneration-1.html#NPCEngine_API_TextGeneration_1_GetPromptTemplate_
+  commentId: Overload:NPCEngine.API.TextGeneration`1.GetPromptTemplate
+  isSpec: "True"
+  fullName: NPCEngine.API.TextGeneration<ContextType>.GetPromptTemplate
+  fullName.vb: NPCEngine.API.TextGeneration(Of ContextType).GetPromptTemplate
+  nameWithType: TextGeneration<ContextType>.GetPromptTemplate
+  nameWithType.vb: TextGeneration(Of ContextType).GetPromptTemplate
+- uid: NPCEngine.API.TextGeneration`1.GetPromptTemplateFuture
+  name: GetPromptTemplateFuture()
+  href: api/NPCEngine.API.TextGeneration-1.html#NPCEngine_API_TextGeneration_1_GetPromptTemplateFuture
+  commentId: M:NPCEngine.API.TextGeneration`1.GetPromptTemplateFuture
+  fullName: NPCEngine.API.TextGeneration<ContextType>.GetPromptTemplateFuture()
+  fullName.vb: NPCEngine.API.TextGeneration(Of ContextType).GetPromptTemplateFuture()
+  nameWithType: TextGeneration<ContextType>.GetPromptTemplateFuture()
+  nameWithType.vb: TextGeneration(Of ContextType).GetPromptTemplateFuture()
+- uid: NPCEngine.API.TextGeneration`1.GetPromptTemplateFuture*
+  name: GetPromptTemplateFuture
+  href: api/NPCEngine.API.TextGeneration-1.html#NPCEngine_API_TextGeneration_1_GetPromptTemplateFuture_
+  commentId: Overload:NPCEngine.API.TextGeneration`1.GetPromptTemplateFuture
+  isSpec: "True"
+  fullName: NPCEngine.API.TextGeneration<ContextType>.GetPromptTemplateFuture
+  fullName.vb: NPCEngine.API.TextGeneration(Of ContextType).GetPromptTemplateFuture
+  nameWithType: TextGeneration<ContextType>.GetPromptTemplateFuture
+  nameWithType.vb: TextGeneration(Of ContextType).GetPromptTemplateFuture
+- uid: NPCEngine.API.TextGeneration`1.GetSpecialTokens(Action{System.Collections.Generic.Dictionary{System.String,System.String}})
+  name: GetSpecialTokens(Action<Dictionary<String, String>>)
+  href: api/NPCEngine.API.TextGeneration-1.html#NPCEngine_API_TextGeneration_1_GetSpecialTokens_Action_System_Collections_Generic_Dictionary_System_String_System_String___
+  commentId: M:NPCEngine.API.TextGeneration`1.GetSpecialTokens(Action{System.Collections.Generic.Dictionary{System.String,System.String}})
+  name.vb: GetSpecialTokens(Action(Of Dictionary(Of String, String)))
+  fullName: NPCEngine.API.TextGeneration<ContextType>.GetSpecialTokens(Action<System.Collections.Generic.Dictionary<System.String, System.String>>)
+  fullName.vb: NPCEngine.API.TextGeneration(Of ContextType).GetSpecialTokens(Action(Of System.Collections.Generic.Dictionary(Of System.String, System.String)))
+  nameWithType: TextGeneration<ContextType>.GetSpecialTokens(Action<Dictionary<String, String>>)
+  nameWithType.vb: TextGeneration(Of ContextType).GetSpecialTokens(Action(Of Dictionary(Of String, String)))
+- uid: NPCEngine.API.TextGeneration`1.GetSpecialTokens*
+  name: GetSpecialTokens
+  href: api/NPCEngine.API.TextGeneration-1.html#NPCEngine_API_TextGeneration_1_GetSpecialTokens_
+  commentId: Overload:NPCEngine.API.TextGeneration`1.GetSpecialTokens
+  isSpec: "True"
+  fullName: NPCEngine.API.TextGeneration<ContextType>.GetSpecialTokens
+  fullName.vb: NPCEngine.API.TextGeneration(Of ContextType).GetSpecialTokens
+  nameWithType: TextGeneration<ContextType>.GetSpecialTokens
+  nameWithType.vb: TextGeneration(Of ContextType).GetSpecialTokens
+- uid: NPCEngine.API.TextGeneration`1.GetSpecialTokensFuture
+  name: GetSpecialTokensFuture()
+  href: api/NPCEngine.API.TextGeneration-1.html#NPCEngine_API_TextGeneration_1_GetSpecialTokensFuture
+  commentId: M:NPCEngine.API.TextGeneration`1.GetSpecialTokensFuture
+  fullName: NPCEngine.API.TextGeneration<ContextType>.GetSpecialTokensFuture()
+  fullName.vb: NPCEngine.API.TextGeneration(Of ContextType).GetSpecialTokensFuture()
+  nameWithType: TextGeneration<ContextType>.GetSpecialTokensFuture()
+  nameWithType.vb: TextGeneration(Of ContextType).GetSpecialTokensFuture()
+- uid: NPCEngine.API.TextGeneration`1.GetSpecialTokensFuture*
+  name: GetSpecialTokensFuture
+  href: api/NPCEngine.API.TextGeneration-1.html#NPCEngine_API_TextGeneration_1_GetSpecialTokensFuture_
+  commentId: Overload:NPCEngine.API.TextGeneration`1.GetSpecialTokensFuture
+  isSpec: "True"
+  fullName: NPCEngine.API.TextGeneration<ContextType>.GetSpecialTokensFuture
+  fullName.vb: NPCEngine.API.TextGeneration(Of ContextType).GetSpecialTokensFuture
+  nameWithType: TextGeneration<ContextType>.GetSpecialTokensFuture
+  nameWithType.vb: TextGeneration(Of ContextType).GetSpecialTokensFuture
 - uid: NPCEngine.API.TextToSpeech
   name: TextToSpeech
   href: api/NPCEngine.API.TextToSpeech.html
   commentId: T:NPCEngine.API.TextToSpeech
   fullName: NPCEngine.API.TextToSpeech
   nameWithType: TextToSpeech
-- uid: NPCEngine.API.TextToSpeech.GetNextResult
-  name: GetNextResult()
-  href: api/NPCEngine.API.TextToSpeech.html#NPCEngine_API_TextToSpeech_GetNextResult
-  commentId: M:NPCEngine.API.TextToSpeech.GetNextResult
-  fullName: NPCEngine.API.TextToSpeech.GetNextResult()
-  nameWithType: TextToSpeech.GetNextResult()
+- uid: NPCEngine.API.TextToSpeech.GetNextResult(Action{System.Collections.Generic.List{System.Single}})
+  name: GetNextResult(Action<List<Single>>)
+  href: api/NPCEngine.API.TextToSpeech.html#NPCEngine_API_TextToSpeech_GetNextResult_Action_System_Collections_Generic_List_System_Single___
+  commentId: M:NPCEngine.API.TextToSpeech.GetNextResult(Action{System.Collections.Generic.List{System.Single}})
+  name.vb: GetNextResult(Action(Of List(Of Single)))
+  fullName: NPCEngine.API.TextToSpeech.GetNextResult(Action<System.Collections.Generic.List<System.Single>>)
+  fullName.vb: NPCEngine.API.TextToSpeech.GetNextResult(Action(Of System.Collections.Generic.List(Of System.Single)))
+  nameWithType: TextToSpeech.GetNextResult(Action<List<Single>>)
+  nameWithType.vb: TextToSpeech.GetNextResult(Action(Of List(Of Single)))
 - uid: NPCEngine.API.TextToSpeech.GetNextResult*
   name: GetNextResult
   href: api/NPCEngine.API.TextToSpeech.html#NPCEngine_API_TextToSpeech_GetNextResult_
@@ -274,41 +655,38 @@ references:
   isSpec: "True"
   fullName: NPCEngine.API.TextToSpeech.GetNextResult
   nameWithType: TextToSpeech.GetNextResult
-- uid: NPCEngine.API.TextToSpeech.GetNextResultCoroutine(Action{System.Collections.Generic.List{System.Single}})
-  name: GetNextResultCoroutine(Action<List<Single>>)
-  href: api/NPCEngine.API.TextToSpeech.html#NPCEngine_API_TextToSpeech_GetNextResultCoroutine_Action_System_Collections_Generic_List_System_Single___
-  commentId: M:NPCEngine.API.TextToSpeech.GetNextResultCoroutine(Action{System.Collections.Generic.List{System.Single}})
-  name.vb: GetNextResultCoroutine(Action(Of List(Of Single)))
-  fullName: NPCEngine.API.TextToSpeech.GetNextResultCoroutine(Action<System.Collections.Generic.List<System.Single>>)
-  fullName.vb: NPCEngine.API.TextToSpeech.GetNextResultCoroutine(Action(Of System.Collections.Generic.List(Of System.Single)))
-  nameWithType: TextToSpeech.GetNextResultCoroutine(Action<List<Single>>)
-  nameWithType.vb: TextToSpeech.GetNextResultCoroutine(Action(Of List(Of Single)))
-- uid: NPCEngine.API.TextToSpeech.GetNextResultCoroutine*
-  name: GetNextResultCoroutine
-  href: api/NPCEngine.API.TextToSpeech.html#NPCEngine_API_TextToSpeech_GetNextResultCoroutine_
-  commentId: Overload:NPCEngine.API.TextToSpeech.GetNextResultCoroutine
+- uid: NPCEngine.API.TextToSpeech.GetNextResultFuture
+  name: GetNextResultFuture()
+  href: api/NPCEngine.API.TextToSpeech.html#NPCEngine_API_TextToSpeech_GetNextResultFuture
+  commentId: M:NPCEngine.API.TextToSpeech.GetNextResultFuture
+  fullName: NPCEngine.API.TextToSpeech.GetNextResultFuture()
+  nameWithType: TextToSpeech.GetNextResultFuture()
+- uid: NPCEngine.API.TextToSpeech.GetNextResultFuture*
+  name: GetNextResultFuture
+  href: api/NPCEngine.API.TextToSpeech.html#NPCEngine_API_TextToSpeech_GetNextResultFuture_
+  commentId: Overload:NPCEngine.API.TextToSpeech.GetNextResultFuture
   isSpec: "True"
-  fullName: NPCEngine.API.TextToSpeech.GetNextResultCoroutine
-  nameWithType: TextToSpeech.GetNextResultCoroutine
-- uid: NPCEngine.API.TextToSpeech.GetSpeakerIds
-  name: GetSpeakerIds()
-  href: api/NPCEngine.API.TextToSpeech.html#NPCEngine_API_TextToSpeech_GetSpeakerIds
-  commentId: M:NPCEngine.API.TextToSpeech.GetSpeakerIds
-  fullName: NPCEngine.API.TextToSpeech.GetSpeakerIds()
-  nameWithType: TextToSpeech.GetSpeakerIds()
-- uid: NPCEngine.API.TextToSpeech.GetSpeakerIds*
-  name: GetSpeakerIds
-  href: api/NPCEngine.API.TextToSpeech.html#NPCEngine_API_TextToSpeech_GetSpeakerIds_
-  commentId: Overload:NPCEngine.API.TextToSpeech.GetSpeakerIds
+  fullName: NPCEngine.API.TextToSpeech.GetNextResultFuture
+  nameWithType: TextToSpeech.GetNextResultFuture
+- uid: NPCEngine.API.TextToSpeech.GetSpeakerIdsFuture
+  name: GetSpeakerIdsFuture()
+  href: api/NPCEngine.API.TextToSpeech.html#NPCEngine_API_TextToSpeech_GetSpeakerIdsFuture
+  commentId: M:NPCEngine.API.TextToSpeech.GetSpeakerIdsFuture
+  fullName: NPCEngine.API.TextToSpeech.GetSpeakerIdsFuture()
+  nameWithType: TextToSpeech.GetSpeakerIdsFuture()
+- uid: NPCEngine.API.TextToSpeech.GetSpeakerIdsFuture*
+  name: GetSpeakerIdsFuture
+  href: api/NPCEngine.API.TextToSpeech.html#NPCEngine_API_TextToSpeech_GetSpeakerIdsFuture_
+  commentId: Overload:NPCEngine.API.TextToSpeech.GetSpeakerIdsFuture
   isSpec: "True"
-  fullName: NPCEngine.API.TextToSpeech.GetSpeakerIds
-  nameWithType: TextToSpeech.GetSpeakerIds
-- uid: NPCEngine.API.TextToSpeech.StartTTS(System.String,System.String,System.Int32)
-  name: StartTTS(String, String, Int32)
-  href: api/NPCEngine.API.TextToSpeech.html#NPCEngine_API_TextToSpeech_StartTTS_System_String_System_String_System_Int32_
-  commentId: M:NPCEngine.API.TextToSpeech.StartTTS(System.String,System.String,System.Int32)
-  fullName: NPCEngine.API.TextToSpeech.StartTTS(System.String, System.String, System.Int32)
-  nameWithType: TextToSpeech.StartTTS(String, String, Int32)
+  fullName: NPCEngine.API.TextToSpeech.GetSpeakerIdsFuture
+  nameWithType: TextToSpeech.GetSpeakerIdsFuture
+- uid: NPCEngine.API.TextToSpeech.StartTTS(System.String,System.String,System.Int32,Action)
+  name: StartTTS(String, String, Int32, Action)
+  href: api/NPCEngine.API.TextToSpeech.html#NPCEngine_API_TextToSpeech_StartTTS_System_String_System_String_System_Int32_Action_
+  commentId: M:NPCEngine.API.TextToSpeech.StartTTS(System.String,System.String,System.Int32,Action)
+  fullName: NPCEngine.API.TextToSpeech.StartTTS(System.String, System.String, System.Int32, Action)
+  nameWithType: TextToSpeech.StartTTS(String, String, Int32, Action)
 - uid: NPCEngine.API.TextToSpeech.StartTTS*
   name: StartTTS
   href: api/NPCEngine.API.TextToSpeech.html#NPCEngine_API_TextToSpeech_StartTTS_
@@ -316,6 +694,19 @@ references:
   isSpec: "True"
   fullName: NPCEngine.API.TextToSpeech.StartTTS
   nameWithType: TextToSpeech.StartTTS
+- uid: NPCEngine.API.TextToSpeech.StartTTSFuture(System.String,System.String,System.Int32)
+  name: StartTTSFuture(String, String, Int32)
+  href: api/NPCEngine.API.TextToSpeech.html#NPCEngine_API_TextToSpeech_StartTTSFuture_System_String_System_String_System_Int32_
+  commentId: M:NPCEngine.API.TextToSpeech.StartTTSFuture(System.String,System.String,System.Int32)
+  fullName: NPCEngine.API.TextToSpeech.StartTTSFuture(System.String, System.String, System.Int32)
+  nameWithType: TextToSpeech.StartTTSFuture(String, String, Int32)
+- uid: NPCEngine.API.TextToSpeech.StartTTSFuture*
+  name: StartTTSFuture
+  href: api/NPCEngine.API.TextToSpeech.html#NPCEngine_API_TextToSpeech_StartTTSFuture_
+  commentId: Overload:NPCEngine.API.TextToSpeech.StartTTSFuture
+  isSpec: "True"
+  fullName: NPCEngine.API.TextToSpeech.StartTTSFuture
+  nameWithType: TextToSpeech.StartTTSFuture
 - uid: NPCEngine.Components
   name: NPCEngine.Components
   href: api/NPCEngine.Components.html
@@ -779,6 +1170,12 @@ references:
   commentId: F:NPCEngine.Components.FantasyChatbotContext.persona
   fullName: NPCEngine.Components.FantasyChatbotContext.persona
   nameWithType: FantasyChatbotContext.persona
+- uid: NPCEngine.Components.FantasyChatbotTextGeneration
+  name: FantasyChatbotTextGeneration
+  href: api/NPCEngine.Components.FantasyChatbotTextGeneration.html
+  commentId: T:NPCEngine.Components.FantasyChatbotTextGeneration
+  fullName: NPCEngine.Components.FantasyChatbotTextGeneration
+  nameWithType: FantasyChatbotTextGeneration
 - uid: NPCEngine.Components.NonPlayerCharacter
   name: NonPlayerCharacter
   href: api/NPCEngine.Components.NonPlayerCharacter.html
@@ -893,19 +1290,6 @@ references:
   commentId: F:NPCEngine.Components.NonPlayerCharacter.history
   fullName: NPCEngine.Components.NonPlayerCharacter.history
   nameWithType: NonPlayerCharacter.history
-- uid: NPCEngine.Components.NonPlayerCharacter.Initialized
-  name: Initialized
-  href: api/NPCEngine.Components.NonPlayerCharacter.html#NPCEngine_Components_NonPlayerCharacter_Initialized
-  commentId: P:NPCEngine.Components.NonPlayerCharacter.Initialized
-  fullName: NPCEngine.Components.NonPlayerCharacter.Initialized
-  nameWithType: NonPlayerCharacter.Initialized
-- uid: NPCEngine.Components.NonPlayerCharacter.Initialized*
-  name: Initialized
-  href: api/NPCEngine.Components.NonPlayerCharacter.html#NPCEngine_Components_NonPlayerCharacter_Initialized_
-  commentId: Overload:NPCEngine.Components.NonPlayerCharacter.Initialized
-  isSpec: "True"
-  fullName: NPCEngine.Components.NonPlayerCharacter.Initialized
-  nameWithType: NonPlayerCharacter.Initialized
 - uid: NPCEngine.Components.NonPlayerCharacter.nChunksTextGeneration
   name: nChunksTextGeneration
   href: api/NPCEngine.Components.NonPlayerCharacter.html#NPCEngine_Components_NonPlayerCharacter_nChunksTextGeneration
@@ -998,6 +1382,180 @@ references:
   commentId: F:NPCEngine.Components.NonPlayerCharacter.voiceId
   fullName: NPCEngine.Components.NonPlayerCharacter.voiceId
   nameWithType: NonPlayerCharacter.voiceId
+- uid: NPCEngine.Components.NPCEngineManager
+  name: NPCEngineManager
+  href: api/NPCEngine.Components.NPCEngineManager.html
+  commentId: T:NPCEngine.Components.NPCEngineManager
+  fullName: NPCEngine.Components.NPCEngineManager
+  nameWithType: NPCEngineManager
+- uid: NPCEngine.Components.NPCEngineManager.DownloadModel(System.String)
+  name: DownloadModel(String)
+  href: api/NPCEngine.Components.NPCEngineManager.html#NPCEngine_Components_NPCEngineManager_DownloadModel_System_String_
+  commentId: M:NPCEngine.Components.NPCEngineManager.DownloadModel(System.String)
+  fullName: NPCEngine.Components.NPCEngineManager.DownloadModel(System.String)
+  nameWithType: NPCEngineManager.DownloadModel(String)
+- uid: NPCEngine.Components.NPCEngineManager.DownloadModel*
+  name: DownloadModel
+  href: api/NPCEngine.Components.NPCEngineManager.html#NPCEngine_Components_NPCEngineManager_DownloadModel_
+  commentId: Overload:NPCEngine.Components.NPCEngineManager.DownloadModel
+  isSpec: "True"
+  fullName: NPCEngine.Components.NPCEngineManager.DownloadModel
+  nameWithType: NPCEngineManager.DownloadModel
+- uid: NPCEngine.Components.NPCEngineManager.GetAPI*
+  name: GetAPI
+  href: api/NPCEngine.Components.NPCEngineManager.html#NPCEngine_Components_NPCEngineManager_GetAPI_
+  commentId: Overload:NPCEngine.Components.NPCEngineManager.GetAPI
+  isSpec: "True"
+  fullName: NPCEngine.Components.NPCEngineManager.GetAPI
+  nameWithType: NPCEngineManager.GetAPI
+- uid: NPCEngine.Components.NPCEngineManager.GetAPI``1
+  name: GetAPI<T>()
+  href: api/NPCEngine.Components.NPCEngineManager.html#NPCEngine_Components_NPCEngineManager_GetAPI__1
+  commentId: M:NPCEngine.Components.NPCEngineManager.GetAPI``1
+  name.vb: GetAPI(Of T)()
+  fullName: NPCEngine.Components.NPCEngineManager.GetAPI<T>()
+  fullName.vb: NPCEngine.Components.NPCEngineManager.GetAPI(Of T)()
+  nameWithType: NPCEngineManager.GetAPI<T>()
+  nameWithType.vb: NPCEngineManager.GetAPI(Of T)()
+- uid: NPCEngine.Components.NPCEngineManager.GetAPI``1(System.String)
+  name: GetAPI<T>(String)
+  href: api/NPCEngine.Components.NPCEngineManager.html#NPCEngine_Components_NPCEngineManager_GetAPI__1_System_String_
+  commentId: M:NPCEngine.Components.NPCEngineManager.GetAPI``1(System.String)
+  name.vb: GetAPI(Of T)(String)
+  fullName: NPCEngine.Components.NPCEngineManager.GetAPI<T>(System.String)
+  fullName.vb: NPCEngine.Components.NPCEngineManager.GetAPI(Of T)(System.String)
+  nameWithType: NPCEngineManager.GetAPI<T>(String)
+  nameWithType.vb: NPCEngineManager.GetAPI(Of T)(String)
+- uid: NPCEngine.Components.NPCEngineManager.InferenceEngineProcessId
+  name: InferenceEngineProcessId
+  href: api/NPCEngine.Components.NPCEngineManager.html#NPCEngine_Components_NPCEngineManager_InferenceEngineProcessId
+  commentId: P:NPCEngine.Components.NPCEngineManager.InferenceEngineProcessId
+  fullName: NPCEngine.Components.NPCEngineManager.InferenceEngineProcessId
+  nameWithType: NPCEngineManager.InferenceEngineProcessId
+- uid: NPCEngine.Components.NPCEngineManager.InferenceEngineProcessId*
+  name: InferenceEngineProcessId
+  href: api/NPCEngine.Components.NPCEngineManager.html#NPCEngine_Components_NPCEngineManager_InferenceEngineProcessId_
+  commentId: Overload:NPCEngine.Components.NPCEngineManager.InferenceEngineProcessId
+  isSpec: "True"
+  fullName: NPCEngine.Components.NPCEngineManager.InferenceEngineProcessId
+  nameWithType: NPCEngineManager.InferenceEngineProcessId
+- uid: NPCEngine.Components.NPCEngineManager.InferenceEngineRunning
+  name: InferenceEngineRunning
+  href: api/NPCEngine.Components.NPCEngineManager.html#NPCEngine_Components_NPCEngineManager_InferenceEngineRunning
+  commentId: P:NPCEngine.Components.NPCEngineManager.InferenceEngineRunning
+  fullName: NPCEngine.Components.NPCEngineManager.InferenceEngineRunning
+  nameWithType: NPCEngineManager.InferenceEngineRunning
+- uid: NPCEngine.Components.NPCEngineManager.InferenceEngineRunning*
+  name: InferenceEngineRunning
+  href: api/NPCEngine.Components.NPCEngineManager.html#NPCEngine_Components_NPCEngineManager_InferenceEngineRunning_
+  commentId: Overload:NPCEngine.Components.NPCEngineManager.InferenceEngineRunning
+  isSpec: "True"
+  fullName: NPCEngine.Components.NPCEngineManager.InferenceEngineRunning
+  nameWithType: NPCEngineManager.InferenceEngineRunning
+- uid: NPCEngine.Components.NPCEngineManager.Services
+  name: Services
+  href: api/NPCEngine.Components.NPCEngineManager.html#NPCEngine_Components_NPCEngineManager_Services
+  commentId: P:NPCEngine.Components.NPCEngineManager.Services
+  fullName: NPCEngine.Components.NPCEngineManager.Services
+  nameWithType: NPCEngineManager.Services
+- uid: NPCEngine.Components.NPCEngineManager.Services*
+  name: Services
+  href: api/NPCEngine.Components.NPCEngineManager.html#NPCEngine_Components_NPCEngineManager_Services_
+  commentId: Overload:NPCEngine.Components.NPCEngineManager.Services
+  isSpec: "True"
+  fullName: NPCEngine.Components.NPCEngineManager.Services
+  nameWithType: NPCEngineManager.Services
+- uid: NPCEngine.Components.NPCEngineManager.ServicesById
+  name: ServicesById
+  href: api/NPCEngine.Components.NPCEngineManager.html#NPCEngine_Components_NPCEngineManager_ServicesById
+  commentId: P:NPCEngine.Components.NPCEngineManager.ServicesById
+  fullName: NPCEngine.Components.NPCEngineManager.ServicesById
+  nameWithType: NPCEngineManager.ServicesById
+- uid: NPCEngine.Components.NPCEngineManager.ServicesById*
+  name: ServicesById
+  href: api/NPCEngine.Components.NPCEngineManager.html#NPCEngine_Components_NPCEngineManager_ServicesById_
+  commentId: Overload:NPCEngine.Components.NPCEngineManager.ServicesById
+  isSpec: "True"
+  fullName: NPCEngine.Components.NPCEngineManager.ServicesById
+  nameWithType: NPCEngineManager.ServicesById
+- uid: NPCEngine.Components.NPCEngineManager.ServiceStatuses
+  name: ServiceStatuses
+  href: api/NPCEngine.Components.NPCEngineManager.html#NPCEngine_Components_NPCEngineManager_ServiceStatuses
+  commentId: P:NPCEngine.Components.NPCEngineManager.ServiceStatuses
+  fullName: NPCEngine.Components.NPCEngineManager.ServiceStatuses
+  nameWithType: NPCEngineManager.ServiceStatuses
+- uid: NPCEngine.Components.NPCEngineManager.ServiceStatuses*
+  name: ServiceStatuses
+  href: api/NPCEngine.Components.NPCEngineManager.html#NPCEngine_Components_NPCEngineManager_ServiceStatuses_
+  commentId: Overload:NPCEngine.Components.NPCEngineManager.ServiceStatuses
+  isSpec: "True"
+  fullName: NPCEngine.Components.NPCEngineManager.ServiceStatuses
+  nameWithType: NPCEngineManager.ServiceStatuses
+- uid: NPCEngine.Components.NPCEngineManager.ServiceStatusesById
+  name: ServiceStatusesById
+  href: api/NPCEngine.Components.NPCEngineManager.html#NPCEngine_Components_NPCEngineManager_ServiceStatusesById
+  commentId: P:NPCEngine.Components.NPCEngineManager.ServiceStatusesById
+  fullName: NPCEngine.Components.NPCEngineManager.ServiceStatusesById
+  nameWithType: NPCEngineManager.ServiceStatusesById
+- uid: NPCEngine.Components.NPCEngineManager.ServiceStatusesById*
+  name: ServiceStatusesById
+  href: api/NPCEngine.Components.NPCEngineManager.html#NPCEngine_Components_NPCEngineManager_ServiceStatusesById_
+  commentId: Overload:NPCEngine.Components.NPCEngineManager.ServiceStatusesById
+  isSpec: "True"
+  fullName: NPCEngine.Components.NPCEngineManager.ServiceStatusesById
+  nameWithType: NPCEngineManager.ServiceStatusesById
+- uid: NPCEngine.Components.NPCEngineManager.StartInferenceEngine
+  name: StartInferenceEngine()
+  href: api/NPCEngine.Components.NPCEngineManager.html#NPCEngine_Components_NPCEngineManager_StartInferenceEngine
+  commentId: M:NPCEngine.Components.NPCEngineManager.StartInferenceEngine
+  fullName: NPCEngine.Components.NPCEngineManager.StartInferenceEngine()
+  nameWithType: NPCEngineManager.StartInferenceEngine()
+- uid: NPCEngine.Components.NPCEngineManager.StartInferenceEngine*
+  name: StartInferenceEngine
+  href: api/NPCEngine.Components.NPCEngineManager.html#NPCEngine_Components_NPCEngineManager_StartInferenceEngine_
+  commentId: Overload:NPCEngine.Components.NPCEngineManager.StartInferenceEngine
+  isSpec: "True"
+  fullName: NPCEngine.Components.NPCEngineManager.StartInferenceEngine
+  nameWithType: NPCEngineManager.StartInferenceEngine
+- uid: NPCEngine.Components.NPCEngineManager.StopInferenceEngine
+  name: StopInferenceEngine()
+  href: api/NPCEngine.Components.NPCEngineManager.html#NPCEngine_Components_NPCEngineManager_StopInferenceEngine
+  commentId: M:NPCEngine.Components.NPCEngineManager.StopInferenceEngine
+  fullName: NPCEngine.Components.NPCEngineManager.StopInferenceEngine()
+  nameWithType: NPCEngineManager.StopInferenceEngine()
+- uid: NPCEngine.Components.NPCEngineManager.StopInferenceEngine*
+  name: StopInferenceEngine
+  href: api/NPCEngine.Components.NPCEngineManager.html#NPCEngine_Components_NPCEngineManager_StopInferenceEngine_
+  commentId: Overload:NPCEngine.Components.NPCEngineManager.StopInferenceEngine
+  isSpec: "True"
+  fullName: NPCEngine.Components.NPCEngineManager.StopInferenceEngine
+  nameWithType: NPCEngineManager.StopInferenceEngine
+- uid: NPCEngine.Components.NPCEngineManager.UpdateServices
+  name: UpdateServices()
+  href: api/NPCEngine.Components.NPCEngineManager.html#NPCEngine_Components_NPCEngineManager_UpdateServices
+  commentId: M:NPCEngine.Components.NPCEngineManager.UpdateServices
+  fullName: NPCEngine.Components.NPCEngineManager.UpdateServices()
+  nameWithType: NPCEngineManager.UpdateServices()
+- uid: NPCEngine.Components.NPCEngineManager.UpdateServices*
+  name: UpdateServices
+  href: api/NPCEngine.Components.NPCEngineManager.html#NPCEngine_Components_NPCEngineManager_UpdateServices_
+  commentId: Overload:NPCEngine.Components.NPCEngineManager.UpdateServices
+  isSpec: "True"
+  fullName: NPCEngine.Components.NPCEngineManager.UpdateServices
+  nameWithType: NPCEngineManager.UpdateServices
+- uid: NPCEngine.Components.NPCEngineManager.UpdateServiceStatuses
+  name: UpdateServiceStatuses()
+  href: api/NPCEngine.Components.NPCEngineManager.html#NPCEngine_Components_NPCEngineManager_UpdateServiceStatuses
+  commentId: M:NPCEngine.Components.NPCEngineManager.UpdateServiceStatuses
+  fullName: NPCEngine.Components.NPCEngineManager.UpdateServiceStatuses()
+  nameWithType: NPCEngineManager.UpdateServiceStatuses()
+- uid: NPCEngine.Components.NPCEngineManager.UpdateServiceStatuses*
+  name: UpdateServiceStatuses
+  href: api/NPCEngine.Components.NPCEngineManager.html#NPCEngine_Components_NPCEngineManager_UpdateServiceStatuses_
+  commentId: Overload:NPCEngine.Components.NPCEngineManager.UpdateServiceStatuses
+  isSpec: "True"
+  fullName: NPCEngine.Components.NPCEngineManager.UpdateServiceStatuses
+  nameWithType: NPCEngineManager.UpdateServiceStatuses
 - uid: NPCEngine.Components.NPCEngineSTT
   name: NPCEngineSTT
   href: api/NPCEngine.Components.NPCEngineSTT.html
@@ -1168,6 +1726,124 @@ references:
   commentId: F:NPCEngine.Components.PlayerCharacter.VerticalMargin
   fullName: NPCEngine.Components.PlayerCharacter.VerticalMargin
   nameWithType: PlayerCharacter.VerticalMargin
+- uid: NPCEngine.NonPlayerCharacterEditor
+  name: NonPlayerCharacterEditor
+  href: api/NPCEngine.NonPlayerCharacterEditor.html
+  commentId: T:NPCEngine.NonPlayerCharacterEditor
+  fullName: NPCEngine.NonPlayerCharacterEditor
+  nameWithType: NonPlayerCharacterEditor
+- uid: NPCEngine.NonPlayerCharacterEditor.OnInspectorGUI
+  name: OnInspectorGUI()
+  href: api/NPCEngine.NonPlayerCharacterEditor.html#NPCEngine_NonPlayerCharacterEditor_OnInspectorGUI
+  commentId: M:NPCEngine.NonPlayerCharacterEditor.OnInspectorGUI
+  fullName: NPCEngine.NonPlayerCharacterEditor.OnInspectorGUI()
+  nameWithType: NonPlayerCharacterEditor.OnInspectorGUI()
+- uid: NPCEngine.NonPlayerCharacterEditor.OnInspectorGUI*
+  name: OnInspectorGUI
+  href: api/NPCEngine.NonPlayerCharacterEditor.html#NPCEngine_NonPlayerCharacterEditor_OnInspectorGUI_
+  commentId: Overload:NPCEngine.NonPlayerCharacterEditor.OnInspectorGUI
+  isSpec: "True"
+  fullName: NPCEngine.NonPlayerCharacterEditor.OnInspectorGUI
+  nameWithType: NonPlayerCharacterEditor.OnInspectorGUI
+- uid: NPCEngine.NPCEngineConfig
+  name: NPCEngineConfig
+  href: api/NPCEngine.NPCEngineConfig.html
+  commentId: T:NPCEngine.NPCEngineConfig
+  fullName: NPCEngine.NPCEngineConfig
+  nameWithType: NPCEngineConfig
+- uid: NPCEngine.NPCEngineConfig.connectToExistingServer
+  name: connectToExistingServer
+  href: api/NPCEngine.NPCEngineConfig.html#NPCEngine_NPCEngineConfig_connectToExistingServer
+  commentId: F:NPCEngine.NPCEngineConfig.connectToExistingServer
+  fullName: NPCEngine.NPCEngineConfig.connectToExistingServer
+  nameWithType: NPCEngineConfig.connectToExistingServer
+- uid: NPCEngine.NPCEngineConfig.debugLogs
+  name: debugLogs
+  href: api/NPCEngine.NPCEngineConfig.html#NPCEngine_NPCEngineConfig_debugLogs
+  commentId: F:NPCEngine.NPCEngineConfig.debugLogs
+  fullName: NPCEngine.NPCEngineConfig.debugLogs
+  nameWithType: NPCEngineConfig.debugLogs
+- uid: NPCEngine.NPCEngineConfig.modelsPath
+  name: modelsPath
+  href: api/NPCEngine.NPCEngineConfig.html#NPCEngine_NPCEngineConfig_modelsPath
+  commentId: F:NPCEngine.NPCEngineConfig.modelsPath
+  fullName: NPCEngine.NPCEngineConfig.modelsPath
+  nameWithType: NPCEngineConfig.modelsPath
+- uid: NPCEngine.NPCEngineConfig.npcEnginePath
+  name: npcEnginePath
+  href: api/NPCEngine.NPCEngineConfig.html#NPCEngine_NPCEngineConfig_npcEnginePath
+  commentId: F:NPCEngine.NPCEngineConfig.npcEnginePath
+  fullName: NPCEngine.NPCEngineConfig.npcEnginePath
+  nameWithType: NPCEngineConfig.npcEnginePath
+- uid: NPCEngine.NPCEngineConfig.Port
+  name: Port
+  href: api/NPCEngine.NPCEngineConfig.html#NPCEngine_NPCEngineConfig_Port
+  commentId: P:NPCEngine.NPCEngineConfig.Port
+  fullName: NPCEngine.NPCEngineConfig.Port
+  nameWithType: NPCEngineConfig.Port
+- uid: NPCEngine.NPCEngineConfig.Port*
+  name: Port
+  href: api/NPCEngine.NPCEngineConfig.html#NPCEngine_NPCEngineConfig_Port_
+  commentId: Overload:NPCEngine.NPCEngineConfig.Port
+  isSpec: "True"
+  fullName: NPCEngine.NPCEngineConfig.Port
+  nameWithType: NPCEngineConfig.Port
+- uid: NPCEngine.NPCEngineConfig.serverAddress
+  name: serverAddress
+  href: api/NPCEngine.NPCEngineConfig.html#NPCEngine_NPCEngineConfig_serverAddress
+  commentId: F:NPCEngine.NPCEngineConfig.serverAddress
+  fullName: NPCEngine.NPCEngineConfig.serverAddress
+  nameWithType: NPCEngineConfig.serverAddress
+- uid: NPCEngine.NPCEngineConfig.serverConsole
+  name: serverConsole
+  href: api/NPCEngine.NPCEngineConfig.html#NPCEngine_NPCEngineConfig_serverConsole
+  commentId: F:NPCEngine.NPCEngineConfig.serverConsole
+  fullName: NPCEngine.NPCEngineConfig.serverConsole
+  nameWithType: NPCEngineConfig.serverConsole
+- uid: NPCEngine.NPCEngineConfig.serverType
+  name: serverType
+  href: api/NPCEngine.NPCEngineConfig.html#NPCEngine_NPCEngineConfig_serverType
+  commentId: F:NPCEngine.NPCEngineConfig.serverType
+  fullName: NPCEngine.NPCEngineConfig.serverType
+  nameWithType: NPCEngineConfig.serverType
+- uid: NPCEngine.NPCEngineConfig.services
+  name: services
+  href: api/NPCEngine.NPCEngineConfig.html#NPCEngine_NPCEngineConfig_services
+  commentId: F:NPCEngine.NPCEngineConfig.services
+  fullName: NPCEngine.NPCEngineConfig.services
+  nameWithType: NPCEngineConfig.services
+- uid: NPCEngine.NPCEngineConfig.ToBeStarted(System.String)
+  name: ToBeStarted(String)
+  href: api/NPCEngine.NPCEngineConfig.html#NPCEngine_NPCEngineConfig_ToBeStarted_System_String_
+  commentId: M:NPCEngine.NPCEngineConfig.ToBeStarted(System.String)
+  fullName: NPCEngine.NPCEngineConfig.ToBeStarted(System.String)
+  nameWithType: NPCEngineConfig.ToBeStarted(String)
+- uid: NPCEngine.NPCEngineConfig.ToBeStarted*
+  name: ToBeStarted
+  href: api/NPCEngine.NPCEngineConfig.html#NPCEngine_NPCEngineConfig_ToBeStarted_
+  commentId: Overload:NPCEngine.NPCEngineConfig.ToBeStarted
+  isSpec: "True"
+  fullName: NPCEngine.NPCEngineConfig.ToBeStarted
+  nameWithType: NPCEngineConfig.ToBeStarted
+- uid: NPCEngine.NPCEngineConfigEditor
+  name: NPCEngineConfigEditor
+  href: api/NPCEngine.NPCEngineConfigEditor.html
+  commentId: T:NPCEngine.NPCEngineConfigEditor
+  fullName: NPCEngine.NPCEngineConfigEditor
+  nameWithType: NPCEngineConfigEditor
+- uid: NPCEngine.NPCEngineConfigEditor.OnInspectorGUI
+  name: OnInspectorGUI()
+  href: api/NPCEngine.NPCEngineConfigEditor.html#NPCEngine_NPCEngineConfigEditor_OnInspectorGUI
+  commentId: M:NPCEngine.NPCEngineConfigEditor.OnInspectorGUI
+  fullName: NPCEngine.NPCEngineConfigEditor.OnInspectorGUI()
+  nameWithType: NPCEngineConfigEditor.OnInspectorGUI()
+- uid: NPCEngine.NPCEngineConfigEditor.OnInspectorGUI*
+  name: OnInspectorGUI
+  href: api/NPCEngine.NPCEngineConfigEditor.html#NPCEngine_NPCEngineConfigEditor_OnInspectorGUI_
+  commentId: Overload:NPCEngine.NPCEngineConfigEditor.OnInspectorGUI
+  isSpec: "True"
+  fullName: NPCEngine.NPCEngineConfigEditor.OnInspectorGUI
+  nameWithType: NPCEngineConfigEditor.OnInspectorGUI
 - uid: NPCEngine.NPCEngineException
   name: NPCEngineException
   href: api/NPCEngine.NPCEngineException.html
@@ -1299,237 +1975,374 @@ references:
   fullName.vb: NPCEngine.ResultFuture(Of ReturnType).ResultReady
   nameWithType: ResultFuture<ReturnType>.ResultReady
   nameWithType.vb: ResultFuture(Of ReturnType).ResultReady
-- uid: NPCEngine.Server
-  name: NPCEngine.Server
-  href: api/NPCEngine.Server.html
-  commentId: N:NPCEngine.Server
-  fullName: NPCEngine.Server
-  nameWithType: NPCEngine.Server
-- uid: NPCEngine.Server.NPCEngineServer
-  name: NPCEngineServer
-  href: api/NPCEngine.Server.NPCEngineServer.html
-  commentId: T:NPCEngine.Server.NPCEngineServer
-  fullName: NPCEngine.Server.NPCEngineServer
-  nameWithType: NPCEngineServer
-- uid: NPCEngine.Server.NPCEngineServer.connectToExistingServer
-  name: connectToExistingServer
-  href: api/NPCEngine.Server.NPCEngineServer.html#NPCEngine_Server_NPCEngineServer_connectToExistingServer
-  commentId: F:NPCEngine.Server.NPCEngineServer.connectToExistingServer
-  fullName: NPCEngine.Server.NPCEngineServer.connectToExistingServer
-  nameWithType: NPCEngineServer.connectToExistingServer
-- uid: NPCEngine.Server.NPCEngineServer.ConnectToServer
-  name: ConnectToServer()
-  href: api/NPCEngine.Server.NPCEngineServer.html#NPCEngine_Server_NPCEngineServer_ConnectToServer
-  commentId: M:NPCEngine.Server.NPCEngineServer.ConnectToServer
-  fullName: NPCEngine.Server.NPCEngineServer.ConnectToServer()
-  nameWithType: NPCEngineServer.ConnectToServer()
-- uid: NPCEngine.Server.NPCEngineServer.ConnectToServer*
-  name: ConnectToServer
-  href: api/NPCEngine.Server.NPCEngineServer.html#NPCEngine_Server_NPCEngineServer_ConnectToServer_
-  commentId: Overload:NPCEngine.Server.NPCEngineServer.ConnectToServer
+- uid: NPCEngine.RPC
+  name: NPCEngine.RPC
+  href: api/NPCEngine.RPC.html
+  commentId: N:NPCEngine.RPC
+  fullName: NPCEngine.RPC
+  nameWithType: NPCEngine.RPC
+- uid: NPCEngine.RPC.APICommunicatorHTTPImpl
+  name: APICommunicatorHTTPImpl
+  href: api/NPCEngine.RPC.APICommunicatorHTTPImpl.html
+  commentId: T:NPCEngine.RPC.APICommunicatorHTTPImpl
+  fullName: NPCEngine.RPC.APICommunicatorHTTPImpl
+  nameWithType: APICommunicatorHTTPImpl
+- uid: NPCEngine.RPC.APICommunicatorHTTPImpl.#ctor(System.String,System.String)
+  name: APICommunicatorHTTPImpl(String, String)
+  href: api/NPCEngine.RPC.APICommunicatorHTTPImpl.html#NPCEngine_RPC_APICommunicatorHTTPImpl__ctor_System_String_System_String_
+  commentId: M:NPCEngine.RPC.APICommunicatorHTTPImpl.#ctor(System.String,System.String)
+  fullName: NPCEngine.RPC.APICommunicatorHTTPImpl.APICommunicatorHTTPImpl(System.String, System.String)
+  nameWithType: APICommunicatorHTTPImpl.APICommunicatorHTTPImpl(String, String)
+- uid: NPCEngine.RPC.APICommunicatorHTTPImpl.#ctor*
+  name: APICommunicatorHTTPImpl
+  href: api/NPCEngine.RPC.APICommunicatorHTTPImpl.html#NPCEngine_RPC_APICommunicatorHTTPImpl__ctor_
+  commentId: Overload:NPCEngine.RPC.APICommunicatorHTTPImpl.#ctor
   isSpec: "True"
-  fullName: NPCEngine.Server.NPCEngineServer.ConnectToServer
-  nameWithType: NPCEngineServer.ConnectToServer
-- uid: NPCEngine.Server.NPCEngineServer.debug
-  name: debug
-  href: api/NPCEngine.Server.NPCEngineServer.html#NPCEngine_Server_NPCEngineServer_debug
-  commentId: F:NPCEngine.Server.NPCEngineServer.debug
-  fullName: NPCEngine.Server.NPCEngineServer.debug
-  nameWithType: NPCEngineServer.debug
-- uid: NPCEngine.Server.NPCEngineServer.Initialized
-  name: Initialized
-  href: api/NPCEngine.Server.NPCEngineServer.html#NPCEngine_Server_NPCEngineServer_Initialized
-  commentId: P:NPCEngine.Server.NPCEngineServer.Initialized
-  fullName: NPCEngine.Server.NPCEngineServer.Initialized
-  nameWithType: NPCEngineServer.Initialized
-- uid: NPCEngine.Server.NPCEngineServer.Initialized*
-  name: Initialized
-  href: api/NPCEngine.Server.NPCEngineServer.html#NPCEngine_Server_NPCEngineServer_Initialized_
-  commentId: Overload:NPCEngine.Server.NPCEngineServer.Initialized
+  fullName: NPCEngine.RPC.APICommunicatorHTTPImpl.APICommunicatorHTTPImpl
+  nameWithType: APICommunicatorHTTPImpl.APICommunicatorHTTPImpl
+- uid: NPCEngine.RPC.APICommunicatorHTTPImpl.DispatchRequestsCoroutine(System.Collections.Generic.Queue{NPCEngine.RPC.Request})
+  name: DispatchRequestsCoroutine(Queue<Request>)
+  href: api/NPCEngine.RPC.APICommunicatorHTTPImpl.html#NPCEngine_RPC_APICommunicatorHTTPImpl_DispatchRequestsCoroutine_System_Collections_Generic_Queue_NPCEngine_RPC_Request__
+  commentId: M:NPCEngine.RPC.APICommunicatorHTTPImpl.DispatchRequestsCoroutine(System.Collections.Generic.Queue{NPCEngine.RPC.Request})
+  name.vb: DispatchRequestsCoroutine(Queue(Of Request))
+  fullName: NPCEngine.RPC.APICommunicatorHTTPImpl.DispatchRequestsCoroutine(System.Collections.Generic.Queue<NPCEngine.RPC.Request>)
+  fullName.vb: NPCEngine.RPC.APICommunicatorHTTPImpl.DispatchRequestsCoroutine(System.Collections.Generic.Queue(Of NPCEngine.RPC.Request))
+  nameWithType: APICommunicatorHTTPImpl.DispatchRequestsCoroutine(Queue<Request>)
+  nameWithType.vb: APICommunicatorHTTPImpl.DispatchRequestsCoroutine(Queue(Of Request))
+- uid: NPCEngine.RPC.APICommunicatorHTTPImpl.DispatchRequestsCoroutine*
+  name: DispatchRequestsCoroutine
+  href: api/NPCEngine.RPC.APICommunicatorHTTPImpl.html#NPCEngine_RPC_APICommunicatorHTTPImpl_DispatchRequestsCoroutine_
+  commentId: Overload:NPCEngine.RPC.APICommunicatorHTTPImpl.DispatchRequestsCoroutine
   isSpec: "True"
-  fullName: NPCEngine.Server.NPCEngineServer.Initialized
-  nameWithType: NPCEngineServer.Initialized
-- uid: NPCEngine.Server.NPCEngineServer.initializeOnStart
-  name: initializeOnStart
-  href: api/NPCEngine.Server.NPCEngineServer.html#NPCEngine_Server_NPCEngineServer_initializeOnStart
-  commentId: F:NPCEngine.Server.NPCEngineServer.initializeOnStart
-  fullName: NPCEngine.Server.NPCEngineServer.initializeOnStart
-  nameWithType: NPCEngineServer.initializeOnStart
-- uid: NPCEngine.Server.NPCEngineServer.modelsPath
-  name: modelsPath
-  href: api/NPCEngine.Server.NPCEngineServer.html#NPCEngine_Server_NPCEngineServer_modelsPath
-  commentId: F:NPCEngine.Server.NPCEngineServer.modelsPath
-  fullName: NPCEngine.Server.NPCEngineServer.modelsPath
-  nameWithType: NPCEngineServer.modelsPath
-- uid: NPCEngine.Server.NPCEngineServer.npcEnginePath
-  name: npcEnginePath
-  href: api/NPCEngine.Server.NPCEngineServer.html#NPCEngine_Server_NPCEngineServer_npcEnginePath
-  commentId: F:NPCEngine.Server.NPCEngineServer.npcEnginePath
-  fullName: NPCEngine.Server.NPCEngineServer.npcEnginePath
-  nameWithType: NPCEngineServer.npcEnginePath
-- uid: NPCEngine.Server.NPCEngineServer.Run*
-  name: Run
-  href: api/NPCEngine.Server.NPCEngineServer.html#NPCEngine_Server_NPCEngineServer_Run_
-  commentId: Overload:NPCEngine.Server.NPCEngineServer.Run
+  fullName: NPCEngine.RPC.APICommunicatorHTTPImpl.DispatchRequestsCoroutine
+  nameWithType: APICommunicatorHTTPImpl.DispatchRequestsCoroutine
+- uid: NPCEngine.RPC.APICommunicatorZMQImpl
+  name: APICommunicatorZMQImpl
+  href: api/NPCEngine.RPC.APICommunicatorZMQImpl.html
+  commentId: T:NPCEngine.RPC.APICommunicatorZMQImpl
+  fullName: NPCEngine.RPC.APICommunicatorZMQImpl
+  nameWithType: APICommunicatorZMQImpl
+- uid: NPCEngine.RPC.APICommunicatorZMQImpl.#ctor(System.String,System.String)
+  name: APICommunicatorZMQImpl(String, String)
+  href: api/NPCEngine.RPC.APICommunicatorZMQImpl.html#NPCEngine_RPC_APICommunicatorZMQImpl__ctor_System_String_System_String_
+  commentId: M:NPCEngine.RPC.APICommunicatorZMQImpl.#ctor(System.String,System.String)
+  fullName: NPCEngine.RPC.APICommunicatorZMQImpl.APICommunicatorZMQImpl(System.String, System.String)
+  nameWithType: APICommunicatorZMQImpl.APICommunicatorZMQImpl(String, String)
+- uid: NPCEngine.RPC.APICommunicatorZMQImpl.#ctor*
+  name: APICommunicatorZMQImpl
+  href: api/NPCEngine.RPC.APICommunicatorZMQImpl.html#NPCEngine_RPC_APICommunicatorZMQImpl__ctor_
+  commentId: Overload:NPCEngine.RPC.APICommunicatorZMQImpl.#ctor
   isSpec: "True"
-  fullName: NPCEngine.Server.NPCEngineServer.Run
-  nameWithType: NPCEngineServer.Run
-- uid: NPCEngine.Server.NPCEngineServer.Run``2(String,``0)
-  name: Run<P, R>(String, P)
-  href: api/NPCEngine.Server.NPCEngineServer.html#NPCEngine_Server_NPCEngineServer_Run__2_String___0_
-  commentId: M:NPCEngine.Server.NPCEngineServer.Run``2(String,``0)
-  name.vb: Run(Of P, R)(String, P)
-  fullName: NPCEngine.Server.NPCEngineServer.Run<P, R>(String, P)
-  fullName.vb: NPCEngine.Server.NPCEngineServer.Run(Of P, R)(String, P)
-  nameWithType: NPCEngineServer.Run<P, R>(String, P)
-  nameWithType.vb: NPCEngineServer.Run(Of P, R)(String, P)
-- uid: NPCEngine.Server.NPCEngineServer.StartInferenceEngine
-  name: StartInferenceEngine()
-  href: api/NPCEngine.Server.NPCEngineServer.html#NPCEngine_Server_NPCEngineServer_StartInferenceEngine
-  commentId: M:NPCEngine.Server.NPCEngineServer.StartInferenceEngine
-  fullName: NPCEngine.Server.NPCEngineServer.StartInferenceEngine()
-  nameWithType: NPCEngineServer.StartInferenceEngine()
-- uid: NPCEngine.Server.NPCEngineServer.StartInferenceEngine*
-  name: StartInferenceEngine
-  href: api/NPCEngine.Server.NPCEngineServer.html#NPCEngine_Server_NPCEngineServer_StartInferenceEngine_
-  commentId: Overload:NPCEngine.Server.NPCEngineServer.StartInferenceEngine
+  fullName: NPCEngine.RPC.APICommunicatorZMQImpl.APICommunicatorZMQImpl
+  nameWithType: APICommunicatorZMQImpl.APICommunicatorZMQImpl
+- uid: NPCEngine.RPC.APICommunicatorZMQImpl.DispatchRequestsCoroutine(System.Collections.Generic.Queue{NPCEngine.RPC.Request})
+  name: DispatchRequestsCoroutine(Queue<Request>)
+  href: api/NPCEngine.RPC.APICommunicatorZMQImpl.html#NPCEngine_RPC_APICommunicatorZMQImpl_DispatchRequestsCoroutine_System_Collections_Generic_Queue_NPCEngine_RPC_Request__
+  commentId: M:NPCEngine.RPC.APICommunicatorZMQImpl.DispatchRequestsCoroutine(System.Collections.Generic.Queue{NPCEngine.RPC.Request})
+  name.vb: DispatchRequestsCoroutine(Queue(Of Request))
+  fullName: NPCEngine.RPC.APICommunicatorZMQImpl.DispatchRequestsCoroutine(System.Collections.Generic.Queue<NPCEngine.RPC.Request>)
+  fullName.vb: NPCEngine.RPC.APICommunicatorZMQImpl.DispatchRequestsCoroutine(System.Collections.Generic.Queue(Of NPCEngine.RPC.Request))
+  nameWithType: APICommunicatorZMQImpl.DispatchRequestsCoroutine(Queue<Request>)
+  nameWithType.vb: APICommunicatorZMQImpl.DispatchRequestsCoroutine(Queue(Of Request))
+- uid: NPCEngine.RPC.APICommunicatorZMQImpl.DispatchRequestsCoroutine*
+  name: DispatchRequestsCoroutine
+  href: api/NPCEngine.RPC.APICommunicatorZMQImpl.html#NPCEngine_RPC_APICommunicatorZMQImpl_DispatchRequestsCoroutine_
+  commentId: Overload:NPCEngine.RPC.APICommunicatorZMQImpl.DispatchRequestsCoroutine
   isSpec: "True"
-  fullName: NPCEngine.Server.NPCEngineServer.StartInferenceEngine
-  nameWithType: NPCEngineServer.StartInferenceEngine
-- uid: NPCEngine.Server.RPCRequstMessage`1
-  name: RPCRequstMessage<ParametersType>
-  href: api/NPCEngine.Server.RPCRequstMessage-1.html
-  commentId: T:NPCEngine.Server.RPCRequstMessage`1
-  name.vb: RPCRequstMessage(Of ParametersType)
-  fullName: NPCEngine.Server.RPCRequstMessage<ParametersType>
-  fullName.vb: NPCEngine.Server.RPCRequstMessage(Of ParametersType)
-  nameWithType: RPCRequstMessage<ParametersType>
-  nameWithType.vb: RPCRequstMessage(Of ParametersType)
-- uid: NPCEngine.Server.RPCRequstMessage`1.#ctor
-  name: RPCRequstMessage()
-  href: api/NPCEngine.Server.RPCRequstMessage-1.html#NPCEngine_Server_RPCRequstMessage_1__ctor
-  commentId: M:NPCEngine.Server.RPCRequstMessage`1.#ctor
-  fullName: NPCEngine.Server.RPCRequstMessage<ParametersType>.RPCRequstMessage()
-  fullName.vb: NPCEngine.Server.RPCRequstMessage(Of ParametersType).RPCRequstMessage()
-  nameWithType: RPCRequstMessage<ParametersType>.RPCRequstMessage()
-  nameWithType.vb: RPCRequstMessage(Of ParametersType).RPCRequstMessage()
-- uid: NPCEngine.Server.RPCRequstMessage`1.#ctor*
-  name: RPCRequstMessage
-  href: api/NPCEngine.Server.RPCRequstMessage-1.html#NPCEngine_Server_RPCRequstMessage_1__ctor_
-  commentId: Overload:NPCEngine.Server.RPCRequstMessage`1.#ctor
+  fullName: NPCEngine.RPC.APICommunicatorZMQImpl.DispatchRequestsCoroutine
+  nameWithType: APICommunicatorZMQImpl.DispatchRequestsCoroutine
+- uid: NPCEngine.RPC.APICommunicatorZMQImpl.Finalize
+  name: Finalize()
+  href: api/NPCEngine.RPC.APICommunicatorZMQImpl.html#NPCEngine_RPC_APICommunicatorZMQImpl_Finalize
+  commentId: M:NPCEngine.RPC.APICommunicatorZMQImpl.Finalize
+  fullName: NPCEngine.RPC.APICommunicatorZMQImpl.Finalize()
+  nameWithType: APICommunicatorZMQImpl.Finalize()
+- uid: NPCEngine.RPC.APICommunicatorZMQImpl.Finalize*
+  name: Finalize
+  href: api/NPCEngine.RPC.APICommunicatorZMQImpl.html#NPCEngine_RPC_APICommunicatorZMQImpl_Finalize_
+  commentId: Overload:NPCEngine.RPC.APICommunicatorZMQImpl.Finalize
   isSpec: "True"
-  fullName: NPCEngine.Server.RPCRequstMessage<ParametersType>.RPCRequstMessage
-  fullName.vb: NPCEngine.Server.RPCRequstMessage(Of ParametersType).RPCRequstMessage
-  nameWithType: RPCRequstMessage<ParametersType>.RPCRequstMessage
-  nameWithType.vb: RPCRequstMessage(Of ParametersType).RPCRequstMessage
-- uid: NPCEngine.Server.RPCRequstMessage`1.id
+  fullName: NPCEngine.RPC.APICommunicatorZMQImpl.Finalize
+  nameWithType: APICommunicatorZMQImpl.Finalize
+- uid: NPCEngine.RPC.Request
+  name: Request
+  href: api/NPCEngine.RPC.Request.html
+  commentId: T:NPCEngine.RPC.Request
+  fullName: NPCEngine.RPC.Request
+  nameWithType: Request
+- uid: NPCEngine.RPC.Request.#ctor(System.String,Action{System.String})
+  name: Request(String, Action<String>)
+  href: api/NPCEngine.RPC.Request.html#NPCEngine_RPC_Request__ctor_System_String_Action_System_String__
+  commentId: M:NPCEngine.RPC.Request.#ctor(System.String,Action{System.String})
+  name.vb: Request(String, Action(Of String))
+  fullName: NPCEngine.RPC.Request.Request(System.String, Action<System.String>)
+  fullName.vb: NPCEngine.RPC.Request.Request(System.String, Action(Of System.String))
+  nameWithType: Request.Request(String, Action<String>)
+  nameWithType.vb: Request.Request(String, Action(Of String))
+- uid: NPCEngine.RPC.Request.#ctor*
+  name: Request
+  href: api/NPCEngine.RPC.Request.html#NPCEngine_RPC_Request__ctor_
+  commentId: Overload:NPCEngine.RPC.Request.#ctor
+  isSpec: "True"
+  fullName: NPCEngine.RPC.Request.Request
+  nameWithType: Request.Request
+- uid: NPCEngine.RPC.RequestDispatcherImpl
+  name: RequestDispatcherImpl
+  href: api/NPCEngine.RPC.RequestDispatcherImpl.html
+  commentId: T:NPCEngine.RPC.RequestDispatcherImpl
+  fullName: NPCEngine.RPC.RequestDispatcherImpl
+  nameWithType: RequestDispatcherImpl
+- uid: NPCEngine.RPC.RequestDispatcherImpl.#ctor(System.String,System.String)
+  name: RequestDispatcherImpl(String, String)
+  href: api/NPCEngine.RPC.RequestDispatcherImpl.html#NPCEngine_RPC_RequestDispatcherImpl__ctor_System_String_System_String_
+  commentId: M:NPCEngine.RPC.RequestDispatcherImpl.#ctor(System.String,System.String)
+  fullName: NPCEngine.RPC.RequestDispatcherImpl.RequestDispatcherImpl(System.String, System.String)
+  nameWithType: RequestDispatcherImpl.RequestDispatcherImpl(String, String)
+- uid: NPCEngine.RPC.RequestDispatcherImpl.#ctor*
+  name: RequestDispatcherImpl
+  href: api/NPCEngine.RPC.RequestDispatcherImpl.html#NPCEngine_RPC_RequestDispatcherImpl__ctor_
+  commentId: Overload:NPCEngine.RPC.RequestDispatcherImpl.#ctor
+  isSpec: "True"
+  fullName: NPCEngine.RPC.RequestDispatcherImpl.RequestDispatcherImpl
+  nameWithType: RequestDispatcherImpl.RequestDispatcherImpl
+- uid: NPCEngine.RPC.RequestDispatcherImpl.address
+  name: address
+  href: api/NPCEngine.RPC.RequestDispatcherImpl.html#NPCEngine_RPC_RequestDispatcherImpl_address
+  commentId: F:NPCEngine.RPC.RequestDispatcherImpl.address
+  fullName: NPCEngine.RPC.RequestDispatcherImpl.address
+  nameWithType: RequestDispatcherImpl.address
+- uid: NPCEngine.RPC.RequestDispatcherImpl.DispatchRequestsCoroutine(System.Collections.Generic.Queue{NPCEngine.RPC.Request})
+  name: DispatchRequestsCoroutine(Queue<Request>)
+  href: api/NPCEngine.RPC.RequestDispatcherImpl.html#NPCEngine_RPC_RequestDispatcherImpl_DispatchRequestsCoroutine_System_Collections_Generic_Queue_NPCEngine_RPC_Request__
+  commentId: M:NPCEngine.RPC.RequestDispatcherImpl.DispatchRequestsCoroutine(System.Collections.Generic.Queue{NPCEngine.RPC.Request})
+  name.vb: DispatchRequestsCoroutine(Queue(Of Request))
+  fullName: NPCEngine.RPC.RequestDispatcherImpl.DispatchRequestsCoroutine(System.Collections.Generic.Queue<NPCEngine.RPC.Request>)
+  fullName.vb: NPCEngine.RPC.RequestDispatcherImpl.DispatchRequestsCoroutine(System.Collections.Generic.Queue(Of NPCEngine.RPC.Request))
+  nameWithType: RequestDispatcherImpl.DispatchRequestsCoroutine(Queue<Request>)
+  nameWithType.vb: RequestDispatcherImpl.DispatchRequestsCoroutine(Queue(Of Request))
+- uid: NPCEngine.RPC.RequestDispatcherImpl.DispatchRequestsCoroutine*
+  name: DispatchRequestsCoroutine
+  href: api/NPCEngine.RPC.RequestDispatcherImpl.html#NPCEngine_RPC_RequestDispatcherImpl_DispatchRequestsCoroutine_
+  commentId: Overload:NPCEngine.RPC.RequestDispatcherImpl.DispatchRequestsCoroutine
+  isSpec: "True"
+  fullName: NPCEngine.RPC.RequestDispatcherImpl.DispatchRequestsCoroutine
+  nameWithType: RequestDispatcherImpl.DispatchRequestsCoroutine
+- uid: NPCEngine.RPC.RequestDispatcherImpl.id
   name: id
-  href: api/NPCEngine.Server.RPCRequstMessage-1.html#NPCEngine_Server_RPCRequstMessage_1_id
-  commentId: F:NPCEngine.Server.RPCRequstMessage`1.id
-  fullName: NPCEngine.Server.RPCRequstMessage<ParametersType>.id
-  fullName.vb: NPCEngine.Server.RPCRequstMessage(Of ParametersType).id
-  nameWithType: RPCRequstMessage<ParametersType>.id
-  nameWithType.vb: RPCRequstMessage(Of ParametersType).id
-- uid: NPCEngine.Server.RPCRequstMessage`1.jsonrpc
+  href: api/NPCEngine.RPC.RequestDispatcherImpl.html#NPCEngine_RPC_RequestDispatcherImpl_id
+  commentId: F:NPCEngine.RPC.RequestDispatcherImpl.id
+  fullName: NPCEngine.RPC.RequestDispatcherImpl.id
+  nameWithType: RequestDispatcherImpl.id
+- uid: NPCEngine.RPC.RPCBase
+  name: RPCBase
+  href: api/NPCEngine.RPC.RPCBase.html
+  commentId: T:NPCEngine.RPC.RPCBase
+  fullName: NPCEngine.RPC.RPCBase
+  nameWithType: RPCBase
+- uid: NPCEngine.RPC.RPCBase.Run*
+  name: Run
+  href: api/NPCEngine.RPC.RPCBase.html#NPCEngine_RPC_RPCBase_Run_
+  commentId: Overload:NPCEngine.RPC.RPCBase.Run
+  isSpec: "True"
+  fullName: NPCEngine.RPC.RPCBase.Run
+  nameWithType: RPCBase.Run
+- uid: NPCEngine.RPC.RPCBase.Run``2(String,``0)
+  name: Run<P, R>(String, P)
+  href: api/NPCEngine.RPC.RPCBase.html#NPCEngine_RPC_RPCBase_Run__2_String___0_
+  commentId: M:NPCEngine.RPC.RPCBase.Run``2(String,``0)
+  name.vb: Run(Of P, R)(String, P)
+  fullName: NPCEngine.RPC.RPCBase.Run<P, R>(String, P)
+  fullName.vb: NPCEngine.RPC.RPCBase.Run(Of P, R)(String, P)
+  nameWithType: RPCBase.Run<P, R>(String, P)
+  nameWithType.vb: RPCBase.Run(Of P, R)(String, P)
+- uid: NPCEngine.RPC.RPCBase.serviceId
+  name: serviceId
+  href: api/NPCEngine.RPC.RPCBase.html#NPCEngine_RPC_RPCBase_serviceId
+  commentId: F:NPCEngine.RPC.RPCBase.serviceId
+  fullName: NPCEngine.RPC.RPCBase.serviceId
+  nameWithType: RPCBase.serviceId
+- uid: NPCEngine.RPC.RPCRequestMessage`1
+  name: RPCRequestMessage<ParametersType>
+  href: api/NPCEngine.RPC.RPCRequestMessage-1.html
+  commentId: T:NPCEngine.RPC.RPCRequestMessage`1
+  name.vb: RPCRequestMessage(Of ParametersType)
+  fullName: NPCEngine.RPC.RPCRequestMessage<ParametersType>
+  fullName.vb: NPCEngine.RPC.RPCRequestMessage(Of ParametersType)
+  nameWithType: RPCRequestMessage<ParametersType>
+  nameWithType.vb: RPCRequestMessage(Of ParametersType)
+- uid: NPCEngine.RPC.RPCRequestMessage`1.#ctor
+  name: RPCRequestMessage()
+  href: api/NPCEngine.RPC.RPCRequestMessage-1.html#NPCEngine_RPC_RPCRequestMessage_1__ctor
+  commentId: M:NPCEngine.RPC.RPCRequestMessage`1.#ctor
+  fullName: NPCEngine.RPC.RPCRequestMessage<ParametersType>.RPCRequestMessage()
+  fullName.vb: NPCEngine.RPC.RPCRequestMessage(Of ParametersType).RPCRequestMessage()
+  nameWithType: RPCRequestMessage<ParametersType>.RPCRequestMessage()
+  nameWithType.vb: RPCRequestMessage(Of ParametersType).RPCRequestMessage()
+- uid: NPCEngine.RPC.RPCRequestMessage`1.#ctor*
+  name: RPCRequestMessage
+  href: api/NPCEngine.RPC.RPCRequestMessage-1.html#NPCEngine_RPC_RPCRequestMessage_1__ctor_
+  commentId: Overload:NPCEngine.RPC.RPCRequestMessage`1.#ctor
+  isSpec: "True"
+  fullName: NPCEngine.RPC.RPCRequestMessage<ParametersType>.RPCRequestMessage
+  fullName.vb: NPCEngine.RPC.RPCRequestMessage(Of ParametersType).RPCRequestMessage
+  nameWithType: RPCRequestMessage<ParametersType>.RPCRequestMessage
+  nameWithType.vb: RPCRequestMessage(Of ParametersType).RPCRequestMessage
+- uid: NPCEngine.RPC.RPCRequestMessage`1.id
+  name: id
+  href: api/NPCEngine.RPC.RPCRequestMessage-1.html#NPCEngine_RPC_RPCRequestMessage_1_id
+  commentId: F:NPCEngine.RPC.RPCRequestMessage`1.id
+  fullName: NPCEngine.RPC.RPCRequestMessage<ParametersType>.id
+  fullName.vb: NPCEngine.RPC.RPCRequestMessage(Of ParametersType).id
+  nameWithType: RPCRequestMessage<ParametersType>.id
+  nameWithType.vb: RPCRequestMessage(Of ParametersType).id
+- uid: NPCEngine.RPC.RPCRequestMessage`1.jsonrpc
   name: jsonrpc
-  href: api/NPCEngine.Server.RPCRequstMessage-1.html#NPCEngine_Server_RPCRequstMessage_1_jsonrpc
-  commentId: F:NPCEngine.Server.RPCRequstMessage`1.jsonrpc
-  fullName: NPCEngine.Server.RPCRequstMessage<ParametersType>.jsonrpc
-  fullName.vb: NPCEngine.Server.RPCRequstMessage(Of ParametersType).jsonrpc
-  nameWithType: RPCRequstMessage<ParametersType>.jsonrpc
-  nameWithType.vb: RPCRequstMessage(Of ParametersType).jsonrpc
-- uid: NPCEngine.Server.RPCRequstMessage`1.method
+  href: api/NPCEngine.RPC.RPCRequestMessage-1.html#NPCEngine_RPC_RPCRequestMessage_1_jsonrpc
+  commentId: F:NPCEngine.RPC.RPCRequestMessage`1.jsonrpc
+  fullName: NPCEngine.RPC.RPCRequestMessage<ParametersType>.jsonrpc
+  fullName.vb: NPCEngine.RPC.RPCRequestMessage(Of ParametersType).jsonrpc
+  nameWithType: RPCRequestMessage<ParametersType>.jsonrpc
+  nameWithType.vb: RPCRequestMessage(Of ParametersType).jsonrpc
+- uid: NPCEngine.RPC.RPCRequestMessage`1.method
   name: method
-  href: api/NPCEngine.Server.RPCRequstMessage-1.html#NPCEngine_Server_RPCRequstMessage_1_method
-  commentId: F:NPCEngine.Server.RPCRequstMessage`1.method
-  fullName: NPCEngine.Server.RPCRequstMessage<ParametersType>.method
-  fullName.vb: NPCEngine.Server.RPCRequstMessage(Of ParametersType).method
-  nameWithType: RPCRequstMessage<ParametersType>.method
-  nameWithType.vb: RPCRequstMessage(Of ParametersType).method
-- uid: NPCEngine.Server.RPCRequstMessage`1.parameters
+  href: api/NPCEngine.RPC.RPCRequestMessage-1.html#NPCEngine_RPC_RPCRequestMessage_1_method
+  commentId: F:NPCEngine.RPC.RPCRequestMessage`1.method
+  fullName: NPCEngine.RPC.RPCRequestMessage<ParametersType>.method
+  fullName.vb: NPCEngine.RPC.RPCRequestMessage(Of ParametersType).method
+  nameWithType: RPCRequestMessage<ParametersType>.method
+  nameWithType.vb: RPCRequestMessage(Of ParametersType).method
+- uid: NPCEngine.RPC.RPCRequestMessage`1.parameters
   name: parameters
-  href: api/NPCEngine.Server.RPCRequstMessage-1.html#NPCEngine_Server_RPCRequstMessage_1_parameters
-  commentId: F:NPCEngine.Server.RPCRequstMessage`1.parameters
-  fullName: NPCEngine.Server.RPCRequstMessage<ParametersType>.parameters
-  fullName.vb: NPCEngine.Server.RPCRequstMessage(Of ParametersType).parameters
-  nameWithType: RPCRequstMessage<ParametersType>.parameters
-  nameWithType.vb: RPCRequstMessage(Of ParametersType).parameters
-- uid: NPCEngine.Server.RPCResponseError
+  href: api/NPCEngine.RPC.RPCRequestMessage-1.html#NPCEngine_RPC_RPCRequestMessage_1_parameters
+  commentId: F:NPCEngine.RPC.RPCRequestMessage`1.parameters
+  fullName: NPCEngine.RPC.RPCRequestMessage<ParametersType>.parameters
+  fullName.vb: NPCEngine.RPC.RPCRequestMessage(Of ParametersType).parameters
+  nameWithType: RPCRequestMessage<ParametersType>.parameters
+  nameWithType.vb: RPCRequestMessage(Of ParametersType).parameters
+- uid: NPCEngine.RPC.RPCResponseError
   name: RPCResponseError
-  href: api/NPCEngine.Server.RPCResponseError.html
-  commentId: T:NPCEngine.Server.RPCResponseError
-  fullName: NPCEngine.Server.RPCResponseError
+  href: api/NPCEngine.RPC.RPCResponseError.html
+  commentId: T:NPCEngine.RPC.RPCResponseError
+  fullName: NPCEngine.RPC.RPCResponseError
   nameWithType: RPCResponseError
-- uid: NPCEngine.Server.RPCResponseError.code
+- uid: NPCEngine.RPC.RPCResponseError.code
   name: code
-  href: api/NPCEngine.Server.RPCResponseError.html#NPCEngine_Server_RPCResponseError_code
-  commentId: F:NPCEngine.Server.RPCResponseError.code
-  fullName: NPCEngine.Server.RPCResponseError.code
+  href: api/NPCEngine.RPC.RPCResponseError.html#NPCEngine_RPC_RPCResponseError_code
+  commentId: F:NPCEngine.RPC.RPCResponseError.code
+  fullName: NPCEngine.RPC.RPCResponseError.code
   nameWithType: RPCResponseError.code
-- uid: NPCEngine.Server.RPCResponseError.message
+- uid: NPCEngine.RPC.RPCResponseError.message
   name: message
-  href: api/NPCEngine.Server.RPCResponseError.html#NPCEngine_Server_RPCResponseError_message
-  commentId: F:NPCEngine.Server.RPCResponseError.message
-  fullName: NPCEngine.Server.RPCResponseError.message
+  href: api/NPCEngine.RPC.RPCResponseError.html#NPCEngine_RPC_RPCResponseError_message
+  commentId: F:NPCEngine.RPC.RPCResponseError.message
+  fullName: NPCEngine.RPC.RPCResponseError.message
   nameWithType: RPCResponseError.message
-- uid: NPCEngine.Server.RPCResponseMessage`1
+- uid: NPCEngine.RPC.RPCResponseMessage`1
   name: RPCResponseMessage<ReturnType>
-  href: api/NPCEngine.Server.RPCResponseMessage-1.html
-  commentId: T:NPCEngine.Server.RPCResponseMessage`1
+  href: api/NPCEngine.RPC.RPCResponseMessage-1.html
+  commentId: T:NPCEngine.RPC.RPCResponseMessage`1
   name.vb: RPCResponseMessage(Of ReturnType)
-  fullName: NPCEngine.Server.RPCResponseMessage<ReturnType>
-  fullName.vb: NPCEngine.Server.RPCResponseMessage(Of ReturnType)
+  fullName: NPCEngine.RPC.RPCResponseMessage<ReturnType>
+  fullName.vb: NPCEngine.RPC.RPCResponseMessage(Of ReturnType)
   nameWithType: RPCResponseMessage<ReturnType>
   nameWithType.vb: RPCResponseMessage(Of ReturnType)
-- uid: NPCEngine.Server.RPCResponseMessage`1.#ctor
+- uid: NPCEngine.RPC.RPCResponseMessage`1.#ctor
   name: RPCResponseMessage()
-  href: api/NPCEngine.Server.RPCResponseMessage-1.html#NPCEngine_Server_RPCResponseMessage_1__ctor
-  commentId: M:NPCEngine.Server.RPCResponseMessage`1.#ctor
-  fullName: NPCEngine.Server.RPCResponseMessage<ReturnType>.RPCResponseMessage()
-  fullName.vb: NPCEngine.Server.RPCResponseMessage(Of ReturnType).RPCResponseMessage()
+  href: api/NPCEngine.RPC.RPCResponseMessage-1.html#NPCEngine_RPC_RPCResponseMessage_1__ctor
+  commentId: M:NPCEngine.RPC.RPCResponseMessage`1.#ctor
+  fullName: NPCEngine.RPC.RPCResponseMessage<ReturnType>.RPCResponseMessage()
+  fullName.vb: NPCEngine.RPC.RPCResponseMessage(Of ReturnType).RPCResponseMessage()
   nameWithType: RPCResponseMessage<ReturnType>.RPCResponseMessage()
   nameWithType.vb: RPCResponseMessage(Of ReturnType).RPCResponseMessage()
-- uid: NPCEngine.Server.RPCResponseMessage`1.#ctor*
+- uid: NPCEngine.RPC.RPCResponseMessage`1.#ctor*
   name: RPCResponseMessage
-  href: api/NPCEngine.Server.RPCResponseMessage-1.html#NPCEngine_Server_RPCResponseMessage_1__ctor_
-  commentId: Overload:NPCEngine.Server.RPCResponseMessage`1.#ctor
+  href: api/NPCEngine.RPC.RPCResponseMessage-1.html#NPCEngine_RPC_RPCResponseMessage_1__ctor_
+  commentId: Overload:NPCEngine.RPC.RPCResponseMessage`1.#ctor
   isSpec: "True"
-  fullName: NPCEngine.Server.RPCResponseMessage<ReturnType>.RPCResponseMessage
-  fullName.vb: NPCEngine.Server.RPCResponseMessage(Of ReturnType).RPCResponseMessage
+  fullName: NPCEngine.RPC.RPCResponseMessage<ReturnType>.RPCResponseMessage
+  fullName.vb: NPCEngine.RPC.RPCResponseMessage(Of ReturnType).RPCResponseMessage
   nameWithType: RPCResponseMessage<ReturnType>.RPCResponseMessage
   nameWithType.vb: RPCResponseMessage(Of ReturnType).RPCResponseMessage
-- uid: NPCEngine.Server.RPCResponseMessage`1.error
+- uid: NPCEngine.RPC.RPCResponseMessage`1.error
   name: error
-  href: api/NPCEngine.Server.RPCResponseMessage-1.html#NPCEngine_Server_RPCResponseMessage_1_error
-  commentId: F:NPCEngine.Server.RPCResponseMessage`1.error
-  fullName: NPCEngine.Server.RPCResponseMessage<ReturnType>.error
-  fullName.vb: NPCEngine.Server.RPCResponseMessage(Of ReturnType).error
+  href: api/NPCEngine.RPC.RPCResponseMessage-1.html#NPCEngine_RPC_RPCResponseMessage_1_error
+  commentId: F:NPCEngine.RPC.RPCResponseMessage`1.error
+  fullName: NPCEngine.RPC.RPCResponseMessage<ReturnType>.error
+  fullName.vb: NPCEngine.RPC.RPCResponseMessage(Of ReturnType).error
   nameWithType: RPCResponseMessage<ReturnType>.error
   nameWithType.vb: RPCResponseMessage(Of ReturnType).error
-- uid: NPCEngine.Server.RPCResponseMessage`1.id
+- uid: NPCEngine.RPC.RPCResponseMessage`1.id
   name: id
-  href: api/NPCEngine.Server.RPCResponseMessage-1.html#NPCEngine_Server_RPCResponseMessage_1_id
-  commentId: F:NPCEngine.Server.RPCResponseMessage`1.id
-  fullName: NPCEngine.Server.RPCResponseMessage<ReturnType>.id
-  fullName.vb: NPCEngine.Server.RPCResponseMessage(Of ReturnType).id
+  href: api/NPCEngine.RPC.RPCResponseMessage-1.html#NPCEngine_RPC_RPCResponseMessage_1_id
+  commentId: F:NPCEngine.RPC.RPCResponseMessage`1.id
+  fullName: NPCEngine.RPC.RPCResponseMessage<ReturnType>.id
+  fullName.vb: NPCEngine.RPC.RPCResponseMessage(Of ReturnType).id
   nameWithType: RPCResponseMessage<ReturnType>.id
   nameWithType.vb: RPCResponseMessage(Of ReturnType).id
-- uid: NPCEngine.Server.RPCResponseMessage`1.jsonrpc
+- uid: NPCEngine.RPC.RPCResponseMessage`1.jsonrpc
   name: jsonrpc
-  href: api/NPCEngine.Server.RPCResponseMessage-1.html#NPCEngine_Server_RPCResponseMessage_1_jsonrpc
-  commentId: F:NPCEngine.Server.RPCResponseMessage`1.jsonrpc
-  fullName: NPCEngine.Server.RPCResponseMessage<ReturnType>.jsonrpc
-  fullName.vb: NPCEngine.Server.RPCResponseMessage(Of ReturnType).jsonrpc
+  href: api/NPCEngine.RPC.RPCResponseMessage-1.html#NPCEngine_RPC_RPCResponseMessage_1_jsonrpc
+  commentId: F:NPCEngine.RPC.RPCResponseMessage`1.jsonrpc
+  fullName: NPCEngine.RPC.RPCResponseMessage<ReturnType>.jsonrpc
+  fullName.vb: NPCEngine.RPC.RPCResponseMessage(Of ReturnType).jsonrpc
   nameWithType: RPCResponseMessage<ReturnType>.jsonrpc
   nameWithType.vb: RPCResponseMessage(Of ReturnType).jsonrpc
-- uid: NPCEngine.Server.RPCResponseMessage`1.result
+- uid: NPCEngine.RPC.RPCResponseMessage`1.result
   name: result
-  href: api/NPCEngine.Server.RPCResponseMessage-1.html#NPCEngine_Server_RPCResponseMessage_1_result
-  commentId: F:NPCEngine.Server.RPCResponseMessage`1.result
-  fullName: NPCEngine.Server.RPCResponseMessage<ReturnType>.result
-  fullName.vb: NPCEngine.Server.RPCResponseMessage(Of ReturnType).result
+  href: api/NPCEngine.RPC.RPCResponseMessage-1.html#NPCEngine_RPC_RPCResponseMessage_1_result
+  commentId: F:NPCEngine.RPC.RPCResponseMessage`1.result
+  fullName: NPCEngine.RPC.RPCResponseMessage<ReturnType>.result
+  fullName.vb: NPCEngine.RPC.RPCResponseMessage(Of ReturnType).result
   nameWithType: RPCResponseMessage<ReturnType>.result
   nameWithType.vb: RPCResponseMessage(Of ReturnType).result
+- uid: NPCEngine.RPC.ServerType
+  name: ServerType
+  href: api/NPCEngine.RPC.ServerType.html
+  commentId: T:NPCEngine.RPC.ServerType
+  fullName: NPCEngine.RPC.ServerType
+  nameWithType: ServerType
+- uid: NPCEngine.RPC.ServerType.HTTP
+  name: HTTP
+  href: api/NPCEngine.RPC.ServerType.html#NPCEngine_RPC_ServerType_HTTP
+  commentId: F:NPCEngine.RPC.ServerType.HTTP
+  fullName: NPCEngine.RPC.ServerType.HTTP
+  nameWithType: ServerType.HTTP
+- uid: NPCEngine.RPC.ServerType.ZMQ
+  name: ZMQ
+  href: api/NPCEngine.RPC.ServerType.html#NPCEngine_RPC_ServerType_ZMQ
+  commentId: F:NPCEngine.RPC.ServerType.ZMQ
+  fullName: NPCEngine.RPC.ServerType.ZMQ
+  nameWithType: ServerType.ZMQ
+- uid: NPCEngine.ServiceConfigDescriptor
+  name: ServiceConfigDescriptor
+  href: api/NPCEngine.ServiceConfigDescriptor.html
+  commentId: T:NPCEngine.ServiceConfigDescriptor
+  fullName: NPCEngine.ServiceConfigDescriptor
+  nameWithType: ServiceConfigDescriptor
+- uid: NPCEngine.ServiceConfigDescriptor.name
+  name: name
+  href: api/NPCEngine.ServiceConfigDescriptor.html#NPCEngine_ServiceConfigDescriptor_name
+  commentId: F:NPCEngine.ServiceConfigDescriptor.name
+  fullName: NPCEngine.ServiceConfigDescriptor.name
+  nameWithType: ServiceConfigDescriptor.name
+- uid: NPCEngine.ServiceConfigDescriptor.path
+  name: path
+  href: api/NPCEngine.ServiceConfigDescriptor.html#NPCEngine_ServiceConfigDescriptor_path
+  commentId: F:NPCEngine.ServiceConfigDescriptor.path
+  fullName: NPCEngine.ServiceConfigDescriptor.path
+  nameWithType: ServiceConfigDescriptor.path
+- uid: NPCEngine.ServiceConfigDescriptor.start
+  name: start
+  href: api/NPCEngine.ServiceConfigDescriptor.html#NPCEngine_ServiceConfigDescriptor_start
+  commentId: F:NPCEngine.ServiceConfigDescriptor.start
+  fullName: NPCEngine.ServiceConfigDescriptor.start
+  nameWithType: ServiceConfigDescriptor.start
+- uid: NPCEngine.ServiceConfigDescriptor.type
+  name: type
+  href: api/NPCEngine.ServiceConfigDescriptor.html#NPCEngine_ServiceConfigDescriptor_type
+  commentId: F:NPCEngine.ServiceConfigDescriptor.type
+  fullName: NPCEngine.ServiceConfigDescriptor.type
+  nameWithType: ServiceConfigDescriptor.type
 - uid: NPCEngine.Utility
   name: NPCEngine.Utility
   href: api/NPCEngine.Utility.html
@@ -1561,6 +2374,109 @@ references:
   isSpec: "True"
   fullName: NPCEngine.Utility.AudioSourceQueue.PlaySound
   nameWithType: AudioSourceQueue.PlaySound
+- uid: NPCEngine.Utility.CoroutineUtility
+  name: CoroutineUtility
+  href: api/NPCEngine.Utility.CoroutineUtility.html
+  commentId: T:NPCEngine.Utility.CoroutineUtility
+  fullName: NPCEngine.Utility.CoroutineUtility
+  nameWithType: CoroutineUtility
+- uid: NPCEngine.Utility.CoroutineUtility.GetGameObjectPath(MonoBehaviour)
+  name: GetGameObjectPath(MonoBehaviour)
+  href: api/NPCEngine.Utility.CoroutineUtility.html#NPCEngine_Utility_CoroutineUtility_GetGameObjectPath_MonoBehaviour_
+  commentId: M:NPCEngine.Utility.CoroutineUtility.GetGameObjectPath(MonoBehaviour)
+  fullName: NPCEngine.Utility.CoroutineUtility.GetGameObjectPath(MonoBehaviour)
+  nameWithType: CoroutineUtility.GetGameObjectPath(MonoBehaviour)
+- uid: NPCEngine.Utility.CoroutineUtility.GetGameObjectPath*
+  name: GetGameObjectPath
+  href: api/NPCEngine.Utility.CoroutineUtility.html#NPCEngine_Utility_CoroutineUtility_GetGameObjectPath_
+  commentId: Overload:NPCEngine.Utility.CoroutineUtility.GetGameObjectPath
+  isSpec: "True"
+  fullName: NPCEngine.Utility.CoroutineUtility.GetGameObjectPath
+  nameWithType: CoroutineUtility.GetGameObjectPath
+- uid: NPCEngine.Utility.CoroutineUtility.IsRunning(MonoBehaviour,System.String)
+  name: IsRunning(MonoBehaviour, String)
+  href: api/NPCEngine.Utility.CoroutineUtility.html#NPCEngine_Utility_CoroutineUtility_IsRunning_MonoBehaviour_System_String_
+  commentId: M:NPCEngine.Utility.CoroutineUtility.IsRunning(MonoBehaviour,System.String)
+  fullName: NPCEngine.Utility.CoroutineUtility.IsRunning(MonoBehaviour, System.String)
+  nameWithType: CoroutineUtility.IsRunning(MonoBehaviour, String)
+- uid: NPCEngine.Utility.CoroutineUtility.IsRunning*
+  name: IsRunning
+  href: api/NPCEngine.Utility.CoroutineUtility.html#NPCEngine_Utility_CoroutineUtility_IsRunning_
+  commentId: Overload:NPCEngine.Utility.CoroutineUtility.IsRunning
+  isSpec: "True"
+  fullName: NPCEngine.Utility.CoroutineUtility.IsRunning
+  nameWithType: CoroutineUtility.IsRunning
+- uid: NPCEngine.Utility.CoroutineUtility.StartCoroutine(System.Collections.IEnumerator,MonoBehaviour,System.String)
+  name: StartCoroutine(IEnumerator, MonoBehaviour, String)
+  href: api/NPCEngine.Utility.CoroutineUtility.html#NPCEngine_Utility_CoroutineUtility_StartCoroutine_System_Collections_IEnumerator_MonoBehaviour_System_String_
+  commentId: M:NPCEngine.Utility.CoroutineUtility.StartCoroutine(System.Collections.IEnumerator,MonoBehaviour,System.String)
+  fullName: NPCEngine.Utility.CoroutineUtility.StartCoroutine(System.Collections.IEnumerator, MonoBehaviour, System.String)
+  nameWithType: CoroutineUtility.StartCoroutine(IEnumerator, MonoBehaviour, String)
+- uid: NPCEngine.Utility.CoroutineUtility.StartCoroutine*
+  name: StartCoroutine
+  href: api/NPCEngine.Utility.CoroutineUtility.html#NPCEngine_Utility_CoroutineUtility_StartCoroutine_
+  commentId: Overload:NPCEngine.Utility.CoroutineUtility.StartCoroutine
+  isSpec: "True"
+  fullName: NPCEngine.Utility.CoroutineUtility.StartCoroutine
+  nameWithType: CoroutineUtility.StartCoroutine
+- uid: NPCEngine.Utility.CoroutineUtility.StopAllEditorCoroutines
+  name: StopAllEditorCoroutines()
+  href: api/NPCEngine.Utility.CoroutineUtility.html#NPCEngine_Utility_CoroutineUtility_StopAllEditorCoroutines
+  commentId: M:NPCEngine.Utility.CoroutineUtility.StopAllEditorCoroutines
+  fullName: NPCEngine.Utility.CoroutineUtility.StopAllEditorCoroutines()
+  nameWithType: CoroutineUtility.StopAllEditorCoroutines()
+- uid: NPCEngine.Utility.CoroutineUtility.StopAllEditorCoroutines(MonoBehaviour)
+  name: StopAllEditorCoroutines(MonoBehaviour)
+  href: api/NPCEngine.Utility.CoroutineUtility.html#NPCEngine_Utility_CoroutineUtility_StopAllEditorCoroutines_MonoBehaviour_
+  commentId: M:NPCEngine.Utility.CoroutineUtility.StopAllEditorCoroutines(MonoBehaviour)
+  fullName: NPCEngine.Utility.CoroutineUtility.StopAllEditorCoroutines(MonoBehaviour)
+  nameWithType: CoroutineUtility.StopAllEditorCoroutines(MonoBehaviour)
+- uid: NPCEngine.Utility.CoroutineUtility.StopAllEditorCoroutines*
+  name: StopAllEditorCoroutines
+  href: api/NPCEngine.Utility.CoroutineUtility.html#NPCEngine_Utility_CoroutineUtility_StopAllEditorCoroutines_
+  commentId: Overload:NPCEngine.Utility.CoroutineUtility.StopAllEditorCoroutines
+  isSpec: "True"
+  fullName: NPCEngine.Utility.CoroutineUtility.StopAllEditorCoroutines
+  nameWithType: CoroutineUtility.StopAllEditorCoroutines
+- uid: NPCEngine.Utility.CoroutineUtility.StopAllPlayingCoroutines(MonoBehaviour)
+  name: StopAllPlayingCoroutines(MonoBehaviour)
+  href: api/NPCEngine.Utility.CoroutineUtility.html#NPCEngine_Utility_CoroutineUtility_StopAllPlayingCoroutines_MonoBehaviour_
+  commentId: M:NPCEngine.Utility.CoroutineUtility.StopAllPlayingCoroutines(MonoBehaviour)
+  fullName: NPCEngine.Utility.CoroutineUtility.StopAllPlayingCoroutines(MonoBehaviour)
+  nameWithType: CoroutineUtility.StopAllPlayingCoroutines(MonoBehaviour)
+- uid: NPCEngine.Utility.CoroutineUtility.StopAllPlayingCoroutines*
+  name: StopAllPlayingCoroutines
+  href: api/NPCEngine.Utility.CoroutineUtility.html#NPCEngine_Utility_CoroutineUtility_StopAllPlayingCoroutines_
+  commentId: Overload:NPCEngine.Utility.CoroutineUtility.StopAllPlayingCoroutines
+  isSpec: "True"
+  fullName: NPCEngine.Utility.CoroutineUtility.StopAllPlayingCoroutines
+  nameWithType: CoroutineUtility.StopAllPlayingCoroutines
+- uid: NPCEngine.Utility.CoroutineUtility.StopCoroutine(System.String,MonoBehaviour)
+  name: StopCoroutine(String, MonoBehaviour)
+  href: api/NPCEngine.Utility.CoroutineUtility.html#NPCEngine_Utility_CoroutineUtility_StopCoroutine_System_String_MonoBehaviour_
+  commentId: M:NPCEngine.Utility.CoroutineUtility.StopCoroutine(System.String,MonoBehaviour)
+  fullName: NPCEngine.Utility.CoroutineUtility.StopCoroutine(System.String, MonoBehaviour)
+  nameWithType: CoroutineUtility.StopCoroutine(String, MonoBehaviour)
+- uid: NPCEngine.Utility.CoroutineUtility.StopCoroutine*
+  name: StopCoroutine
+  href: api/NPCEngine.Utility.CoroutineUtility.html#NPCEngine_Utility_CoroutineUtility_StopCoroutine_
+  commentId: Overload:NPCEngine.Utility.CoroutineUtility.StopCoroutine
+  isSpec: "True"
+  fullName: NPCEngine.Utility.CoroutineUtility.StopCoroutine
+  nameWithType: CoroutineUtility.StopCoroutine
+- uid: NPCEngine.Utility.CoroutineUtility.WaitForSeconds(System.Single)
+  name: WaitForSeconds(Single)
+  href: api/NPCEngine.Utility.CoroutineUtility.html#NPCEngine_Utility_CoroutineUtility_WaitForSeconds_System_Single_
+  commentId: M:NPCEngine.Utility.CoroutineUtility.WaitForSeconds(System.Single)
+  fullName: NPCEngine.Utility.CoroutineUtility.WaitForSeconds(System.Single)
+  nameWithType: CoroutineUtility.WaitForSeconds(Single)
+- uid: NPCEngine.Utility.CoroutineUtility.WaitForSeconds*
+  name: WaitForSeconds
+  href: api/NPCEngine.Utility.CoroutineUtility.html#NPCEngine_Utility_CoroutineUtility_WaitForSeconds_
+  commentId: Overload:NPCEngine.Utility.CoroutineUtility.WaitForSeconds
+  isSpec: "True"
+  fullName: NPCEngine.Utility.CoroutineUtility.WaitForSeconds
+  nameWithType: CoroutineUtility.WaitForSeconds
 - uid: NPCEngine.Utility.Singleton`1
   name: Singleton<T>
   href: api/NPCEngine.Utility.Singleton-1.html
@@ -1570,6 +2486,23 @@ references:
   fullName.vb: NPCEngine.Utility.Singleton(Of T)
   nameWithType: Singleton<T>
   nameWithType.vb: Singleton(Of T)
+- uid: NPCEngine.Utility.Singleton`1.GetInstance
+  name: GetInstance()
+  href: api/NPCEngine.Utility.Singleton-1.html#NPCEngine_Utility_Singleton_1_GetInstance
+  commentId: M:NPCEngine.Utility.Singleton`1.GetInstance
+  fullName: NPCEngine.Utility.Singleton<T>.GetInstance()
+  fullName.vb: NPCEngine.Utility.Singleton(Of T).GetInstance()
+  nameWithType: Singleton<T>.GetInstance()
+  nameWithType.vb: Singleton(Of T).GetInstance()
+- uid: NPCEngine.Utility.Singleton`1.GetInstance*
+  name: GetInstance
+  href: api/NPCEngine.Utility.Singleton-1.html#NPCEngine_Utility_Singleton_1_GetInstance_
+  commentId: Overload:NPCEngine.Utility.Singleton`1.GetInstance
+  isSpec: "True"
+  fullName: NPCEngine.Utility.Singleton<T>.GetInstance
+  fullName.vb: NPCEngine.Utility.Singleton(Of T).GetInstance
+  nameWithType: Singleton<T>.GetInstance
+  nameWithType.vb: Singleton(Of T).GetInstance
 - uid: NPCEngine.Utility.Singleton`1.Instance
   name: Instance
   href: api/NPCEngine.Utility.Singleton-1.html#NPCEngine_Utility_Singleton_1_Instance

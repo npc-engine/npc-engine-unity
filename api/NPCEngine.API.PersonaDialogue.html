@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class TextToSpeech
+    <title>Class PersonaDialogue
    | npc-engine Unity integration </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class TextToSpeech
+    <meta name="title" content="Class PersonaDialogue
    | npc-engine Unity integration ">
     <meta name="generator" content="docfx 2.59.2.0">
     
@@ -78,37 +78,37 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="NPCEngine.API.TextToSpeech">
+            <article class="content wrap" id="_content" data-uid="NPCEngine.API.PersonaDialogue">
   
   
-  <h1 id="NPCEngine_API_TextToSpeech" data-uid="NPCEngine.API.TextToSpeech" class="text-break">Class TextToSpeech
+  <h1 id="NPCEngine_API_PersonaDialogue" data-uid="NPCEngine.API.PersonaDialogue" class="text-break">Class PersonaDialogue
   </h1>
-  <div class="markdown level0 summary"><p>Static class <code>TextToSpeech</code> provides remote procedure calls 
-to inference engine&apos;s text to speech module.</p>
+  <div class="markdown level0 summary"><p><code>Chatbot</code> provides remote procedure calls 
+to inference engine&apos;s TextGeneration services.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
-    <div class="level1"><span class="xref">TextToSpeech</span></div>
+    <div class="level1"><span class="xref">PersonaDialogue</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="NPCEngine.API.html">NPCEngine.API</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="NPCEngine_API_TextToSpeech_syntax">Syntax</h5>
+  <h5 id="NPCEngine_API_PersonaDialogue_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class TextToSpeech : RPCBase</code></pre>
+    <pre><code class="lang-csharp hljs">public class PersonaDialogue : RPCBase</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
   
   
-  <a id="NPCEngine_API_TextToSpeech_GetNextResult_" data-uid="NPCEngine.API.TextToSpeech.GetNextResult*"></a>
-  <h4 id="NPCEngine_API_TextToSpeech_GetNextResult_Action_System_Collections_Generic_List_System_Single___" data-uid="NPCEngine.API.TextToSpeech.GetNextResult(Action{System.Collections.Generic.List{System.Single}})">GetNextResult(Action&lt;List&lt;Single&gt;&gt;)</h4>
+  <a id="NPCEngine_API_PersonaDialogue_StartDialogue_" data-uid="NPCEngine.API.PersonaDialogue.StartDialogue*"></a>
+  <h4 id="NPCEngine_API_PersonaDialogue_StartDialogue_System_String_System_String_System_String_System_String_System_String_System_String_Action_System_String__System_String_" data-uid="NPCEngine.API.PersonaDialogue.StartDialogue(System.String,System.String,System.String,System.String,System.String,System.String,Action{System.String},System.String)">StartDialogue(String, String, String, String, String, String, Action&lt;String&gt;, String)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEnumerator GetNextResult(Action&lt;List&lt;float&gt;&gt; outputCallback)</code></pre>
+    <pre><code class="lang-csharp hljs">public IEnumerator StartDialogue(string name1, string persona1, string name2, string persona2, string location_name, string location_description, Action&lt;string&gt; outputCallback, string dialogue_id = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -121,8 +121,43 @@ to inference engine&apos;s text to speech module.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Action</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a>&gt;&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">name1</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">persona1</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">name2</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">persona2</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">location_name</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">location_description</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
         <td><span class="parametername">outputCallback</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">dialogue_id</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -144,63 +179,18 @@ to inference engine&apos;s text to speech module.</p>
   </table>
   
   
-  <a id="NPCEngine_API_TextToSpeech_GetNextResultFuture_" data-uid="NPCEngine.API.TextToSpeech.GetNextResultFuture*"></a>
-  <h4 id="NPCEngine_API_TextToSpeech_GetNextResultFuture" data-uid="NPCEngine.API.TextToSpeech.GetNextResultFuture">GetNextResultFuture()</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="NPCEngine_API_PersonaDialogue_StepDialogue_" data-uid="NPCEngine.API.PersonaDialogue.StepDialogue*"></a>
+  <h4 id="NPCEngine_API_PersonaDialogue_StepDialogue_System_String_System_String_System_Boolean_Action_Tuple_System_String_System_Boolean___System_Single_System_Collections_Generic_List_System_String__System_String_" data-uid="NPCEngine.API.PersonaDialogue.StepDialogue(System.String,System.String,System.Boolean,Action{Tuple{System.String,System.Boolean}},System.Single,System.Collections.Generic.List{System.String},System.String)">StepDialogue(String, String, Boolean, Action&lt;Tuple&lt;String, Boolean&gt;&gt;, Single, List&lt;String&gt;, String)</h4>
+  <div class="markdown level1 summary"><p>Step dialogue.</p>
+<p>If utterance is null, it will be generated.
+If scripted utterances are not null they will be compared to the utterance 
+and replace it if similarity score is above scripted_threshold (score is in range [0,1]).
+If update_history is true, the dialogue history will be updated with the utterance.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ResultFuture&lt;List&lt;float&gt;&gt; GetNextResultFuture()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="NPCEngine.ResultFuture-1.html">ResultFuture</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a>&gt;&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="NPCEngine_API_TextToSpeech_GetSpeakerIdsFuture_" data-uid="NPCEngine.API.TextToSpeech.GetSpeakerIdsFuture*"></a>
-  <h4 id="NPCEngine_API_TextToSpeech_GetSpeakerIdsFuture" data-uid="NPCEngine.API.TextToSpeech.GetSpeakerIdsFuture">GetSpeakerIdsFuture()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ResultFuture&lt;List&lt;string&gt;&gt; GetSpeakerIdsFuture()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="NPCEngine.ResultFuture-1.html">ResultFuture</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="NPCEngine_API_TextToSpeech_StartTTS_" data-uid="NPCEngine.API.TextToSpeech.StartTTS*"></a>
-  <h4 id="NPCEngine_API_TextToSpeech_StartTTS_System_String_System_String_System_Int32_Action_" data-uid="NPCEngine.API.TextToSpeech.StartTTS(System.String,System.String,System.Int32,Action)">StartTTS(String, String, Int32, Action)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEnumerator StartTTS(string voiceId, string line, int n_chunks, Action outputCallback)</code></pre>
+    <pre><code class="lang-csharp hljs">public IEnumerator StepDialogue(string dialogue_id, string speaker_id, bool update_history, Action&lt;Tuple&lt;string, bool&gt;&gt; outputCallback, float scripted_threshold = 0.5F, List&lt;string&gt; scripted_utterances = null, string utterance = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -214,74 +204,54 @@ to inference engine&apos;s text to speech module.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">voiceId</span></td>
+        <td><span class="parametername">dialogue_id</span></td>
         <td></td>
       </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">line</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><span class="parametername">n_chunks</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">Action</span></td>
-        <td><span class="parametername">outputCallback</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.ienumerator">IEnumerator</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="NPCEngine_API_TextToSpeech_StartTTSFuture_" data-uid="NPCEngine.API.TextToSpeech.StartTTSFuture*"></a>
-  <h4 id="NPCEngine_API_TextToSpeech_StartTTSFuture_System_String_System_String_System_Int32_" data-uid="NPCEngine.API.TextToSpeech.StartTTSFuture(System.String,System.String,System.Int32)">StartTTSFuture(String, String, Int32)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void StartTTSFuture(string speaker_id, string text, int n_chunks = 1)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">speaker_id</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">text</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">update_history</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><span class="parametername">n_chunks</span></td>
+        <td><span class="xref">Action</span>&lt;<span class="xref">Tuple</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;&gt;</td>
+        <td><span class="parametername">outputCallback</span></td>
+        <td><p>Callback that accepts results: Tuple with utterance 
+and bool flag that is True if scripted utterance was used</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">scripted_threshold</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><span class="parametername">scripted_utterances</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">utterance</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.ienumerator">IEnumerator</a></td>
         <td></td>
       </tr>
     </tbody>
