@@ -4,26 +4,32 @@ using UnityEngine;
 
 namespace NPCEngine.Utility
 {
+    [ExecuteInEditMode]
     [RequireComponent(typeof(AudioSource))]
     public class AudioSourceQueue : MonoBehaviour
     {
         public AudioSource audioSource;
-        Queue<AudioClip> clipQueue;
+        Queue<AudioClip> clipQueue = new Queue<AudioClip>();
 
-        private void Start()
+        private void OnEnable()
         {
             audioSource = GetComponent<AudioSource>();
-            clipQueue = new Queue<AudioClip>();
+            CoroutineUtility.StartCoroutine(AudioPlayCoroutine(), this, "AudioPlayCoroutine_" + gameObject.name);
         }
 
-        void Update()
+        IEnumerator AudioPlayCoroutine()
         {
-            if (audioSource.isPlaying == false && clipQueue.Count > 0)
+            while(true)
             {
-                audioSource.clip = clipQueue.Dequeue();
-                audioSource.Play();
+                if (audioSource.isPlaying == false && clipQueue.Count > 0)
+                {
+                    audioSource.clip = clipQueue.Dequeue();
+                    audioSource.Play();
+                }
+                yield return CoroutineUtility.WaitForSeconds(0.1f);
             }
         }
+
         public void PlaySound(AudioClip clip)
         {
             clipQueue.Enqueue(clip);
