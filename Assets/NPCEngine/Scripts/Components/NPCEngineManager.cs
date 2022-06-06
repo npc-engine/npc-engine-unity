@@ -17,7 +17,7 @@ using UnityEditor;
 
 namespace NPCEngine.Components
 {
-    [ExecuteInEditMode]
+    [ExecuteAlways]
     public class NPCEngineManager : Singleton<NPCEngineManager>
     {
 
@@ -206,14 +206,9 @@ namespace NPCEngine.Components
 
         private IEnumerator StopInferenceEngineCoroutine()
         {
-            if (Application.isPlaying)
-            {
-                yield return new WaitForSeconds(1f);
-            }
-            else
-            {
-                yield return new EditorWaitForSeconds(1f);
-            }
+            
+            yield return CoroutineUtility.WaitForSeconds(1f);
+
             try
             {
                 if (InferenceEngineRunning)
@@ -258,14 +253,7 @@ namespace NPCEngine.Components
                     Application.Quit(1);
                     break;
                 }
-                if (Application.isPlaying)
-                {
-                    yield return new WaitForSeconds(5f);
-                }
-                else
-                {
-                    yield return new EditorWaitForSeconds(5f);
-                }
+                yield return CoroutineUtility.WaitForSeconds(5f);
             }
 #endif
             yield return null;
@@ -275,6 +263,7 @@ namespace NPCEngine.Components
         {
             if (Application.isPlaying)
             {
+                CoroutineUtility.StopAllEditorCoroutines(this);
                 StartInferenceEngine();
                 DontDestroyOnLoad(gameObject);
             }
@@ -287,7 +276,6 @@ namespace NPCEngine.Components
                 StartInferenceEngine();
             }
         }
-
 
         public T GetAPI<T>() where T : RPCBase
         {
@@ -342,14 +330,8 @@ namespace NPCEngine.Components
                         });
                     }
                 }
-                if (Application.isPlaying)
-                {
-                    yield return new WaitForSeconds(1);
-                }
-                else
-                {
-                    yield return new EditorWaitForSeconds(1);
-                }
+                
+                yield return CoroutineUtility.WaitForSeconds(1f);
             }
         }
 
@@ -357,18 +339,14 @@ namespace NPCEngine.Components
         {
             while (true)
             {
-                StartCoroutine(NPCEngineManager.Instance.GetAPI<Control>().GetServicesMetadata((List<ServiceMetadata> s) =>
+                yield return NPCEngineManager.GetInstance().GetAPI<Control>().GetServicesMetadata((List<ServiceMetadata> s) =>
                 {
-                    services = s;
-                }));
-                if (Application.isPlaying)
-                {
-                    yield return new WaitForSeconds(4);
-                }
-                else
-                {
-                    yield return new EditorWaitForSeconds(4);
-                }
+                    try{
+                        services = s;
+                    } catch (Exception)
+                    {}
+                });
+                yield return CoroutineUtility.WaitForSeconds(4f);
             }
         }
 
