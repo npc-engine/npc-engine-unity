@@ -17,7 +17,7 @@ using Unity.EditorCoroutines.Editor;
 namespace NPCEngine.RPC
 {
 
-    [ExecuteInEditMode]
+    [ExecuteAlways]
     /// <summary>
     /// Class <c>NPCEngineManager</c> manages inference engine sidecart process lifetime and communication.
     ///</summary>
@@ -124,8 +124,8 @@ namespace NPCEngine.RPC
         private void Disconnect()
         {
             impl = null;
-
-            CoroutineUtility.StopCoroutine("implCoroutine", this);
+            if(!Application.isPlaying)
+                CoroutineUtility.StopCoroutine("implCoroutine", this);
             taskQueue.Clear();
         }
 
