@@ -91,11 +91,6 @@ namespace NPCEngine.Components
             history.Clear();
             OnDialogueEnd?.Invoke();
             dialogueSystem.EndDialog();
-            if (runningCoroutine != null)
-            {
-                StopCoroutine(runningCoroutine);
-                runningCoroutine = null;
-            }
         }
 
         public void HandleLine(string otherName, string otherPersona, string line)
