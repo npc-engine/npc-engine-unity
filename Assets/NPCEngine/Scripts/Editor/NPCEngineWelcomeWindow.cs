@@ -17,8 +17,6 @@ public class NPCEngineWelcomeWindow : EditorWindow
 
     public static Vector2 windowSize = new Vector2(800, 700);
 
-
-
     [MenuItem("Tools/NPC Engine/Show Welcome Screen")]
     private static void InitWindow()
     {
@@ -32,12 +30,18 @@ public class NPCEngineWelcomeWindow : EditorWindow
         logo = (Texture2D)Resources.Load("settings", typeof(Texture2D));
         githubLogo = (Texture2D)Resources.Load("github", typeof(Texture2D));
         docsLogo = (Texture2D)Resources.Load("file-text", typeof(Texture2D));
+        
+        version = NPCEngineWelcomeWindow.GetVersion();
     }
 
     private static GUIStyle headerStyle = new GUIStyle();
     private static GUIStyle descriptionStyle = new GUIStyle();
 
-    private const string npcEngineURL = "https://github.com/npc-engine/npc-engine/releases/download/v0.1.2/npc-engine-v0.1.2.zip";
+    private const string npcEngineVersion = "v0.1.3";
+    private string npcEngineURL = String.Format(
+        "https://github.com/npc-engine/npc-engine/releases/download/{0}/npc-engine-{0}.zip", 
+        npcEngineVersion
+    );
     private const string githubURL = "https://github.com/npc-engine/npc-engine";
     private const string docsURL = "https://npc-engine.github.io/npc-engine/";
 
@@ -48,6 +52,10 @@ public class NPCEngineWelcomeWindow : EditorWindow
 
     private static bool downloading = false;
     private static bool downloadFinished = false;
+    private static bool downloadError = false;
+    private static bool versionOK = false;
+
+    private static string version = null;
 
     private static int progressId = -1;
 
@@ -55,7 +63,7 @@ public class NPCEngineWelcomeWindow : EditorWindow
     {
         get
         {
-            return File.Exists(Path.Combine(Application.streamingAssetsPath, ".npc-engine/cli.exe"));
+            return !File.Exists(Path.Combine(Application.streamingAssetsPath, ".npc-engine/cli.exe")) || !versionOK;
         }
     }
 
@@ -68,7 +76,7 @@ public class NPCEngineWelcomeWindow : EditorWindow
         EditorApplication.delayCall += () =>
         {
             if (
-                !DisplayWelcomeScreen
+                DisplayWelcomeScreen
                 &&
                 !Application.isPlaying
             )
@@ -81,7 +89,7 @@ public class NPCEngineWelcomeWindow : EditorWindow
 
     void OnGUI()
     {
-        downloadFinished = File.Exists(Path.Combine(Application.streamingAssetsPath, ".npc-engine/cli.exe"));
+        versionOK = SemVersionGreaterOrEqualsThan(version, npcEngineVersion);
         DrawWelcomeScreenGUI();
     }
 
@@ -140,15 +148,21 @@ public class NPCEngineWelcomeWindow : EditorWindow
         GUILayout.FlexibleSpace();
         GUILayout.EndHorizontal();
 
-        GUI.enabled = !downloading && !downloadFinished;
+        GUI.enabled = !downloading && !DisplayWelcomeScreen;
+        GUI.enabled |= !versionOK;
 
         GUILayout.FlexibleSpace();
 
         GUILayout.BeginHorizontal();
         GUILayout.FlexibleSpace();
-        if (downloadFinished)
+
+        if (DisplayWelcomeScreen && versionOK)
         {
             GUILayout.Label("(Already downloaded) To start using it you need to download the inference engine server.");
+        }
+        else if(!versionOK)
+        {
+            GUILayout.Label("For the correct behaviour please update your server.");
         }
         else if (downloading)
         {
@@ -171,21 +185,34 @@ public class NPCEngineWelcomeWindow : EditorWindow
 
         GUILayout.BeginHorizontal();
         GUILayout.FlexibleSpace();
-        if (GUILayout.Button("Download NPC Engine", GUILayout.Width(160)))
+
+        if (versionOK)
         {
-            EditorCoroutineUtility.StartCoroutineOwnerless(DownloadAndExtractNPCEngine(npcEngineURL));
-            downloading = true;
+            if (GUILayout.Button("Download NPC Engine", GUILayout.Width(160)))
+            {
+                EditorCoroutineUtility.StartCoroutineOwnerless(DownloadAndExtractNPCEngine(npcEngineURL));
+                downloading = true;
+            }
+        } 
+        else
+        {
+            if (GUILayout.Button("Update NPC Engine", GUILayout.Width(160)))
+            {
+                EditorCoroutineUtility.StartCoroutineOwnerless(DownloadAndExtractNPCEngine(npcEngineURL));
+                downloading = true;
+            }
         }
+
         GUILayout.FlexibleSpace();
         GUILayout.EndHorizontal();
 
-        GUI.enabled = downloadFinished;
+        GUI.enabled = DisplayWelcomeScreen;
 
         GUILayout.FlexibleSpace();
 
         GUILayout.BeginHorizontal();
         GUILayout.FlexibleSpace();
-        if (downloadFinished)
+        if (DisplayWelcomeScreen)
         {
             GUILayout.Label("You can also download default deep learning models (they are required unless you have your own)\n");
         }
@@ -238,22 +265,83 @@ public class NPCEngineWelcomeWindow : EditorWindow
 
         DownLoadFileInBackground(address, path);
 
-        while (!downloadFinished)
+        while (!downloadFinished && !downloadError)
         {
             yield return null;
         }
+        if(downloadError)
+        {
+            downloadError=false;
+        } 
+        else
+        {
+            // The task is finished. Remove the associated progress indicator.
+            Progress.Remove(progressId);
+            byte[] file = System.IO.File.ReadAllBytes(path);
+            UnityEngine.Debug.Log("Downloaded " + file.Length + " bytes");
+            progressId = Progress.Start("Extracting NPC Engine", "Downloading npc-engine", 0);
+            UnityEngine.Debug.Log("Extracting " + Path.Combine(Application.streamingAssetsPath, ".npc-engine"));
 
-        // The task is finished. Remove the associated progress indicator.
-        Progress.Remove(progressId);
-        byte[] file = System.IO.File.ReadAllBytes(path);
-        UnityEngine.Debug.Log("Downloaded " + file.Length + " bytes");
-        progressId = Progress.Start("Extracting NPC Engine", "Downloading npc-engine", 0);
-        UnityEngine.Debug.Log("Extracting " + Path.Combine(Application.streamingAssetsPath, ".npc-engine"));
-        yield return ExtractZipFile(file, Path.Combine(Application.streamingAssetsPath, ".npc-engine"));
+            // Remove the old directory if it exists.
+            if (Directory.Exists(Path.Combine(Application.streamingAssetsPath, ".npc-engine")))
+            {
+                Directory.Delete(Path.Combine(Application.streamingAssetsPath, ".npc-engine"), true);
+            }
+
+            yield return ExtractZipFile(file, Path.Combine(Application.streamingAssetsPath, ".npc-engine"));
+        }
         Progress.Remove(progressId);
 
         File.Delete(path);
         downloading = false;
+
+    }
+
+    public static string GetVersion()
+    {
+        var processStartInfo = new ProcessStartInfo
+        {
+            FileName = Path.Combine(Application.streamingAssetsPath, ".npc-engine/cli.exe"),
+            Arguments = "version",
+            RedirectStandardOutput = true,
+            UseShellExecute = false,
+            WindowStyle = ProcessWindowStyle.Hidden,
+            CreateNoWindow = true,
+        };
+        var process = Process.Start(processStartInfo);
+        var output = process.StandardOutput.ReadToEnd();
+        process.WaitForExit();
+        return output;
+    }
+
+    public static bool SemVersionGreaterOrEqualsThan(string version1, string version2)
+    {   
+        if(version1 == null)
+        {
+            return false;
+        }
+        if(version2 == null)
+        {
+            return false;
+        }
+        var version_numbers1 = version1.Replace("v", "").Split('.');
+        var version_numbers2 = version2.Replace("v", "").Split('.');
+        for (int i = 0; i < version_numbers1.Length; i++)
+        {
+            if (i >= version_numbers2.Length)
+            {
+                return true;
+            }
+            if (int.Parse(version_numbers1[i]) > int.Parse(version_numbers2[i]))
+            {
+                return true;
+            }
+            if (int.Parse(version_numbers1[i]) < int.Parse(version_numbers2[i]))
+            {
+                return false;
+            }
+        }
+        return true;
     }
 
     public static void DownLoadFileInBackground(string address, string path)
@@ -269,7 +357,7 @@ public class NPCEngineWelcomeWindow : EditorWindow
 
     private static void DownloadProgressCallback(object sender, DownloadProgressChangedEventArgs e)
     {
-        Progress.Report(progressId, e.ProgressPercentage);
+        Progress.Report(progressId, e.ProgressPercentage/100.0f);
     }
 
     private static void DownloadFileCompleted(object sender, System.ComponentModel.AsyncCompletedEventArgs e)
@@ -277,6 +365,11 @@ public class NPCEngineWelcomeWindow : EditorWindow
         if (e.Error == null)
         {
             downloadFinished = true;
+        }
+        else
+        {
+            downloadError = true;
+            UnityEngine.Debug.LogError(e.Error.Message);
         }
     }
 
