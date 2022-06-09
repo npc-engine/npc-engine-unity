@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7859527883621965022}
   - component: {fileID: 8445985810613168456}
+  - component: {fileID: 1480138458}
   m_Layer: 0
   m_Name: NPCEngineManager
   m_TagString: Untagged
@@ -43,8 +44,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a4e2dad63d287d47b74a8d98c4cc196, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inferenceEngineProcessId: 8276
+--- !u!114 &1480138458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 826819703477927490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d35e6742b85850f48ae09c2f8be9ec8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  services:
+  - name: bart-light-gail-chatbot
+    type: '"BartChatbot"'
+    path: D:/UnityProjects/npc engine unity/Assets/StreamingAssets\.models/bart-light-gail-chatbot
+    start: 1
+  - name: exported-flowtron-waveglow-librispeech-tts
+    type: '"FlowtronTTS"'
+    path: D:/UnityProjects/npc engine unity/Assets/StreamingAssets\.models/exported-flowtron-waveglow-librispeech-tts
+    start: 1
+  - name: paraphrase-MiniLM-L6-v2
+    type: '"TransformerSemanticSimilarity"'
+    path: D:/UnityProjects/npc engine unity/Assets/StreamingAssets\.models/paraphrase-MiniLM-L6-v2
+    start: 1
+  serverType: 0
+  serverAddress: localhost:8080
   modelsPath: .models/
   npcEnginePath: .npc-engine/cli.exe
-  initializeOnStart: 1
-  debug: 1
+  debugLogs: 0
+  serverConsole: 0
   connectToExistingServer: 0
+  temperature: 1
+  topK: 40
+  nChunksSpeechGeneration: 7
