@@ -10,9 +10,7 @@ namespace NPCEngine.Components
     public class ColliderLocationTrigger : MonoBehaviour
     {
 
-        public string locationName;
-        [TextArea(3, 10)]
-        public string locationDescription;
+        public Location location;
 
         public Collider locationCollider;
 
@@ -22,8 +20,7 @@ namespace NPCEngine.Components
             if (other.gameObject.tag == "Player")
             {
                 var character = PlayerCharacter.Instance;
-                character.settingDescription = locationDescription;
-                character.settingName = locationName;
+                character.currentLocation = location;
             }
         }
     }

@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -41,8 +42,6 @@ namespace NPCEngine
 
         private void DrawServicesInspector()
         {
-
-
             GUILayout.BeginHorizontal(EditorStyles.helpBox);
             GUILayout.BeginVertical();
             GUILayout.Box("Service name", EditorStyles.boldLabel, GUILayout.MinWidth(10));
@@ -61,7 +60,29 @@ namespace NPCEngine
                 GUILayout.FlexibleSpace();
             }
             GUILayout.EndVertical();
+
+            if(NPCEngineManager.Instance.InferenceEngineRunning) GUI.enabled = false;
+
             VerticalLine(Color.black);
+
+            LoadOnStartToggles();
+
+            VerticalLine(Color.black);
+
+            OpenConfigButtons();
+
+            VerticalLine(Color.black);
+
+            RemoveButtons();
+
+            GUI.enabled = true;
+
+            GUILayout.EndHorizontal();
+
+        }
+
+        private void LoadOnStartToggles()
+        {
             GUILayout.BeginVertical();
             GUILayout.Box("Load on start", EditorStyles.boldLabel);
             foreach (var service in config.services)
@@ -77,8 +98,11 @@ namespace NPCEngine
                 GUILayout.FlexibleSpace();
             }
             GUILayout.EndVertical();
+        }
 
-            VerticalLine(Color.black);
+
+        private void RemoveButtons()
+        {
             GUILayout.BeginVertical();
             GUILayout.Box("", EditorStyles.boldLabel);
             foreach (var service in config.services)
@@ -97,10 +121,50 @@ namespace NPCEngine
                 GUILayout.FlexibleSpace();
             }
             GUILayout.EndVertical();
-
-            GUILayout.EndHorizontal();
-
         }
+
+
+        private void OpenConfigButtons()
+        {
+            GUILayout.BeginVertical();
+            GUILayout.Box("", EditorStyles.boldLabel);
+            foreach (var service in config.services)
+            {
+                if (GUILayout.Button("Edit Config", EditorStyles.miniButtonLeft))
+                {
+                    string path = "";
+                    string default_run = "";
+                    if (Application.platform == RuntimePlatform.WindowsEditor)
+                    {
+                       default_run = "start";
+                       path = "\"\" \"" + Path.Combine(service.path, "config.yml").Replace("/", "\\") + "\"";
+                    }
+                    else if (Application.platform == RuntimePlatform.OSXEditor)
+                    {
+                        default_run = "open";
+                        path = "\"" + Path.Combine(service.path, "config.yml").Replace("\\", "/") + "\"";
+                    }else if (Application.platform == RuntimePlatform.LinuxEditor)
+                    {
+                        default_run = "xdg-open";
+                        path = "\"" + Path.Combine(service.path, "config.yml").Replace("\\", "/") + "\"";
+                    }
+                    var processStartInfo = new ProcessStartInfo
+                    {
+                        FileName = "CMD.EXE",
+                        Arguments = "/k \"" + default_run + " " +  path + "\"",
+                        RedirectStandardOutput = true,
+                        UseShellExecute = false,
+                        WindowStyle = ProcessWindowStyle.Hidden,
+                        CreateNoWindow = true,
+                    };
+                    System.Diagnostics.Process.Start(processStartInfo);
+                    
+                }
+                GUILayout.FlexibleSpace();
+            }
+            GUILayout.EndVertical();
+        }
+
         private List<ServiceConfigDescriptor> GetServicesManually()
         {
             // Get all directories in models folder
@@ -224,7 +288,7 @@ namespace NPCEngine
             to_path = Path.Combine(to_path, dir.Name);
             if (!dir.Exists)
             {
-                Debug.LogError("Folder " + folder + " does not exist");
+                UnityEngine.Debug.LogError("Folder " + folder + " does not exist");
                 return;
             }
             if (!Directory.Exists(to_path))

@@ -14,13 +14,10 @@ namespace NPCEngine
     [CustomEditor(typeof(NonPlayerCharacter))]
     public class NonPlayerCharacterEditor : Editor {
 
-        SerializedProperty temperatureProp;
-        SerializedProperty topKProp;
-        SerializedProperty nChunksTextGenerationProp;
         SerializedProperty defaultThresholdProp;
-        SerializedProperty characterNameProp;
-        SerializedProperty personaProp;
-        SerializedProperty voiceIdProp;
+        SerializedProperty characterProp;
+        SerializedProperty testCharacterProp;
+        SerializedProperty testLocationProp;
         SerializedProperty historyProp;
         SerializedProperty OnDialogueStartProp;
         SerializedProperty OnDialogueLineProp;
@@ -29,6 +26,7 @@ namespace NPCEngine
         SerializedProperty OnTopicHintsUpdateProp;
         SerializedProperty OnDialogueEndProp;
         SerializedProperty audioSourceQueueProp;
+        SerializedProperty voiceIdProp;
         SerializedProperty dialogueSystemProp;
 
 //      Containers for UI data
@@ -43,10 +41,6 @@ namespace NPCEngine
         private bool showDialogueTreeTest = false;
 
 //          Text generation test data
-        private string testLocationName = "";
-        private string testLocationDescription = "";
-        private string testOtherName = "";
-        private string testOtherPersona = "";
         private string testChatHistory = "";
         private string testChatLine = "";
 
@@ -64,13 +58,11 @@ namespace NPCEngine
 
         void OnEnable()
         {
-            temperatureProp = serializedObject.FindProperty("temperature");
-            topKProp = serializedObject.FindProperty("topK");
-            nChunksTextGenerationProp = serializedObject.FindProperty("nChunksTextGeneration");
             defaultThresholdProp = serializedObject.FindProperty("defaultThreshold");
-            characterNameProp = serializedObject.FindProperty("characterName");
-            personaProp = serializedObject.FindProperty("persona");
+            characterProp = serializedObject.FindProperty("character");
             voiceIdProp = serializedObject.FindProperty("voiceId");
+            testCharacterProp = serializedObject.FindProperty("testOtherCharacter");
+            testLocationProp = serializedObject.FindProperty("testLocation");
             historyProp = serializedObject.FindProperty("history");
             OnDialogueStartProp = serializedObject.FindProperty("OnDialogueStart");
             OnDialogueLineProp = serializedObject.FindProperty("OnDialogueLine");
@@ -85,10 +77,7 @@ namespace NPCEngine
         public override void OnInspectorGUI() {
             showTextGeneration = EditorGUILayout.Foldout(showTextGeneration, "TextGeneration");
             if (showTextGeneration) {
-                EditorGUILayout.PropertyField(temperatureProp);
-                EditorGUILayout.PropertyField(topKProp);
-                EditorGUILayout.PropertyField(characterNameProp);
-                EditorGUILayout.PropertyField(personaProp);
+                EditorGUILayout.PropertyField(characterProp);
                 EditorGUILayout.BeginHorizontal();
                 GUILayout.Space(15f);
                 EditorGUILayout.BeginVertical();
@@ -105,9 +94,8 @@ namespace NPCEngine
 
             showVoice = EditorGUILayout.Foldout(showVoice, "Voice");
             if(showVoice) {
-                EditorGUILayout.PropertyField(voiceIdProp);
-                EditorGUILayout.PropertyField(nChunksTextGenerationProp);
                 EditorGUILayout.PropertyField(audioSourceQueueProp);
+                EditorGUILayout.PropertyField(voiceIdProp);
 
                 EditorGUILayout.BeginHorizontal();
                 GUILayout.Space(15f);
@@ -152,14 +140,8 @@ namespace NPCEngine
 
         private void TextGenerationTestUI()
         {
-            GUILayout.Label("Location name");
-            testLocationName = EditorGUILayout.TextArea(testLocationName);
-            GUILayout.Label("Location description");
-            testLocationDescription = EditorGUILayout.TextArea(testLocationDescription, GUILayout.Height(60));
-            GUILayout.Label("Your name");
-            testOtherName = EditorGUILayout.TextArea(testOtherName);
-            GUILayout.Label("Your persona");
-            testOtherPersona = EditorGUILayout.TextArea(testOtherPersona, GUILayout.Height(60));
+            EditorGUILayout.PropertyField(testCharacterProp);
+            EditorGUILayout.PropertyField(testLocationProp);
             GUILayout.Label("History");
             GUIStyle myTextAreaStyle = new GUIStyle(EditorStyles.textArea);
             myTextAreaStyle.wordWrap = true;
@@ -258,23 +240,23 @@ namespace NPCEngine
         private IEnumerator GenerateText(string line)
         {
             generatingText = true;
-            testChatHistory += testOtherName + ": " + line + "\n";
             var npc = (NonPlayerCharacter) target;
+            testChatHistory += npc.testOtherCharacter.Name + ": " + line + "\n";
             var context = new FantasyChatbotContext
             {
-                name = npc.characterName,
-                persona = npc.persona,
-                other_name = testOtherName,
-                other_persona = testOtherPersona,
-                location_name = testLocationName,
-                location = testLocationDescription,
+                name = npc.character.Name,
+                persona = npc.character.Persona,
+                other_name = npc.testOtherCharacter.Name,
+                other_persona = npc.testOtherCharacter.Persona,
+                location_name = npc.testLocation.Name,
+                location = npc.testLocation.Description,
                 history = ParseToChatLines(testChatHistory),
             };
             string reply = "";
             yield return NPCEngineManager.Instance.GetAPI<FantasyChatbotTextGeneration>()
-                .GenerateReply(context, (output) => { reply = output; }, npc.temperature, npc.topK);
+                .GenerateReply(context, (output) => { reply = output; }, NPCEngineConfig.Instance.temperature, NPCEngineConfig.Instance.topK);
             
-            testChatHistory += npc.characterName + ": " + reply + "\n";
+            testChatHistory += npc.character.Name + ": " + reply + "\n";
             generatingText = false;
         }
 

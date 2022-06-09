@@ -17,9 +17,8 @@ namespace NPCEngine.Components
             DontDestroyOnLoad(gameObject);
         }
 
-        public string settingName;
-        [TextArea(3, 10)]
-        public string settingDescription;
+        
+        public Location currentLocation;
 
         public string characterName;
 

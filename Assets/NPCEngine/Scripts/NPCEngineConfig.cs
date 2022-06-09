@@ -46,6 +46,14 @@ namespace NPCEngine
         public bool serverConsole = false;
         public bool connectToExistingServer = false;
 
+        [Header("Text Generation")]
+        [Range(0, 2)]
+        public float temperature = 1;
+        public int topK = 0;
+
+        
+        [Header("Speech Generation")]
+        public int nChunksSpeechGeneration = 7;
 
         private void Awake()
         {

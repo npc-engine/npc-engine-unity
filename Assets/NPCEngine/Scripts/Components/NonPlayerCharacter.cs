@@ -15,18 +15,9 @@ namespace NPCEngine.Components
     public class NonPlayerCharacter : MonoBehaviour
     {
 
-        [Range(0, 2)]
-        public float temperature = 1;
-        public int topK = 0;
-
-        public int nChunksTextGeneration = 7;
-
         public float defaultThreshold = 0.6f;
 
-        public string characterName;
-        [TextArea(3, 10)]
-        public string persona;
-        public string voiceId;
+        public Character character;
 
         public List<ChatLine> history;
 
@@ -50,6 +41,8 @@ namespace NPCEngine.Components
         public UnityEvent OnDialogueEnd;
 
         public AudioSourceQueue audioSourceQueue;
+        
+        public string voiceId;
 
         public AbstractDialogueSystem dialogueSystem;
 
@@ -62,6 +55,14 @@ namespace NPCEngine.Components
 
         private Coroutine runningCoroutine = null;
 
+        // Test properties
+
+        [HideInInspector]
+        public Location testLocation;
+
+        [HideInInspector]
+        public Character testOtherCharacter;
+        
         void Start()
         {
             if (history == null)
@@ -159,20 +160,20 @@ namespace NPCEngine.Components
         {
             var context = new FantasyChatbotContext
             {
-                name = characterName,
-                persona = persona,
+                name = character.Name,
+                persona = character.Persona,
                 other_name = otherName,
                 other_persona = otherPersona,
-                location_name = PlayerCharacter.Instance.settingName, // Use player's location because Player and NPC should be in the same location
-                location = PlayerCharacter.Instance.settingDescription,
+                location_name = PlayerCharacter.Instance.currentLocation.Name, // Use player's location because Player and NPC should be in the same location
+                location = PlayerCharacter.Instance.currentLocation.Description,
                 history = history,
             };
             string reply = "";
             yield return NPCEngineManager.Instance.GetAPI<FantasyChatbotTextGeneration>()
-                .GenerateReply(context, (output) => { reply = output; }, temperature, topK);
+                .GenerateReply(context, (output) => { reply = output; }, NPCEngineConfig.Instance.temperature, NPCEngineConfig.Instance.topK);
 
-            OnDialogueLine?.Invoke(new ChatLine { speaker = characterName, line = reply }, false);
-            history.Add(new ChatLine { speaker = characterName, line = reply });
+            OnDialogueLine?.Invoke(new ChatLine { speaker = character.Name, line = reply }, false);
+            history.Add(new ChatLine { speaker = character.Name, line = reply });
             yield return GenerateAndPlaySpeech(reply);
         }
 
@@ -185,8 +186,8 @@ namespace NPCEngine.Components
                 firstLine = false;
                 lastLine = line;
                 var audio = dialogueSystem.CurrentNodeNPCAudio();
-                history.Add(new ChatLine { speaker = characterName, line = line });
-                OnDialogueLine?.Invoke(new ChatLine { speaker = characterName, line = line }, true);
+                history.Add(new ChatLine { speaker = character.Name, line = line });
+                OnDialogueLine?.Invoke(new ChatLine { speaker = character.Name, line = line }, true);
                 if (audio != null)
                 {
                     audioSourceQueue.PlaySound(audio);
@@ -202,7 +203,7 @@ namespace NPCEngine.Components
 
         public IEnumerator GenerateAndPlaySpeech(string line)
         {
-            yield return NPCEngineManager.Instance.GetAPI<TextToSpeech>().StartTTS(voiceId, line, nChunksTextGeneration, () => { });
+            yield return NPCEngineManager.Instance.GetAPI<TextToSpeech>().StartTTS(voiceId, line, NPCEngineConfig.Instance.nChunksSpeechGeneration, () => { });
 
             List<float> audioData;
             do
