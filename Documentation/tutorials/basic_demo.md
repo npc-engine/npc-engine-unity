@@ -9,9 +9,8 @@ When you start it the first thing you'll see is this screen:
 ![First thing seen when starting basic demo scene](../resources/basic_scene_first.png)
 
 Since NPC Engine is a server that starts alongside unity and it's startup takes some time you can keep it running between playtests and just connect to existing one.  
-No server is running so you should start a new one.
 
-When started you should see some Unity logs regarding connecting to the server as well as server console pop up with server logs. This behaviour is debug only and can be turned off by disabling `debug` flag in `NPCEngineManager` game object.
+When started you should see some Unity logs regarding connecting to the server as well as server console pop up with server logs. This behaviour is debug only and can be turned off by disabling `Server Console` and `Debug Logs` flags in `NPCEngineManager` game object.
 ![Server console](../resources/npc_engine_console.png)
 
 If NPC Engine starts successfully, menu options will become interactable and you will be able to play around with different APIs.
@@ -67,19 +66,15 @@ Note that it will only work in low noise environment and with slow articulate sp
 
 ## Server Lifetime
 
-The main script that manages NPC Engine server is `NPCEngine.Server.NPCEngineServer`. It is attached to `NPCEngineManager` game object in the scene.
+Two most important NPC Engine classes are: 
+- Script that manages NPC Engine core server `NPCEngine.Components.NPCEngineManager`.
+- Script that contains configuration `NPCEngine.NPCEngineConfig`
 
-There you can find these public fields:
+They are attached to `NPCEngineManager` game object in the scene.  
+NPC Engine core server's main purpose is to run inference services. 
+When started it will start a core service called `control` that allows to control and get information about other services.
+Services mentioned as `Load on start` in the configuration are started as well.
 
-![NPCEngineServer script attached to NPCEngineManager](../resources/npc_engine_server_script.png)
-
-`Initialize On Start` controls whether NPCEngineServer will run `StartInferenceEngine` and `ConnectToServer` methods in it's `Awake` method.
-For the basic demo it's turned off to allow you to start and connect to server manually via UI buttons.
-
-`Debug` flag when turned on, starts server in a CMD window as well as enables `NPCEngineServer` to write message logs to console.
-When it's off, server runs in the background with no logs produced.
-
-`Connect To Existing Server` controls whether `NPCEngineServer` should start the server in `StartInferenceEngine` method
-and take ownership of the process (check it's health and terminate it `OnDestroy`).
-You can use this flag to not wait for NPCEngine to be initialized each playtest and keep connecting to the one that is already started.
-
+Stopped services do not take up any resources (except disk space).
+Services configs will take effect on start/restart.
+Each service is blocking only for its own thread and does not block other services.
