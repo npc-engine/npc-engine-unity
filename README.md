@@ -13,8 +13,7 @@ This is Unity integration package for NPC-Engine.
 
 ## Getting started
 
-- Download and import [Integration package](https://github.com/npc-engine/npc-engine-unity/releases/tag/v0.0.2)
-- Install [dependencies](#dependencies)
+- Grab the [integration](https://assetstore.unity.com/packages/tools/ai/npc-engine-208498) from Asset Store
 - Follow welcome window instructions or do a [manual setup](#manual-setup).
 - See tutorials and [API docs](https://npc-engine.github.io/npc-engine-unity/api/NPCEngine.html).
 
@@ -23,15 +22,6 @@ This is Unity integration package for NPC-Engine.
 - [Basic Demo](https://npc-engine.github.io/npc-engine-unity/tutorials/basic_demo.html) tutorial to see the basic usage of the NPC-engine API
 - [Advanced Demo](https://npc-engine.github.io/npc-engine-unity/tutorials/advanced_demo.html) to understand how higher-level components work and how to integrate NPC Engine into your game.
 - [Scene Setup Tutorial](https://npc-engine.github.io/npc-engine-unity/tutorials/scene_setup.html) to learn how to setup your scene from the ground up.
-
-## Dependencies
-
-- Advanced demo scene requires these free asset store packages:
-    - [VIDE dialogues](https://assetstore.unity.com/packages/tools/ai/vide-dialogues-69932)
-    - [Modular First Person Controller](https://assetstore.unity.com/packages/3d/characters/modular-first-person-controller-189884)
-    - [Low Poly Modular Armours](https://assetstore.unity.com/packages/3d/characters/lowpoly-modular-armors-free-pack-199890)
-    - [RPG Poly Pack - Lite](https://assetstore.unity.com/packages/3d/environments/landscapes/rpg-poly-pack-lite-148410)
-
 
 ## Manual setup
 
