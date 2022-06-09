@@ -915,7 +915,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 410962361}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -2827,20 +2827,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21b41f7dbbfb6694f8ff2750909bf519, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  temperature: 1
-  topK: 40
-  nChunksTextGeneration: 7
   defaultThreshold: 0.87
-  characterName: Poorman Teilo
-  persona: 'I am a drunkard.
-
-    I barely have money to survive.
-
-    I do any work
-    just to get a drink.
-
-    Sometimes I steal to get a drink.'
-  voiceId: 109
+  character: {fileID: 11400000, guid: 4b43d847cf921e5459421bf917490cbb, type: 2}
   history: []
   OnDialogueStart:
     m_PersistentCalls:
@@ -2933,7 +2921,10 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   audioSourceQueue: {fileID: 370138418}
+  voiceId: 109
   dialogueSystem: {fileID: 268440630}
+  testLocation: {fileID: 0}
+  testOtherCharacter: {fileID: 0}
 --- !u!114 &268440628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3906,20 +3897,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4208458315195486, guid: c96016c34e7be62488e588470988ef5b, type: 3}
   m_PrefabInstance: {fileID: 336330887}
   m_PrefabAsset: {fileID: 0}
---- !u!115 &337034137
-MonoScript:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  serializedVersion: 5
-  m_Script: 
-  m_DefaultReferences: {}
-  m_Icon: {fileID: 0}
-  m_ExecutionOrder: 0
-  m_ClassName: FantasyChatbotTextGeneration
-  m_Namespace: NPCEngine.Components
 --- !u!1 &337730806 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1069567032315564, guid: bdf8e7438a7816543998181bd3067573, type: 3}
@@ -4026,18 +4003,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21b41f7dbbfb6694f8ff2750909bf519, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  temperature: 1
-  topK: 40
-  nChunksTextGeneration: 7
   defaultThreshold: 0.87
-  characterName: Village guard Mael
-  persona: 'I like being a guard in a small village because its safe.
-
-    I like
-    drinking a lot.
-
-    I don''t like to do work.'
-  voiceId: 111
+  character: {fileID: 11400000, guid: a927f41f844df5e48b8001d70a61efc9, type: 2}
   history: []
   OnDialogueStart:
     m_PersistentCalls:
@@ -4130,7 +4097,10 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   audioSourceQueue: {fileID: 324177770}
+  voiceId: 111
   dialogueSystem: {fileID: 342769702}
+  testLocation: {fileID: 0}
+  testOtherCharacter: {fileID: 0}
 --- !u!114 &342769700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5429,34 +5399,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4931211907768612, guid: e88b7bb02ae149940a5a0cddf34fe370, type: 3}
   m_PrefabInstance: {fileID: 407647543}
   m_PrefabAsset: {fileID: 0}
---- !u!83 &410962361
-AudioClip:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: tmp
-  m_LoadType: 0
-  m_Channels: 1
-  m_Frequency: 22050
-  m_BitsPerSample: 32
-  m_Length: 0
-  m_IsTrackerFormat: 0
-  m_Ambisonic: 0
-  m_SubsoundIndex: 0
-  m_PreloadAudioData: 1
-  m_LoadInBackground: 0
-  m_Legacy3D: 0
-  m_Resource:
-    m_Source: 
-    m_Offset: 0
-    m_Size: 0
-  m_CompressionFormat: 0
-  m_EditorResource:
-    m_Source: 
-    m_Offset: 0
-    m_Size: 0
-  m_EditorCompressionFormat: 0
 --- !u!1001 &420546968
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5591,18 +5533,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21b41f7dbbfb6694f8ff2750909bf519, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  temperature: 1
-  topK: 40
-  nChunksTextGeneration: 7
   defaultThreshold: 0.87
-  characterName: Village Elder's son Brice
-  persona: 'I am an older son of a village elder.
-
-    I like to use my fathers power.
-
-    I
-    like it here.'
-  voiceId: 114
+  character: {fileID: 11400000, guid: c81071cedf2b1e443bf29325ef28c630, type: 2}
   history: []
   OnDialogueStart:
     m_PersistentCalls:
@@ -5695,7 +5627,10 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   audioSourceQueue: {fileID: 443624744}
+  voiceId: 114
   dialogueSystem: {fileID: 439923162}
+  testLocation: {fileID: 0}
+  testOtherCharacter: {fileID: 0}
 --- !u!114 &439923160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6634,9 +6569,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36293b1e17fa0f54cbc68cb275453f71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  locationName: Mournstead village
-  locationDescription: "A small mountain village. \nThe air is fresh, birds are chirping
-    and the weather is great."
+  location: {fileID: 0}
   locationCollider: {fileID: 554674858}
 --- !u!4 &554674860
 Transform:
@@ -14708,63 +14641,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: FirstPersonController
       objectReference: {fileID: 0}
-    - target: {fileID: 4459864851310106426, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
-      propertyPath: field of view
-      value: 26.991467
-      objectReference: {fileID: 0}
-    - target: {fileID: 4459864851310106426, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
-      propertyPath: m_projectionMatrixMode
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
---- !u!1 &1270366885 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4459864850019384750, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
-  m_PrefabInstance: {fileID: 1270366884}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1270366886
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1270366885}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5bc3ffad29ebf8439df95d9e0bb3a8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  settingName: 
-  settingDescription: 
-  characterName: Traveller
-  persona: 'I travel all around the world
-
-    I am a friend to everyone and a citizen
-    of the world'
-  CheckCamera: {fileID: 1270366887}
-  MaxRange: 3
-  VerticalMargin: 0.2
-  HorizontalMargin: 0.2
-  SpeechToText: {fileID: 1270366888}
 --- !u!20 &1270366887 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 4459864851310106426, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
   m_PrefabInstance: {fileID: 1270366884}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1270366888
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1270366885}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f0d7da996535ca46a8427e4a8e1afb1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  debugLogs: 1
 --- !u!4 &1279425804 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4459864851310106429, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
@@ -16877,18 +16760,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21b41f7dbbfb6694f8ff2750909bf519, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  temperature: 1
-  topK: 40
-  nChunksTextGeneration: 7
   defaultThreshold: 0.87
-  characterName: Tavernkeeper Gawain
-  persona: 'I own a tavern called "Brokeback Mountain".
-
-    I am rude with customers.
-
-    I
-    sell beer and food.'
-  voiceId: 107
+  character: {fileID: 11400000, guid: 745a07649277b644caa66d17eaade8bc, type: 2}
   history: []
   OnDialogueStart:
     m_PersistentCalls:
@@ -16981,7 +16854,10 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   audioSourceQueue: {fileID: 94982620}
+  voiceId: 107
   dialogueSystem: {fileID: 1418072426}
+  testLocation: {fileID: 11400000, guid: 0ada7c2e7e18fec47b92a5a5d54c19d3, type: 2}
+  testOtherCharacter: {fileID: 11400000, guid: 41bd9c791edf3514c894875cad46693c, type: 2}
 --- !u!114 &1418072424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18269,9 +18145,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8445985810613168456, guid: 649bd79ce63a6e9449715449439999df, type: 3}
       propertyPath: inferenceEngineProcessId
-      value: 1940
+      value: 13660
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1480138459, guid: 649bd79ce63a6e9449715449439999df, type: 3}
+    - {fileID: 1480138460, guid: 649bd79ce63a6e9449715449439999df, type: 3}
+    - {fileID: 1480138461, guid: 649bd79ce63a6e9449715449439999df, type: 3}
+    - {fileID: 6329926571952889153, guid: 649bd79ce63a6e9449715449439999df, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 649bd79ce63a6e9449715449439999df, type: 3}
 --- !u!1 &1480138457 stripped
 GameObject:
@@ -18287,81 +18167,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1480138457}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d35e6742b85850f48ae09c2f8be9ec8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  services:
-  - name: bart-light-gail-chatbot
-    type: '"BartChatbot"'
-    path: D:/UnityProjects/npc engine unity/Assets/StreamingAssets\.models/bart-light-gail-chatbot
-    start: 1
-  - name: exported-flowtron-waveglow-librispeech-tts
-    type: '"FlowtronTTS"'
-    path: D:/UnityProjects/npc engine unity/Assets/StreamingAssets\.models/exported-flowtron-waveglow-librispeech-tts
-    start: 1
-  - name: paraphrase-MiniLM-L6-v2
-    type: '"TransformerSemanticSimilarity"'
-    path: D:/UnityProjects/npc engine unity/Assets/StreamingAssets\.models/paraphrase-MiniLM-L6-v2
-    start: 1
-  serverType: 0
-  serverAddress: localhost:8080
-  modelsPath: .models/
-  npcEnginePath: .npc-engine/cli.exe
-  debugLogs: 0
-  serverConsole: 0
-  connectToExistingServer: 0
---- !u!114 &1480138459
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1480138457}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d6268b6a12312234e8b06335c4087020, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   serviceId: control
---- !u!114 &1480138460
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1480138457}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce046dfcca375b541a2ae6562993014d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serviceId: TextToSpeechAPI
---- !u!114 &1480138461
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1480138457}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b2aff91ce4f77944921366e4a88eba1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serviceId: SimilarityAPI
---- !u!114 &1480138462
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1480138457}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 337034137}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serviceId: TextGenerationAPI
 --- !u!1001 &1500069761
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19185,18 +18994,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21b41f7dbbfb6694f8ff2750909bf519, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  temperature: 1
-  topK: 40
-  nChunksTextGeneration: 7
   defaultThreshold: 0.87
-  characterName: Village Elder's son Conwy
-  persona: 'I am a younger son of a village elder.
-
-    I hate this village.
-
-    I
-    want to go on an adventure.'
-  voiceId: 34
+  character: {fileID: 11400000, guid: e84153344d993674f9aebdf76b2bee03, type: 2}
   history: []
   OnDialogueStart:
     m_PersistentCalls:
@@ -19289,7 +19088,10 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   audioSourceQueue: {fileID: 406266617}
+  voiceId: 34
   dialogueSystem: {fileID: 1572875429}
+  testLocation: {fileID: 0}
+  testOtherCharacter: {fileID: 0}
 --- !u!114 &1572875427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20439,21 +20241,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21b41f7dbbfb6694f8ff2750909bf519, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  temperature: 1
-  topK: 40
-  nChunksTextGeneration: 7
   defaultThreshold: 0.87
-  characterName: Village Elder Crowford
-  persona: 'I am an elder of Mournstead village.
-
-    I have two sons and a loving
-    wife.
-
-    I am old and wise.
-
-    I don''t want my younger son to go on the
-    adventure.'
-  voiceId: 23
+  character: {fileID: 11400000, guid: 3eed93491ea63254b9058b384e0be5d4, type: 2}
   history: []
   OnDialogueStart:
     m_PersistentCalls:
@@ -20546,7 +20335,10 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   audioSourceQueue: {fileID: 688638613}
+  voiceId: 23
   dialogueSystem: {fileID: 1660756327}
+  testLocation: {fileID: 0}
+  testOtherCharacter: {fileID: 0}
 --- !u!114 &1660756325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20944,18 +20736,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21b41f7dbbfb6694f8ff2750909bf519, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  temperature: 1
-  topK: 40
-  nChunksTextGeneration: 7
   defaultThreshold: 0.87
-  characterName: Village guard Idwal
-  persona: 'I like being a guard in a small village because its safe.
-
-    I like
-    drinking a lot.
-
-    I don''t like to do work.'
-  voiceId: 110
+  character: {fileID: 11400000, guid: 41bd9c791edf3514c894875cad46693c, type: 2}
   history: []
   OnDialogueStart:
     m_PersistentCalls:
@@ -21048,7 +20830,10 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   audioSourceQueue: {fileID: 1185882612}
+  voiceId: 110
   dialogueSystem: {fileID: 1698319939}
+  testLocation: {fileID: 0}
+  testOtherCharacter: {fileID: 0}
 --- !u!114 &1698319937
 MonoBehaviour:
   m_ObjectHideFlags: 0
