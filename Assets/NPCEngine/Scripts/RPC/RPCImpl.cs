@@ -131,6 +131,10 @@ namespace NPCEngine.RPC
                     UnityEngine.Debug.LogError(e.Message);
                     reply = "";
                 }
+                if(request != null)
+                {
+                    request.Dispose();
+                }
                 task.Item2(reply);
             }
         }
