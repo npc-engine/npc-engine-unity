@@ -83,12 +83,23 @@
   
   <h1 id="NPCEngine_Components_PlayerCharacter" data-uid="NPCEngine.Components.PlayerCharacter" class="text-break">Class PlayerCharacter
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>MonoBehaviour that handles dialogue initiation and passing recognized speech to NPCs.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
-    <div class="level1"><span class="xref">PlayerCharacter</span></div>
+    <div class="level1"><a class="xref" href="NPCEngine.Utility.Singleton-1.html">Singleton</a>&lt;<a class="xref" href="NPCEngine.Components.PlayerCharacter.html">PlayerCharacter</a>&gt;</div>
+    <div class="level2"><span class="xref">PlayerCharacter</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="NPCEngine.Utility.Singleton-1.html#NPCEngine_Utility_Singleton_1_Instance">Singleton&lt;PlayerCharacter&gt;.Instance</a>
+    </div>
+    <div>
+      <a class="xref" href="NPCEngine.Utility.Singleton-1.html#NPCEngine_Utility_Singleton_1_GetInstance">Singleton&lt;PlayerCharacter&gt;.GetInstance()</a>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="NPCEngine.Components.html">NPCEngine.Components</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
@@ -100,12 +111,13 @@
   </h3>
   
   
-  <h4 id="NPCEngine_Components_PlayerCharacter_characterName" data-uid="NPCEngine.Components.PlayerCharacter.characterName">characterName</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="NPCEngine_Components_PlayerCharacter_character" data-uid="NPCEngine.Components.PlayerCharacter.character">character</h4>
+  <div class="markdown level1 summary"><p>Character description of the player.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string characterName</code></pre>
+    <pre><code class="lang-csharp hljs">public Character character</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -117,7 +129,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="NPCEngine.Components.Character.html">Character</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -142,6 +154,31 @@
     <tbody>
       <tr>
         <td><span class="xref">Camera</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="NPCEngine_Components_PlayerCharacter_currentLocation" data-uid="NPCEngine.Components.PlayerCharacter.currentLocation">currentLocation</h4>
+  <div class="markdown level1 summary"><p>Location description of the player.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Location currentLocation</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="NPCEngine.Components.Location.html">Location</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -190,78 +227,6 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="NPCEngine_Components_PlayerCharacter_persona" data-uid="NPCEngine.Components.PlayerCharacter.persona">persona</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string persona</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="NPCEngine_Components_PlayerCharacter_settingDescription" data-uid="NPCEngine.Components.PlayerCharacter.settingDescription">settingDescription</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string settingDescription</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="NPCEngine_Components_PlayerCharacter_settingName" data-uid="NPCEngine.Components.PlayerCharacter.settingName">settingName</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string settingName</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -320,7 +285,8 @@
   
   <a id="NPCEngine_Components_PlayerCharacter_CheckIsSeen_" data-uid="NPCEngine.Components.PlayerCharacter.CheckIsSeen*"></a>
   <h4 id="NPCEngine_Components_PlayerCharacter_CheckIsSeen_Vector3_" data-uid="NPCEngine.Components.PlayerCharacter.CheckIsSeen(Vector3)">CheckIsSeen(Vector3)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Check if NPC is seen.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -362,7 +328,8 @@
   
   <a id="NPCEngine_Components_PlayerCharacter_DeregisterDialogueCandidate_" data-uid="NPCEngine.Components.PlayerCharacter.DeregisterDialogueCandidate*"></a>
   <h4 id="NPCEngine_Components_PlayerCharacter_DeregisterDialogueCandidate_NPCEngine_Components_NonPlayerCharacter_" data-uid="NPCEngine.Components.PlayerCharacter.DeregisterDialogueCandidate(NPCEngine.Components.NonPlayerCharacter)">DeregisterDialogueCandidate(NonPlayerCharacter)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Remove NPC from the list of potential conversants.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -389,7 +356,8 @@
   
   <a id="NPCEngine_Components_PlayerCharacter_IsRegistered_" data-uid="NPCEngine.Components.PlayerCharacter.IsRegistered*"></a>
   <h4 id="NPCEngine_Components_PlayerCharacter_IsRegistered_NPCEngine_Components_NonPlayerCharacter_" data-uid="NPCEngine.Components.PlayerCharacter.IsRegistered(NPCEngine.Components.NonPlayerCharacter)">IsRegistered(NonPlayerCharacter)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Check if NPC is registered as a dialogue candidate.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -431,7 +399,8 @@
   
   <a id="NPCEngine_Components_PlayerCharacter_LeaveDialog_" data-uid="NPCEngine.Components.PlayerCharacter.LeaveDialog*"></a>
   <h4 id="NPCEngine_Components_PlayerCharacter_LeaveDialog" data-uid="NPCEngine.Components.PlayerCharacter.LeaveDialog">LeaveDialog()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Leave current dialogue.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -441,7 +410,8 @@
   
   <a id="NPCEngine_Components_PlayerCharacter_RegisterDialogueCandidate_" data-uid="NPCEngine.Components.PlayerCharacter.RegisterDialogueCandidate*"></a>
   <h4 id="NPCEngine_Components_PlayerCharacter_RegisterDialogueCandidate_NPCEngine_Components_NonPlayerCharacter_" data-uid="NPCEngine.Components.PlayerCharacter.RegisterDialogueCandidate(NPCEngine.Components.NonPlayerCharacter)">RegisterDialogueCandidate(NonPlayerCharacter)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds NPC to the list of potential conversants.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

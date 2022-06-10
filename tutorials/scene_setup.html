@@ -88,43 +88,51 @@
 <p>It&#39;s best to test that everything is setup correctly in the basic demo scene first.</p>
 <h2 id="dependencies">Dependencies</h2>
 <p>One of the main dependency is some sort of a dialogue tree system. To integrate any dialogue system with npc-engine you must implement <a href="../api/NPCEngine.Components.AbstractDialogueSystem.html">AbstractDialogueSystem</a> interface. We already provide integration with a free dialogue tree system called <a href="https://assetstore.unity.com/packages/tools/ai/vide-dialogues-69932">VIDE Dialogues</a> and we are going to use it in this tutorial.</p>
-<h2 id="npcengineserver-npcenginemanager-prefab">NPCEngineServer (NPCEngineManager prefab)</h2>
-<p>NPCEngineServer is a singleton component that manages the npc-engine server lifetime and communication, it is required in every scene that uses npc-engine.</p>
-<p>It has a few useful properties that you can use to control how server is started, please refer to the <a href="../api/NPCEngine.Server.NPCEngineServer.yml">API</a> for more details.</p>
+<p>Import it from <code>Assets/NPCEngine/Integrations/VIDE Dialogues Integration.unitypackage</code></p>
+<h2 id="npcenginemanager-npcenginemanager-prefab">NPCEngineManager (NPCEngineManager prefab)</h2>
+<p>NPCEngineManager is a singleton component that manages the npc-engine server lifetime and communication, it is required in every scene that uses npc-engine.</p>
+<p>It has a few useful properties that you can use to control how server is started, please refer to the <a href="../api/NPCEngine.Components.NPCEngineManager.html">API</a> for more details.</p>
 <p><strong>It&#39;s missing on the screenshots but please add it anyway :) Bellow is the screenshot how final scene hierarchy should look</strong></p>
-<p><img src="../resources/scene-setup-how-it-should-look.png" alt="Final scene hierarchy"></p>
 <h2 id="character-setup">Character setup</h2>
 <p>In this section we will walk you through setting up a character in the scene.</p>
 <p>First let&#39;s add a character to the scene, we&#39;ll call him <code>cube</code>.</p>
-<p><img src="../resources/scene-setup-cube.png" alt="Text to speech"></p>
+<p><img src="../resources/scene-setup-cube.png" alt="Empty Scene with cube"></p>
 <p>The main npc-engine component for NPCs is <a href="../api/NPCEngine.Components.NonPlayerCharacter.html">NonPlayerCharacter</a>, but if you will try adding it to the cube you will get an error that it requires AbstractDialogueSystem component that is abstract and cannot be instantiated.  </p>
 <p>Lets first add VIDEDialogueSystem component to the cube. It will also create VIDE_Assign component that will assign the cube to the dialogue tree. Please refer to <a href="https://videdialogues.wordpress.com/about/">VIDE documentation</a> for more details.  </p>
 <p>After that you can add NonPlayerCharacter component to the cube.</p>
 <p><img src="../resources/scene-setup-npc-component.PNG" alt="NonPlayerCharacter"></p>
-<p>Now, let&#39;s give our character a name, description and pick him a voice. </p>
-<p><img src="../resources/setup-scene-cube-persona.png" alt="Cube persona"></p>
+<p>First we must create a character asset that holds name and persona of our character and assign it to the NonPlayerCharacter property.</p>
+<p><img src="../resources/setup-scene-cube-character.png" alt="Cube character">
+<img src="../resources/setup-scene-cube-persona.png" alt="Cube persona"></p>
 <p>Lets also add a dialogue tree for our character, NonPlayerCharacter will trigger speech recognition only if there is a players choice node active, otherwise player&#39;s speech will only trigger NPC speech generation with given static lines from the NPC dialogue nodes.</p>
 <p>Lets just choose a random dialogue tree from the list of available ones.</p>
 <p>We also should create an <a href="../api/NPCEngine.Utility.AudioSourceQueue.html">AudioSourceQueue</a> component and add it to the NonPlayerCharacter.</p>
-<p><img src="../resources/scene-setup-audio-source.PNG" alt="Cube audio source"></p>
-<p>This is the basics of setting up a non-player character in the scene without the UI except the generated audio. We will go over the UI in the <a href="#nonplayercharacter-callbacks-for-ui">NonPlayerCharacter Callbacks for UI</a> section.</p>
+<p>This is the basics of setting up a non-player character in the scene without the UI except the generated audio.</p>
+<p>Now we can select it&#39;s voice and test-chat with it!</p>
+<p>We will go over the UI in the <a href="#nonplayercharacter-callbacks-for-ui">NonPlayerCharacter Callbacks for UI</a> section.</p>
 <p>You can read about all the other NonPlayerCharacter parameters in the <a href="../api/NPCEngine.Components.NonPlayerCharacter.html">API docs</a>. </p>
+<h2 id="testing">Testing</h2>
+<h3 id="starting-npc-engine-server">Starting NPC Engine server</h3>
+<p>To test the character we must first start NPC Engine server and services. Go to NPCEngineManager inspector and press the big button.</p>
+<p><img src="../resources/setup-scene-manager-start.PNG" alt="Big Button"></p>
+<p>Make sure that you have some services for text generation, TTS and semantic similarity, and that they are running.</p>
+<p><img src="../resources/setup-scene-manager-started.PNG" alt="Services"></p>
+<h3 id="testing-character">Testing character</h3>
+<p>To test chat you must also provide two more scripted objects: <code>Character</code> that you would impersonate during test and a <code>Location</code> where the dialogue is happening.</p>
+<p><img src="../resources/setup-scene-cube-test-objects.PNG" alt="Test Character and Location"></p>
+<p>Now you can test the character by interface that expands from <code>Test Chat</code>, <code>Test Voice</code> and <code>Test Similarity</code> sections on Non Player Character component.</p>
+<p><img src="../resources/setup-scene-cube-testing.PNG" alt="Testing NPC"></p>
 <h2 id="player-character">Player Character</h2>
 <p>Now it&#39;s time to set up the player character. Since there is no need for the player controller in this tutorial, we will just use a static Camera object.</p>
 <p>First, let&#39;s add a <a href="../api/NPCEngine.Components.PlayerCharacter.html">PlayerCharacter</a> component to the camera object.</p>
-<p><img src="../resources/scene-setup-player.png" alt="Player character"></p>
-<p>Except the familiar character name and persona parameters you might have noticed, there are a two more natural language parameters that you need to set: setting name and description. These describe the location of the character in the world for chatbot to use in the dialogue with the player. The reason it is not present in the NonPlayerCharacter component is that it is not a part of the NPC&#39;s state, but rather a property of the dialogue, so it is provided by the player character.</p>
-<p>They are static in this tutorial, but they can be changed dynamically through scripts (e.g. as an event of collider trigger.)</p>
+<p>You will notice that Player character has similar properties to NonPlayerCharacter <code>Test Chat</code> window. We can reuse our Sphere character and Void location for it.
+They are static in this tutorial, but they can be changed dynamically through scripts (e.g. as an event of collider trigger.)</p>
 <p>The next important parameter is the SpeechToText component, it is used to convert speech from the microphone to text. We recommend using <a href="../api/NPCEngine.Components.DictationRecognizerSTT.html">DictationRecognizerSTT</a> component for this purpose, but it requires a change to windows settings (Dictation permision in speech privacy settings in Settings-&gt;Privacy-&gt;Speech, inking &amp; typing), please refer to the <a href="../api/NPCEngine.Components.DictationRecognizerSTT.html">documentation</a> for details </p>
-<p><img src="../resources/scene-setup-stt.png" alt="Speech to text"></p>
+<p><img src="../resources/scene-setup-player.png" alt="Player character"></p>
 <p>At this point you should be able to talk to your character by saying something in the microphone. It&#39;s time to <strong>test it</strong>!</p>
 <p><strong>Make sure that our Cube NPC audio source is centered in the camera (It is checked to start a dialogue) and that it&#39;s closer than MaxRange parameter in Player Character component.</strong></p>
-<p>On start you should see console pop up if your NPCEngineServer has <code>Debug</code> flag enabled. This is the console of the npc-engine server. It contains a lot of useful information about the server messaging and what models are loaded. If the console shows errors please check <a href="#troubleshooting">Troubleshooting</a> section or create a <a href="https://github.com/npc-engine/npc-engine/issues/new/choose">github issue</a>.
+<p>If something does not work as expected on start you should enable <code>Debug Logs</code> and <code>Server Console</code> flags in NPCEngineConfig and restart inference server through NPCEngineManager. This will spawn console of the npc-engine server as well as provide message traces between server and Unity. It contains a lot of useful information about the server messaging and what models are loaded. If the console shows errors please check <a href="#troubleshooting">Troubleshooting</a> section or create a <a href="https://github.com/npc-engine/npc-engine/issues/new/choose">github issue</a>.
 Before you say anything you should click on unity Game window so that it enters focus and make sure that the microphone is enabled. Focus is required by Windows STT services.</p>
-<p>After npc-engine intialization (Can be checked by NPCEngineServer.Instance.initialized flag), when you say something into your microphone you should see <code>hypothesis</code> and <code>result</code> logs in Unity console, as well as server logs showing messaging between npc-engine server and Unity.</p>
-<p>You should also hear Cube&#39;s replies to your speech.</p>
-<p>Here is how it should look like after start
-<img src="../resources/scene-setup-testing.png" alt="Running npc-engine"></p>
 <p>STT Restart errors will appear every time you change focus from the game window as STT fails at that point and is restarted when you focus on the game window again.</p>
 <h2 id="troubleshooting">Troubleshooting</h2>
 <ul>

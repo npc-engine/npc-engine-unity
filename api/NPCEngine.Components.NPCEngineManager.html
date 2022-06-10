@@ -83,12 +83,23 @@
   
   <h1 id="NPCEngine_Components_NPCEngineManager" data-uid="NPCEngine.Components.NPCEngineManager" class="text-break">Class NPCEngineManager
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Manager class that handles services and server lifetime and status.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
-    <div class="level1"><span class="xref">NPCEngineManager</span></div>
+    <div class="level1"><a class="xref" href="NPCEngine.Utility.Singleton-1.html">Singleton</a>&lt;<a class="xref" href="NPCEngine.Components.NPCEngineManager.html">NPCEngineManager</a>&gt;</div>
+    <div class="level2"><span class="xref">NPCEngineManager</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="NPCEngine.Utility.Singleton-1.html#NPCEngine_Utility_Singleton_1_Instance">Singleton&lt;NPCEngineManager&gt;.Instance</a>
+    </div>
+    <div>
+      <a class="xref" href="NPCEngine.Utility.Singleton-1.html#NPCEngine_Utility_Singleton_1_GetInstance">Singleton&lt;NPCEngineManager&gt;.GetInstance()</a>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="NPCEngine.Components.html">NPCEngine.Components</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
@@ -168,7 +179,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<span class="xref">ServiceMetadata</span>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="NPCEngine.API.ServiceMetadata.html">ServiceMetadata</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -193,7 +204,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <span class="xref">ServiceMetadata</span>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="NPCEngine.API.ServiceMetadata.html">ServiceMetadata</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -218,7 +229,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<span class="xref">ServiceStatus</span>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="NPCEngine.API.ServiceStatus.html">ServiceStatus</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -243,7 +254,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <span class="xref">ServiceStatus</span>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="NPCEngine.API.ServiceStatus.html">ServiceStatus</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -254,7 +265,8 @@
   
   <a id="NPCEngine_Components_NPCEngineManager_DownloadModel_" data-uid="NPCEngine.Components.NPCEngineManager.DownloadModel*"></a>
   <h4 id="NPCEngine_Components_NPCEngineManager_DownloadModel_System_String_" data-uid="NPCEngine.Components.NPCEngineManager.DownloadModel(System.String)">DownloadModel(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Download model by ID</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -281,7 +293,8 @@
   
   <a id="NPCEngine_Components_NPCEngineManager_GetAPI_" data-uid="NPCEngine.Components.NPCEngineManager.GetAPI*"></a>
   <h4 id="NPCEngine_Components_NPCEngineManager_GetAPI__1" data-uid="NPCEngine.Components.NPCEngineManager.GetAPI``1">GetAPI&lt;T&gt;()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Get or construct API for the given type.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -314,7 +327,8 @@
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td></td>
+        <td><p>API type</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -322,7 +336,8 @@
   
   <a id="NPCEngine_Components_NPCEngineManager_GetAPI_" data-uid="NPCEngine.Components.NPCEngineManager.GetAPI*"></a>
   <h4 id="NPCEngine_Components_NPCEngineManager_GetAPI__1_System_String_" data-uid="NPCEngine.Components.NPCEngineManager.GetAPI``1(System.String)">GetAPI&lt;T&gt;(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Get or construct API for the given type and service ID.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -342,7 +357,8 @@
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">id</span></td>
-        <td></td>
+        <td><p>Service ID or otherwise resolvable name</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -372,7 +388,8 @@
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td></td>
+        <td><p>API Type</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -380,7 +397,8 @@
   
   <a id="NPCEngine_Components_NPCEngineManager_StartInferenceEngine_" data-uid="NPCEngine.Components.NPCEngineManager.StartInferenceEngine*"></a>
   <h4 id="NPCEngine_Components_NPCEngineManager_StartInferenceEngine" data-uid="NPCEngine.Components.NPCEngineManager.StartInferenceEngine">StartInferenceEngine()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Starts the inference engine server and managing coroutines.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -390,7 +408,8 @@
   
   <a id="NPCEngine_Components_NPCEngineManager_StopInferenceEngine_" data-uid="NPCEngine.Components.NPCEngineManager.StopInferenceEngine*"></a>
   <h4 id="NPCEngine_Components_NPCEngineManager_StopInferenceEngine" data-uid="NPCEngine.Components.NPCEngineManager.StopInferenceEngine">StopInferenceEngine()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Stop the inference engine server, services and dispose resources.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -400,7 +419,8 @@
   
   <a id="NPCEngine_Components_NPCEngineManager_UpdateServices_" data-uid="NPCEngine.Components.NPCEngineManager.UpdateServices*"></a>
   <h4 id="NPCEngine_Components_NPCEngineManager_UpdateServices" data-uid="NPCEngine.Components.NPCEngineManager.UpdateServices">UpdateServices()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Coroutine that updates service list.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -425,7 +445,8 @@
   
   <a id="NPCEngine_Components_NPCEngineManager_UpdateServiceStatuses_" data-uid="NPCEngine.Components.NPCEngineManager.UpdateServiceStatuses*"></a>
   <h4 id="NPCEngine_Components_NPCEngineManager_UpdateServiceStatuses" data-uid="NPCEngine.Components.NPCEngineManager.UpdateServiceStatuses">UpdateServiceStatuses()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Coroutine that updates service statuses.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">

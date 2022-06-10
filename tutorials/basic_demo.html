@@ -83,8 +83,8 @@
 <p>First lets go through and play around with the basic demo scene.<br>Its located under this path: <code>NPCEngine/Demo/BasicDemo/Basic.unity</code></p>
 <p>When you start it the first thing you&#39;ll see is this screen:
 <img src="../resources/basic_scene_first.png" alt="First thing seen when starting basic demo scene"></p>
-<p>Since NPC Engine is a server that starts alongside unity and it&#39;s startup takes some time you can keep it running between playtests and just connect to existing one.<br>No server is running so you should start a new one.</p>
-<p>When started you should see some Unity logs regarding connecting to the server as well as server console pop up with server logs. This behaviour is debug only and can be turned off by disabling <code>debug</code> flag in <code>NPCEngineManager</code> game object.
+<p>Since NPC Engine is a server that starts alongside unity and it&#39;s startup takes some time you can keep it running between playtests and just connect to existing one.  </p>
+<p>When started you should see some Unity logs regarding connecting to the server as well as server console pop up with server logs. This behaviour is debug only and can be turned off by disabling <code>Server Console</code> and <code>Debug Logs</code> flags in <code>NPCEngineManager</code> game object.
 <img src="../resources/npc_engine_console.png" alt="Server console"></p>
 <p>If NPC Engine starts successfully, menu options will become interactable and you will be able to play around with different APIs.</p>
 <h2 id="available-api-demos">Available API Demos</h2>
@@ -113,16 +113,17 @@ transcribe it to text.</p>
     <a href="https://docs.unity3d.com/ScriptReference/Windows.Speech.DictationRecognizer.html">UnityEngine.Windows.Speech.DictationRecognizer</a> instead</p>
 <p><img src="../resources/speech_to_text.png" alt="Text to speech"></p>
 <h2 id="server-lifetime">Server Lifetime</h2>
-<p>The main script that manages NPC Engine server is <code>NPCEngine.Server.NPCEngineServer</code>. It is attached to <code>NPCEngineManager</code> game object in the scene.</p>
-<p>There you can find these public fields:</p>
-<p><img src="../resources/npc_engine_server_script.png" alt="NPCEngineServer script attached to NPCEngineManager"></p>
-<p><code>Initialize On Start</code> controls whether NPCEngineServer will run <code>StartInferenceEngine</code> and <code>ConnectToServer</code> methods in it&#39;s <code>Awake</code> method.
-For the basic demo it&#39;s turned off to allow you to start and connect to server manually via UI buttons.</p>
-<p><code>Debug</code> flag when turned on, starts server in a CMD window as well as enables <code>NPCEngineServer</code> to write message logs to console.
-When it&#39;s off, server runs in the background with no logs produced.</p>
-<p><code>Connect To Existing Server</code> controls whether <code>NPCEngineServer</code> should start the server in <code>StartInferenceEngine</code> method
-and take ownership of the process (check it&#39;s health and terminate it <code>OnDestroy</code>).
-You can use this flag to not wait for NPCEngine to be initialized each playtest and keep connecting to the one that is already started.</p>
+<p>Two most important NPC Engine classes are: </p>
+<ul>
+<li>Script that manages NPC Engine core server <code>NPCEngine.Components.NPCEngineManager</code>.</li>
+<li>Script that contains configuration <code>NPCEngine.NPCEngineConfig</code></li>
+</ul>
+<p>They are attached to <code>NPCEngineManager</code> game object in the scene.<br>NPC Engine core server&#39;s main purpose is to run inference services. 
+When started it will start a core service called <code>control</code> that allows to control and get information about other services.
+Services mentioned as <code>Load on start</code> in the configuration are started as well.</p>
+<p>Stopped services do not take up any resources (except disk space).
+Services configs will take effect on start/restart.
+Each service is blocking only for its own thread and does not block other services.</p>
 </article>
           </div>
           
