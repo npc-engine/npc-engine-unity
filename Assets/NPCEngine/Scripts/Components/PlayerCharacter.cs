@@ -20,10 +20,7 @@ namespace NPCEngine.Components
         
         public Location currentLocation;
 
-        public string characterName;
-
-        [TextArea(3, 10)]
-        public string persona;
+        public Character character;
 
         [Tooltip("This camera will check if Player sees NPC to initiate dialog")]
         public Camera CheckCamera;
@@ -125,18 +122,18 @@ namespace NPCEngine.Components
                     currentDialog.OnProcessingEnd.AddListener(SpeechToText.StartListening);
                     currentDialog.OnProcessingStart.AddListener(SpeechToText.StopListening);
                     currentDialog.OnDialogueEnd.AddListener(OnDialogueEnd);
-                    currentDialog.HandleLine(characterName, persona, utterance);
+                    currentDialog.HandleLine(character.Name, character.Persona, utterance);
                 }
             }
             else
             {
-                currentDialog.HandleLine(characterName, persona, utterance);
+                currentDialog.HandleLine(character.Name, character.Persona, utterance);
             }
         }
 
         private void SetContextFromChatLine(ChatLine chatLine, bool _)
         {
-            if (chatLine.speaker != characterName)
+            if (chatLine.speaker != character.Name)
             {
                 SpeechToText.Context = chatLine.line;
             }
