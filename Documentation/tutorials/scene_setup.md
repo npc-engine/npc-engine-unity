@@ -13,15 +13,16 @@ It's best to test that everything is setup correctly in the basic demo scene fir
 
 One of the main dependency is some sort of a dialogue tree system. To integrate any dialogue system with npc-engine you must implement [AbstractDialogueSystem](../api/NPCEngine.Components.AbstractDialogueSystem.yml) interface. We already provide integration with a free dialogue tree system called [VIDE Dialogues](https://assetstore.unity.com/packages/tools/ai/vide-dialogues-69932) and we are going to use it in this tutorial.
 
-## NPCEngineServer (NPCEngineManager prefab)
+Import it from `Assets/NPCEngine/Integrations/VIDE Dialogues Integration.unitypackage`
 
-NPCEngineServer is a singleton component that manages the npc-engine server lifetime and communication, it is required in every scene that uses npc-engine.
+## NPCEngineManager (NPCEngineManager prefab)
 
-It has a few useful properties that you can use to control how server is started, please refer to the [API](../api/NPCEngine.Server.NPCEngineServer.yml) for more details.
+NPCEngineManager is a singleton component that manages the npc-engine server lifetime and communication, it is required in every scene that uses npc-engine.
+
+It has a few useful properties that you can use to control how server is started, please refer to the [API](../api/NPCEngine.Components.NPCEngineManager.yml) for more details.
 
 **It's missing on the screenshots but please add it anyway :) Bellow is the screenshot how final scene hierarchy should look**
 
-![Final scene hierarchy](../resources/scene-setup-how-it-should-look.png)
 
 ## Character setup
 
@@ -29,7 +30,7 @@ In this section we will walk you through setting up a character in the scene.
 
 First let's add a character to the scene, we'll call him `cube`.
 
-![Text to speech](../resources/scene-setup-cube.png)
+![Empty Scene with cube](../resources/scene-setup-cube.png)
 
 The main npc-engine component for NPCs is [NonPlayerCharacter](../api/NPCEngine.Components.NonPlayerCharacter.yml), but if you will try adding it to the cube you will get an error that it requires AbstractDialogueSystem component that is abstract and cannot be instantiated.  
   
@@ -39,8 +40,9 @@ After that you can add NonPlayerCharacter component to the cube.
 
 ![NonPlayerCharacter](../resources/scene-setup-npc-component.PNG)
 
-Now, let's give our character a name, description and pick him a voice. 
+First we must create a character asset that holds name and persona of our character and assign it to the NonPlayerCharacter property.
 
+![Cube character](../resources/setup-scene-cube-character.png)
 ![Cube persona](../resources/setup-scene-cube-persona.png)
 
 Lets also add a dialogue tree for our character, NonPlayerCharacter will trigger speech recognition only if there is a players choice node active, otherwise player's speech will only trigger NPC speech generation with given static lines from the NPC dialogue nodes.
@@ -49,13 +51,35 @@ Lets just choose a random dialogue tree from the list of available ones.
 
 We also should create an [AudioSourceQueue](../api/NPCEngine.Utility.AudioSourceQueue.yml) component and add it to the NonPlayerCharacter.
 
-![Cube audio source](../resources/scene-setup-audio-source.PNG)
+This is the basics of setting up a non-player character in the scene without the UI except the generated audio.
 
+Now we can select it's voice and test-chat with it!
 
-This is the basics of setting up a non-player character in the scene without the UI except the generated audio. We will go over the UI in the [NonPlayerCharacter Callbacks for UI](#nonplayercharacter-callbacks-for-ui) section.
+We will go over the UI in the [NonPlayerCharacter Callbacks for UI](#nonplayercharacter-callbacks-for-ui) section.
   
 You can read about all the other NonPlayerCharacter parameters in the [API docs](../api/NPCEngine.Components.NonPlayerCharacter.yml). 
 
+## Testing
+
+### Starting NPC Engine server
+
+To test the character we must first start NPC Engine server and services. Go to NPCEngineManager inspector and press the big button.
+
+![Big Button](../resources/setup-scene-manager-start.PNG)
+
+Make sure that you have some services for text generation, TTS and semantic similarity, and that they are running.
+
+![Services](../resources/setup-scene-manager-started.PNG)
+
+### Testing character
+
+To test chat you must also provide two more scripted objects: `Character` that you would impersonate during test and a `Location` where the dialogue is happening.
+
+![Test Character and Location](../resources/setup-scene-cube-test-objects.PNG)
+
+Now you can test the character by interface that expands from `Test Chat`, `Test Voice` and `Test Similarity` sections on Non Player Character component.
+
+![Testing NPC](../resources/setup-scene-cube-testing.PNG)
 
 ## Player Character
 
@@ -63,29 +87,19 @@ Now it's time to set up the player character. Since there is no need for the pla
 
 First, let's add a [PlayerCharacter](../api/NPCEngine.Components.PlayerCharacter.yml) component to the camera object.
 
-![Player character](../resources/scene-setup-player.png)
-
-Except the familiar character name and persona parameters you might have noticed, there are a two more natural language parameters that you need to set: setting name and description. These describe the location of the character in the world for chatbot to use in the dialogue with the player. The reason it is not present in the NonPlayerCharacter component is that it is not a part of the NPC's state, but rather a property of the dialogue, so it is provided by the player character.
-
+You will notice that Player character has similar properties to NonPlayerCharacter `Test Chat` window. We can reuse our Sphere character and Void location for it.
 They are static in this tutorial, but they can be changed dynamically through scripts (e.g. as an event of collider trigger.)
 
 The next important parameter is the SpeechToText component, it is used to convert speech from the microphone to text. We recommend using [DictationRecognizerSTT](../api/NPCEngine.Components.DictationRecognizerSTT.yml) component for this purpose, but it requires a change to windows settings (Dictation permision in speech privacy settings in Settings->Privacy->Speech, inking & typing), please refer to the [documentation](../api/NPCEngine.Components.DictationRecognizerSTT.yml) for details 
 
-![Speech to text](../resources/scene-setup-stt.png)
+![Player character](../resources/scene-setup-player.png)
 
 At this point you should be able to talk to your character by saying something in the microphone. It's time to **test it**!
 
 **Make sure that our Cube NPC audio source is centered in the camera (It is checked to start a dialogue) and that it's closer than MaxRange parameter in Player Character component.**
 
-On start you should see console pop up if your NPCEngineServer has `Debug` flag enabled. This is the console of the npc-engine server. It contains a lot of useful information about the server messaging and what models are loaded. If the console shows errors please check [Troubleshooting](#troubleshooting) section or create a [github issue](https://github.com/npc-engine/npc-engine/issues/new/choose).
+If something does not work as expected on start you should enable `Debug Logs` and `Server Console` flags in NPCEngineConfig and restart inference server through NPCEngineManager. This will spawn console of the npc-engine server as well as provide message traces between server and Unity. It contains a lot of useful information about the server messaging and what models are loaded. If the console shows errors please check [Troubleshooting](#troubleshooting) section or create a [github issue](https://github.com/npc-engine/npc-engine/issues/new/choose).
 Before you say anything you should click on unity Game window so that it enters focus and make sure that the microphone is enabled. Focus is required by Windows STT services.
-
-After npc-engine intialization (Can be checked by NPCEngineServer.Instance.initialized flag), when you say something into your microphone you should see `hypothesis` and `result` logs in Unity console, as well as server logs showing messaging between npc-engine server and Unity.
-
-You should also hear Cube's replies to your speech.
-
-Here is how it should look like after start
-![Running npc-engine](../resources/scene-setup-testing.png)
 
 STT Restart errors will appear every time you change focus from the game window as STT fails at that point and is restarted when you focus on the game window again.
 
