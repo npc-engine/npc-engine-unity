@@ -5,9 +5,8 @@ items:
   id: ColliderLocationTrigger
   parent: NPCEngine.Components
   children:
+  - NPCEngine.Components.ColliderLocationTrigger.location
   - NPCEngine.Components.ColliderLocationTrigger.locationCollider
-  - NPCEngine.Components.ColliderLocationTrigger.locationDescription
-  - NPCEngine.Components.ColliderLocationTrigger.locationName
   langs:
   - csharp
   - vb
@@ -18,7 +17,7 @@ items:
   source:
     id: ColliderLocationTrigger
     path: ''
-    startLine: 913
+    startLine: 1289
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -37,56 +36,29 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: NPCEngine.Components.ColliderLocationTrigger.locationName
-  commentId: F:NPCEngine.Components.ColliderLocationTrigger.locationName
-  id: locationName
+- uid: NPCEngine.Components.ColliderLocationTrigger.location
+  commentId: F:NPCEngine.Components.ColliderLocationTrigger.location
+  id: location
   parent: NPCEngine.Components.ColliderLocationTrigger
   langs:
   - csharp
   - vb
-  name: locationName
-  nameWithType: ColliderLocationTrigger.locationName
-  fullName: NPCEngine.Components.ColliderLocationTrigger.locationName
+  name: location
+  nameWithType: ColliderLocationTrigger.location
+  fullName: NPCEngine.Components.ColliderLocationTrigger.location
   type: Field
   source:
-    id: locationName
+    id: location
     path: ''
-    startLine: 916
+    startLine: 1292
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
   syntax:
-    content: public string locationName
+    content: public Location location
     return:
-      type: System.String
-    content.vb: Public locationName As String
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: NPCEngine.Components.ColliderLocationTrigger.locationDescription
-  commentId: F:NPCEngine.Components.ColliderLocationTrigger.locationDescription
-  id: locationDescription
-  parent: NPCEngine.Components.ColliderLocationTrigger
-  langs:
-  - csharp
-  - vb
-  name: locationDescription
-  nameWithType: ColliderLocationTrigger.locationDescription
-  fullName: NPCEngine.Components.ColliderLocationTrigger.locationDescription
-  type: Field
-  source:
-    id: locationDescription
-    path: ''
-    startLine: 918
-  assemblies:
-  - cs.temp.dll
-  namespace: NPCEngine.Components
-  syntax:
-    content: public string locationDescription
-    return:
-      type: System.String
-    content.vb: Public locationDescription As String
+      type: NPCEngine.Components.Location
+    content.vb: Public location As Location
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -105,7 +77,7 @@ items:
   source:
     id: locationCollider
     path: ''
-    startLine: 920
+    startLine: 1294
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -137,13 +109,12 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: System.String
-  commentId: T:System.String
-  parent: System
-  isExternal: true
-  name: String
-  nameWithType: String
-  fullName: System.String
+- uid: NPCEngine.Components.Location
+  commentId: T:NPCEngine.Components.Location
+  parent: NPCEngine.Components
+  name: Location
+  nameWithType: Location
+  fullName: NPCEngine.Components.Location
 - uid: Global.Collider
   commentId: '!:Global.Collider'
   isExternal: true

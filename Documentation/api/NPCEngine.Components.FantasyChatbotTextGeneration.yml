@@ -1,0 +1,948 @@
+### YamlMime:ManagedReference
+items:
+- uid: NPCEngine.Components.FantasyChatbotTextGeneration
+  commentId: T:NPCEngine.Components.FantasyChatbotTextGeneration
+  id: FantasyChatbotTextGeneration
+  parent: NPCEngine.Components
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: FantasyChatbotTextGeneration
+  nameWithType: FantasyChatbotTextGeneration
+  fullName: NPCEngine.Components.FantasyChatbotTextGeneration
+  type: Class
+  source:
+    id: FantasyChatbotTextGeneration
+    path: ''
+    startLine: 2432
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  syntax:
+    content: 'public class FantasyChatbotTextGeneration : TextGeneration<FantasyChatbotContext>'
+    content.vb: >-
+      Public Class FantasyChatbotTextGeneration
+          Inherits TextGeneration(Of FantasyChatbotContext)
+  inheritance:
+  - System.Object
+  - NPCEngine.API.TextGeneration{NPCEngine.Components.FantasyChatbotContext}
+  inheritedMembers:
+  - NPCEngine.API.TextGeneration{NPCEngine.Components.FantasyChatbotContext}.GenerateReplyFuture(NPCEngine.Components.FantasyChatbotContext,System.Single,System.Int32)
+  - NPCEngine.API.TextGeneration{NPCEngine.Components.FantasyChatbotContext}.GetSpecialTokensFuture
+  - NPCEngine.API.TextGeneration{NPCEngine.Components.FantasyChatbotContext}.GetPromptTemplateFuture
+  - NPCEngine.API.TextGeneration{NPCEngine.Components.FantasyChatbotContext}.GenerateReply(NPCEngine.Components.FantasyChatbotContext,System.Action{System.String},System.Single,System.Int32)
+  - NPCEngine.API.TextGeneration{NPCEngine.Components.FantasyChatbotContext}.GetSpecialTokens(System.Action{System.Collections.Generic.Dictionary{System.String,System.String}})
+  - NPCEngine.API.TextGeneration{NPCEngine.Components.FantasyChatbotContext}.GetPromptTemplate(System.Action{System.String})
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+references:
+- uid: NPCEngine.Components
+  commentId: N:NPCEngine.Components
+  name: NPCEngine.Components
+  nameWithType: NPCEngine.Components
+  fullName: NPCEngine.Components
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: NPCEngine.API.TextGeneration{NPCEngine.Components.FantasyChatbotContext}
+  commentId: T:NPCEngine.API.TextGeneration{NPCEngine.Components.FantasyChatbotContext}
+  parent: NPCEngine.API
+  definition: NPCEngine.API.TextGeneration`1
+  name: TextGeneration<FantasyChatbotContext>
+  nameWithType: TextGeneration<FantasyChatbotContext>
+  fullName: NPCEngine.API.TextGeneration<NPCEngine.Components.FantasyChatbotContext>
+  nameWithType.vb: TextGeneration(Of FantasyChatbotContext)
+  fullName.vb: NPCEngine.API.TextGeneration(Of NPCEngine.Components.FantasyChatbotContext)
+  name.vb: TextGeneration(Of FantasyChatbotContext)
+  spec.csharp:
+  - uid: NPCEngine.API.TextGeneration`1
+    name: TextGeneration
+    nameWithType: TextGeneration
+    fullName: NPCEngine.API.TextGeneration
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: NPCEngine.Components.FantasyChatbotContext
+    name: FantasyChatbotContext
+    nameWithType: FantasyChatbotContext
+    fullName: NPCEngine.Components.FantasyChatbotContext
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: NPCEngine.API.TextGeneration`1
+    name: TextGeneration
+    nameWithType: TextGeneration
+    fullName: NPCEngine.API.TextGeneration
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: NPCEngine.Components.FantasyChatbotContext
+    name: FantasyChatbotContext
+    nameWithType: FantasyChatbotContext
+    fullName: NPCEngine.Components.FantasyChatbotContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NPCEngine.API.TextGeneration{NPCEngine.Components.FantasyChatbotContext}.GenerateReplyFuture(NPCEngine.Components.FantasyChatbotContext,System.Single,System.Int32)
+  commentId: M:NPCEngine.API.TextGeneration{NPCEngine.Components.FantasyChatbotContext}.GenerateReplyFuture(NPCEngine.Components.FantasyChatbotContext,System.Single,System.Int32)
+  parent: NPCEngine.API.TextGeneration{NPCEngine.Components.FantasyChatbotContext}
+  definition: NPCEngine.API.TextGeneration`1.GenerateReplyFuture(`0,System.Single,System.Int32)
+  name: GenerateReplyFuture(FantasyChatbotContext, Single, Int32)
+  nameWithType: TextGeneration<FantasyChatbotContext>.GenerateReplyFuture(FantasyChatbotContext, Single, Int32)
+  fullName: NPCEngine.API.TextGeneration<NPCEngine.Components.FantasyChatbotContext>.GenerateReplyFuture(NPCEngine.Components.FantasyChatbotContext, System.Single, System.Int32)
+  nameWithType.vb: TextGeneration(Of FantasyChatbotContext).GenerateReplyFuture(FantasyChatbotContext, Single, Int32)
+  fullName.vb: NPCEngine.API.TextGeneration(Of NPCEngine.Components.FantasyChatbotContext).GenerateReplyFuture(NPCEngine.Components.FantasyChatbotContext, System.Single, System.Int32)
+  spec.csharp:
+  - uid: NPCEngine.API.TextGeneration`1.GenerateReplyFuture(`0,System.Single,System.Int32)
+    name: GenerateReplyFuture
+    nameWithType: TextGeneration<FantasyChatbotContext>.GenerateReplyFuture
+    fullName: NPCEngine.API.TextGeneration<NPCEngine.Components.FantasyChatbotContext>.GenerateReplyFuture
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: NPCEngine.Components.FantasyChatbotContext
+    name: FantasyChatbotContext
+    nameWithType: FantasyChatbotContext
+    fullName: NPCEngine.Components.FantasyChatbotContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: NPCEngine.API.TextGeneration`1.GenerateReplyFuture(`0,System.Single,System.Int32)
+    name: GenerateReplyFuture
+    nameWithType: TextGeneration(Of FantasyChatbotContext).GenerateReplyFuture
+    fullName: NPCEngine.API.TextGeneration(Of NPCEngine.Components.FantasyChatbotContext).GenerateReplyFuture
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: NPCEngine.Components.FantasyChatbotContext
+    name: FantasyChatbotContext
+    nameWithType: FantasyChatbotContext
+    fullName: NPCEngine.Components.FantasyChatbotContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NPCEngine.API.TextGeneration{NPCEngine.Components.FantasyChatbotContext}.GetSpecialTokensFuture
+  commentId: M:NPCEngine.API.TextGeneration{NPCEngine.Components.FantasyChatbotContext}.GetSpecialTokensFuture
+  parent: NPCEngine.API.TextGeneration{NPCEngine.Components.FantasyChatbotContext}
+  definition: NPCEngine.API.TextGeneration`1.GetSpecialTokensFuture
+  name: GetSpecialTokensFuture()
+  nameWithType: TextGeneration<FantasyChatbotContext>.GetSpecialTokensFuture()
+  fullName: NPCEngine.API.TextGeneration<NPCEngine.Components.FantasyChatbotContext>.GetSpecialTokensFuture()
+  nameWithType.vb: TextGeneration(Of FantasyChatbotContext).GetSpecialTokensFuture()
+  fullName.vb: NPCEngine.API.TextGeneration(Of NPCEngine.Components.FantasyChatbotContext).GetSpecialTokensFuture()
+  spec.csharp:
+  - uid: NPCEngine.API.TextGeneration`1.GetSpecialTokensFuture
+    name: GetSpecialTokensFuture
+    nameWithType: TextGeneration<FantasyChatbotContext>.GetSpecialTokensFuture
+    fullName: NPCEngine.API.TextGeneration<NPCEngine.Components.FantasyChatbotContext>.GetSpecialTokensFuture
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: NPCEngine.API.TextGeneration`1.GetSpecialTokensFuture
+    name: GetSpecialTokensFuture
+    nameWithType: TextGeneration(Of FantasyChatbotContext).GetSpecialTokensFuture
+    fullName: NPCEngine.API.TextGeneration(Of NPCEngine.Components.FantasyChatbotContext).GetSpecialTokensFuture
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NPCEngine.API.TextGeneration{NPCEngine.Components.FantasyChatbotContext}.GetPromptTemplateFuture
+  commentId: M:NPCEngine.API.TextGeneration{NPCEngine.Components.FantasyChatbotContext}.GetPromptTemplateFuture
+  parent: NPCEngine.API.TextGeneration{NPCEngine.Components.FantasyChatbotContext}
+  definition: NPCEngine.API.TextGeneration`1.GetPromptTemplateFuture
+  name: GetPromptTemplateFuture()
+  nameWithType: TextGeneration<FantasyChatbotContext>.GetPromptTemplateFuture()
+  fullName: NPCEngine.API.TextGeneration<NPCEngine.Components.FantasyChatbotContext>.GetPromptTemplateFuture()
+  nameWithType.vb: TextGeneration(Of FantasyChatbotContext).GetPromptTemplateFuture()
+  fullName.vb: NPCEngine.API.TextGeneration(Of NPCEngine.Components.FantasyChatbotContext).GetPromptTemplateFuture()
+  spec.csharp:
+  - uid: NPCEngine.API.TextGeneration`1.GetPromptTemplateFuture
+    name: GetPromptTemplateFuture
+    nameWithType: TextGeneration<FantasyChatbotContext>.GetPromptTemplateFuture
+    fullName: NPCEngine.API.TextGeneration<NPCEngine.Components.FantasyChatbotContext>.GetPromptTemplateFuture
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: NPCEngine.API.TextGeneration`1.GetPromptTemplateFuture
+    name: GetPromptTemplateFuture
+    nameWithType: TextGeneration(Of FantasyChatbotContext).GetPromptTemplateFuture
+    fullName: NPCEngine.API.TextGeneration(Of NPCEngine.Components.FantasyChatbotContext).GetPromptTemplateFuture
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NPCEngine.API.TextGeneration{NPCEngine.Components.FantasyChatbotContext}.GenerateReply(NPCEngine.Components.FantasyChatbotContext,System.Action{System.String},System.Single,System.Int32)
+  commentId: M:NPCEngine.API.TextGeneration{NPCEngine.Components.FantasyChatbotContext}.GenerateReply(NPCEngine.Components.FantasyChatbotContext,System.Action{System.String},System.Single,System.Int32)
+  parent: NPCEngine.API.TextGeneration{NPCEngine.Components.FantasyChatbotContext}
+  definition: NPCEngine.API.TextGeneration`1.GenerateReply(`0,System.Action{System.String},System.Single,System.Int32)
+  name: GenerateReply(FantasyChatbotContext, Action<String>, Single, Int32)
+  nameWithType: TextGeneration<FantasyChatbotContext>.GenerateReply(FantasyChatbotContext, Action<String>, Single, Int32)
+  fullName: NPCEngine.API.TextGeneration<NPCEngine.Components.FantasyChatbotContext>.GenerateReply(NPCEngine.Components.FantasyChatbotContext, System.Action<System.String>, System.Single, System.Int32)
+  nameWithType.vb: TextGeneration(Of FantasyChatbotContext).GenerateReply(FantasyChatbotContext, Action(Of String), Single, Int32)
+  fullName.vb: NPCEngine.API.TextGeneration(Of NPCEngine.Components.FantasyChatbotContext).GenerateReply(NPCEngine.Components.FantasyChatbotContext, System.Action(Of System.String), System.Single, System.Int32)
+  name.vb: GenerateReply(FantasyChatbotContext, Action(Of String), Single, Int32)
+  spec.csharp:
+  - uid: NPCEngine.API.TextGeneration`1.GenerateReply(`0,System.Action{System.String},System.Single,System.Int32)
+    name: GenerateReply
+    nameWithType: TextGeneration<FantasyChatbotContext>.GenerateReply
+    fullName: NPCEngine.API.TextGeneration<NPCEngine.Components.FantasyChatbotContext>.GenerateReply
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: NPCEngine.Components.FantasyChatbotContext
+    name: FantasyChatbotContext
+    nameWithType: FantasyChatbotContext
+    fullName: NPCEngine.Components.FantasyChatbotContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: NPCEngine.API.TextGeneration`1.GenerateReply(`0,System.Action{System.String},System.Single,System.Int32)
+    name: GenerateReply
+    nameWithType: TextGeneration(Of FantasyChatbotContext).GenerateReply
+    fullName: NPCEngine.API.TextGeneration(Of NPCEngine.Components.FantasyChatbotContext).GenerateReply
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: NPCEngine.Components.FantasyChatbotContext
+    name: FantasyChatbotContext
+    nameWithType: FantasyChatbotContext
+    fullName: NPCEngine.Components.FantasyChatbotContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NPCEngine.API.TextGeneration{NPCEngine.Components.FantasyChatbotContext}.GetSpecialTokens(System.Action{System.Collections.Generic.Dictionary{System.String,System.String}})
+  commentId: M:NPCEngine.API.TextGeneration{NPCEngine.Components.FantasyChatbotContext}.GetSpecialTokens(System.Action{System.Collections.Generic.Dictionary{System.String,System.String}})
+  parent: NPCEngine.API.TextGeneration{NPCEngine.Components.FantasyChatbotContext}
+  definition: NPCEngine.API.TextGeneration`1.GetSpecialTokens(System.Action{System.Collections.Generic.Dictionary{System.String,System.String}})
+  name: GetSpecialTokens(Action<Dictionary<String, String>>)
+  nameWithType: TextGeneration<FantasyChatbotContext>.GetSpecialTokens(Action<Dictionary<String, String>>)
+  fullName: NPCEngine.API.TextGeneration<NPCEngine.Components.FantasyChatbotContext>.GetSpecialTokens(System.Action<System.Collections.Generic.Dictionary<System.String, System.String>>)
+  nameWithType.vb: TextGeneration(Of FantasyChatbotContext).GetSpecialTokens(Action(Of Dictionary(Of String, String)))
+  fullName.vb: NPCEngine.API.TextGeneration(Of NPCEngine.Components.FantasyChatbotContext).GetSpecialTokens(System.Action(Of System.Collections.Generic.Dictionary(Of System.String, System.String)))
+  name.vb: GetSpecialTokens(Action(Of Dictionary(Of String, String)))
+  spec.csharp:
+  - uid: NPCEngine.API.TextGeneration`1.GetSpecialTokens(System.Action{System.Collections.Generic.Dictionary{System.String,System.String}})
+    name: GetSpecialTokens
+    nameWithType: TextGeneration<FantasyChatbotContext>.GetSpecialTokens
+    fullName: NPCEngine.API.TextGeneration<NPCEngine.Components.FantasyChatbotContext>.GetSpecialTokens
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: NPCEngine.API.TextGeneration`1.GetSpecialTokens(System.Action{System.Collections.Generic.Dictionary{System.String,System.String}})
+    name: GetSpecialTokens
+    nameWithType: TextGeneration(Of FantasyChatbotContext).GetSpecialTokens
+    fullName: NPCEngine.API.TextGeneration(Of NPCEngine.Components.FantasyChatbotContext).GetSpecialTokens
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NPCEngine.API.TextGeneration{NPCEngine.Components.FantasyChatbotContext}.GetPromptTemplate(System.Action{System.String})
+  commentId: M:NPCEngine.API.TextGeneration{NPCEngine.Components.FantasyChatbotContext}.GetPromptTemplate(System.Action{System.String})
+  parent: NPCEngine.API.TextGeneration{NPCEngine.Components.FantasyChatbotContext}
+  definition: NPCEngine.API.TextGeneration`1.GetPromptTemplate(System.Action{System.String})
+  name: GetPromptTemplate(Action<String>)
+  nameWithType: TextGeneration<FantasyChatbotContext>.GetPromptTemplate(Action<String>)
+  fullName: NPCEngine.API.TextGeneration<NPCEngine.Components.FantasyChatbotContext>.GetPromptTemplate(System.Action<System.String>)
+  nameWithType.vb: TextGeneration(Of FantasyChatbotContext).GetPromptTemplate(Action(Of String))
+  fullName.vb: NPCEngine.API.TextGeneration(Of NPCEngine.Components.FantasyChatbotContext).GetPromptTemplate(System.Action(Of System.String))
+  name.vb: GetPromptTemplate(Action(Of String))
+  spec.csharp:
+  - uid: NPCEngine.API.TextGeneration`1.GetPromptTemplate(System.Action{System.String})
+    name: GetPromptTemplate
+    nameWithType: TextGeneration<FantasyChatbotContext>.GetPromptTemplate
+    fullName: NPCEngine.API.TextGeneration<NPCEngine.Components.FantasyChatbotContext>.GetPromptTemplate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: NPCEngine.API.TextGeneration`1.GetPromptTemplate(System.Action{System.String})
+    name: GetPromptTemplate
+    nameWithType: TextGeneration(Of FantasyChatbotContext).GetPromptTemplate
+    fullName: NPCEngine.API.TextGeneration(Of NPCEngine.Components.FantasyChatbotContext).GetPromptTemplate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: NPCEngine.API.TextGeneration`1
+  commentId: T:NPCEngine.API.TextGeneration`1
+  name: TextGeneration<ContextType>
+  nameWithType: TextGeneration<ContextType>
+  fullName: NPCEngine.API.TextGeneration<ContextType>
+  nameWithType.vb: TextGeneration(Of ContextType)
+  fullName.vb: NPCEngine.API.TextGeneration(Of ContextType)
+  name.vb: TextGeneration(Of ContextType)
+  spec.csharp:
+  - uid: NPCEngine.API.TextGeneration`1
+    name: TextGeneration
+    nameWithType: TextGeneration
+    fullName: NPCEngine.API.TextGeneration
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ContextType
+    nameWithType: ContextType
+    fullName: ContextType
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: NPCEngine.API.TextGeneration`1
+    name: TextGeneration
+    nameWithType: TextGeneration
+    fullName: NPCEngine.API.TextGeneration
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ContextType
+    nameWithType: ContextType
+    fullName: ContextType
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NPCEngine.API
+  commentId: N:NPCEngine.API
+  name: NPCEngine.API
+  nameWithType: NPCEngine.API
+  fullName: NPCEngine.API
+- uid: NPCEngine.API.TextGeneration`1.GenerateReplyFuture(`0,System.Single,System.Int32)
+  commentId: M:NPCEngine.API.TextGeneration`1.GenerateReplyFuture(`0,System.Single,System.Int32)
+  isExternal: true
+  name: GenerateReplyFuture(ContextType, Single, Int32)
+  nameWithType: TextGeneration<ContextType>.GenerateReplyFuture(ContextType, Single, Int32)
+  fullName: NPCEngine.API.TextGeneration<ContextType>.GenerateReplyFuture(ContextType, System.Single, System.Int32)
+  nameWithType.vb: TextGeneration(Of ContextType).GenerateReplyFuture(ContextType, Single, Int32)
+  fullName.vb: NPCEngine.API.TextGeneration(Of ContextType).GenerateReplyFuture(ContextType, System.Single, System.Int32)
+  spec.csharp:
+  - uid: NPCEngine.API.TextGeneration`1.GenerateReplyFuture(`0,System.Single,System.Int32)
+    name: GenerateReplyFuture
+    nameWithType: TextGeneration<ContextType>.GenerateReplyFuture
+    fullName: NPCEngine.API.TextGeneration<ContextType>.GenerateReplyFuture
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: ContextType
+    nameWithType: ContextType
+    fullName: ContextType
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: NPCEngine.API.TextGeneration`1.GenerateReplyFuture(`0,System.Single,System.Int32)
+    name: GenerateReplyFuture
+    nameWithType: TextGeneration(Of ContextType).GenerateReplyFuture
+    fullName: NPCEngine.API.TextGeneration(Of ContextType).GenerateReplyFuture
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: ContextType
+    nameWithType: ContextType
+    fullName: ContextType
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NPCEngine.API.TextGeneration`1.GetSpecialTokensFuture
+  commentId: M:NPCEngine.API.TextGeneration`1.GetSpecialTokensFuture
+  name: GetSpecialTokensFuture()
+  nameWithType: TextGeneration<ContextType>.GetSpecialTokensFuture()
+  fullName: NPCEngine.API.TextGeneration<ContextType>.GetSpecialTokensFuture()
+  nameWithType.vb: TextGeneration(Of ContextType).GetSpecialTokensFuture()
+  fullName.vb: NPCEngine.API.TextGeneration(Of ContextType).GetSpecialTokensFuture()
+  spec.csharp:
+  - uid: NPCEngine.API.TextGeneration`1.GetSpecialTokensFuture
+    name: GetSpecialTokensFuture
+    nameWithType: TextGeneration<ContextType>.GetSpecialTokensFuture
+    fullName: NPCEngine.API.TextGeneration<ContextType>.GetSpecialTokensFuture
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: NPCEngine.API.TextGeneration`1.GetSpecialTokensFuture
+    name: GetSpecialTokensFuture
+    nameWithType: TextGeneration(Of ContextType).GetSpecialTokensFuture
+    fullName: NPCEngine.API.TextGeneration(Of ContextType).GetSpecialTokensFuture
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NPCEngine.API.TextGeneration`1.GetPromptTemplateFuture
+  commentId: M:NPCEngine.API.TextGeneration`1.GetPromptTemplateFuture
+  name: GetPromptTemplateFuture()
+  nameWithType: TextGeneration<ContextType>.GetPromptTemplateFuture()
+  fullName: NPCEngine.API.TextGeneration<ContextType>.GetPromptTemplateFuture()
+  nameWithType.vb: TextGeneration(Of ContextType).GetPromptTemplateFuture()
+  fullName.vb: NPCEngine.API.TextGeneration(Of ContextType).GetPromptTemplateFuture()
+  spec.csharp:
+  - uid: NPCEngine.API.TextGeneration`1.GetPromptTemplateFuture
+    name: GetPromptTemplateFuture
+    nameWithType: TextGeneration<ContextType>.GetPromptTemplateFuture
+    fullName: NPCEngine.API.TextGeneration<ContextType>.GetPromptTemplateFuture
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: NPCEngine.API.TextGeneration`1.GetPromptTemplateFuture
+    name: GetPromptTemplateFuture
+    nameWithType: TextGeneration(Of ContextType).GetPromptTemplateFuture
+    fullName: NPCEngine.API.TextGeneration(Of ContextType).GetPromptTemplateFuture
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NPCEngine.API.TextGeneration`1.GenerateReply(`0,System.Action{System.String},System.Single,System.Int32)
+  commentId: M:NPCEngine.API.TextGeneration`1.GenerateReply(`0,System.Action{System.String},System.Single,System.Int32)
+  isExternal: true
+  name: GenerateReply(ContextType, Action<String>, Single, Int32)
+  nameWithType: TextGeneration<ContextType>.GenerateReply(ContextType, Action<String>, Single, Int32)
+  fullName: NPCEngine.API.TextGeneration<ContextType>.GenerateReply(ContextType, System.Action<System.String>, System.Single, System.Int32)
+  nameWithType.vb: TextGeneration(Of ContextType).GenerateReply(ContextType, Action(Of String), Single, Int32)
+  fullName.vb: NPCEngine.API.TextGeneration(Of ContextType).GenerateReply(ContextType, System.Action(Of System.String), System.Single, System.Int32)
+  name.vb: GenerateReply(ContextType, Action(Of String), Single, Int32)
+  spec.csharp:
+  - uid: NPCEngine.API.TextGeneration`1.GenerateReply(`0,System.Action{System.String},System.Single,System.Int32)
+    name: GenerateReply
+    nameWithType: TextGeneration<ContextType>.GenerateReply
+    fullName: NPCEngine.API.TextGeneration<ContextType>.GenerateReply
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: ContextType
+    nameWithType: ContextType
+    fullName: ContextType
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: NPCEngine.API.TextGeneration`1.GenerateReply(`0,System.Action{System.String},System.Single,System.Int32)
+    name: GenerateReply
+    nameWithType: TextGeneration(Of ContextType).GenerateReply
+    fullName: NPCEngine.API.TextGeneration(Of ContextType).GenerateReply
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: ContextType
+    nameWithType: ContextType
+    fullName: ContextType
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NPCEngine.API.TextGeneration`1.GetSpecialTokens(System.Action{System.Collections.Generic.Dictionary{System.String,System.String}})
+  commentId: M:NPCEngine.API.TextGeneration`1.GetSpecialTokens(System.Action{System.Collections.Generic.Dictionary{System.String,System.String}})
+  isExternal: true
+  name: GetSpecialTokens(Action<Dictionary<String, String>>)
+  nameWithType: TextGeneration<ContextType>.GetSpecialTokens(Action<Dictionary<String, String>>)
+  fullName: NPCEngine.API.TextGeneration<ContextType>.GetSpecialTokens(System.Action<System.Collections.Generic.Dictionary<System.String, System.String>>)
+  nameWithType.vb: TextGeneration(Of ContextType).GetSpecialTokens(Action(Of Dictionary(Of String, String)))
+  fullName.vb: NPCEngine.API.TextGeneration(Of ContextType).GetSpecialTokens(System.Action(Of System.Collections.Generic.Dictionary(Of System.String, System.String)))
+  name.vb: GetSpecialTokens(Action(Of Dictionary(Of String, String)))
+  spec.csharp:
+  - uid: NPCEngine.API.TextGeneration`1.GetSpecialTokens(System.Action{System.Collections.Generic.Dictionary{System.String,System.String}})
+    name: GetSpecialTokens
+    nameWithType: TextGeneration<ContextType>.GetSpecialTokens
+    fullName: NPCEngine.API.TextGeneration<ContextType>.GetSpecialTokens
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: NPCEngine.API.TextGeneration`1.GetSpecialTokens(System.Action{System.Collections.Generic.Dictionary{System.String,System.String}})
+    name: GetSpecialTokens
+    nameWithType: TextGeneration(Of ContextType).GetSpecialTokens
+    fullName: NPCEngine.API.TextGeneration(Of ContextType).GetSpecialTokens
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NPCEngine.API.TextGeneration`1.GetPromptTemplate(System.Action{System.String})
+  commentId: M:NPCEngine.API.TextGeneration`1.GetPromptTemplate(System.Action{System.String})
+  isExternal: true
+  name: GetPromptTemplate(Action<String>)
+  nameWithType: TextGeneration<ContextType>.GetPromptTemplate(Action<String>)
+  fullName: NPCEngine.API.TextGeneration<ContextType>.GetPromptTemplate(System.Action<System.String>)
+  nameWithType.vb: TextGeneration(Of ContextType).GetPromptTemplate(Action(Of String))
+  fullName.vb: NPCEngine.API.TextGeneration(Of ContextType).GetPromptTemplate(System.Action(Of System.String))
+  name.vb: GetPromptTemplate(Action(Of String))
+  spec.csharp:
+  - uid: NPCEngine.API.TextGeneration`1.GetPromptTemplate(System.Action{System.String})
+    name: GetPromptTemplate
+    nameWithType: TextGeneration<ContextType>.GetPromptTemplate
+    fullName: NPCEngine.API.TextGeneration<ContextType>.GetPromptTemplate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: NPCEngine.API.TextGeneration`1.GetPromptTemplate(System.Action{System.String})
+    name: GetPromptTemplate
+    nameWithType: TextGeneration(Of ContextType).GetPromptTemplate
+    fullName: NPCEngine.API.TextGeneration(Of ContextType).GetPromptTemplate
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )

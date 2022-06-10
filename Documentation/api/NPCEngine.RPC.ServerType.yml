@@ -1,0 +1,100 @@
+### YamlMime:ManagedReference
+items:
+- uid: NPCEngine.RPC.ServerType
+  commentId: T:NPCEngine.RPC.ServerType
+  id: ServerType
+  parent: NPCEngine.RPC
+  children:
+  - NPCEngine.RPC.ServerType.HTTP
+  - NPCEngine.RPC.ServerType.ZMQ
+  langs:
+  - csharp
+  - vb
+  name: ServerType
+  nameWithType: ServerType
+  fullName: NPCEngine.RPC.ServerType
+  type: Enum
+  source:
+    id: ServerType
+    path: ''
+    startLine: 4119
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.RPC
+  syntax:
+    content: public enum ServerType
+    content.vb: Public Enum ServerType
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: NPCEngine.RPC.ServerType.HTTP
+  commentId: F:NPCEngine.RPC.ServerType.HTTP
+  id: HTTP
+  parent: NPCEngine.RPC.ServerType
+  langs:
+  - csharp
+  - vb
+  name: HTTP
+  nameWithType: ServerType.HTTP
+  fullName: NPCEngine.RPC.ServerType.HTTP
+  type: Field
+  source:
+    id: HTTP
+    path: ''
+    startLine: 4121
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.RPC
+  syntax:
+    content: HTTP = 0
+    return:
+      type: NPCEngine.RPC.ServerType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NPCEngine.RPC.ServerType.ZMQ
+  commentId: F:NPCEngine.RPC.ServerType.ZMQ
+  id: ZMQ
+  parent: NPCEngine.RPC.ServerType
+  langs:
+  - csharp
+  - vb
+  name: ZMQ
+  nameWithType: ServerType.ZMQ
+  fullName: NPCEngine.RPC.ServerType.ZMQ
+  type: Field
+  source:
+    id: ZMQ
+    path: ''
+    startLine: 4122
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.RPC
+  syntax:
+    content: ZMQ = 1
+    return:
+      type: NPCEngine.RPC.ServerType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: NPCEngine.RPC
+  commentId: N:NPCEngine.RPC
+  name: NPCEngine.RPC
+  nameWithType: NPCEngine.RPC
+  fullName: NPCEngine.RPC
+- uid: NPCEngine.RPC.ServerType
+  commentId: T:NPCEngine.RPC.ServerType
+  parent: NPCEngine.RPC
+  name: ServerType
+  nameWithType: ServerType
+  fullName: NPCEngine.RPC.ServerType

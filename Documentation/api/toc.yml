@@ -2,21 +2,39 @@
 - uid: NPCEngine
   name: NPCEngine
   items:
+  - uid: NPCEngine.NonPlayerCharacterEditor
+    name: NonPlayerCharacterEditor
+  - uid: NPCEngine.NPCEngineConfig
+    name: NPCEngineConfig
+  - uid: NPCEngine.NPCEngineConfigEditor
+    name: NPCEngineConfigEditor
   - uid: NPCEngine.NPCEngineException
     name: NPCEngineException
   - uid: NPCEngine.ResultFuture`1
     name: ResultFuture<ReturnType>
     name.vb: ResultFuture(Of ReturnType)
+  - uid: NPCEngine.ServiceConfigDescriptor
+    name: ServiceConfigDescriptor
 - uid: NPCEngine.API
   name: NPCEngine.API
   items:
-  - uid: NPCEngine.API.Chatbot`1
-    name: Chatbot<ContextType>
-    name.vb: Chatbot(Of ContextType)
+  - uid: NPCEngine.API.Classification
+    name: Classification
+  - uid: NPCEngine.API.Control
+    name: Control
+  - uid: NPCEngine.API.PersonaDialogue
+    name: PersonaDialogue
   - uid: NPCEngine.API.SemanticQuery
     name: SemanticQuery
+  - uid: NPCEngine.API.ServiceMetadata
+    name: ServiceMetadata
+  - uid: NPCEngine.API.ServiceStatus
+    name: ServiceStatus
   - uid: NPCEngine.API.SpeechToText
     name: SpeechToText
+  - uid: NPCEngine.API.TextGeneration`1
+    name: TextGeneration<ContextType>
+    name.vb: TextGeneration(Of ContextType)
   - uid: NPCEngine.API.TextToSpeech
     name: TextToSpeech
 - uid: NPCEngine.Components
@@ -26,6 +44,8 @@
     name: AbstractDialogueSystem
   - uid: NPCEngine.Components.AbstractSpeechToText
     name: AbstractSpeechToText
+  - uid: NPCEngine.Components.Character
+    name: Character
   - uid: NPCEngine.Components.ChatLine
     name: ChatLine
   - uid: NPCEngine.Components.ColliderLocationTrigger
@@ -36,30 +56,48 @@
     name: DictationRecognizerSTT
   - uid: NPCEngine.Components.FantasyChatbotContext
     name: FantasyChatbotContext
+  - uid: NPCEngine.Components.FantasyChatbotTextGeneration
+    name: FantasyChatbotTextGeneration
+  - uid: NPCEngine.Components.Location
+    name: Location
   - uid: NPCEngine.Components.NonPlayerCharacter
     name: NonPlayerCharacter
+  - uid: NPCEngine.Components.NPCEngineManager
+    name: NPCEngineManager
   - uid: NPCEngine.Components.NPCEngineSTT
     name: NPCEngineSTT
   - uid: NPCEngine.Components.PlayerCharacter
     name: PlayerCharacter
-- uid: NPCEngine.Server
-  name: NPCEngine.Server
+- uid: NPCEngine.RPC
+  name: NPCEngine.RPC
   items:
-  - uid: NPCEngine.Server.NPCEngineServer
-    name: NPCEngineServer
-  - uid: NPCEngine.Server.RPCRequstMessage`1
-    name: RPCRequstMessage<ParametersType>
-    name.vb: RPCRequstMessage(Of ParametersType)
-  - uid: NPCEngine.Server.RPCResponseError
+  - uid: NPCEngine.RPC.APICommunicatorHTTPImpl
+    name: APICommunicatorHTTPImpl
+  - uid: NPCEngine.RPC.APICommunicatorZMQImpl
+    name: APICommunicatorZMQImpl
+  - uid: NPCEngine.RPC.Request
+    name: Request
+  - uid: NPCEngine.RPC.RequestDispatcherImpl
+    name: RequestDispatcherImpl
+  - uid: NPCEngine.RPC.RPCBase
+    name: RPCBase
+  - uid: NPCEngine.RPC.RPCRequestMessage`1
+    name: RPCRequestMessage<ParametersType>
+    name.vb: RPCRequestMessage(Of ParametersType)
+  - uid: NPCEngine.RPC.RPCResponseError
     name: RPCResponseError
-  - uid: NPCEngine.Server.RPCResponseMessage`1
+  - uid: NPCEngine.RPC.RPCResponseMessage`1
     name: RPCResponseMessage<ReturnType>
     name.vb: RPCResponseMessage(Of ReturnType)
+  - uid: NPCEngine.RPC.ServerType
+    name: ServerType
 - uid: NPCEngine.Utility
   name: NPCEngine.Utility
   items:
   - uid: NPCEngine.Utility.AudioSourceQueue
     name: AudioSourceQueue
+  - uid: NPCEngine.Utility.CoroutineUtility
+    name: CoroutineUtility
   - uid: NPCEngine.Utility.Singleton`1
     name: Singleton<T>
     name.vb: Singleton(Of T)

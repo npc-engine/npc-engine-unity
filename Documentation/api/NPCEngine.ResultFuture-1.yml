@@ -20,7 +20,7 @@ items:
   source:
     id: ResultFuture
     path: ''
-    startLine: 2202
+    startLine: 4010
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine
@@ -54,7 +54,7 @@ items:
   source:
     id: ResultReady
     path: ''
-    startLine: 2204
+    startLine: 4012
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine
@@ -87,7 +87,7 @@ items:
   source:
     id: Result
     path: ''
-    startLine: 2212
+    startLine: 4020
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine
@@ -120,7 +120,7 @@ items:
   source:
     id: Error
     path: ''
-    startLine: 2230
+    startLine: 4038
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine
@@ -153,7 +153,7 @@ items:
   source:
     id: ResultFinishedCallback
     path: ''
-    startLine: 2242
+    startLine: 4050
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine
@@ -184,7 +184,7 @@ items:
   source:
     id: ErrorCallback
     path: ''
-    startLine: 2248
+    startLine: 4056
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine

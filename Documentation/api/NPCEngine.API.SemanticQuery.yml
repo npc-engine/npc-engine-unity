@@ -6,8 +6,8 @@ items:
   parent: NPCEngine.API
   children:
   - NPCEngine.API.SemanticQuery.Cache(System.Collections.Generic.List{System.String})
-  - NPCEngine.API.SemanticQuery.Compare(System.String,System.Collections.Generic.List{System.String})
-  - NPCEngine.API.SemanticQuery.CompareCoroutine(System.String,System.Collections.Generic.List{System.String},Action{System.Collections.Generic.List{System.Single}})
+  - NPCEngine.API.SemanticQuery.Compare(System.String,System.Collections.Generic.List{System.String},System.Action{System.Collections.Generic.List{System.Single}})
+  - NPCEngine.API.SemanticQuery.CompareFuture(System.String,System.Collections.Generic.List{System.String})
   langs:
   - csharp
   - vb
@@ -18,44 +18,45 @@ items:
   source:
     id: SemanticQuery
     path: ''
-    startLine: 632
+    startLine: 807
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
   summary: "\nStatic class <code>SemanticQuery</code> provides remote procedure calls \nto inference engine&apos;s Semantic similarity model.\nPrefer predefining queries via <code>PredefineQuery</code> and then using\n<code>QueryPredefined</code> instead of directly using <code>Query</code>\n"
   example: []
   syntax:
-    content: public static class SemanticQuery
-    content.vb: Public Module SemanticQuery
+    content: 'public class SemanticQuery : RPCBase'
+    content.vb: >-
+      Public Class SemanticQuery
+          Inherits RPCBase
   inheritance:
   - System.Object
   modifiers.csharp:
   - public
-  - static
   - class
   modifiers.vb:
   - Public
-  - Module
-- uid: NPCEngine.API.SemanticQuery.Compare(System.String,System.Collections.Generic.List{System.String})
-  commentId: M:NPCEngine.API.SemanticQuery.Compare(System.String,System.Collections.Generic.List{System.String})
-  id: Compare(System.String,System.Collections.Generic.List{System.String})
+  - Class
+- uid: NPCEngine.API.SemanticQuery.CompareFuture(System.String,System.Collections.Generic.List{System.String})
+  commentId: M:NPCEngine.API.SemanticQuery.CompareFuture(System.String,System.Collections.Generic.List{System.String})
+  id: CompareFuture(System.String,System.Collections.Generic.List{System.String})
   parent: NPCEngine.API.SemanticQuery
   langs:
   - csharp
   - vb
-  name: Compare(String, List<String>)
-  nameWithType: SemanticQuery.Compare(String, List<String>)
-  fullName: NPCEngine.API.SemanticQuery.Compare(System.String, System.Collections.Generic.List<System.String>)
+  name: CompareFuture(String, List<String>)
+  nameWithType: SemanticQuery.CompareFuture(String, List<String>)
+  fullName: NPCEngine.API.SemanticQuery.CompareFuture(System.String, System.Collections.Generic.List<System.String>)
   type: Method
   source:
-    id: Compare
+    id: CompareFuture
     path: ''
-    startLine: 643
+    startLine: 826
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
   syntax:
-    content: public static ResultFuture<List<float>> Compare(string query, List<string> context)
+    content: public ResultFuture<List<float>> CompareFuture(string query, List<string> context)
     parameters:
     - id: query
       type: System.String
@@ -63,17 +64,15 @@ items:
       type: System.Collections.Generic.List{System.String}
     return:
       type: NPCEngine.ResultFuture{System.Collections.Generic.List{System.Single}}
-    content.vb: Public Shared Function Compare(query As String, context As List(Of String)) As ResultFuture(Of List(Of Single))
-  overload: NPCEngine.API.SemanticQuery.Compare*
-  nameWithType.vb: SemanticQuery.Compare(String, List(Of String))
+    content.vb: Public Function CompareFuture(query As String, context As List(Of String)) As ResultFuture(Of List(Of Single))
+  overload: NPCEngine.API.SemanticQuery.CompareFuture*
+  nameWithType.vb: SemanticQuery.CompareFuture(String, List(Of String))
   modifiers.csharp:
   - public
-  - static
   modifiers.vb:
   - Public
-  - Shared
-  fullName.vb: NPCEngine.API.SemanticQuery.Compare(System.String, System.Collections.Generic.List(Of System.String))
-  name.vb: Compare(String, List(Of String))
+  fullName.vb: NPCEngine.API.SemanticQuery.CompareFuture(System.String, System.Collections.Generic.List(Of System.String))
+  name.vb: CompareFuture(String, List(Of String))
 - uid: NPCEngine.API.SemanticQuery.Cache(System.Collections.Generic.List{System.String})
   commentId: M:NPCEngine.API.SemanticQuery.Cache(System.Collections.Generic.List{System.String})
   id: Cache(System.Collections.Generic.List{System.String})
@@ -88,66 +87,62 @@ items:
   source:
     id: Cache
     path: ''
-    startLine: 650
+    startLine: 833
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
   syntax:
-    content: public static void Cache(List<string> queryIds)
+    content: public void Cache(List<string> queryIds)
     parameters:
     - id: queryIds
       type: System.Collections.Generic.List{System.String}
-    content.vb: Public Shared Sub Cache(queryIds As List(Of String))
+    content.vb: Public Sub Cache(queryIds As List(Of String))
   overload: NPCEngine.API.SemanticQuery.Cache*
   nameWithType.vb: SemanticQuery.Cache(List(Of String))
   modifiers.csharp:
   - public
-  - static
   modifiers.vb:
   - Public
-  - Shared
   fullName.vb: NPCEngine.API.SemanticQuery.Cache(System.Collections.Generic.List(Of System.String))
   name.vb: Cache(List(Of String))
-- uid: NPCEngine.API.SemanticQuery.CompareCoroutine(System.String,System.Collections.Generic.List{System.String},Action{System.Collections.Generic.List{System.Single}})
-  commentId: M:NPCEngine.API.SemanticQuery.CompareCoroutine(System.String,System.Collections.Generic.List{System.String},Action{System.Collections.Generic.List{System.Single}})
-  id: CompareCoroutine(System.String,System.Collections.Generic.List{System.String},Action{System.Collections.Generic.List{System.Single}})
+- uid: NPCEngine.API.SemanticQuery.Compare(System.String,System.Collections.Generic.List{System.String},System.Action{System.Collections.Generic.List{System.Single}})
+  commentId: M:NPCEngine.API.SemanticQuery.Compare(System.String,System.Collections.Generic.List{System.String},System.Action{System.Collections.Generic.List{System.Single}})
+  id: Compare(System.String,System.Collections.Generic.List{System.String},System.Action{System.Collections.Generic.List{System.Single}})
   parent: NPCEngine.API.SemanticQuery
   langs:
   - csharp
   - vb
-  name: CompareCoroutine(String, List<String>, Action<List<Single>>)
-  nameWithType: SemanticQuery.CompareCoroutine(String, List<String>, Action<List<Single>>)
-  fullName: NPCEngine.API.SemanticQuery.CompareCoroutine(System.String, System.Collections.Generic.List<System.String>, Action<System.Collections.Generic.List<System.Single>>)
+  name: Compare(String, List<String>, Action<List<Single>>)
+  nameWithType: SemanticQuery.Compare(String, List<String>, Action<List<Single>>)
+  fullName: NPCEngine.API.SemanticQuery.Compare(System.String, System.Collections.Generic.List<System.String>, System.Action<System.Collections.Generic.List<System.Single>>)
   type: Method
   source:
-    id: CompareCoroutine
+    id: Compare
     path: ''
-    startLine: 656
+    startLine: 839
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
   syntax:
-    content: public static IEnumerator CompareCoroutine(string query, List<string> context, Action<List<float>> outputCallback)
+    content: public IEnumerator Compare(string query, List<string> context, Action<List<float>> outputCallback)
     parameters:
     - id: query
       type: System.String
     - id: context
       type: System.Collections.Generic.List{System.String}
     - id: outputCallback
-      type: Global.Action{System.Collections.Generic.List{System.Single}}
+      type: System.Action{System.Collections.Generic.List{System.Single}}
     return:
       type: System.Collections.IEnumerator
-    content.vb: Public Shared Function CompareCoroutine(query As String, context As List(Of String), outputCallback As Action(Of List(Of Single))) As IEnumerator
-  overload: NPCEngine.API.SemanticQuery.CompareCoroutine*
-  nameWithType.vb: SemanticQuery.CompareCoroutine(String, List(Of String), Action(Of List(Of Single)))
+    content.vb: Public Function Compare(query As String, context As List(Of String), outputCallback As Action(Of List(Of Single))) As IEnumerator
+  overload: NPCEngine.API.SemanticQuery.Compare*
+  nameWithType.vb: SemanticQuery.Compare(String, List(Of String), Action(Of List(Of Single)))
   modifiers.csharp:
   - public
-  - static
   modifiers.vb:
   - Public
-  - Shared
-  fullName.vb: NPCEngine.API.SemanticQuery.CompareCoroutine(System.String, System.Collections.Generic.List(Of System.String), Action(Of System.Collections.Generic.List(Of System.Single)))
-  name.vb: CompareCoroutine(String, List(Of String), Action(Of List(Of Single)))
+  fullName.vb: NPCEngine.API.SemanticQuery.Compare(System.String, System.Collections.Generic.List(Of System.String), System.Action(Of System.Collections.Generic.List(Of System.Single)))
+  name.vb: Compare(String, List(Of String), Action(Of List(Of Single)))
 references:
 - uid: NPCEngine.API
   commentId: N:NPCEngine.API
@@ -167,11 +162,11 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: NPCEngine.API.SemanticQuery.Compare*
-  commentId: Overload:NPCEngine.API.SemanticQuery.Compare
-  name: Compare
-  nameWithType: SemanticQuery.Compare
-  fullName: NPCEngine.API.SemanticQuery.Compare
+- uid: NPCEngine.API.SemanticQuery.CompareFuture*
+  commentId: Overload:NPCEngine.API.SemanticQuery.CompareFuture
+  name: CompareFuture
+  nameWithType: SemanticQuery.CompareFuture
+  fullName: NPCEngine.API.SemanticQuery.CompareFuture
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -378,25 +373,26 @@ references:
   name: Cache
   nameWithType: SemanticQuery.Cache
   fullName: NPCEngine.API.SemanticQuery.Cache
-- uid: NPCEngine.API.SemanticQuery.CompareCoroutine*
-  commentId: Overload:NPCEngine.API.SemanticQuery.CompareCoroutine
-  name: CompareCoroutine
-  nameWithType: SemanticQuery.CompareCoroutine
-  fullName: NPCEngine.API.SemanticQuery.CompareCoroutine
-- uid: Global.Action{System.Collections.Generic.List{System.Single}}
-  commentId: '!:Global.Action{System.Collections.Generic.List{System.Single}}'
-  definition: Global.Action`1
+- uid: NPCEngine.API.SemanticQuery.Compare*
+  commentId: Overload:NPCEngine.API.SemanticQuery.Compare
+  name: Compare
+  nameWithType: SemanticQuery.Compare
+  fullName: NPCEngine.API.SemanticQuery.Compare
+- uid: System.Action{System.Collections.Generic.List{System.Single}}
+  commentId: T:System.Action{System.Collections.Generic.List{System.Single}}
+  parent: System
+  definition: System.Action`1
   name: Action<List<Single>>
   nameWithType: Action<List<Single>>
-  fullName: Action<System.Collections.Generic.List<System.Single>>
+  fullName: System.Action<System.Collections.Generic.List<System.Single>>
   nameWithType.vb: Action(Of List(Of Single))
-  fullName.vb: Action(Of System.Collections.Generic.List(Of System.Single))
+  fullName.vb: System.Action(Of System.Collections.Generic.List(Of System.Single))
   name.vb: Action(Of List(Of Single))
   spec.csharp:
-  - uid: Global.Action`1
+  - uid: System.Action`1
     name: Action
     nameWithType: Action
-    fullName: Action
+    fullName: System.Action
     isExternal: true
   - name: <
     nameWithType: <
@@ -421,10 +417,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: Global.Action`1
+  - uid: System.Action`1
     name: Action
     nameWithType: Action
-    fullName: Action
+    fullName: System.Action
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -455,41 +451,42 @@ references:
   name: IEnumerator
   nameWithType: IEnumerator
   fullName: System.Collections.IEnumerator
-- uid: Global.Action`1
+- uid: System.Action`1
+  commentId: T:System.Action`1
   isExternal: true
-  name: Action<>
-  nameWithType: Action<>
-  fullName: Action<>
-  nameWithType.vb: Action(Of )
-  fullName.vb: Action(Of )
-  name.vb: Action(Of )
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
   spec.csharp:
-  - uid: Global.Action`1
+  - uid: System.Action`1
     name: Action
     nameWithType: Action
-    fullName: Action
+    fullName: System.Action
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: Global.Action`1
+  - uid: System.Action`1
     name: Action
     nameWithType: Action
-    fullName: Action
+    fullName: System.Action
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: )
     nameWithType: )
     fullName: )

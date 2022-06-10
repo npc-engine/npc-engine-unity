@@ -1,97 +1,89 @@
 ### YamlMime:ManagedReference
 items:
-- uid: NPCEngine.Components.ChatLine
-  commentId: T:NPCEngine.Components.ChatLine
-  id: ChatLine
+- uid: NPCEngine.Components.Character
+  commentId: T:NPCEngine.Components.Character
+  id: Character
   parent: NPCEngine.Components
   children:
-  - NPCEngine.Components.ChatLine.line
-  - NPCEngine.Components.ChatLine.speaker
+  - NPCEngine.Components.Character.Name
+  - NPCEngine.Components.Character.Persona
   langs:
   - csharp
   - vb
-  name: ChatLine
-  nameWithType: ChatLine
-  fullName: NPCEngine.Components.ChatLine
+  name: Character
+  nameWithType: Character
+  fullName: NPCEngine.Components.Character
   type: Class
   source:
-    id: ChatLine
+    id: Character
     path: ''
-    startLine: 2425
+    startLine: 1271
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
   syntax:
-    content: >-
-      [Serializable]
-
-      public class ChatLine
+    content: 'public class Character : ScriptableObject'
     content.vb: >-
-      <Serializable>
-
-      Public Class ChatLine
+      Public Class Character
+          Inherits ScriptableObject
   inheritance:
   - System.Object
-  attributes:
-  - type: System.SerializableAttribute
-    ctor: System.SerializableAttribute.#ctor
-    arguments: []
   modifiers.csharp:
   - public
   - class
   modifiers.vb:
   - Public
   - Class
-- uid: NPCEngine.Components.ChatLine.speaker
-  commentId: F:NPCEngine.Components.ChatLine.speaker
-  id: speaker
-  parent: NPCEngine.Components.ChatLine
+- uid: NPCEngine.Components.Character.Name
+  commentId: F:NPCEngine.Components.Character.Name
+  id: Name
+  parent: NPCEngine.Components.Character
   langs:
   - csharp
   - vb
-  name: speaker
-  nameWithType: ChatLine.speaker
-  fullName: NPCEngine.Components.ChatLine.speaker
+  name: Name
+  nameWithType: Character.Name
+  fullName: NPCEngine.Components.Character.Name
   type: Field
   source:
-    id: speaker
+    id: Name
     path: ''
-    startLine: 2428
+    startLine: 1274
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
   syntax:
-    content: public string speaker
+    content: public string Name
     return:
       type: System.String
-    content.vb: Public speaker As String
+    content.vb: Public Name As String
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: NPCEngine.Components.ChatLine.line
-  commentId: F:NPCEngine.Components.ChatLine.line
-  id: line
-  parent: NPCEngine.Components.ChatLine
+- uid: NPCEngine.Components.Character.Persona
+  commentId: F:NPCEngine.Components.Character.Persona
+  id: Persona
+  parent: NPCEngine.Components.Character
   langs:
   - csharp
   - vb
-  name: line
-  nameWithType: ChatLine.line
-  fullName: NPCEngine.Components.ChatLine.line
+  name: Persona
+  nameWithType: Character.Persona
+  fullName: NPCEngine.Components.Character.Persona
   type: Field
   source:
-    id: line
+    id: Persona
     path: ''
-    startLine: 2429
+    startLine: 1277
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
   syntax:
-    content: public string line
+    content: public string Persona
     return:
       type: System.String
-    content.vb: Public line As String
+    content.vb: Public Persona As String
   modifiers.csharp:
   - public
   modifiers.vb:

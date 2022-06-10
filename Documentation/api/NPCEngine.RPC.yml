@@ -1,0 +1,140 @@
+### YamlMime:ManagedReference
+items:
+- uid: NPCEngine.RPC
+  commentId: N:NPCEngine.RPC
+  id: NPCEngine.RPC
+  children:
+  - NPCEngine.RPC.APICommunicatorHTTPImpl
+  - NPCEngine.RPC.APICommunicatorZMQImpl
+  - NPCEngine.RPC.Request
+  - NPCEngine.RPC.RequestDispatcherImpl
+  - NPCEngine.RPC.RPCBase
+  - NPCEngine.RPC.RPCRequestMessage`1
+  - NPCEngine.RPC.RPCResponseError
+  - NPCEngine.RPC.RPCResponseMessage`1
+  - NPCEngine.RPC.ServerType
+  langs:
+  - csharp
+  - vb
+  name: NPCEngine.RPC
+  nameWithType: NPCEngine.RPC
+  fullName: NPCEngine.RPC
+  type: Namespace
+  assemblies:
+  - cs.temp.dll
+references:
+- uid: NPCEngine.RPC.RPCBase
+  commentId: T:NPCEngine.RPC.RPCBase
+  name: RPCBase
+  nameWithType: RPCBase
+  fullName: NPCEngine.RPC.RPCBase
+- uid: NPCEngine.RPC.RequestDispatcherImpl
+  commentId: T:NPCEngine.RPC.RequestDispatcherImpl
+  parent: NPCEngine.RPC
+  name: RequestDispatcherImpl
+  nameWithType: RequestDispatcherImpl
+  fullName: NPCEngine.RPC.RequestDispatcherImpl
+- uid: NPCEngine.RPC.APICommunicatorZMQImpl
+  commentId: T:NPCEngine.RPC.APICommunicatorZMQImpl
+  name: APICommunicatorZMQImpl
+  nameWithType: APICommunicatorZMQImpl
+  fullName: NPCEngine.RPC.APICommunicatorZMQImpl
+- uid: NPCEngine.RPC.APICommunicatorHTTPImpl
+  commentId: T:NPCEngine.RPC.APICommunicatorHTTPImpl
+  name: APICommunicatorHTTPImpl
+  nameWithType: APICommunicatorHTTPImpl
+  fullName: NPCEngine.RPC.APICommunicatorHTTPImpl
+- uid: NPCEngine.RPC.Request
+  commentId: T:NPCEngine.RPC.Request
+  name: Request
+  nameWithType: Request
+  fullName: NPCEngine.RPC.Request
+- uid: NPCEngine.RPC.RPCRequestMessage`1
+  commentId: T:NPCEngine.RPC.RPCRequestMessage`1
+  name: RPCRequestMessage<ParametersType>
+  nameWithType: RPCRequestMessage<ParametersType>
+  fullName: NPCEngine.RPC.RPCRequestMessage<ParametersType>
+  nameWithType.vb: RPCRequestMessage(Of ParametersType)
+  fullName.vb: NPCEngine.RPC.RPCRequestMessage(Of ParametersType)
+  name.vb: RPCRequestMessage(Of ParametersType)
+  spec.csharp:
+  - uid: NPCEngine.RPC.RPCRequestMessage`1
+    name: RPCRequestMessage
+    nameWithType: RPCRequestMessage
+    fullName: NPCEngine.RPC.RPCRequestMessage
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ParametersType
+    nameWithType: ParametersType
+    fullName: ParametersType
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: NPCEngine.RPC.RPCRequestMessage`1
+    name: RPCRequestMessage
+    nameWithType: RPCRequestMessage
+    fullName: NPCEngine.RPC.RPCRequestMessage
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ParametersType
+    nameWithType: ParametersType
+    fullName: ParametersType
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NPCEngine.RPC.RPCResponseMessage`1
+  commentId: T:NPCEngine.RPC.RPCResponseMessage`1
+  name: RPCResponseMessage<ReturnType>
+  nameWithType: RPCResponseMessage<ReturnType>
+  fullName: NPCEngine.RPC.RPCResponseMessage<ReturnType>
+  nameWithType.vb: RPCResponseMessage(Of ReturnType)
+  fullName.vb: NPCEngine.RPC.RPCResponseMessage(Of ReturnType)
+  name.vb: RPCResponseMessage(Of ReturnType)
+  spec.csharp:
+  - uid: NPCEngine.RPC.RPCResponseMessage`1
+    name: RPCResponseMessage
+    nameWithType: RPCResponseMessage
+    fullName: NPCEngine.RPC.RPCResponseMessage
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ReturnType
+    nameWithType: ReturnType
+    fullName: ReturnType
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: NPCEngine.RPC.RPCResponseMessage`1
+    name: RPCResponseMessage
+    nameWithType: RPCResponseMessage
+    fullName: NPCEngine.RPC.RPCResponseMessage
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ReturnType
+    nameWithType: ReturnType
+    fullName: ReturnType
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NPCEngine.RPC.RPCResponseError
+  commentId: T:NPCEngine.RPC.RPCResponseError
+  parent: NPCEngine.RPC
+  name: RPCResponseError
+  nameWithType: RPCResponseError
+  fullName: NPCEngine.RPC.RPCResponseError
+- uid: NPCEngine.RPC.ServerType
+  commentId: T:NPCEngine.RPC.ServerType
+  parent: NPCEngine.RPC
+  name: ServerType
+  nameWithType: ServerType
+  fullName: NPCEngine.RPC.ServerType
+- uid: NPCEngine.RPC
+  commentId: N:NPCEngine.RPC
+  name: NPCEngine.RPC
+  nameWithType: NPCEngine.RPC
+  fullName: NPCEngine.RPC

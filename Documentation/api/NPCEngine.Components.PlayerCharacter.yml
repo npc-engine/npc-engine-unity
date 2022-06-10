@@ -5,18 +5,16 @@ items:
   id: PlayerCharacter
   parent: NPCEngine.Components
   children:
-  - NPCEngine.Components.PlayerCharacter.characterName
+  - NPCEngine.Components.PlayerCharacter.character
   - NPCEngine.Components.PlayerCharacter.CheckCamera
   - NPCEngine.Components.PlayerCharacter.CheckIsSeen(Vector3)
+  - NPCEngine.Components.PlayerCharacter.currentLocation
   - NPCEngine.Components.PlayerCharacter.DeregisterDialogueCandidate(NPCEngine.Components.NonPlayerCharacter)
   - NPCEngine.Components.PlayerCharacter.HorizontalMargin
   - NPCEngine.Components.PlayerCharacter.IsRegistered(NPCEngine.Components.NonPlayerCharacter)
   - NPCEngine.Components.PlayerCharacter.LeaveDialog
   - NPCEngine.Components.PlayerCharacter.MaxRange
-  - NPCEngine.Components.PlayerCharacter.persona
   - NPCEngine.Components.PlayerCharacter.RegisterDialogueCandidate(NPCEngine.Components.NonPlayerCharacter)
-  - NPCEngine.Components.PlayerCharacter.settingDescription
-  - NPCEngine.Components.PlayerCharacter.settingName
   - NPCEngine.Components.PlayerCharacter.SpeechToText
   - NPCEngine.Components.PlayerCharacter.VerticalMargin
   langs:
@@ -29,7 +27,7 @@ items:
   source:
     id: PlayerCharacter
     path: ''
-    startLine: 1525
+    startLine: 2256
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -40,116 +38,66 @@ items:
           Inherits Singleton(Of PlayerCharacter)
   inheritance:
   - System.Object
+  - NPCEngine.Utility.Singleton{NPCEngine.Components.PlayerCharacter}
+  inheritedMembers:
+  - NPCEngine.Utility.Singleton{NPCEngine.Components.PlayerCharacter}.Instance
+  - NPCEngine.Utility.Singleton{NPCEngine.Components.PlayerCharacter}.GetInstance
   modifiers.csharp:
   - public
   - class
   modifiers.vb:
   - Public
   - Class
-- uid: NPCEngine.Components.PlayerCharacter.settingName
-  commentId: F:NPCEngine.Components.PlayerCharacter.settingName
-  id: settingName
+- uid: NPCEngine.Components.PlayerCharacter.currentLocation
+  commentId: F:NPCEngine.Components.PlayerCharacter.currentLocation
+  id: currentLocation
   parent: NPCEngine.Components.PlayerCharacter
   langs:
   - csharp
   - vb
-  name: settingName
-  nameWithType: PlayerCharacter.settingName
-  fullName: NPCEngine.Components.PlayerCharacter.settingName
+  name: currentLocation
+  nameWithType: PlayerCharacter.currentLocation
+  fullName: NPCEngine.Components.PlayerCharacter.currentLocation
   type: Field
   source:
-    id: settingName
+    id: currentLocation
     path: ''
-    startLine: 1533
+    startLine: 2265
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
   syntax:
-    content: public string settingName
+    content: public Location currentLocation
     return:
-      type: System.String
-    content.vb: Public settingName As String
+      type: NPCEngine.Components.Location
+    content.vb: Public currentLocation As Location
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: NPCEngine.Components.PlayerCharacter.settingDescription
-  commentId: F:NPCEngine.Components.PlayerCharacter.settingDescription
-  id: settingDescription
+- uid: NPCEngine.Components.PlayerCharacter.character
+  commentId: F:NPCEngine.Components.PlayerCharacter.character
+  id: character
   parent: NPCEngine.Components.PlayerCharacter
   langs:
   - csharp
   - vb
-  name: settingDescription
-  nameWithType: PlayerCharacter.settingDescription
-  fullName: NPCEngine.Components.PlayerCharacter.settingDescription
+  name: character
+  nameWithType: PlayerCharacter.character
+  fullName: NPCEngine.Components.PlayerCharacter.character
   type: Field
   source:
-    id: settingDescription
+    id: character
     path: ''
-    startLine: 1535
+    startLine: 2267
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
   syntax:
-    content: public string settingDescription
+    content: public Character character
     return:
-      type: System.String
-    content.vb: Public settingDescription As String
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: NPCEngine.Components.PlayerCharacter.characterName
-  commentId: F:NPCEngine.Components.PlayerCharacter.characterName
-  id: characterName
-  parent: NPCEngine.Components.PlayerCharacter
-  langs:
-  - csharp
-  - vb
-  name: characterName
-  nameWithType: PlayerCharacter.characterName
-  fullName: NPCEngine.Components.PlayerCharacter.characterName
-  type: Field
-  source:
-    id: characterName
-    path: ''
-    startLine: 1537
-  assemblies:
-  - cs.temp.dll
-  namespace: NPCEngine.Components
-  syntax:
-    content: public string characterName
-    return:
-      type: System.String
-    content.vb: Public characterName As String
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: NPCEngine.Components.PlayerCharacter.persona
-  commentId: F:NPCEngine.Components.PlayerCharacter.persona
-  id: persona
-  parent: NPCEngine.Components.PlayerCharacter
-  langs:
-  - csharp
-  - vb
-  name: persona
-  nameWithType: PlayerCharacter.persona
-  fullName: NPCEngine.Components.PlayerCharacter.persona
-  type: Field
-  source:
-    id: persona
-    path: ''
-    startLine: 1540
-  assemblies:
-  - cs.temp.dll
-  namespace: NPCEngine.Components
-  syntax:
-    content: public string persona
-    return:
-      type: System.String
-    content.vb: Public persona As String
+      type: NPCEngine.Components.Character
+    content.vb: Public character As Character
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -168,7 +116,7 @@ items:
   source:
     id: CheckCamera
     path: ''
-    startLine: 1543
+    startLine: 2270
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -195,7 +143,7 @@ items:
   source:
     id: MaxRange
     path: ''
-    startLine: 1546
+    startLine: 2273
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -222,7 +170,7 @@ items:
   source:
     id: VerticalMargin
     path: ''
-    startLine: 1550
+    startLine: 2277
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -249,7 +197,7 @@ items:
   source:
     id: HorizontalMargin
     path: ''
-    startLine: 1554
+    startLine: 2281
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -276,7 +224,7 @@ items:
   source:
     id: SpeechToText
     path: ''
-    startLine: 1556
+    startLine: 2283
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -303,7 +251,7 @@ items:
   source:
     id: RegisterDialogueCandidate
     path: ''
-    startLine: 1575
+    startLine: 2302
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -332,7 +280,7 @@ items:
   source:
     id: DeregisterDialogueCandidate
     path: ''
-    startLine: 1580
+    startLine: 2307
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -361,7 +309,7 @@ items:
   source:
     id: IsRegistered
     path: ''
-    startLine: 1585
+    startLine: 2312
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -392,7 +340,7 @@ items:
   source:
     id: CheckIsSeen
     path: ''
-    startLine: 1590
+    startLine: 2322
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -423,7 +371,7 @@ items:
   source:
     id: LeaveDialog
     path: ''
-    startLine: 1602
+    startLine: 2333
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -448,19 +396,181 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
+- uid: NPCEngine.Utility.Singleton{NPCEngine.Components.PlayerCharacter}
+  commentId: T:NPCEngine.Utility.Singleton{NPCEngine.Components.PlayerCharacter}
+  parent: NPCEngine.Utility
+  definition: NPCEngine.Utility.Singleton`1
+  name: Singleton<PlayerCharacter>
+  nameWithType: Singleton<PlayerCharacter>
+  fullName: NPCEngine.Utility.Singleton<NPCEngine.Components.PlayerCharacter>
+  nameWithType.vb: Singleton(Of PlayerCharacter)
+  fullName.vb: NPCEngine.Utility.Singleton(Of NPCEngine.Components.PlayerCharacter)
+  name.vb: Singleton(Of PlayerCharacter)
+  spec.csharp:
+  - uid: NPCEngine.Utility.Singleton`1
+    name: Singleton
+    nameWithType: Singleton
+    fullName: NPCEngine.Utility.Singleton
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: NPCEngine.Components.PlayerCharacter
+    name: PlayerCharacter
+    nameWithType: PlayerCharacter
+    fullName: NPCEngine.Components.PlayerCharacter
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: NPCEngine.Utility.Singleton`1
+    name: Singleton
+    nameWithType: Singleton
+    fullName: NPCEngine.Utility.Singleton
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: NPCEngine.Components.PlayerCharacter
+    name: PlayerCharacter
+    nameWithType: PlayerCharacter
+    fullName: NPCEngine.Components.PlayerCharacter
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NPCEngine.Utility.Singleton{NPCEngine.Components.PlayerCharacter}.Instance
+  commentId: P:NPCEngine.Utility.Singleton{NPCEngine.Components.PlayerCharacter}.Instance
+  parent: NPCEngine.Utility.Singleton{NPCEngine.Components.PlayerCharacter}
+  definition: NPCEngine.Utility.Singleton`1.Instance
+  name: Instance
+  nameWithType: Singleton<PlayerCharacter>.Instance
+  fullName: NPCEngine.Utility.Singleton<NPCEngine.Components.PlayerCharacter>.Instance
+  nameWithType.vb: Singleton(Of PlayerCharacter).Instance
+  fullName.vb: NPCEngine.Utility.Singleton(Of NPCEngine.Components.PlayerCharacter).Instance
+- uid: NPCEngine.Utility.Singleton{NPCEngine.Components.PlayerCharacter}.GetInstance
+  commentId: M:NPCEngine.Utility.Singleton{NPCEngine.Components.PlayerCharacter}.GetInstance
+  parent: NPCEngine.Utility.Singleton{NPCEngine.Components.PlayerCharacter}
+  definition: NPCEngine.Utility.Singleton`1.GetInstance
+  name: GetInstance()
+  nameWithType: Singleton<PlayerCharacter>.GetInstance()
+  fullName: NPCEngine.Utility.Singleton<NPCEngine.Components.PlayerCharacter>.GetInstance()
+  nameWithType.vb: Singleton(Of PlayerCharacter).GetInstance()
+  fullName.vb: NPCEngine.Utility.Singleton(Of NPCEngine.Components.PlayerCharacter).GetInstance()
+  spec.csharp:
+  - uid: NPCEngine.Utility.Singleton`1.GetInstance
+    name: GetInstance
+    nameWithType: Singleton<PlayerCharacter>.GetInstance
+    fullName: NPCEngine.Utility.Singleton<NPCEngine.Components.PlayerCharacter>.GetInstance
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: NPCEngine.Utility.Singleton`1.GetInstance
+    name: GetInstance
+    nameWithType: Singleton(Of PlayerCharacter).GetInstance
+    fullName: NPCEngine.Utility.Singleton(Of NPCEngine.Components.PlayerCharacter).GetInstance
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
   name: System
   nameWithType: System
   fullName: System
-- uid: System.String
-  commentId: T:System.String
-  parent: System
-  isExternal: true
-  name: String
-  nameWithType: String
-  fullName: System.String
+- uid: NPCEngine.Utility.Singleton`1
+  commentId: T:NPCEngine.Utility.Singleton`1
+  name: Singleton<T>
+  nameWithType: Singleton<T>
+  fullName: NPCEngine.Utility.Singleton<T>
+  nameWithType.vb: Singleton(Of T)
+  fullName.vb: NPCEngine.Utility.Singleton(Of T)
+  name.vb: Singleton(Of T)
+  spec.csharp:
+  - uid: NPCEngine.Utility.Singleton`1
+    name: Singleton
+    nameWithType: Singleton
+    fullName: NPCEngine.Utility.Singleton
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: NPCEngine.Utility.Singleton`1
+    name: Singleton
+    nameWithType: Singleton
+    fullName: NPCEngine.Utility.Singleton
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NPCEngine.Utility
+  commentId: N:NPCEngine.Utility
+  name: NPCEngine.Utility
+  nameWithType: NPCEngine.Utility
+  fullName: NPCEngine.Utility
+- uid: NPCEngine.Utility.Singleton`1.Instance
+  commentId: P:NPCEngine.Utility.Singleton`1.Instance
+  name: Instance
+  nameWithType: Singleton<T>.Instance
+  fullName: NPCEngine.Utility.Singleton<T>.Instance
+  nameWithType.vb: Singleton(Of T).Instance
+  fullName.vb: NPCEngine.Utility.Singleton(Of T).Instance
+- uid: NPCEngine.Utility.Singleton`1.GetInstance
+  commentId: M:NPCEngine.Utility.Singleton`1.GetInstance
+  name: GetInstance()
+  nameWithType: Singleton<T>.GetInstance()
+  fullName: NPCEngine.Utility.Singleton<T>.GetInstance()
+  nameWithType.vb: Singleton(Of T).GetInstance()
+  fullName.vb: NPCEngine.Utility.Singleton(Of T).GetInstance()
+  spec.csharp:
+  - uid: NPCEngine.Utility.Singleton`1.GetInstance
+    name: GetInstance
+    nameWithType: Singleton<T>.GetInstance
+    fullName: NPCEngine.Utility.Singleton<T>.GetInstance
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: NPCEngine.Utility.Singleton`1.GetInstance
+    name: GetInstance
+    nameWithType: Singleton(Of T).GetInstance
+    fullName: NPCEngine.Utility.Singleton(Of T).GetInstance
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NPCEngine.Components.Location
+  commentId: T:NPCEngine.Components.Location
+  parent: NPCEngine.Components
+  name: Location
+  nameWithType: Location
+  fullName: NPCEngine.Components.Location
+- uid: NPCEngine.Components.Character
+  commentId: T:NPCEngine.Components.Character
+  parent: NPCEngine.Components
+  name: Character
+  nameWithType: Character
+  fullName: NPCEngine.Components.Character
 - uid: Global.Camera
   commentId: '!:Global.Camera'
   isExternal: true

@@ -4,9 +4,14 @@ items:
   commentId: N:NPCEngine.API
   id: NPCEngine.API
   children:
-  - NPCEngine.API.Chatbot`1
+  - NPCEngine.API.Classification
+  - NPCEngine.API.Control
+  - NPCEngine.API.PersonaDialogue
   - NPCEngine.API.SemanticQuery
+  - NPCEngine.API.ServiceMetadata
+  - NPCEngine.API.ServiceStatus
   - NPCEngine.API.SpeechToText
+  - NPCEngine.API.TextGeneration`1
   - NPCEngine.API.TextToSpeech
   langs:
   - csharp
@@ -18,42 +23,32 @@ items:
   assemblies:
   - cs.temp.dll
 references:
-- uid: NPCEngine.API.Chatbot`1
-  commentId: T:NPCEngine.API.Chatbot`1
-  name: Chatbot<ContextType>
-  nameWithType: Chatbot<ContextType>
-  fullName: NPCEngine.API.Chatbot<ContextType>
-  nameWithType.vb: Chatbot(Of ContextType)
-  fullName.vb: NPCEngine.API.Chatbot(Of ContextType)
-  name.vb: Chatbot(Of ContextType)
-  spec.csharp:
-  - uid: NPCEngine.API.Chatbot`1
-    name: Chatbot
-    nameWithType: Chatbot
-    fullName: NPCEngine.API.Chatbot
-  - name: <
-    nameWithType: <
-    fullName: <
-  - name: ContextType
-    nameWithType: ContextType
-    fullName: ContextType
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: NPCEngine.API.Chatbot`1
-    name: Chatbot
-    nameWithType: Chatbot
-    fullName: NPCEngine.API.Chatbot
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - name: ContextType
-    nameWithType: ContextType
-    fullName: ContextType
-  - name: )
-    nameWithType: )
-    fullName: )
+- uid: NPCEngine.API.Classification
+  commentId: T:NPCEngine.API.Classification
+  name: Classification
+  nameWithType: Classification
+  fullName: NPCEngine.API.Classification
+- uid: NPCEngine.API.ServiceMetadata
+  commentId: T:NPCEngine.API.ServiceMetadata
+  name: ServiceMetadata
+  nameWithType: ServiceMetadata
+  fullName: NPCEngine.API.ServiceMetadata
+- uid: NPCEngine.API.ServiceStatus
+  commentId: T:NPCEngine.API.ServiceStatus
+  parent: NPCEngine.API
+  name: ServiceStatus
+  nameWithType: ServiceStatus
+  fullName: NPCEngine.API.ServiceStatus
+- uid: NPCEngine.API.Control
+  commentId: T:NPCEngine.API.Control
+  name: Control
+  nameWithType: Control
+  fullName: NPCEngine.API.Control
+- uid: NPCEngine.API.PersonaDialogue
+  commentId: T:NPCEngine.API.PersonaDialogue
+  name: PersonaDialogue
+  nameWithType: PersonaDialogue
+  fullName: NPCEngine.API.PersonaDialogue
 - uid: NPCEngine.API.SemanticQuery
   commentId: T:NPCEngine.API.SemanticQuery
   name: SemanticQuery
@@ -64,8 +59,49 @@ references:
   name: SpeechToText
   nameWithType: SpeechToText
   fullName: NPCEngine.API.SpeechToText
+- uid: NPCEngine.API.TextGeneration`1
+  commentId: T:NPCEngine.API.TextGeneration`1
+  name: TextGeneration<ContextType>
+  nameWithType: TextGeneration<ContextType>
+  fullName: NPCEngine.API.TextGeneration<ContextType>
+  nameWithType.vb: TextGeneration(Of ContextType)
+  fullName.vb: NPCEngine.API.TextGeneration(Of ContextType)
+  name.vb: TextGeneration(Of ContextType)
+  spec.csharp:
+  - uid: NPCEngine.API.TextGeneration`1
+    name: TextGeneration
+    nameWithType: TextGeneration
+    fullName: NPCEngine.API.TextGeneration
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ContextType
+    nameWithType: ContextType
+    fullName: ContextType
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: NPCEngine.API.TextGeneration`1
+    name: TextGeneration
+    nameWithType: TextGeneration
+    fullName: NPCEngine.API.TextGeneration
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ContextType
+    nameWithType: ContextType
+    fullName: ContextType
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: NPCEngine.API.TextToSpeech
   commentId: T:NPCEngine.API.TextToSpeech
   name: TextToSpeech
   nameWithType: TextToSpeech
   fullName: NPCEngine.API.TextToSpeech
+- uid: NPCEngine.API
+  commentId: N:NPCEngine.API
+  name: NPCEngine.API
+  nameWithType: NPCEngine.API
+  fullName: NPCEngine.API

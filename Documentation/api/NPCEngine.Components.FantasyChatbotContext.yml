@@ -22,15 +22,25 @@ items:
   source:
     id: FantasyChatbotContext
     path: ''
-    startLine: 1668
+    startLine: 2400
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
   syntax:
-    content: public class FantasyChatbotContext
-    content.vb: Public Class FantasyChatbotContext
+    content: >-
+      [Serializable]
+
+      public class FantasyChatbotContext
+    content.vb: >-
+      <Serializable>
+
+      Public Class FantasyChatbotContext
   inheritance:
   - System.Object
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
   modifiers.csharp:
   - public
   - class
@@ -51,7 +61,7 @@ items:
   source:
     id: location_name
     path: ''
-    startLine: 1682
+    startLine: 2414
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -78,7 +88,7 @@ items:
   source:
     id: location
     path: ''
-    startLine: 1683
+    startLine: 2415
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -105,7 +115,7 @@ items:
   source:
     id: name
     path: ''
-    startLine: 1684
+    startLine: 2416
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -132,7 +142,7 @@ items:
   source:
     id: persona
     path: ''
-    startLine: 1685
+    startLine: 2417
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -159,7 +169,7 @@ items:
   source:
     id: other_name
     path: ''
-    startLine: 1686
+    startLine: 2418
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -186,7 +196,7 @@ items:
   source:
     id: other_persona
     path: ''
-    startLine: 1687
+    startLine: 2419
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -213,7 +223,7 @@ items:
   source:
     id: history
     path: ''
-    startLine: 1689
+    startLine: 2421
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components

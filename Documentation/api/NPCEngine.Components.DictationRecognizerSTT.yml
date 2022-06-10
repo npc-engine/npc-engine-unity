@@ -20,7 +20,7 @@ items:
   source:
     id: DictationRecognizerSTT
     path: ''
-    startLine: 1036
+    startLine: 1415
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -57,7 +57,7 @@ items:
   source:
     id: debugLogs
     path: ''
-    startLine: 1038
+    startLine: 1417
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -84,7 +84,7 @@ items:
   source:
     id: PolicyNotAccepted
     path: ''
-    startLine: 1040
+    startLine: 1419
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -115,7 +115,7 @@ items:
   source:
     id: RecognizerStarted
     path: ''
-    startLine: 1048
+    startLine: 1427
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -146,7 +146,7 @@ items:
   source:
     id: StartListening
     path: ''
-    startLine: 1155
+    startLine: 1534
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -175,7 +175,7 @@ items:
   source:
     id: StopListening
     path: ''
-    startLine: 1160
+    startLine: 1539
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components

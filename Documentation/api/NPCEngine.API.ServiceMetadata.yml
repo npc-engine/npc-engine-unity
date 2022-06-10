@@ -1,0 +1,280 @@
+### YamlMime:ManagedReference
+items:
+- uid: NPCEngine.API.ServiceMetadata
+  commentId: T:NPCEngine.API.ServiceMetadata
+  id: ServiceMetadata
+  parent: NPCEngine.API
+  children:
+  - NPCEngine.API.ServiceMetadata.api_name
+  - NPCEngine.API.ServiceMetadata.id
+  - NPCEngine.API.ServiceMetadata.path
+  - NPCEngine.API.ServiceMetadata.readme
+  - NPCEngine.API.ServiceMetadata.service
+  - NPCEngine.API.ServiceMetadata.service_description
+  - NPCEngine.API.ServiceMetadata.service_short_description
+  langs:
+  - csharp
+  - vb
+  name: ServiceMetadata
+  nameWithType: ServiceMetadata
+  fullName: NPCEngine.API.ServiceMetadata
+  type: Class
+  source:
+    id: ServiceMetadata
+    path: ''
+    startLine: 433
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.API
+  summary: "\nData class containing service metadata.\n"
+  example: []
+  syntax:
+    content: >-
+      [Serializable]
+
+      public class ServiceMetadata
+    content.vb: >-
+      <Serializable>
+
+      Public Class ServiceMetadata
+  inheritance:
+  - System.Object
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: NPCEngine.API.ServiceMetadata.id
+  commentId: F:NPCEngine.API.ServiceMetadata.id
+  id: id
+  parent: NPCEngine.API.ServiceMetadata
+  langs:
+  - csharp
+  - vb
+  name: id
+  nameWithType: ServiceMetadata.id
+  fullName: NPCEngine.API.ServiceMetadata.id
+  type: Field
+  source:
+    id: id
+    path: ''
+    startLine: 440
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.API
+  summary: "\nID of the service.\n"
+  example: []
+  syntax:
+    content: public string id
+    return:
+      type: System.String
+    content.vb: Public id As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.API.ServiceMetadata.service
+  commentId: F:NPCEngine.API.ServiceMetadata.service
+  id: service
+  parent: NPCEngine.API.ServiceMetadata
+  langs:
+  - csharp
+  - vb
+  name: service
+  nameWithType: ServiceMetadata.service
+  fullName: NPCEngine.API.ServiceMetadata.service
+  type: Field
+  source:
+    id: service
+    path: ''
+    startLine: 445
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.API
+  summary: "\nName of the service class.\n"
+  example: []
+  syntax:
+    content: public string service
+    return:
+      type: System.String
+    content.vb: Public service As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.API.ServiceMetadata.api_name
+  commentId: F:NPCEngine.API.ServiceMetadata.api_name
+  id: api_name
+  parent: NPCEngine.API.ServiceMetadata
+  langs:
+  - csharp
+  - vb
+  name: api_name
+  nameWithType: ServiceMetadata.api_name
+  fullName: NPCEngine.API.ServiceMetadata.api_name
+  type: Field
+  source:
+    id: api_name
+    path: ''
+    startLine: 450
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.API
+  summary: "\nName of the API class.\n"
+  example: []
+  syntax:
+    content: public string api_name
+    return:
+      type: System.String
+    content.vb: Public api_name As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.API.ServiceMetadata.path
+  commentId: F:NPCEngine.API.ServiceMetadata.path
+  id: path
+  parent: NPCEngine.API.ServiceMetadata
+  langs:
+  - csharp
+  - vb
+  name: path
+  nameWithType: ServiceMetadata.path
+  fullName: NPCEngine.API.ServiceMetadata.path
+  type: Field
+  source:
+    id: path
+    path: ''
+    startLine: 455
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.API
+  summary: "\nPath to the service&apos;s folder.\n"
+  example: []
+  syntax:
+    content: public string path
+    return:
+      type: System.String
+    content.vb: Public path As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.API.ServiceMetadata.service_short_description
+  commentId: F:NPCEngine.API.ServiceMetadata.service_short_description
+  id: service_short_description
+  parent: NPCEngine.API.ServiceMetadata
+  langs:
+  - csharp
+  - vb
+  name: service_short_description
+  nameWithType: ServiceMetadata.service_short_description
+  fullName: NPCEngine.API.ServiceMetadata.service_short_description
+  type: Field
+  source:
+    id: service_short_description
+    path: ''
+    startLine: 460
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.API
+  summary: "\nShort service class description\n"
+  example: []
+  syntax:
+    content: public string service_short_description
+    return:
+      type: System.String
+    content.vb: Public service_short_description As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.API.ServiceMetadata.service_description
+  commentId: F:NPCEngine.API.ServiceMetadata.service_description
+  id: service_description
+  parent: NPCEngine.API.ServiceMetadata
+  langs:
+  - csharp
+  - vb
+  name: service_description
+  nameWithType: ServiceMetadata.service_description
+  fullName: NPCEngine.API.ServiceMetadata.service_description
+  type: Field
+  source:
+    id: service_description
+    path: ''
+    startLine: 465
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.API
+  summary: "\nLong service class description\n"
+  example: []
+  syntax:
+    content: public string service_description
+    return:
+      type: System.String
+    content.vb: Public service_description As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.API.ServiceMetadata.readme
+  commentId: F:NPCEngine.API.ServiceMetadata.readme
+  id: readme
+  parent: NPCEngine.API.ServiceMetadata
+  langs:
+  - csharp
+  - vb
+  name: readme
+  nameWithType: ServiceMetadata.readme
+  fullName: NPCEngine.API.ServiceMetadata.readme
+  type: Field
+  source:
+    id: readme
+    path: ''
+    startLine: 470
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.API
+  summary: "\nModel specific readme.\n"
+  example: []
+  syntax:
+    content: public string readme
+    return:
+      type: System.String
+    content.vb: Public readme As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: NPCEngine.API
+  commentId: N:NPCEngine.API
+  name: NPCEngine.API
+  nameWithType: NPCEngine.API
+  fullName: NPCEngine.API
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

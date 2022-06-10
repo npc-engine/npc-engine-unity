@@ -5,6 +5,7 @@ items:
   id: NPCEngine.Utility
   children:
   - NPCEngine.Utility.AudioSourceQueue
+  - NPCEngine.Utility.CoroutineUtility
   - NPCEngine.Utility.Singleton`1
   langs:
   - csharp
@@ -18,9 +19,15 @@ items:
 references:
 - uid: NPCEngine.Utility.AudioSourceQueue
   commentId: T:NPCEngine.Utility.AudioSourceQueue
+  parent: NPCEngine.Utility
   name: AudioSourceQueue
   nameWithType: AudioSourceQueue
   fullName: NPCEngine.Utility.AudioSourceQueue
+- uid: NPCEngine.Utility.CoroutineUtility
+  commentId: T:NPCEngine.Utility.CoroutineUtility
+  name: CoroutineUtility
+  nameWithType: CoroutineUtility
+  fullName: NPCEngine.Utility.CoroutineUtility
 - uid: NPCEngine.Utility.Singleton`1
   commentId: T:NPCEngine.Utility.Singleton`1
   name: Singleton<T>
@@ -57,3 +64,8 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: NPCEngine.Utility
+  commentId: N:NPCEngine.Utility
+  name: NPCEngine.Utility
+  nameWithType: NPCEngine.Utility
+  fullName: NPCEngine.Utility

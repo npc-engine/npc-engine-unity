@@ -6,12 +6,16 @@ items:
   children:
   - NPCEngine.Components.AbstractDialogueSystem
   - NPCEngine.Components.AbstractSpeechToText
+  - NPCEngine.Components.Character
   - NPCEngine.Components.ChatLine
   - NPCEngine.Components.ColliderLocationTrigger
   - NPCEngine.Components.DialogueUI
   - NPCEngine.Components.DictationRecognizerSTT
   - NPCEngine.Components.FantasyChatbotContext
+  - NPCEngine.Components.FantasyChatbotTextGeneration
+  - NPCEngine.Components.Location
   - NPCEngine.Components.NonPlayerCharacter
+  - NPCEngine.Components.NPCEngineManager
   - NPCEngine.Components.NPCEngineSTT
   - NPCEngine.Components.PlayerCharacter
   langs:
@@ -36,6 +40,12 @@ references:
   name: AbstractSpeechToText
   nameWithType: AbstractSpeechToText
   fullName: NPCEngine.Components.AbstractSpeechToText
+- uid: NPCEngine.Components.Character
+  commentId: T:NPCEngine.Components.Character
+  parent: NPCEngine.Components
+  name: Character
+  nameWithType: Character
+  fullName: NPCEngine.Components.Character
 - uid: NPCEngine.Components.ColliderLocationTrigger
   commentId: T:NPCEngine.Components.ColliderLocationTrigger
   name: ColliderLocationTrigger
@@ -51,12 +61,23 @@ references:
   name: DictationRecognizerSTT
   nameWithType: DictationRecognizerSTT
   fullName: NPCEngine.Components.DictationRecognizerSTT
+- uid: NPCEngine.Components.Location
+  commentId: T:NPCEngine.Components.Location
+  parent: NPCEngine.Components
+  name: Location
+  nameWithType: Location
+  fullName: NPCEngine.Components.Location
 - uid: NPCEngine.Components.NonPlayerCharacter
   commentId: T:NPCEngine.Components.NonPlayerCharacter
   parent: NPCEngine.Components
   name: NonPlayerCharacter
   nameWithType: NonPlayerCharacter
   fullName: NPCEngine.Components.NonPlayerCharacter
+- uid: NPCEngine.Components.NPCEngineManager
+  commentId: T:NPCEngine.Components.NPCEngineManager
+  name: NPCEngineManager
+  nameWithType: NPCEngineManager
+  fullName: NPCEngine.Components.NPCEngineManager
 - uid: NPCEngine.Components.NPCEngineSTT
   commentId: T:NPCEngine.Components.NPCEngineSTT
   name: NPCEngineSTT
@@ -78,6 +99,11 @@ references:
   name: ChatLine
   nameWithType: ChatLine
   fullName: NPCEngine.Components.ChatLine
+- uid: NPCEngine.Components.FantasyChatbotTextGeneration
+  commentId: T:NPCEngine.Components.FantasyChatbotTextGeneration
+  name: FantasyChatbotTextGeneration
+  nameWithType: FantasyChatbotTextGeneration
+  fullName: NPCEngine.Components.FantasyChatbotTextGeneration
 - uid: NPCEngine.Components
   commentId: N:NPCEngine.Components
   name: NPCEngine.Components

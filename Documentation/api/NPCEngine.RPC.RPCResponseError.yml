@@ -1,55 +1,65 @@
 ### YamlMime:ManagedReference
 items:
-- uid: NPCEngine.Server.RPCResponseError
-  commentId: T:NPCEngine.Server.RPCResponseError
+- uid: NPCEngine.RPC.RPCResponseError
+  commentId: T:NPCEngine.RPC.RPCResponseError
   id: RPCResponseError
-  parent: NPCEngine.Server
+  parent: NPCEngine.RPC
   children:
-  - NPCEngine.Server.RPCResponseError.code
-  - NPCEngine.Server.RPCResponseError.message
+  - NPCEngine.RPC.RPCResponseError.code
+  - NPCEngine.RPC.RPCResponseError.message
   langs:
   - csharp
   - vb
   name: RPCResponseError
   nameWithType: RPCResponseError
-  fullName: NPCEngine.Server.RPCResponseError
+  fullName: NPCEngine.RPC.RPCResponseError
   type: Class
   source:
     id: RPCResponseError
     path: ''
-    startLine: 2297
+    startLine: 4112
   assemblies:
   - cs.temp.dll
-  namespace: NPCEngine.Server
+  namespace: NPCEngine.RPC
   syntax:
-    content: public class RPCResponseError
-    content.vb: Public Class RPCResponseError
+    content: >-
+      [Serializable]
+
+      public class RPCResponseError
+    content.vb: >-
+      <Serializable>
+
+      Public Class RPCResponseError
   inheritance:
   - System.Object
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
   modifiers.csharp:
   - public
   - class
   modifiers.vb:
   - Public
   - Class
-- uid: NPCEngine.Server.RPCResponseError.code
-  commentId: F:NPCEngine.Server.RPCResponseError.code
+- uid: NPCEngine.RPC.RPCResponseError.code
+  commentId: F:NPCEngine.RPC.RPCResponseError.code
   id: code
-  parent: NPCEngine.Server.RPCResponseError
+  parent: NPCEngine.RPC.RPCResponseError
   langs:
   - csharp
   - vb
   name: code
   nameWithType: RPCResponseError.code
-  fullName: NPCEngine.Server.RPCResponseError.code
+  fullName: NPCEngine.RPC.RPCResponseError.code
   type: Field
   source:
     id: code
     path: ''
-    startLine: 2300
+    startLine: 4115
   assemblies:
   - cs.temp.dll
-  namespace: NPCEngine.Server
+  namespace: NPCEngine.RPC
   syntax:
     content: public int code
     return:
@@ -59,39 +69,39 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: NPCEngine.Server.RPCResponseError.message
-  commentId: F:NPCEngine.Server.RPCResponseError.message
+- uid: NPCEngine.RPC.RPCResponseError.message
+  commentId: F:NPCEngine.RPC.RPCResponseError.message
   id: message
-  parent: NPCEngine.Server.RPCResponseError
+  parent: NPCEngine.RPC.RPCResponseError
   langs:
   - csharp
   - vb
   name: message
   nameWithType: RPCResponseError.message
-  fullName: NPCEngine.Server.RPCResponseError.message
+  fullName: NPCEngine.RPC.RPCResponseError.message
   type: Field
   source:
     id: message
     path: ''
-    startLine: 2301
+    startLine: 4116
   assemblies:
   - cs.temp.dll
-  namespace: NPCEngine.Server
+  namespace: NPCEngine.RPC
   syntax:
-    content: public String message
+    content: public string message
     return:
-      type: Global.String
+      type: System.String
     content.vb: Public message As String
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
 references:
-- uid: NPCEngine.Server
-  commentId: N:NPCEngine.Server
-  name: NPCEngine.Server
-  nameWithType: NPCEngine.Server
-  fullName: NPCEngine.Server
+- uid: NPCEngine.RPC
+  commentId: N:NPCEngine.RPC
+  name: NPCEngine.RPC
+  nameWithType: NPCEngine.RPC
+  fullName: NPCEngine.RPC
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -112,8 +122,10 @@ references:
   name: Int32
   nameWithType: Int32
   fullName: System.Int32
-- uid: Global.String
+- uid: System.String
+  commentId: T:System.String
+  parent: System
   isExternal: true
   name: String
   nameWithType: String
-  fullName: String
+  fullName: System.String

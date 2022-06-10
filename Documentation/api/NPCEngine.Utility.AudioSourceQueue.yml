@@ -17,7 +17,7 @@ items:
   source:
     id: AudioSourceQueue
     path: ''
-    startLine: 2540
+    startLine: 4131
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Utility
@@ -48,7 +48,7 @@ items:
   source:
     id: audioSource
     path: ''
-    startLine: 2543
+    startLine: 4135
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Utility
@@ -75,7 +75,7 @@ items:
   source:
     id: PlaySound
     path: ''
-    startLine: 2560
+    startLine: 4157
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Utility

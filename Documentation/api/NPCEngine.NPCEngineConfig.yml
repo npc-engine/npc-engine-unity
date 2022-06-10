@@ -1,0 +1,719 @@
+### YamlMime:ManagedReference
+items:
+- uid: NPCEngine.NPCEngineConfig
+  commentId: T:NPCEngine.NPCEngineConfig
+  id: NPCEngineConfig
+  parent: NPCEngine
+  children:
+  - NPCEngine.NPCEngineConfig.connectToExistingServer
+  - NPCEngine.NPCEngineConfig.debugLogs
+  - NPCEngine.NPCEngineConfig.modelsPath
+  - NPCEngine.NPCEngineConfig.nChunksSpeechGeneration
+  - NPCEngine.NPCEngineConfig.npcEnginePath
+  - NPCEngine.NPCEngineConfig.Port
+  - NPCEngine.NPCEngineConfig.serverAddress
+  - NPCEngine.NPCEngineConfig.serverConsole
+  - NPCEngine.NPCEngineConfig.serverType
+  - NPCEngine.NPCEngineConfig.services
+  - NPCEngine.NPCEngineConfig.temperature
+  - NPCEngine.NPCEngineConfig.ToBeStarted(System.String)
+  - NPCEngine.NPCEngineConfig.topK
+  langs:
+  - csharp
+  - vb
+  name: NPCEngineConfig
+  nameWithType: NPCEngineConfig
+  fullName: NPCEngine.NPCEngineConfig
+  type: Class
+  source:
+    id: NPCEngineConfig
+    path: ''
+    startLine: 317
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine
+  summary: "\nData class containing NPC Engine config.\n"
+  example: []
+  syntax:
+    content: 'public class NPCEngineConfig : Singleton<NPCEngineConfig>'
+    content.vb: >-
+      Public Class NPCEngineConfig
+          Inherits Singleton(Of NPCEngineConfig)
+  inheritance:
+  - System.Object
+  - NPCEngine.Utility.Singleton{NPCEngine.NPCEngineConfig}
+  inheritedMembers:
+  - NPCEngine.Utility.Singleton{NPCEngine.NPCEngineConfig}.Instance
+  - NPCEngine.Utility.Singleton{NPCEngine.NPCEngineConfig}.GetInstance
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: NPCEngine.NPCEngineConfig.services
+  commentId: F:NPCEngine.NPCEngineConfig.services
+  id: services
+  parent: NPCEngine.NPCEngineConfig
+  langs:
+  - csharp
+  - vb
+  name: services
+  nameWithType: NPCEngineConfig.services
+  fullName: NPCEngine.NPCEngineConfig.services
+  type: Field
+  source:
+    id: services
+    path: ''
+    startLine: 320
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine
+  syntax:
+    content: public List<ServiceConfigDescriptor> services
+    return:
+      type: System.Collections.Generic.List{NPCEngine.ServiceConfigDescriptor}
+    content.vb: Public services As List(Of ServiceConfigDescriptor)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.NPCEngineConfig.serverType
+  commentId: F:NPCEngine.NPCEngineConfig.serverType
+  id: serverType
+  parent: NPCEngine.NPCEngineConfig
+  langs:
+  - csharp
+  - vb
+  name: serverType
+  nameWithType: NPCEngineConfig.serverType
+  fullName: NPCEngine.NPCEngineConfig.serverType
+  type: Field
+  source:
+    id: serverType
+    path: ''
+    startLine: 322
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine
+  syntax:
+    content: public ServerType serverType
+    return:
+      type: Global.ServerType
+    content.vb: Public serverType As ServerType
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.NPCEngineConfig.serverAddress
+  commentId: F:NPCEngine.NPCEngineConfig.serverAddress
+  id: serverAddress
+  parent: NPCEngine.NPCEngineConfig
+  langs:
+  - csharp
+  - vb
+  name: serverAddress
+  nameWithType: NPCEngineConfig.serverAddress
+  fullName: NPCEngine.NPCEngineConfig.serverAddress
+  type: Field
+  source:
+    id: serverAddress
+    path: ''
+    startLine: 324
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine
+  syntax:
+    content: public string serverAddress
+    return:
+      type: System.String
+    content.vb: Public serverAddress As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.NPCEngineConfig.Port
+  commentId: P:NPCEngine.NPCEngineConfig.Port
+  id: Port
+  parent: NPCEngine.NPCEngineConfig
+  langs:
+  - csharp
+  - vb
+  name: Port
+  nameWithType: NPCEngineConfig.Port
+  fullName: NPCEngine.NPCEngineConfig.Port
+  type: Property
+  source:
+    id: Port
+    path: ''
+    startLine: 326
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine
+  syntax:
+    content: public string Port { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Port As String
+  overload: NPCEngine.NPCEngineConfig.Port*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: NPCEngine.NPCEngineConfig.modelsPath
+  commentId: F:NPCEngine.NPCEngineConfig.modelsPath
+  id: modelsPath
+  parent: NPCEngine.NPCEngineConfig
+  langs:
+  - csharp
+  - vb
+  name: modelsPath
+  nameWithType: NPCEngineConfig.modelsPath
+  fullName: NPCEngine.NPCEngineConfig.modelsPath
+  type: Field
+  source:
+    id: modelsPath
+    path: ''
+    startLine: 335
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine
+  syntax:
+    content: public string modelsPath
+    return:
+      type: System.String
+    content.vb: Public modelsPath As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.NPCEngineConfig.npcEnginePath
+  commentId: F:NPCEngine.NPCEngineConfig.npcEnginePath
+  id: npcEnginePath
+  parent: NPCEngine.NPCEngineConfig
+  langs:
+  - csharp
+  - vb
+  name: npcEnginePath
+  nameWithType: NPCEngineConfig.npcEnginePath
+  fullName: NPCEngine.NPCEngineConfig.npcEnginePath
+  type: Field
+  source:
+    id: npcEnginePath
+    path: ''
+    startLine: 338
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine
+  syntax:
+    content: public string npcEnginePath
+    return:
+      type: System.String
+    content.vb: Public npcEnginePath As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.NPCEngineConfig.debugLogs
+  commentId: F:NPCEngine.NPCEngineConfig.debugLogs
+  id: debugLogs
+  parent: NPCEngine.NPCEngineConfig
+  langs:
+  - csharp
+  - vb
+  name: debugLogs
+  nameWithType: NPCEngineConfig.debugLogs
+  fullName: NPCEngine.NPCEngineConfig.debugLogs
+  type: Field
+  source:
+    id: debugLogs
+    path: ''
+    startLine: 340
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine
+  syntax:
+    content: public bool debugLogs
+    return:
+      type: System.Boolean
+    content.vb: Public debugLogs As Boolean
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.NPCEngineConfig.serverConsole
+  commentId: F:NPCEngine.NPCEngineConfig.serverConsole
+  id: serverConsole
+  parent: NPCEngine.NPCEngineConfig
+  langs:
+  - csharp
+  - vb
+  name: serverConsole
+  nameWithType: NPCEngineConfig.serverConsole
+  fullName: NPCEngine.NPCEngineConfig.serverConsole
+  type: Field
+  source:
+    id: serverConsole
+    path: ''
+    startLine: 341
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine
+  syntax:
+    content: public bool serverConsole
+    return:
+      type: System.Boolean
+    content.vb: Public serverConsole As Boolean
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.NPCEngineConfig.connectToExistingServer
+  commentId: F:NPCEngine.NPCEngineConfig.connectToExistingServer
+  id: connectToExistingServer
+  parent: NPCEngine.NPCEngineConfig
+  langs:
+  - csharp
+  - vb
+  name: connectToExistingServer
+  nameWithType: NPCEngineConfig.connectToExistingServer
+  fullName: NPCEngine.NPCEngineConfig.connectToExistingServer
+  type: Field
+  source:
+    id: connectToExistingServer
+    path: ''
+    startLine: 342
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine
+  syntax:
+    content: public bool connectToExistingServer
+    return:
+      type: System.Boolean
+    content.vb: Public connectToExistingServer As Boolean
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.NPCEngineConfig.temperature
+  commentId: F:NPCEngine.NPCEngineConfig.temperature
+  id: temperature
+  parent: NPCEngine.NPCEngineConfig
+  langs:
+  - csharp
+  - vb
+  name: temperature
+  nameWithType: NPCEngineConfig.temperature
+  fullName: NPCEngine.NPCEngineConfig.temperature
+  type: Field
+  source:
+    id: temperature
+    path: ''
+    startLine: 346
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine
+  syntax:
+    content: public float temperature
+    return:
+      type: System.Single
+    content.vb: Public temperature As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.NPCEngineConfig.topK
+  commentId: F:NPCEngine.NPCEngineConfig.topK
+  id: topK
+  parent: NPCEngine.NPCEngineConfig
+  langs:
+  - csharp
+  - vb
+  name: topK
+  nameWithType: NPCEngineConfig.topK
+  fullName: NPCEngine.NPCEngineConfig.topK
+  type: Field
+  source:
+    id: topK
+    path: ''
+    startLine: 347
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine
+  syntax:
+    content: public int topK
+    return:
+      type: System.Int32
+    content.vb: Public topK As Integer
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.NPCEngineConfig.nChunksSpeechGeneration
+  commentId: F:NPCEngine.NPCEngineConfig.nChunksSpeechGeneration
+  id: nChunksSpeechGeneration
+  parent: NPCEngine.NPCEngineConfig
+  langs:
+  - csharp
+  - vb
+  name: nChunksSpeechGeneration
+  nameWithType: NPCEngineConfig.nChunksSpeechGeneration
+  fullName: NPCEngine.NPCEngineConfig.nChunksSpeechGeneration
+  type: Field
+  source:
+    id: nChunksSpeechGeneration
+    path: ''
+    startLine: 351
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine
+  syntax:
+    content: public int nChunksSpeechGeneration
+    return:
+      type: System.Int32
+    content.vb: Public nChunksSpeechGeneration As Integer
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.NPCEngineConfig.ToBeStarted(System.String)
+  commentId: M:NPCEngine.NPCEngineConfig.ToBeStarted(System.String)
+  id: ToBeStarted(System.String)
+  parent: NPCEngine.NPCEngineConfig
+  langs:
+  - csharp
+  - vb
+  name: ToBeStarted(String)
+  nameWithType: NPCEngineConfig.ToBeStarted(String)
+  fullName: NPCEngine.NPCEngineConfig.ToBeStarted(System.String)
+  type: Method
+  source:
+    id: ToBeStarted
+    path: ''
+    startLine: 357
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine
+  syntax:
+    content: public bool ToBeStarted(string name)
+    parameters:
+    - id: name
+      type: System.String
+    return:
+      type: System.Boolean
+    content.vb: Public Function ToBeStarted(name As String) As Boolean
+  overload: NPCEngine.NPCEngineConfig.ToBeStarted*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: NPCEngine
+  commentId: N:NPCEngine
+  name: NPCEngine
+  nameWithType: NPCEngine
+  fullName: NPCEngine
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: NPCEngine.Utility.Singleton{NPCEngine.NPCEngineConfig}
+  commentId: T:NPCEngine.Utility.Singleton{NPCEngine.NPCEngineConfig}
+  parent: NPCEngine.Utility
+  definition: NPCEngine.Utility.Singleton`1
+  name: Singleton<NPCEngineConfig>
+  nameWithType: Singleton<NPCEngineConfig>
+  fullName: NPCEngine.Utility.Singleton<NPCEngine.NPCEngineConfig>
+  nameWithType.vb: Singleton(Of NPCEngineConfig)
+  fullName.vb: NPCEngine.Utility.Singleton(Of NPCEngine.NPCEngineConfig)
+  name.vb: Singleton(Of NPCEngineConfig)
+  spec.csharp:
+  - uid: NPCEngine.Utility.Singleton`1
+    name: Singleton
+    nameWithType: Singleton
+    fullName: NPCEngine.Utility.Singleton
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: NPCEngine.NPCEngineConfig
+    name: NPCEngineConfig
+    nameWithType: NPCEngineConfig
+    fullName: NPCEngine.NPCEngineConfig
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: NPCEngine.Utility.Singleton`1
+    name: Singleton
+    nameWithType: Singleton
+    fullName: NPCEngine.Utility.Singleton
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: NPCEngine.NPCEngineConfig
+    name: NPCEngineConfig
+    nameWithType: NPCEngineConfig
+    fullName: NPCEngine.NPCEngineConfig
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NPCEngine.Utility.Singleton{NPCEngine.NPCEngineConfig}.Instance
+  commentId: P:NPCEngine.Utility.Singleton{NPCEngine.NPCEngineConfig}.Instance
+  parent: NPCEngine.Utility.Singleton{NPCEngine.NPCEngineConfig}
+  definition: NPCEngine.Utility.Singleton`1.Instance
+  name: Instance
+  nameWithType: Singleton<NPCEngineConfig>.Instance
+  fullName: NPCEngine.Utility.Singleton<NPCEngine.NPCEngineConfig>.Instance
+  nameWithType.vb: Singleton(Of NPCEngineConfig).Instance
+  fullName.vb: NPCEngine.Utility.Singleton(Of NPCEngine.NPCEngineConfig).Instance
+- uid: NPCEngine.Utility.Singleton{NPCEngine.NPCEngineConfig}.GetInstance
+  commentId: M:NPCEngine.Utility.Singleton{NPCEngine.NPCEngineConfig}.GetInstance
+  parent: NPCEngine.Utility.Singleton{NPCEngine.NPCEngineConfig}
+  definition: NPCEngine.Utility.Singleton`1.GetInstance
+  name: GetInstance()
+  nameWithType: Singleton<NPCEngineConfig>.GetInstance()
+  fullName: NPCEngine.Utility.Singleton<NPCEngine.NPCEngineConfig>.GetInstance()
+  nameWithType.vb: Singleton(Of NPCEngineConfig).GetInstance()
+  fullName.vb: NPCEngine.Utility.Singleton(Of NPCEngine.NPCEngineConfig).GetInstance()
+  spec.csharp:
+  - uid: NPCEngine.Utility.Singleton`1.GetInstance
+    name: GetInstance
+    nameWithType: Singleton<NPCEngineConfig>.GetInstance
+    fullName: NPCEngine.Utility.Singleton<NPCEngine.NPCEngineConfig>.GetInstance
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: NPCEngine.Utility.Singleton`1.GetInstance
+    name: GetInstance
+    nameWithType: Singleton(Of NPCEngineConfig).GetInstance
+    fullName: NPCEngine.Utility.Singleton(Of NPCEngine.NPCEngineConfig).GetInstance
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: NPCEngine.Utility.Singleton`1
+  commentId: T:NPCEngine.Utility.Singleton`1
+  name: Singleton<T>
+  nameWithType: Singleton<T>
+  fullName: NPCEngine.Utility.Singleton<T>
+  nameWithType.vb: Singleton(Of T)
+  fullName.vb: NPCEngine.Utility.Singleton(Of T)
+  name.vb: Singleton(Of T)
+  spec.csharp:
+  - uid: NPCEngine.Utility.Singleton`1
+    name: Singleton
+    nameWithType: Singleton
+    fullName: NPCEngine.Utility.Singleton
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: NPCEngine.Utility.Singleton`1
+    name: Singleton
+    nameWithType: Singleton
+    fullName: NPCEngine.Utility.Singleton
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NPCEngine.Utility
+  commentId: N:NPCEngine.Utility
+  name: NPCEngine.Utility
+  nameWithType: NPCEngine.Utility
+  fullName: NPCEngine.Utility
+- uid: NPCEngine.Utility.Singleton`1.Instance
+  commentId: P:NPCEngine.Utility.Singleton`1.Instance
+  name: Instance
+  nameWithType: Singleton<T>.Instance
+  fullName: NPCEngine.Utility.Singleton<T>.Instance
+  nameWithType.vb: Singleton(Of T).Instance
+  fullName.vb: NPCEngine.Utility.Singleton(Of T).Instance
+- uid: NPCEngine.Utility.Singleton`1.GetInstance
+  commentId: M:NPCEngine.Utility.Singleton`1.GetInstance
+  name: GetInstance()
+  nameWithType: Singleton<T>.GetInstance()
+  fullName: NPCEngine.Utility.Singleton<T>.GetInstance()
+  nameWithType.vb: Singleton(Of T).GetInstance()
+  fullName.vb: NPCEngine.Utility.Singleton(Of T).GetInstance()
+  spec.csharp:
+  - uid: NPCEngine.Utility.Singleton`1.GetInstance
+    name: GetInstance
+    nameWithType: Singleton<T>.GetInstance
+    fullName: NPCEngine.Utility.Singleton<T>.GetInstance
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: NPCEngine.Utility.Singleton`1.GetInstance
+    name: GetInstance
+    nameWithType: Singleton(Of T).GetInstance
+    fullName: NPCEngine.Utility.Singleton(Of T).GetInstance
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List{NPCEngine.ServiceConfigDescriptor}
+  commentId: T:System.Collections.Generic.List{NPCEngine.ServiceConfigDescriptor}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<ServiceConfigDescriptor>
+  nameWithType: List<ServiceConfigDescriptor>
+  fullName: System.Collections.Generic.List<NPCEngine.ServiceConfigDescriptor>
+  nameWithType.vb: List(Of ServiceConfigDescriptor)
+  fullName.vb: System.Collections.Generic.List(Of NPCEngine.ServiceConfigDescriptor)
+  name.vb: List(Of ServiceConfigDescriptor)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: NPCEngine.ServiceConfigDescriptor
+    name: ServiceConfigDescriptor
+    nameWithType: ServiceConfigDescriptor
+    fullName: NPCEngine.ServiceConfigDescriptor
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: NPCEngine.ServiceConfigDescriptor
+    name: ServiceConfigDescriptor
+    nameWithType: ServiceConfigDescriptor
+    fullName: NPCEngine.ServiceConfigDescriptor
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: Global.ServerType
+  commentId: '!:Global.ServerType'
+  isExternal: true
+  name: ServerType
+  nameWithType: ServerType
+  fullName: ServerType
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: NPCEngine.NPCEngineConfig.Port*
+  commentId: Overload:NPCEngine.NPCEngineConfig.Port
+  name: Port
+  nameWithType: NPCEngineConfig.Port
+  fullName: NPCEngine.NPCEngineConfig.Port
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: NPCEngine.NPCEngineConfig.ToBeStarted*
+  commentId: Overload:NPCEngine.NPCEngineConfig.ToBeStarted
+  name: ToBeStarted
+  nameWithType: NPCEngineConfig.ToBeStarted
+  fullName: NPCEngine.NPCEngineConfig.ToBeStarted

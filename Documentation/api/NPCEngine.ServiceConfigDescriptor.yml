@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: NPCEngine.ServiceConfigDescriptor
+  commentId: T:NPCEngine.ServiceConfigDescriptor
+  id: ServiceConfigDescriptor
+  parent: NPCEngine
+  children:
+  - NPCEngine.ServiceConfigDescriptor.name
+  - NPCEngine.ServiceConfigDescriptor.path
+  - NPCEngine.ServiceConfigDescriptor.start
+  - NPCEngine.ServiceConfigDescriptor.type
+  langs:
+  - csharp
+  - vb
+  name: ServiceConfigDescriptor
+  nameWithType: ServiceConfigDescriptor
+  fullName: NPCEngine.ServiceConfigDescriptor
+  type: Class
+  source:
+    id: ServiceConfigDescriptor
+    path: ''
+    startLine: 306
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine
+  syntax:
+    content: >-
+      [Serializable]
+
+      public class ServiceConfigDescriptor
+    content.vb: >-
+      <Serializable>
+
+      Public Class ServiceConfigDescriptor
+  inheritance:
+  - System.Object
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: NPCEngine.ServiceConfigDescriptor.name
+  commentId: F:NPCEngine.ServiceConfigDescriptor.name
+  id: name
+  parent: NPCEngine.ServiceConfigDescriptor
+  langs:
+  - csharp
+  - vb
+  name: name
+  nameWithType: ServiceConfigDescriptor.name
+  fullName: NPCEngine.ServiceConfigDescriptor.name
+  type: Field
+  source:
+    id: name
+    path: ''
+    startLine: 309
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine
+  syntax:
+    content: public string name
+    return:
+      type: System.String
+    content.vb: Public name As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.ServiceConfigDescriptor.type
+  commentId: F:NPCEngine.ServiceConfigDescriptor.type
+  id: type
+  parent: NPCEngine.ServiceConfigDescriptor
+  langs:
+  - csharp
+  - vb
+  name: type
+  nameWithType: ServiceConfigDescriptor.type
+  fullName: NPCEngine.ServiceConfigDescriptor.type
+  type: Field
+  source:
+    id: type
+    path: ''
+    startLine: 310
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine
+  syntax:
+    content: public string type
+    return:
+      type: System.String
+    content.vb: Public type As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.ServiceConfigDescriptor.path
+  commentId: F:NPCEngine.ServiceConfigDescriptor.path
+  id: path
+  parent: NPCEngine.ServiceConfigDescriptor
+  langs:
+  - csharp
+  - vb
+  name: path
+  nameWithType: ServiceConfigDescriptor.path
+  fullName: NPCEngine.ServiceConfigDescriptor.path
+  type: Field
+  source:
+    id: path
+    path: ''
+    startLine: 311
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine
+  syntax:
+    content: public string path
+    return:
+      type: System.String
+    content.vb: Public path As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.ServiceConfigDescriptor.start
+  commentId: F:NPCEngine.ServiceConfigDescriptor.start
+  id: start
+  parent: NPCEngine.ServiceConfigDescriptor
+  langs:
+  - csharp
+  - vb
+  name: start
+  nameWithType: ServiceConfigDescriptor.start
+  fullName: NPCEngine.ServiceConfigDescriptor.start
+  type: Field
+  source:
+    id: start
+    path: ''
+    startLine: 312
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine
+  syntax:
+    content: public bool start
+    return:
+      type: System.Boolean
+    content.vb: Public start As Boolean
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: NPCEngine
+  commentId: N:NPCEngine
+  name: NPCEngine
+  nameWithType: NPCEngine
+  fullName: NPCEngine
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean

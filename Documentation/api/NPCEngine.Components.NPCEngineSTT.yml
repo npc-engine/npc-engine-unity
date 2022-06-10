@@ -18,7 +18,7 @@ items:
   source:
     id: NPCEngineSTT
     path: ''
-    startLine: 1467
+    startLine: 2198
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -55,7 +55,7 @@ items:
   source:
     id: CallSpeechToText
     path: ''
-    startLine: 1498
+    startLine: 2229
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -81,7 +81,7 @@ items:
   source:
     id: StartListening
     path: ''
-    startLine: 1503
+    startLine: 2234
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -110,7 +110,7 @@ items:
   source:
     id: StopListening
     path: ''
-    startLine: 1508
+    startLine: 2239
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
