@@ -6,7 +6,7 @@ items:
   parent: NPCEngine.Components
   children:
   - NPCEngine.Components.NonPlayerCharacter.audioSourceQueue
-  - NPCEngine.Components.NonPlayerCharacter.characterName
+  - NPCEngine.Components.NonPlayerCharacter.character
   - NPCEngine.Components.NonPlayerCharacter.defaultThreshold
   - NPCEngine.Components.NonPlayerCharacter.dialogueSystem
   - NPCEngine.Components.NonPlayerCharacter.EndDialog
@@ -16,19 +16,16 @@ items:
   - NPCEngine.Components.NonPlayerCharacter.HandleLineCoroutine(System.String,System.String,System.String)
   - NPCEngine.Components.NonPlayerCharacter.HandlePlayerLineCoroutine(System.String,System.String,System.String)
   - NPCEngine.Components.NonPlayerCharacter.history
-  - NPCEngine.Components.NonPlayerCharacter.Initialized
-  - NPCEngine.Components.NonPlayerCharacter.nChunksTextGeneration
   - NPCEngine.Components.NonPlayerCharacter.OnDialogueEnd
   - NPCEngine.Components.NonPlayerCharacter.OnDialogueLine
   - NPCEngine.Components.NonPlayerCharacter.OnDialogueStart
   - NPCEngine.Components.NonPlayerCharacter.OnProcessingEnd
   - NPCEngine.Components.NonPlayerCharacter.OnProcessingStart
   - NPCEngine.Components.NonPlayerCharacter.OnTopicHintsUpdate
-  - NPCEngine.Components.NonPlayerCharacter.persona
   - NPCEngine.Components.NonPlayerCharacter.SayNPCLines
   - NPCEngine.Components.NonPlayerCharacter.StartDialogue
-  - NPCEngine.Components.NonPlayerCharacter.temperature
-  - NPCEngine.Components.NonPlayerCharacter.topK
+  - NPCEngine.Components.NonPlayerCharacter.testLocation
+  - NPCEngine.Components.NonPlayerCharacter.testOtherCharacter
   - NPCEngine.Components.NonPlayerCharacter.voiceId
   langs:
   - csharp
@@ -40,7 +37,7 @@ items:
   source:
     id: NonPlayerCharacter
     path: ''
-    startLine: 1194
+    startLine: 1674
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -57,87 +54,6 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: NPCEngine.Components.NonPlayerCharacter.temperature
-  commentId: F:NPCEngine.Components.NonPlayerCharacter.temperature
-  id: temperature
-  parent: NPCEngine.Components.NonPlayerCharacter
-  langs:
-  - csharp
-  - vb
-  name: temperature
-  nameWithType: NonPlayerCharacter.temperature
-  fullName: NPCEngine.Components.NonPlayerCharacter.temperature
-  type: Field
-  source:
-    id: temperature
-    path: ''
-    startLine: 1199
-  assemblies:
-  - cs.temp.dll
-  namespace: NPCEngine.Components
-  syntax:
-    content: public float temperature
-    return:
-      type: System.Single
-    content.vb: Public temperature As Single
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: NPCEngine.Components.NonPlayerCharacter.topK
-  commentId: F:NPCEngine.Components.NonPlayerCharacter.topK
-  id: topK
-  parent: NPCEngine.Components.NonPlayerCharacter
-  langs:
-  - csharp
-  - vb
-  name: topK
-  nameWithType: NonPlayerCharacter.topK
-  fullName: NPCEngine.Components.NonPlayerCharacter.topK
-  type: Field
-  source:
-    id: topK
-    path: ''
-    startLine: 1200
-  assemblies:
-  - cs.temp.dll
-  namespace: NPCEngine.Components
-  syntax:
-    content: public int topK
-    return:
-      type: System.Int32
-    content.vb: Public topK As Integer
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: NPCEngine.Components.NonPlayerCharacter.nChunksTextGeneration
-  commentId: F:NPCEngine.Components.NonPlayerCharacter.nChunksTextGeneration
-  id: nChunksTextGeneration
-  parent: NPCEngine.Components.NonPlayerCharacter
-  langs:
-  - csharp
-  - vb
-  name: nChunksTextGeneration
-  nameWithType: NonPlayerCharacter.nChunksTextGeneration
-  fullName: NPCEngine.Components.NonPlayerCharacter.nChunksTextGeneration
-  type: Field
-  source:
-    id: nChunksTextGeneration
-    path: ''
-    startLine: 1202
-  assemblies:
-  - cs.temp.dll
-  namespace: NPCEngine.Components
-  syntax:
-    content: public int nChunksTextGeneration
-    return:
-      type: System.Int32
-    content.vb: Public nChunksTextGeneration As Integer
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
 - uid: NPCEngine.Components.NonPlayerCharacter.defaultThreshold
   commentId: F:NPCEngine.Components.NonPlayerCharacter.defaultThreshold
   id: defaultThreshold
@@ -152,10 +68,12 @@ items:
   source:
     id: defaultThreshold
     path: ''
-    startLine: 1204
+    startLine: 1681
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nDefault semantic similarity threshold for dialogue tree triggers.\n"
+  example: []
   syntax:
     content: public float defaultThreshold
     return:
@@ -165,114 +83,31 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: NPCEngine.Components.NonPlayerCharacter.Initialized
-  commentId: P:NPCEngine.Components.NonPlayerCharacter.Initialized
-  id: Initialized
+- uid: NPCEngine.Components.NonPlayerCharacter.character
+  commentId: F:NPCEngine.Components.NonPlayerCharacter.character
+  id: character
   parent: NPCEngine.Components.NonPlayerCharacter
   langs:
   - csharp
   - vb
-  name: Initialized
-  nameWithType: NonPlayerCharacter.Initialized
-  fullName: NPCEngine.Components.NonPlayerCharacter.Initialized
-  type: Property
-  source:
-    id: Initialized
-    path: ''
-    startLine: 1207
-  assemblies:
-  - cs.temp.dll
-  namespace: NPCEngine.Components
-  syntax:
-    content: public bool Initialized { get; }
-    parameters: []
-    return:
-      type: System.Boolean
-    content.vb: Public ReadOnly Property Initialized As Boolean
-  overload: NPCEngine.Components.NonPlayerCharacter.Initialized*
-  modifiers.csharp:
-  - public
-  - get
-  modifiers.vb:
-  - Public
-  - ReadOnly
-- uid: NPCEngine.Components.NonPlayerCharacter.characterName
-  commentId: F:NPCEngine.Components.NonPlayerCharacter.characterName
-  id: characterName
-  parent: NPCEngine.Components.NonPlayerCharacter
-  langs:
-  - csharp
-  - vb
-  name: characterName
-  nameWithType: NonPlayerCharacter.characterName
-  fullName: NPCEngine.Components.NonPlayerCharacter.characterName
+  name: character
+  nameWithType: NonPlayerCharacter.character
+  fullName: NPCEngine.Components.NonPlayerCharacter.character
   type: Field
   source:
-    id: characterName
+    id: character
     path: ''
-    startLine: 1215
+    startLine: 1686
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nCharacters assigned to this NPC.\n"
+  example: []
   syntax:
-    content: public string characterName
+    content: public Character character
     return:
-      type: System.String
-    content.vb: Public characterName As String
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: NPCEngine.Components.NonPlayerCharacter.persona
-  commentId: F:NPCEngine.Components.NonPlayerCharacter.persona
-  id: persona
-  parent: NPCEngine.Components.NonPlayerCharacter
-  langs:
-  - csharp
-  - vb
-  name: persona
-  nameWithType: NonPlayerCharacter.persona
-  fullName: NPCEngine.Components.NonPlayerCharacter.persona
-  type: Field
-  source:
-    id: persona
-    path: ''
-    startLine: 1217
-  assemblies:
-  - cs.temp.dll
-  namespace: NPCEngine.Components
-  syntax:
-    content: public string persona
-    return:
-      type: System.String
-    content.vb: Public persona As String
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: NPCEngine.Components.NonPlayerCharacter.voiceId
-  commentId: F:NPCEngine.Components.NonPlayerCharacter.voiceId
-  id: voiceId
-  parent: NPCEngine.Components.NonPlayerCharacter
-  langs:
-  - csharp
-  - vb
-  name: voiceId
-  nameWithType: NonPlayerCharacter.voiceId
-  fullName: NPCEngine.Components.NonPlayerCharacter.voiceId
-  type: Field
-  source:
-    id: voiceId
-    path: ''
-    startLine: 1218
-  assemblies:
-  - cs.temp.dll
-  namespace: NPCEngine.Components
-  syntax:
-    content: public string voiceId
-    return:
-      type: System.String
-    content.vb: Public voiceId As String
+      type: NPCEngine.Components.Character
+    content.vb: Public character As Character
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -291,10 +126,12 @@ items:
   source:
     id: history
     path: ''
-    startLine: 1220
+    startLine: 1691
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nDialogue history.\n"
+  example: []
   syntax:
     content: public List<ChatLine> history
     return:
@@ -318,10 +155,12 @@ items:
   source:
     id: OnDialogueStart
     path: ''
-    startLine: 1223
+    startLine: 1696
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nDialogue start event (triggered when the NPC starts talking)\n"
+  example: []
   syntax:
     content: public UnityEvent OnDialogueStart
     return:
@@ -345,10 +184,12 @@ items:
   source:
     id: OnDialogueLine
     path: ''
-    startLine: 1227
+    startLine: 1702
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nEvent called when new line is added to history \nwhere parameters are (ChatLine newLine, bool scriptedLine)\n"
+  example: []
   syntax:
     content: public UnityEvent<ChatLine, bool> OnDialogueLine
     return:
@@ -372,10 +213,12 @@ items:
   source:
     id: OnProcessingStart
     path: ''
-    startLine: 1230
+    startLine: 1707
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nEvent called in the beginning of an input processing\n"
+  example: []
   syntax:
     content: public UnityEvent OnProcessingStart
     return:
@@ -399,10 +242,12 @@ items:
   source:
     id: OnProcessingEnd
     path: ''
-    startLine: 1233
+    startLine: 1712
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nEvent called in the end of an input processing\n"
+  example: []
   syntax:
     content: public UnityEvent OnProcessingEnd
     return:
@@ -426,10 +271,12 @@ items:
   source:
     id: OnTopicHintsUpdate
     path: ''
-    startLine: 1236
+    startLine: 1717
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nEvent called when new dialogue topic hints appear\n"
+  example: []
   syntax:
     content: public UnityEvent<List<string>> OnTopicHintsUpdate
     return:
@@ -453,10 +300,12 @@ items:
   source:
     id: OnDialogueEnd
     path: ''
-    startLine: 1239
+    startLine: 1722
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nEvent called when dialogue ends\n"
+  example: []
   syntax:
     content: public UnityEvent OnDialogueEnd
     return:
@@ -480,15 +329,46 @@ items:
   source:
     id: audioSourceQueue
     path: ''
-    startLine: 1241
+    startLine: 1727
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nAudio source queue that plays generated speech on the fly one-by-one.\n"
+  example: []
   syntax:
     content: public AudioSourceQueue audioSourceQueue
     return:
-      type: Global.AudioSourceQueue
+      type: NPCEngine.Utility.AudioSourceQueue
     content.vb: Public audioSourceQueue As AudioSourceQueue
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.Components.NonPlayerCharacter.voiceId
+  commentId: F:NPCEngine.Components.NonPlayerCharacter.voiceId
+  id: voiceId
+  parent: NPCEngine.Components.NonPlayerCharacter
+  langs:
+  - csharp
+  - vb
+  name: voiceId
+  nameWithType: NonPlayerCharacter.voiceId
+  fullName: NPCEngine.Components.NonPlayerCharacter.voiceId
+  type: Field
+  source:
+    id: voiceId
+    path: ''
+    startLine: 1732
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  summary: "\nVoice ID of the character for TTS.\n"
+  example: []
+  syntax:
+    content: public string voiceId
+    return:
+      type: System.String
+    content.vb: Public voiceId As String
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -507,15 +387,71 @@ items:
   source:
     id: dialogueSystem
     path: ''
-    startLine: 1243
+    startLine: 1737
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nDialogue System integration.\n"
+  example: []
   syntax:
     content: public AbstractDialogueSystem dialogueSystem
     return:
       type: NPCEngine.Components.AbstractDialogueSystem
     content.vb: Public dialogueSystem As AbstractDialogueSystem
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.Components.NonPlayerCharacter.testLocation
+  commentId: F:NPCEngine.Components.NonPlayerCharacter.testLocation
+  id: testLocation
+  parent: NPCEngine.Components.NonPlayerCharacter
+  langs:
+  - csharp
+  - vb
+  name: testLocation
+  nameWithType: NonPlayerCharacter.testLocation
+  fullName: NPCEngine.Components.NonPlayerCharacter.testLocation
+  type: Field
+  source:
+    id: testLocation
+    path: ''
+    startLine: 1751
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  syntax:
+    content: public Location testLocation
+    return:
+      type: NPCEngine.Components.Location
+    content.vb: Public testLocation As Location
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.Components.NonPlayerCharacter.testOtherCharacter
+  commentId: F:NPCEngine.Components.NonPlayerCharacter.testOtherCharacter
+  id: testOtherCharacter
+  parent: NPCEngine.Components.NonPlayerCharacter
+  langs:
+  - csharp
+  - vb
+  name: testOtherCharacter
+  nameWithType: NonPlayerCharacter.testOtherCharacter
+  fullName: NPCEngine.Components.NonPlayerCharacter.testOtherCharacter
+  type: Field
+  source:
+    id: testOtherCharacter
+    path: ''
+    startLine: 1754
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  syntax:
+    content: public Character testOtherCharacter
+    return:
+      type: NPCEngine.Components.Character
+    content.vb: Public testOtherCharacter As Character
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -534,10 +470,12 @@ items:
   source:
     id: StartDialogue
     path: ''
-    startLine: 1268
+    startLine: 1773
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nInitialize dialogue.\n"
+  example: []
   syntax:
     content: public void StartDialogue()
     content.vb: Public Sub StartDialogue
@@ -560,10 +498,12 @@ items:
   source:
     id: EndDialog
     path: ''
-    startLine: 1277
+    startLine: 1785
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nEnd dialogue.\n"
+  example: []
   syntax:
     content: public void EndDialog()
     content.vb: Public Sub
@@ -586,19 +526,24 @@ items:
   source:
     id: HandleLine
     path: ''
-    startLine: 1290
+    startLine: 1799
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nStep dialogue by line from player.\n"
+  example: []
   syntax:
     content: public void HandleLine(string otherName, string otherPersona, string line)
     parameters:
     - id: otherName
       type: System.String
+      description: ''
     - id: otherPersona
       type: System.String
+      description: ''
     - id: line
       type: System.String
+      description: ''
     content.vb: Public Sub HandleLine(otherName As String, otherPersona As String, line As String)
   overload: NPCEngine.Components.NonPlayerCharacter.HandleLine*
   modifiers.csharp:
@@ -619,10 +564,12 @@ items:
   source:
     id: HandleLineCoroutine
     path: ''
-    startLine: 1297
+    startLine: 1808
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nLine handling coroutine\n"
+  example: []
   syntax:
     content: public IEnumerator HandleLineCoroutine(string otherName, string otherPersona, string line)
     parameters:
@@ -654,10 +601,12 @@ items:
   source:
     id: HandlePlayerLineCoroutine
     path: ''
-    startLine: 1322
+    startLine: 1835
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nPlayer line handling coroutine\n"
+  example: []
   syntax:
     content: public IEnumerator HandlePlayerLineCoroutine(string otherName, string otherPersona, string line)
     parameters:
@@ -689,21 +638,27 @@ items:
   source:
     id: GenerateReply
     path: ''
-    startLine: 1352
+    startLine: 1871
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nRun Chatbot API and generate and play speech\n"
+  example: []
   syntax:
     content: public IEnumerator GenerateReply(string otherName, string otherPersona, string line)
     parameters:
     - id: otherName
       type: System.String
+      description: Other conversant name
     - id: otherPersona
       type: System.String
+      description: Other conversant persona
     - id: line
       type: System.String
+      description: Utterance to generate reply to.
     return:
       type: System.Collections.IEnumerator
+      description: ''
     content.vb: Public Function GenerateReply(otherName As String, otherPersona As String, line As String) As IEnumerator
   overload: NPCEngine.Components.NonPlayerCharacter.GenerateReply*
   modifiers.csharp:
@@ -724,14 +679,17 @@ items:
   source:
     id: SayNPCLines
     path: ''
-    startLine: 1372
+    startLine: 1896
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nScan dialogue tree and say all scripted NPC lines\n"
+  example: []
   syntax:
     content: public IEnumerator SayNPCLines()
     return:
       type: System.Collections.IEnumerator
+      description: ''
     content.vb: Public Function SayNPCLines As IEnumerator
   overload: NPCEngine.Components.NonPlayerCharacter.SayNPCLines*
   modifiers.csharp:
@@ -752,17 +710,21 @@ items:
   source:
     id: GenerateAndPlaySpeech
     path: ''
-    startLine: 1396
+    startLine: 1925
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nCoroutine to generate speech from text.\n"
+  example: []
   syntax:
     content: public IEnumerator GenerateAndPlaySpeech(string line)
     parameters:
     - id: line
       type: System.String
+      description: ''
     return:
       type: System.Collections.IEnumerator
+      description: ''
     content.vb: Public Function GenerateAndPlaySpeech(line As String) As IEnumerator
   overload: NPCEngine.Components.NonPlayerCharacter.GenerateAndPlaySpeech*
   modifiers.csharp:
@@ -795,32 +757,12 @@ references:
   name: Single
   nameWithType: Single
   fullName: System.Single
-- uid: System.Int32
-  commentId: T:System.Int32
-  parent: System
-  isExternal: true
-  name: Int32
-  nameWithType: Int32
-  fullName: System.Int32
-- uid: NPCEngine.Components.NonPlayerCharacter.Initialized*
-  commentId: Overload:NPCEngine.Components.NonPlayerCharacter.Initialized
-  name: Initialized
-  nameWithType: NonPlayerCharacter.Initialized
-  fullName: NPCEngine.Components.NonPlayerCharacter.Initialized
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  name: Boolean
-  nameWithType: Boolean
-  fullName: System.Boolean
-- uid: System.String
-  commentId: T:System.String
-  parent: System
-  isExternal: true
-  name: String
-  nameWithType: String
-  fullName: System.String
+- uid: NPCEngine.Components.Character
+  commentId: T:NPCEngine.Components.Character
+  parent: NPCEngine.Components
+  name: Character
+  nameWithType: Character
+  fullName: NPCEngine.Components.Character
 - uid: System.Collections.Generic.List{NPCEngine.Components.ChatLine}
   commentId: T:System.Collections.Generic.List{NPCEngine.Components.ChatLine}
   parent: System.Collections.Generic
@@ -1125,18 +1067,36 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Global.AudioSourceQueue
-  commentId: '!:Global.AudioSourceQueue'
-  isExternal: true
+- uid: NPCEngine.Utility.AudioSourceQueue
+  commentId: T:NPCEngine.Utility.AudioSourceQueue
+  parent: NPCEngine.Utility
   name: AudioSourceQueue
   nameWithType: AudioSourceQueue
-  fullName: AudioSourceQueue
+  fullName: NPCEngine.Utility.AudioSourceQueue
+- uid: NPCEngine.Utility
+  commentId: N:NPCEngine.Utility
+  name: NPCEngine.Utility
+  nameWithType: NPCEngine.Utility
+  fullName: NPCEngine.Utility
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
 - uid: NPCEngine.Components.AbstractDialogueSystem
   commentId: T:NPCEngine.Components.AbstractDialogueSystem
   parent: NPCEngine.Components
   name: AbstractDialogueSystem
   nameWithType: AbstractDialogueSystem
   fullName: NPCEngine.Components.AbstractDialogueSystem
+- uid: NPCEngine.Components.Location
+  commentId: T:NPCEngine.Components.Location
+  parent: NPCEngine.Components
+  name: Location
+  nameWithType: Location
+  fullName: NPCEngine.Components.Location
 - uid: NPCEngine.Components.NonPlayerCharacter.StartDialogue*
   commentId: Overload:NPCEngine.Components.NonPlayerCharacter.StartDialogue
   name: StartDialogue

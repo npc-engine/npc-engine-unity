@@ -6,14 +6,20 @@ namespace NPCEngine.Components
 {
     /// <summary>
     /// Simple collider trigger that sets location in PlayerCharacter
+    /// 
+    /// Requires Trigger collider.
     /// </summary>
     public class ColliderLocationTrigger : MonoBehaviour
     {
 
-        public string locationName;
-        [TextArea(3, 10)]
-        public string locationDescription;
+        /// <summary>
+        /// Location to set on trigger enter.
+        /// </summary>
+        public Location location;
 
+        /// <summary>
+        /// Trigger
+        /// </summary>
         public Collider locationCollider;
 
         // Check if player is in the collider
@@ -22,8 +28,7 @@ namespace NPCEngine.Components
             if (other.gameObject.tag == "Player")
             {
                 var character = PlayerCharacter.Instance;
-                character.settingDescription = locationDescription;
-                character.settingName = locationName;
+                character.currentLocation = location;
             }
         }
     }

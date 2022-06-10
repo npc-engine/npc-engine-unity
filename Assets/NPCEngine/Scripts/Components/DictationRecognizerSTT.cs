@@ -6,10 +6,19 @@ using UnityEngine.Windows.Speech;
 namespace NPCEngine.Components
 {
 
+    /// <summary>
+    /// Speech to text component using Windows Speech Recognition DictationRecognizer as backend.
+    /// </summary>
     public class DictationRecognizerSTT : AbstractSpeechToText
     {
+        /// <summary>
+        /// Show debug messages.
+        /// </summary>
         public bool debugLogs = false;
 
+        /// <summary>
+        /// Property that indicates that windows speech is not configured.
+        /// </summary>
         public bool PolicyNotAccepted
         {
             get
@@ -18,6 +27,9 @@ namespace NPCEngine.Components
             }
         }
 
+        /// <summary>
+        /// Property that indicates that recognizer is running.
+        /// </summary>
         public bool RecognizerStarted
         {
             get

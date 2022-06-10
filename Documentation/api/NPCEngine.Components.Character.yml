@@ -1,0 +1,120 @@
+### YamlMime:ManagedReference
+items:
+- uid: NPCEngine.Components.Character
+  commentId: T:NPCEngine.Components.Character
+  id: Character
+  parent: NPCEngine.Components
+  children:
+  - NPCEngine.Components.Character.Name
+  - NPCEngine.Components.Character.Persona
+  langs:
+  - csharp
+  - vb
+  name: Character
+  nameWithType: Character
+  fullName: NPCEngine.Components.Character
+  type: Class
+  source:
+    id: Character
+    path: ''
+    startLine: 1327
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  summary: "\nCharacter natural language descriptions.\n"
+  example: []
+  syntax:
+    content: 'public class Character : ScriptableObject'
+    content.vb: >-
+      Public Class Character
+          Inherits ScriptableObject
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: NPCEngine.Components.Character.Name
+  commentId: F:NPCEngine.Components.Character.Name
+  id: Name
+  parent: NPCEngine.Components.Character
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: Character.Name
+  fullName: NPCEngine.Components.Character.Name
+  type: Field
+  source:
+    id: Name
+    path: ''
+    startLine: 1330
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  syntax:
+    content: public string Name
+    return:
+      type: System.String
+    content.vb: Public Name As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.Components.Character.Persona
+  commentId: F:NPCEngine.Components.Character.Persona
+  id: Persona
+  parent: NPCEngine.Components.Character
+  langs:
+  - csharp
+  - vb
+  name: Persona
+  nameWithType: Character.Persona
+  fullName: NPCEngine.Components.Character.Persona
+  type: Field
+  source:
+    id: Persona
+    path: ''
+    startLine: 1336
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  summary: "\nCharacter&apos;s persona natural language description.\n"
+  example: []
+  syntax:
+    content: public string Persona
+    return:
+      type: System.String
+    content.vb: Public Persona As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: NPCEngine.Components
+  commentId: N:NPCEngine.Components
+  name: NPCEngine.Components
+  nameWithType: NPCEngine.Components
+  fullName: NPCEngine.Components
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

@@ -1,0 +1,133 @@
+### YamlMime:ManagedReference
+items:
+- uid: NPCEngine.RPC.RPCResponseError
+  commentId: T:NPCEngine.RPC.RPCResponseError
+  id: RPCResponseError
+  parent: NPCEngine.RPC
+  children:
+  - NPCEngine.RPC.RPCResponseError.code
+  - NPCEngine.RPC.RPCResponseError.message
+  langs:
+  - csharp
+  - vb
+  name: RPCResponseError
+  nameWithType: RPCResponseError
+  fullName: NPCEngine.RPC.RPCResponseError
+  type: Class
+  source:
+    id: RPCResponseError
+    path: ''
+    startLine: 4304
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.RPC
+  summary: "\nRPC response error.\n"
+  example: []
+  syntax:
+    content: >-
+      [Serializable]
+
+      public class RPCResponseError
+    content.vb: >-
+      <Serializable>
+
+      Public Class RPCResponseError
+  inheritance:
+  - System.Object
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: NPCEngine.RPC.RPCResponseError.code
+  commentId: F:NPCEngine.RPC.RPCResponseError.code
+  id: code
+  parent: NPCEngine.RPC.RPCResponseError
+  langs:
+  - csharp
+  - vb
+  name: code
+  nameWithType: RPCResponseError.code
+  fullName: NPCEngine.RPC.RPCResponseError.code
+  type: Field
+  source:
+    id: code
+    path: ''
+    startLine: 4307
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.RPC
+  syntax:
+    content: public int code
+    return:
+      type: System.Int32
+    content.vb: Public code As Integer
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.RPC.RPCResponseError.message
+  commentId: F:NPCEngine.RPC.RPCResponseError.message
+  id: message
+  parent: NPCEngine.RPC.RPCResponseError
+  langs:
+  - csharp
+  - vb
+  name: message
+  nameWithType: RPCResponseError.message
+  fullName: NPCEngine.RPC.RPCResponseError.message
+  type: Field
+  source:
+    id: message
+    path: ''
+    startLine: 4308
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.RPC
+  syntax:
+    content: public string message
+    return:
+      type: System.String
+    content.vb: Public message As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: NPCEngine.RPC
+  commentId: N:NPCEngine.RPC
+  name: NPCEngine.RPC
+  nameWithType: NPCEngine.RPC
+  fullName: NPCEngine.RPC
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

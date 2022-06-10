@@ -68,6 +68,9 @@ namespace NPCEngine.Components
             dialogueTopics.text = string.Join("\n", topics);
         }
 
+        /// <summary>
+        /// Enable Dialogue UI.
+        /// </summary>
         public void Enable()
         {
             uiObject.SetActive(true);
@@ -75,6 +78,9 @@ namespace NPCEngine.Components
             dialogueTopics.text = "";
         }
 
+        /// <summary>
+        /// Disable Dialogue UI.
+        /// </summary>
         public void Disable()
         {
             dialogueHistory.text = "";

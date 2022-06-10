@@ -25,7 +25,7 @@ items:
   source:
     id: AbstractDialogueSystem
     path: ''
-    startLine: 785
+    startLine: 1200
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -60,7 +60,7 @@ items:
   source:
     id: StartDialogue
     path: ''
-    startLine: 791
+    startLine: 1206
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -90,7 +90,7 @@ items:
   source:
     id: EndDialog
     path: ''
-    startLine: 796
+    startLine: 1211
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -120,7 +120,7 @@ items:
   source:
     id: CurrentNodeIsPlayer
     path: ''
-    startLine: 801
+    startLine: 1216
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -152,7 +152,7 @@ items:
   source:
     id: GetCurrentNodeOptions
     path: ''
-    startLine: 806
+    startLine: 1221
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -184,7 +184,7 @@ items:
   source:
     id: GetCurrentNodeTopics
     path: ''
-    startLine: 811
+    startLine: 1226
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -216,7 +216,7 @@ items:
   source:
     id: SelectOption
     path: ''
-    startLine: 816
+    startLine: 1231
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -249,7 +249,7 @@ items:
   source:
     id: Next
     path: ''
-    startLine: 821
+    startLine: 1236
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -279,7 +279,7 @@ items:
   source:
     id: CurrentNodeThreshold
     path: ''
-    startLine: 827
+    startLine: 1242
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -311,7 +311,7 @@ items:
   source:
     id: CurrentNodeNPCLine
     path: ''
-    startLine: 833
+    startLine: 1248
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -343,7 +343,7 @@ items:
   source:
     id: CurrentNodeNPCAudio
     path: ''
-    startLine: 839
+    startLine: 1254
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components

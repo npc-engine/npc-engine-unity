@@ -1,0 +1,876 @@
+### YamlMime:ManagedReference
+items:
+- uid: NPCEngine.API.Control
+  commentId: T:NPCEngine.API.Control
+  id: Control
+  parent: NPCEngine.API
+  children:
+  - NPCEngine.API.Control.GetServiceMetadata(System.String,System.Action{NPCEngine.API.ServiceMetadata})
+  - NPCEngine.API.Control.GetServiceMetadataFuture(System.String)
+  - NPCEngine.API.Control.GetServicesMetadata(System.Action{System.Collections.Generic.List{NPCEngine.API.ServiceMetadata}})
+  - NPCEngine.API.Control.GetServicesMetadataFuture
+  - NPCEngine.API.Control.GetServiceStatus(System.String,System.Action{NPCEngine.API.ServiceStatus})
+  - NPCEngine.API.Control.GetServiceStatusFuture(System.String)
+  - NPCEngine.API.Control.RestartService(System.String)
+  - NPCEngine.API.Control.StartService(System.String)
+  - NPCEngine.API.Control.StartServiceNoConfirm(System.String)
+  - NPCEngine.API.Control.StopService(System.String)
+  - NPCEngine.API.Control.StopServiceNoConfirm(System.String)
+  langs:
+  - csharp
+  - vb
+  name: Control
+  nameWithType: Control
+  fullName: NPCEngine.API.Control
+  type: Class
+  source:
+    id: Control
+    path: ''
+    startLine: 544
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.API
+  summary: "\n<code>Control</code> provides RPC interface to control service.\n"
+  example: []
+  syntax:
+    content: 'public class Control : RPCBase'
+    content.vb: >-
+      Public Class Control
+          Inherits RPCBase
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: NPCEngine.API.Control.StartService(System.String)
+  commentId: M:NPCEngine.API.Control.StartService(System.String)
+  id: StartService(System.String)
+  parent: NPCEngine.API.Control
+  langs:
+  - csharp
+  - vb
+  name: StartService(String)
+  nameWithType: Control.StartService(String)
+  fullName: NPCEngine.API.Control.StartService(System.String)
+  type: Method
+  source:
+    id: StartService
+    path: ''
+    startLine: 557
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.API
+  syntax:
+    content: public IEnumerator StartService(string service_id)
+    parameters:
+    - id: service_id
+      type: System.String
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Public Function StartService(service_id As String) As IEnumerator
+  overload: NPCEngine.API.Control.StartService*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.API.Control.StopService(System.String)
+  commentId: M:NPCEngine.API.Control.StopService(System.String)
+  id: StopService(System.String)
+  parent: NPCEngine.API.Control
+  langs:
+  - csharp
+  - vb
+  name: StopService(String)
+  nameWithType: Control.StopService(String)
+  fullName: NPCEngine.API.Control.StopService(System.String)
+  type: Method
+  source:
+    id: StopService
+    path: ''
+    startLine: 584
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.API
+  syntax:
+    content: public IEnumerator StopService(string service_id)
+    parameters:
+    - id: service_id
+      type: System.String
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Public Function StopService(service_id As String) As IEnumerator
+  overload: NPCEngine.API.Control.StopService*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.API.Control.GetServiceStatus(System.String,System.Action{NPCEngine.API.ServiceStatus})
+  commentId: M:NPCEngine.API.Control.GetServiceStatus(System.String,System.Action{NPCEngine.API.ServiceStatus})
+  id: GetServiceStatus(System.String,System.Action{NPCEngine.API.ServiceStatus})
+  parent: NPCEngine.API.Control
+  langs:
+  - csharp
+  - vb
+  name: GetServiceStatus(String, Action<ServiceStatus>)
+  nameWithType: Control.GetServiceStatus(String, Action<ServiceStatus>)
+  fullName: NPCEngine.API.Control.GetServiceStatus(System.String, System.Action<NPCEngine.API.ServiceStatus>)
+  type: Method
+  source:
+    id: GetServiceStatus
+    path: ''
+    startLine: 613
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.API
+  summary: "\nGet service status.\n"
+  example: []
+  syntax:
+    content: public IEnumerator GetServiceStatus(string service_id, Action<ServiceStatus> outputCallback)
+    parameters:
+    - id: service_id
+      type: System.String
+      description: ''
+    - id: outputCallback
+      type: System.Action{NPCEngine.API.ServiceStatus}
+      description: ''
+    return:
+      type: System.Collections.IEnumerator
+      description: ''
+    content.vb: Public Function GetServiceStatus(service_id As String, outputCallback As Action(Of ServiceStatus)) As IEnumerator
+  overload: NPCEngine.API.Control.GetServiceStatus*
+  nameWithType.vb: Control.GetServiceStatus(String, Action(Of ServiceStatus))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: NPCEngine.API.Control.GetServiceStatus(System.String, System.Action(Of NPCEngine.API.ServiceStatus))
+  name.vb: GetServiceStatus(String, Action(Of ServiceStatus))
+- uid: NPCEngine.API.Control.RestartService(System.String)
+  commentId: M:NPCEngine.API.Control.RestartService(System.String)
+  id: RestartService(System.String)
+  parent: NPCEngine.API.Control
+  langs:
+  - csharp
+  - vb
+  name: RestartService(String)
+  nameWithType: Control.RestartService(String)
+  fullName: NPCEngine.API.Control.RestartService(System.String)
+  type: Method
+  source:
+    id: RestartService
+    path: ''
+    startLine: 652
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.API
+  summary: "\nRestart service.\n"
+  example: []
+  syntax:
+    content: public IEnumerator RestartService(string service_id)
+    parameters:
+    - id: service_id
+      type: System.String
+      description: Resolvable service name (i.e. id, type or API name)
+    return:
+      type: System.Collections.IEnumerator
+      description: ''
+    content.vb: Public Function RestartService(service_id As String) As IEnumerator
+  overload: NPCEngine.API.Control.RestartService*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.API.Control.GetServiceMetadata(System.String,System.Action{NPCEngine.API.ServiceMetadata})
+  commentId: M:NPCEngine.API.Control.GetServiceMetadata(System.String,System.Action{NPCEngine.API.ServiceMetadata})
+  id: GetServiceMetadata(System.String,System.Action{NPCEngine.API.ServiceMetadata})
+  parent: NPCEngine.API.Control
+  langs:
+  - csharp
+  - vb
+  name: GetServiceMetadata(String, Action<ServiceMetadata>)
+  nameWithType: Control.GetServiceMetadata(String, Action<ServiceMetadata>)
+  fullName: NPCEngine.API.Control.GetServiceMetadata(System.String, System.Action<NPCEngine.API.ServiceMetadata>)
+  type: Method
+  source:
+    id: GetServiceMetadata
+    path: ''
+    startLine: 669
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.API
+  summary: "\nGet metadata for one service.\n"
+  example: []
+  syntax:
+    content: public IEnumerator GetServiceMetadata(string service_id, Action<ServiceMetadata> outputCallback)
+    parameters:
+    - id: service_id
+      type: System.String
+      description: Resolvable service name (i.e. id, type or API name)
+    - id: outputCallback
+      type: System.Action{NPCEngine.API.ServiceMetadata}
+      description: Callback action to consume results.
+    return:
+      type: System.Collections.IEnumerator
+      description: <code>ServiceMetadata</code> for resolved service.
+    content.vb: Public Function GetServiceMetadata(service_id As String, outputCallback As Action(Of ServiceMetadata)) As IEnumerator
+  overload: NPCEngine.API.Control.GetServiceMetadata*
+  nameWithType.vb: Control.GetServiceMetadata(String, Action(Of ServiceMetadata))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: NPCEngine.API.Control.GetServiceMetadata(System.String, System.Action(Of NPCEngine.API.ServiceMetadata))
+  name.vb: GetServiceMetadata(String, Action(Of ServiceMetadata))
+- uid: NPCEngine.API.Control.GetServicesMetadata(System.Action{System.Collections.Generic.List{NPCEngine.API.ServiceMetadata}})
+  commentId: M:NPCEngine.API.Control.GetServicesMetadata(System.Action{System.Collections.Generic.List{NPCEngine.API.ServiceMetadata}})
+  id: GetServicesMetadata(System.Action{System.Collections.Generic.List{NPCEngine.API.ServiceMetadata}})
+  parent: NPCEngine.API.Control
+  langs:
+  - csharp
+  - vb
+  name: GetServicesMetadata(Action<List<ServiceMetadata>>)
+  nameWithType: Control.GetServicesMetadata(Action<List<ServiceMetadata>>)
+  fullName: NPCEngine.API.Control.GetServicesMetadata(System.Action<System.Collections.Generic.List<NPCEngine.API.ServiceMetadata>>)
+  type: Method
+  source:
+    id: GetServicesMetadata
+    path: ''
+    startLine: 685
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.API
+  summary: "\nGet metadata for all the services.\n"
+  example: []
+  syntax:
+    content: public IEnumerator GetServicesMetadata(Action<List<ServiceMetadata>> outputCallback)
+    parameters:
+    - id: outputCallback
+      type: System.Action{System.Collections.Generic.List{NPCEngine.API.ServiceMetadata}}
+      description: Callback action to consume results.
+    return:
+      type: System.Collections.IEnumerator
+      description: A list of <code>ServiceMetadata</code> for each service.
+    content.vb: Public Function GetServicesMetadata(outputCallback As Action(Of List(Of ServiceMetadata))) As IEnumerator
+  overload: NPCEngine.API.Control.GetServicesMetadata*
+  nameWithType.vb: Control.GetServicesMetadata(Action(Of List(Of ServiceMetadata)))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: NPCEngine.API.Control.GetServicesMetadata(System.Action(Of System.Collections.Generic.List(Of NPCEngine.API.ServiceMetadata)))
+  name.vb: GetServicesMetadata(Action(Of List(Of ServiceMetadata)))
+- uid: NPCEngine.API.Control.GetServicesMetadataFuture
+  commentId: M:NPCEngine.API.Control.GetServicesMetadataFuture
+  id: GetServicesMetadataFuture
+  parent: NPCEngine.API.Control
+  langs:
+  - csharp
+  - vb
+  name: GetServicesMetadataFuture()
+  nameWithType: Control.GetServicesMetadataFuture()
+  fullName: NPCEngine.API.Control.GetServicesMetadataFuture()
+  type: Method
+  source:
+    id: GetServicesMetadataFuture
+    path: ''
+    startLine: 696
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.API
+  syntax:
+    content: public ResultFuture<List<ServiceMetadata>> GetServicesMetadataFuture()
+    return:
+      type: NPCEngine.ResultFuture{System.Collections.Generic.List{NPCEngine.API.ServiceMetadata}}
+    content.vb: Public Function GetServicesMetadataFuture As ResultFuture(Of List(Of ServiceMetadata))
+  overload: NPCEngine.API.Control.GetServicesMetadataFuture*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.API.Control.GetServiceMetadataFuture(System.String)
+  commentId: M:NPCEngine.API.Control.GetServiceMetadataFuture(System.String)
+  id: GetServiceMetadataFuture(System.String)
+  parent: NPCEngine.API.Control
+  langs:
+  - csharp
+  - vb
+  name: GetServiceMetadataFuture(String)
+  nameWithType: Control.GetServiceMetadataFuture(String)
+  fullName: NPCEngine.API.Control.GetServiceMetadataFuture(System.String)
+  type: Method
+  source:
+    id: GetServiceMetadataFuture
+    path: ''
+    startLine: 701
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.API
+  syntax:
+    content: public ResultFuture<ServiceMetadata> GetServiceMetadataFuture(string service_id)
+    parameters:
+    - id: service_id
+      type: System.String
+    return:
+      type: NPCEngine.ResultFuture{NPCEngine.API.ServiceMetadata}
+    content.vb: Public Function GetServiceMetadataFuture(service_id As String) As ResultFuture(Of ServiceMetadata)
+  overload: NPCEngine.API.Control.GetServiceMetadataFuture*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.API.Control.GetServiceStatusFuture(System.String)
+  commentId: M:NPCEngine.API.Control.GetServiceStatusFuture(System.String)
+  id: GetServiceStatusFuture(System.String)
+  parent: NPCEngine.API.Control
+  langs:
+  - csharp
+  - vb
+  name: GetServiceStatusFuture(String)
+  nameWithType: Control.GetServiceStatusFuture(String)
+  fullName: NPCEngine.API.Control.GetServiceStatusFuture(System.String)
+  type: Method
+  source:
+    id: GetServiceStatusFuture
+    path: ''
+    startLine: 706
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.API
+  syntax:
+    content: public ResultFuture<ServiceStatus> GetServiceStatusFuture(string service_id)
+    parameters:
+    - id: service_id
+      type: System.String
+    return:
+      type: NPCEngine.ResultFuture{NPCEngine.API.ServiceStatus}
+    content.vb: Public Function GetServiceStatusFuture(service_id As String) As ResultFuture(Of ServiceStatus)
+  overload: NPCEngine.API.Control.GetServiceStatusFuture*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.API.Control.StopServiceNoConfirm(System.String)
+  commentId: M:NPCEngine.API.Control.StopServiceNoConfirm(System.String)
+  id: StopServiceNoConfirm(System.String)
+  parent: NPCEngine.API.Control
+  langs:
+  - csharp
+  - vb
+  name: StopServiceNoConfirm(String)
+  nameWithType: Control.StopServiceNoConfirm(String)
+  fullName: NPCEngine.API.Control.StopServiceNoConfirm(System.String)
+  type: Method
+  source:
+    id: StopServiceNoConfirm
+    path: ''
+    startLine: 711
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.API
+  syntax:
+    content: public void StopServiceNoConfirm(string service_id)
+    parameters:
+    - id: service_id
+      type: System.String
+    content.vb: Public Sub StopServiceNoConfirm(service_id As String)
+  overload: NPCEngine.API.Control.StopServiceNoConfirm*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.API.Control.StartServiceNoConfirm(System.String)
+  commentId: M:NPCEngine.API.Control.StartServiceNoConfirm(System.String)
+  id: StartServiceNoConfirm(System.String)
+  parent: NPCEngine.API.Control
+  langs:
+  - csharp
+  - vb
+  name: StartServiceNoConfirm(String)
+  nameWithType: Control.StartServiceNoConfirm(String)
+  fullName: NPCEngine.API.Control.StartServiceNoConfirm(System.String)
+  type: Method
+  source:
+    id: StartServiceNoConfirm
+    path: ''
+    startLine: 716
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.API
+  syntax:
+    content: public void StartServiceNoConfirm(string service_id)
+    parameters:
+    - id: service_id
+      type: System.String
+    content.vb: Public Sub StartServiceNoConfirm(service_id As String)
+  overload: NPCEngine.API.Control.StartServiceNoConfirm*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: NPCEngine.API
+  commentId: N:NPCEngine.API
+  name: NPCEngine.API
+  nameWithType: NPCEngine.API
+  fullName: NPCEngine.API
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: NPCEngine.API.Control.StartService*
+  commentId: Overload:NPCEngine.API.Control.StartService
+  name: StartService
+  nameWithType: Control.StartService
+  fullName: NPCEngine.API.Control.StartService
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Collections.IEnumerator
+  commentId: T:System.Collections.IEnumerator
+  parent: System.Collections
+  isExternal: true
+  name: IEnumerator
+  nameWithType: IEnumerator
+  fullName: System.Collections.IEnumerator
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections
+- uid: NPCEngine.API.Control.StopService*
+  commentId: Overload:NPCEngine.API.Control.StopService
+  name: StopService
+  nameWithType: Control.StopService
+  fullName: NPCEngine.API.Control.StopService
+- uid: NPCEngine.API.Control.GetServiceStatus*
+  commentId: Overload:NPCEngine.API.Control.GetServiceStatus
+  name: GetServiceStatus
+  nameWithType: Control.GetServiceStatus
+  fullName: NPCEngine.API.Control.GetServiceStatus
+- uid: System.Action{NPCEngine.API.ServiceStatus}
+  commentId: T:System.Action{NPCEngine.API.ServiceStatus}
+  parent: System
+  definition: System.Action`1
+  name: Action<ServiceStatus>
+  nameWithType: Action<ServiceStatus>
+  fullName: System.Action<NPCEngine.API.ServiceStatus>
+  nameWithType.vb: Action(Of ServiceStatus)
+  fullName.vb: System.Action(Of NPCEngine.API.ServiceStatus)
+  name.vb: Action(Of ServiceStatus)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: NPCEngine.API.ServiceStatus
+    name: ServiceStatus
+    nameWithType: ServiceStatus
+    fullName: NPCEngine.API.ServiceStatus
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: NPCEngine.API.ServiceStatus
+    name: ServiceStatus
+    nameWithType: ServiceStatus
+    fullName: NPCEngine.API.ServiceStatus
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Action`1
+  commentId: T:System.Action`1
+  isExternal: true
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NPCEngine.API.Control.RestartService*
+  commentId: Overload:NPCEngine.API.Control.RestartService
+  name: RestartService
+  nameWithType: Control.RestartService
+  fullName: NPCEngine.API.Control.RestartService
+- uid: NPCEngine.API.Control.GetServiceMetadata*
+  commentId: Overload:NPCEngine.API.Control.GetServiceMetadata
+  name: GetServiceMetadata
+  nameWithType: Control.GetServiceMetadata
+  fullName: NPCEngine.API.Control.GetServiceMetadata
+- uid: System.Action{NPCEngine.API.ServiceMetadata}
+  commentId: T:System.Action{NPCEngine.API.ServiceMetadata}
+  parent: System
+  definition: System.Action`1
+  name: Action<ServiceMetadata>
+  nameWithType: Action<ServiceMetadata>
+  fullName: System.Action<NPCEngine.API.ServiceMetadata>
+  nameWithType.vb: Action(Of ServiceMetadata)
+  fullName.vb: System.Action(Of NPCEngine.API.ServiceMetadata)
+  name.vb: Action(Of ServiceMetadata)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: NPCEngine.API.ServiceMetadata
+    name: ServiceMetadata
+    nameWithType: ServiceMetadata
+    fullName: NPCEngine.API.ServiceMetadata
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: NPCEngine.API.ServiceMetadata
+    name: ServiceMetadata
+    nameWithType: ServiceMetadata
+    fullName: NPCEngine.API.ServiceMetadata
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NPCEngine.API.Control.GetServicesMetadata*
+  commentId: Overload:NPCEngine.API.Control.GetServicesMetadata
+  name: GetServicesMetadata
+  nameWithType: Control.GetServicesMetadata
+  fullName: NPCEngine.API.Control.GetServicesMetadata
+- uid: System.Action{System.Collections.Generic.List{NPCEngine.API.ServiceMetadata}}
+  commentId: T:System.Action{System.Collections.Generic.List{NPCEngine.API.ServiceMetadata}}
+  parent: System
+  definition: System.Action`1
+  name: Action<List<ServiceMetadata>>
+  nameWithType: Action<List<ServiceMetadata>>
+  fullName: System.Action<System.Collections.Generic.List<NPCEngine.API.ServiceMetadata>>
+  nameWithType.vb: Action(Of List(Of ServiceMetadata))
+  fullName.vb: System.Action(Of System.Collections.Generic.List(Of NPCEngine.API.ServiceMetadata))
+  name.vb: Action(Of List(Of ServiceMetadata))
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: NPCEngine.API.ServiceMetadata
+    name: ServiceMetadata
+    nameWithType: ServiceMetadata
+    fullName: NPCEngine.API.ServiceMetadata
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: NPCEngine.API.ServiceMetadata
+    name: ServiceMetadata
+    nameWithType: ServiceMetadata
+    fullName: NPCEngine.API.ServiceMetadata
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NPCEngine.API.Control.GetServicesMetadataFuture*
+  commentId: Overload:NPCEngine.API.Control.GetServicesMetadataFuture
+  name: GetServicesMetadataFuture
+  nameWithType: Control.GetServicesMetadataFuture
+  fullName: NPCEngine.API.Control.GetServicesMetadataFuture
+- uid: NPCEngine.ResultFuture{System.Collections.Generic.List{NPCEngine.API.ServiceMetadata}}
+  commentId: T:NPCEngine.ResultFuture{System.Collections.Generic.List{NPCEngine.API.ServiceMetadata}}
+  parent: NPCEngine
+  definition: NPCEngine.ResultFuture`1
+  name: ResultFuture<List<ServiceMetadata>>
+  nameWithType: ResultFuture<List<ServiceMetadata>>
+  fullName: NPCEngine.ResultFuture<System.Collections.Generic.List<NPCEngine.API.ServiceMetadata>>
+  nameWithType.vb: ResultFuture(Of List(Of ServiceMetadata))
+  fullName.vb: NPCEngine.ResultFuture(Of System.Collections.Generic.List(Of NPCEngine.API.ServiceMetadata))
+  name.vb: ResultFuture(Of List(Of ServiceMetadata))
+  spec.csharp:
+  - uid: NPCEngine.ResultFuture`1
+    name: ResultFuture
+    nameWithType: ResultFuture
+    fullName: NPCEngine.ResultFuture
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: NPCEngine.API.ServiceMetadata
+    name: ServiceMetadata
+    nameWithType: ServiceMetadata
+    fullName: NPCEngine.API.ServiceMetadata
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: NPCEngine.ResultFuture`1
+    name: ResultFuture
+    nameWithType: ResultFuture
+    fullName: NPCEngine.ResultFuture
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: NPCEngine.API.ServiceMetadata
+    name: ServiceMetadata
+    nameWithType: ServiceMetadata
+    fullName: NPCEngine.API.ServiceMetadata
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NPCEngine.ResultFuture`1
+  commentId: T:NPCEngine.ResultFuture`1
+  name: ResultFuture<ReturnType>
+  nameWithType: ResultFuture<ReturnType>
+  fullName: NPCEngine.ResultFuture<ReturnType>
+  nameWithType.vb: ResultFuture(Of ReturnType)
+  fullName.vb: NPCEngine.ResultFuture(Of ReturnType)
+  name.vb: ResultFuture(Of ReturnType)
+  spec.csharp:
+  - uid: NPCEngine.ResultFuture`1
+    name: ResultFuture
+    nameWithType: ResultFuture
+    fullName: NPCEngine.ResultFuture
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ReturnType
+    nameWithType: ReturnType
+    fullName: ReturnType
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: NPCEngine.ResultFuture`1
+    name: ResultFuture
+    nameWithType: ResultFuture
+    fullName: NPCEngine.ResultFuture
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ReturnType
+    nameWithType: ReturnType
+    fullName: ReturnType
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NPCEngine
+  commentId: N:NPCEngine
+  name: NPCEngine
+  nameWithType: NPCEngine
+  fullName: NPCEngine
+- uid: NPCEngine.API.Control.GetServiceMetadataFuture*
+  commentId: Overload:NPCEngine.API.Control.GetServiceMetadataFuture
+  name: GetServiceMetadataFuture
+  nameWithType: Control.GetServiceMetadataFuture
+  fullName: NPCEngine.API.Control.GetServiceMetadataFuture
+- uid: NPCEngine.ResultFuture{NPCEngine.API.ServiceMetadata}
+  commentId: T:NPCEngine.ResultFuture{NPCEngine.API.ServiceMetadata}
+  parent: NPCEngine
+  definition: NPCEngine.ResultFuture`1
+  name: ResultFuture<ServiceMetadata>
+  nameWithType: ResultFuture<ServiceMetadata>
+  fullName: NPCEngine.ResultFuture<NPCEngine.API.ServiceMetadata>
+  nameWithType.vb: ResultFuture(Of ServiceMetadata)
+  fullName.vb: NPCEngine.ResultFuture(Of NPCEngine.API.ServiceMetadata)
+  name.vb: ResultFuture(Of ServiceMetadata)
+  spec.csharp:
+  - uid: NPCEngine.ResultFuture`1
+    name: ResultFuture
+    nameWithType: ResultFuture
+    fullName: NPCEngine.ResultFuture
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: NPCEngine.API.ServiceMetadata
+    name: ServiceMetadata
+    nameWithType: ServiceMetadata
+    fullName: NPCEngine.API.ServiceMetadata
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: NPCEngine.ResultFuture`1
+    name: ResultFuture
+    nameWithType: ResultFuture
+    fullName: NPCEngine.ResultFuture
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: NPCEngine.API.ServiceMetadata
+    name: ServiceMetadata
+    nameWithType: ServiceMetadata
+    fullName: NPCEngine.API.ServiceMetadata
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NPCEngine.API.Control.GetServiceStatusFuture*
+  commentId: Overload:NPCEngine.API.Control.GetServiceStatusFuture
+  name: GetServiceStatusFuture
+  nameWithType: Control.GetServiceStatusFuture
+  fullName: NPCEngine.API.Control.GetServiceStatusFuture
+- uid: NPCEngine.ResultFuture{NPCEngine.API.ServiceStatus}
+  commentId: T:NPCEngine.ResultFuture{NPCEngine.API.ServiceStatus}
+  parent: NPCEngine
+  definition: NPCEngine.ResultFuture`1
+  name: ResultFuture<ServiceStatus>
+  nameWithType: ResultFuture<ServiceStatus>
+  fullName: NPCEngine.ResultFuture<NPCEngine.API.ServiceStatus>
+  nameWithType.vb: ResultFuture(Of ServiceStatus)
+  fullName.vb: NPCEngine.ResultFuture(Of NPCEngine.API.ServiceStatus)
+  name.vb: ResultFuture(Of ServiceStatus)
+  spec.csharp:
+  - uid: NPCEngine.ResultFuture`1
+    name: ResultFuture
+    nameWithType: ResultFuture
+    fullName: NPCEngine.ResultFuture
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: NPCEngine.API.ServiceStatus
+    name: ServiceStatus
+    nameWithType: ServiceStatus
+    fullName: NPCEngine.API.ServiceStatus
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: NPCEngine.ResultFuture`1
+    name: ResultFuture
+    nameWithType: ResultFuture
+    fullName: NPCEngine.ResultFuture
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: NPCEngine.API.ServiceStatus
+    name: ServiceStatus
+    nameWithType: ServiceStatus
+    fullName: NPCEngine.API.ServiceStatus
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NPCEngine.API.Control.StopServiceNoConfirm*
+  commentId: Overload:NPCEngine.API.Control.StopServiceNoConfirm
+  name: StopServiceNoConfirm
+  nameWithType: Control.StopServiceNoConfirm
+  fullName: NPCEngine.API.Control.StopServiceNoConfirm
+- uid: NPCEngine.API.Control.StartServiceNoConfirm*
+  commentId: Overload:NPCEngine.API.Control.StartServiceNoConfirm
+  name: StartServiceNoConfirm
+  nameWithType: Control.StartServiceNoConfirm
+  fullName: NPCEngine.API.Control.StartServiceNoConfirm

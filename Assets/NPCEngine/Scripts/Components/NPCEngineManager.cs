@@ -17,6 +17,9 @@ using UnityEditor;
 
 namespace NPCEngine.Components
 {
+    /// <summary>
+    /// Manager class that handles services and server lifetime and status.
+    /// </summary>
     [ExecuteAlways]
     public class NPCEngineManager : Singleton<NPCEngineManager>
     {
@@ -113,6 +116,9 @@ namespace NPCEngine.Components
             }
         }
 
+        /// <summary>
+        /// Starts the inference engine server and managing coroutines.
+        /// </summary>
         public void StartInferenceEngine()
         {
             if (!InferenceEngineRunning && !NPCEngineConfig.Instance.connectToExistingServer)
@@ -174,6 +180,10 @@ namespace NPCEngine.Components
             CoroutineUtility.StartCoroutine(UpdateServices(), this, "UpdateServices");
         }
 
+        /// <summary>
+        /// Download model by ID
+        /// </summary>
+        /// <param name="id"></param>
         public void DownloadModel(string id)
         {
             Process myProcess = new Process();
@@ -190,6 +200,9 @@ namespace NPCEngine.Components
             myProcess.Start();
         }
 
+        /// <summary>
+        /// Stop the inference engine server, services and dispose resources.
+        /// </summary>
         public void StopInferenceEngine()
         {
             CoroutineUtility.StopCoroutine("UpdateServiceStatuses", this);
@@ -277,6 +290,11 @@ namespace NPCEngine.Components
             }
         }
 
+        /// <summary>
+        /// Get or construct API for the given type.
+        /// </summary>
+        /// <typeparam name="T">API type</typeparam>
+        /// <returns></returns>
         public T GetAPI<T>() where T : RPCBase
         {
             var api = GetComponent<T>();
@@ -287,6 +305,12 @@ namespace NPCEngine.Components
             return api;
         }
 
+        /// <summary>
+        /// Get or construct API for the given type and service ID.
+        /// </summary>
+        /// <param name="id">Service ID or otherwise resolvable name</param>
+        /// <typeparam name="T">API Type</typeparam>
+        /// <returns></returns>
         public T GetAPI<T>(string id) where T : RPCBase
         {
             var apis = GetComponents<T>();
@@ -302,7 +326,9 @@ namespace NPCEngine.Components
             return api2;   
         }
 
-
+        /// <summary>
+        /// Coroutine that updates service statuses.
+        /// </summary>
         public IEnumerator UpdateServiceStatuses()
         {
             while (true)
@@ -335,6 +361,9 @@ namespace NPCEngine.Components
             }
         }
 
+        /// <summary>
+        /// Coroutine that updates service list.
+        /// </summary>
         public IEnumerator UpdateServices()
         {
             while (true)

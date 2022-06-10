@@ -39,7 +39,7 @@ namespace NPCEngine.API
                 text = text,
                 n_chunks = n_chunks
             };
-            this.Run<TTSMessage, string>("start_tts", msg);
+            this.Run<TTSMessage, string>("tts_start", msg);
         }
 
         public ResultFuture<List<string>> GetSpeakerIdsFuture()

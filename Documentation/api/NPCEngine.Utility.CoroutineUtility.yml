@@ -1,0 +1,552 @@
+### YamlMime:ManagedReference
+items:
+- uid: NPCEngine.Utility.CoroutineUtility
+  commentId: T:NPCEngine.Utility.CoroutineUtility
+  id: CoroutineUtility
+  parent: NPCEngine.Utility
+  children:
+  - NPCEngine.Utility.CoroutineUtility.GetGameObjectPath(MonoBehaviour)
+  - NPCEngine.Utility.CoroutineUtility.IsRunning(MonoBehaviour,System.String)
+  - NPCEngine.Utility.CoroutineUtility.StartCoroutine(System.Collections.IEnumerator,MonoBehaviour,System.String)
+  - NPCEngine.Utility.CoroutineUtility.StopAllEditorCoroutines
+  - NPCEngine.Utility.CoroutineUtility.StopAllEditorCoroutines(MonoBehaviour)
+  - NPCEngine.Utility.CoroutineUtility.StopAllPlayingCoroutines(MonoBehaviour)
+  - NPCEngine.Utility.CoroutineUtility.StopCoroutine(System.String,MonoBehaviour)
+  - NPCEngine.Utility.CoroutineUtility.WaitForSeconds(System.Single)
+  langs:
+  - csharp
+  - vb
+  name: CoroutineUtility
+  nameWithType: CoroutineUtility
+  fullName: NPCEngine.Utility.CoroutineUtility
+  type: Class
+  source:
+    id: CoroutineUtility
+    path: ''
+    startLine: 4520
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Utility
+  summary: "\nUtility that allows to run coroutines in a coherent way both in editor and in player modes.\n"
+  example: []
+  syntax:
+    content: 'public class CoroutineUtility : Singleton<CoroutineUtility>'
+    content.vb: >-
+      Public Class CoroutineUtility
+          Inherits Singleton(Of CoroutineUtility)
+  inheritance:
+  - System.Object
+  - NPCEngine.Utility.Singleton{NPCEngine.Utility.CoroutineUtility}
+  inheritedMembers:
+  - NPCEngine.Utility.Singleton{NPCEngine.Utility.CoroutineUtility}.Instance
+  - NPCEngine.Utility.Singleton{NPCEngine.Utility.CoroutineUtility}.GetInstance
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: NPCEngine.Utility.CoroutineUtility.IsRunning(MonoBehaviour,System.String)
+  commentId: M:NPCEngine.Utility.CoroutineUtility.IsRunning(MonoBehaviour,System.String)
+  id: IsRunning(MonoBehaviour,System.String)
+  parent: NPCEngine.Utility.CoroutineUtility
+  langs:
+  - csharp
+  - vb
+  name: IsRunning(MonoBehaviour, String)
+  nameWithType: CoroutineUtility.IsRunning(MonoBehaviour, String)
+  fullName: NPCEngine.Utility.CoroutineUtility.IsRunning(MonoBehaviour, System.String)
+  type: Method
+  source:
+    id: IsRunning
+    path: ''
+    startLine: 4571
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Utility
+  syntax:
+    content: public static bool IsRunning(MonoBehaviour owner, string name)
+    parameters:
+    - id: owner
+      type: Global.MonoBehaviour
+    - id: name
+      type: System.String
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function IsRunning(owner As MonoBehaviour, name As String) As Boolean
+  overload: NPCEngine.Utility.CoroutineUtility.IsRunning*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: NPCEngine.Utility.CoroutineUtility.StartCoroutine(System.Collections.IEnumerator,MonoBehaviour,System.String)
+  commentId: M:NPCEngine.Utility.CoroutineUtility.StartCoroutine(System.Collections.IEnumerator,MonoBehaviour,System.String)
+  id: StartCoroutine(System.Collections.IEnumerator,MonoBehaviour,System.String)
+  parent: NPCEngine.Utility.CoroutineUtility
+  langs:
+  - csharp
+  - vb
+  name: StartCoroutine(IEnumerator, MonoBehaviour, String)
+  nameWithType: CoroutineUtility.StartCoroutine(IEnumerator, MonoBehaviour, String)
+  fullName: NPCEngine.Utility.CoroutineUtility.StartCoroutine(System.Collections.IEnumerator, MonoBehaviour, System.String)
+  type: Method
+  source:
+    id: StartCoroutine
+    path: ''
+    startLine: 4590
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Utility
+  syntax:
+    content: public static void StartCoroutine(IEnumerator routine, MonoBehaviour owner, string id)
+    parameters:
+    - id: routine
+      type: System.Collections.IEnumerator
+    - id: owner
+      type: Global.MonoBehaviour
+    - id: id
+      type: System.String
+    content.vb: Public Shared Sub StartCoroutine(routine As IEnumerator, owner As MonoBehaviour, id As String)
+  overload: NPCEngine.Utility.CoroutineUtility.StartCoroutine*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: NPCEngine.Utility.CoroutineUtility.StopCoroutine(System.String,MonoBehaviour)
+  commentId: M:NPCEngine.Utility.CoroutineUtility.StopCoroutine(System.String,MonoBehaviour)
+  id: StopCoroutine(System.String,MonoBehaviour)
+  parent: NPCEngine.Utility.CoroutineUtility
+  langs:
+  - csharp
+  - vb
+  name: StopCoroutine(String, MonoBehaviour)
+  nameWithType: CoroutineUtility.StopCoroutine(String, MonoBehaviour)
+  fullName: NPCEngine.Utility.CoroutineUtility.StopCoroutine(System.String, MonoBehaviour)
+  type: Method
+  source:
+    id: StopCoroutine
+    path: ''
+    startLine: 4656
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Utility
+  syntax:
+    content: public static void StopCoroutine(string id, MonoBehaviour owner)
+    parameters:
+    - id: id
+      type: System.String
+    - id: owner
+      type: Global.MonoBehaviour
+    content.vb: Public Shared Sub StopCoroutine(id As String, owner As MonoBehaviour)
+  overload: NPCEngine.Utility.CoroutineUtility.StopCoroutine*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: NPCEngine.Utility.CoroutineUtility.StopAllPlayingCoroutines(MonoBehaviour)
+  commentId: M:NPCEngine.Utility.CoroutineUtility.StopAllPlayingCoroutines(MonoBehaviour)
+  id: StopAllPlayingCoroutines(MonoBehaviour)
+  parent: NPCEngine.Utility.CoroutineUtility
+  langs:
+  - csharp
+  - vb
+  name: StopAllPlayingCoroutines(MonoBehaviour)
+  nameWithType: CoroutineUtility.StopAllPlayingCoroutines(MonoBehaviour)
+  fullName: NPCEngine.Utility.CoroutineUtility.StopAllPlayingCoroutines(MonoBehaviour)
+  type: Method
+  source:
+    id: StopAllPlayingCoroutines
+    path: ''
+    startLine: 4702
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Utility
+  syntax:
+    content: public static void StopAllPlayingCoroutines(MonoBehaviour owner)
+    parameters:
+    - id: owner
+      type: Global.MonoBehaviour
+    content.vb: Public Shared Sub StopAllPlayingCoroutines(owner As MonoBehaviour)
+  overload: NPCEngine.Utility.CoroutineUtility.StopAllPlayingCoroutines*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: NPCEngine.Utility.CoroutineUtility.StopAllEditorCoroutines
+  commentId: M:NPCEngine.Utility.CoroutineUtility.StopAllEditorCoroutines
+  id: StopAllEditorCoroutines
+  parent: NPCEngine.Utility.CoroutineUtility
+  langs:
+  - csharp
+  - vb
+  name: StopAllEditorCoroutines()
+  nameWithType: CoroutineUtility.StopAllEditorCoroutines()
+  fullName: NPCEngine.Utility.CoroutineUtility.StopAllEditorCoroutines()
+  type: Method
+  source:
+    id: StopAllEditorCoroutines
+    path: ''
+    startLine: 4721
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Utility
+  syntax:
+    content: public static void StopAllEditorCoroutines()
+    content.vb: Public Shared Sub StopAllEditorCoroutines
+  overload: NPCEngine.Utility.CoroutineUtility.StopAllEditorCoroutines*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: NPCEngine.Utility.CoroutineUtility.StopAllEditorCoroutines(MonoBehaviour)
+  commentId: M:NPCEngine.Utility.CoroutineUtility.StopAllEditorCoroutines(MonoBehaviour)
+  id: StopAllEditorCoroutines(MonoBehaviour)
+  parent: NPCEngine.Utility.CoroutineUtility
+  langs:
+  - csharp
+  - vb
+  name: StopAllEditorCoroutines(MonoBehaviour)
+  nameWithType: CoroutineUtility.StopAllEditorCoroutines(MonoBehaviour)
+  fullName: NPCEngine.Utility.CoroutineUtility.StopAllEditorCoroutines(MonoBehaviour)
+  type: Method
+  source:
+    id: StopAllEditorCoroutines
+    path: ''
+    startLine: 4736
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Utility
+  syntax:
+    content: public static void StopAllEditorCoroutines(MonoBehaviour owner)
+    parameters:
+    - id: owner
+      type: Global.MonoBehaviour
+    content.vb: Public Shared Sub StopAllEditorCoroutines(owner As MonoBehaviour)
+  overload: NPCEngine.Utility.CoroutineUtility.StopAllEditorCoroutines*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: NPCEngine.Utility.CoroutineUtility.WaitForSeconds(System.Single)
+  commentId: M:NPCEngine.Utility.CoroutineUtility.WaitForSeconds(System.Single)
+  id: WaitForSeconds(System.Single)
+  parent: NPCEngine.Utility.CoroutineUtility
+  langs:
+  - csharp
+  - vb
+  name: WaitForSeconds(Single)
+  nameWithType: CoroutineUtility.WaitForSeconds(Single)
+  fullName: NPCEngine.Utility.CoroutineUtility.WaitForSeconds(System.Single)
+  type: Method
+  source:
+    id: WaitForSeconds
+    path: ''
+    startLine: 4750
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Utility
+  syntax:
+    content: public static IEnumerator WaitForSeconds(float seconds)
+    parameters:
+    - id: seconds
+      type: System.Single
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Public Shared Function WaitForSeconds(seconds As Single) As IEnumerator
+  overload: NPCEngine.Utility.CoroutineUtility.WaitForSeconds*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: NPCEngine.Utility.CoroutineUtility.GetGameObjectPath(MonoBehaviour)
+  commentId: M:NPCEngine.Utility.CoroutineUtility.GetGameObjectPath(MonoBehaviour)
+  id: GetGameObjectPath(MonoBehaviour)
+  parent: NPCEngine.Utility.CoroutineUtility
+  langs:
+  - csharp
+  - vb
+  name: GetGameObjectPath(MonoBehaviour)
+  nameWithType: CoroutineUtility.GetGameObjectPath(MonoBehaviour)
+  fullName: NPCEngine.Utility.CoroutineUtility.GetGameObjectPath(MonoBehaviour)
+  type: Method
+  source:
+    id: GetGameObjectPath
+    path: ''
+    startLine: 4762
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Utility
+  syntax:
+    content: public static string GetGameObjectPath(MonoBehaviour behaviour)
+    parameters:
+    - id: behaviour
+      type: Global.MonoBehaviour
+    return:
+      type: System.String
+    content.vb: Public Shared Function GetGameObjectPath(behaviour As MonoBehaviour) As String
+  overload: NPCEngine.Utility.CoroutineUtility.GetGameObjectPath*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: NPCEngine.Utility
+  commentId: N:NPCEngine.Utility
+  name: NPCEngine.Utility
+  nameWithType: NPCEngine.Utility
+  fullName: NPCEngine.Utility
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: NPCEngine.Utility.Singleton{NPCEngine.Utility.CoroutineUtility}
+  commentId: T:NPCEngine.Utility.Singleton{NPCEngine.Utility.CoroutineUtility}
+  parent: NPCEngine.Utility
+  definition: NPCEngine.Utility.Singleton`1
+  name: Singleton<CoroutineUtility>
+  nameWithType: Singleton<CoroutineUtility>
+  fullName: NPCEngine.Utility.Singleton<NPCEngine.Utility.CoroutineUtility>
+  nameWithType.vb: Singleton(Of CoroutineUtility)
+  fullName.vb: NPCEngine.Utility.Singleton(Of NPCEngine.Utility.CoroutineUtility)
+  name.vb: Singleton(Of CoroutineUtility)
+  spec.csharp:
+  - uid: NPCEngine.Utility.Singleton`1
+    name: Singleton
+    nameWithType: Singleton
+    fullName: NPCEngine.Utility.Singleton
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: NPCEngine.Utility.CoroutineUtility
+    name: CoroutineUtility
+    nameWithType: CoroutineUtility
+    fullName: NPCEngine.Utility.CoroutineUtility
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: NPCEngine.Utility.Singleton`1
+    name: Singleton
+    nameWithType: Singleton
+    fullName: NPCEngine.Utility.Singleton
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: NPCEngine.Utility.CoroutineUtility
+    name: CoroutineUtility
+    nameWithType: CoroutineUtility
+    fullName: NPCEngine.Utility.CoroutineUtility
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NPCEngine.Utility.Singleton{NPCEngine.Utility.CoroutineUtility}.Instance
+  commentId: P:NPCEngine.Utility.Singleton{NPCEngine.Utility.CoroutineUtility}.Instance
+  parent: NPCEngine.Utility.Singleton{NPCEngine.Utility.CoroutineUtility}
+  definition: NPCEngine.Utility.Singleton`1.Instance
+  name: Instance
+  nameWithType: Singleton<CoroutineUtility>.Instance
+  fullName: NPCEngine.Utility.Singleton<NPCEngine.Utility.CoroutineUtility>.Instance
+  nameWithType.vb: Singleton(Of CoroutineUtility).Instance
+  fullName.vb: NPCEngine.Utility.Singleton(Of NPCEngine.Utility.CoroutineUtility).Instance
+- uid: NPCEngine.Utility.Singleton{NPCEngine.Utility.CoroutineUtility}.GetInstance
+  commentId: M:NPCEngine.Utility.Singleton{NPCEngine.Utility.CoroutineUtility}.GetInstance
+  parent: NPCEngine.Utility.Singleton{NPCEngine.Utility.CoroutineUtility}
+  definition: NPCEngine.Utility.Singleton`1.GetInstance
+  name: GetInstance()
+  nameWithType: Singleton<CoroutineUtility>.GetInstance()
+  fullName: NPCEngine.Utility.Singleton<NPCEngine.Utility.CoroutineUtility>.GetInstance()
+  nameWithType.vb: Singleton(Of CoroutineUtility).GetInstance()
+  fullName.vb: NPCEngine.Utility.Singleton(Of NPCEngine.Utility.CoroutineUtility).GetInstance()
+  spec.csharp:
+  - uid: NPCEngine.Utility.Singleton`1.GetInstance
+    name: GetInstance
+    nameWithType: Singleton<CoroutineUtility>.GetInstance
+    fullName: NPCEngine.Utility.Singleton<NPCEngine.Utility.CoroutineUtility>.GetInstance
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: NPCEngine.Utility.Singleton`1.GetInstance
+    name: GetInstance
+    nameWithType: Singleton(Of CoroutineUtility).GetInstance
+    fullName: NPCEngine.Utility.Singleton(Of NPCEngine.Utility.CoroutineUtility).GetInstance
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: NPCEngine.Utility.Singleton`1
+  commentId: T:NPCEngine.Utility.Singleton`1
+  name: Singleton<T>
+  nameWithType: Singleton<T>
+  fullName: NPCEngine.Utility.Singleton<T>
+  nameWithType.vb: Singleton(Of T)
+  fullName.vb: NPCEngine.Utility.Singleton(Of T)
+  name.vb: Singleton(Of T)
+  spec.csharp:
+  - uid: NPCEngine.Utility.Singleton`1
+    name: Singleton
+    nameWithType: Singleton
+    fullName: NPCEngine.Utility.Singleton
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: NPCEngine.Utility.Singleton`1
+    name: Singleton
+    nameWithType: Singleton
+    fullName: NPCEngine.Utility.Singleton
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NPCEngine.Utility.Singleton`1.Instance
+  commentId: P:NPCEngine.Utility.Singleton`1.Instance
+  name: Instance
+  nameWithType: Singleton<T>.Instance
+  fullName: NPCEngine.Utility.Singleton<T>.Instance
+  nameWithType.vb: Singleton(Of T).Instance
+  fullName.vb: NPCEngine.Utility.Singleton(Of T).Instance
+- uid: NPCEngine.Utility.Singleton`1.GetInstance
+  commentId: M:NPCEngine.Utility.Singleton`1.GetInstance
+  name: GetInstance()
+  nameWithType: Singleton<T>.GetInstance()
+  fullName: NPCEngine.Utility.Singleton<T>.GetInstance()
+  nameWithType.vb: Singleton(Of T).GetInstance()
+  fullName.vb: NPCEngine.Utility.Singleton(Of T).GetInstance()
+  spec.csharp:
+  - uid: NPCEngine.Utility.Singleton`1.GetInstance
+    name: GetInstance
+    nameWithType: Singleton<T>.GetInstance
+    fullName: NPCEngine.Utility.Singleton<T>.GetInstance
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: NPCEngine.Utility.Singleton`1.GetInstance
+    name: GetInstance
+    nameWithType: Singleton(Of T).GetInstance
+    fullName: NPCEngine.Utility.Singleton(Of T).GetInstance
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NPCEngine.Utility.CoroutineUtility.IsRunning*
+  commentId: Overload:NPCEngine.Utility.CoroutineUtility.IsRunning
+  name: IsRunning
+  nameWithType: CoroutineUtility.IsRunning
+  fullName: NPCEngine.Utility.CoroutineUtility.IsRunning
+- uid: Global.MonoBehaviour
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: MonoBehaviour
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: NPCEngine.Utility.CoroutineUtility.StartCoroutine*
+  commentId: Overload:NPCEngine.Utility.CoroutineUtility.StartCoroutine
+  name: StartCoroutine
+  nameWithType: CoroutineUtility.StartCoroutine
+  fullName: NPCEngine.Utility.CoroutineUtility.StartCoroutine
+- uid: System.Collections.IEnumerator
+  commentId: T:System.Collections.IEnumerator
+  parent: System.Collections
+  isExternal: true
+  name: IEnumerator
+  nameWithType: IEnumerator
+  fullName: System.Collections.IEnumerator
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections
+- uid: NPCEngine.Utility.CoroutineUtility.StopCoroutine*
+  commentId: Overload:NPCEngine.Utility.CoroutineUtility.StopCoroutine
+  name: StopCoroutine
+  nameWithType: CoroutineUtility.StopCoroutine
+  fullName: NPCEngine.Utility.CoroutineUtility.StopCoroutine
+- uid: NPCEngine.Utility.CoroutineUtility.StopAllPlayingCoroutines*
+  commentId: Overload:NPCEngine.Utility.CoroutineUtility.StopAllPlayingCoroutines
+  name: StopAllPlayingCoroutines
+  nameWithType: CoroutineUtility.StopAllPlayingCoroutines
+  fullName: NPCEngine.Utility.CoroutineUtility.StopAllPlayingCoroutines
+- uid: NPCEngine.Utility.CoroutineUtility.StopAllEditorCoroutines*
+  commentId: Overload:NPCEngine.Utility.CoroutineUtility.StopAllEditorCoroutines
+  name: StopAllEditorCoroutines
+  nameWithType: CoroutineUtility.StopAllEditorCoroutines
+  fullName: NPCEngine.Utility.CoroutineUtility.StopAllEditorCoroutines
+- uid: NPCEngine.Utility.CoroutineUtility.WaitForSeconds*
+  commentId: Overload:NPCEngine.Utility.CoroutineUtility.WaitForSeconds
+  name: WaitForSeconds
+  nameWithType: CoroutineUtility.WaitForSeconds
+  fullName: NPCEngine.Utility.CoroutineUtility.WaitForSeconds
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: NPCEngine.Utility.CoroutineUtility.GetGameObjectPath*
+  commentId: Overload:NPCEngine.Utility.CoroutineUtility.GetGameObjectPath
+  name: GetGameObjectPath
+  nameWithType: CoroutineUtility.GetGameObjectPath
+  fullName: NPCEngine.Utility.CoroutineUtility.GetGameObjectPath

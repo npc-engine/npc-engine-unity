@@ -1,14 +1,9 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 using Newtonsoft.Json;
 using NPCEngine.Utility;
 
-#if UNITY_EDITOR
-using Unity.EditorCoroutines.Editor;
-#endif
 
 
 /// <summary>
@@ -104,7 +99,7 @@ namespace NPCEngine.RPC
             );
         }
 
-        private void Connect()
+        void OnEnable()
         {
             switch (NPCEngineConfig.Instance.serverType)
             {
@@ -120,23 +115,12 @@ namespace NPCEngine.RPC
             CoroutineUtility.StartCoroutine(this.impl.DispatchRequestsCoroutine(taskQueue), this, "implCoroutine");
         }
 
-
-        private void Disconnect()
+        void OnDisable()
         {
             impl = null;
             if(!Application.isPlaying)
                 CoroutineUtility.StopCoroutine("implCoroutine", this);
             taskQueue.Clear();
-        }
-
-        void OnEnable()
-        {
-            Connect();
-        }
-
-        void OnDisable()
-        {
-            Disconnect();
         }
     }
 }

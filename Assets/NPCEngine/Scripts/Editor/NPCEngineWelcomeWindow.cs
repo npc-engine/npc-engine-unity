@@ -30,8 +30,6 @@ public class NPCEngineWelcomeWindow : EditorWindow
         logo = (Texture2D)Resources.Load("settings", typeof(Texture2D));
         githubLogo = (Texture2D)Resources.Load("github", typeof(Texture2D));
         docsLogo = (Texture2D)Resources.Load("file-text", typeof(Texture2D));
-        
-        version = NPCEngineWelcomeWindow.GetVersion();
     }
 
     private static GUIStyle headerStyle = new GUIStyle();
@@ -75,6 +73,11 @@ public class NPCEngineWelcomeWindow : EditorWindow
     {
         EditorApplication.delayCall += () =>
         {
+            if(File.Exists(Path.Combine(Application.streamingAssetsPath, ".npc-engine/cli.exe")))
+            {
+                version = NPCEngineWelcomeWindow.GetVersion();
+            }
+            versionOK = SemVersionGreaterOrEqualsThan(version, npcEngineVersion);
             if (
                 DisplayWelcomeScreen
                 &&
@@ -148,19 +151,18 @@ public class NPCEngineWelcomeWindow : EditorWindow
         GUILayout.FlexibleSpace();
         GUILayout.EndHorizontal();
 
-        GUI.enabled = !downloading && !DisplayWelcomeScreen;
-        GUI.enabled |= !versionOK;
+        GUI.enabled = !downloading && DisplayWelcomeScreen;
 
         GUILayout.FlexibleSpace();
 
         GUILayout.BeginHorizontal();
         GUILayout.FlexibleSpace();
 
-        if (DisplayWelcomeScreen && versionOK)
+        if (!DisplayWelcomeScreen && versionOK)
         {
             GUILayout.Label("(Already downloaded) To start using it you need to download the inference engine server.");
         }
-        else if(!versionOK)
+        else if(!versionOK && File.Exists(Path.Combine(Application.streamingAssetsPath, ".npc-engine/cli.exe")))
         {
             GUILayout.Label("For the correct behaviour please update your server.");
         }
@@ -186,7 +188,7 @@ public class NPCEngineWelcomeWindow : EditorWindow
         GUILayout.BeginHorizontal();
         GUILayout.FlexibleSpace();
 
-        if (versionOK)
+        if (versionOK || !File.Exists(Path.Combine(Application.streamingAssetsPath, ".npc-engine/cli.exe")))
         {
             if (GUILayout.Button("Download NPC Engine", GUILayout.Width(160)))
             {
@@ -206,15 +208,16 @@ public class NPCEngineWelcomeWindow : EditorWindow
         GUILayout.FlexibleSpace();
         GUILayout.EndHorizontal();
 
-        GUI.enabled = DisplayWelcomeScreen;
+        GUI.enabled = !DisplayWelcomeScreen;
 
         GUILayout.FlexibleSpace();
 
         GUILayout.BeginHorizontal();
         GUILayout.FlexibleSpace();
-        if (DisplayWelcomeScreen)
+        if (!DisplayWelcomeScreen)
         {
             GUILayout.Label("You can also download default deep learning models (they are required unless you have your own)\n");
+
         }
         else
         {
@@ -294,24 +297,32 @@ public class NPCEngineWelcomeWindow : EditorWindow
 
         File.Delete(path);
         downloading = false;
-
+        if(File.Exists(Path.Combine(Application.streamingAssetsPath, ".npc-engine/cli.exe")))
+        {
+            version = NPCEngineWelcomeWindow.GetVersion();
+        }
     }
 
     public static string GetVersion()
     {
-        var processStartInfo = new ProcessStartInfo
+        try{
+            var processStartInfo = new ProcessStartInfo
+            {
+                FileName = Path.Combine(Application.streamingAssetsPath, ".npc-engine/cli.exe"),
+                Arguments = "version",
+                RedirectStandardOutput = true,
+                UseShellExecute = false,
+                WindowStyle = ProcessWindowStyle.Hidden,
+                CreateNoWindow = true,
+            };
+            var process = Process.Start(processStartInfo);
+            var output = process.StandardOutput.ReadToEnd();
+            process.WaitForExit();
+            return output;
+        } catch(Exception)
         {
-            FileName = Path.Combine(Application.streamingAssetsPath, ".npc-engine/cli.exe"),
-            Arguments = "version",
-            RedirectStandardOutput = true,
-            UseShellExecute = false,
-            WindowStyle = ProcessWindowStyle.Hidden,
-            CreateNoWindow = true,
-        };
-        var process = Process.Start(processStartInfo);
-        var output = process.StandardOutput.ReadToEnd();
-        process.WaitForExit();
-        return output;
+            return "v-1.-1.-1";
+        }
     }
 
     public static bool SemVersionGreaterOrEqualsThan(string version1, string version2)

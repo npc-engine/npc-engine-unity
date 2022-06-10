@@ -1,0 +1,251 @@
+### YamlMime:ManagedReference
+items:
+- uid: NPCEngine.RPC.RPCRequestMessage`1
+  commentId: T:NPCEngine.RPC.RPCRequestMessage`1
+  id: RPCRequestMessage`1
+  parent: NPCEngine.RPC
+  children:
+  - NPCEngine.RPC.RPCRequestMessage`1.#ctor
+  - NPCEngine.RPC.RPCRequestMessage`1.id
+  - NPCEngine.RPC.RPCRequestMessage`1.jsonrpc
+  - NPCEngine.RPC.RPCRequestMessage`1.method
+  - NPCEngine.RPC.RPCRequestMessage`1.parameters
+  langs:
+  - csharp
+  - vb
+  name: RPCRequestMessage<ParametersType>
+  nameWithType: RPCRequestMessage<ParametersType>
+  fullName: NPCEngine.RPC.RPCRequestMessage<ParametersType>
+  type: Class
+  source:
+    id: RPCRequestMessage
+    path: ''
+    startLine: 4259
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.RPC
+  summary: "\nJSON RPC request message.\n"
+  example: []
+  syntax:
+    content: >-
+      [Serializable]
+
+      public class RPCRequestMessage<ParametersType>
+          where ParametersType : new()
+    typeParameters:
+    - id: ParametersType
+      description: ''
+    content.vb: >-
+      <Serializable>
+
+      Public Class RPCRequestMessage(Of ParametersType As New)
+  inheritance:
+  - System.Object
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+  nameWithType.vb: RPCRequestMessage(Of ParametersType)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+  fullName.vb: NPCEngine.RPC.RPCRequestMessage(Of ParametersType)
+  name.vb: RPCRequestMessage(Of ParametersType)
+- uid: NPCEngine.RPC.RPCRequestMessage`1.id
+  commentId: F:NPCEngine.RPC.RPCRequestMessage`1.id
+  id: id
+  parent: NPCEngine.RPC.RPCRequestMessage`1
+  langs:
+  - csharp
+  - vb
+  name: id
+  nameWithType: RPCRequestMessage<ParametersType>.id
+  fullName: NPCEngine.RPC.RPCRequestMessage<ParametersType>.id
+  type: Field
+  source:
+    id: id
+    path: ''
+    startLine: 4263
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.RPC
+  syntax:
+    content: public int id
+    return:
+      type: System.Int32
+    content.vb: Public id As Integer
+  nameWithType.vb: RPCRequestMessage(Of ParametersType).id
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: NPCEngine.RPC.RPCRequestMessage(Of ParametersType).id
+- uid: NPCEngine.RPC.RPCRequestMessage`1.jsonrpc
+  commentId: F:NPCEngine.RPC.RPCRequestMessage`1.jsonrpc
+  id: jsonrpc
+  parent: NPCEngine.RPC.RPCRequestMessage`1
+  langs:
+  - csharp
+  - vb
+  name: jsonrpc
+  nameWithType: RPCRequestMessage<ParametersType>.jsonrpc
+  fullName: NPCEngine.RPC.RPCRequestMessage<ParametersType>.jsonrpc
+  type: Field
+  source:
+    id: jsonrpc
+    path: ''
+    startLine: 4264
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.RPC
+  syntax:
+    content: public string jsonrpc
+    return:
+      type: System.String
+    content.vb: Public jsonrpc As String
+  nameWithType.vb: RPCRequestMessage(Of ParametersType).jsonrpc
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: NPCEngine.RPC.RPCRequestMessage(Of ParametersType).jsonrpc
+- uid: NPCEngine.RPC.RPCRequestMessage`1.method
+  commentId: F:NPCEngine.RPC.RPCRequestMessage`1.method
+  id: method
+  parent: NPCEngine.RPC.RPCRequestMessage`1
+  langs:
+  - csharp
+  - vb
+  name: method
+  nameWithType: RPCRequestMessage<ParametersType>.method
+  fullName: NPCEngine.RPC.RPCRequestMessage<ParametersType>.method
+  type: Field
+  source:
+    id: method
+    path: ''
+    startLine: 4265
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.RPC
+  syntax:
+    content: public string method
+    return:
+      type: System.String
+    content.vb: Public method As String
+  nameWithType.vb: RPCRequestMessage(Of ParametersType).method
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: NPCEngine.RPC.RPCRequestMessage(Of ParametersType).method
+- uid: NPCEngine.RPC.RPCRequestMessage`1.parameters
+  commentId: F:NPCEngine.RPC.RPCRequestMessage`1.parameters
+  id: parameters
+  parent: NPCEngine.RPC.RPCRequestMessage`1
+  langs:
+  - csharp
+  - vb
+  name: parameters
+  nameWithType: RPCRequestMessage<ParametersType>.parameters
+  fullName: NPCEngine.RPC.RPCRequestMessage<ParametersType>.parameters
+  type: Field
+  source:
+    id: parameters
+    path: ''
+    startLine: 4268
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.RPC
+  syntax:
+    content: public ParametersType parameters
+    return:
+      type: '{ParametersType}'
+    content.vb: Public parameters As ParametersType
+  nameWithType.vb: RPCRequestMessage(Of ParametersType).parameters
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: NPCEngine.RPC.RPCRequestMessage(Of ParametersType).parameters
+- uid: NPCEngine.RPC.RPCRequestMessage`1.#ctor
+  commentId: M:NPCEngine.RPC.RPCRequestMessage`1.#ctor
+  id: '#ctor'
+  parent: NPCEngine.RPC.RPCRequestMessage`1
+  langs:
+  - csharp
+  - vb
+  name: RPCRequestMessage()
+  nameWithType: RPCRequestMessage<ParametersType>.RPCRequestMessage()
+  fullName: NPCEngine.RPC.RPCRequestMessage<ParametersType>.RPCRequestMessage()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 4270
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.RPC
+  syntax:
+    content: public RPCRequestMessage()
+    content.vb: Public Sub New
+  overload: NPCEngine.RPC.RPCRequestMessage`1.#ctor*
+  nameWithType.vb: RPCRequestMessage(Of ParametersType).RPCRequestMessage()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: NPCEngine.RPC.RPCRequestMessage(Of ParametersType).RPCRequestMessage()
+references:
+- uid: NPCEngine.RPC
+  commentId: N:NPCEngine.RPC
+  name: NPCEngine.RPC
+  nameWithType: NPCEngine.RPC
+  fullName: NPCEngine.RPC
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: '{ParametersType}'
+  commentId: '!:ParametersType'
+  definition: ParametersType
+  name: ParametersType
+  nameWithType: ParametersType
+  fullName: ParametersType
+- uid: ParametersType
+  commentId: '!:ParametersType'
+  name: ParametersType
+  nameWithType: ParametersType
+  fullName: ParametersType
+- uid: NPCEngine.RPC.RPCRequestMessage`1.#ctor*
+  commentId: Overload:NPCEngine.RPC.RPCRequestMessage`1.#ctor
+  name: RPCRequestMessage
+  nameWithType: RPCRequestMessage<ParametersType>.RPCRequestMessage
+  fullName: NPCEngine.RPC.RPCRequestMessage<ParametersType>.RPCRequestMessage
+  nameWithType.vb: RPCRequestMessage(Of ParametersType).RPCRequestMessage
+  fullName.vb: NPCEngine.RPC.RPCRequestMessage(Of ParametersType).RPCRequestMessage

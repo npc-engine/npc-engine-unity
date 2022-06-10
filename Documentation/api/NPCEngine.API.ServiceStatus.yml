@@ -1,0 +1,247 @@
+### YamlMime:ManagedReference
+items:
+- uid: NPCEngine.API.ServiceStatus
+  commentId: T:NPCEngine.API.ServiceStatus
+  id: ServiceStatus
+  parent: NPCEngine.API
+  children:
+  - NPCEngine.API.ServiceStatus.AWAITING
+  - NPCEngine.API.ServiceStatus.ERROR
+  - NPCEngine.API.ServiceStatus.RUNNING
+  - NPCEngine.API.ServiceStatus.STARTING
+  - NPCEngine.API.ServiceStatus.STOPPED
+  - NPCEngine.API.ServiceStatus.TIMEOUT
+  - NPCEngine.API.ServiceStatus.UNKNOWN
+  langs:
+  - csharp
+  - vb
+  name: ServiceStatus
+  nameWithType: ServiceStatus
+  fullName: NPCEngine.API.ServiceStatus
+  type: Enum
+  source:
+    id: ServiceStatus
+    path: ''
+    startLine: 530
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.API
+  summary: "\nService status enum.\n"
+  example: []
+  syntax:
+    content: public enum ServiceStatus
+    content.vb: Public Enum ServiceStatus
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: NPCEngine.API.ServiceStatus.UNKNOWN
+  commentId: F:NPCEngine.API.ServiceStatus.UNKNOWN
+  id: UNKNOWN
+  parent: NPCEngine.API.ServiceStatus
+  langs:
+  - csharp
+  - vb
+  name: UNKNOWN
+  nameWithType: ServiceStatus.UNKNOWN
+  fullName: NPCEngine.API.ServiceStatus.UNKNOWN
+  type: Field
+  source:
+    id: UNKNOWN
+    path: ''
+    startLine: 532
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.API
+  syntax:
+    content: UNKNOWN = 0
+    return:
+      type: NPCEngine.API.ServiceStatus
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NPCEngine.API.ServiceStatus.STARTING
+  commentId: F:NPCEngine.API.ServiceStatus.STARTING
+  id: STARTING
+  parent: NPCEngine.API.ServiceStatus
+  langs:
+  - csharp
+  - vb
+  name: STARTING
+  nameWithType: ServiceStatus.STARTING
+  fullName: NPCEngine.API.ServiceStatus.STARTING
+  type: Field
+  source:
+    id: STARTING
+    path: ''
+    startLine: 533
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.API
+  syntax:
+    content: STARTING = 1
+    return:
+      type: NPCEngine.API.ServiceStatus
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NPCEngine.API.ServiceStatus.RUNNING
+  commentId: F:NPCEngine.API.ServiceStatus.RUNNING
+  id: RUNNING
+  parent: NPCEngine.API.ServiceStatus
+  langs:
+  - csharp
+  - vb
+  name: RUNNING
+  nameWithType: ServiceStatus.RUNNING
+  fullName: NPCEngine.API.ServiceStatus.RUNNING
+  type: Field
+  source:
+    id: RUNNING
+    path: ''
+    startLine: 534
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.API
+  syntax:
+    content: RUNNING = 2
+    return:
+      type: NPCEngine.API.ServiceStatus
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NPCEngine.API.ServiceStatus.STOPPED
+  commentId: F:NPCEngine.API.ServiceStatus.STOPPED
+  id: STOPPED
+  parent: NPCEngine.API.ServiceStatus
+  langs:
+  - csharp
+  - vb
+  name: STOPPED
+  nameWithType: ServiceStatus.STOPPED
+  fullName: NPCEngine.API.ServiceStatus.STOPPED
+  type: Field
+  source:
+    id: STOPPED
+    path: ''
+    startLine: 535
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.API
+  syntax:
+    content: STOPPED = 3
+    return:
+      type: NPCEngine.API.ServiceStatus
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NPCEngine.API.ServiceStatus.AWAITING
+  commentId: F:NPCEngine.API.ServiceStatus.AWAITING
+  id: AWAITING
+  parent: NPCEngine.API.ServiceStatus
+  langs:
+  - csharp
+  - vb
+  name: AWAITING
+  nameWithType: ServiceStatus.AWAITING
+  fullName: NPCEngine.API.ServiceStatus.AWAITING
+  type: Field
+  source:
+    id: AWAITING
+    path: ''
+    startLine: 536
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.API
+  syntax:
+    content: AWAITING = 4
+    return:
+      type: NPCEngine.API.ServiceStatus
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NPCEngine.API.ServiceStatus.TIMEOUT
+  commentId: F:NPCEngine.API.ServiceStatus.TIMEOUT
+  id: TIMEOUT
+  parent: NPCEngine.API.ServiceStatus
+  langs:
+  - csharp
+  - vb
+  name: TIMEOUT
+  nameWithType: ServiceStatus.TIMEOUT
+  fullName: NPCEngine.API.ServiceStatus.TIMEOUT
+  type: Field
+  source:
+    id: TIMEOUT
+    path: ''
+    startLine: 537
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.API
+  syntax:
+    content: TIMEOUT = 5
+    return:
+      type: NPCEngine.API.ServiceStatus
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: NPCEngine.API.ServiceStatus.ERROR
+  commentId: F:NPCEngine.API.ServiceStatus.ERROR
+  id: ERROR
+  parent: NPCEngine.API.ServiceStatus
+  langs:
+  - csharp
+  - vb
+  name: ERROR
+  nameWithType: ServiceStatus.ERROR
+  fullName: NPCEngine.API.ServiceStatus.ERROR
+  type: Field
+  source:
+    id: ERROR
+    path: ''
+    startLine: 538
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.API
+  syntax:
+    content: ERROR = 6
+    return:
+      type: NPCEngine.API.ServiceStatus
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: NPCEngine.API
+  commentId: N:NPCEngine.API
+  name: NPCEngine.API
+  nameWithType: NPCEngine.API
+  fullName: NPCEngine.API
+- uid: NPCEngine.API.ServiceStatus
+  commentId: T:NPCEngine.API.ServiceStatus
+  parent: NPCEngine.API
+  name: ServiceStatus
+  nameWithType: ServiceStatus
+  fullName: NPCEngine.API.ServiceStatus

@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -24,13 +25,13 @@ namespace NPCEngine
             base.DrawDefaultInspector();
             if (config.services == null)
             {
-                config.services = GetServicesManually();
+                config.RefreshServices();
             }
             DrawServicesInspector();
             // refresh services list
             if (GUILayout.Button("Refresh", EditorStyles.miniButtonLeft))
             {
-                config.services = GetServicesManually();
+                config.RefreshServices();
             }
             showDownload = EditorGUILayout.Foldout(showDownload, "Add New Services");
             if (showDownload)
@@ -41,8 +42,6 @@ namespace NPCEngine
 
         private void DrawServicesInspector()
         {
-
-
             GUILayout.BeginHorizontal(EditorStyles.helpBox);
             GUILayout.BeginVertical();
             GUILayout.Box("Service name", EditorStyles.boldLabel, GUILayout.MinWidth(10));
@@ -61,7 +60,29 @@ namespace NPCEngine
                 GUILayout.FlexibleSpace();
             }
             GUILayout.EndVertical();
+
+            if(NPCEngineManager.Instance.InferenceEngineRunning) GUI.enabled = false;
+
             VerticalLine(Color.black);
+
+            LoadOnStartToggles();
+
+            VerticalLine(Color.black);
+
+            OpenConfigButtons();
+
+            VerticalLine(Color.black);
+
+            RemoveButtons();
+
+            GUI.enabled = true;
+
+            GUILayout.EndHorizontal();
+
+        }
+
+        private void LoadOnStartToggles()
+        {
             GUILayout.BeginVertical();
             GUILayout.Box("Load on start", EditorStyles.boldLabel);
             foreach (var service in config.services)
@@ -77,8 +98,11 @@ namespace NPCEngine
                 GUILayout.FlexibleSpace();
             }
             GUILayout.EndVertical();
+        }
 
-            VerticalLine(Color.black);
+
+        private void RemoveButtons()
+        {
             GUILayout.BeginVertical();
             GUILayout.Box("", EditorStyles.boldLabel);
             foreach (var service in config.services)
@@ -97,50 +121,51 @@ namespace NPCEngine
                 GUILayout.FlexibleSpace();
             }
             GUILayout.EndVertical();
-
-            GUILayout.EndHorizontal();
-
         }
-        private List<ServiceConfigDescriptor> GetServicesManually()
+
+
+        private void OpenConfigButtons()
         {
-            // Get all directories in models folder
-            string[] directories = Directory.GetDirectories(Path.Combine(Application.streamingAssetsPath, NPCEngineConfig.Instance.modelsPath));
-            List<ServiceConfigDescriptor> services = new List<ServiceConfigDescriptor>();
-            foreach (string directory in directories)
+            GUILayout.BeginVertical();
+            GUILayout.Box("", EditorStyles.boldLabel);
+            foreach (var service in config.services)
             {
-                ServiceConfigDescriptor service = new ServiceConfigDescriptor();
-                service.name = Path.GetFileName(directory);
-                string[] lines = System.IO.File.ReadAllLines(Path.Combine(directory, "config.yml"));
-                service.path = directory;
-                foreach (var line in lines)
+                if (GUILayout.Button("Edit Config", EditorStyles.miniButtonLeft))
                 {
-                    if (line.StartsWith("type:"))
+                    string path = "";
+                    string default_run = "";
+                    if (Application.platform == RuntimePlatform.WindowsEditor)
                     {
-                        service.type = line.Replace("type: ", "");
+                       default_run = "start";
+                       path = "\"\" \"" + Path.Combine(service.path, "config.yml").Replace("/", "\\") + "\"";
                     }
-                    else if (line.StartsWith("model_type:"))
+                    else if (Application.platform == RuntimePlatform.OSXEditor)
                     {
-                        service.type = line.Replace("model_type: ", "");
+                        default_run = "open";
+                        path = "\"" + Path.Combine(service.path, "config.yml").Replace("\\", "/") + "\"";
+                    }else if (Application.platform == RuntimePlatform.LinuxEditor)
+                    {
+                        default_run = "xdg-open";
+                        path = "\"" + Path.Combine(service.path, "config.yml").Replace("\\", "/") + "\"";
                     }
+                    var processStartInfo = new ProcessStartInfo
+                    {
+                        FileName = "CMD.EXE",
+                        Arguments = "/k \"" + default_run + " " +  path + "\"",
+                        RedirectStandardOutput = true,
+                        UseShellExecute = false,
+                        WindowStyle = ProcessWindowStyle.Hidden,
+                        CreateNoWindow = true,
+                    };
+                    System.Diagnostics.Process.Start(processStartInfo);
+                    
                 }
-                services.Add(service);
+                GUILayout.FlexibleSpace();
             }
-            // Copy start setting from existing config
-            if (NPCEngineConfig.Instance.services != null)
-            {
-                foreach (var service in services)
-                {
-                    foreach (var existingService in NPCEngineConfig.Instance.services)
-                    {
-                        if (service.name == existingService.name)
-                        {
-                            service.start = existingService.start;
-                        }
-                    }
-                }
-            }
-            return services;
+            GUILayout.EndVertical();
         }
+
+
 
         private void DrawAddNewService()
         {
@@ -224,7 +249,7 @@ namespace NPCEngine
             to_path = Path.Combine(to_path, dir.Name);
             if (!dir.Exists)
             {
-                Debug.LogError("Folder " + folder + " does not exist");
+                UnityEngine.Debug.LogError("Folder " + folder + " does not exist");
                 return;
             }
             if (!Directory.Exists(to_path))

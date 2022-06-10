@@ -4,8 +4,12 @@ items:
   commentId: N:NPCEngine
   id: NPCEngine
   children:
+  - NPCEngine.NonPlayerCharacterEditor
+  - NPCEngine.NPCEngineConfig
+  - NPCEngine.NPCEngineConfigEditor
   - NPCEngine.NPCEngineException
   - NPCEngine.ResultFuture`1
+  - NPCEngine.ServiceConfigDescriptor
   langs:
   - csharp
   - vb
@@ -16,6 +20,26 @@ items:
   assemblies:
   - cs.temp.dll
 references:
+- uid: NPCEngine.ServiceConfigDescriptor
+  commentId: T:NPCEngine.ServiceConfigDescriptor
+  name: ServiceConfigDescriptor
+  nameWithType: ServiceConfigDescriptor
+  fullName: NPCEngine.ServiceConfigDescriptor
+- uid: NPCEngine.NPCEngineConfig
+  commentId: T:NPCEngine.NPCEngineConfig
+  name: NPCEngineConfig
+  nameWithType: NPCEngineConfig
+  fullName: NPCEngine.NPCEngineConfig
+- uid: NPCEngine.NonPlayerCharacterEditor
+  commentId: T:NPCEngine.NonPlayerCharacterEditor
+  name: NonPlayerCharacterEditor
+  nameWithType: NonPlayerCharacterEditor
+  fullName: NPCEngine.NonPlayerCharacterEditor
+- uid: NPCEngine.NPCEngineConfigEditor
+  commentId: T:NPCEngine.NPCEngineConfigEditor
+  name: NPCEngineConfigEditor
+  nameWithType: NPCEngineConfigEditor
+  fullName: NPCEngine.NPCEngineConfigEditor
 - uid: NPCEngine.NPCEngineException
   commentId: T:NPCEngine.NPCEngineException
   parent: NPCEngine

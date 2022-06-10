@@ -1,0 +1,254 @@
+### YamlMime:ManagedReference
+items:
+- uid: NPCEngine.RPC.RPCResponseMessage`1
+  commentId: T:NPCEngine.RPC.RPCResponseMessage`1
+  id: RPCResponseMessage`1
+  parent: NPCEngine.RPC
+  children:
+  - NPCEngine.RPC.RPCResponseMessage`1.#ctor
+  - NPCEngine.RPC.RPCResponseMessage`1.error
+  - NPCEngine.RPC.RPCResponseMessage`1.id
+  - NPCEngine.RPC.RPCResponseMessage`1.jsonrpc
+  - NPCEngine.RPC.RPCResponseMessage`1.result
+  langs:
+  - csharp
+  - vb
+  name: RPCResponseMessage<ReturnType>
+  nameWithType: RPCResponseMessage<ReturnType>
+  fullName: NPCEngine.RPC.RPCResponseMessage<ReturnType>
+  type: Class
+  source:
+    id: RPCResponseMessage
+    path: ''
+    startLine: 4282
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.RPC
+  summary: "\nJSON RPC response message.\n"
+  example: []
+  syntax:
+    content: >-
+      [Serializable]
+
+      public class RPCResponseMessage<ReturnType>
+    typeParameters:
+    - id: ReturnType
+    content.vb: >-
+      <Serializable>
+
+      Public Class RPCResponseMessage(Of ReturnType)
+  inheritance:
+  - System.Object
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+  nameWithType.vb: RPCResponseMessage(Of ReturnType)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+  fullName.vb: NPCEngine.RPC.RPCResponseMessage(Of ReturnType)
+  name.vb: RPCResponseMessage(Of ReturnType)
+- uid: NPCEngine.RPC.RPCResponseMessage`1.id
+  commentId: F:NPCEngine.RPC.RPCResponseMessage`1.id
+  id: id
+  parent: NPCEngine.RPC.RPCResponseMessage`1
+  langs:
+  - csharp
+  - vb
+  name: id
+  nameWithType: RPCResponseMessage<ReturnType>.id
+  fullName: NPCEngine.RPC.RPCResponseMessage<ReturnType>.id
+  type: Field
+  source:
+    id: id
+    path: ''
+    startLine: 4285
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.RPC
+  syntax:
+    content: public int id
+    return:
+      type: System.Int32
+    content.vb: Public id As Integer
+  nameWithType.vb: RPCResponseMessage(Of ReturnType).id
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: NPCEngine.RPC.RPCResponseMessage(Of ReturnType).id
+- uid: NPCEngine.RPC.RPCResponseMessage`1.jsonrpc
+  commentId: F:NPCEngine.RPC.RPCResponseMessage`1.jsonrpc
+  id: jsonrpc
+  parent: NPCEngine.RPC.RPCResponseMessage`1
+  langs:
+  - csharp
+  - vb
+  name: jsonrpc
+  nameWithType: RPCResponseMessage<ReturnType>.jsonrpc
+  fullName: NPCEngine.RPC.RPCResponseMessage<ReturnType>.jsonrpc
+  type: Field
+  source:
+    id: jsonrpc
+    path: ''
+    startLine: 4286
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.RPC
+  syntax:
+    content: public string jsonrpc
+    return:
+      type: System.String
+    content.vb: Public jsonrpc As String
+  nameWithType.vb: RPCResponseMessage(Of ReturnType).jsonrpc
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: NPCEngine.RPC.RPCResponseMessage(Of ReturnType).jsonrpc
+- uid: NPCEngine.RPC.RPCResponseMessage`1.result
+  commentId: F:NPCEngine.RPC.RPCResponseMessage`1.result
+  id: result
+  parent: NPCEngine.RPC.RPCResponseMessage`1
+  langs:
+  - csharp
+  - vb
+  name: result
+  nameWithType: RPCResponseMessage<ReturnType>.result
+  fullName: NPCEngine.RPC.RPCResponseMessage<ReturnType>.result
+  type: Field
+  source:
+    id: result
+    path: ''
+    startLine: 4288
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.RPC
+  syntax:
+    content: public ReturnType result
+    return:
+      type: '{ReturnType}'
+    content.vb: Public result As ReturnType
+  nameWithType.vb: RPCResponseMessage(Of ReturnType).result
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: NPCEngine.RPC.RPCResponseMessage(Of ReturnType).result
+- uid: NPCEngine.RPC.RPCResponseMessage`1.error
+  commentId: F:NPCEngine.RPC.RPCResponseMessage`1.error
+  id: error
+  parent: NPCEngine.RPC.RPCResponseMessage`1
+  langs:
+  - csharp
+  - vb
+  name: error
+  nameWithType: RPCResponseMessage<ReturnType>.error
+  fullName: NPCEngine.RPC.RPCResponseMessage<ReturnType>.error
+  type: Field
+  source:
+    id: error
+    path: ''
+    startLine: 4290
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.RPC
+  syntax:
+    content: public RPCResponseError error
+    return:
+      type: NPCEngine.RPC.RPCResponseError
+    content.vb: Public error As RPCResponseError
+  nameWithType.vb: RPCResponseMessage(Of ReturnType).error
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: NPCEngine.RPC.RPCResponseMessage(Of ReturnType).error
+- uid: NPCEngine.RPC.RPCResponseMessage`1.#ctor
+  commentId: M:NPCEngine.RPC.RPCResponseMessage`1.#ctor
+  id: '#ctor'
+  parent: NPCEngine.RPC.RPCResponseMessage`1
+  langs:
+  - csharp
+  - vb
+  name: RPCResponseMessage()
+  nameWithType: RPCResponseMessage<ReturnType>.RPCResponseMessage()
+  fullName: NPCEngine.RPC.RPCResponseMessage<ReturnType>.RPCResponseMessage()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 4292
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.RPC
+  syntax:
+    content: public RPCResponseMessage()
+    content.vb: Public Sub New
+  overload: NPCEngine.RPC.RPCResponseMessage`1.#ctor*
+  nameWithType.vb: RPCResponseMessage(Of ReturnType).RPCResponseMessage()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: NPCEngine.RPC.RPCResponseMessage(Of ReturnType).RPCResponseMessage()
+references:
+- uid: NPCEngine.RPC
+  commentId: N:NPCEngine.RPC
+  name: NPCEngine.RPC
+  nameWithType: NPCEngine.RPC
+  fullName: NPCEngine.RPC
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: '{ReturnType}'
+  commentId: '!:ReturnType'
+  definition: ReturnType
+  name: ReturnType
+  nameWithType: ReturnType
+  fullName: ReturnType
+- uid: ReturnType
+  name: ReturnType
+  nameWithType: ReturnType
+  fullName: ReturnType
+- uid: NPCEngine.RPC.RPCResponseError
+  commentId: T:NPCEngine.RPC.RPCResponseError
+  parent: NPCEngine.RPC
+  name: RPCResponseError
+  nameWithType: RPCResponseError
+  fullName: NPCEngine.RPC.RPCResponseError
+- uid: NPCEngine.RPC.RPCResponseMessage`1.#ctor*
+  commentId: Overload:NPCEngine.RPC.RPCResponseMessage`1.#ctor
+  name: RPCResponseMessage
+  nameWithType: RPCResponseMessage<ReturnType>.RPCResponseMessage
+  fullName: NPCEngine.RPC.RPCResponseMessage<ReturnType>.RPCResponseMessage
+  nameWithType.vb: RPCResponseMessage(Of ReturnType).RPCResponseMessage
+  fullName.vb: NPCEngine.RPC.RPCResponseMessage(Of ReturnType).RPCResponseMessage

@@ -1,0 +1,459 @@
+### YamlMime:ManagedReference
+items:
+- uid: NPCEngine.API.PersonaDialogue
+  commentId: T:NPCEngine.API.PersonaDialogue
+  id: PersonaDialogue
+  parent: NPCEngine.API
+  children:
+  - NPCEngine.API.PersonaDialogue.StartDialogue(System.String,System.String,System.String,System.String,System.String,System.String,System.Action{System.String},System.String)
+  - NPCEngine.API.PersonaDialogue.StepDialogue(System.String,System.String,System.Boolean,System.Action{System.Tuple{System.String,System.Boolean}},System.Single,System.Collections.Generic.List{System.String},System.String)
+  langs:
+  - csharp
+  - vb
+  name: PersonaDialogue
+  nameWithType: PersonaDialogue
+  fullName: NPCEngine.API.PersonaDialogue
+  type: Class
+  source:
+    id: PersonaDialogue
+    path: ''
+    startLine: 736
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.API
+  summary: "\n<code>Chatbot</code> provides remote procedure calls \nto inference engine&apos;s TextGeneration services.\n"
+  example: []
+  syntax:
+    content: 'public class PersonaDialogue : RPCBase'
+    content.vb: >-
+      Public Class PersonaDialogue
+          Inherits RPCBase
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: NPCEngine.API.PersonaDialogue.StartDialogue(System.String,System.String,System.String,System.String,System.String,System.String,System.Action{System.String},System.String)
+  commentId: M:NPCEngine.API.PersonaDialogue.StartDialogue(System.String,System.String,System.String,System.String,System.String,System.String,System.Action{System.String},System.String)
+  id: StartDialogue(System.String,System.String,System.String,System.String,System.String,System.String,System.Action{System.String},System.String)
+  parent: NPCEngine.API.PersonaDialogue
+  langs:
+  - csharp
+  - vb
+  name: StartDialogue(String, String, String, String, String, String, Action<String>, String)
+  nameWithType: PersonaDialogue.StartDialogue(String, String, String, String, String, String, Action<String>, String)
+  fullName: NPCEngine.API.PersonaDialogue.StartDialogue(System.String, System.String, System.String, System.String, System.String, System.String, System.Action<System.String>, System.String)
+  type: Method
+  source:
+    id: StartDialogue
+    path: ''
+    startLine: 771
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.API
+  syntax:
+    content: public IEnumerator StartDialogue(string name1, string persona1, string name2, string persona2, string location_name, string location_description, Action<string> outputCallback, string dialogue_id = null)
+    parameters:
+    - id: name1
+      type: System.String
+    - id: persona1
+      type: System.String
+    - id: name2
+      type: System.String
+    - id: persona2
+      type: System.String
+    - id: location_name
+      type: System.String
+    - id: location_description
+      type: System.String
+    - id: outputCallback
+      type: System.Action{System.String}
+    - id: dialogue_id
+      type: System.String
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Public Function StartDialogue(name1 As String, persona1 As String, name2 As String, persona2 As String, location_name As String, location_description As String, outputCallback As Action(Of String), dialogue_id As String = Nothing) As IEnumerator
+  overload: NPCEngine.API.PersonaDialogue.StartDialogue*
+  nameWithType.vb: PersonaDialogue.StartDialogue(String, String, String, String, String, String, Action(Of String), String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: NPCEngine.API.PersonaDialogue.StartDialogue(System.String, System.String, System.String, System.String, System.String, System.String, System.Action(Of System.String), System.String)
+  name.vb: StartDialogue(String, String, String, String, String, String, Action(Of String), String)
+- uid: NPCEngine.API.PersonaDialogue.StepDialogue(System.String,System.String,System.Boolean,System.Action{System.Tuple{System.String,System.Boolean}},System.Single,System.Collections.Generic.List{System.String},System.String)
+  commentId: M:NPCEngine.API.PersonaDialogue.StepDialogue(System.String,System.String,System.Boolean,System.Action{System.Tuple{System.String,System.Boolean}},System.Single,System.Collections.Generic.List{System.String},System.String)
+  id: StepDialogue(System.String,System.String,System.Boolean,System.Action{System.Tuple{System.String,System.Boolean}},System.Single,System.Collections.Generic.List{System.String},System.String)
+  parent: NPCEngine.API.PersonaDialogue
+  langs:
+  - csharp
+  - vb
+  name: StepDialogue(String, String, Boolean, Action<Tuple<String, Boolean>>, Single, List<String>, String)
+  nameWithType: PersonaDialogue.StepDialogue(String, String, Boolean, Action<Tuple<String, Boolean>>, Single, List<String>, String)
+  fullName: NPCEngine.API.PersonaDialogue.StepDialogue(System.String, System.String, System.Boolean, System.Action<System.Tuple<System.String, System.Boolean>>, System.Single, System.Collections.Generic.List<System.String>, System.String)
+  type: Method
+  source:
+    id: StepDialogue
+    path: ''
+    startLine: 816
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.API
+  summary: "\nStep dialogue.\n\nIf utterance is null, it will be generated.\nIf scripted utterances are not null they will be compared to the utterance \nand replace it if similarity score is above scripted_threshold (score is in range [0,1]).\nIf update_history is true, the dialogue history will be updated with the utterance.\n"
+  example: []
+  syntax:
+    content: public IEnumerator StepDialogue(string dialogue_id, string speaker_id, bool update_history, Action<Tuple<string, bool>> outputCallback, float scripted_threshold = 0.5F, List<string> scripted_utterances = null, string utterance = null)
+    parameters:
+    - id: dialogue_id
+      type: System.String
+      description: ''
+    - id: speaker_id
+      type: System.String
+      description: ''
+    - id: update_history
+      type: System.Boolean
+      description: ''
+    - id: outputCallback
+      type: System.Action{System.Tuple{System.String,System.Boolean}}
+      description: "Callback that accepts results: Tuple with utterance \nand bool flag that is True if scripted utterance was used"
+    - id: scripted_threshold
+      type: System.Single
+      description: ''
+    - id: scripted_utterances
+      type: System.Collections.Generic.List{System.String}
+      description: ''
+    - id: utterance
+      type: System.String
+      description: ''
+    return:
+      type: System.Collections.IEnumerator
+      description: ''
+    content.vb: Public Function StepDialogue(dialogue_id As String, speaker_id As String, update_history As Boolean, outputCallback As Action(Of Tuple(Of String, Boolean)), scripted_threshold As Single = 0.5F, scripted_utterances As List(Of String) = Nothing, utterance As String = Nothing) As IEnumerator
+  overload: NPCEngine.API.PersonaDialogue.StepDialogue*
+  nameWithType.vb: PersonaDialogue.StepDialogue(String, String, Boolean, Action(Of Tuple(Of String, Boolean)), Single, List(Of String), String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: NPCEngine.API.PersonaDialogue.StepDialogue(System.String, System.String, System.Boolean, System.Action(Of System.Tuple(Of System.String, System.Boolean)), System.Single, System.Collections.Generic.List(Of System.String), System.String)
+  name.vb: StepDialogue(String, String, Boolean, Action(Of Tuple(Of String, Boolean)), Single, List(Of String), String)
+references:
+- uid: NPCEngine.API
+  commentId: N:NPCEngine.API
+  name: NPCEngine.API
+  nameWithType: NPCEngine.API
+  fullName: NPCEngine.API
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: NPCEngine.API.PersonaDialogue.StartDialogue*
+  commentId: Overload:NPCEngine.API.PersonaDialogue.StartDialogue
+  name: StartDialogue
+  nameWithType: PersonaDialogue.StartDialogue
+  fullName: NPCEngine.API.PersonaDialogue.StartDialogue
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Action{System.String}
+  commentId: T:System.Action{System.String}
+  parent: System
+  definition: System.Action`1
+  name: Action<String>
+  nameWithType: Action<String>
+  fullName: System.Action<System.String>
+  nameWithType.vb: Action(Of String)
+  fullName.vb: System.Action(Of System.String)
+  name.vb: Action(Of String)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.IEnumerator
+  commentId: T:System.Collections.IEnumerator
+  parent: System.Collections
+  isExternal: true
+  name: IEnumerator
+  nameWithType: IEnumerator
+  fullName: System.Collections.IEnumerator
+- uid: System.Action`1
+  commentId: T:System.Action`1
+  isExternal: true
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections
+- uid: NPCEngine.API.PersonaDialogue.StepDialogue*
+  commentId: Overload:NPCEngine.API.PersonaDialogue.StepDialogue
+  name: StepDialogue
+  nameWithType: PersonaDialogue.StepDialogue
+  fullName: NPCEngine.API.PersonaDialogue.StepDialogue
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.Action{System.Tuple{System.String,System.Boolean}}
+  commentId: T:System.Action{System.Tuple{System.String,System.Boolean}}
+  parent: System
+  definition: System.Action`1
+  name: Action<Tuple<String, Boolean>>
+  nameWithType: Action<Tuple<String, Boolean>>
+  fullName: System.Action<System.Tuple<System.String, System.Boolean>>
+  nameWithType.vb: Action(Of Tuple(Of String, Boolean))
+  fullName.vb: System.Action(Of System.Tuple(Of System.String, System.Boolean))
+  name.vb: Action(Of Tuple(Of String, Boolean))
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Tuple`2
+    name: Tuple
+    nameWithType: Tuple
+    fullName: System.Tuple
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Tuple`2
+    name: Tuple
+    nameWithType: Tuple
+    fullName: System.Tuple
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: System.Collections.Generic.List{System.String}
+  commentId: T:System.Collections.Generic.List{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<String>
+  nameWithType: List<String>
+  fullName: System.Collections.Generic.List<System.String>
+  nameWithType.vb: List(Of String)
+  fullName.vb: System.Collections.Generic.List(Of System.String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic

@@ -9,6 +9,9 @@ using NPCEngine.Utility;
 
 namespace NPCEngine.Components
 {
+    /// <summary>
+    /// MonoBehaviour that handles dialogue initiation and passing recognized speech to NPCs.
+    /// </summary>
     public class PlayerCharacter : Singleton<PlayerCharacter>
     {
 
@@ -17,14 +20,15 @@ namespace NPCEngine.Components
             DontDestroyOnLoad(gameObject);
         }
 
-        public string settingName;
-        [TextArea(3, 10)]
-        public string settingDescription;
+        /// <summary>
+        /// Location description of the player.
+        /// </summary>
+        public Location currentLocation;
 
-        public string characterName;
-
-        [TextArea(3, 10)]
-        public string persona;
+        /// <summary>
+        /// Character description of the player.
+        /// </summary>
+        public Character character;
 
         [Tooltip("This camera will check if Player sees NPC to initiate dialog")]
         public Camera CheckCamera;
@@ -40,6 +44,7 @@ namespace NPCEngine.Components
         [Range(0, 0.5f)]
         public float HorizontalMargin = 0.2f;
 
+        
         public AbstractSpeechToText SpeechToText;
 
         private NonPlayerCharacter currentDialog;
@@ -58,17 +63,29 @@ namespace NPCEngine.Components
         }
 
 
-
+        /// <summary>
+        /// Adds NPC to the list of potential conversants.
+        /// </summary>
+        /// <param name="agent"></param>
         public void RegisterDialogueCandidate(NonPlayerCharacter agent)
         {
             activeDialogAgents.Add(agent);
         }
 
+        /// <summary>
+        /// Remove NPC from the list of potential conversants.
+        /// </summary>
+        /// <param name="agent"></param>
         public void DeregisterDialogueCandidate(NonPlayerCharacter agent)
         {
             activeDialogAgents.Remove(agent);
         }
 
+        /// <summary>
+        /// Check if NPC is registered as a dialogue candidate.
+        /// </summary>
+        /// <param name="agent"></param>
+        /// <returns></returns>
         public bool IsRegistered(NonPlayerCharacter agent)
         {
             if (activeDialogAgents == null)
@@ -79,6 +96,9 @@ namespace NPCEngine.Components
             return activeDialogAgents.Contains(agent);
         }
 
+        /// <summary>
+        /// Check if NPC is seen.
+        /// </summary>
         public bool CheckIsSeen(Vector3 dialogAgentPosition)
         {
             var cameraPoint = PlayerCharacter.Instance.CheckCamera.WorldToViewportPoint(dialogAgentPosition);
@@ -90,11 +110,14 @@ namespace NPCEngine.Components
             );
         }
 
+        /// <summary>
+        /// Leave current dialogue.
+        /// </summary>
         public void LeaveDialog()
         {
             currentDialog.EndDialog();
         }
-
+        
         private void OnDialogueEnd()
         {
             currentDialog.OnDialogueLine.RemoveListener(SetContextFromChatLine);
@@ -126,18 +149,18 @@ namespace NPCEngine.Components
                     currentDialog.OnProcessingEnd.AddListener(SpeechToText.StartListening);
                     currentDialog.OnProcessingStart.AddListener(SpeechToText.StopListening);
                     currentDialog.OnDialogueEnd.AddListener(OnDialogueEnd);
-                    currentDialog.HandleLine(characterName, persona, utterance);
+                    currentDialog.HandleLine(character.Name, character.Persona, utterance);
                 }
             }
             else
             {
-                currentDialog.HandleLine(characterName, persona, utterance);
+                currentDialog.HandleLine(character.Name, character.Persona, utterance);
             }
         }
 
         private void SetContextFromChatLine(ChatLine chatLine, bool _)
         {
-            if (chatLine.speaker != characterName)
+            if (chatLine.speaker != character.Name)
             {
                 SpeechToText.Context = chatLine.line;
             }

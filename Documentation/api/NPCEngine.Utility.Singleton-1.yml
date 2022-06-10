@@ -5,6 +5,7 @@ items:
   id: Singleton`1
   parent: NPCEngine.Utility
   children:
+  - NPCEngine.Utility.Singleton`1.GetInstance
   - NPCEngine.Utility.Singleton`1.Instance
   langs:
   - csharp
@@ -16,19 +17,27 @@ items:
   source:
     id: Singleton
     path: ''
-    startLine: 2777
+    startLine: 4990
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Utility
+  summary: "\nSingleton <code>MonoBehaviour</code> base class. \n"
+  example: []
   syntax:
     content: 'public class Singleton<T> : MonoBehaviour where T : MonoBehaviour'
     typeParameters:
     - id: T
+      description: ''
     content.vb: >-
       Public Class Singleton(Of T As MonoBehaviour)
           Inherits MonoBehaviour
   inheritance:
   - System.Object
+  derivedClasses:
+  - NPCEngine.Components.NPCEngineManager
+  - NPCEngine.Components.PlayerCharacter
+  - NPCEngine.NPCEngineConfig
+  - NPCEngine.Utility.CoroutineUtility
   nameWithType.vb: Singleton(Of T)
   modifiers.csharp:
   - public
@@ -52,7 +61,7 @@ items:
   source:
     id: Instance
     path: ''
-    startLine: 2781
+    startLine: 4994
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Utility
@@ -73,6 +82,38 @@ items:
   - Shared
   - ReadOnly
   fullName.vb: NPCEngine.Utility.Singleton(Of T).Instance
+- uid: NPCEngine.Utility.Singleton`1.GetInstance
+  commentId: M:NPCEngine.Utility.Singleton`1.GetInstance
+  id: GetInstance
+  parent: NPCEngine.Utility.Singleton`1
+  langs:
+  - csharp
+  - vb
+  name: GetInstance()
+  nameWithType: Singleton<T>.GetInstance()
+  fullName: NPCEngine.Utility.Singleton<T>.GetInstance()
+  type: Method
+  source:
+    id: GetInstance
+    path: ''
+    startLine: 5019
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Utility
+  syntax:
+    content: public static T GetInstance()
+    return:
+      type: '{T}'
+    content.vb: Public Shared Function GetInstance As T
+  overload: NPCEngine.Utility.Singleton`1.GetInstance*
+  nameWithType.vb: Singleton(Of T).GetInstance()
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: NPCEngine.Utility.Singleton(Of T).GetInstance()
 references:
 - uid: NPCEngine.Utility
   commentId: N:NPCEngine.Utility
@@ -106,7 +147,13 @@ references:
   nameWithType: T
   fullName: T
 - uid: T
-  commentId: '!:T'
   name: T
   nameWithType: T
   fullName: T
+- uid: NPCEngine.Utility.Singleton`1.GetInstance*
+  commentId: Overload:NPCEngine.Utility.Singleton`1.GetInstance
+  name: GetInstance
+  nameWithType: Singleton<T>.GetInstance
+  fullName: NPCEngine.Utility.Singleton<T>.GetInstance
+  nameWithType.vb: Singleton(Of T).GetInstance
+  fullName.vb: NPCEngine.Utility.Singleton(Of T).GetInstance

@@ -1,0 +1,118 @@
+### YamlMime:ManagedReference
+items:
+- uid: NPCEngine.Components.Location
+  commentId: T:NPCEngine.Components.Location
+  id: Location
+  parent: NPCEngine.Components
+  children:
+  - NPCEngine.Components.Location.Description
+  - NPCEngine.Components.Location.Name
+  langs:
+  - csharp
+  - vb
+  name: Location
+  nameWithType: Location
+  fullName: NPCEngine.Components.Location
+  type: Class
+  source:
+    id: Location
+    path: ''
+    startLine: 1652
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  summary: "\nLocation natural language description.\n"
+  example: []
+  syntax:
+    content: 'public class Location : ScriptableObject'
+    content.vb: >-
+      Public Class Location
+          Inherits ScriptableObject
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: NPCEngine.Components.Location.Name
+  commentId: F:NPCEngine.Components.Location.Name
+  id: Name
+  parent: NPCEngine.Components.Location
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: Location.Name
+  fullName: NPCEngine.Components.Location.Name
+  type: Field
+  source:
+    id: Name
+    path: ''
+    startLine: 1655
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  syntax:
+    content: public string Name
+    return:
+      type: System.String
+    content.vb: Public Name As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.Components.Location.Description
+  commentId: F:NPCEngine.Components.Location.Description
+  id: Description
+  parent: NPCEngine.Components.Location
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: Location.Description
+  fullName: NPCEngine.Components.Location.Description
+  type: Field
+  source:
+    id: Description
+    path: ''
+    startLine: 1658
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  syntax:
+    content: public string Description
+    return:
+      type: System.String
+    content.vb: Public Description As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: NPCEngine.Components
+  commentId: N:NPCEngine.Components
+  name: NPCEngine.Components
+  nameWithType: NPCEngine.Components
+  fullName: NPCEngine.Components
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

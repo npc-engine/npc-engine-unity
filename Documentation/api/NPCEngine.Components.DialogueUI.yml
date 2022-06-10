@@ -25,7 +25,7 @@ items:
   source:
     id: DialogueUI
     path: ''
-    startLine: 946
+    startLine: 1386
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -58,7 +58,7 @@ items:
   source:
     id: uiObject
     path: ''
-    startLine: 952
+    startLine: 1392
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -87,7 +87,7 @@ items:
   source:
     id: lineLimit
     path: ''
-    startLine: 957
+    startLine: 1397
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -116,7 +116,7 @@ items:
   source:
     id: dialogueHistory
     path: ''
-    startLine: 964
+    startLine: 1404
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -145,7 +145,7 @@ items:
   source:
     id: dialogueTopics
     path: ''
-    startLine: 970
+    startLine: 1410
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -174,7 +174,7 @@ items:
   source:
     id: usernameColor
     path: ''
-    startLine: 972
+    startLine: 1412
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -201,7 +201,7 @@ items:
   source:
     id: highlightColor
     path: ''
-    startLine: 973
+    startLine: 1413
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -228,10 +228,12 @@ items:
   source:
     id: AddLine
     path: ''
-    startLine: 978
+    startLine: 1421
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nAdds the given text to the dialogue history. Used with the OnDialogueLine callback.\n"
+  example: []
   syntax:
     content: public void AddLine(ChatLine chatLine, bool highlight = false)
     parameters:
@@ -259,10 +261,12 @@ items:
   source:
     id: UpdateTopics
     path: ''
-    startLine: 995
+    startLine: 1441
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nUpdates the dialogue topics. Used with NonPlayerCharacter.OnTopicHintsUpdate.\n"
+  example: []
   syntax:
     content: public void UpdateTopics(List<string> topics)
     parameters:
@@ -291,10 +295,12 @@ items:
   source:
     id: Enable
     path: ''
-    startLine: 1000
+    startLine: 1449
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nEnable Dialogue UI.\n"
+  example: []
   syntax:
     content: public void Enable()
     content.vb: Public Sub Enable
@@ -317,10 +323,12 @@ items:
   source:
     id: Disable
     path: ''
-    startLine: 1007
+    startLine: 1459
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nDisable Dialogue UI.\n"
+  example: []
   syntax:
     content: public void Disable()
     content.vb: Public Sub Disable

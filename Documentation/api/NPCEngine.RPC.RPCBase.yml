@@ -1,0 +1,227 @@
+### YamlMime:ManagedReference
+items:
+- uid: NPCEngine.RPC.RPCBase
+  commentId: T:NPCEngine.RPC.RPCBase
+  id: RPCBase
+  parent: NPCEngine.RPC
+  children:
+  - NPCEngine.RPC.RPCBase.Run``2(System.String,``0)
+  - NPCEngine.RPC.RPCBase.serviceId
+  langs:
+  - csharp
+  - vb
+  name: RPCBase
+  nameWithType: RPCBase
+  fullName: NPCEngine.RPC.RPCBase
+  type: Class
+  source:
+    id: RPCBase
+    path: ''
+    startLine: 3899
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.RPC
+  syntax:
+    content: 'public abstract class RPCBase : MonoBehaviour'
+    content.vb: >-
+      Public MustInherit Class RPCBase
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+- uid: NPCEngine.RPC.RPCBase.serviceId
+  commentId: F:NPCEngine.RPC.RPCBase.serviceId
+  id: serviceId
+  parent: NPCEngine.RPC.RPCBase
+  langs:
+  - csharp
+  - vb
+  name: serviceId
+  nameWithType: RPCBase.serviceId
+  fullName: NPCEngine.RPC.RPCBase.serviceId
+  type: Field
+  source:
+    id: serviceId
+    path: ''
+    startLine: 3906
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.RPC
+  syntax:
+    content: public string serviceId
+    return:
+      type: System.String
+    content.vb: Public serviceId As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.RPC.RPCBase.Run``2(System.String,``0)
+  commentId: M:NPCEngine.RPC.RPCBase.Run``2(System.String,``0)
+  id: Run``2(System.String,``0)
+  parent: NPCEngine.RPC.RPCBase
+  langs:
+  - csharp
+  - vb
+  name: Run<P, R>(String, P)
+  nameWithType: RPCBase.Run<P, R>(String, P)
+  fullName: NPCEngine.RPC.RPCBase.Run<P, R>(System.String, P)
+  type: Method
+  source:
+    id: Run
+    path: ''
+    startLine: 3912
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.RPC
+  syntax:
+    content: >-
+      public ResultFuture<R> Run<P, R>(string methodName, P parameters)
+          where P : new()
+    parameters:
+    - id: methodName
+      type: System.String
+    - id: parameters
+      type: '{P}'
+    typeParameters:
+    - id: P
+    - id: R
+    return:
+      type: NPCEngine.ResultFuture{{R}}
+    content.vb: Public Function Run(Of P As New, R)(methodName As String, parameters As P) As ResultFuture(Of R)
+  overload: NPCEngine.RPC.RPCBase.Run*
+  nameWithType.vb: RPCBase.Run(Of P, R)(String, P)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: NPCEngine.RPC.RPCBase.Run(Of P, R)(System.String, P)
+  name.vb: Run(Of P, R)(String, P)
+references:
+- uid: NPCEngine.RPC
+  commentId: N:NPCEngine.RPC
+  name: NPCEngine.RPC
+  nameWithType: NPCEngine.RPC
+  fullName: NPCEngine.RPC
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: NPCEngine.RPC.RPCBase.Run*
+  commentId: Overload:NPCEngine.RPC.RPCBase.Run
+  name: Run
+  nameWithType: RPCBase.Run
+  fullName: NPCEngine.RPC.RPCBase.Run
+- uid: '{P}'
+  commentId: '!:P'
+  definition: P
+  name: P
+  nameWithType: P
+  fullName: P
+- uid: NPCEngine.ResultFuture{{R}}
+  commentId: T:NPCEngine.ResultFuture{``1}
+  parent: NPCEngine
+  definition: NPCEngine.ResultFuture`1
+  name: ResultFuture<R>
+  nameWithType: ResultFuture<R>
+  fullName: NPCEngine.ResultFuture<R>
+  nameWithType.vb: ResultFuture(Of R)
+  fullName.vb: NPCEngine.ResultFuture(Of R)
+  name.vb: ResultFuture(Of R)
+  spec.csharp:
+  - uid: NPCEngine.ResultFuture`1
+    name: ResultFuture
+    nameWithType: ResultFuture
+    fullName: NPCEngine.ResultFuture
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: R
+    nameWithType: R
+    fullName: R
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: NPCEngine.ResultFuture`1
+    name: ResultFuture
+    nameWithType: ResultFuture
+    fullName: NPCEngine.ResultFuture
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: R
+    nameWithType: R
+    fullName: R
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: P
+  commentId: '!:P'
+  name: P
+  nameWithType: P
+  fullName: P
+- uid: NPCEngine.ResultFuture`1
+  commentId: T:NPCEngine.ResultFuture`1
+  name: ResultFuture<ReturnType>
+  nameWithType: ResultFuture<ReturnType>
+  fullName: NPCEngine.ResultFuture<ReturnType>
+  nameWithType.vb: ResultFuture(Of ReturnType)
+  fullName.vb: NPCEngine.ResultFuture(Of ReturnType)
+  name.vb: ResultFuture(Of ReturnType)
+  spec.csharp:
+  - uid: NPCEngine.ResultFuture`1
+    name: ResultFuture
+    nameWithType: ResultFuture
+    fullName: NPCEngine.ResultFuture
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ReturnType
+    nameWithType: ReturnType
+    fullName: ReturnType
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: NPCEngine.ResultFuture`1
+    name: ResultFuture
+    nameWithType: ResultFuture
+    fullName: NPCEngine.ResultFuture
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ReturnType
+    nameWithType: ReturnType
+    fullName: ReturnType
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NPCEngine
+  commentId: N:NPCEngine
+  name: NPCEngine
+  nameWithType: NPCEngine
+  fullName: NPCEngine

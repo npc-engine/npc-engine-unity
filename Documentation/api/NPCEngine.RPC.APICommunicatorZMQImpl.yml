@@ -1,0 +1,358 @@
+### YamlMime:ManagedReference
+items:
+- uid: NPCEngine.RPC.APICommunicatorZMQImpl
+  commentId: T:NPCEngine.RPC.APICommunicatorZMQImpl
+  id: APICommunicatorZMQImpl
+  parent: NPCEngine.RPC
+  children:
+  - NPCEngine.RPC.APICommunicatorZMQImpl.#ctor(System.String,System.String)
+  - NPCEngine.RPC.APICommunicatorZMQImpl.DispatchRequestsCoroutine(System.Collections.Generic.Queue{NPCEngine.RPC.Request})
+  - NPCEngine.RPC.APICommunicatorZMQImpl.Finalize
+  langs:
+  - csharp
+  - vb
+  name: APICommunicatorZMQImpl
+  nameWithType: APICommunicatorZMQImpl
+  fullName: NPCEngine.RPC.APICommunicatorZMQImpl
+  type: Class
+  source:
+    id: APICommunicatorZMQImpl
+    path: ''
+    startLine: 4040
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.RPC
+  summary: "\nRPC loop implementation for ZMQ protocol.\n"
+  example: []
+  syntax:
+    content: 'public class APICommunicatorZMQImpl : RequestDispatcherImpl'
+    content.vb: >-
+      Public Class APICommunicatorZMQImpl
+          Inherits RequestDispatcherImpl
+  inheritance:
+  - System.Object
+  - NPCEngine.RPC.RequestDispatcherImpl
+  inheritedMembers:
+  - NPCEngine.RPC.RequestDispatcherImpl.id
+  - NPCEngine.RPC.RequestDispatcherImpl.address
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: NPCEngine.RPC.APICommunicatorZMQImpl.#ctor(System.String,System.String)
+  commentId: M:NPCEngine.RPC.APICommunicatorZMQImpl.#ctor(System.String,System.String)
+  id: '#ctor(System.String,System.String)'
+  parent: NPCEngine.RPC.APICommunicatorZMQImpl
+  langs:
+  - csharp
+  - vb
+  name: APICommunicatorZMQImpl(String, String)
+  nameWithType: APICommunicatorZMQImpl.APICommunicatorZMQImpl(String, String)
+  fullName: NPCEngine.RPC.APICommunicatorZMQImpl.APICommunicatorZMQImpl(System.String, System.String)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 4044
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.RPC
+  syntax:
+    content: public APICommunicatorZMQImpl(string address, string id)
+    parameters:
+    - id: address
+      type: System.String
+    - id: id
+      type: System.String
+    content.vb: Public Sub New(address As String, id As String)
+  overload: NPCEngine.RPC.APICommunicatorZMQImpl.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.RPC.APICommunicatorZMQImpl.Finalize
+  commentId: M:NPCEngine.RPC.APICommunicatorZMQImpl.Finalize
+  id: Finalize
+  parent: NPCEngine.RPC.APICommunicatorZMQImpl
+  langs:
+  - csharp
+  - vb
+  name: Finalize()
+  nameWithType: APICommunicatorZMQImpl.Finalize()
+  fullName: NPCEngine.RPC.APICommunicatorZMQImpl.Finalize()
+  type: Method
+  source:
+    id: Finalize
+    path: ''
+    startLine: 4054
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.RPC
+  syntax:
+    content: protected void Finalize()
+    content.vb: Protected Sub Finalize
+  overload: NPCEngine.RPC.APICommunicatorZMQImpl.Finalize*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: NPCEngine.RPC.APICommunicatorZMQImpl.DispatchRequestsCoroutine(System.Collections.Generic.Queue{NPCEngine.RPC.Request})
+  commentId: M:NPCEngine.RPC.APICommunicatorZMQImpl.DispatchRequestsCoroutine(System.Collections.Generic.Queue{NPCEngine.RPC.Request})
+  id: DispatchRequestsCoroutine(System.Collections.Generic.Queue{NPCEngine.RPC.Request})
+  parent: NPCEngine.RPC.APICommunicatorZMQImpl
+  langs:
+  - csharp
+  - vb
+  name: DispatchRequestsCoroutine(Queue<Request>)
+  nameWithType: APICommunicatorZMQImpl.DispatchRequestsCoroutine(Queue<Request>)
+  fullName: NPCEngine.RPC.APICommunicatorZMQImpl.DispatchRequestsCoroutine(System.Collections.Generic.Queue<NPCEngine.RPC.Request>)
+  type: Method
+  source:
+    id: DispatchRequestsCoroutine
+    path: ''
+    startLine: 4060
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.RPC
+  syntax:
+    content: public override IEnumerator DispatchRequestsCoroutine(Queue<Request> taskQueue)
+    parameters:
+    - id: taskQueue
+      type: System.Collections.Generic.Queue{NPCEngine.RPC.Request}
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Public Overrides Function DispatchRequestsCoroutine(taskQueue As Queue(Of Request)) As IEnumerator
+  overridden: NPCEngine.RPC.RequestDispatcherImpl.DispatchRequestsCoroutine(System.Collections.Generic.Queue{NPCEngine.RPC.Request})
+  overload: NPCEngine.RPC.APICommunicatorZMQImpl.DispatchRequestsCoroutine*
+  nameWithType.vb: APICommunicatorZMQImpl.DispatchRequestsCoroutine(Queue(Of Request))
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+  fullName.vb: NPCEngine.RPC.APICommunicatorZMQImpl.DispatchRequestsCoroutine(System.Collections.Generic.Queue(Of NPCEngine.RPC.Request))
+  name.vb: DispatchRequestsCoroutine(Queue(Of Request))
+references:
+- uid: NPCEngine.RPC
+  commentId: N:NPCEngine.RPC
+  name: NPCEngine.RPC
+  nameWithType: NPCEngine.RPC
+  fullName: NPCEngine.RPC
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: NPCEngine.RPC.RequestDispatcherImpl
+  commentId: T:NPCEngine.RPC.RequestDispatcherImpl
+  parent: NPCEngine.RPC
+  name: RequestDispatcherImpl
+  nameWithType: RequestDispatcherImpl
+  fullName: NPCEngine.RPC.RequestDispatcherImpl
+- uid: NPCEngine.RPC.RequestDispatcherImpl.id
+  commentId: F:NPCEngine.RPC.RequestDispatcherImpl.id
+  parent: NPCEngine.RPC.RequestDispatcherImpl
+  name: id
+  nameWithType: RequestDispatcherImpl.id
+  fullName: NPCEngine.RPC.RequestDispatcherImpl.id
+- uid: NPCEngine.RPC.RequestDispatcherImpl.address
+  commentId: F:NPCEngine.RPC.RequestDispatcherImpl.address
+  parent: NPCEngine.RPC.RequestDispatcherImpl
+  name: address
+  nameWithType: RequestDispatcherImpl.address
+  fullName: NPCEngine.RPC.RequestDispatcherImpl.address
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: NPCEngine.RPC.APICommunicatorZMQImpl.#ctor*
+  commentId: Overload:NPCEngine.RPC.APICommunicatorZMQImpl.#ctor
+  name: APICommunicatorZMQImpl
+  nameWithType: APICommunicatorZMQImpl.APICommunicatorZMQImpl
+  fullName: NPCEngine.RPC.APICommunicatorZMQImpl.APICommunicatorZMQImpl
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: NPCEngine.RPC.APICommunicatorZMQImpl.Finalize*
+  commentId: Overload:NPCEngine.RPC.APICommunicatorZMQImpl.Finalize
+  name: Finalize
+  nameWithType: APICommunicatorZMQImpl.Finalize
+  fullName: NPCEngine.RPC.APICommunicatorZMQImpl.Finalize
+- uid: NPCEngine.RPC.RequestDispatcherImpl.DispatchRequestsCoroutine(System.Collections.Generic.Queue{NPCEngine.RPC.Request})
+  commentId: M:NPCEngine.RPC.RequestDispatcherImpl.DispatchRequestsCoroutine(System.Collections.Generic.Queue{NPCEngine.RPC.Request})
+  parent: NPCEngine.RPC.RequestDispatcherImpl
+  isExternal: true
+  name: DispatchRequestsCoroutine(Queue<Request>)
+  nameWithType: RequestDispatcherImpl.DispatchRequestsCoroutine(Queue<Request>)
+  fullName: NPCEngine.RPC.RequestDispatcherImpl.DispatchRequestsCoroutine(System.Collections.Generic.Queue<NPCEngine.RPC.Request>)
+  nameWithType.vb: RequestDispatcherImpl.DispatchRequestsCoroutine(Queue(Of Request))
+  fullName.vb: NPCEngine.RPC.RequestDispatcherImpl.DispatchRequestsCoroutine(System.Collections.Generic.Queue(Of NPCEngine.RPC.Request))
+  name.vb: DispatchRequestsCoroutine(Queue(Of Request))
+  spec.csharp:
+  - uid: NPCEngine.RPC.RequestDispatcherImpl.DispatchRequestsCoroutine(System.Collections.Generic.Queue{NPCEngine.RPC.Request})
+    name: DispatchRequestsCoroutine
+    nameWithType: RequestDispatcherImpl.DispatchRequestsCoroutine
+    fullName: NPCEngine.RPC.RequestDispatcherImpl.DispatchRequestsCoroutine
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.Queue`1
+    name: Queue
+    nameWithType: Queue
+    fullName: System.Collections.Generic.Queue
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: NPCEngine.RPC.Request
+    name: Request
+    nameWithType: Request
+    fullName: NPCEngine.RPC.Request
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: NPCEngine.RPC.RequestDispatcherImpl.DispatchRequestsCoroutine(System.Collections.Generic.Queue{NPCEngine.RPC.Request})
+    name: DispatchRequestsCoroutine
+    nameWithType: RequestDispatcherImpl.DispatchRequestsCoroutine
+    fullName: NPCEngine.RPC.RequestDispatcherImpl.DispatchRequestsCoroutine
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.Queue`1
+    name: Queue
+    nameWithType: Queue
+    fullName: System.Collections.Generic.Queue
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: NPCEngine.RPC.Request
+    name: Request
+    nameWithType: Request
+    fullName: NPCEngine.RPC.Request
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NPCEngine.RPC.APICommunicatorZMQImpl.DispatchRequestsCoroutine*
+  commentId: Overload:NPCEngine.RPC.APICommunicatorZMQImpl.DispatchRequestsCoroutine
+  name: DispatchRequestsCoroutine
+  nameWithType: APICommunicatorZMQImpl.DispatchRequestsCoroutine
+  fullName: NPCEngine.RPC.APICommunicatorZMQImpl.DispatchRequestsCoroutine
+- uid: System.Collections.Generic.Queue{NPCEngine.RPC.Request}
+  commentId: T:System.Collections.Generic.Queue{NPCEngine.RPC.Request}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Queue`1
+  name: Queue<Request>
+  nameWithType: Queue<Request>
+  fullName: System.Collections.Generic.Queue<NPCEngine.RPC.Request>
+  nameWithType.vb: Queue(Of Request)
+  fullName.vb: System.Collections.Generic.Queue(Of NPCEngine.RPC.Request)
+  name.vb: Queue(Of Request)
+  spec.csharp:
+  - uid: System.Collections.Generic.Queue`1
+    name: Queue
+    nameWithType: Queue
+    fullName: System.Collections.Generic.Queue
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: NPCEngine.RPC.Request
+    name: Request
+    nameWithType: Request
+    fullName: NPCEngine.RPC.Request
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Queue`1
+    name: Queue
+    nameWithType: Queue
+    fullName: System.Collections.Generic.Queue
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: NPCEngine.RPC.Request
+    name: Request
+    nameWithType: Request
+    fullName: NPCEngine.RPC.Request
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.IEnumerator
+  commentId: T:System.Collections.IEnumerator
+  parent: System.Collections
+  isExternal: true
+  name: IEnumerator
+  nameWithType: IEnumerator
+  fullName: System.Collections.IEnumerator
+- uid: System.Collections.Generic.Queue`1
+  commentId: T:System.Collections.Generic.Queue`1
+  isExternal: true
+  name: Queue<T>
+  nameWithType: Queue<T>
+  fullName: System.Collections.Generic.Queue<T>
+  nameWithType.vb: Queue(Of T)
+  fullName.vb: System.Collections.Generic.Queue(Of T)
+  name.vb: Queue(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.Queue`1
+    name: Queue
+    nameWithType: Queue
+    fullName: System.Collections.Generic.Queue
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Queue`1
+    name: Queue
+    nameWithType: Queue
+    fullName: System.Collections.Generic.Queue
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections

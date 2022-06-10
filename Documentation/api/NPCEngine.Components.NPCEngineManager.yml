@@ -1,0 +1,1045 @@
+### YamlMime:ManagedReference
+items:
+- uid: NPCEngine.Components.NPCEngineManager
+  commentId: T:NPCEngine.Components.NPCEngineManager
+  id: NPCEngineManager
+  parent: NPCEngine.Components
+  children:
+  - NPCEngine.Components.NPCEngineManager.DownloadModel(System.String)
+  - NPCEngine.Components.NPCEngineManager.GetAPI``1
+  - NPCEngine.Components.NPCEngineManager.GetAPI``1(System.String)
+  - NPCEngine.Components.NPCEngineManager.InferenceEngineProcessId
+  - NPCEngine.Components.NPCEngineManager.InferenceEngineRunning
+  - NPCEngine.Components.NPCEngineManager.Services
+  - NPCEngine.Components.NPCEngineManager.ServicesById
+  - NPCEngine.Components.NPCEngineManager.ServiceStatuses
+  - NPCEngine.Components.NPCEngineManager.ServiceStatusesById
+  - NPCEngine.Components.NPCEngineManager.StartInferenceEngine
+  - NPCEngine.Components.NPCEngineManager.StopInferenceEngine
+  - NPCEngine.Components.NPCEngineManager.UpdateServices
+  - NPCEngine.Components.NPCEngineManager.UpdateServiceStatuses
+  langs:
+  - csharp
+  - vb
+  name: NPCEngineManager
+  nameWithType: NPCEngineManager
+  fullName: NPCEngine.Components.NPCEngineManager
+  type: Class
+  source:
+    id: NPCEngineManager
+    path: ''
+    startLine: 2004
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  summary: "\nManager class that handles services and server lifetime and status.\n"
+  example: []
+  syntax:
+    content: 'public class NPCEngineManager : Singleton<NPCEngineManager>'
+    content.vb: >-
+      Public Class NPCEngineManager
+          Inherits Singleton(Of NPCEngineManager)
+  inheritance:
+  - System.Object
+  - NPCEngine.Utility.Singleton{NPCEngine.Components.NPCEngineManager}
+  inheritedMembers:
+  - NPCEngine.Utility.Singleton{NPCEngine.Components.NPCEngineManager}.Instance
+  - NPCEngine.Utility.Singleton{NPCEngine.Components.NPCEngineManager}.GetInstance
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: NPCEngine.Components.NPCEngineManager.Services
+  commentId: P:NPCEngine.Components.NPCEngineManager.Services
+  id: Services
+  parent: NPCEngine.Components.NPCEngineManager
+  langs:
+  - csharp
+  - vb
+  name: Services
+  nameWithType: NPCEngineManager.Services
+  fullName: NPCEngine.Components.NPCEngineManager.Services
+  type: Property
+  source:
+    id: Services
+    path: ''
+    startLine: 2010
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  syntax:
+    content: public List<ServiceMetadata> Services { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{NPCEngine.API.ServiceMetadata}
+    content.vb: Public ReadOnly Property Services As List(Of ServiceMetadata)
+  overload: NPCEngine.Components.NPCEngineManager.Services*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: NPCEngine.Components.NPCEngineManager.ServicesById
+  commentId: P:NPCEngine.Components.NPCEngineManager.ServicesById
+  id: ServicesById
+  parent: NPCEngine.Components.NPCEngineManager
+  langs:
+  - csharp
+  - vb
+  name: ServicesById
+  nameWithType: NPCEngineManager.ServicesById
+  fullName: NPCEngine.Components.NPCEngineManager.ServicesById
+  type: Property
+  source:
+    id: ServicesById
+    path: ''
+    startLine: 2018
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  syntax:
+    content: public Dictionary<string, ServiceMetadata> ServicesById { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.Dictionary{System.String,NPCEngine.API.ServiceMetadata}
+    content.vb: Public ReadOnly Property ServicesById As Dictionary(Of String, ServiceMetadata)
+  overload: NPCEngine.Components.NPCEngineManager.ServicesById*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: NPCEngine.Components.NPCEngineManager.ServiceStatuses
+  commentId: P:NPCEngine.Components.NPCEngineManager.ServiceStatuses
+  id: ServiceStatuses
+  parent: NPCEngine.Components.NPCEngineManager
+  langs:
+  - csharp
+  - vb
+  name: ServiceStatuses
+  nameWithType: NPCEngineManager.ServiceStatuses
+  fullName: NPCEngine.Components.NPCEngineManager.ServiceStatuses
+  type: Property
+  source:
+    id: ServiceStatuses
+    path: ''
+    startLine: 2033
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  syntax:
+    content: public List<ServiceStatus> ServiceStatuses { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{NPCEngine.API.ServiceStatus}
+    content.vb: Public ReadOnly Property ServiceStatuses As List(Of ServiceStatus)
+  overload: NPCEngine.Components.NPCEngineManager.ServiceStatuses*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: NPCEngine.Components.NPCEngineManager.ServiceStatusesById
+  commentId: P:NPCEngine.Components.NPCEngineManager.ServiceStatusesById
+  id: ServiceStatusesById
+  parent: NPCEngine.Components.NPCEngineManager
+  langs:
+  - csharp
+  - vb
+  name: ServiceStatusesById
+  nameWithType: NPCEngineManager.ServiceStatusesById
+  fullName: NPCEngine.Components.NPCEngineManager.ServiceStatusesById
+  type: Property
+  source:
+    id: ServiceStatusesById
+    path: ''
+    startLine: 2045
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  syntax:
+    content: public Dictionary<string, ServiceStatus> ServiceStatusesById { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.Dictionary{System.String,NPCEngine.API.ServiceStatus}
+    content.vb: Public ReadOnly Property ServiceStatusesById As Dictionary(Of String, ServiceStatus)
+  overload: NPCEngine.Components.NPCEngineManager.ServiceStatusesById*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: NPCEngine.Components.NPCEngineManager.InferenceEngineProcessId
+  commentId: P:NPCEngine.Components.NPCEngineManager.InferenceEngineProcessId
+  id: InferenceEngineProcessId
+  parent: NPCEngine.Components.NPCEngineManager
+  langs:
+  - csharp
+  - vb
+  name: InferenceEngineProcessId
+  nameWithType: NPCEngineManager.InferenceEngineProcessId
+  fullName: NPCEngine.Components.NPCEngineManager.InferenceEngineProcessId
+  type: Property
+  source:
+    id: InferenceEngineProcessId
+    path: ''
+    startLine: 2064
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  syntax:
+    content: protected int InferenceEngineProcessId { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Protected Property InferenceEngineProcessId As Integer
+  overload: NPCEngine.Components.NPCEngineManager.InferenceEngineProcessId*
+  modifiers.csharp:
+  - protected
+  - get
+  - set
+  modifiers.vb:
+  - Protected
+- uid: NPCEngine.Components.NPCEngineManager.InferenceEngineRunning
+  commentId: P:NPCEngine.Components.NPCEngineManager.InferenceEngineRunning
+  id: InferenceEngineRunning
+  parent: NPCEngine.Components.NPCEngineManager
+  langs:
+  - csharp
+  - vb
+  name: InferenceEngineRunning
+  nameWithType: NPCEngineManager.InferenceEngineRunning
+  fullName: NPCEngine.Components.NPCEngineManager.InferenceEngineRunning
+  type: Property
+  source:
+    id: InferenceEngineRunning
+    path: ''
+    startLine: 2081
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  syntax:
+    content: public bool InferenceEngineRunning { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property InferenceEngineRunning As Boolean
+  overload: NPCEngine.Components.NPCEngineManager.InferenceEngineRunning*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: NPCEngine.Components.NPCEngineManager.StartInferenceEngine
+  commentId: M:NPCEngine.Components.NPCEngineManager.StartInferenceEngine
+  id: StartInferenceEngine
+  parent: NPCEngine.Components.NPCEngineManager
+  langs:
+  - csharp
+  - vb
+  name: StartInferenceEngine()
+  nameWithType: NPCEngineManager.StartInferenceEngine()
+  fullName: NPCEngine.Components.NPCEngineManager.StartInferenceEngine()
+  type: Method
+  source:
+    id: StartInferenceEngine
+    path: ''
+    startLine: 2103
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  summary: "\nStarts the inference engine server and managing coroutines.\n"
+  example: []
+  syntax:
+    content: public void StartInferenceEngine()
+    content.vb: Public Sub StartInferenceEngine
+  overload: NPCEngine.Components.NPCEngineManager.StartInferenceEngine*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.Components.NPCEngineManager.DownloadModel(System.String)
+  commentId: M:NPCEngine.Components.NPCEngineManager.DownloadModel(System.String)
+  id: DownloadModel(System.String)
+  parent: NPCEngine.Components.NPCEngineManager
+  langs:
+  - csharp
+  - vb
+  name: DownloadModel(String)
+  nameWithType: NPCEngineManager.DownloadModel(String)
+  fullName: NPCEngine.Components.NPCEngineManager.DownloadModel(System.String)
+  type: Method
+  source:
+    id: DownloadModel
+    path: ''
+    startLine: 2168
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  summary: "\nDownload model by ID\n"
+  example: []
+  syntax:
+    content: public void DownloadModel(string id)
+    parameters:
+    - id: id
+      type: System.String
+      description: ''
+    content.vb: Public Sub DownloadModel(id As String)
+  overload: NPCEngine.Components.NPCEngineManager.DownloadModel*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.Components.NPCEngineManager.StopInferenceEngine
+  commentId: M:NPCEngine.Components.NPCEngineManager.StopInferenceEngine
+  id: StopInferenceEngine
+  parent: NPCEngine.Components.NPCEngineManager
+  langs:
+  - csharp
+  - vb
+  name: StopInferenceEngine()
+  nameWithType: NPCEngineManager.StopInferenceEngine()
+  fullName: NPCEngine.Components.NPCEngineManager.StopInferenceEngine()
+  type: Method
+  source:
+    id: StopInferenceEngine
+    path: ''
+    startLine: 2187
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  summary: "\nStop the inference engine server, services and dispose resources.\n"
+  example: []
+  syntax:
+    content: public void StopInferenceEngine()
+    content.vb: Public Sub StopInferenceEngine
+  overload: NPCEngine.Components.NPCEngineManager.StopInferenceEngine*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.Components.NPCEngineManager.GetAPI``1
+  commentId: M:NPCEngine.Components.NPCEngineManager.GetAPI``1
+  id: GetAPI``1
+  parent: NPCEngine.Components.NPCEngineManager
+  langs:
+  - csharp
+  - vb
+  name: GetAPI<T>()
+  nameWithType: NPCEngineManager.GetAPI<T>()
+  fullName: NPCEngine.Components.NPCEngineManager.GetAPI<T>()
+  type: Method
+  source:
+    id: GetAPI
+    path: ''
+    startLine: 2279
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  summary: "\nGet or construct API for the given type.\n"
+  example: []
+  syntax:
+    content: >-
+      public T GetAPI<T>()
+          where T : RPCBase
+    typeParameters:
+    - id: T
+      description: API type
+    return:
+      type: '{T}'
+      description: ''
+    content.vb: Public Function GetAPI(Of T As RPCBase) As T
+  overload: NPCEngine.Components.NPCEngineManager.GetAPI*
+  nameWithType.vb: NPCEngineManager.GetAPI(Of T)()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: NPCEngine.Components.NPCEngineManager.GetAPI(Of T)()
+  name.vb: GetAPI(Of T)()
+- uid: NPCEngine.Components.NPCEngineManager.GetAPI``1(System.String)
+  commentId: M:NPCEngine.Components.NPCEngineManager.GetAPI``1(System.String)
+  id: GetAPI``1(System.String)
+  parent: NPCEngine.Components.NPCEngineManager
+  langs:
+  - csharp
+  - vb
+  name: GetAPI<T>(String)
+  nameWithType: NPCEngineManager.GetAPI<T>(String)
+  fullName: NPCEngine.Components.NPCEngineManager.GetAPI<T>(System.String)
+  type: Method
+  source:
+    id: GetAPI
+    path: ''
+    startLine: 2295
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  summary: "\nGet or construct API for the given type and service ID.\n"
+  example: []
+  syntax:
+    content: >-
+      public T GetAPI<T>(string id)
+          where T : RPCBase
+    parameters:
+    - id: id
+      type: System.String
+      description: Service ID or otherwise resolvable name
+    typeParameters:
+    - id: T
+      description: API Type
+    return:
+      type: '{T}'
+      description: ''
+    content.vb: Public Function GetAPI(Of T As RPCBase)(id As String) As T
+  overload: NPCEngine.Components.NPCEngineManager.GetAPI*
+  nameWithType.vb: NPCEngineManager.GetAPI(Of T)(String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: NPCEngine.Components.NPCEngineManager.GetAPI(Of T)(System.String)
+  name.vb: GetAPI(Of T)(String)
+- uid: NPCEngine.Components.NPCEngineManager.UpdateServiceStatuses
+  commentId: M:NPCEngine.Components.NPCEngineManager.UpdateServiceStatuses
+  id: UpdateServiceStatuses
+  parent: NPCEngine.Components.NPCEngineManager
+  langs:
+  - csharp
+  - vb
+  name: UpdateServiceStatuses()
+  nameWithType: NPCEngineManager.UpdateServiceStatuses()
+  fullName: NPCEngine.Components.NPCEngineManager.UpdateServiceStatuses()
+  type: Method
+  source:
+    id: UpdateServiceStatuses
+    path: ''
+    startLine: 2313
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  summary: "\nCoroutine that updates service statuses.\n"
+  example: []
+  syntax:
+    content: public IEnumerator UpdateServiceStatuses()
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Public Function UpdateServiceStatuses As IEnumerator
+  overload: NPCEngine.Components.NPCEngineManager.UpdateServiceStatuses*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.Components.NPCEngineManager.UpdateServices
+  commentId: M:NPCEngine.Components.NPCEngineManager.UpdateServices
+  id: UpdateServices
+  parent: NPCEngine.Components.NPCEngineManager
+  langs:
+  - csharp
+  - vb
+  name: UpdateServices()
+  nameWithType: NPCEngineManager.UpdateServices()
+  fullName: NPCEngine.Components.NPCEngineManager.UpdateServices()
+  type: Method
+  source:
+    id: UpdateServices
+    path: ''
+    startLine: 2348
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  summary: "\nCoroutine that updates service list.\n"
+  example: []
+  syntax:
+    content: public IEnumerator UpdateServices()
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Public Function UpdateServices As IEnumerator
+  overload: NPCEngine.Components.NPCEngineManager.UpdateServices*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: NPCEngine.Components
+  commentId: N:NPCEngine.Components
+  name: NPCEngine.Components
+  nameWithType: NPCEngine.Components
+  fullName: NPCEngine.Components
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: NPCEngine.Utility.Singleton{NPCEngine.Components.NPCEngineManager}
+  commentId: T:NPCEngine.Utility.Singleton{NPCEngine.Components.NPCEngineManager}
+  parent: NPCEngine.Utility
+  definition: NPCEngine.Utility.Singleton`1
+  name: Singleton<NPCEngineManager>
+  nameWithType: Singleton<NPCEngineManager>
+  fullName: NPCEngine.Utility.Singleton<NPCEngine.Components.NPCEngineManager>
+  nameWithType.vb: Singleton(Of NPCEngineManager)
+  fullName.vb: NPCEngine.Utility.Singleton(Of NPCEngine.Components.NPCEngineManager)
+  name.vb: Singleton(Of NPCEngineManager)
+  spec.csharp:
+  - uid: NPCEngine.Utility.Singleton`1
+    name: Singleton
+    nameWithType: Singleton
+    fullName: NPCEngine.Utility.Singleton
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: NPCEngine.Components.NPCEngineManager
+    name: NPCEngineManager
+    nameWithType: NPCEngineManager
+    fullName: NPCEngine.Components.NPCEngineManager
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: NPCEngine.Utility.Singleton`1
+    name: Singleton
+    nameWithType: Singleton
+    fullName: NPCEngine.Utility.Singleton
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: NPCEngine.Components.NPCEngineManager
+    name: NPCEngineManager
+    nameWithType: NPCEngineManager
+    fullName: NPCEngine.Components.NPCEngineManager
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NPCEngine.Utility.Singleton{NPCEngine.Components.NPCEngineManager}.Instance
+  commentId: P:NPCEngine.Utility.Singleton{NPCEngine.Components.NPCEngineManager}.Instance
+  parent: NPCEngine.Utility.Singleton{NPCEngine.Components.NPCEngineManager}
+  definition: NPCEngine.Utility.Singleton`1.Instance
+  name: Instance
+  nameWithType: Singleton<NPCEngineManager>.Instance
+  fullName: NPCEngine.Utility.Singleton<NPCEngine.Components.NPCEngineManager>.Instance
+  nameWithType.vb: Singleton(Of NPCEngineManager).Instance
+  fullName.vb: NPCEngine.Utility.Singleton(Of NPCEngine.Components.NPCEngineManager).Instance
+- uid: NPCEngine.Utility.Singleton{NPCEngine.Components.NPCEngineManager}.GetInstance
+  commentId: M:NPCEngine.Utility.Singleton{NPCEngine.Components.NPCEngineManager}.GetInstance
+  parent: NPCEngine.Utility.Singleton{NPCEngine.Components.NPCEngineManager}
+  definition: NPCEngine.Utility.Singleton`1.GetInstance
+  name: GetInstance()
+  nameWithType: Singleton<NPCEngineManager>.GetInstance()
+  fullName: NPCEngine.Utility.Singleton<NPCEngine.Components.NPCEngineManager>.GetInstance()
+  nameWithType.vb: Singleton(Of NPCEngineManager).GetInstance()
+  fullName.vb: NPCEngine.Utility.Singleton(Of NPCEngine.Components.NPCEngineManager).GetInstance()
+  spec.csharp:
+  - uid: NPCEngine.Utility.Singleton`1.GetInstance
+    name: GetInstance
+    nameWithType: Singleton<NPCEngineManager>.GetInstance
+    fullName: NPCEngine.Utility.Singleton<NPCEngine.Components.NPCEngineManager>.GetInstance
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: NPCEngine.Utility.Singleton`1.GetInstance
+    name: GetInstance
+    nameWithType: Singleton(Of NPCEngineManager).GetInstance
+    fullName: NPCEngine.Utility.Singleton(Of NPCEngine.Components.NPCEngineManager).GetInstance
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: NPCEngine.Utility.Singleton`1
+  commentId: T:NPCEngine.Utility.Singleton`1
+  name: Singleton<T>
+  nameWithType: Singleton<T>
+  fullName: NPCEngine.Utility.Singleton<T>
+  nameWithType.vb: Singleton(Of T)
+  fullName.vb: NPCEngine.Utility.Singleton(Of T)
+  name.vb: Singleton(Of T)
+  spec.csharp:
+  - uid: NPCEngine.Utility.Singleton`1
+    name: Singleton
+    nameWithType: Singleton
+    fullName: NPCEngine.Utility.Singleton
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: NPCEngine.Utility.Singleton`1
+    name: Singleton
+    nameWithType: Singleton
+    fullName: NPCEngine.Utility.Singleton
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NPCEngine.Utility
+  commentId: N:NPCEngine.Utility
+  name: NPCEngine.Utility
+  nameWithType: NPCEngine.Utility
+  fullName: NPCEngine.Utility
+- uid: NPCEngine.Utility.Singleton`1.Instance
+  commentId: P:NPCEngine.Utility.Singleton`1.Instance
+  name: Instance
+  nameWithType: Singleton<T>.Instance
+  fullName: NPCEngine.Utility.Singleton<T>.Instance
+  nameWithType.vb: Singleton(Of T).Instance
+  fullName.vb: NPCEngine.Utility.Singleton(Of T).Instance
+- uid: NPCEngine.Utility.Singleton`1.GetInstance
+  commentId: M:NPCEngine.Utility.Singleton`1.GetInstance
+  name: GetInstance()
+  nameWithType: Singleton<T>.GetInstance()
+  fullName: NPCEngine.Utility.Singleton<T>.GetInstance()
+  nameWithType.vb: Singleton(Of T).GetInstance()
+  fullName.vb: NPCEngine.Utility.Singleton(Of T).GetInstance()
+  spec.csharp:
+  - uid: NPCEngine.Utility.Singleton`1.GetInstance
+    name: GetInstance
+    nameWithType: Singleton<T>.GetInstance
+    fullName: NPCEngine.Utility.Singleton<T>.GetInstance
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: NPCEngine.Utility.Singleton`1.GetInstance
+    name: GetInstance
+    nameWithType: Singleton(Of T).GetInstance
+    fullName: NPCEngine.Utility.Singleton(Of T).GetInstance
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NPCEngine.Components.NPCEngineManager.Services*
+  commentId: Overload:NPCEngine.Components.NPCEngineManager.Services
+  name: Services
+  nameWithType: NPCEngineManager.Services
+  fullName: NPCEngine.Components.NPCEngineManager.Services
+- uid: System.Collections.Generic.List{NPCEngine.API.ServiceMetadata}
+  commentId: T:System.Collections.Generic.List{NPCEngine.API.ServiceMetadata}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<ServiceMetadata>
+  nameWithType: List<ServiceMetadata>
+  fullName: System.Collections.Generic.List<NPCEngine.API.ServiceMetadata>
+  nameWithType.vb: List(Of ServiceMetadata)
+  fullName.vb: System.Collections.Generic.List(Of NPCEngine.API.ServiceMetadata)
+  name.vb: List(Of ServiceMetadata)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: NPCEngine.API.ServiceMetadata
+    name: ServiceMetadata
+    nameWithType: ServiceMetadata
+    fullName: NPCEngine.API.ServiceMetadata
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: NPCEngine.API.ServiceMetadata
+    name: ServiceMetadata
+    nameWithType: ServiceMetadata
+    fullName: NPCEngine.API.ServiceMetadata
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: NPCEngine.Components.NPCEngineManager.ServicesById*
+  commentId: Overload:NPCEngine.Components.NPCEngineManager.ServicesById
+  name: ServicesById
+  nameWithType: NPCEngineManager.ServicesById
+  fullName: NPCEngine.Components.NPCEngineManager.ServicesById
+- uid: System.Collections.Generic.Dictionary{System.String,NPCEngine.API.ServiceMetadata}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,NPCEngine.API.ServiceMetadata}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  name: Dictionary<String, ServiceMetadata>
+  nameWithType: Dictionary<String, ServiceMetadata>
+  fullName: System.Collections.Generic.Dictionary<System.String, NPCEngine.API.ServiceMetadata>
+  nameWithType.vb: Dictionary(Of String, ServiceMetadata)
+  fullName.vb: System.Collections.Generic.Dictionary(Of System.String, NPCEngine.API.ServiceMetadata)
+  name.vb: Dictionary(Of String, ServiceMetadata)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: NPCEngine.API.ServiceMetadata
+    name: ServiceMetadata
+    nameWithType: ServiceMetadata
+    fullName: NPCEngine.API.ServiceMetadata
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: NPCEngine.API.ServiceMetadata
+    name: ServiceMetadata
+    nameWithType: ServiceMetadata
+    fullName: NPCEngine.API.ServiceMetadata
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NPCEngine.Components.NPCEngineManager.ServiceStatuses*
+  commentId: Overload:NPCEngine.Components.NPCEngineManager.ServiceStatuses
+  name: ServiceStatuses
+  nameWithType: NPCEngineManager.ServiceStatuses
+  fullName: NPCEngine.Components.NPCEngineManager.ServiceStatuses
+- uid: System.Collections.Generic.List{NPCEngine.API.ServiceStatus}
+  commentId: T:System.Collections.Generic.List{NPCEngine.API.ServiceStatus}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<ServiceStatus>
+  nameWithType: List<ServiceStatus>
+  fullName: System.Collections.Generic.List<NPCEngine.API.ServiceStatus>
+  nameWithType.vb: List(Of ServiceStatus)
+  fullName.vb: System.Collections.Generic.List(Of NPCEngine.API.ServiceStatus)
+  name.vb: List(Of ServiceStatus)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: NPCEngine.API.ServiceStatus
+    name: ServiceStatus
+    nameWithType: ServiceStatus
+    fullName: NPCEngine.API.ServiceStatus
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: NPCEngine.API.ServiceStatus
+    name: ServiceStatus
+    nameWithType: ServiceStatus
+    fullName: NPCEngine.API.ServiceStatus
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NPCEngine.Components.NPCEngineManager.ServiceStatusesById*
+  commentId: Overload:NPCEngine.Components.NPCEngineManager.ServiceStatusesById
+  name: ServiceStatusesById
+  nameWithType: NPCEngineManager.ServiceStatusesById
+  fullName: NPCEngine.Components.NPCEngineManager.ServiceStatusesById
+- uid: System.Collections.Generic.Dictionary{System.String,NPCEngine.API.ServiceStatus}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,NPCEngine.API.ServiceStatus}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  name: Dictionary<String, ServiceStatus>
+  nameWithType: Dictionary<String, ServiceStatus>
+  fullName: System.Collections.Generic.Dictionary<System.String, NPCEngine.API.ServiceStatus>
+  nameWithType.vb: Dictionary(Of String, ServiceStatus)
+  fullName.vb: System.Collections.Generic.Dictionary(Of System.String, NPCEngine.API.ServiceStatus)
+  name.vb: Dictionary(Of String, ServiceStatus)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: NPCEngine.API.ServiceStatus
+    name: ServiceStatus
+    nameWithType: ServiceStatus
+    fullName: NPCEngine.API.ServiceStatus
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: NPCEngine.API.ServiceStatus
+    name: ServiceStatus
+    nameWithType: ServiceStatus
+    fullName: NPCEngine.API.ServiceStatus
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: NPCEngine.Components.NPCEngineManager.InferenceEngineProcessId*
+  commentId: Overload:NPCEngine.Components.NPCEngineManager.InferenceEngineProcessId
+  name: InferenceEngineProcessId
+  nameWithType: NPCEngineManager.InferenceEngineProcessId
+  fullName: NPCEngine.Components.NPCEngineManager.InferenceEngineProcessId
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: NPCEngine.Components.NPCEngineManager.InferenceEngineRunning*
+  commentId: Overload:NPCEngine.Components.NPCEngineManager.InferenceEngineRunning
+  name: InferenceEngineRunning
+  nameWithType: NPCEngineManager.InferenceEngineRunning
+  fullName: NPCEngine.Components.NPCEngineManager.InferenceEngineRunning
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: NPCEngine.Components.NPCEngineManager.StartInferenceEngine*
+  commentId: Overload:NPCEngine.Components.NPCEngineManager.StartInferenceEngine
+  name: StartInferenceEngine
+  nameWithType: NPCEngineManager.StartInferenceEngine
+  fullName: NPCEngine.Components.NPCEngineManager.StartInferenceEngine
+- uid: NPCEngine.Components.NPCEngineManager.DownloadModel*
+  commentId: Overload:NPCEngine.Components.NPCEngineManager.DownloadModel
+  name: DownloadModel
+  nameWithType: NPCEngineManager.DownloadModel
+  fullName: NPCEngine.Components.NPCEngineManager.DownloadModel
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: NPCEngine.Components.NPCEngineManager.StopInferenceEngine*
+  commentId: Overload:NPCEngine.Components.NPCEngineManager.StopInferenceEngine
+  name: StopInferenceEngine
+  nameWithType: NPCEngineManager.StopInferenceEngine
+  fullName: NPCEngine.Components.NPCEngineManager.StopInferenceEngine
+- uid: NPCEngine.Components.NPCEngineManager.GetAPI*
+  commentId: Overload:NPCEngine.Components.NPCEngineManager.GetAPI
+  name: GetAPI
+  nameWithType: NPCEngineManager.GetAPI
+  fullName: NPCEngine.Components.NPCEngineManager.GetAPI
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: NPCEngine.Components.NPCEngineManager.UpdateServiceStatuses*
+  commentId: Overload:NPCEngine.Components.NPCEngineManager.UpdateServiceStatuses
+  name: UpdateServiceStatuses
+  nameWithType: NPCEngineManager.UpdateServiceStatuses
+  fullName: NPCEngine.Components.NPCEngineManager.UpdateServiceStatuses
+- uid: System.Collections.IEnumerator
+  commentId: T:System.Collections.IEnumerator
+  parent: System.Collections
+  isExternal: true
+  name: IEnumerator
+  nameWithType: IEnumerator
+  fullName: System.Collections.IEnumerator
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections
+- uid: NPCEngine.Components.NPCEngineManager.UpdateServices*
+  commentId: Overload:NPCEngine.Components.NPCEngineManager.UpdateServices
+  name: UpdateServices
+  nameWithType: NPCEngineManager.UpdateServices
+  fullName: NPCEngine.Components.NPCEngineManager.UpdateServices
