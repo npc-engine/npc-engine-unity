@@ -22,10 +22,12 @@ items:
   source:
     id: FantasyChatbotContext
     path: ''
-    startLine: 2400
+    startLine: 2608
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nText generation context for LIGHT dataset format (2 personas and location)\n"
+  example: []
   syntax:
     content: >-
       [Serializable]
@@ -61,7 +63,7 @@ items:
   source:
     id: location_name
     path: ''
-    startLine: 2414
+    startLine: 2622
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -88,7 +90,7 @@ items:
   source:
     id: location
     path: ''
-    startLine: 2415
+    startLine: 2623
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -115,7 +117,7 @@ items:
   source:
     id: name
     path: ''
-    startLine: 2416
+    startLine: 2624
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -142,7 +144,7 @@ items:
   source:
     id: persona
     path: ''
-    startLine: 2417
+    startLine: 2625
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -169,7 +171,7 @@ items:
   source:
     id: other_name
     path: ''
-    startLine: 2418
+    startLine: 2626
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -196,7 +198,7 @@ items:
   source:
     id: other_persona
     path: ''
-    startLine: 2419
+    startLine: 2627
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -223,7 +225,7 @@ items:
   source:
     id: history
     path: ''
-    startLine: 2421
+    startLine: 2629
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components

@@ -24,7 +24,7 @@ items:
   source:
     id: SpeechToText
     path: ''
-    startLine: 868
+    startLine: 921
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -57,7 +57,7 @@ items:
   source:
     id: ListenFuture
     path: ''
-    startLine: 879
+    startLine: 932
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -88,7 +88,7 @@ items:
   source:
     id: TranscribeFuture
     path: ''
-    startLine: 884
+    startLine: 937
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -122,7 +122,7 @@ items:
   source:
     id: GetDevicesFuture
     path: ''
-    startLine: 889
+    startLine: 942
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -150,7 +150,7 @@ items:
   source:
     id: SetDeviceFuture
     path: ''
-    startLine: 894
+    startLine: 947
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -181,7 +181,7 @@ items:
   source:
     id: Listen
     path: ''
-    startLine: 899
+    startLine: 952
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -217,7 +217,7 @@ items:
   source:
     id: Transcribe
     path: ''
-    startLine: 910
+    startLine: 963
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -253,7 +253,7 @@ items:
   source:
     id: GetDevices
     path: ''
-    startLine: 921
+    startLine: 974
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -287,7 +287,7 @@ items:
   source:
     id: SetDevice
     path: ''
-    startLine: 932
+    startLine: 985
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -323,7 +323,7 @@ items:
   source:
     id: InitializeMicrophoneInput
     path: ''
-    startLine: 943
+    startLine: 996
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API

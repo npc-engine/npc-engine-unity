@@ -19,10 +19,12 @@ items:
   source:
     id: RequestDispatcherImpl
     path: ''
-    startLine: 3856
+    startLine: 4025
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC
+  summary: "\nAbstract class for RPC loop.\n"
+  example: []
   syntax:
     content: public abstract class RequestDispatcherImpl
     content.vb: Public MustInherit Class RequestDispatcherImpl
@@ -53,7 +55,7 @@ items:
   source:
     id: id
     path: ''
-    startLine: 3858
+    startLine: 4027
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC
@@ -80,7 +82,7 @@ items:
   source:
     id: address
     path: ''
-    startLine: 3859
+    startLine: 4028
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC
@@ -107,7 +109,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 3860
+    startLine: 4029
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC
@@ -138,7 +140,7 @@ items:
   source:
     id: DispatchRequestsCoroutine
     path: ''
-    startLine: 3865
+    startLine: 4034
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC

@@ -22,7 +22,7 @@ items:
   source:
     id: ServiceMetadata
     path: ''
-    startLine: 433
+    startLine: 486
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -63,7 +63,7 @@ items:
   source:
     id: id
     path: ''
-    startLine: 440
+    startLine: 493
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -92,7 +92,7 @@ items:
   source:
     id: service
     path: ''
-    startLine: 445
+    startLine: 498
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -121,7 +121,7 @@ items:
   source:
     id: api_name
     path: ''
-    startLine: 450
+    startLine: 503
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -150,7 +150,7 @@ items:
   source:
     id: path
     path: ''
-    startLine: 455
+    startLine: 508
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -179,7 +179,7 @@ items:
   source:
     id: service_short_description
     path: ''
-    startLine: 460
+    startLine: 513
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -208,7 +208,7 @@ items:
   source:
     id: service_description
     path: ''
-    startLine: 465
+    startLine: 518
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -237,7 +237,7 @@ items:
   source:
     id: readme
     path: ''
-    startLine: 470
+    startLine: 523
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API

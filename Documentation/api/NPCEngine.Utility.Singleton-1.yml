@@ -17,14 +17,17 @@ items:
   source:
     id: Singleton
     path: ''
-    startLine: 4785
+    startLine: 4990
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Utility
+  summary: "\nSingleton <code>MonoBehaviour</code> base class. \n"
+  example: []
   syntax:
     content: 'public class Singleton<T> : MonoBehaviour where T : MonoBehaviour'
     typeParameters:
     - id: T
+      description: ''
     content.vb: >-
       Public Class Singleton(Of T As MonoBehaviour)
           Inherits MonoBehaviour
@@ -58,7 +61,7 @@ items:
   source:
     id: Instance
     path: ''
-    startLine: 4789
+    startLine: 4994
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Utility
@@ -93,7 +96,7 @@ items:
   source:
     id: GetInstance
     path: ''
-    startLine: 4814
+    startLine: 5019
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Utility

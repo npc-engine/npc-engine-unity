@@ -18,10 +18,12 @@ items:
   source:
     id: APICommunicatorZMQImpl
     path: ''
-    startLine: 3868
+    startLine: 4040
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC
+  summary: "\nRPC loop implementation for ZMQ protocol.\n"
+  example: []
   syntax:
     content: 'public class APICommunicatorZMQImpl : RequestDispatcherImpl'
     content.vb: >-
@@ -53,7 +55,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 3872
+    startLine: 4044
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC
@@ -84,7 +86,7 @@ items:
   source:
     id: Finalize
     path: ''
-    startLine: 3882
+    startLine: 4054
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC
@@ -110,7 +112,7 @@ items:
   source:
     id: DispatchRequestsCoroutine
     path: ''
-    startLine: 3888
+    startLine: 4060
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC

@@ -181,6 +181,7 @@
   "NPCEngine.NPCEngineConfig.nChunksSpeechGeneration": "NPCEngine.NPCEngineConfig.yml",
   "NPCEngine.NPCEngineConfig.npcEnginePath": "NPCEngine.NPCEngineConfig.yml",
   "NPCEngine.NPCEngineConfig.Port": "NPCEngine.NPCEngineConfig.yml",
+  "NPCEngine.NPCEngineConfig.RefreshServices": "NPCEngine.NPCEngineConfig.yml",
   "NPCEngine.NPCEngineConfig.serverAddress": "NPCEngine.NPCEngineConfig.yml",
   "NPCEngine.NPCEngineConfig.serverConsole": "NPCEngine.NPCEngineConfig.yml",
   "NPCEngine.NPCEngineConfig.serverType": "NPCEngine.NPCEngineConfig.yml",

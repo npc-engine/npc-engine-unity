@@ -20,10 +20,12 @@ items:
   source:
     id: RPCRequestMessage
     path: ''
-    startLine: 4073
+    startLine: 4259
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC
+  summary: "\nJSON RPC request message.\n"
+  example: []
   syntax:
     content: >-
       [Serializable]
@@ -32,6 +34,7 @@ items:
           where ParametersType : new()
     typeParameters:
     - id: ParametersType
+      description: ''
     content.vb: >-
       <Serializable>
 
@@ -65,7 +68,7 @@ items:
   source:
     id: id
     path: ''
-    startLine: 4077
+    startLine: 4263
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC
@@ -94,7 +97,7 @@ items:
   source:
     id: jsonrpc
     path: ''
-    startLine: 4078
+    startLine: 4264
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC
@@ -123,7 +126,7 @@ items:
   source:
     id: method
     path: ''
-    startLine: 4079
+    startLine: 4265
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC
@@ -152,7 +155,7 @@ items:
   source:
     id: parameters
     path: ''
-    startLine: 4082
+    startLine: 4268
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC
@@ -181,7 +184,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 4084
+    startLine: 4270
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC

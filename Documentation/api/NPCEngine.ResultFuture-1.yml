@@ -20,14 +20,17 @@ items:
   source:
     id: ResultFuture
     path: ''
-    startLine: 4010
+    startLine: 4192
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine
+  summary: "\nFuture result of RPC call.\n"
+  example: []
   syntax:
     content: public class ResultFuture<ReturnType>
     typeParameters:
     - id: ReturnType
+      description: ''
     content.vb: Public Class ResultFuture(Of ReturnType)
   inheritance:
   - System.Object
@@ -54,7 +57,7 @@ items:
   source:
     id: ResultReady
     path: ''
-    startLine: 4012
+    startLine: 4194
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine
@@ -87,7 +90,7 @@ items:
   source:
     id: Result
     path: ''
-    startLine: 4020
+    startLine: 4202
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine
@@ -120,7 +123,7 @@ items:
   source:
     id: Error
     path: ''
-    startLine: 4038
+    startLine: 4220
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine
@@ -153,7 +156,7 @@ items:
   source:
     id: ResultFinishedCallback
     path: ''
-    startLine: 4050
+    startLine: 4232
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine
@@ -184,7 +187,7 @@ items:
   source:
     id: ErrorCallback
     path: ''
-    startLine: 4056
+    startLine: 4238
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine

@@ -21,7 +21,7 @@ items:
   source:
     id: AbstractSpeechToText
     path: ''
-    startLine: 1218
+    startLine: 1271
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -59,7 +59,7 @@ items:
   source:
     id: Context
     path: ''
-    startLine: 1224
+    startLine: 1277
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -94,7 +94,7 @@ items:
   source:
     id: StartListening
     path: ''
-    startLine: 1241
+    startLine: 1294
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -124,7 +124,7 @@ items:
   source:
     id: StopListening
     path: ''
-    startLine: 1246
+    startLine: 1299
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -154,7 +154,7 @@ items:
   source:
     id: OnSpeechRecognized
     path: ''
-    startLine: 1251
+    startLine: 1304
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -183,7 +183,7 @@ items:
   source:
     id: OnSpeechRecognitionFailed
     path: ''
-    startLine: 1255
+    startLine: 1308
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -212,7 +212,7 @@ items:
   source:
     id: SpeechRecognized
     path: ''
-    startLine: 1258
+    startLine: 1311
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components

@@ -20,10 +20,12 @@ items:
   source:
     id: DictationRecognizerSTT
     path: ''
-    startLine: 1415
+    startLine: 1491
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nSpeech to text component using Windows Speech Recognition DictationRecognizer as backend.\n"
+  example: []
   syntax:
     content: 'public class DictationRecognizerSTT : AbstractSpeechToText'
     content.vb: >-
@@ -57,10 +59,12 @@ items:
   source:
     id: debugLogs
     path: ''
-    startLine: 1417
+    startLine: 1496
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nShow debug messages.\n"
+  example: []
   syntax:
     content: public bool debugLogs
     return:
@@ -84,10 +88,12 @@ items:
   source:
     id: PolicyNotAccepted
     path: ''
-    startLine: 1419
+    startLine: 1501
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nProperty that indicates that windows speech is not configured.\n"
+  example: []
   syntax:
     content: public bool PolicyNotAccepted { get; }
     parameters: []
@@ -115,10 +121,12 @@ items:
   source:
     id: RecognizerStarted
     path: ''
-    startLine: 1427
+    startLine: 1512
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nProperty that indicates that recognizer is running.\n"
+  example: []
   syntax:
     content: public bool RecognizerStarted { get; }
     parameters: []
@@ -146,7 +154,7 @@ items:
   source:
     id: StartListening
     path: ''
-    startLine: 1534
+    startLine: 1619
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -175,7 +183,7 @@ items:
   source:
     id: StopListening
     path: ''
-    startLine: 1539
+    startLine: 1624
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components

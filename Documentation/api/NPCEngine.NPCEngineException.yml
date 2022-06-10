@@ -19,10 +19,12 @@ items:
   source:
     id: NPCEngineException
     path: ''
-    startLine: 3995
+    startLine: 4173
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine
+  summary: "\nGeneral NPC Engine exception.\n"
+  example: []
   syntax:
     content: >-
       [Serializable]
@@ -61,7 +63,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 3999
+    startLine: 4177
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine
@@ -87,7 +89,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 4000
+    startLine: 4178
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine
@@ -116,7 +118,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 4001
+    startLine: 4179
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine
@@ -147,7 +149,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 4005
+    startLine: 4183
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine

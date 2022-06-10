@@ -17,7 +17,7 @@ items:
   source:
     id: ChatLine
     path: ''
-    startLine: 2425
+    startLine: 2633
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -56,7 +56,7 @@ items:
   source:
     id: speaker
     path: ''
-    startLine: 2428
+    startLine: 2636
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -83,7 +83,7 @@ items:
   source:
     id: line
     path: ''
-    startLine: 2429
+    startLine: 2637
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components

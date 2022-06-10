@@ -26,7 +26,7 @@ items:
   source:
     id: Control
     path: ''
-    startLine: 491
+    startLine: 544
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -59,7 +59,7 @@ items:
   source:
     id: StartService
     path: ''
-    startLine: 504
+    startLine: 557
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -90,7 +90,7 @@ items:
   source:
     id: StopService
     path: ''
-    startLine: 531
+    startLine: 584
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -121,7 +121,7 @@ items:
   source:
     id: GetServiceStatus
     path: ''
-    startLine: 560
+    startLine: 613
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -162,7 +162,7 @@ items:
   source:
     id: RestartService
     path: ''
-    startLine: 599
+    startLine: 652
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -197,7 +197,7 @@ items:
   source:
     id: GetServiceMetadata
     path: ''
-    startLine: 616
+    startLine: 669
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -238,7 +238,7 @@ items:
   source:
     id: GetServicesMetadata
     path: ''
-    startLine: 632
+    startLine: 685
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -276,7 +276,7 @@ items:
   source:
     id: GetServicesMetadataFuture
     path: ''
-    startLine: 643
+    startLine: 696
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -304,7 +304,7 @@ items:
   source:
     id: GetServiceMetadataFuture
     path: ''
-    startLine: 648
+    startLine: 701
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -335,7 +335,7 @@ items:
   source:
     id: GetServiceStatusFuture
     path: ''
-    startLine: 653
+    startLine: 706
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -366,7 +366,7 @@ items:
   source:
     id: StopServiceNoConfirm
     path: ''
-    startLine: 658
+    startLine: 711
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -395,7 +395,7 @@ items:
   source:
     id: StartServiceNoConfirm
     path: ''
-    startLine: 663
+    startLine: 716
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API

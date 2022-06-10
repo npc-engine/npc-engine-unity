@@ -21,7 +21,7 @@ items:
   source:
     id: TextGeneration
     path: ''
-    startLine: 971
+    startLine: 1024
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -61,7 +61,7 @@ items:
   source:
     id: GenerateReplyFuture
     path: ''
-    startLine: 993
+    startLine: 1046
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -98,7 +98,7 @@ items:
   source:
     id: GetSpecialTokensFuture
     path: ''
-    startLine: 1004
+    startLine: 1057
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -128,7 +128,7 @@ items:
   source:
     id: GetPromptTemplateFuture
     path: ''
-    startLine: 1009
+    startLine: 1062
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -158,7 +158,7 @@ items:
   source:
     id: GenerateReply
     path: ''
-    startLine: 1015
+    startLine: 1068
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -198,7 +198,7 @@ items:
   source:
     id: GetSpecialTokens
     path: ''
-    startLine: 1032
+    startLine: 1085
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -232,7 +232,7 @@ items:
   source:
     id: GetPromptTemplate
     path: ''
-    startLine: 1043
+    startLine: 1096
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API

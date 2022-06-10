@@ -16,7 +16,7 @@ items:
   source:
     id: NPCEngineConfigEditor
     path: ''
-    startLine: 2761
+    startLine: 2972
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine
@@ -47,7 +47,7 @@ items:
   source:
     id: OnInspectorGUI
     path: ''
-    startLine: 2768
+    startLine: 2979
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine

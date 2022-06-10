@@ -28,10 +28,12 @@ items:
   source:
     id: NPCEngineManager
     path: ''
-    startLine: 1852
+    startLine: 2004
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nManager class that handles services and server lifetime and status.\n"
+  example: []
   syntax:
     content: 'public class NPCEngineManager : Singleton<NPCEngineManager>'
     content.vb: >-
@@ -63,7 +65,7 @@ items:
   source:
     id: Services
     path: ''
-    startLine: 1858
+    startLine: 2010
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -94,7 +96,7 @@ items:
   source:
     id: ServicesById
     path: ''
-    startLine: 1866
+    startLine: 2018
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -125,7 +127,7 @@ items:
   source:
     id: ServiceStatuses
     path: ''
-    startLine: 1881
+    startLine: 2033
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -156,7 +158,7 @@ items:
   source:
     id: ServiceStatusesById
     path: ''
-    startLine: 1893
+    startLine: 2045
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -187,7 +189,7 @@ items:
   source:
     id: InferenceEngineProcessId
     path: ''
-    startLine: 1912
+    startLine: 2064
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -218,7 +220,7 @@ items:
   source:
     id: InferenceEngineRunning
     path: ''
-    startLine: 1929
+    startLine: 2081
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -249,10 +251,12 @@ items:
   source:
     id: StartInferenceEngine
     path: ''
-    startLine: 1948
+    startLine: 2103
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nStarts the inference engine server and managing coroutines.\n"
+  example: []
   syntax:
     content: public void StartInferenceEngine()
     content.vb: Public Sub StartInferenceEngine
@@ -275,15 +279,18 @@ items:
   source:
     id: DownloadModel
     path: ''
-    startLine: 2009
+    startLine: 2168
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nDownload model by ID\n"
+  example: []
   syntax:
     content: public void DownloadModel(string id)
     parameters:
     - id: id
       type: System.String
+      description: ''
     content.vb: Public Sub DownloadModel(id As String)
   overload: NPCEngine.Components.NPCEngineManager.DownloadModel*
   modifiers.csharp:
@@ -304,10 +311,12 @@ items:
   source:
     id: StopInferenceEngine
     path: ''
-    startLine: 2025
+    startLine: 2187
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nStop the inference engine server, services and dispose resources.\n"
+  example: []
   syntax:
     content: public void StopInferenceEngine()
     content.vb: Public Sub StopInferenceEngine
@@ -330,18 +339,22 @@ items:
   source:
     id: GetAPI
     path: ''
-    startLine: 2112
+    startLine: 2279
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nGet or construct API for the given type.\n"
+  example: []
   syntax:
     content: >-
       public T GetAPI<T>()
           where T : RPCBase
     typeParameters:
     - id: T
+      description: API type
     return:
       type: '{T}'
+      description: ''
     content.vb: Public Function GetAPI(Of T As RPCBase) As T
   overload: NPCEngine.Components.NPCEngineManager.GetAPI*
   nameWithType.vb: NPCEngineManager.GetAPI(Of T)()
@@ -365,10 +378,12 @@ items:
   source:
     id: GetAPI
     path: ''
-    startLine: 2122
+    startLine: 2295
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nGet or construct API for the given type and service ID.\n"
+  example: []
   syntax:
     content: >-
       public T GetAPI<T>(string id)
@@ -376,10 +391,13 @@ items:
     parameters:
     - id: id
       type: System.String
+      description: Service ID or otherwise resolvable name
     typeParameters:
     - id: T
+      description: API Type
     return:
       type: '{T}'
+      description: ''
     content.vb: Public Function GetAPI(Of T As RPCBase)(id As String) As T
   overload: NPCEngine.Components.NPCEngineManager.GetAPI*
   nameWithType.vb: NPCEngineManager.GetAPI(Of T)(String)
@@ -403,10 +421,12 @@ items:
   source:
     id: UpdateServiceStatuses
     path: ''
-    startLine: 2138
+    startLine: 2313
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nCoroutine that updates service statuses.\n"
+  example: []
   syntax:
     content: public IEnumerator UpdateServiceStatuses()
     return:
@@ -431,10 +451,12 @@ items:
   source:
     id: UpdateServices
     path: ''
-    startLine: 2170
+    startLine: 2348
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nCoroutine that updates service list.\n"
+  example: []
   syntax:
     content: public IEnumerator UpdateServices()
     return:

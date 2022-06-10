@@ -17,10 +17,12 @@ items:
   source:
     id: Character
     path: ''
-    startLine: 1271
+    startLine: 1327
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nCharacter natural language descriptions.\n"
+  example: []
   syntax:
     content: 'public class Character : ScriptableObject'
     content.vb: >-
@@ -48,7 +50,7 @@ items:
   source:
     id: Name
     path: ''
-    startLine: 1274
+    startLine: 1330
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -75,10 +77,12 @@ items:
   source:
     id: Persona
     path: ''
-    startLine: 1277
+    startLine: 1336
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nCharacter&apos;s persona natural language description.\n"
+  example: []
   syntax:
     content: public string Persona
     return:

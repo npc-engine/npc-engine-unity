@@ -37,7 +37,7 @@ items:
   source:
     id: NonPlayerCharacter
     path: ''
-    startLine: 1586
+    startLine: 1674
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -68,10 +68,12 @@ items:
   source:
     id: defaultThreshold
     path: ''
-    startLine: 1590
+    startLine: 1681
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nDefault semantic similarity threshold for dialogue tree triggers.\n"
+  example: []
   syntax:
     content: public float defaultThreshold
     return:
@@ -95,10 +97,12 @@ items:
   source:
     id: character
     path: ''
-    startLine: 1592
+    startLine: 1686
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nCharacters assigned to this NPC.\n"
+  example: []
   syntax:
     content: public Character character
     return:
@@ -122,10 +126,12 @@ items:
   source:
     id: history
     path: ''
-    startLine: 1594
+    startLine: 1691
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nDialogue history.\n"
+  example: []
   syntax:
     content: public List<ChatLine> history
     return:
@@ -149,10 +155,12 @@ items:
   source:
     id: OnDialogueStart
     path: ''
-    startLine: 1597
+    startLine: 1696
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nDialogue start event (triggered when the NPC starts talking)\n"
+  example: []
   syntax:
     content: public UnityEvent OnDialogueStart
     return:
@@ -176,10 +184,12 @@ items:
   source:
     id: OnDialogueLine
     path: ''
-    startLine: 1601
+    startLine: 1702
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nEvent called when new line is added to history \nwhere parameters are (ChatLine newLine, bool scriptedLine)\n"
+  example: []
   syntax:
     content: public UnityEvent<ChatLine, bool> OnDialogueLine
     return:
@@ -203,10 +213,12 @@ items:
   source:
     id: OnProcessingStart
     path: ''
-    startLine: 1604
+    startLine: 1707
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nEvent called in the beginning of an input processing\n"
+  example: []
   syntax:
     content: public UnityEvent OnProcessingStart
     return:
@@ -230,10 +242,12 @@ items:
   source:
     id: OnProcessingEnd
     path: ''
-    startLine: 1607
+    startLine: 1712
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nEvent called in the end of an input processing\n"
+  example: []
   syntax:
     content: public UnityEvent OnProcessingEnd
     return:
@@ -257,10 +271,12 @@ items:
   source:
     id: OnTopicHintsUpdate
     path: ''
-    startLine: 1610
+    startLine: 1717
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nEvent called when new dialogue topic hints appear\n"
+  example: []
   syntax:
     content: public UnityEvent<List<string>> OnTopicHintsUpdate
     return:
@@ -284,10 +300,12 @@ items:
   source:
     id: OnDialogueEnd
     path: ''
-    startLine: 1613
+    startLine: 1722
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nEvent called when dialogue ends\n"
+  example: []
   syntax:
     content: public UnityEvent OnDialogueEnd
     return:
@@ -311,10 +329,12 @@ items:
   source:
     id: audioSourceQueue
     path: ''
-    startLine: 1615
+    startLine: 1727
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nAudio source queue that plays generated speech on the fly one-by-one.\n"
+  example: []
   syntax:
     content: public AudioSourceQueue audioSourceQueue
     return:
@@ -338,10 +358,12 @@ items:
   source:
     id: voiceId
     path: ''
-    startLine: 1617
+    startLine: 1732
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nVoice ID of the character for TTS.\n"
+  example: []
   syntax:
     content: public string voiceId
     return:
@@ -365,10 +387,12 @@ items:
   source:
     id: dialogueSystem
     path: ''
-    startLine: 1619
+    startLine: 1737
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nDialogue System integration.\n"
+  example: []
   syntax:
     content: public AbstractDialogueSystem dialogueSystem
     return:
@@ -392,7 +416,7 @@ items:
   source:
     id: testLocation
     path: ''
-    startLine: 1633
+    startLine: 1751
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -419,7 +443,7 @@ items:
   source:
     id: testOtherCharacter
     path: ''
-    startLine: 1636
+    startLine: 1754
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -446,10 +470,12 @@ items:
   source:
     id: StartDialogue
     path: ''
-    startLine: 1652
+    startLine: 1773
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nInitialize dialogue.\n"
+  example: []
   syntax:
     content: public void StartDialogue()
     content.vb: Public Sub StartDialogue
@@ -472,10 +498,12 @@ items:
   source:
     id: EndDialog
     path: ''
-    startLine: 1661
+    startLine: 1785
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nEnd dialogue.\n"
+  example: []
   syntax:
     content: public void EndDialog()
     content.vb: Public Sub
@@ -498,19 +526,24 @@ items:
   source:
     id: HandleLine
     path: ''
-    startLine: 1669
+    startLine: 1799
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nStep dialogue by line from player.\n"
+  example: []
   syntax:
     content: public void HandleLine(string otherName, string otherPersona, string line)
     parameters:
     - id: otherName
       type: System.String
+      description: ''
     - id: otherPersona
       type: System.String
+      description: ''
     - id: line
       type: System.String
+      description: ''
     content.vb: Public Sub HandleLine(otherName As String, otherPersona As String, line As String)
   overload: NPCEngine.Components.NonPlayerCharacter.HandleLine*
   modifiers.csharp:
@@ -531,10 +564,12 @@ items:
   source:
     id: HandleLineCoroutine
     path: ''
-    startLine: 1676
+    startLine: 1808
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nLine handling coroutine\n"
+  example: []
   syntax:
     content: public IEnumerator HandleLineCoroutine(string otherName, string otherPersona, string line)
     parameters:
@@ -566,10 +601,12 @@ items:
   source:
     id: HandlePlayerLineCoroutine
     path: ''
-    startLine: 1701
+    startLine: 1835
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nPlayer line handling coroutine\n"
+  example: []
   syntax:
     content: public IEnumerator HandlePlayerLineCoroutine(string otherName, string otherPersona, string line)
     parameters:
@@ -601,21 +638,27 @@ items:
   source:
     id: GenerateReply
     path: ''
-    startLine: 1731
+    startLine: 1871
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nRun Chatbot API and generate and play speech\n"
+  example: []
   syntax:
     content: public IEnumerator GenerateReply(string otherName, string otherPersona, string line)
     parameters:
     - id: otherName
       type: System.String
+      description: Other conversant name
     - id: otherPersona
       type: System.String
+      description: Other conversant persona
     - id: line
       type: System.String
+      description: Utterance to generate reply to.
     return:
       type: System.Collections.IEnumerator
+      description: ''
     content.vb: Public Function GenerateReply(otherName As String, otherPersona As String, line As String) As IEnumerator
   overload: NPCEngine.Components.NonPlayerCharacter.GenerateReply*
   modifiers.csharp:
@@ -636,14 +679,17 @@ items:
   source:
     id: SayNPCLines
     path: ''
-    startLine: 1752
+    startLine: 1896
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nScan dialogue tree and say all scripted NPC lines\n"
+  example: []
   syntax:
     content: public IEnumerator SayNPCLines()
     return:
       type: System.Collections.IEnumerator
+      description: ''
     content.vb: Public Function SayNPCLines As IEnumerator
   overload: NPCEngine.Components.NonPlayerCharacter.SayNPCLines*
   modifiers.csharp:
@@ -664,17 +710,21 @@ items:
   source:
     id: GenerateAndPlaySpeech
     path: ''
-    startLine: 1776
+    startLine: 1925
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nCoroutine to generate speech from text.\n"
+  example: []
   syntax:
     content: public IEnumerator GenerateAndPlaySpeech(string line)
     parameters:
     - id: line
       type: System.String
+      description: ''
     return:
       type: System.Collections.IEnumerator
+      description: ''
     content.vb: Public Function GenerateAndPlaySpeech(line As String) As IEnumerator
   overload: NPCEngine.Components.NonPlayerCharacter.GenerateAndPlaySpeech*
   modifiers.csharp:

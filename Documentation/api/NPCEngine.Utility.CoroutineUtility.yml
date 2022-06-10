@@ -23,10 +23,12 @@ items:
   source:
     id: CoroutineUtility
     path: ''
-    startLine: 4319
+    startLine: 4520
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Utility
+  summary: "\nUtility that allows to run coroutines in a coherent way both in editor and in player modes.\n"
+  example: []
   syntax:
     content: 'public class CoroutineUtility : Singleton<CoroutineUtility>'
     content.vb: >-
@@ -58,7 +60,7 @@ items:
   source:
     id: IsRunning
     path: ''
-    startLine: 4370
+    startLine: 4571
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Utility
@@ -93,7 +95,7 @@ items:
   source:
     id: StartCoroutine
     path: ''
-    startLine: 4389
+    startLine: 4590
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Utility
@@ -128,7 +130,7 @@ items:
   source:
     id: StopCoroutine
     path: ''
-    startLine: 4455
+    startLine: 4656
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Utility
@@ -161,7 +163,7 @@ items:
   source:
     id: StopAllPlayingCoroutines
     path: ''
-    startLine: 4501
+    startLine: 4702
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Utility
@@ -192,7 +194,7 @@ items:
   source:
     id: StopAllEditorCoroutines
     path: ''
-    startLine: 4520
+    startLine: 4721
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Utility
@@ -220,7 +222,7 @@ items:
   source:
     id: StopAllEditorCoroutines
     path: ''
-    startLine: 4535
+    startLine: 4736
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Utility
@@ -251,7 +253,7 @@ items:
   source:
     id: WaitForSeconds
     path: ''
-    startLine: 4549
+    startLine: 4750
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Utility
@@ -284,7 +286,7 @@ items:
   source:
     id: GetGameObjectPath
     path: ''
-    startLine: 4561
+    startLine: 4762
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Utility

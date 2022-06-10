@@ -15,10 +15,12 @@ items:
   source:
     id: FantasyChatbotTextGeneration
     path: ''
-    startLine: 2432
+    startLine: 2643
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nSpecific Monobehaviour to exclude templating from the class.\n"
+  example: []
   syntax:
     content: 'public class FantasyChatbotTextGeneration : TextGeneration<FantasyChatbotContext>'
     content.vb: >-

@@ -16,7 +16,7 @@ items:
   source:
     id: Request
     path: ''
-    startLine: 4066
+    startLine: 4248
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC
@@ -49,7 +49,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 4068
+    startLine: 4250
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC

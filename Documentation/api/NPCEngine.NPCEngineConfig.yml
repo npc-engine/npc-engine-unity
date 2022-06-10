@@ -11,6 +11,7 @@ items:
   - NPCEngine.NPCEngineConfig.nChunksSpeechGeneration
   - NPCEngine.NPCEngineConfig.npcEnginePath
   - NPCEngine.NPCEngineConfig.Port
+  - NPCEngine.NPCEngineConfig.RefreshServices
   - NPCEngine.NPCEngineConfig.serverAddress
   - NPCEngine.NPCEngineConfig.serverConsole
   - NPCEngine.NPCEngineConfig.serverType
@@ -28,12 +29,10 @@ items:
   source:
     id: NPCEngineConfig
     path: ''
-    startLine: 317
+    startLine: 315
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine
-  summary: "\nData class containing NPC Engine config.\n"
-  example: []
   syntax:
     content: 'public class NPCEngineConfig : Singleton<NPCEngineConfig>'
     content.vb: >-
@@ -65,7 +64,7 @@ items:
   source:
     id: services
     path: ''
-    startLine: 320
+    startLine: 322
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine
@@ -92,7 +91,7 @@ items:
   source:
     id: serverType
     path: ''
-    startLine: 322
+    startLine: 324
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine
@@ -119,7 +118,7 @@ items:
   source:
     id: serverAddress
     path: ''
-    startLine: 324
+    startLine: 326
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine
@@ -146,7 +145,7 @@ items:
   source:
     id: Port
     path: ''
-    startLine: 326
+    startLine: 328
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine
@@ -177,7 +176,7 @@ items:
   source:
     id: modelsPath
     path: ''
-    startLine: 335
+    startLine: 337
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine
@@ -204,7 +203,7 @@ items:
   source:
     id: npcEnginePath
     path: ''
-    startLine: 338
+    startLine: 340
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine
@@ -231,7 +230,7 @@ items:
   source:
     id: debugLogs
     path: ''
-    startLine: 340
+    startLine: 342
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine
@@ -258,7 +257,7 @@ items:
   source:
     id: serverConsole
     path: ''
-    startLine: 341
+    startLine: 343
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine
@@ -285,7 +284,7 @@ items:
   source:
     id: connectToExistingServer
     path: ''
-    startLine: 342
+    startLine: 344
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine
@@ -312,7 +311,7 @@ items:
   source:
     id: temperature
     path: ''
-    startLine: 346
+    startLine: 348
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine
@@ -339,7 +338,7 @@ items:
   source:
     id: topK
     path: ''
-    startLine: 347
+    startLine: 349
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine
@@ -366,7 +365,7 @@ items:
   source:
     id: nChunksSpeechGeneration
     path: ''
-    startLine: 351
+    startLine: 353
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine
@@ -393,7 +392,7 @@ items:
   source:
     id: ToBeStarted
     path: ''
-    startLine: 357
+    startLine: 364
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine
@@ -406,6 +405,32 @@ items:
       type: System.Boolean
     content.vb: Public Function ToBeStarted(name As String) As Boolean
   overload: NPCEngine.NPCEngineConfig.ToBeStarted*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.NPCEngineConfig.RefreshServices
+  commentId: M:NPCEngine.NPCEngineConfig.RefreshServices
+  id: RefreshServices
+  parent: NPCEngine.NPCEngineConfig
+  langs:
+  - csharp
+  - vb
+  name: RefreshServices()
+  nameWithType: NPCEngineConfig.RefreshServices()
+  fullName: NPCEngine.NPCEngineConfig.RefreshServices()
+  type: Method
+  source:
+    id: RefreshServices
+    path: ''
+    startLine: 382
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine
+  syntax:
+    content: public void RefreshServices()
+    content.vb: Public Sub RefreshServices
+  overload: NPCEngine.NPCEngineConfig.RefreshServices*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -717,3 +742,8 @@ references:
   name: ToBeStarted
   nameWithType: NPCEngineConfig.ToBeStarted
   fullName: NPCEngine.NPCEngineConfig.ToBeStarted
+- uid: NPCEngine.NPCEngineConfig.RefreshServices*
+  commentId: Overload:NPCEngine.NPCEngineConfig.RefreshServices
+  name: RefreshServices
+  nameWithType: NPCEngineConfig.RefreshServices
+  fullName: NPCEngine.NPCEngineConfig.RefreshServices

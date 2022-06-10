@@ -17,11 +17,11 @@ items:
   source:
     id: ColliderLocationTrigger
     path: ''
-    startLine: 1289
+    startLine: 1350
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
-  summary: "\nSimple collider trigger that sets location in PlayerCharacter\n"
+  summary: "\nSimple collider trigger that sets location in PlayerCharacter\n\nRequires Trigger collider.\n"
   example: []
   syntax:
     content: 'public class ColliderLocationTrigger : MonoBehaviour'
@@ -50,10 +50,12 @@ items:
   source:
     id: location
     path: ''
-    startLine: 1292
+    startLine: 1356
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nLocation to set on trigger enter.\n"
+  example: []
   syntax:
     content: public Location location
     return:
@@ -77,10 +79,12 @@ items:
   source:
     id: locationCollider
     path: ''
-    startLine: 1294
+    startLine: 1361
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nTrigger\n"
+  example: []
   syntax:
     content: public Collider locationCollider
     return:

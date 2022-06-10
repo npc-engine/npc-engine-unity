@@ -17,10 +17,12 @@ items:
   source:
     id: ServerType
     path: ''
-    startLine: 4119
+    startLine: 4314
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC
+  summary: "\nTransport layer for RPC enum.\n"
+  example: []
   syntax:
     content: public enum ServerType
     content.vb: Public Enum ServerType
@@ -44,7 +46,7 @@ items:
   source:
     id: HTTP
     path: ''
-    startLine: 4121
+    startLine: 4316
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC
@@ -72,7 +74,7 @@ items:
   source:
     id: ZMQ
     path: ''
-    startLine: 4122
+    startLine: 4317
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC

@@ -27,10 +27,12 @@ items:
   source:
     id: PlayerCharacter
     path: ''
-    startLine: 2256
+    startLine: 2437
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nMonoBehaviour that handles dialogue initiation and passing recognized speech to NPCs.\n"
+  example: []
   syntax:
     content: 'public class PlayerCharacter : Singleton<PlayerCharacter>'
     content.vb: >-
@@ -62,10 +64,12 @@ items:
   source:
     id: currentLocation
     path: ''
-    startLine: 2265
+    startLine: 2448
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nLocation description of the player.\n"
+  example: []
   syntax:
     content: public Location currentLocation
     return:
@@ -89,10 +93,12 @@ items:
   source:
     id: character
     path: ''
-    startLine: 2267
+    startLine: 2453
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nCharacter description of the player.\n"
+  example: []
   syntax:
     content: public Character character
     return:
@@ -116,7 +122,7 @@ items:
   source:
     id: CheckCamera
     path: ''
-    startLine: 2270
+    startLine: 2456
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -143,7 +149,7 @@ items:
   source:
     id: MaxRange
     path: ''
-    startLine: 2273
+    startLine: 2459
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -170,7 +176,7 @@ items:
   source:
     id: VerticalMargin
     path: ''
-    startLine: 2277
+    startLine: 2463
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -197,7 +203,7 @@ items:
   source:
     id: HorizontalMargin
     path: ''
-    startLine: 2281
+    startLine: 2467
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -224,7 +230,7 @@ items:
   source:
     id: SpeechToText
     path: ''
-    startLine: 2283
+    startLine: 2470
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -251,15 +257,18 @@ items:
   source:
     id: RegisterDialogueCandidate
     path: ''
-    startLine: 2302
+    startLine: 2492
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nAdds NPC to the list of potential conversants.\n"
+  example: []
   syntax:
     content: public void RegisterDialogueCandidate(NonPlayerCharacter agent)
     parameters:
     - id: agent
       type: NPCEngine.Components.NonPlayerCharacter
+      description: ''
     content.vb: Public Sub RegisterDialogueCandidate(agent As NonPlayerCharacter)
   overload: NPCEngine.Components.PlayerCharacter.RegisterDialogueCandidate*
   modifiers.csharp:
@@ -280,15 +289,18 @@ items:
   source:
     id: DeregisterDialogueCandidate
     path: ''
-    startLine: 2307
+    startLine: 2501
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nRemove NPC from the list of potential conversants.\n"
+  example: []
   syntax:
     content: public void DeregisterDialogueCandidate(NonPlayerCharacter agent)
     parameters:
     - id: agent
       type: NPCEngine.Components.NonPlayerCharacter
+      description: ''
     content.vb: Public Sub DeregisterDialogueCandidate(agent As NonPlayerCharacter)
   overload: NPCEngine.Components.PlayerCharacter.DeregisterDialogueCandidate*
   modifiers.csharp:
@@ -309,17 +321,21 @@ items:
   source:
     id: IsRegistered
     path: ''
-    startLine: 2312
+    startLine: 2511
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nCheck if NPC is registered as a dialogue candidate.\n"
+  example: []
   syntax:
     content: public bool IsRegistered(NonPlayerCharacter agent)
     parameters:
     - id: agent
       type: NPCEngine.Components.NonPlayerCharacter
+      description: ''
     return:
       type: System.Boolean
+      description: ''
     content.vb: Public Function IsRegistered(agent As NonPlayerCharacter) As Boolean
   overload: NPCEngine.Components.PlayerCharacter.IsRegistered*
   modifiers.csharp:
@@ -340,10 +356,12 @@ items:
   source:
     id: CheckIsSeen
     path: ''
-    startLine: 2322
+    startLine: 2524
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nCheck if NPC is seen.\n"
+  example: []
   syntax:
     content: public bool CheckIsSeen(Vector3 dialogAgentPosition)
     parameters:
@@ -371,10 +389,12 @@ items:
   source:
     id: LeaveDialog
     path: ''
-    startLine: 2333
+    startLine: 2538
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
+  summary: "\nLeave current dialogue.\n"
+  example: []
   syntax:
     content: public void LeaveDialog()
     content.vb: Public Sub LeaveDialog

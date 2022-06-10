@@ -17,10 +17,12 @@ items:
   source:
     id: APICommunicatorHTTPImpl
     path: ''
-    startLine: 3913
+    startLine: 4088
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC
+  summary: "\nRPC loop implementation for HTTP protocol.\n"
+  example: []
   syntax:
     content: 'public class APICommunicatorHTTPImpl : RequestDispatcherImpl'
     content.vb: >-
@@ -52,7 +54,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 3916
+    startLine: 4091
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC
@@ -83,7 +85,7 @@ items:
   source:
     id: DispatchRequestsCoroutine
     path: ''
-    startLine: 3933
+    startLine: 4108
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC

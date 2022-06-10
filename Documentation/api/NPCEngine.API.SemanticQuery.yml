@@ -18,7 +18,7 @@ items:
   source:
     id: SemanticQuery
     path: ''
-    startLine: 807
+    startLine: 860
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -51,7 +51,7 @@ items:
   source:
     id: CompareFuture
     path: ''
-    startLine: 826
+    startLine: 879
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -87,7 +87,7 @@ items:
   source:
     id: Cache
     path: ''
-    startLine: 833
+    startLine: 886
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -119,7 +119,7 @@ items:
   source:
     id: Compare
     path: ''
-    startLine: 839
+    startLine: 892
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API

@@ -17,10 +17,12 @@ items:
   source:
     id: AudioSourceQueue
     path: ''
-    startLine: 4131
+    startLine: 4329
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Utility
+  summary: "\nAudio source queue that plays all clips from the queue one-by-one seamlessly.\n"
+  example: []
   syntax:
     content: 'public class AudioSourceQueue : MonoBehaviour'
     content.vb: >-
@@ -48,7 +50,7 @@ items:
   source:
     id: audioSource
     path: ''
-    startLine: 4135
+    startLine: 4333
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Utility
@@ -75,7 +77,7 @@ items:
   source:
     id: PlaySound
     path: ''
-    startLine: 4157
+    startLine: 4355
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Utility
