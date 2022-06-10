@@ -7,6 +7,9 @@ using Newtonsoft.Json;
 namespace NPCEngine
 {
 
+    /// <summary>
+    /// General NPC Engine exception.
+    /// </summary>
     [Serializable()]
     public class NPCEngineException : System.Exception
     {
@@ -22,6 +25,10 @@ namespace NPCEngine
     }
 
 
+    /// <summary>
+    /// Future result of RPC call.
+    /// </summary>
+    /// <typeparam name="ReturnType"></typeparam>
     public class ResultFuture<ReturnType>
     {
         public bool ResultReady
@@ -85,6 +92,10 @@ namespace NPCEngine.RPC
         }
     }
 
+    /// <summary>
+    /// JSON RPC request message.
+    /// </summary>
+    /// <typeparam name="ParametersType"></typeparam>
     [Serializable()]
     public class RPCRequestMessage<ParametersType>
     where ParametersType : new()
@@ -105,6 +116,9 @@ namespace NPCEngine.RPC
         }
     }
 
+    /// <summary>
+    /// JSON RPC response message.
+    /// </summary>
     [Serializable()]
     public class RPCResponseMessage<ReturnType>
     {
@@ -124,6 +138,9 @@ namespace NPCEngine.RPC
     }
 
 
+    /// <summary>
+    /// RPC response error.
+    /// </summary>
     [Serializable()]
     public class RPCResponseError
     {
@@ -131,6 +148,9 @@ namespace NPCEngine.RPC
         public String message = "";
     }
 
+    /// <summary>
+    /// Transport layer for RPC enum.
+    /// </summary>
     public enum ServerType
     {
         HTTP,

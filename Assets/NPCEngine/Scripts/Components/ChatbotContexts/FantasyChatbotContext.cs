@@ -4,6 +4,9 @@ using NPCEngine.API;
 
 namespace NPCEngine.Components
 {
+    /// <summary>
+    /// Text generation context for LIGHT dataset format (2 personas and location)
+    /// </summary>
     [Serializable()]
     public class FantasyChatbotContext
     {
@@ -36,6 +39,9 @@ namespace NPCEngine.Components
         public string line;
     }
 
+    /// <summary>
+    /// Specific Monobehaviour to exclude templating from the class.
+    /// </summary>
     public class FantasyChatbotTextGeneration: TextGeneration<FantasyChatbotContext>
     {
     }

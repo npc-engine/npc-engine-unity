@@ -9,7 +9,9 @@ using UnityEngine.Networking;
 
 namespace NPCEngine.RPC
 {
-
+    /// <summary>
+    /// Abstract class for RPC loop.
+    /// </summary>
     public abstract class RequestDispatcherImpl
     {
         protected string id;
@@ -22,6 +24,9 @@ namespace NPCEngine.RPC
         public abstract IEnumerator DispatchRequestsCoroutine(Queue<Request> taskQueue);
     }
 
+    /// <summary>
+    /// RPC loop implementation for ZMQ protocol.
+    /// </summary>
     public class APICommunicatorZMQImpl : RequestDispatcherImpl
     {
         private RequestSocket zmqClient;
@@ -67,6 +72,9 @@ namespace NPCEngine.RPC
         }
     }
 
+    /// <summary>
+    /// RPC loop implementation for HTTP protocol.
+    /// </summary>
     public class APICommunicatorHTTPImpl : RequestDispatcherImpl
     {
 

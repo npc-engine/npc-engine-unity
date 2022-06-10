@@ -9,6 +9,9 @@ using UnityEditor;
 
 namespace NPCEngine.Utility
 {
+    /// <summary>
+    /// Utility that allows to run coroutines in a coherent way both in editor and in player modes.
+    /// </summary>
     [ExecuteInEditMode]
     public class CoroutineUtility : Singleton<CoroutineUtility>
     {

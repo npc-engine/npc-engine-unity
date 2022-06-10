@@ -16,6 +16,8 @@ namespace NPCEngine
         public string path;
         public bool start;
     }
+
+    [ExecuteAlways]
     /// <summary>
     /// Data class containing NPC Engine config.
     /// </summary>
@@ -59,6 +61,11 @@ namespace NPCEngine
         {
         }
 
+        void OnEnable()
+        {
+            RefreshServices();
+        }
+        
         public bool ToBeStarted(string name)
         {
             if (services == null)
@@ -75,6 +82,52 @@ namespace NPCEngine
             }
 
             return false;
+        }
+
+        public void RefreshServices()
+        {
+            services = GetServicesManually();
+        }
+
+        private List<ServiceConfigDescriptor> GetServicesManually()
+        {
+            // Get all directories in models folder
+            string[] directories = Directory.GetDirectories(Path.Combine(Application.streamingAssetsPath, NPCEngineConfig.Instance.modelsPath));
+            List<ServiceConfigDescriptor> services = new List<ServiceConfigDescriptor>();
+            foreach (string directory in directories)
+            {
+                ServiceConfigDescriptor service = new ServiceConfigDescriptor();
+                service.name = Path.GetFileName(directory);
+                string[] lines = System.IO.File.ReadAllLines(Path.Combine(directory, "config.yml"));
+                service.path = directory;
+                foreach (var line in lines)
+                {
+                    if (line.StartsWith("type:"))
+                    {
+                        service.type = line.Replace("type: ", "");
+                    }
+                    else if (line.StartsWith("model_type:"))
+                    {
+                        service.type = line.Replace("model_type: ", "");
+                    }
+                }
+                services.Add(service);
+            }
+            // Copy start setting from existing config
+            if (NPCEngineConfig.Instance.services != null)
+            {
+                foreach (var service in services)
+                {
+                    foreach (var existingService in NPCEngineConfig.Instance.services)
+                    {
+                        if (service.name == existingService.name)
+                        {
+                            service.start = existingService.start;
+                        }
+                    }
+                }
+            }
+            return services;
         }
 
     }

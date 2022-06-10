@@ -2,6 +2,9 @@ using UnityEngine;
 
 namespace NPCEngine.Components
 {
+    /// <summary>
+    /// Location natural language description.
+    /// </summary>
     [CreateAssetMenu(fileName = "Location", menuName = "NPCEngine/Location")]
     public class Location: ScriptableObject
     {

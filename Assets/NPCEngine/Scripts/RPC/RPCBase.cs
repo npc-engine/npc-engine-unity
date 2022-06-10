@@ -1,14 +1,9 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 using Newtonsoft.Json;
 using NPCEngine.Utility;
 
-#if UNITY_EDITOR
-using Unity.EditorCoroutines.Editor;
-#endif
 
 
 /// <summary>

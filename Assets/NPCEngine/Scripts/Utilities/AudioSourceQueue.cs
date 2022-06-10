@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace NPCEngine.Utility
 {
+    /// <summary>
+    /// Audio source queue that plays all clips from the queue one-by-one seamlessly.
+    /// </summary>
     [ExecuteInEditMode]
     [RequireComponent(typeof(AudioSource))]
     public class AudioSourceQueue : MonoBehaviour
