@@ -19,13 +19,13 @@ references:
   commentId: T:NPCEngine.API.Classification
   fullName: NPCEngine.API.Classification
   nameWithType: Classification
-- uid: NPCEngine.API.Classification.Classify(System.String,System.Collections.Generic.List{System.String},System.Action{System.Collections.Generic.List{System.Collections.Generic.List{System.Single}}})
+- uid: NPCEngine.API.Classification.Classify(System.String,System.Collections.Generic.List{System.String},Action{System.Collections.Generic.List{System.Collections.Generic.List{System.Single}}})
   name: Classify(String, List<String>, Action<List<List<Single>>>)
-  href: api/NPCEngine.API.Classification.html#NPCEngine_API_Classification_Classify_System_String_System_Collections_Generic_List_System_String__System_Action_System_Collections_Generic_List_System_Collections_Generic_List_System_Single____
-  commentId: M:NPCEngine.API.Classification.Classify(System.String,System.Collections.Generic.List{System.String},System.Action{System.Collections.Generic.List{System.Collections.Generic.List{System.Single}}})
+  href: api/NPCEngine.API.Classification.html#NPCEngine_API_Classification_Classify_System_String_System_Collections_Generic_List_System_String__Action_System_Collections_Generic_List_System_Collections_Generic_List_System_Single____
+  commentId: M:NPCEngine.API.Classification.Classify(System.String,System.Collections.Generic.List{System.String},Action{System.Collections.Generic.List{System.Collections.Generic.List{System.Single}}})
   name.vb: Classify(String, List(Of String), Action(Of List(Of List(Of Single))))
-  fullName: NPCEngine.API.Classification.Classify(System.String, System.Collections.Generic.List<System.String>, System.Action<System.Collections.Generic.List<System.Collections.Generic.List<System.Single>>>)
-  fullName.vb: NPCEngine.API.Classification.Classify(System.String, System.Collections.Generic.List(Of System.String), System.Action(Of System.Collections.Generic.List(Of System.Collections.Generic.List(Of System.Single))))
+  fullName: NPCEngine.API.Classification.Classify(System.String, System.Collections.Generic.List<System.String>, Action<System.Collections.Generic.List<System.Collections.Generic.List<System.Single>>>)
+  fullName.vb: NPCEngine.API.Classification.Classify(System.String, System.Collections.Generic.List(Of System.String), Action(Of System.Collections.Generic.List(Of System.Collections.Generic.List(Of System.Single))))
   nameWithType: Classification.Classify(String, List<String>, Action<List<List<Single>>>)
   nameWithType.vb: Classification.Classify(String, List(Of String), Action(Of List(Of List(Of Single))))
 - uid: NPCEngine.API.Classification.Classify*
@@ -41,13 +41,13 @@ references:
   commentId: T:NPCEngine.API.Control
   fullName: NPCEngine.API.Control
   nameWithType: Control
-- uid: NPCEngine.API.Control.GetServiceMetadata(System.String,System.Action{NPCEngine.API.ServiceMetadata})
+- uid: NPCEngine.API.Control.GetServiceMetadata(System.String,Action{NPCEngine.API.ServiceMetadata})
   name: GetServiceMetadata(String, Action<ServiceMetadata>)
-  href: api/NPCEngine.API.Control.html#NPCEngine_API_Control_GetServiceMetadata_System_String_System_Action_NPCEngine_API_ServiceMetadata__
-  commentId: M:NPCEngine.API.Control.GetServiceMetadata(System.String,System.Action{NPCEngine.API.ServiceMetadata})
+  href: api/NPCEngine.API.Control.html#NPCEngine_API_Control_GetServiceMetadata_System_String_Action_NPCEngine_API_ServiceMetadata__
+  commentId: M:NPCEngine.API.Control.GetServiceMetadata(System.String,Action{NPCEngine.API.ServiceMetadata})
   name.vb: GetServiceMetadata(String, Action(Of ServiceMetadata))
-  fullName: NPCEngine.API.Control.GetServiceMetadata(System.String, System.Action<NPCEngine.API.ServiceMetadata>)
-  fullName.vb: NPCEngine.API.Control.GetServiceMetadata(System.String, System.Action(Of NPCEngine.API.ServiceMetadata))
+  fullName: NPCEngine.API.Control.GetServiceMetadata(System.String, Action<NPCEngine.API.ServiceMetadata>)
+  fullName.vb: NPCEngine.API.Control.GetServiceMetadata(System.String, Action(Of NPCEngine.API.ServiceMetadata))
   nameWithType: Control.GetServiceMetadata(String, Action<ServiceMetadata>)
   nameWithType.vb: Control.GetServiceMetadata(String, Action(Of ServiceMetadata))
 - uid: NPCEngine.API.Control.GetServiceMetadata*
@@ -70,13 +70,13 @@ references:
   isSpec: "True"
   fullName: NPCEngine.API.Control.GetServiceMetadataFuture
   nameWithType: Control.GetServiceMetadataFuture
-- uid: NPCEngine.API.Control.GetServicesMetadata(System.Action{System.Collections.Generic.List{NPCEngine.API.ServiceMetadata}})
+- uid: NPCEngine.API.Control.GetServicesMetadata(Action{System.Collections.Generic.List{NPCEngine.API.ServiceMetadata}})
   name: GetServicesMetadata(Action<List<ServiceMetadata>>)
-  href: api/NPCEngine.API.Control.html#NPCEngine_API_Control_GetServicesMetadata_System_Action_System_Collections_Generic_List_NPCEngine_API_ServiceMetadata___
-  commentId: M:NPCEngine.API.Control.GetServicesMetadata(System.Action{System.Collections.Generic.List{NPCEngine.API.ServiceMetadata}})
+  href: api/NPCEngine.API.Control.html#NPCEngine_API_Control_GetServicesMetadata_Action_System_Collections_Generic_List_NPCEngine_API_ServiceMetadata___
+  commentId: M:NPCEngine.API.Control.GetServicesMetadata(Action{System.Collections.Generic.List{NPCEngine.API.ServiceMetadata}})
   name.vb: GetServicesMetadata(Action(Of List(Of ServiceMetadata)))
-  fullName: NPCEngine.API.Control.GetServicesMetadata(System.Action<System.Collections.Generic.List<NPCEngine.API.ServiceMetadata>>)
-  fullName.vb: NPCEngine.API.Control.GetServicesMetadata(System.Action(Of System.Collections.Generic.List(Of NPCEngine.API.ServiceMetadata)))
+  fullName: NPCEngine.API.Control.GetServicesMetadata(Action<System.Collections.Generic.List<NPCEngine.API.ServiceMetadata>>)
+  fullName.vb: NPCEngine.API.Control.GetServicesMetadata(Action(Of System.Collections.Generic.List(Of NPCEngine.API.ServiceMetadata)))
   nameWithType: Control.GetServicesMetadata(Action<List<ServiceMetadata>>)
   nameWithType.vb: Control.GetServicesMetadata(Action(Of List(Of ServiceMetadata)))
 - uid: NPCEngine.API.Control.GetServicesMetadata*
@@ -99,13 +99,13 @@ references:
   isSpec: "True"
   fullName: NPCEngine.API.Control.GetServicesMetadataFuture
   nameWithType: Control.GetServicesMetadataFuture
-- uid: NPCEngine.API.Control.GetServiceStatus(System.String,System.Action{NPCEngine.API.ServiceStatus})
+- uid: NPCEngine.API.Control.GetServiceStatus(System.String,Action{NPCEngine.API.ServiceStatus})
   name: GetServiceStatus(String, Action<ServiceStatus>)
-  href: api/NPCEngine.API.Control.html#NPCEngine_API_Control_GetServiceStatus_System_String_System_Action_NPCEngine_API_ServiceStatus__
-  commentId: M:NPCEngine.API.Control.GetServiceStatus(System.String,System.Action{NPCEngine.API.ServiceStatus})
+  href: api/NPCEngine.API.Control.html#NPCEngine_API_Control_GetServiceStatus_System_String_Action_NPCEngine_API_ServiceStatus__
+  commentId: M:NPCEngine.API.Control.GetServiceStatus(System.String,Action{NPCEngine.API.ServiceStatus})
   name.vb: GetServiceStatus(String, Action(Of ServiceStatus))
-  fullName: NPCEngine.API.Control.GetServiceStatus(System.String, System.Action<NPCEngine.API.ServiceStatus>)
-  fullName.vb: NPCEngine.API.Control.GetServiceStatus(System.String, System.Action(Of NPCEngine.API.ServiceStatus))
+  fullName: NPCEngine.API.Control.GetServiceStatus(System.String, Action<NPCEngine.API.ServiceStatus>)
+  fullName.vb: NPCEngine.API.Control.GetServiceStatus(System.String, Action(Of NPCEngine.API.ServiceStatus))
   nameWithType: Control.GetServiceStatus(String, Action<ServiceStatus>)
   nameWithType.vb: Control.GetServiceStatus(String, Action(Of ServiceStatus))
 - uid: NPCEngine.API.Control.GetServiceStatus*
@@ -199,13 +199,13 @@ references:
   commentId: T:NPCEngine.API.PersonaDialogue
   fullName: NPCEngine.API.PersonaDialogue
   nameWithType: PersonaDialogue
-- uid: NPCEngine.API.PersonaDialogue.StartDialogue(System.String,System.String,System.String,System.String,System.String,System.String,System.Action{System.String},System.String)
+- uid: NPCEngine.API.PersonaDialogue.StartDialogue(System.String,System.String,System.String,System.String,System.String,System.String,Action{System.String},System.String)
   name: StartDialogue(String, String, String, String, String, String, Action<String>, String)
-  href: api/NPCEngine.API.PersonaDialogue.html#NPCEngine_API_PersonaDialogue_StartDialogue_System_String_System_String_System_String_System_String_System_String_System_String_System_Action_System_String__System_String_
-  commentId: M:NPCEngine.API.PersonaDialogue.StartDialogue(System.String,System.String,System.String,System.String,System.String,System.String,System.Action{System.String},System.String)
+  href: api/NPCEngine.API.PersonaDialogue.html#NPCEngine_API_PersonaDialogue_StartDialogue_System_String_System_String_System_String_System_String_System_String_System_String_Action_System_String__System_String_
+  commentId: M:NPCEngine.API.PersonaDialogue.StartDialogue(System.String,System.String,System.String,System.String,System.String,System.String,Action{System.String},System.String)
   name.vb: StartDialogue(String, String, String, String, String, String, Action(Of String), String)
-  fullName: NPCEngine.API.PersonaDialogue.StartDialogue(System.String, System.String, System.String, System.String, System.String, System.String, System.Action<System.String>, System.String)
-  fullName.vb: NPCEngine.API.PersonaDialogue.StartDialogue(System.String, System.String, System.String, System.String, System.String, System.String, System.Action(Of System.String), System.String)
+  fullName: NPCEngine.API.PersonaDialogue.StartDialogue(System.String, System.String, System.String, System.String, System.String, System.String, Action<System.String>, System.String)
+  fullName.vb: NPCEngine.API.PersonaDialogue.StartDialogue(System.String, System.String, System.String, System.String, System.String, System.String, Action(Of System.String), System.String)
   nameWithType: PersonaDialogue.StartDialogue(String, String, String, String, String, String, Action<String>, String)
   nameWithType.vb: PersonaDialogue.StartDialogue(String, String, String, String, String, String, Action(Of String), String)
 - uid: NPCEngine.API.PersonaDialogue.StartDialogue*
@@ -215,13 +215,13 @@ references:
   isSpec: "True"
   fullName: NPCEngine.API.PersonaDialogue.StartDialogue
   nameWithType: PersonaDialogue.StartDialogue
-- uid: NPCEngine.API.PersonaDialogue.StepDialogue(System.String,System.String,System.Boolean,System.Action{System.Tuple{System.String,System.Boolean}},System.Single,System.Collections.Generic.List{System.String},System.String)
+- uid: NPCEngine.API.PersonaDialogue.StepDialogue(System.String,System.String,System.Boolean,Action{Tuple{System.String,System.Boolean}},System.Single,System.Collections.Generic.List{System.String},System.String)
   name: StepDialogue(String, String, Boolean, Action<Tuple<String, Boolean>>, Single, List<String>, String)
-  href: api/NPCEngine.API.PersonaDialogue.html#NPCEngine_API_PersonaDialogue_StepDialogue_System_String_System_String_System_Boolean_System_Action_System_Tuple_System_String_System_Boolean___System_Single_System_Collections_Generic_List_System_String__System_String_
-  commentId: M:NPCEngine.API.PersonaDialogue.StepDialogue(System.String,System.String,System.Boolean,System.Action{System.Tuple{System.String,System.Boolean}},System.Single,System.Collections.Generic.List{System.String},System.String)
+  href: api/NPCEngine.API.PersonaDialogue.html#NPCEngine_API_PersonaDialogue_StepDialogue_System_String_System_String_System_Boolean_Action_Tuple_System_String_System_Boolean___System_Single_System_Collections_Generic_List_System_String__System_String_
+  commentId: M:NPCEngine.API.PersonaDialogue.StepDialogue(System.String,System.String,System.Boolean,Action{Tuple{System.String,System.Boolean}},System.Single,System.Collections.Generic.List{System.String},System.String)
   name.vb: StepDialogue(String, String, Boolean, Action(Of Tuple(Of String, Boolean)), Single, List(Of String), String)
-  fullName: NPCEngine.API.PersonaDialogue.StepDialogue(System.String, System.String, System.Boolean, System.Action<System.Tuple<System.String, System.Boolean>>, System.Single, System.Collections.Generic.List<System.String>, System.String)
-  fullName.vb: NPCEngine.API.PersonaDialogue.StepDialogue(System.String, System.String, System.Boolean, System.Action(Of System.Tuple(Of System.String, System.Boolean)), System.Single, System.Collections.Generic.List(Of System.String), System.String)
+  fullName: NPCEngine.API.PersonaDialogue.StepDialogue(System.String, System.String, System.Boolean, Action<Tuple<System.String, System.Boolean>>, System.Single, System.Collections.Generic.List<System.String>, System.String)
+  fullName.vb: NPCEngine.API.PersonaDialogue.StepDialogue(System.String, System.String, System.Boolean, Action(Of Tuple(Of System.String, System.Boolean)), System.Single, System.Collections.Generic.List(Of System.String), System.String)
   nameWithType: PersonaDialogue.StepDialogue(String, String, Boolean, Action<Tuple<String, Boolean>>, Single, List<String>, String)
   nameWithType.vb: PersonaDialogue.StepDialogue(String, String, Boolean, Action(Of Tuple(Of String, Boolean)), Single, List(Of String), String)
 - uid: NPCEngine.API.PersonaDialogue.StepDialogue*
@@ -253,13 +253,13 @@ references:
   isSpec: "True"
   fullName: NPCEngine.API.SemanticQuery.Cache
   nameWithType: SemanticQuery.Cache
-- uid: NPCEngine.API.SemanticQuery.Compare(System.String,System.Collections.Generic.List{System.String},System.Action{System.Collections.Generic.List{System.Single}})
+- uid: NPCEngine.API.SemanticQuery.Compare(System.String,System.Collections.Generic.List{System.String},Action{System.Collections.Generic.List{System.Single}})
   name: Compare(String, List<String>, Action<List<Single>>)
-  href: api/NPCEngine.API.SemanticQuery.html#NPCEngine_API_SemanticQuery_Compare_System_String_System_Collections_Generic_List_System_String__System_Action_System_Collections_Generic_List_System_Single___
-  commentId: M:NPCEngine.API.SemanticQuery.Compare(System.String,System.Collections.Generic.List{System.String},System.Action{System.Collections.Generic.List{System.Single}})
+  href: api/NPCEngine.API.SemanticQuery.html#NPCEngine_API_SemanticQuery_Compare_System_String_System_Collections_Generic_List_System_String__Action_System_Collections_Generic_List_System_Single___
+  commentId: M:NPCEngine.API.SemanticQuery.Compare(System.String,System.Collections.Generic.List{System.String},Action{System.Collections.Generic.List{System.Single}})
   name.vb: Compare(String, List(Of String), Action(Of List(Of Single)))
-  fullName: NPCEngine.API.SemanticQuery.Compare(System.String, System.Collections.Generic.List<System.String>, System.Action<System.Collections.Generic.List<System.Single>>)
-  fullName.vb: NPCEngine.API.SemanticQuery.Compare(System.String, System.Collections.Generic.List(Of System.String), System.Action(Of System.Collections.Generic.List(Of System.Single)))
+  fullName: NPCEngine.API.SemanticQuery.Compare(System.String, System.Collections.Generic.List<System.String>, Action<System.Collections.Generic.List<System.Single>>)
+  fullName.vb: NPCEngine.API.SemanticQuery.Compare(System.String, System.Collections.Generic.List(Of System.String), Action(Of System.Collections.Generic.List(Of System.Single)))
   nameWithType: SemanticQuery.Compare(String, List<String>, Action<List<Single>>)
   nameWithType.vb: SemanticQuery.Compare(String, List(Of String), Action(Of List(Of Single)))
 - uid: NPCEngine.API.SemanticQuery.Compare*
@@ -387,13 +387,13 @@ references:
   commentId: T:NPCEngine.API.SpeechToText
   fullName: NPCEngine.API.SpeechToText
   nameWithType: SpeechToText
-- uid: NPCEngine.API.SpeechToText.GetDevices(System.Action{System.Collections.Generic.List{System.String}})
+- uid: NPCEngine.API.SpeechToText.GetDevices(Action{System.Collections.Generic.List{System.String}})
   name: GetDevices(Action<List<String>>)
-  href: api/NPCEngine.API.SpeechToText.html#NPCEngine_API_SpeechToText_GetDevices_System_Action_System_Collections_Generic_List_System_String___
-  commentId: M:NPCEngine.API.SpeechToText.GetDevices(System.Action{System.Collections.Generic.List{System.String}})
+  href: api/NPCEngine.API.SpeechToText.html#NPCEngine_API_SpeechToText_GetDevices_Action_System_Collections_Generic_List_System_String___
+  commentId: M:NPCEngine.API.SpeechToText.GetDevices(Action{System.Collections.Generic.List{System.String}})
   name.vb: GetDevices(Action(Of List(Of String)))
-  fullName: NPCEngine.API.SpeechToText.GetDevices(System.Action<System.Collections.Generic.List<System.String>>)
-  fullName.vb: NPCEngine.API.SpeechToText.GetDevices(System.Action(Of System.Collections.Generic.List(Of System.String)))
+  fullName: NPCEngine.API.SpeechToText.GetDevices(Action<System.Collections.Generic.List<System.String>>)
+  fullName.vb: NPCEngine.API.SpeechToText.GetDevices(Action(Of System.Collections.Generic.List(Of System.String)))
   nameWithType: SpeechToText.GetDevices(Action<List<String>>)
   nameWithType.vb: SpeechToText.GetDevices(Action(Of List(Of String)))
 - uid: NPCEngine.API.SpeechToText.GetDevices*
@@ -429,13 +429,13 @@ references:
   isSpec: "True"
   fullName: NPCEngine.API.SpeechToText.InitializeMicrophoneInput
   nameWithType: SpeechToText.InitializeMicrophoneInput
-- uid: NPCEngine.API.SpeechToText.Listen(System.String,System.Action{System.String})
+- uid: NPCEngine.API.SpeechToText.Listen(System.String,Action{System.String})
   name: Listen(String, Action<String>)
-  href: api/NPCEngine.API.SpeechToText.html#NPCEngine_API_SpeechToText_Listen_System_String_System_Action_System_String__
-  commentId: M:NPCEngine.API.SpeechToText.Listen(System.String,System.Action{System.String})
+  href: api/NPCEngine.API.SpeechToText.html#NPCEngine_API_SpeechToText_Listen_System_String_Action_System_String__
+  commentId: M:NPCEngine.API.SpeechToText.Listen(System.String,Action{System.String})
   name.vb: Listen(String, Action(Of String))
-  fullName: NPCEngine.API.SpeechToText.Listen(System.String, System.Action<System.String>)
-  fullName.vb: NPCEngine.API.SpeechToText.Listen(System.String, System.Action(Of System.String))
+  fullName: NPCEngine.API.SpeechToText.Listen(System.String, Action<System.String>)
+  fullName.vb: NPCEngine.API.SpeechToText.Listen(System.String, Action(Of System.String))
   nameWithType: SpeechToText.Listen(String, Action<String>)
   nameWithType.vb: SpeechToText.Listen(String, Action(Of String))
 - uid: NPCEngine.API.SpeechToText.Listen*
@@ -458,13 +458,13 @@ references:
   isSpec: "True"
   fullName: NPCEngine.API.SpeechToText.ListenFuture
   nameWithType: SpeechToText.ListenFuture
-- uid: NPCEngine.API.SpeechToText.SetDevice(System.Int32,System.Action{System.Collections.Generic.List{System.String}})
+- uid: NPCEngine.API.SpeechToText.SetDevice(System.Int32,Action{System.Collections.Generic.List{System.String}})
   name: SetDevice(Int32, Action<List<String>>)
-  href: api/NPCEngine.API.SpeechToText.html#NPCEngine_API_SpeechToText_SetDevice_System_Int32_System_Action_System_Collections_Generic_List_System_String___
-  commentId: M:NPCEngine.API.SpeechToText.SetDevice(System.Int32,System.Action{System.Collections.Generic.List{System.String}})
+  href: api/NPCEngine.API.SpeechToText.html#NPCEngine_API_SpeechToText_SetDevice_System_Int32_Action_System_Collections_Generic_List_System_String___
+  commentId: M:NPCEngine.API.SpeechToText.SetDevice(System.Int32,Action{System.Collections.Generic.List{System.String}})
   name.vb: SetDevice(Int32, Action(Of List(Of String)))
-  fullName: NPCEngine.API.SpeechToText.SetDevice(System.Int32, System.Action<System.Collections.Generic.List<System.String>>)
-  fullName.vb: NPCEngine.API.SpeechToText.SetDevice(System.Int32, System.Action(Of System.Collections.Generic.List(Of System.String)))
+  fullName: NPCEngine.API.SpeechToText.SetDevice(System.Int32, Action<System.Collections.Generic.List<System.String>>)
+  fullName.vb: NPCEngine.API.SpeechToText.SetDevice(System.Int32, Action(Of System.Collections.Generic.List(Of System.String)))
   nameWithType: SpeechToText.SetDevice(Int32, Action<List<String>>)
   nameWithType.vb: SpeechToText.SetDevice(Int32, Action(Of List(Of String)))
 - uid: NPCEngine.API.SpeechToText.SetDevice*
@@ -487,13 +487,13 @@ references:
   isSpec: "True"
   fullName: NPCEngine.API.SpeechToText.SetDeviceFuture
   nameWithType: SpeechToText.SetDeviceFuture
-- uid: NPCEngine.API.SpeechToText.Transcribe(System.Collections.Generic.List{System.Single},System.Action{System.String})
+- uid: NPCEngine.API.SpeechToText.Transcribe(System.Collections.Generic.List{System.Single},Action{System.String})
   name: Transcribe(List<Single>, Action<String>)
-  href: api/NPCEngine.API.SpeechToText.html#NPCEngine_API_SpeechToText_Transcribe_System_Collections_Generic_List_System_Single__System_Action_System_String__
-  commentId: M:NPCEngine.API.SpeechToText.Transcribe(System.Collections.Generic.List{System.Single},System.Action{System.String})
+  href: api/NPCEngine.API.SpeechToText.html#NPCEngine_API_SpeechToText_Transcribe_System_Collections_Generic_List_System_Single__Action_System_String__
+  commentId: M:NPCEngine.API.SpeechToText.Transcribe(System.Collections.Generic.List{System.Single},Action{System.String})
   name.vb: Transcribe(List(Of Single), Action(Of String))
-  fullName: NPCEngine.API.SpeechToText.Transcribe(System.Collections.Generic.List<System.Single>, System.Action<System.String>)
-  fullName.vb: NPCEngine.API.SpeechToText.Transcribe(System.Collections.Generic.List(Of System.Single), System.Action(Of System.String))
+  fullName: NPCEngine.API.SpeechToText.Transcribe(System.Collections.Generic.List<System.Single>, Action<System.String>)
+  fullName.vb: NPCEngine.API.SpeechToText.Transcribe(System.Collections.Generic.List(Of System.Single), Action(Of System.String))
   nameWithType: SpeechToText.Transcribe(List<Single>, Action<String>)
   nameWithType.vb: SpeechToText.Transcribe(List(Of Single), Action(Of String))
 - uid: NPCEngine.API.SpeechToText.Transcribe*
@@ -528,13 +528,13 @@ references:
   fullName.vb: NPCEngine.API.TextGeneration(Of ContextType)
   nameWithType: TextGeneration<ContextType>
   nameWithType.vb: TextGeneration(Of ContextType)
-- uid: NPCEngine.API.TextGeneration`1.GenerateReply(`0,System.Action{System.String},System.Single,System.Int32)
+- uid: NPCEngine.API.TextGeneration`1.GenerateReply(`0,Action{System.String},System.Single,System.Int32)
   name: GenerateReply(ContextType, Action<String>, Single, Int32)
-  href: api/NPCEngine.API.TextGeneration-1.html#NPCEngine_API_TextGeneration_1_GenerateReply__0_System_Action_System_String__System_Single_System_Int32_
-  commentId: M:NPCEngine.API.TextGeneration`1.GenerateReply(`0,System.Action{System.String},System.Single,System.Int32)
+  href: api/NPCEngine.API.TextGeneration-1.html#NPCEngine_API_TextGeneration_1_GenerateReply__0_Action_System_String__System_Single_System_Int32_
+  commentId: M:NPCEngine.API.TextGeneration`1.GenerateReply(`0,Action{System.String},System.Single,System.Int32)
   name.vb: GenerateReply(ContextType, Action(Of String), Single, Int32)
-  fullName: NPCEngine.API.TextGeneration<ContextType>.GenerateReply(ContextType, System.Action<System.String>, System.Single, System.Int32)
-  fullName.vb: NPCEngine.API.TextGeneration(Of ContextType).GenerateReply(ContextType, System.Action(Of System.String), System.Single, System.Int32)
+  fullName: NPCEngine.API.TextGeneration<ContextType>.GenerateReply(ContextType, Action<System.String>, System.Single, System.Int32)
+  fullName.vb: NPCEngine.API.TextGeneration(Of ContextType).GenerateReply(ContextType, Action(Of System.String), System.Single, System.Int32)
   nameWithType: TextGeneration<ContextType>.GenerateReply(ContextType, Action<String>, Single, Int32)
   nameWithType.vb: TextGeneration(Of ContextType).GenerateReply(ContextType, Action(Of String), Single, Int32)
 - uid: NPCEngine.API.TextGeneration`1.GenerateReply*
@@ -563,13 +563,13 @@ references:
   fullName.vb: NPCEngine.API.TextGeneration(Of ContextType).GenerateReplyFuture
   nameWithType: TextGeneration<ContextType>.GenerateReplyFuture
   nameWithType.vb: TextGeneration(Of ContextType).GenerateReplyFuture
-- uid: NPCEngine.API.TextGeneration`1.GetPromptTemplate(System.Action{System.String})
+- uid: NPCEngine.API.TextGeneration`1.GetPromptTemplate(Action{System.String})
   name: GetPromptTemplate(Action<String>)
-  href: api/NPCEngine.API.TextGeneration-1.html#NPCEngine_API_TextGeneration_1_GetPromptTemplate_System_Action_System_String__
-  commentId: M:NPCEngine.API.TextGeneration`1.GetPromptTemplate(System.Action{System.String})
+  href: api/NPCEngine.API.TextGeneration-1.html#NPCEngine_API_TextGeneration_1_GetPromptTemplate_Action_System_String__
+  commentId: M:NPCEngine.API.TextGeneration`1.GetPromptTemplate(Action{System.String})
   name.vb: GetPromptTemplate(Action(Of String))
-  fullName: NPCEngine.API.TextGeneration<ContextType>.GetPromptTemplate(System.Action<System.String>)
-  fullName.vb: NPCEngine.API.TextGeneration(Of ContextType).GetPromptTemplate(System.Action(Of System.String))
+  fullName: NPCEngine.API.TextGeneration<ContextType>.GetPromptTemplate(Action<System.String>)
+  fullName.vb: NPCEngine.API.TextGeneration(Of ContextType).GetPromptTemplate(Action(Of System.String))
   nameWithType: TextGeneration<ContextType>.GetPromptTemplate(Action<String>)
   nameWithType.vb: TextGeneration(Of ContextType).GetPromptTemplate(Action(Of String))
 - uid: NPCEngine.API.TextGeneration`1.GetPromptTemplate*
@@ -598,13 +598,13 @@ references:
   fullName.vb: NPCEngine.API.TextGeneration(Of ContextType).GetPromptTemplateFuture
   nameWithType: TextGeneration<ContextType>.GetPromptTemplateFuture
   nameWithType.vb: TextGeneration(Of ContextType).GetPromptTemplateFuture
-- uid: NPCEngine.API.TextGeneration`1.GetSpecialTokens(System.Action{System.Collections.Generic.Dictionary{System.String,System.String}})
+- uid: NPCEngine.API.TextGeneration`1.GetSpecialTokens(Action{System.Collections.Generic.Dictionary{System.String,System.String}})
   name: GetSpecialTokens(Action<Dictionary<String, String>>)
-  href: api/NPCEngine.API.TextGeneration-1.html#NPCEngine_API_TextGeneration_1_GetSpecialTokens_System_Action_System_Collections_Generic_Dictionary_System_String_System_String___
-  commentId: M:NPCEngine.API.TextGeneration`1.GetSpecialTokens(System.Action{System.Collections.Generic.Dictionary{System.String,System.String}})
+  href: api/NPCEngine.API.TextGeneration-1.html#NPCEngine_API_TextGeneration_1_GetSpecialTokens_Action_System_Collections_Generic_Dictionary_System_String_System_String___
+  commentId: M:NPCEngine.API.TextGeneration`1.GetSpecialTokens(Action{System.Collections.Generic.Dictionary{System.String,System.String}})
   name.vb: GetSpecialTokens(Action(Of Dictionary(Of String, String)))
-  fullName: NPCEngine.API.TextGeneration<ContextType>.GetSpecialTokens(System.Action<System.Collections.Generic.Dictionary<System.String, System.String>>)
-  fullName.vb: NPCEngine.API.TextGeneration(Of ContextType).GetSpecialTokens(System.Action(Of System.Collections.Generic.Dictionary(Of System.String, System.String)))
+  fullName: NPCEngine.API.TextGeneration<ContextType>.GetSpecialTokens(Action<System.Collections.Generic.Dictionary<System.String, System.String>>)
+  fullName.vb: NPCEngine.API.TextGeneration(Of ContextType).GetSpecialTokens(Action(Of System.Collections.Generic.Dictionary(Of System.String, System.String)))
   nameWithType: TextGeneration<ContextType>.GetSpecialTokens(Action<Dictionary<String, String>>)
   nameWithType.vb: TextGeneration(Of ContextType).GetSpecialTokens(Action(Of Dictionary(Of String, String)))
 - uid: NPCEngine.API.TextGeneration`1.GetSpecialTokens*
@@ -639,13 +639,13 @@ references:
   commentId: T:NPCEngine.API.TextToSpeech
   fullName: NPCEngine.API.TextToSpeech
   nameWithType: TextToSpeech
-- uid: NPCEngine.API.TextToSpeech.GetNextResult(System.Action{System.Collections.Generic.List{System.Single}})
+- uid: NPCEngine.API.TextToSpeech.GetNextResult(Action{System.Collections.Generic.List{System.Single}})
   name: GetNextResult(Action<List<Single>>)
-  href: api/NPCEngine.API.TextToSpeech.html#NPCEngine_API_TextToSpeech_GetNextResult_System_Action_System_Collections_Generic_List_System_Single___
-  commentId: M:NPCEngine.API.TextToSpeech.GetNextResult(System.Action{System.Collections.Generic.List{System.Single}})
+  href: api/NPCEngine.API.TextToSpeech.html#NPCEngine_API_TextToSpeech_GetNextResult_Action_System_Collections_Generic_List_System_Single___
+  commentId: M:NPCEngine.API.TextToSpeech.GetNextResult(Action{System.Collections.Generic.List{System.Single}})
   name.vb: GetNextResult(Action(Of List(Of Single)))
-  fullName: NPCEngine.API.TextToSpeech.GetNextResult(System.Action<System.Collections.Generic.List<System.Single>>)
-  fullName.vb: NPCEngine.API.TextToSpeech.GetNextResult(System.Action(Of System.Collections.Generic.List(Of System.Single)))
+  fullName: NPCEngine.API.TextToSpeech.GetNextResult(Action<System.Collections.Generic.List<System.Single>>)
+  fullName.vb: NPCEngine.API.TextToSpeech.GetNextResult(Action(Of System.Collections.Generic.List(Of System.Single)))
   nameWithType: TextToSpeech.GetNextResult(Action<List<Single>>)
   nameWithType.vb: TextToSpeech.GetNextResult(Action(Of List(Of Single)))
 - uid: NPCEngine.API.TextToSpeech.GetNextResult*
@@ -681,11 +681,11 @@ references:
   isSpec: "True"
   fullName: NPCEngine.API.TextToSpeech.GetSpeakerIdsFuture
   nameWithType: TextToSpeech.GetSpeakerIdsFuture
-- uid: NPCEngine.API.TextToSpeech.StartTTS(System.String,System.String,System.Int32,System.Action)
+- uid: NPCEngine.API.TextToSpeech.StartTTS(System.String,System.String,System.Int32,Action)
   name: StartTTS(String, String, Int32, Action)
-  href: api/NPCEngine.API.TextToSpeech.html#NPCEngine_API_TextToSpeech_StartTTS_System_String_System_String_System_Int32_System_Action_
-  commentId: M:NPCEngine.API.TextToSpeech.StartTTS(System.String,System.String,System.Int32,System.Action)
-  fullName: NPCEngine.API.TextToSpeech.StartTTS(System.String, System.String, System.Int32, System.Action)
+  href: api/NPCEngine.API.TextToSpeech.html#NPCEngine_API_TextToSpeech_StartTTS_System_String_System_String_System_Int32_Action_
+  commentId: M:NPCEngine.API.TextToSpeech.StartTTS(System.String,System.String,System.Int32,Action)
+  fullName: NPCEngine.API.TextToSpeech.StartTTS(System.String, System.String, System.Int32, Action)
   nameWithType: TextToSpeech.StartTTS(String, String, Int32, Action)
 - uid: NPCEngine.API.TextToSpeech.StartTTS*
   name: StartTTS
@@ -771,19 +771,19 @@ references:
   isSpec: "True"
   fullName: NPCEngine.Components.AbstractDialogueSystem.CurrentNodeThreshold
   nameWithType: AbstractDialogueSystem.CurrentNodeThreshold
-- uid: NPCEngine.Components.AbstractDialogueSystem.EndDialog
-  name: EndDialog()
-  href: api/NPCEngine.Components.AbstractDialogueSystem.html#NPCEngine_Components_AbstractDialogueSystem_EndDialog
-  commentId: M:NPCEngine.Components.AbstractDialogueSystem.EndDialog
-  fullName: NPCEngine.Components.AbstractDialogueSystem.EndDialog()
-  nameWithType: AbstractDialogueSystem.EndDialog()
-- uid: NPCEngine.Components.AbstractDialogueSystem.EndDialog*
-  name: EndDialog
-  href: api/NPCEngine.Components.AbstractDialogueSystem.html#NPCEngine_Components_AbstractDialogueSystem_EndDialog_
-  commentId: Overload:NPCEngine.Components.AbstractDialogueSystem.EndDialog
+- uid: NPCEngine.Components.AbstractDialogueSystem.EndDialogue
+  name: EndDialogue()
+  href: api/NPCEngine.Components.AbstractDialogueSystem.html#NPCEngine_Components_AbstractDialogueSystem_EndDialogue
+  commentId: M:NPCEngine.Components.AbstractDialogueSystem.EndDialogue
+  fullName: NPCEngine.Components.AbstractDialogueSystem.EndDialogue()
+  nameWithType: AbstractDialogueSystem.EndDialogue()
+- uid: NPCEngine.Components.AbstractDialogueSystem.EndDialogue*
+  name: EndDialogue
+  href: api/NPCEngine.Components.AbstractDialogueSystem.html#NPCEngine_Components_AbstractDialogueSystem_EndDialogue_
+  commentId: Overload:NPCEngine.Components.AbstractDialogueSystem.EndDialogue
   isSpec: "True"
-  fullName: NPCEngine.Components.AbstractDialogueSystem.EndDialog
-  nameWithType: AbstractDialogueSystem.EndDialog
+  fullName: NPCEngine.Components.AbstractDialogueSystem.EndDialogue
+  nameWithType: AbstractDialogueSystem.EndDialogue
 - uid: NPCEngine.Components.AbstractDialogueSystem.GetCurrentNodeOptions
   name: GetCurrentNodeOptions()
   href: api/NPCEngine.Components.AbstractDialogueSystem.html#NPCEngine_Components_AbstractDialogueSystem_GetCurrentNodeOptions
@@ -1236,19 +1236,19 @@ references:
   commentId: F:NPCEngine.Components.NonPlayerCharacter.dialogueSystem
   fullName: NPCEngine.Components.NonPlayerCharacter.dialogueSystem
   nameWithType: NonPlayerCharacter.dialogueSystem
-- uid: NPCEngine.Components.NonPlayerCharacter.EndDialog
-  name: EndDialog()
-  href: api/NPCEngine.Components.NonPlayerCharacter.html#NPCEngine_Components_NonPlayerCharacter_EndDialog
-  commentId: M:NPCEngine.Components.NonPlayerCharacter.EndDialog
-  fullName: NPCEngine.Components.NonPlayerCharacter.EndDialog()
-  nameWithType: NonPlayerCharacter.EndDialog()
-- uid: NPCEngine.Components.NonPlayerCharacter.EndDialog*
-  name: EndDialog
-  href: api/NPCEngine.Components.NonPlayerCharacter.html#NPCEngine_Components_NonPlayerCharacter_EndDialog_
-  commentId: Overload:NPCEngine.Components.NonPlayerCharacter.EndDialog
+- uid: NPCEngine.Components.NonPlayerCharacter.EndDialogue
+  name: EndDialogue()
+  href: api/NPCEngine.Components.NonPlayerCharacter.html#NPCEngine_Components_NonPlayerCharacter_EndDialogue
+  commentId: M:NPCEngine.Components.NonPlayerCharacter.EndDialogue
+  fullName: NPCEngine.Components.NonPlayerCharacter.EndDialogue()
+  nameWithType: NonPlayerCharacter.EndDialogue()
+- uid: NPCEngine.Components.NonPlayerCharacter.EndDialogue*
+  name: EndDialogue
+  href: api/NPCEngine.Components.NonPlayerCharacter.html#NPCEngine_Components_NonPlayerCharacter_EndDialogue_
+  commentId: Overload:NPCEngine.Components.NonPlayerCharacter.EndDialogue
   isSpec: "True"
-  fullName: NPCEngine.Components.NonPlayerCharacter.EndDialog
-  nameWithType: NonPlayerCharacter.EndDialog
+  fullName: NPCEngine.Components.NonPlayerCharacter.EndDialogue
+  nameWithType: NonPlayerCharacter.EndDialogue
 - uid: NPCEngine.Components.NonPlayerCharacter.GenerateAndPlaySpeech(System.String)
   name: GenerateAndPlaySpeech(String)
   href: api/NPCEngine.Components.NonPlayerCharacter.html#NPCEngine_Components_NonPlayerCharacter_GenerateAndPlaySpeech_System_String_
@@ -2107,13 +2107,13 @@ references:
   commentId: T:NPCEngine.RPC.Request
   fullName: NPCEngine.RPC.Request
   nameWithType: Request
-- uid: NPCEngine.RPC.Request.#ctor(System.String,System.Action{System.String})
+- uid: NPCEngine.RPC.Request.#ctor(System.String,Action{System.String})
   name: Request(String, Action<String>)
-  href: api/NPCEngine.RPC.Request.html#NPCEngine_RPC_Request__ctor_System_String_System_Action_System_String__
-  commentId: M:NPCEngine.RPC.Request.#ctor(System.String,System.Action{System.String})
+  href: api/NPCEngine.RPC.Request.html#NPCEngine_RPC_Request__ctor_System_String_Action_System_String__
+  commentId: M:NPCEngine.RPC.Request.#ctor(System.String,Action{System.String})
   name.vb: Request(String, Action(Of String))
-  fullName: NPCEngine.RPC.Request.Request(System.String, System.Action<System.String>)
-  fullName.vb: NPCEngine.RPC.Request.Request(System.String, System.Action(Of System.String))
+  fullName: NPCEngine.RPC.Request.Request(System.String, Action<System.String>)
+  fullName.vb: NPCEngine.RPC.Request.Request(System.String, Action(Of System.String))
   nameWithType: Request.Request(String, Action<String>)
   nameWithType.vb: Request.Request(String, Action(Of String))
 - uid: NPCEngine.RPC.Request.#ctor*
@@ -2183,13 +2183,13 @@ references:
   isSpec: "True"
   fullName: NPCEngine.RPC.RPCBase.Run
   nameWithType: RPCBase.Run
-- uid: NPCEngine.RPC.RPCBase.Run``2(System.String,``0)
+- uid: NPCEngine.RPC.RPCBase.Run``2(String,``0)
   name: Run<P, R>(String, P)
-  href: api/NPCEngine.RPC.RPCBase.html#NPCEngine_RPC_RPCBase_Run__2_System_String___0_
-  commentId: M:NPCEngine.RPC.RPCBase.Run``2(System.String,``0)
+  href: api/NPCEngine.RPC.RPCBase.html#NPCEngine_RPC_RPCBase_Run__2_String___0_
+  commentId: M:NPCEngine.RPC.RPCBase.Run``2(String,``0)
   name.vb: Run(Of P, R)(String, P)
-  fullName: NPCEngine.RPC.RPCBase.Run<P, R>(System.String, P)
-  fullName.vb: NPCEngine.RPC.RPCBase.Run(Of P, R)(System.String, P)
+  fullName: NPCEngine.RPC.RPCBase.Run<P, R>(String, P)
+  fullName.vb: NPCEngine.RPC.RPCBase.Run(Of P, R)(String, P)
   nameWithType: RPCBase.Run<P, R>(String, P)
   nameWithType.vb: RPCBase.Run(Of P, R)(String, P)
 - uid: NPCEngine.RPC.RPCBase.serviceId

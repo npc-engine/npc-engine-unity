@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class PersonaDialogue
    | npc-engine Unity integration ">
-    <meta name="generator" content="docfx 2.59.2.0">
+    <meta name="generator" content="docfx 2.59.3.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -103,7 +103,7 @@ to inference engine&apos;s TextGeneration services.</p>
   
   
   <a id="NPCEngine_API_PersonaDialogue_StartDialogue_" data-uid="NPCEngine.API.PersonaDialogue.StartDialogue*"></a>
-  <h4 id="NPCEngine_API_PersonaDialogue_StartDialogue_System_String_System_String_System_String_System_String_System_String_System_String_System_Action_System_String__System_String_" data-uid="NPCEngine.API.PersonaDialogue.StartDialogue(System.String,System.String,System.String,System.String,System.String,System.String,System.Action{System.String},System.String)">StartDialogue(String, String, String, String, String, String, Action&lt;String&gt;, String)</h4>
+  <h4 id="NPCEngine_API_PersonaDialogue_StartDialogue_System_String_System_String_System_String_System_String_System_String_System_String_Action_System_String__System_String_" data-uid="NPCEngine.API.PersonaDialogue.StartDialogue(System.String,System.String,System.String,System.String,System.String,System.String,Action{System.String},System.String)">StartDialogue(String, String, String, String, String, String, Action&lt;String&gt;, String)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -151,7 +151,7 @@ to inference engine&apos;s TextGeneration services.</p>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
         <td><span class="parametername">outputCallback</span></td>
         <td></td>
       </tr>
@@ -180,7 +180,7 @@ to inference engine&apos;s TextGeneration services.</p>
   
   
   <a id="NPCEngine_API_PersonaDialogue_StepDialogue_" data-uid="NPCEngine.API.PersonaDialogue.StepDialogue*"></a>
-  <h4 id="NPCEngine_API_PersonaDialogue_StepDialogue_System_String_System_String_System_Boolean_System_Action_System_Tuple_System_String_System_Boolean___System_Single_System_Collections_Generic_List_System_String__System_String_" data-uid="NPCEngine.API.PersonaDialogue.StepDialogue(System.String,System.String,System.Boolean,System.Action{System.Tuple{System.String,System.Boolean}},System.Single,System.Collections.Generic.List{System.String},System.String)">StepDialogue(String, String, Boolean, Action&lt;Tuple&lt;String, Boolean&gt;&gt;, Single, List&lt;String&gt;, String)</h4>
+  <h4 id="NPCEngine_API_PersonaDialogue_StepDialogue_System_String_System_String_System_Boolean_Action_Tuple_System_String_System_Boolean___System_Single_System_Collections_Generic_List_System_String__System_String_" data-uid="NPCEngine.API.PersonaDialogue.StepDialogue(System.String,System.String,System.Boolean,Action{Tuple{System.String,System.Boolean}},System.Single,System.Collections.Generic.List{System.String},System.String)">StepDialogue(String, String, Boolean, Action&lt;Tuple&lt;String, Boolean&gt;&gt;, Single, List&lt;String&gt;, String)</h4>
   <div class="markdown level1 summary"><p>Step dialogue.</p>
 <p>If utterance is null, it will be generated.
 If scripted utterances are not null they will be compared to the utterance 
@@ -218,7 +218,7 @@ If update_history is true, the dialogue history will be updated with the utteran
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.tuple-2">Tuple</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;&gt;</td>
+        <td><span class="xref">Action</span>&lt;<span class="xref">Tuple</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;&gt;</td>
         <td><span class="parametername">outputCallback</span></td>
         <td><p>Callback that accepts results: Tuple with utterance 
 and bool flag that is True if scripted utterance was used</p>
