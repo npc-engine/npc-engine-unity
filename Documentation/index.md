@@ -44,6 +44,6 @@ These steps are usually done automatically by the welcome dialogue buttons from 
 - Create an empty `Assets/StreamingAssets/.models` folder
 - Run cmd command from your project folder to download default models:
 ```
-Assets/StreamingAssets/.npc-engine/cli.exe download-default-models --models-path Assets/StreamingAssets/.models
+Assets/StreamingAssets/.npc-engine/npc-engine.exe download-default-models --models-path Assets/StreamingAssets/.models
 ```
 Or you can download or export your own models (Tutorials coming soon).

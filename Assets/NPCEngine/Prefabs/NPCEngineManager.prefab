@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7859527883621965022}
   - component: {fileID: 8445985810613168456}
   - component: {fileID: 1480138458}
+  - component: {fileID: 1839733435}
   m_Layer: 0
   m_Name: NPCEngineManager
   m_TagString: Untagged
@@ -44,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a4e2dad63d287d47b74a8d98c4cc196, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inferenceEngineProcessId: 8276
+  inferenceEngineProcessId: -1
 --- !u!114 &1480138458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73,10 +74,23 @@ MonoBehaviour:
   serverType: 0
   serverAddress: localhost:8080
   modelsPath: .models/
-  npcEnginePath: .npc-engine/cli.exe
-  debugLogs: 0
-  serverConsole: 0
+  npcEnginePath: .npc-engine/npc-engine.exe
+  debugLogs: 1
+  serverConsole: 1
   connectToExistingServer: 0
   temperature: 1
   topK: 40
   nChunksSpeechGeneration: 7
+--- !u!114 &1839733435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 826819703477927490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6268b6a12312234e8b06335c4087020, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serviceId: control

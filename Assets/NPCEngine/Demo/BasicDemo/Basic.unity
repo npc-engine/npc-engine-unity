@@ -1826,14 +1826,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1480138458, guid: 649bd79ce63a6e9449715449439999df, type: 3}
-      propertyPath: debugLogs
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1480138458, guid: 649bd79ce63a6e9449715449439999df, type: 3}
-      propertyPath: serverConsole
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 826819703477927490, guid: 649bd79ce63a6e9449715449439999df, type: 3}
       propertyPath: m_Name
       value: NPCEngineManager
@@ -1881,10 +1873,6 @@ PrefabInstance:
     - target: {fileID: 7859527883621965022, guid: 649bd79ce63a6e9449715449439999df, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8445985810613168456, guid: 649bd79ce63a6e9449715449439999df, type: 3}
-      propertyPath: inferenceEngineProcessId
-      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 649bd79ce63a6e9449715449439999df, type: 3}
@@ -11517,24 +11505,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1812865113}
   m_CullTransparentMesh: 1
---- !u!1 &1839733434 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 826819703477927490, guid: 649bd79ce63a6e9449715449439999df, type: 3}
-  m_PrefabInstance: {fileID: 214594877}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1839733435
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1839733434}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6268b6a12312234e8b06335c4087020, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serviceId: control
 --- !u!1 &1858582174
 GameObject:
   m_ObjectHideFlags: 0
