@@ -115,7 +115,7 @@ namespace NPCEngine.Components
         /// </summary>
         public void LeaveDialog()
         {
-            currentDialog.EndDialog();
+            currentDialog.EndDialogue();
         }
         
         private void OnDialogueEnd()

@@ -20,7 +20,7 @@ namespace NPCEngine.Components
         /// <summary>
         /// Will be called when dialogue ends.
         /// </summary>
-        public abstract void EndDialog();
+        public abstract void EndDialogue();
 
         /// <summary>
         /// Returns true if it's players turn in the dialogue.
