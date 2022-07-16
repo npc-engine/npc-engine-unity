@@ -76,6 +76,12 @@ crashlytics-build.properties
 /[Aa]ssets/Polytope\ Studio.meta
 /[Aa]ssets/ModularFirstPersonController.meta
 
+# Packaged modules
+
+/[Aa]ssets/NPCEngine/Demo/AdvancedDemo/AdvancedDemo.unitypackage*
+/[Aa]ssets/NPCEngine/Integrations/VIDE Dialogues Integration.unitypackage*
+
+# Docs
 _site/**
 Documentation/_site_pdf/**
 **/.cache/**
@@ -84,3 +90,4 @@ Documentation/obj/**
 !/[Aa]ssets/NPCEngine
 /Packages/packages-lock.json
 /ProjectSettings/ProjectVersion.txt
+

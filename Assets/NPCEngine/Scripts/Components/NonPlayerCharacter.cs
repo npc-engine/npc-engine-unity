@@ -11,7 +11,6 @@ using NPCEngine.Utility;
 namespace NPCEngine.Components
 {
 
-    [RequireComponent(typeof(AbstractDialogueSystem))]
     public class NonPlayerCharacter : MonoBehaviour
     {
 
@@ -115,19 +114,25 @@ namespace NPCEngine.Components
             history.Clear();
             inDialog = true;
             OnDialogueStart?.Invoke();
-            dialogueSystem.StartDialogue();
+            if(dialogueSystem != null)
+            {
+                dialogueSystem.StartDialogue();
+            }
             OnTopicHintsUpdate.Invoke(dialogueSystem.GetCurrentNodeTopics().Distinct().ToList());
         }
 
         /// <summary>
         /// End dialogue.
         /// </summary>
-        public void EndDialog()
+        public void EndDialogue()
         {
             inDialog = false;
             history.Clear();
             OnDialogueEnd?.Invoke();
-            dialogueSystem.EndDialog();
+            if (dialogueSystem != null)
+            {
+                dialogueSystem.EndDialogue();
+            }
         }
 
         /// <summary>
@@ -151,7 +156,7 @@ namespace NPCEngine.Components
             {
                 listen = false;
                 OnProcessingStart.Invoke();
-                if (!dialogueSystem.CurrentNodeIsPlayer())
+                if (dialogueSystem != null && !dialogueSystem.CurrentNodeIsPlayer())
                 {
                     yield return SayNPCLines();
                 }
@@ -175,7 +180,7 @@ namespace NPCEngine.Components
         public IEnumerator HandlePlayerLineCoroutine(string otherName, string otherPersona, string line)
         {
             List<float> scores = new List<float>();
-            var dialogueLines = dialogueSystem.GetCurrentNodeOptions();
+            var dialogueLines = dialogueSystem != null? dialogueSystem.GetCurrentNodeOptions(): new List<string>();
             if (dialogueLines.Count != 0)
             {
                 yield return NPCEngineManager.Instance.GetAPI<SemanticQuery>().Compare(line, dialogueLines, (output) => { scores = output; });
@@ -312,7 +317,7 @@ namespace NPCEngine.Components
                 }
                 else if ((PlayerCharacter.Instance.transform.position - audioSourceQueue.audioSource.transform.position).magnitude > PlayerCharacter.Instance.MaxRange)
                 {
-                    EndDialog();
+                    EndDialogue();
                 }
                 yield return new WaitForSeconds(0.5f);
             }
