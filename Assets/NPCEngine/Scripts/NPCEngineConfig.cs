@@ -42,7 +42,7 @@ namespace NPCEngine
         public string modelsPath = ".models/";
 
         [Tooltip("Relative to StreamingAssets folder")]
-        public string npcEnginePath = ".npc-engine/cli.exe";
+        public string npcEnginePath = ".npc-engine/npc-engine.exe";
 
         public bool debugLogs = false;
         public bool serverConsole = false;

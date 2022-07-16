@@ -35,7 +35,7 @@ public class NPCEngineWelcomeWindow : EditorWindow
     private static GUIStyle headerStyle = new GUIStyle();
     private static GUIStyle descriptionStyle = new GUIStyle();
 
-    private const string npcEngineVersion = "v0.1.3";
+    private const string npcEngineVersion = "v0.1.4";
     private string npcEngineURL = String.Format(
         "https://github.com/npc-engine/npc-engine/releases/download/{0}/npc-engine-{0}.zip", 
         npcEngineVersion
@@ -61,7 +61,7 @@ public class NPCEngineWelcomeWindow : EditorWindow
     {
         get
         {
-            return !File.Exists(Path.Combine(Application.streamingAssetsPath, ".npc-engine/cli.exe")) || !versionOK;
+            return !File.Exists(Path.Combine(Application.streamingAssetsPath, ".npc-engine/npc-engine.exe")) || !versionOK;
         }
     }
 
@@ -73,7 +73,7 @@ public class NPCEngineWelcomeWindow : EditorWindow
     {
         EditorApplication.delayCall += () =>
         {
-            if(File.Exists(Path.Combine(Application.streamingAssetsPath, ".npc-engine/cli.exe")))
+            if(File.Exists(Path.Combine(Application.streamingAssetsPath, ".npc-engine/npc-engine.exe")))
             {
                 version = NPCEngineWelcomeWindow.GetVersion();
             }
@@ -162,7 +162,7 @@ public class NPCEngineWelcomeWindow : EditorWindow
         {
             GUILayout.Label("(Already downloaded) To start using it you need to download the inference engine server.");
         }
-        else if(!versionOK && File.Exists(Path.Combine(Application.streamingAssetsPath, ".npc-engine/cli.exe")))
+        else if(!versionOK && File.Exists(Path.Combine(Application.streamingAssetsPath, ".npc-engine/npc-engine.exe")))
         {
             GUILayout.Label("For the correct behaviour please update your server.");
         }
@@ -188,7 +188,7 @@ public class NPCEngineWelcomeWindow : EditorWindow
         GUILayout.BeginHorizontal();
         GUILayout.FlexibleSpace();
 
-        if (versionOK || !File.Exists(Path.Combine(Application.streamingAssetsPath, ".npc-engine/cli.exe")))
+        if (versionOK || !File.Exists(Path.Combine(Application.streamingAssetsPath, ".npc-engine/npc-engine.exe")))
         {
             if (GUILayout.Button("Download NPC Engine", GUILayout.Width(160)))
             {
@@ -249,7 +249,7 @@ public class NPCEngineWelcomeWindow : EditorWindow
         myProcess.StartInfo.FileName = "CMD.EXE";
         myProcess.StartInfo.Arguments = String.Format(
             " /c \"\"{0}\" download-default-models --models-path \"{1}\"\"",
-            Path.Combine(Application.streamingAssetsPath, ".npc-engine/cli.exe"),
+            Path.Combine(Application.streamingAssetsPath, ".npc-engine/npc-engine.exe"),
             Path.Combine(Application.streamingAssetsPath, path)
         );
 
@@ -297,7 +297,7 @@ public class NPCEngineWelcomeWindow : EditorWindow
 
         File.Delete(path);
         downloading = false;
-        if(File.Exists(Path.Combine(Application.streamingAssetsPath, ".npc-engine/cli.exe")))
+        if(File.Exists(Path.Combine(Application.streamingAssetsPath, ".npc-engine/npc-engine.exe")))
         {
             version = NPCEngineWelcomeWindow.GetVersion();
         }
@@ -308,7 +308,7 @@ public class NPCEngineWelcomeWindow : EditorWindow
         try{
             var processStartInfo = new ProcessStartInfo
             {
-                FileName = Path.Combine(Application.streamingAssetsPath, ".npc-engine/cli.exe"),
+                FileName = Path.Combine(Application.streamingAssetsPath, ".npc-engine/npc-engine.exe"),
                 Arguments = "version",
                 RedirectStandardOutput = true,
                 UseShellExecute = false,
