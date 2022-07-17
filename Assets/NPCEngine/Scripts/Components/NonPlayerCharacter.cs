@@ -117,8 +117,8 @@ namespace NPCEngine.Components
             if(dialogueSystem != null)
             {
                 dialogueSystem.StartDialogue();
+                OnTopicHintsUpdate.Invoke(dialogueSystem.GetCurrentNodeTopics().Distinct().ToList());
             }
-            OnTopicHintsUpdate.Invoke(dialogueSystem.GetCurrentNodeTopics().Distinct().ToList());
         }
 
         /// <summary>
