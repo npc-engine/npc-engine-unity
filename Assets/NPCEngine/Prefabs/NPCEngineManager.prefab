@@ -59,17 +59,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   services:
-  - name: bart-light-gail-chatbot
+  - name: exported-bart-light-gail-chatbot
     type: '"BartChatbot"'
-    path: D:/UnityProjects/npc engine unity/Assets/StreamingAssets\.models/bart-light-gail-chatbot
+    path: D:/UnityProjects/npc engine unity/Assets/StreamingAssets\.models/exported-bart-light-gail-chatbot
     start: 1
   - name: exported-flowtron-waveglow-librispeech-tts
     type: '"FlowtronTTS"'
     path: D:/UnityProjects/npc engine unity/Assets/StreamingAssets\.models/exported-flowtron-waveglow-librispeech-tts
     start: 1
-  - name: paraphrase-MiniLM-L6-v2
+  - name: exported-nemo-quartznet-ctc-stt
+    type: '"NemoSTT"'
+    path: D:/UnityProjects/npc engine unity/Assets/StreamingAssets\.models/exported-nemo-quartznet-ctc-stt
+    start: 1
+  - name: exported-paraphrase-MiniLM-L6-v2
     type: '"TransformerSemanticSimilarity"'
-    path: D:/UnityProjects/npc engine unity/Assets/StreamingAssets\.models/paraphrase-MiniLM-L6-v2
+    path: D:/UnityProjects/npc engine unity/Assets/StreamingAssets\.models/exported-paraphrase-MiniLM-L6-v2
     start: 1
   serverType: 0
   serverAddress: localhost:8080
