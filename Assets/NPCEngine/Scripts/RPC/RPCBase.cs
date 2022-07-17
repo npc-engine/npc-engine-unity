@@ -119,7 +119,14 @@ namespace NPCEngine.RPC
         {
             impl = null;
             if(!Application.isPlaying)
+            {
+                var prevActive = CoroutineUtility.Instance.gameObject.activeSelf;
+                if(!prevActive)
+                    CoroutineUtility.Instance.gameObject.SetActive(true);
                 CoroutineUtility.StopCoroutine("implCoroutine", this);
+                if(!prevActive)
+                    CoroutineUtility.Instance.gameObject.SetActive(false);
+            }
             taskQueue.Clear();
         }
     }

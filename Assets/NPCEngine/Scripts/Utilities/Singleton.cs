@@ -20,13 +20,7 @@ namespace NPCEngine.Utility
 
                     if (instance == null)
                     {
-                        var subsysObj = GameObject.Find("Subsystems");
-                        if (subsysObj == null)
-                        {
-                            subsysObj = new GameObject("Subsystems");
-                        }
                         GameObject singletonObject = new GameObject(typeof(T).ToString());
-                        singletonObject.transform.parent = subsysObj.transform;
                         instance = singletonObject.AddComponent<T>();
                     }
                 }

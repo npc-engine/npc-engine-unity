@@ -117,8 +117,8 @@ namespace NPCEngine.Components
             if(dialogueSystem != null)
             {
                 dialogueSystem.StartDialogue();
+                OnTopicHintsUpdate.Invoke(dialogueSystem.GetCurrentNodeTopics().Distinct().ToList());
             }
-            OnTopicHintsUpdate.Invoke(dialogueSystem.GetCurrentNodeTopics().Distinct().ToList());
         }
 
         /// <summary>
@@ -168,7 +168,8 @@ namespace NPCEngine.Components
                     yield return HandlePlayerLineCoroutine(otherName, otherPersona, line);
                 }
                 OnProcessingEnd.Invoke();
-                OnTopicHintsUpdate.Invoke(dialogueSystem.GetCurrentNodeTopics().Distinct().ToList());
+                if (dialogueSystem != null)
+                    OnTopicHintsUpdate.Invoke(dialogueSystem.GetCurrentNodeTopics().Distinct().ToList());
                 listen = true;
             }
             runningCoroutine = null;

@@ -2787,8 +2787,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 268440629}
-  - component: {fileID: 268440628}
-  - component: {fileID: 268440630}
   - component: {fileID: 268440627}
   - component: {fileID: 268440626}
   m_Layer: 0
@@ -2922,56 +2920,9 @@ MonoBehaviour:
         m_CallState: 2
   audioSourceQueue: {fileID: 370138418}
   voiceId: 109
-  dialogueSystem: {fileID: 268440630}
+  dialogueSystem: {fileID: 0}
   testLocation: {fileID: 0}
   testOtherCharacter: {fileID: 0}
---- !u!114 &268440628
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 268440625}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b8b99d8a12e39e4b94d2d7162c7c978, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  diags:
-  - Charlie
-  - CommentModifier
-  - CrazyCap
-  - DEMO_Condition
-  - demo_Narration
-  - Example3Dialogue
-  - Example4_dialogue
-  - Guard
-  - Item_LookUp
-  - Laura
-  - MrCube
-  - NPCOnly
-  - Placeholder
-  - QuestChartDemo
-  - Tavernkeeper
-  - TriggeredDude
-  - VillageElder
-  - Witch
-  assignedIndex: 12
-  assignedID: 84360
-  assignedDialogue: Placeholder
-  interactionCount: 0
-  alias: 
-  overrideStartNode: -1
-  defaultNPCSprite: {fileID: 0}
-  defaultPlayerSprite: {fileID: 0}
-  targetManager: {fileID: 0}
-  preload: 0
-  notuptodate: 0
-  startp: 0
-  loadtag: 
-  langs: []
-  S_playerDiags: []
-  S_actionNodes: []
 --- !u!4 &268440629
 Transform:
   m_ObjectHideFlags: 0
@@ -2990,18 +2941,6 @@ Transform:
   m_Father: {fileID: 1028484510}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 21.523, z: 0}
---- !u!114 &268440630
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 268440625}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f314fc6d044912b40872c723682f7dc8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &269828714
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5493,8 +5432,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 439923161}
-  - component: {fileID: 439923160}
-  - component: {fileID: 439923162}
   - component: {fileID: 439923159}
   - component: {fileID: 439923158}
   m_Layer: 0
@@ -5628,56 +5565,9 @@ MonoBehaviour:
         m_CallState: 2
   audioSourceQueue: {fileID: 443624744}
   voiceId: 114
-  dialogueSystem: {fileID: 439923162}
+  dialogueSystem: {fileID: 0}
   testLocation: {fileID: 0}
   testOtherCharacter: {fileID: 0}
---- !u!114 &439923160
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 439923157}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b8b99d8a12e39e4b94d2d7162c7c978, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  diags:
-  - Charlie
-  - CommentModifier
-  - CrazyCap
-  - DEMO_Condition
-  - demo_Narration
-  - Example3Dialogue
-  - Example4_dialogue
-  - Guard
-  - Item_LookUp
-  - Laura
-  - MrCube
-  - NPCOnly
-  - Placeholder
-  - QuestChartDemo
-  - Tavernkeeper
-  - TriggeredDude
-  - VillageElder
-  - Witch
-  assignedIndex: 12
-  assignedID: 84360
-  assignedDialogue: Placeholder
-  interactionCount: 0
-  alias: 
-  overrideStartNode: -1
-  defaultNPCSprite: {fileID: 0}
-  defaultPlayerSprite: {fileID: 0}
-  targetManager: {fileID: 0}
-  preload: 0
-  notuptodate: 0
-  startp: 0
-  loadtag: 
-  langs: []
-  S_playerDiags: []
-  S_actionNodes: []
 --- !u!4 &439923161
 Transform:
   m_ObjectHideFlags: 0
@@ -5696,18 +5586,6 @@ Transform:
   m_Father: {fileID: 1028484510}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 84.234, z: 0}
---- !u!114 &439923162
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 439923157}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f314fc6d044912b40872c723682f7dc8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &443624743
 GameObject:
   m_ObjectHideFlags: 0
@@ -6569,7 +6447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36293b1e17fa0f54cbc68cb275453f71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  location: {fileID: 0}
+  location: {fileID: 11400000, guid: 0ada7c2e7e18fec47b92a5a5d54c19d3, type: 2}
   locationCollider: {fileID: 554674858}
 --- !u!4 &554674860
 Transform:
@@ -18143,34 +18021,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8445985810613168456, guid: 649bd79ce63a6e9449715449439999df, type: 3}
-      propertyPath: inferenceEngineProcessId
-      value: 13660
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1480138459, guid: 649bd79ce63a6e9449715449439999df, type: 3}
-    - {fileID: 1480138460, guid: 649bd79ce63a6e9449715449439999df, type: 3}
-    - {fileID: 1480138461, guid: 649bd79ce63a6e9449715449439999df, type: 3}
-    - {fileID: 6329926571952889153, guid: 649bd79ce63a6e9449715449439999df, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 649bd79ce63a6e9449715449439999df, type: 3}
---- !u!1 &1480138457 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 826819703477927490, guid: 649bd79ce63a6e9449715449439999df, type: 3}
-  m_PrefabInstance: {fileID: 1480138456}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1480138458
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1480138457}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6268b6a12312234e8b06335c4087020, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serviceId: control
 --- !u!1001 &1500069761
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18954,8 +18806,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1572875428}
-  - component: {fileID: 1572875427}
-  - component: {fileID: 1572875429}
   - component: {fileID: 1572875426}
   - component: {fileID: 1572875425}
   m_Layer: 0
@@ -19089,56 +18939,9 @@ MonoBehaviour:
         m_CallState: 2
   audioSourceQueue: {fileID: 406266617}
   voiceId: 34
-  dialogueSystem: {fileID: 1572875429}
+  dialogueSystem: {fileID: 0}
   testLocation: {fileID: 0}
   testOtherCharacter: {fileID: 0}
---- !u!114 &1572875427
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1572875424}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b8b99d8a12e39e4b94d2d7162c7c978, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  diags:
-  - Charlie
-  - CommentModifier
-  - CrazyCap
-  - DEMO_Condition
-  - demo_Narration
-  - Example3Dialogue
-  - Example4_dialogue
-  - Guard
-  - Item_LookUp
-  - Laura
-  - MrCube
-  - NPCOnly
-  - Placeholder
-  - QuestChartDemo
-  - Tavernkeeper
-  - TriggeredDude
-  - VillageElder
-  - Witch
-  assignedIndex: 12
-  assignedID: 84360
-  assignedDialogue: Placeholder
-  interactionCount: 0
-  alias: 
-  overrideStartNode: -1
-  defaultNPCSprite: {fileID: 0}
-  defaultPlayerSprite: {fileID: 0}
-  targetManager: {fileID: 0}
-  preload: 0
-  notuptodate: 0
-  startp: 0
-  loadtag: 
-  langs: []
-  S_playerDiags: []
-  S_actionNodes: []
 --- !u!4 &1572875428
 Transform:
   m_ObjectHideFlags: 0
@@ -19157,18 +18960,6 @@ Transform:
   m_Father: {fileID: 1028484510}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 21.523, z: 0}
---- !u!114 &1572875429
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1572875424}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f314fc6d044912b40872c723682f7dc8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1577372576
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -149,6 +149,7 @@ namespace NPCEngine.Components
                     currentDialog.OnProcessingEnd.AddListener(SpeechToText.StartListening);
                     currentDialog.OnProcessingStart.AddListener(SpeechToText.StopListening);
                     currentDialog.OnDialogueEnd.AddListener(OnDialogueEnd);
+                    Debug.Log("Starting dialogue with " + currentDialog.name);
                     currentDialog.HandleLine(character.Name, character.Persona, utterance);
                 }
             }
