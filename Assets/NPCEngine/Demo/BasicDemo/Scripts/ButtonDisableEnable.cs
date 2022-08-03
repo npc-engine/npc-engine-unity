@@ -20,7 +20,6 @@ public class ButtonDisableEnable : MonoBehaviour
 
     public IEnumerator EnableButtonWhenServiceRunning()
     {
-        Debug.Log("Entering EnableButtonWhenServiceRunning");
         while (true)
         {
             
