@@ -116,7 +116,10 @@ namespace NPCEngine
                         "No" // Cancel button
                     );
                     if (decision)
+                    {
                         clearFolder(service.path);
+                        config.RefreshServices();
+                    }
                 }
                 GUILayout.FlexibleSpace();
             }

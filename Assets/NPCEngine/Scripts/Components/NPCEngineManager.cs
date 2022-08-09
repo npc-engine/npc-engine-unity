@@ -274,20 +274,17 @@ namespace NPCEngine.Components
 
         private void Start()
         {
-            if (Application.isPlaying)
-            {
-                CoroutineUtility.StopAllEditorCoroutines(this);
-                StartInferenceEngine();
-                DontDestroyOnLoad(gameObject);
-            }
+            CoroutineUtility.StartCoroutine(StartAndMonitorServerLife(), this, "StartAndMonitorServerLife");
         }
 
         void OnEnable()
         {
-            if (!Application.isPlaying && InferenceEngineRunning)
-            {
-                StartInferenceEngine();
-            }
+            if(!CoroutineUtility.IsRunning(this, "UpdateServiceStatuses"))
+                CoroutineUtility.StartCoroutine(UpdateServiceStatuses(), this, "UpdateServiceStatuses");
+            if(!CoroutineUtility.IsRunning(this, "UpdateServices"))
+                CoroutineUtility.StartCoroutine(UpdateServices(), this, "UpdateServices");
+            if(!CoroutineUtility.IsRunning(this, "StartAndMonitorServerLife"))
+                CoroutineUtility.StartCoroutine(StartAndMonitorServerLife(), this, "StartAndMonitorServerLife");
         }
 
         /// <summary>
@@ -324,6 +321,26 @@ namespace NPCEngine.Components
             var api2 = gameObject.AddComponent<T>();
             api2.serviceId = id;
             return api2;   
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public IEnumerator StartAndMonitorServerLife()
+        {
+            while (true)
+            {
+                if (!InferenceEngineRunning)
+                {
+                    var npcEnginePath = Path.Combine(Application.streamingAssetsPath, NPCEngineConfig.Instance.npcEnginePath);
+                    if(File.Exists(npcEnginePath))
+                    {
+                        if(NPCEngineConfig.Instance.debugLogs) UnityEngine.Debug.Log("InferenceEngine is not running. Starting...");
+                        StartInferenceEngine();
+                    }
+                }
+                yield return CoroutineUtility.WaitForSeconds(2f);
+            }
         }
 
         /// <summary>
@@ -379,5 +396,9 @@ namespace NPCEngine.Components
             }
         }
 
+        void OnDestroy()
+        {
+            StopInferenceEngine();
+        }
     }
 }
