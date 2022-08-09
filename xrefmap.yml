@@ -1522,6 +1522,19 @@ references:
   isSpec: "True"
   fullName: NPCEngine.Components.NPCEngineManager.ServiceStatusesById
   nameWithType: NPCEngineManager.ServiceStatusesById
+- uid: NPCEngine.Components.NPCEngineManager.StartAndMonitorServerLife
+  name: StartAndMonitorServerLife()
+  href: api/NPCEngine.Components.NPCEngineManager.html#NPCEngine_Components_NPCEngineManager_StartAndMonitorServerLife
+  commentId: M:NPCEngine.Components.NPCEngineManager.StartAndMonitorServerLife
+  fullName: NPCEngine.Components.NPCEngineManager.StartAndMonitorServerLife()
+  nameWithType: NPCEngineManager.StartAndMonitorServerLife()
+- uid: NPCEngine.Components.NPCEngineManager.StartAndMonitorServerLife*
+  name: StartAndMonitorServerLife
+  href: api/NPCEngine.Components.NPCEngineManager.html#NPCEngine_Components_NPCEngineManager_StartAndMonitorServerLife_
+  commentId: Overload:NPCEngine.Components.NPCEngineManager.StartAndMonitorServerLife
+  isSpec: "True"
+  fullName: NPCEngine.Components.NPCEngineManager.StartAndMonitorServerLife
+  nameWithType: NPCEngineManager.StartAndMonitorServerLife
 - uid: NPCEngine.Components.NPCEngineManager.StartInferenceEngine
   name: StartInferenceEngine()
   href: api/NPCEngine.Components.NPCEngineManager.html#NPCEngine_Components_NPCEngineManager_StartInferenceEngine
