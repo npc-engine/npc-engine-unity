@@ -15,7 +15,7 @@ using System.Diagnostics;
 public class NPCEngineWelcomeWindow : EditorWindow
 {
 
-    public static Vector2 windowSize = new Vector2(800, 700);
+    public static Vector2 windowSize = new Vector2(600, 500);
 
     [MenuItem("Tools/NPC Engine/Show Welcome Screen")]
     private static void InitWindow()
@@ -30,16 +30,18 @@ public class NPCEngineWelcomeWindow : EditorWindow
         logo = (Texture2D)Resources.Load("settings", typeof(Texture2D));
         githubLogo = (Texture2D)Resources.Load("github", typeof(Texture2D));
         docsLogo = (Texture2D)Resources.Load("file-text", typeof(Texture2D));
+        discordLogo = (Texture2D)Resources.Load("discord", typeof(Texture2D));
     }
 
     private static GUIStyle headerStyle = new GUIStyle();
     private static GUIStyle descriptionStyle = new GUIStyle();
 
-    private const string npcEngineVersion = "v0.1.4";
+    private const string npcEngineVersion = "v0.1.6";
     private string npcEngineURL = String.Format(
         "https://github.com/npc-engine/npc-engine/releases/download/{0}/npc-engine-{0}.zip", 
         npcEngineVersion
     );
+    private const string discordURL = "https://discord.gg/R4zBNmnfrU";
     private const string githubURL = "https://github.com/npc-engine/npc-engine";
     private const string docsURL = "https://npc-engine.github.io/npc-engine/";
 
@@ -47,6 +49,7 @@ public class NPCEngineWelcomeWindow : EditorWindow
     private static Texture2D logo = null;
     private static Texture2D docsLogo = null;
     private static Texture2D githubLogo = null;
+    private static Texture2D discordLogo = null;
 
     private static bool downloading = false;
     private static bool downloadFinished = false;
@@ -133,6 +136,13 @@ public class NPCEngineWelcomeWindow : EditorWindow
         GUILayout.FlexibleSpace();
         GUILayout.EndHorizontal();
 
+        GUIContent discord = new GUIContent("Get support on our Discord!\n\n", discordLogo);
+        GUILayout.BeginHorizontal();
+        if (GUILayout.Button(discord, EditorStyles.whiteLargeLabel))
+            Application.OpenURL(discordURL);
+        GUILayout.FlexibleSpace();
+        GUILayout.EndHorizontal();
+
 
         GUILayout.EndVertical();
         GUILayout.FlexibleSpace();
@@ -140,16 +150,6 @@ public class NPCEngineWelcomeWindow : EditorWindow
 
         GUILayout.FlexibleSpace();
 
-        GUILayout.BeginHorizontal();
-        GUILayout.FlexibleSpace();
-        GUILayout.Label("Before using this package it's required to disable play mode compilation in\n"
-                        + "Edit -> Preferences -> General -> Script changes while playing.\n"
-                        + "If play mode compilation will happen Unity will freeze"
-                        + "\nand only way to restart it would be to kill the process manually!\n",
-                        EditorStyles.whiteLargeLabel
-        );
-        GUILayout.FlexibleSpace();
-        GUILayout.EndHorizontal();
 
         GUI.enabled = !downloading && DisplayWelcomeScreen;
 
@@ -305,23 +305,34 @@ public class NPCEngineWelcomeWindow : EditorWindow
 
     public static string GetVersion()
     {
-        try{
-            var processStartInfo = new ProcessStartInfo
-            {
-                FileName = Path.Combine(Application.streamingAssetsPath, ".npc-engine/npc-engine.exe"),
-                Arguments = "version",
-                RedirectStandardOutput = true,
-                UseShellExecute = false,
-                WindowStyle = ProcessWindowStyle.Hidden,
-                CreateNoWindow = true,
-            };
-            var process = Process.Start(processStartInfo);
-            var output = process.StandardOutput.ReadToEnd();
-            process.WaitForExit();
-            return output;
-        } catch(Exception)
+        var version_file = Path.Combine(Application.streamingAssetsPath, ".npc-engine/version.txt");
+        if (File.Exists(version_file))
         {
-            return "v-1.-1.-1";
+            return File.ReadAllText(version_file);
+        }
+        else
+        {
+            try {
+                var processStartInfo = new ProcessStartInfo
+                {
+                    FileName = Path.Combine(Application.streamingAssetsPath, ".npc-engine/npc-engine.exe"),
+                    Arguments = "version",
+                    RedirectStandardOutput = true,
+                    UseShellExecute = false,
+                    WindowStyle = ProcessWindowStyle.Hidden,
+                    CreateNoWindow = true,
+                };
+                var process = Process.Start(processStartInfo);
+                var output = process.StandardOutput.ReadToEnd();
+                process.WaitForExit();
+
+                File.WriteAllText(version_file, output);
+
+                return output;
+            } catch(Exception)
+            {
+                return "v-1.-1.-1";
+            }
         }
     }
 

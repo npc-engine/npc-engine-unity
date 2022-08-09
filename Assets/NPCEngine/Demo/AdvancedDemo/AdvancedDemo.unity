@@ -18010,6 +18010,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1480138458, guid: 649bd79ce63a6e9449715449439999df, type: 3}
+      propertyPath: debugLogs
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1480138458, guid: 649bd79ce63a6e9449715449439999df, type: 3}
+      propertyPath: serverConsole
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 826819703477927490, guid: 649bd79ce63a6e9449715449439999df, type: 3}
       propertyPath: m_Name
       value: NPCEngineManager
