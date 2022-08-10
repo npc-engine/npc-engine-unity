@@ -95,8 +95,18 @@ public class NPCEngineManagerEditor : Editor
                         service.id.Substring(0, 50) + "..." :
                         service.id
                 );
-                ServiceStatusBox(manager.ServiceStatuses[i]);
-                StatusButton(i);
+                if (manager.ServiceStatuses.Count > i)
+                {
+                    ServiceStatusBox(manager.ServiceStatuses[i]);
+                    StatusButton(i);
+                }
+                else
+                {
+                    ServiceStatusBox(ServiceStatus.UNKNOWN);
+                    GUI.enabled = false;
+                    GUILayout.Button("Start", GUILayout.MaxWidth(80));
+                    GUI.enabled = true;
+                }
                 GUILayout.EndHorizontal();
             }
             else
