@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a4e2dad63d287d47b74a8d98c4cc196, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inferenceEngineProcessId: -1
+  inferenceEngineProcessId: 19828
 --- !u!114 &1480138458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67,10 +67,6 @@ MonoBehaviour:
     type: '"FlowtronTTS"'
     path: D:/UnityProjects/npc engine unity/Assets/StreamingAssets\.models/exported-flowtron-waveglow-librispeech-tts
     start: 1
-  - name: exported-nemo-quartznet-ctc-stt
-    type: '"NemoSTT"'
-    path: D:/UnityProjects/npc engine unity/Assets/StreamingAssets\.models/exported-nemo-quartznet-ctc-stt
-    start: 1
   - name: exported-paraphrase-MiniLM-L6-v2
     type: '"TransformerSemanticSimilarity"'
     path: D:/UnityProjects/npc engine unity/Assets/StreamingAssets\.models/exported-paraphrase-MiniLM-L6-v2
@@ -79,8 +75,8 @@ MonoBehaviour:
   serverAddress: localhost:8080
   modelsPath: .models/
   npcEnginePath: .npc-engine/npc-engine.exe
-  debugLogs: 1
-  serverConsole: 1
+  debugLogs: 0
+  serverConsole: 0
   connectToExistingServer: 0
   temperature: 1
   topK: 40

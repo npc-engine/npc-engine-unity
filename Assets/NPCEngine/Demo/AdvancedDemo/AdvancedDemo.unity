@@ -18010,30 +18010,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1480138458, guid: 649bd79ce63a6e9449715449439999df, type: 3}
-      propertyPath: debugLogs
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1480138458, guid: 649bd79ce63a6e9449715449439999df, type: 3}
-      propertyPath: serverConsole
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1480138458, guid: 649bd79ce63a6e9449715449439999df, type: 3}
-      propertyPath: services.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1480138458, guid: 649bd79ce63a6e9449715449439999df, type: 3}
-      propertyPath: services.Array.data[2].name
-      value: exported-paraphrase-MiniLM-L6-v2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1480138458, guid: 649bd79ce63a6e9449715449439999df, type: 3}
-      propertyPath: services.Array.data[2].path
-      value: D:/UnityProjects/npc engine unity/Assets/StreamingAssets\.models/exported-paraphrase-MiniLM-L6-v2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1480138458, guid: 649bd79ce63a6e9449715449439999df, type: 3}
-      propertyPath: services.Array.data[2].type
-      value: '"TransformerSemanticSimilarity"'
-      objectReference: {fileID: 0}
     - target: {fileID: 826819703477927490, guid: 649bd79ce63a6e9449715449439999df, type: 3}
       propertyPath: m_Name
       value: NPCEngineManager
@@ -18084,7 +18060,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8445985810613168456, guid: 649bd79ce63a6e9449715449439999df, type: 3}
       propertyPath: inferenceEngineProcessId
-      value: 11684
+      value: 13236
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 649bd79ce63a6e9449715449439999df, type: 3}
