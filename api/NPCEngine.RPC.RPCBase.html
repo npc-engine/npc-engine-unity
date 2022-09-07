@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class RPCBase
    | npc-engine Unity integration ">
-    <meta name="generator" content="docfx 2.59.3.0">
+    <meta name="generator" content="docfx 2.59.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -127,12 +127,12 @@
   
   
   <a id="NPCEngine_RPC_RPCBase_Run_" data-uid="NPCEngine.RPC.RPCBase.Run*"></a>
-  <h4 id="NPCEngine_RPC_RPCBase_Run__2_String___0_" data-uid="NPCEngine.RPC.RPCBase.Run``2(String,``0)">Run&lt;P, R&gt;(String, P)</h4>
+  <h4 id="NPCEngine_RPC_RPCBase_Run__2_String___0_Action___1__Action_NPCEngine_NPCEngineException__" data-uid="NPCEngine.RPC.RPCBase.Run``2(String,``0,Action{``1},Action{NPCEngine.NPCEngineException})">Run&lt;P, R&gt;(String, P, Action&lt;R&gt;, Action&lt;NPCEngineException&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ResultFuture&lt;R&gt; Run&lt;P, R&gt;(String methodName, P parameters)
+    <pre><code class="lang-csharp hljs">public IEnumerator Run&lt;P, R&gt;(String methodName, P parameters, Action&lt;R&gt; resultCallback, Action&lt;NPCEngineException&gt; errorCallback)
     where P : new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -155,6 +155,16 @@
         <td><span class="parametername">parameters</span></td>
         <td></td>
       </tr>
+      <tr>
+        <td><span class="xref">Action</span>&lt;R&gt;</td>
+        <td><span class="parametername">resultCallback</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="NPCEngine.NPCEngineException.html">NPCEngineException</a>&gt;</td>
+        <td><span class="parametername">errorCallback</span></td>
+        <td></td>
+      </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
@@ -167,7 +177,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="NPCEngine.ResultFuture-1.html">ResultFuture</a>&lt;R&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.ienumerator">IEnumerator</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -191,6 +201,16 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="NPCEngine_RPC_RPCBase_UpdateServerType_" data-uid="NPCEngine.RPC.RPCBase.UpdateServerType*"></a>
+  <h4 id="NPCEngine_RPC_RPCBase_UpdateServerType" data-uid="NPCEngine.RPC.RPCBase.UpdateServerType">UpdateServerType()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UpdateServerType()</code></pre>
+  </div>
 </article>
           </div>
           

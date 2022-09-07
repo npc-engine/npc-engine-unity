@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Control
    | npc-engine Unity integration ">
-    <meta name="generator" content="docfx 2.59.3.0">
+    <meta name="generator" content="docfx 2.59.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -102,13 +102,13 @@
   
   
   <a id="NPCEngine_API_Control_GetServiceMetadata_" data-uid="NPCEngine.API.Control.GetServiceMetadata*"></a>
-  <h4 id="NPCEngine_API_Control_GetServiceMetadata_System_String_Action_NPCEngine_API_ServiceMetadata__" data-uid="NPCEngine.API.Control.GetServiceMetadata(System.String,Action{NPCEngine.API.ServiceMetadata})">GetServiceMetadata(String, Action&lt;ServiceMetadata&gt;)</h4>
+  <h4 id="NPCEngine_API_Control_GetServiceMetadata_System_String_Action_NPCEngine_API_ServiceMetadata__Action_NPCEngine_NPCEngineException__" data-uid="NPCEngine.API.Control.GetServiceMetadata(System.String,Action{NPCEngine.API.ServiceMetadata},Action{NPCEngine.NPCEngineException})">GetServiceMetadata(String, Action&lt;ServiceMetadata&gt;, Action&lt;NPCEngineException&gt;)</h4>
   <div class="markdown level1 summary"><p>Get metadata for one service.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEnumerator GetServiceMetadata(string service_id, Action&lt;ServiceMetadata&gt; outputCallback)</code></pre>
+    <pre><code class="lang-csharp hljs">public IEnumerator GetServiceMetadata(string service_id, Action&lt;ServiceMetadata&gt; outputCallback = null, Action&lt;NPCEngineException&gt; errorCallback = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -132,6 +132,11 @@
         <td><p>Callback action to consume results.</p>
 </td>
       </tr>
+      <tr>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="NPCEngine.NPCEngineException.html">NPCEngineException</a>&gt;</td>
+        <td><span class="parametername">errorCallback</span></td>
+        <td></td>
+      </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
@@ -152,56 +157,14 @@
   </table>
   
   
-  <a id="NPCEngine_API_Control_GetServiceMetadataFuture_" data-uid="NPCEngine.API.Control.GetServiceMetadataFuture*"></a>
-  <h4 id="NPCEngine_API_Control_GetServiceMetadataFuture_System_String_" data-uid="NPCEngine.API.Control.GetServiceMetadataFuture(System.String)">GetServiceMetadataFuture(String)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ResultFuture&lt;ServiceMetadata&gt; GetServiceMetadataFuture(string service_id)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">service_id</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="NPCEngine.ResultFuture-1.html">ResultFuture</a>&lt;<a class="xref" href="NPCEngine.API.ServiceMetadata.html">ServiceMetadata</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="NPCEngine_API_Control_GetServicesMetadata_" data-uid="NPCEngine.API.Control.GetServicesMetadata*"></a>
-  <h4 id="NPCEngine_API_Control_GetServicesMetadata_Action_System_Collections_Generic_List_NPCEngine_API_ServiceMetadata___" data-uid="NPCEngine.API.Control.GetServicesMetadata(Action{System.Collections.Generic.List{NPCEngine.API.ServiceMetadata}})">GetServicesMetadata(Action&lt;List&lt;ServiceMetadata&gt;&gt;)</h4>
+  <h4 id="NPCEngine_API_Control_GetServicesMetadata_Action_System_Collections_Generic_List_NPCEngine_API_ServiceMetadata___Action_NPCEngine_NPCEngineException__" data-uid="NPCEngine.API.Control.GetServicesMetadata(Action{System.Collections.Generic.List{NPCEngine.API.ServiceMetadata}},Action{NPCEngine.NPCEngineException})">GetServicesMetadata(Action&lt;List&lt;ServiceMetadata&gt;&gt;, Action&lt;NPCEngineException&gt;)</h4>
   <div class="markdown level1 summary"><p>Get metadata for all the services.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEnumerator GetServicesMetadata(Action&lt;List&lt;ServiceMetadata&gt;&gt; outputCallback)</code></pre>
+    <pre><code class="lang-csharp hljs">public IEnumerator GetServicesMetadata(Action&lt;List&lt;ServiceMetadata&gt;&gt; outputCallback = null, Action&lt;NPCEngineException&gt; errorCallback = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -218,6 +181,11 @@
         <td><span class="parametername">outputCallback</span></td>
         <td><p>Callback action to consume results.</p>
 </td>
+      </tr>
+      <tr>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="NPCEngine.NPCEngineException.html">NPCEngineException</a>&gt;</td>
+        <td><span class="parametername">errorCallback</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -239,39 +207,14 @@
   </table>
   
   
-  <a id="NPCEngine_API_Control_GetServicesMetadataFuture_" data-uid="NPCEngine.API.Control.GetServicesMetadataFuture*"></a>
-  <h4 id="NPCEngine_API_Control_GetServicesMetadataFuture" data-uid="NPCEngine.API.Control.GetServicesMetadataFuture">GetServicesMetadataFuture()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ResultFuture&lt;List&lt;ServiceMetadata&gt;&gt; GetServicesMetadataFuture()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="NPCEngine.ResultFuture-1.html">ResultFuture</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="NPCEngine.API.ServiceMetadata.html">ServiceMetadata</a>&gt;&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="NPCEngine_API_Control_GetServiceStatus_" data-uid="NPCEngine.API.Control.GetServiceStatus*"></a>
-  <h4 id="NPCEngine_API_Control_GetServiceStatus_System_String_Action_NPCEngine_API_ServiceStatus__" data-uid="NPCEngine.API.Control.GetServiceStatus(System.String,Action{NPCEngine.API.ServiceStatus})">GetServiceStatus(String, Action&lt;ServiceStatus&gt;)</h4>
+  <h4 id="NPCEngine_API_Control_GetServiceStatus_System_String_Action_NPCEngine_API_ServiceStatus__Action_NPCEngine_NPCEngineException__" data-uid="NPCEngine.API.Control.GetServiceStatus(System.String,Action{NPCEngine.API.ServiceStatus},Action{NPCEngine.NPCEngineException})">GetServiceStatus(String, Action&lt;ServiceStatus&gt;, Action&lt;NPCEngineException&gt;)</h4>
   <div class="markdown level1 summary"><p>Get service status.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEnumerator GetServiceStatus(string service_id, Action&lt;ServiceStatus&gt; outputCallback)</code></pre>
+    <pre><code class="lang-csharp hljs">public IEnumerator GetServiceStatus(string service_id, Action&lt;ServiceStatus&gt; outputCallback = null, Action&lt;NPCEngineException&gt; errorCallback = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -293,6 +236,11 @@
         <td><span class="parametername">outputCallback</span></td>
         <td></td>
       </tr>
+      <tr>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="NPCEngine.NPCEngineException.html">NPCEngineException</a>&gt;</td>
+        <td><span class="parametername">errorCallback</span></td>
+        <td></td>
+      </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
@@ -312,56 +260,14 @@
   </table>
   
   
-  <a id="NPCEngine_API_Control_GetServiceStatusFuture_" data-uid="NPCEngine.API.Control.GetServiceStatusFuture*"></a>
-  <h4 id="NPCEngine_API_Control_GetServiceStatusFuture_System_String_" data-uid="NPCEngine.API.Control.GetServiceStatusFuture(System.String)">GetServiceStatusFuture(String)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ResultFuture&lt;ServiceStatus&gt; GetServiceStatusFuture(string service_id)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">service_id</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="NPCEngine.ResultFuture-1.html">ResultFuture</a>&lt;<a class="xref" href="NPCEngine.API.ServiceStatus.html">ServiceStatus</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="NPCEngine_API_Control_RestartService_" data-uid="NPCEngine.API.Control.RestartService*"></a>
-  <h4 id="NPCEngine_API_Control_RestartService_System_String_" data-uid="NPCEngine.API.Control.RestartService(System.String)">RestartService(String)</h4>
+  <h4 id="NPCEngine_API_Control_RestartService_System_String_Action_NPCEngine_API_ServiceStatus__Action_NPCEngine_NPCEngineException__" data-uid="NPCEngine.API.Control.RestartService(System.String,Action{NPCEngine.API.ServiceStatus},Action{NPCEngine.NPCEngineException})">RestartService(String, Action&lt;ServiceStatus&gt;, Action&lt;NPCEngineException&gt;)</h4>
   <div class="markdown level1 summary"><p>Restart service.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEnumerator RestartService(string service_id)</code></pre>
+    <pre><code class="lang-csharp hljs">public IEnumerator RestartService(string service_id, Action&lt;ServiceStatus&gt; outputCallback = null, Action&lt;NPCEngineException&gt; errorCallback = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -378,6 +284,16 @@
         <td><span class="parametername">service_id</span></td>
         <td><p>Resolvable service name (i.e. id, type or API name)</p>
 </td>
+      </tr>
+      <tr>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="NPCEngine.API.ServiceStatus.html">ServiceStatus</a>&gt;</td>
+        <td><span class="parametername">outputCallback</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="NPCEngine.NPCEngineException.html">NPCEngineException</a>&gt;</td>
+        <td><span class="parametername">errorCallback</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -446,7 +362,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void StartServiceNoConfirm(string service_id)</code></pre>
+    <pre><code class="lang-csharp hljs">public IEnumerator StartServiceNoConfirm(string service_id)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -461,6 +377,21 @@
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">service_id</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.ienumerator">IEnumerator</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -515,7 +446,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void StopServiceNoConfirm(string service_id)</code></pre>
+    <pre><code class="lang-csharp hljs">public IEnumerator StopServiceNoConfirm(string service_id)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -530,6 +461,21 @@
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">service_id</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.ienumerator">IEnumerator</a></td>
         <td></td>
       </tr>
     </tbody>

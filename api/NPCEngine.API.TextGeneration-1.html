@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class TextGeneration&lt;ContextType&gt;
    | npc-engine Unity integration ">
-    <meta name="generator" content="docfx 2.59.3.0">
+    <meta name="generator" content="docfx 2.59.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -118,12 +118,12 @@ to inference engine&apos;s TextGeneration services.</p>
   
   
   <a id="NPCEngine_API_TextGeneration_1_GenerateReply_" data-uid="NPCEngine.API.TextGeneration`1.GenerateReply*"></a>
-  <h4 id="NPCEngine_API_TextGeneration_1_GenerateReply__0_Action_System_String__System_Single_System_Int32_" data-uid="NPCEngine.API.TextGeneration`1.GenerateReply(`0,Action{System.String},System.Single,System.Int32)">GenerateReply(ContextType, Action&lt;String&gt;, Single, Int32)</h4>
+  <h4 id="NPCEngine_API_TextGeneration_1_GenerateReply__0_System_Single_System_Int32_System_Int32_Action_System_String__Action_NPCEngine_NPCEngineException__" data-uid="NPCEngine.API.TextGeneration`1.GenerateReply(`0,System.Single,System.Int32,System.Int32,Action{System.String},Action{NPCEngine.NPCEngineException})">GenerateReply(ContextType, Single, Int32, Int32, Action&lt;String&gt;, Action&lt;NPCEngineException&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEnumerator GenerateReply(ContextType context, Action&lt;string&gt; outputCallback, float temperature = 0.8F, int topk = 5)</code></pre>
+    <pre><code class="lang-csharp hljs">public IEnumerator GenerateReply(ContextType context, float temperature = 0.8F, int topk = 5, int numSampled = 3, Action&lt;string&gt; outputCallback = null, Action&lt;NPCEngineException&gt; errorCallback = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -141,11 +141,6 @@ to inference engine&apos;s TextGeneration services.</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Action</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
-        <td><span class="parametername">outputCallback</span></td>
-        <td></td>
-      </tr>
-      <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
         <td><span class="parametername">temperature</span></td>
         <td></td>
@@ -153,6 +148,21 @@ to inference engine&apos;s TextGeneration services.</p>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
         <td><span class="parametername">topk</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">numSampled</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><span class="parametername">outputCallback</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="NPCEngine.NPCEngineException.html">NPCEngineException</a>&gt;</td>
+        <td><span class="parametername">errorCallback</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -168,58 +178,6 @@ to inference engine&apos;s TextGeneration services.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.ienumerator">IEnumerator</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="NPCEngine_API_TextGeneration_1_GenerateReplyFuture_" data-uid="NPCEngine.API.TextGeneration`1.GenerateReplyFuture*"></a>
-  <h4 id="NPCEngine_API_TextGeneration_1_GenerateReplyFuture__0_System_Single_System_Int32_" data-uid="NPCEngine.API.TextGeneration`1.GenerateReplyFuture(`0,System.Single,System.Int32)">GenerateReplyFuture(ContextType, Single, Int32)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ResultFuture&lt;string&gt; GenerateReplyFuture(ContextType context, float temperature = 0.8F, int topk = 5)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">ContextType</span></td>
-        <td><span class="parametername">context</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
-        <td><span class="parametername">temperature</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><span class="parametername">topk</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="NPCEngine.ResultFuture-1.html">ResultFuture</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -227,12 +185,12 @@ to inference engine&apos;s TextGeneration services.</p>
   
   
   <a id="NPCEngine_API_TextGeneration_1_GetPromptTemplate_" data-uid="NPCEngine.API.TextGeneration`1.GetPromptTemplate*"></a>
-  <h4 id="NPCEngine_API_TextGeneration_1_GetPromptTemplate_Action_System_String__" data-uid="NPCEngine.API.TextGeneration`1.GetPromptTemplate(Action{System.String})">GetPromptTemplate(Action&lt;String&gt;)</h4>
+  <h4 id="NPCEngine_API_TextGeneration_1_GetPromptTemplate_Action_System_String__Action_NPCEngine_NPCEngineException__" data-uid="NPCEngine.API.TextGeneration`1.GetPromptTemplate(Action{System.String},Action{NPCEngine.NPCEngineException})">GetPromptTemplate(Action&lt;String&gt;, Action&lt;NPCEngineException&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEnumerator GetPromptTemplate(Action&lt;string&gt; outputCallback)</code></pre>
+    <pre><code class="lang-csharp hljs">public IEnumerator GetPromptTemplate(Action&lt;string&gt; outputCallback = null, Action&lt;NPCEngineException&gt; errorCallback = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -247,6 +205,11 @@ to inference engine&apos;s TextGeneration services.</p>
       <tr>
         <td><span class="xref">Action</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
         <td><span class="parametername">outputCallback</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="NPCEngine.NPCEngineException.html">NPCEngineException</a>&gt;</td>
+        <td><span class="parametername">errorCallback</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -268,38 +231,13 @@ to inference engine&apos;s TextGeneration services.</p>
   </table>
   
   
-  <a id="NPCEngine_API_TextGeneration_1_GetPromptTemplateFuture_" data-uid="NPCEngine.API.TextGeneration`1.GetPromptTemplateFuture*"></a>
-  <h4 id="NPCEngine_API_TextGeneration_1_GetPromptTemplateFuture" data-uid="NPCEngine.API.TextGeneration`1.GetPromptTemplateFuture">GetPromptTemplateFuture()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ResultFuture&lt;string&gt; GetPromptTemplateFuture()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="NPCEngine.ResultFuture-1.html">ResultFuture</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="NPCEngine_API_TextGeneration_1_GetSpecialTokens_" data-uid="NPCEngine.API.TextGeneration`1.GetSpecialTokens*"></a>
-  <h4 id="NPCEngine_API_TextGeneration_1_GetSpecialTokens_Action_System_Collections_Generic_Dictionary_System_String_System_String___" data-uid="NPCEngine.API.TextGeneration`1.GetSpecialTokens(Action{System.Collections.Generic.Dictionary{System.String,System.String}})">GetSpecialTokens(Action&lt;Dictionary&lt;String, String&gt;&gt;)</h4>
+  <h4 id="NPCEngine_API_TextGeneration_1_GetSpecialTokens_Action_System_Collections_Generic_Dictionary_System_String_System_String___Action_NPCEngine_NPCEngineException__" data-uid="NPCEngine.API.TextGeneration`1.GetSpecialTokens(Action{System.Collections.Generic.Dictionary{System.String,System.String}},Action{NPCEngine.NPCEngineException})">GetSpecialTokens(Action&lt;Dictionary&lt;String, String&gt;&gt;, Action&lt;NPCEngineException&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEnumerator GetSpecialTokens(Action&lt;Dictionary&lt;string, string&gt;&gt; outputCallback)</code></pre>
+    <pre><code class="lang-csharp hljs">public IEnumerator GetSpecialTokens(Action&lt;Dictionary&lt;string, string&gt;&gt; outputCallback = null, Action&lt;NPCEngineException&gt; errorCallback = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -316,6 +254,11 @@ to inference engine&apos;s TextGeneration services.</p>
         <td><span class="parametername">outputCallback</span></td>
         <td></td>
       </tr>
+      <tr>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="NPCEngine.NPCEngineException.html">NPCEngineException</a>&gt;</td>
+        <td><span class="parametername">errorCallback</span></td>
+        <td></td>
+      </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
@@ -329,31 +272,6 @@ to inference engine&apos;s TextGeneration services.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.ienumerator">IEnumerator</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="NPCEngine_API_TextGeneration_1_GetSpecialTokensFuture_" data-uid="NPCEngine.API.TextGeneration`1.GetSpecialTokensFuture*"></a>
-  <h4 id="NPCEngine_API_TextGeneration_1_GetSpecialTokensFuture" data-uid="NPCEngine.API.TextGeneration`1.GetSpecialTokensFuture">GetSpecialTokensFuture()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ResultFuture&lt;Dictionary&lt;string, string&gt;&gt; GetSpecialTokensFuture()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="NPCEngine.ResultFuture-1.html">ResultFuture</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>

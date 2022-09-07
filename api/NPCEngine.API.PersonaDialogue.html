@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class PersonaDialogue
    | npc-engine Unity integration ">
-    <meta name="generator" content="docfx 2.59.3.0">
+    <meta name="generator" content="docfx 2.59.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -103,12 +103,12 @@ to inference engine&apos;s TextGeneration services.</p>
   
   
   <a id="NPCEngine_API_PersonaDialogue_StartDialogue_" data-uid="NPCEngine.API.PersonaDialogue.StartDialogue*"></a>
-  <h4 id="NPCEngine_API_PersonaDialogue_StartDialogue_System_String_System_String_System_String_System_String_System_String_System_String_Action_System_String__System_String_" data-uid="NPCEngine.API.PersonaDialogue.StartDialogue(System.String,System.String,System.String,System.String,System.String,System.String,Action{System.String},System.String)">StartDialogue(String, String, String, String, String, String, Action&lt;String&gt;, String)</h4>
+  <h4 id="NPCEngine_API_PersonaDialogue_StartDialogue_System_String_System_String_System_String_System_String_System_String_System_String_Action_System_String__Action_NPCEngine_NPCEngineException__System_String_" data-uid="NPCEngine.API.PersonaDialogue.StartDialogue(System.String,System.String,System.String,System.String,System.String,System.String,Action{System.String},Action{NPCEngine.NPCEngineException},System.String)">StartDialogue(String, String, String, String, String, String, Action&lt;String&gt;, Action&lt;NPCEngineException&gt;, String)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEnumerator StartDialogue(string name1, string persona1, string name2, string persona2, string location_name, string location_description, Action&lt;string&gt; outputCallback, string dialogue_id = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public IEnumerator StartDialogue(string name1, string persona1, string name2, string persona2, string location_name, string location_description, Action&lt;string&gt; outputCallback = null, Action&lt;NPCEngineException&gt; errorCallback = null, string dialogue_id = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -156,6 +156,11 @@ to inference engine&apos;s TextGeneration services.</p>
         <td></td>
       </tr>
       <tr>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="NPCEngine.NPCEngineException.html">NPCEngineException</a>&gt;</td>
+        <td><span class="parametername">errorCallback</span></td>
+        <td></td>
+      </tr>
+      <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">dialogue_id</span></td>
         <td></td>
@@ -180,7 +185,7 @@ to inference engine&apos;s TextGeneration services.</p>
   
   
   <a id="NPCEngine_API_PersonaDialogue_StepDialogue_" data-uid="NPCEngine.API.PersonaDialogue.StepDialogue*"></a>
-  <h4 id="NPCEngine_API_PersonaDialogue_StepDialogue_System_String_System_String_System_Boolean_Action_Tuple_System_String_System_Boolean___System_Single_System_Collections_Generic_List_System_String__System_String_" data-uid="NPCEngine.API.PersonaDialogue.StepDialogue(System.String,System.String,System.Boolean,Action{Tuple{System.String,System.Boolean}},System.Single,System.Collections.Generic.List{System.String},System.String)">StepDialogue(String, String, Boolean, Action&lt;Tuple&lt;String, Boolean&gt;&gt;, Single, List&lt;String&gt;, String)</h4>
+  <h4 id="NPCEngine_API_PersonaDialogue_StepDialogue_System_String_System_String_System_Boolean_Action_Tuple_System_String_System_Boolean___Action_NPCEngine_NPCEngineException__System_Single_System_Collections_Generic_List_System_String__System_String_" data-uid="NPCEngine.API.PersonaDialogue.StepDialogue(System.String,System.String,System.Boolean,Action{Tuple{System.String,System.Boolean}},Action{NPCEngine.NPCEngineException},System.Single,System.Collections.Generic.List{System.String},System.String)">StepDialogue(String, String, Boolean, Action&lt;Tuple&lt;String, Boolean&gt;&gt;, Action&lt;NPCEngineException&gt;, Single, List&lt;String&gt;, String)</h4>
   <div class="markdown level1 summary"><p>Step dialogue.</p>
 <p>If utterance is null, it will be generated.
 If scripted utterances are not null they will be compared to the utterance 
@@ -190,7 +195,7 @@ If update_history is true, the dialogue history will be updated with the utteran
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEnumerator StepDialogue(string dialogue_id, string speaker_id, bool update_history, Action&lt;Tuple&lt;string, bool&gt;&gt; outputCallback, float scripted_threshold = 0.5F, List&lt;string&gt; scripted_utterances = null, string utterance = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public IEnumerator StepDialogue(string dialogue_id, string speaker_id, bool update_history, Action&lt;Tuple&lt;string, bool&gt;&gt; outputCallback = null, Action&lt;NPCEngineException&gt; errorCallback = null, float scripted_threshold = 0.5F, List&lt;string&gt; scripted_utterances = null, string utterance = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -223,6 +228,11 @@ If update_history is true, the dialogue history will be updated with the utteran
         <td><p>Callback that accepts results: Tuple with utterance 
 and bool flag that is True if scripted utterance was used</p>
 </td>
+      </tr>
+      <tr>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="NPCEngine.NPCEngineException.html">NPCEngineException</a>&gt;</td>
+        <td><span class="parametername">errorCallback</span></td>
+        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>

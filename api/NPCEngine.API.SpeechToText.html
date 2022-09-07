@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class SpeechToText
    | npc-engine Unity integration ">
-    <meta name="generator" content="docfx 2.59.3.0">
+    <meta name="generator" content="docfx 2.59.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -103,12 +103,12 @@ to inference engine&apos;s speech to text module.</p>
   
   
   <a id="NPCEngine_API_SpeechToText_GetDevices_" data-uid="NPCEngine.API.SpeechToText.GetDevices*"></a>
-  <h4 id="NPCEngine_API_SpeechToText_GetDevices_Action_System_Collections_Generic_List_System_String___" data-uid="NPCEngine.API.SpeechToText.GetDevices(Action{System.Collections.Generic.List{System.String}})">GetDevices(Action&lt;List&lt;String&gt;&gt;)</h4>
+  <h4 id="NPCEngine_API_SpeechToText_GetDevices_Action_System_Collections_Generic_List_System_String___Action_NPCEngine_NPCEngineException__" data-uid="NPCEngine.API.SpeechToText.GetDevices(Action{System.Collections.Generic.List{System.String}},Action{NPCEngine.NPCEngineException})">GetDevices(Action&lt;List&lt;String&gt;&gt;, Action&lt;NPCEngineException&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEnumerator GetDevices(Action&lt;List&lt;string&gt;&gt; outputCallback)</code></pre>
+    <pre><code class="lang-csharp hljs">public IEnumerator GetDevices(Action&lt;List&lt;string&gt;&gt; outputCallback = null, Action&lt;NPCEngineException&gt; errorCallback = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -123,6 +123,11 @@ to inference engine&apos;s speech to text module.</p>
       <tr>
         <td><span class="xref">Action</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;&gt;</td>
         <td><span class="parametername">outputCallback</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="NPCEngine.NPCEngineException.html">NPCEngineException</a>&gt;</td>
+        <td><span class="parametername">errorCallback</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -144,39 +149,36 @@ to inference engine&apos;s speech to text module.</p>
   </table>
   
   
-  <a id="NPCEngine_API_SpeechToText_GetDevicesFuture_" data-uid="NPCEngine.API.SpeechToText.GetDevicesFuture*"></a>
-  <h4 id="NPCEngine_API_SpeechToText_GetDevicesFuture" data-uid="NPCEngine.API.SpeechToText.GetDevicesFuture">GetDevicesFuture()</h4>
+  <a id="NPCEngine_API_SpeechToText_InitializeMicrophoneInput_" data-uid="NPCEngine.API.SpeechToText.InitializeMicrophoneInput*"></a>
+  <h4 id="NPCEngine_API_SpeechToText_InitializeMicrophoneInput_Action_System_Collections_Generic_List_System_String___Action_NPCEngine_NPCEngineException__" data-uid="NPCEngine.API.SpeechToText.InitializeMicrophoneInput(Action{System.Collections.Generic.List{System.String}},Action{NPCEngine.NPCEngineException})">InitializeMicrophoneInput(Action&lt;List&lt;String&gt;&gt;, Action&lt;NPCEngineException&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ResultFuture&lt;List&lt;string&gt;&gt; GetDevicesFuture()</code></pre>
+    <pre><code class="lang-csharp hljs">public IEnumerator InitializeMicrophoneInput(Action&lt;List&lt;string&gt;&gt; outputCallback = null, Action&lt;NPCEngineException&gt; errorCallback = null)</code></pre>
   </div>
-  <h5 class="returns">Returns</h5>
+  <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
+        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="NPCEngine.ResultFuture-1.html">ResultFuture</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;&gt;</td>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;&gt;</td>
+        <td><span class="parametername">outputCallback</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="NPCEngine.NPCEngineException.html">NPCEngineException</a>&gt;</td>
+        <td><span class="parametername">errorCallback</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  
-  
-  <a id="NPCEngine_API_SpeechToText_InitializeMicrophoneInput_" data-uid="NPCEngine.API.SpeechToText.InitializeMicrophoneInput*"></a>
-  <h4 id="NPCEngine_API_SpeechToText_InitializeMicrophoneInput" data-uid="NPCEngine.API.SpeechToText.InitializeMicrophoneInput">InitializeMicrophoneInput()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEnumerator InitializeMicrophoneInput()</code></pre>
-  </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -195,12 +197,12 @@ to inference engine&apos;s speech to text module.</p>
   
   
   <a id="NPCEngine_API_SpeechToText_Listen_" data-uid="NPCEngine.API.SpeechToText.Listen*"></a>
-  <h4 id="NPCEngine_API_SpeechToText_Listen_System_String_Action_System_String__" data-uid="NPCEngine.API.SpeechToText.Listen(System.String,Action{System.String})">Listen(String, Action&lt;String&gt;)</h4>
+  <h4 id="NPCEngine_API_SpeechToText_Listen_System_String_Action_System_String__Action_NPCEngine_NPCEngineException__" data-uid="NPCEngine.API.SpeechToText.Listen(System.String,Action{System.String},Action{NPCEngine.NPCEngineException})">Listen(String, Action&lt;String&gt;, Action&lt;NPCEngineException&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEnumerator Listen(string context, Action&lt;string&gt; outputCallback)</code></pre>
+    <pre><code class="lang-csharp hljs">public IEnumerator Listen(string context, Action&lt;string&gt; outputCallback = null, Action&lt;NPCEngineException&gt; errorCallback = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -222,6 +224,11 @@ to inference engine&apos;s speech to text module.</p>
         <td><span class="parametername">outputCallback</span></td>
         <td></td>
       </tr>
+      <tr>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="NPCEngine.NPCEngineException.html">NPCEngineException</a>&gt;</td>
+        <td><span class="parametername">errorCallback</span></td>
+        <td></td>
+      </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
@@ -241,55 +248,13 @@ to inference engine&apos;s speech to text module.</p>
   </table>
   
   
-  <a id="NPCEngine_API_SpeechToText_ListenFuture_" data-uid="NPCEngine.API.SpeechToText.ListenFuture*"></a>
-  <h4 id="NPCEngine_API_SpeechToText_ListenFuture_System_String_" data-uid="NPCEngine.API.SpeechToText.ListenFuture(System.String)">ListenFuture(String)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ResultFuture&lt;string&gt; ListenFuture(string context)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">context</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="NPCEngine.ResultFuture-1.html">ResultFuture</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="NPCEngine_API_SpeechToText_SetDevice_" data-uid="NPCEngine.API.SpeechToText.SetDevice*"></a>
-  <h4 id="NPCEngine_API_SpeechToText_SetDevice_System_Int32_Action_System_Collections_Generic_List_System_String___" data-uid="NPCEngine.API.SpeechToText.SetDevice(System.Int32,Action{System.Collections.Generic.List{System.String}})">SetDevice(Int32, Action&lt;List&lt;String&gt;&gt;)</h4>
+  <h4 id="NPCEngine_API_SpeechToText_SetDevice_System_Int32_Action_System_Collections_Generic_List_System_String___Action_NPCEngine_NPCEngineException__" data-uid="NPCEngine.API.SpeechToText.SetDevice(System.Int32,Action{System.Collections.Generic.List{System.String}},Action{NPCEngine.NPCEngineException})">SetDevice(Int32, Action&lt;List&lt;String&gt;&gt;, Action&lt;NPCEngineException&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEnumerator SetDevice(int deviceId, Action&lt;List&lt;string&gt;&gt; outputCallback)</code></pre>
+    <pre><code class="lang-csharp hljs">public IEnumerator SetDevice(int deviceId, Action&lt;List&lt;string&gt;&gt; outputCallback = null, Action&lt;NPCEngineException&gt; errorCallback = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -311,6 +276,11 @@ to inference engine&apos;s speech to text module.</p>
         <td><span class="parametername">outputCallback</span></td>
         <td></td>
       </tr>
+      <tr>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="NPCEngine.NPCEngineException.html">NPCEngineException</a>&gt;</td>
+        <td><span class="parametername">errorCallback</span></td>
+        <td></td>
+      </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
@@ -330,55 +300,13 @@ to inference engine&apos;s speech to text module.</p>
   </table>
   
   
-  <a id="NPCEngine_API_SpeechToText_SetDeviceFuture_" data-uid="NPCEngine.API.SpeechToText.SetDeviceFuture*"></a>
-  <h4 id="NPCEngine_API_SpeechToText_SetDeviceFuture_System_Int32_" data-uid="NPCEngine.API.SpeechToText.SetDeviceFuture(System.Int32)">SetDeviceFuture(Int32)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ResultFuture&lt;List&lt;string&gt;&gt; SetDeviceFuture(int deviceId)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><span class="parametername">deviceId</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="NPCEngine.ResultFuture-1.html">ResultFuture</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="NPCEngine_API_SpeechToText_Transcribe_" data-uid="NPCEngine.API.SpeechToText.Transcribe*"></a>
-  <h4 id="NPCEngine_API_SpeechToText_Transcribe_System_Collections_Generic_List_System_Single__Action_System_String__" data-uid="NPCEngine.API.SpeechToText.Transcribe(System.Collections.Generic.List{System.Single},Action{System.String})">Transcribe(List&lt;Single&gt;, Action&lt;String&gt;)</h4>
+  <h4 id="NPCEngine_API_SpeechToText_Transcribe_System_Collections_Generic_List_System_Single__Action_System_String__Action_NPCEngine_NPCEngineException__" data-uid="NPCEngine.API.SpeechToText.Transcribe(System.Collections.Generic.List{System.Single},Action{System.String},Action{NPCEngine.NPCEngineException})">Transcribe(List&lt;Single&gt;, Action&lt;String&gt;, Action&lt;NPCEngineException&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEnumerator Transcribe(List&lt;float&gt; audio, Action&lt;string&gt; outputCallback)</code></pre>
+    <pre><code class="lang-csharp hljs">public IEnumerator Transcribe(List&lt;float&gt; audio, Action&lt;string&gt; outputCallback = null, Action&lt;NPCEngineException&gt; errorCallback = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -400,6 +328,11 @@ to inference engine&apos;s speech to text module.</p>
         <td><span class="parametername">outputCallback</span></td>
         <td></td>
       </tr>
+      <tr>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="NPCEngine.NPCEngineException.html">NPCEngineException</a>&gt;</td>
+        <td><span class="parametername">errorCallback</span></td>
+        <td></td>
+      </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
@@ -413,48 +346,6 @@ to inference engine&apos;s speech to text module.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.ienumerator">IEnumerator</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="NPCEngine_API_SpeechToText_TranscribeFuture_" data-uid="NPCEngine.API.SpeechToText.TranscribeFuture*"></a>
-  <h4 id="NPCEngine_API_SpeechToText_TranscribeFuture_System_Collections_Generic_List_System_Single__" data-uid="NPCEngine.API.SpeechToText.TranscribeFuture(System.Collections.Generic.List{System.Single})">TranscribeFuture(List&lt;Single&gt;)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ResultFuture&lt;string&gt; TranscribeFuture(List&lt;float&gt; audio)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a>&gt;</td>
-        <td><span class="parametername">audio</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="NPCEngine.ResultFuture-1.html">ResultFuture</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
