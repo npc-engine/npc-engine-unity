@@ -1,0 +1,88 @@
+### YamlMime:ManagedReference
+items:
+- uid: NPCEngine.TTSGeneratorEditor
+  commentId: T:NPCEngine.TTSGeneratorEditor
+  id: TTSGeneratorEditor
+  parent: NPCEngine
+  children:
+  - NPCEngine.TTSGeneratorEditor.OnInspectorGUI
+  langs:
+  - csharp
+  - vb
+  name: TTSGeneratorEditor
+  nameWithType: TTSGeneratorEditor
+  fullName: NPCEngine.TTSGeneratorEditor
+  type: Class
+  source:
+    id: TTSGeneratorEditor
+    path: ''
+    startLine: 4164
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine
+  syntax:
+    content: 'public class TTSGeneratorEditor : Editor'
+    content.vb: >-
+      Public Class TTSGeneratorEditor
+
+          Inherits Editor
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: NPCEngine.TTSGeneratorEditor.OnInspectorGUI
+  commentId: M:NPCEngine.TTSGeneratorEditor.OnInspectorGUI
+  id: OnInspectorGUI
+  parent: NPCEngine.TTSGeneratorEditor
+  langs:
+  - csharp
+  - vb
+  name: OnInspectorGUI()
+  nameWithType: TTSGeneratorEditor.OnInspectorGUI()
+  fullName: NPCEngine.TTSGeneratorEditor.OnInspectorGUI()
+  type: Method
+  source:
+    id: OnInspectorGUI
+    path: ''
+    startLine: 4166
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine
+  syntax:
+    content: public override void OnInspectorGUI()
+    content.vb: Public Overrides Sub OnInspectorGUI
+  overload: NPCEngine.TTSGeneratorEditor.OnInspectorGUI*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: NPCEngine
+  commentId: N:NPCEngine
+  name: NPCEngine
+  nameWithType: NPCEngine
+  fullName: NPCEngine
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: NPCEngine.TTSGeneratorEditor.OnInspectorGUI*
+  commentId: Overload:NPCEngine.TTSGeneratorEditor.OnInspectorGUI
+  name: OnInspectorGUI
+  nameWithType: TTSGeneratorEditor.OnInspectorGUI
+  fullName: NPCEngine.TTSGeneratorEditor.OnInspectorGUI

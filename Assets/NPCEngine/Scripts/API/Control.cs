@@ -83,24 +83,14 @@ namespace NPCEngine.API
         //Compare in a coroutine   
         public IEnumerator StartService(string service_id)
         {
-            var result = this.Run<List<string>, List<string>>("start_service", new List<string> { service_id, });
-
-
-
             for (int i = 0; i < 3; i++)
             {
-                while (!result.ResultReady)
+                NPCEngineException exc = null;
+                yield return this.Run<List<string>, List<string>>("start_service", new List<string> { service_id, }, (x)=>{}, (e)=>{exc = e;});
+                if(exc != null)
                 {
-                    yield return null;
-                }
-                try
-                {
-                    var test_result = result.Result;
-                }
-                catch (NPCEngineException e)
-                {
-                    Debug.LogWarning(e.Message + " Retrying... " + i.ToString());
-                    result = this.Run<List<string>, List<string>>("start_service", new List<string> { service_id, });
+                    Debug.LogWarning(exc.Message + " Retrying... " + i.ToString());
+                    yield return this.Run<List<string>, List<string>>("start_service", new List<string> { service_id, }, (x)=>{}, (e)=>{exc = e;});
                     continue;
                 }
                 break;
@@ -110,21 +100,14 @@ namespace NPCEngine.API
 
         public IEnumerator StopService(string service_id)
         {
-            var result = this.Run<List<string>, List<string>>("stop_service", new List<string> { service_id, });
             for (int i = 0; i < 3; i++)
             {
-                while (!result.ResultReady)
+                NPCEngineException exc = null;
+                yield return this.Run<List<string>, List<string>>("stop_service", new List<string> { service_id, }, (x)=>{}, (e)=>{exc = e;});
+                if(exc != null)
                 {
-                    yield return null;
-                }
-                try
-                {
-                    var test_result = result.Result;
-                }
-                catch (NPCEngineException e)
-                {
-                    Debug.LogWarning(e.Message + " Retrying... " + i.ToString());
-                    result = this.Run<List<string>, List<string>>("stop_service", new List<string> { service_id, });
+                    Debug.LogWarning(exc.Message + " Retrying... " + i.ToString());
+                    yield return this.Run<List<string>, List<string>>("stop_service", new List<string> { service_id, }, (x)=>{}, (e)=>{exc = e;});
                     continue;
                 }
                 break;
@@ -137,15 +120,14 @@ namespace NPCEngine.API
         /// <param name="service_id"></param>
         /// <param name="outputCallback"></param>
         /// <returns></returns>
-        public IEnumerator GetServiceStatus(string service_id, Action<ServiceStatus> outputCallback)
-        {
-            var result = this.Run<List<string>, string>("get_service_status", new List<string> { service_id, });
+        public IEnumerator GetServiceStatus(string service_id, Action<ServiceStatus> outputCallback = null, Action<NPCEngineException> errorCallback = null)
 
-            while (!result.ResultReady)
-            {
-                yield return null;
-            }
-            switch (result.Result)
+        {
+            string status = "";
+            yield return this.Run<List<string>, string>(
+                "get_service_status", new List<string> { service_id, }, (st)=>{status = st;}, errorCallback
+            );
+            switch (status)
             {
                 case "running":
                     outputCallback(ServiceStatus.RUNNING);
@@ -176,15 +158,11 @@ namespace NPCEngine.API
         /// </summary>
         /// <param name="service_id">Resolvable service name (i.e. id, type or API name)</param>
         /// <returns></returns>
-        public IEnumerator RestartService(string service_id)
+        public IEnumerator RestartService(string service_id, Action<ServiceStatus> outputCallback = null, Action<NPCEngineException> errorCallback = null)
         {
-            var result = this.Run<List<string>, string>("restart_service", new List<string> { service_id, });
-
-            while (!result.ResultReady)
-            {
-                yield return null;
-            }
-            var test_result = result.Result;
+            yield return this.Run<List<string>, ServiceStatus>(
+                "restart_service", new List<string> { service_id, }, (st)=>{outputCallback(st);}, errorCallback
+            );
         }
 
         /// <summary>
@@ -193,15 +171,11 @@ namespace NPCEngine.API
         /// <param name="service_id">Resolvable service name (i.e. id, type or API name)</param>
         /// <param name="outputCallback">Callback action to consume results.</param>
         /// <returns><c>ServiceMetadata</c> for resolved service.</returns>
-        public IEnumerator GetServiceMetadata(string service_id, Action<ServiceMetadata> outputCallback)
+        public IEnumerator GetServiceMetadata(string service_id, Action<ServiceMetadata> outputCallback = null, Action<NPCEngineException> errorCallback = null)
         {
-            var result = this.Run<List<string>, ServiceMetadata>("get_service_metadata", new List<string> { service_id, });
-
-            while (!result.ResultReady)
-            {
-                yield return null;
-            }
-            outputCallback(result.Result);
+            yield return this.Run<List<string>, ServiceMetadata>(
+                "get_service_metadata", new List<string> { service_id, }, (st)=>{outputCallback(st);}, errorCallback
+            );
         }
 
         /// <summary>
@@ -209,40 +183,21 @@ namespace NPCEngine.API
         /// </summary>
         /// <param name="outputCallback">Callback action to consume results.</param>
         /// <returns>A list of <c>ServiceMetadata</c> for each service.</returns>
-        public IEnumerator GetServicesMetadata(Action<List<ServiceMetadata>> outputCallback)
+        public IEnumerator GetServicesMetadata(Action<List<ServiceMetadata>> outputCallback = null, Action<NPCEngineException> errorCallback = null)
         {
-            var result = this.Run<List<string>, List<ServiceMetadata>>("get_services_metadata", new List<string>());
-
-            while (!result.ResultReady)
-            {
-                yield return null;
-            }
-            outputCallback(result.Result);
+            yield return this.Run<List<string>, List<ServiceMetadata>>(
+                "get_services_metadata", new List<string> { }, (st)=>{outputCallback(st);}, errorCallback
+            );
         }
 
-        public ResultFuture<List<ServiceMetadata>> GetServicesMetadataFuture()
+        public IEnumerator StopServiceNoConfirm(string service_id)
         {
-            return this.Run<List<string>, List<ServiceMetadata>>("get_services_metadata", new List<string> { });
+            yield return this.Run<List<string>, string>("stop_service", new List<string> { service_id, }, (x)=>{}, (e)=>{});
         }
 
-        public ResultFuture<ServiceMetadata> GetServiceMetadataFuture(string service_id)
+        public IEnumerator StartServiceNoConfirm(string service_id)
         {
-            return this.Run<List<string>, ServiceMetadata>("get_service_metadata", new List<string> { service_id, });
-        }
-
-        public ResultFuture<ServiceStatus> GetServiceStatusFuture(string service_id)
-        {
-            return this.Run<List<string>, ServiceStatus>("get_service_status", new List<string> { service_id, });
-        }
-
-        public void StopServiceNoConfirm(string service_id)
-        {
-            this.Run<List<string>, string>("stop_service", new List<string> { service_id, });
-        }
-
-        public void StartServiceNoConfirm(string service_id)
-        {
-            this.Run<List<string>, string>("stop_service", new List<string> { service_id, });
+            yield return this.Run<List<string>, string>("stop_service", new List<string> { service_id, }, (x)=>{}, (e)=>{});
         }
     }   
 }

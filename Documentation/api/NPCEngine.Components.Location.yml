@@ -17,7 +17,7 @@ items:
   source:
     id: Location
     path: ''
-    startLine: 1652
+    startLine: 1688
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -27,6 +27,7 @@ items:
     content: 'public class Location : ScriptableObject'
     content.vb: >-
       Public Class Location
+
           Inherits ScriptableObject
   inheritance:
   - System.Object
@@ -50,7 +51,7 @@ items:
   source:
     id: Name
     path: ''
-    startLine: 1655
+    startLine: 1691
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -77,7 +78,7 @@ items:
   source:
     id: Description
     path: ''
-    startLine: 1658
+    startLine: 1694
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components

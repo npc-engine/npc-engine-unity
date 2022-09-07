@@ -22,27 +22,17 @@ items:
   source:
     id: FantasyChatbotContext
     path: ''
-    startLine: 2608
+    startLine: 2828
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
   summary: "\nText generation context for LIGHT dataset format (2 personas and location)\n"
   example: []
   syntax:
-    content: >-
-      [Serializable]
-
-      public class FantasyChatbotContext
-    content.vb: >-
-      <Serializable>
-
-      Public Class FantasyChatbotContext
+    content: public class FantasyChatbotContext
+    content.vb: Public Class FantasyChatbotContext
   inheritance:
   - System.Object
-  attributes:
-  - type: System.SerializableAttribute
-    ctor: System.SerializableAttribute.#ctor
-    arguments: []
   modifiers.csharp:
   - public
   - class
@@ -63,7 +53,7 @@ items:
   source:
     id: location_name
     path: ''
-    startLine: 2622
+    startLine: 2842
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -90,7 +80,7 @@ items:
   source:
     id: location
     path: ''
-    startLine: 2623
+    startLine: 2843
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -117,7 +107,7 @@ items:
   source:
     id: name
     path: ''
-    startLine: 2624
+    startLine: 2844
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -144,7 +134,7 @@ items:
   source:
     id: persona
     path: ''
-    startLine: 2625
+    startLine: 2845
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -171,7 +161,7 @@ items:
   source:
     id: other_name
     path: ''
-    startLine: 2626
+    startLine: 2846
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -198,7 +188,7 @@ items:
   source:
     id: other_persona
     path: ''
-    startLine: 2627
+    startLine: 2847
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -225,7 +215,7 @@ items:
   source:
     id: history
     path: ''
-    startLine: 2629
+    startLine: 2849
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components

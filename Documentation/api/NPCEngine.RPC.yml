@@ -11,6 +11,7 @@ items:
   - NPCEngine.RPC.RPCBase
   - NPCEngine.RPC.RPCRequestMessage`1
   - NPCEngine.RPC.RPCResponseError
+  - NPCEngine.RPC.RPCResponseErrorData
   - NPCEngine.RPC.RPCResponseMessage`1
   - NPCEngine.RPC.ServerType
   langs:
@@ -46,6 +47,7 @@ references:
   fullName: NPCEngine.RPC.APICommunicatorHTTPImpl
 - uid: NPCEngine.RPC.Request
   commentId: T:NPCEngine.RPC.Request
+  parent: NPCEngine.RPC
   name: Request
   nameWithType: Request
   fullName: NPCEngine.RPC.Request
@@ -127,6 +129,12 @@ references:
   name: RPCResponseError
   nameWithType: RPCResponseError
   fullName: NPCEngine.RPC.RPCResponseError
+- uid: NPCEngine.RPC.RPCResponseErrorData
+  commentId: T:NPCEngine.RPC.RPCResponseErrorData
+  parent: NPCEngine.RPC
+  name: RPCResponseErrorData
+  nameWithType: RPCResponseErrorData
+  fullName: NPCEngine.RPC.RPCResponseErrorData
 - uid: NPCEngine.RPC.ServerType
   commentId: T:NPCEngine.RPC.ServerType
   parent: NPCEngine.RPC

@@ -23,81 +23,29 @@ namespace NPCEngine.API
             }
         }
 
-        public ResultFuture<string> ListenFuture(string context)
+        public IEnumerator Listen(string context, Action<string> outputCallback = null, Action<NPCEngineException> errorCallback = null)
         {
-            return this.Run<List<string>, string>("listen", new List<string> { context });
+            yield return this.Run<List<string>, string>("listen", new List<string> { context }, outputCallback, errorCallback);
         }
 
-        public ResultFuture<string> TranscribeFuture(List<float> audio)
+        public IEnumerator Transcribe(List<float> audio, Action<string> outputCallback = null, Action<NPCEngineException> errorCallback = null)
         {
-            return this.Run<List<float>, string>("stt", audio);
+            yield return this.Run<List<float>, string>("stt", audio, outputCallback, errorCallback);
         }
 
-        public ResultFuture<List<string>> GetDevicesFuture()
+        public IEnumerator GetDevices(Action<List<string>> outputCallback = null, Action<NPCEngineException> errorCallback = null)
         {
-            return this.Run<List<string>, List<string>>("get_devices", new List<string>());
+            yield return this.Run<List<string>, List<string>>("get_devices", new List<string>(), outputCallback, errorCallback);
         }
 
-        public ResultFuture<List<string>> SetDeviceFuture(int deviceId)
+        public IEnumerator SetDevice(int deviceId, Action<List<string>> outputCallback = null, Action<NPCEngineException> errorCallback = null)
         {
-            return this.Run<int, List<string>>("select_device", deviceId);
+            yield return this.Run<int, List<string>>("select_device", deviceId, outputCallback, errorCallback);
         }
 
-        public IEnumerator Listen(string context, Action<string> outputCallback)
+        public IEnumerator InitializeMicrophoneInput(Action<List<string>> outputCallback = null, Action<NPCEngineException> errorCallback = null)
         {
-            var result = this.Run<List<string>, string>("listen", new List<string> { context });
-
-            while (!result.ResultReady)
-            {
-                yield return null;
-            }
-            outputCallback(result.Result);
+            yield return this.Run<List<string>, List<string>>("initialize_microphone_input", new List<string>(), outputCallback, errorCallback);
         }
-
-        public IEnumerator Transcribe(List<float> audio, Action<string> outputCallback)
-        {
-            var result = this.Run<List<float>, string>("stt", audio);
-
-            while (!result.ResultReady)
-            {
-                yield return null;
-            }
-            outputCallback(result.Result);
-        }
-
-        public IEnumerator GetDevices(Action<List<string>> outputCallback)
-        {
-            var result = this.Run<List<string>, List<string>>("get_devices", new List<string>());
-
-            while (!result.ResultReady)
-            {
-                yield return null;
-            }
-            outputCallback(result.Result);
-        }
-
-        public IEnumerator SetDevice(int deviceId, Action<List<string>> outputCallback)
-        {
-            var result = this.Run<int, List<string>>("select_device", deviceId);
-
-            while (!result.ResultReady)
-            {
-                yield return null;
-            }
-            outputCallback(result.Result);
-        }
-
-        public IEnumerator InitializeMicrophoneInput()
-        {
-            var result = this.Run<List<string>, List<string>>("initialize_microphone_input", new List<string>());
-            while (!result.ResultReady)
-            {
-                yield return null;
-            }
-            // Wait 1 second to allow ASR system to fill silence buffer for better recognition
-            yield return new WaitForSeconds(1);
-            var test_result = result.Result;
-        }
-
     }
 }

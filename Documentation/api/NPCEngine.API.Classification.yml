@@ -5,7 +5,7 @@ items:
   id: Classification
   parent: NPCEngine.API
   children:
-  - NPCEngine.API.Classification.Classify(System.String,System.Collections.Generic.List{System.String},System.Action{System.Collections.Generic.List{System.Collections.Generic.List{System.Single}}})
+  - NPCEngine.API.Classification.Classify(System.String,System.Collections.Generic.List{System.String},Action{System.Collections.Generic.List{System.Collections.Generic.List{System.Single}}},Action{NPCEngine.NPCEngineException})
   langs:
   - csharp
   - vb
@@ -16,7 +16,7 @@ items:
   source:
     id: Classification
     path: ''
-    startLine: 443
+    startLine: 644
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -26,6 +26,7 @@ items:
     content: 'public class Classification : RPCBase'
     content.vb: >-
       Public Class Classification
+
           Inherits RPCBase
   inheritance:
   - System.Object
@@ -35,44 +36,46 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: NPCEngine.API.Classification.Classify(System.String,System.Collections.Generic.List{System.String},System.Action{System.Collections.Generic.List{System.Collections.Generic.List{System.Single}}})
-  commentId: M:NPCEngine.API.Classification.Classify(System.String,System.Collections.Generic.List{System.String},System.Action{System.Collections.Generic.List{System.Collections.Generic.List{System.Single}}})
-  id: Classify(System.String,System.Collections.Generic.List{System.String},System.Action{System.Collections.Generic.List{System.Collections.Generic.List{System.Single}}})
+- uid: NPCEngine.API.Classification.Classify(System.String,System.Collections.Generic.List{System.String},Action{System.Collections.Generic.List{System.Collections.Generic.List{System.Single}}},Action{NPCEngine.NPCEngineException})
+  commentId: M:NPCEngine.API.Classification.Classify(System.String,System.Collections.Generic.List{System.String},Action{System.Collections.Generic.List{System.Collections.Generic.List{System.Single}}},Action{NPCEngine.NPCEngineException})
+  id: Classify(System.String,System.Collections.Generic.List{System.String},Action{System.Collections.Generic.List{System.Collections.Generic.List{System.Single}}},Action{NPCEngine.NPCEngineException})
   parent: NPCEngine.API.Classification
   langs:
   - csharp
   - vb
-  name: Classify(String, List<String>, Action<List<List<Single>>>)
-  nameWithType: Classification.Classify(String, List<String>, Action<List<List<Single>>>)
-  fullName: NPCEngine.API.Classification.Classify(System.String, System.Collections.Generic.List<System.String>, System.Action<System.Collections.Generic.List<System.Collections.Generic.List<System.Single>>>)
+  name: Classify(String, List<String>, Action<List<List<Single>>>, Action<NPCEngineException>)
+  nameWithType: Classification.Classify(String, List<String>, Action<List<List<Single>>>, Action<NPCEngineException>)
+  fullName: NPCEngine.API.Classification.Classify(System.String, System.Collections.Generic.List<System.String>, Action<System.Collections.Generic.List<System.Collections.Generic.List<System.Single>>>, Action<NPCEngine.NPCEngineException>)
   type: Method
   source:
     id: Classify
     path: ''
-    startLine: 459
+    startLine: 660
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
   syntax:
-    content: public IEnumerator Classify(string query, List<string> context, Action<List<List<float>>> outputCallback)
+    content: public IEnumerator Classify(string query, List<string> context, Action<List<List<float>>> outputCallback = null, Action<NPCEngineException> errorCallback = null)
     parameters:
     - id: query
       type: System.String
     - id: context
       type: System.Collections.Generic.List{System.String}
     - id: outputCallback
-      type: System.Action{System.Collections.Generic.List{System.Collections.Generic.List{System.Single}}}
+      type: Global.Action{System.Collections.Generic.List{System.Collections.Generic.List{System.Single}}}
+    - id: errorCallback
+      type: Global.Action{NPCEngine.NPCEngineException}
     return:
       type: System.Collections.IEnumerator
-    content.vb: Public Function Classify(query As String, context As List(Of String), outputCallback As Action(Of List(Of List(Of Single)))) As IEnumerator
+    content.vb: Public Function Classify(query As String, context As List(Of String), outputCallback As Action(Of List(Of List(Of Single))) = Nothing, errorCallback As Action(Of NPCEngineException) = Nothing) As IEnumerator
   overload: NPCEngine.API.Classification.Classify*
-  nameWithType.vb: Classification.Classify(String, List(Of String), Action(Of List(Of List(Of Single))))
+  nameWithType.vb: Classification.Classify(String, List(Of String), Action(Of List(Of List(Of Single))), Action(Of NPCEngineException))
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: NPCEngine.API.Classification.Classify(System.String, System.Collections.Generic.List(Of System.String), System.Action(Of System.Collections.Generic.List(Of System.Collections.Generic.List(Of System.Single))))
-  name.vb: Classify(String, List(Of String), Action(Of List(Of List(Of Single))))
+  fullName.vb: NPCEngine.API.Classification.Classify(System.String, System.Collections.Generic.List(Of System.String), Action(Of System.Collections.Generic.List(Of System.Collections.Generic.List(Of System.Single))), Action(Of NPCEngine.NPCEngineException))
+  name.vb: Classify(String, List(Of String), Action(Of List(Of List(Of Single))), Action(Of NPCEngineException))
 references:
 - uid: NPCEngine.API
   commentId: N:NPCEngine.API
@@ -148,21 +151,20 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Action{System.Collections.Generic.List{System.Collections.Generic.List{System.Single}}}
-  commentId: T:System.Action{System.Collections.Generic.List{System.Collections.Generic.List{System.Single}}}
-  parent: System
-  definition: System.Action`1
+- uid: Global.Action{System.Collections.Generic.List{System.Collections.Generic.List{System.Single}}}
+  commentId: '!:Global.Action{System.Collections.Generic.List{System.Collections.Generic.List{System.Single}}}'
+  definition: Global.Action`1
   name: Action<List<List<Single>>>
   nameWithType: Action<List<List<Single>>>
-  fullName: System.Action<System.Collections.Generic.List<System.Collections.Generic.List<System.Single>>>
+  fullName: Action<System.Collections.Generic.List<System.Collections.Generic.List<System.Single>>>
   nameWithType.vb: Action(Of List(Of List(Of Single)))
-  fullName.vb: System.Action(Of System.Collections.Generic.List(Of System.Collections.Generic.List(Of System.Single)))
+  fullName.vb: Action(Of System.Collections.Generic.List(Of System.Collections.Generic.List(Of System.Single)))
   name.vb: Action(Of List(Of List(Of Single)))
   spec.csharp:
-  - uid: System.Action`1
+  - uid: Global.Action`1
     name: Action
     nameWithType: Action
-    fullName: System.Action
+    fullName: Action
     isExternal: true
   - name: <
     nameWithType: <
@@ -198,10 +200,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Action`1
+  - uid: Global.Action`1
     name: Action
     nameWithType: Action
-    fullName: System.Action
+    fullName: Action
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -233,6 +235,47 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.Action{NPCEngine.NPCEngineException}
+  commentId: '!:Global.Action{NPCEngine.NPCEngineException}'
+  definition: Global.Action`1
+  name: Action<NPCEngineException>
+  nameWithType: Action<NPCEngineException>
+  fullName: Action<NPCEngine.NPCEngineException>
+  nameWithType.vb: Action(Of NPCEngineException)
+  fullName.vb: Action(Of NPCEngine.NPCEngineException)
+  name.vb: Action(Of NPCEngineException)
+  spec.csharp:
+  - uid: Global.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: NPCEngine.NPCEngineException
+    name: NPCEngineException
+    nameWithType: NPCEngineException
+    fullName: NPCEngine.NPCEngineException
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: NPCEngine.NPCEngineException
+    name: NPCEngineException
+    nameWithType: NPCEngineException
+    fullName: NPCEngine.NPCEngineException
   - name: )
     nameWithType: )
     fullName: )
@@ -288,42 +331,41 @@ references:
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
-- uid: System.Action`1
-  commentId: T:System.Action`1
+- uid: Global.Action`1
   isExternal: true
-  name: Action<T>
-  nameWithType: Action<T>
-  fullName: System.Action<T>
-  nameWithType.vb: Action(Of T)
-  fullName.vb: System.Action(Of T)
-  name.vb: Action(Of T)
+  name: Action<>
+  nameWithType: Action<>
+  fullName: Action<>
+  nameWithType.vb: Action(Of )
+  fullName.vb: Action(Of )
+  name.vb: Action(Of )
   spec.csharp:
-  - uid: System.Action`1
+  - uid: Global.Action`1
     name: Action
     nameWithType: Action
-    fullName: System.Action
+    fullName: Action
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: T
-    nameWithType: T
-    fullName: T
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Action`1
+  - uid: Global.Action`1
     name: Action
     nameWithType: Action
-    fullName: System.Action
+    fullName: Action
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: T
-    nameWithType: T
-    fullName: T
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: )
     nameWithType: )
     fullName: )

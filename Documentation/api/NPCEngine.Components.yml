@@ -18,6 +18,7 @@ items:
   - NPCEngine.Components.NPCEngineManager
   - NPCEngine.Components.NPCEngineSTT
   - NPCEngine.Components.PlayerCharacter
+  - NPCEngine.Components.TTSGenerator
   langs:
   - csharp
   - vb
@@ -88,6 +89,11 @@ references:
   name: PlayerCharacter
   nameWithType: PlayerCharacter
   fullName: NPCEngine.Components.PlayerCharacter
+- uid: NPCEngine.Components.TTSGenerator
+  commentId: T:NPCEngine.Components.TTSGenerator
+  name: TTSGenerator
+  nameWithType: TTSGenerator
+  fullName: NPCEngine.Components.TTSGenerator
 - uid: NPCEngine.Components.FantasyChatbotContext
   commentId: T:NPCEngine.Components.FantasyChatbotContext
   name: FantasyChatbotContext

@@ -20,7 +20,7 @@ items:
   source:
     id: RPCRequestMessage
     path: ''
-    startLine: 4259
+    startLine: 4539
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC
@@ -28,23 +28,15 @@ items:
   example: []
   syntax:
     content: >-
-      [Serializable]
-
       public class RPCRequestMessage<ParametersType>
+
           where ParametersType : new()
     typeParameters:
     - id: ParametersType
       description: ''
-    content.vb: >-
-      <Serializable>
-
-      Public Class RPCRequestMessage(Of ParametersType As New)
+    content.vb: Public Class RPCRequestMessage(Of ParametersType As New)
   inheritance:
   - System.Object
-  attributes:
-  - type: System.SerializableAttribute
-    ctor: System.SerializableAttribute.#ctor
-    arguments: []
   nameWithType.vb: RPCRequestMessage(Of ParametersType)
   modifiers.csharp:
   - public
@@ -68,7 +60,7 @@ items:
   source:
     id: id
     path: ''
-    startLine: 4263
+    startLine: 4543
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC
@@ -97,14 +89,14 @@ items:
   source:
     id: jsonrpc
     path: ''
-    startLine: 4264
+    startLine: 4544
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC
   syntax:
-    content: public string jsonrpc
+    content: public String jsonrpc
     return:
-      type: System.String
+      type: Global.String
     content.vb: Public jsonrpc As String
   nameWithType.vb: RPCRequestMessage(Of ParametersType).jsonrpc
   modifiers.csharp:
@@ -126,14 +118,14 @@ items:
   source:
     id: method
     path: ''
-    startLine: 4265
+    startLine: 4545
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC
   syntax:
-    content: public string method
+    content: public String method
     return:
-      type: System.String
+      type: Global.String
     content.vb: Public method As String
   nameWithType.vb: RPCRequestMessage(Of ParametersType).method
   modifiers.csharp:
@@ -155,7 +147,7 @@ items:
   source:
     id: parameters
     path: ''
-    startLine: 4268
+    startLine: 4548
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC
@@ -184,7 +176,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 4270
+    startLine: 4550
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC
@@ -224,13 +216,11 @@ references:
   name: Int32
   nameWithType: Int32
   fullName: System.Int32
-- uid: System.String
-  commentId: T:System.String
-  parent: System
+- uid: Global.String
   isExternal: true
   name: String
   nameWithType: String
-  fullName: System.String
+  fullName: String
 - uid: '{ParametersType}'
   commentId: '!:ParametersType'
   definition: ParametersType

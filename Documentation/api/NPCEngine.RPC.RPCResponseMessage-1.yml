@@ -20,29 +20,19 @@ items:
   source:
     id: RPCResponseMessage
     path: ''
-    startLine: 4282
+    startLine: 4562
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC
   summary: "\nJSON RPC response message.\n"
   example: []
   syntax:
-    content: >-
-      [Serializable]
-
-      public class RPCResponseMessage<ReturnType>
+    content: public class RPCResponseMessage<ReturnType>
     typeParameters:
     - id: ReturnType
-    content.vb: >-
-      <Serializable>
-
-      Public Class RPCResponseMessage(Of ReturnType)
+    content.vb: Public Class RPCResponseMessage(Of ReturnType)
   inheritance:
   - System.Object
-  attributes:
-  - type: System.SerializableAttribute
-    ctor: System.SerializableAttribute.#ctor
-    arguments: []
   nameWithType.vb: RPCResponseMessage(Of ReturnType)
   modifiers.csharp:
   - public
@@ -66,7 +56,7 @@ items:
   source:
     id: id
     path: ''
-    startLine: 4285
+    startLine: 4565
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC
@@ -95,14 +85,14 @@ items:
   source:
     id: jsonrpc
     path: ''
-    startLine: 4286
+    startLine: 4566
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC
   syntax:
-    content: public string jsonrpc
+    content: public String jsonrpc
     return:
-      type: System.String
+      type: Global.String
     content.vb: Public jsonrpc As String
   nameWithType.vb: RPCResponseMessage(Of ReturnType).jsonrpc
   modifiers.csharp:
@@ -124,7 +114,7 @@ items:
   source:
     id: result
     path: ''
-    startLine: 4288
+    startLine: 4568
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC
@@ -153,7 +143,7 @@ items:
   source:
     id: error
     path: ''
-    startLine: 4290
+    startLine: 4570
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC
@@ -182,7 +172,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 4292
+    startLine: 4572
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC
@@ -222,13 +212,11 @@ references:
   name: Int32
   nameWithType: Int32
   fullName: System.Int32
-- uid: System.String
-  commentId: T:System.String
-  parent: System
+- uid: Global.String
   isExternal: true
   name: String
   nameWithType: String
-  fullName: System.String
+  fullName: String
 - uid: '{ReturnType}'
   commentId: '!:ReturnType'
   definition: ReturnType
@@ -236,6 +224,7 @@ references:
   nameWithType: ReturnType
   fullName: ReturnType
 - uid: ReturnType
+  commentId: '!:ReturnType'
   name: ReturnType
   nameWithType: ReturnType
   fullName: ReturnType

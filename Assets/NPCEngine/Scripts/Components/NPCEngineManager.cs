@@ -30,6 +30,10 @@ namespace NPCEngine.Components
         {
             get
             {
+                if (services == null)
+                {
+                    services = new List<ServiceMetadata>();
+                }
                 return services;
             }
         }
@@ -65,6 +69,10 @@ namespace NPCEngine.Components
         {
             get
             {
+                if (serviceStatuses == null || serviceStatuses.Count != Services.Count)
+                {
+                    serviceStatuses = new List<ServiceStatus>();
+                }
                 Dictionary<string, ServiceStatus> serviceStatusesDictionary = new Dictionary<string, ServiceStatus>();
                 int i = 0;
                 foreach (ServiceStatus serviceStatus in serviceStatuses)
@@ -76,22 +84,26 @@ namespace NPCEngine.Components
             }
         }
 
-        [SerializeField]
-        [HideInInspector]
-        private int inferenceEngineProcessId;
+        private int inferenceEngineProcessId = -1;
 
         protected int InferenceEngineProcessId
         {
             get
             {
+                #if UNITY_EDITOR
+                if (inferenceEngineProcessId == -1)
+                {
+                    inferenceEngineProcessId = EditorPrefs.GetInt("NPCEngine.InferenceEngineProcessId");
+                }
+                #endif
                 return inferenceEngineProcessId;
             }
             set
             {
                 inferenceEngineProcessId = value;
-#if UNITY_EDITOR
-                EditorUtility.SetDirty(this);
-#endif
+                #if UNITY_EDITOR
+                EditorPrefs.SetInt("NPCEngine.InferenceEngineProcessId", inferenceEngineProcessId);
+                #endif
             }
         }
 
@@ -101,11 +113,11 @@ namespace NPCEngine.Components
         {
             get
             {
-                if (inferenceEngineProcessId != -1 && inferenceEngineProcess == null)
+                if (InferenceEngineProcessId != -1 && inferenceEngineProcess == null)
                 {
                     try
                     {
-                        inferenceEngineProcess = Process.GetProcessById(inferenceEngineProcessId);
+                        inferenceEngineProcess = Process.GetProcessById(InferenceEngineProcessId);
                     }
                     catch (ArgumentException)
                     {
@@ -115,6 +127,7 @@ namespace NPCEngine.Components
                 return (inferenceEngineProcess != null && !inferenceEngineProcess.HasExited);
             }
         }
+
 
         /// <summary>
         /// Starts the inference engine server and managing coroutines.
@@ -164,20 +177,42 @@ namespace NPCEngine.Components
 
                 CoroutineUtility.StartCoroutine(InferenceEngineHealthCheck(), this, "ManagerHealthCheckCoroutine");
 
-                foreach (var service in NPCEngineConfig.Instance.services)
-                {
-                    if (service.start)
-                    {
-                        CoroutineUtility.StartCoroutine(GetAPI<Control>().StartService(service.name), this, "ManagerStartServiceCoroutine_" + service.name);
-                    }
-                }
+                CoroutineUtility.StartCoroutine(StartServices(), this, "StartServicesCoroutine");
             }
             else
             {
                 UnityEngine.Debug.LogWarning("Trying to start InferenceEngine that is already running");
             }
-            CoroutineUtility.StartCoroutine(UpdateServiceStatuses(), this, "UpdateServiceStatuses");
-            CoroutineUtility.StartCoroutine(UpdateServices(), this, "UpdateServices");
+
+            if(!CoroutineUtility.IsRunning(this, "UpdateServiceStatuses"))
+                CoroutineUtility.StartCoroutine(UpdateServiceStatuses(), this, "UpdateServiceStatuses");
+            if(!CoroutineUtility.IsRunning(this, "UpdateServices"))
+                CoroutineUtility.StartCoroutine(UpdateServices(), this, "UpdateServices");
+            if(!CoroutineUtility.IsRunning(this, "StartAndMonitorServerLife"))
+                CoroutineUtility.StartCoroutine(StartAndMonitorServerLife(), this, "StartAndMonitorServerLife");
+        }
+
+        private IEnumerator StartServices()
+        {
+            bool all_started = false;
+            while (!all_started)
+            {
+                all_started = true;
+                foreach (var service in NPCEngineConfig.Instance.services)
+                {
+                    if (service.start)
+                    {
+                        ServiceStatus status = ServiceStatus.UNKNOWN;
+                        yield return GetAPI<Control>().GetServiceStatus(service.name, (x) => { status = x; });
+                        if (status != ServiceStatus.RUNNING || status != ServiceStatus.STARTING)
+                        {
+                            yield return GetAPI<Control>().StartService(service.name);
+                            all_started = false;
+                        }
+                    }
+                }
+                yield return new WaitForSeconds(1);
+            }
         }
 
         /// <summary>
@@ -205,22 +240,22 @@ namespace NPCEngine.Components
         /// </summary>
         public void StopInferenceEngine()
         {
+            CoroutineUtility.StartCoroutine(StopInferenceEngineCoroutine(), this, "StopInferenceEngineCoroutine");
+
+            CoroutineUtility.StopCoroutine("StartAndMonitorServerLife", this);
             CoroutineUtility.StopCoroutine("UpdateServiceStatuses", this);
             CoroutineUtility.StopCoroutine("UpdateServices", this);
-            serviceStatuses = null;
-            services = null;
-            foreach (var service in NPCEngineConfig.Instance.services)
-            {
-                GetAPI<Control>().StopServiceNoConfirm(service.name);
-            }
-            CoroutineUtility.StartCoroutine(StopInferenceEngineCoroutine(), this, "StopInferenceEngineCoroutine");
             CoroutineUtility.StopCoroutine("ManagerHealthCheckCoroutine", this);
+            
         }
 
         private IEnumerator StopInferenceEngineCoroutine()
         {
             
-            yield return CoroutineUtility.WaitForSeconds(1f);
+            foreach (var service in NPCEngineConfig.Instance.services)
+            {
+                yield return GetAPI<Control>().StopService(service.name);
+            }
 
             try
             {
@@ -228,6 +263,7 @@ namespace NPCEngine.Components
                 {
                     inferenceEngineProcess.CloseMainWindow();
                     inferenceEngineProcess.WaitForExit();
+                    inferenceEngineProcess.Kill();
                     inferenceEngineProcess.Dispose();
                 }
                 else
@@ -255,11 +291,11 @@ namespace NPCEngine.Components
             {
                 try
                 {
-                    var proc = Process.GetProcessById(inferenceEngineProcessId);
+                    var proc = Process.GetProcessById(InferenceEngineProcessId);
                 }
                 catch (ArgumentException e)
                 {
-                    UnityEngine.Debug.LogFormat("InferenceEngine process {0} is not running: {1}", inferenceEngineProcessId, e.Message);
+                    UnityEngine.Debug.LogFormat("InferenceEngine process {0} is not running: {1}", InferenceEngineProcessId, e.Message);
 
                     UnityEngine.Debug.LogError("Fatal error: Dialog InferenceEngine unresponsive");
                     InferenceEngineProcessId = -1;
@@ -272,19 +308,21 @@ namespace NPCEngine.Components
             yield return null;
         }
 
+
+        private void Awake() {
+            if(Application.isPlaying)
+            {
+                DontDestroyOnLoad(gameObject);
+            }
+        }
+
         private void Start()
         {
-            CoroutineUtility.StartCoroutine(StartAndMonitorServerLife(), this, "StartAndMonitorServerLife");
         }
 
         void OnEnable()
         {
-            if(!CoroutineUtility.IsRunning(this, "UpdateServiceStatuses"))
-                CoroutineUtility.StartCoroutine(UpdateServiceStatuses(), this, "UpdateServiceStatuses");
-            if(!CoroutineUtility.IsRunning(this, "UpdateServices"))
-                CoroutineUtility.StartCoroutine(UpdateServices(), this, "UpdateServices");
-            if(!CoroutineUtility.IsRunning(this, "StartAndMonitorServerLife"))
-                CoroutineUtility.StartCoroutine(StartAndMonitorServerLife(), this, "StartAndMonitorServerLife");
+            StartInferenceEngine();
         }
 
         /// <summary>
@@ -328,6 +366,7 @@ namespace NPCEngine.Components
         /// </summary>
         public IEnumerator StartAndMonitorServerLife()
         {
+            yield return CoroutineUtility.WaitForSeconds(1f);
             while (true)
             {
                 if (!InferenceEngineRunning)
@@ -394,11 +433,6 @@ namespace NPCEngine.Components
                 });
                 yield return CoroutineUtility.WaitForSeconds(4f);
             }
-        }
-
-        void OnDestroy()
-        {
-            StopInferenceEngine();
         }
     }
 }

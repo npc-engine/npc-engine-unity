@@ -5,8 +5,9 @@ items:
   id: RPCBase
   parent: NPCEngine.RPC
   children:
-  - NPCEngine.RPC.RPCBase.Run``2(System.String,``0)
+  - NPCEngine.RPC.RPCBase.Run``2(String,``0,Action{``1},Action{NPCEngine.NPCEngineException})
   - NPCEngine.RPC.RPCBase.serviceId
+  - NPCEngine.RPC.RPCBase.UpdateServerType
   langs:
   - csharp
   - vb
@@ -17,7 +18,7 @@ items:
   source:
     id: RPCBase
     path: ''
-    startLine: 3899
+    startLine: 4216
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC
@@ -25,6 +26,7 @@ items:
     content: 'public abstract class RPCBase : MonoBehaviour'
     content.vb: >-
       Public MustInherit Class RPCBase
+
           Inherits MonoBehaviour
   inheritance:
   - System.Object
@@ -50,7 +52,7 @@ items:
   source:
     id: serviceId
     path: ''
-    startLine: 3906
+    startLine: 4223
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC
@@ -63,47 +65,78 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: NPCEngine.RPC.RPCBase.Run``2(System.String,``0)
-  commentId: M:NPCEngine.RPC.RPCBase.Run``2(System.String,``0)
-  id: Run``2(System.String,``0)
+- uid: NPCEngine.RPC.RPCBase.Run``2(String,``0,Action{``1},Action{NPCEngine.NPCEngineException})
+  commentId: M:NPCEngine.RPC.RPCBase.Run``2(String,``0,Action{``1},Action{NPCEngine.NPCEngineException})
+  id: Run``2(String,``0,Action{``1},Action{NPCEngine.NPCEngineException})
   parent: NPCEngine.RPC.RPCBase
   langs:
   - csharp
   - vb
-  name: Run<P, R>(String, P)
-  nameWithType: RPCBase.Run<P, R>(String, P)
-  fullName: NPCEngine.RPC.RPCBase.Run<P, R>(System.String, P)
+  name: Run<P, R>(String, P, Action<R>, Action<NPCEngineException>)
+  nameWithType: RPCBase.Run<P, R>(String, P, Action<R>, Action<NPCEngineException>)
+  fullName: NPCEngine.RPC.RPCBase.Run<P, R>(String, P, Action<R>, Action<NPCEngine.NPCEngineException>)
   type: Method
   source:
     id: Run
     path: ''
-    startLine: 3912
+    startLine: 4228
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC
   syntax:
     content: >-
-      public ResultFuture<R> Run<P, R>(string methodName, P parameters)
+      public IEnumerator Run<P, R>(String methodName, P parameters, Action<R> resultCallback, Action<NPCEngineException> errorCallback)
+
           where P : new()
     parameters:
     - id: methodName
-      type: System.String
+      type: Global.String
     - id: parameters
       type: '{P}'
+    - id: resultCallback
+      type: Global.Action{{R}}
+    - id: errorCallback
+      type: Global.Action{NPCEngine.NPCEngineException}
     typeParameters:
     - id: P
     - id: R
     return:
-      type: NPCEngine.ResultFuture{{R}}
-    content.vb: Public Function Run(Of P As New, R)(methodName As String, parameters As P) As ResultFuture(Of R)
+      type: System.Collections.IEnumerator
+    content.vb: Public Function Run(Of P As New, R)(methodName As String, parameters As P, resultCallback As Action(Of R), errorCallback As Action(Of NPCEngineException)) As IEnumerator
   overload: NPCEngine.RPC.RPCBase.Run*
-  nameWithType.vb: RPCBase.Run(Of P, R)(String, P)
+  nameWithType.vb: RPCBase.Run(Of P, R)(String, P, Action(Of R), Action(Of NPCEngineException))
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: NPCEngine.RPC.RPCBase.Run(Of P, R)(System.String, P)
-  name.vb: Run(Of P, R)(String, P)
+  fullName.vb: NPCEngine.RPC.RPCBase.Run(Of P, R)(String, P, Action(Of R), Action(Of NPCEngine.NPCEngineException))
+  name.vb: Run(Of P, R)(String, P, Action(Of R), Action(Of NPCEngineException))
+- uid: NPCEngine.RPC.RPCBase.UpdateServerType
+  commentId: M:NPCEngine.RPC.RPCBase.UpdateServerType
+  id: UpdateServerType
+  parent: NPCEngine.RPC.RPCBase
+  langs:
+  - csharp
+  - vb
+  name: UpdateServerType()
+  nameWithType: RPCBase.UpdateServerType()
+  fullName: NPCEngine.RPC.RPCBase.UpdateServerType()
+  type: Method
+  source:
+    id: UpdateServerType
+    path: ''
+    startLine: 4330
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.RPC
+  syntax:
+    content: public void UpdateServerType()
+    content.vb: Public Sub UpdateServerType
+  overload: NPCEngine.RPC.RPCBase.UpdateServerType*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 references:
 - uid: NPCEngine.RPC
   commentId: N:NPCEngine.RPC
@@ -135,27 +168,32 @@ references:
   name: Run
   nameWithType: RPCBase.Run
   fullName: NPCEngine.RPC.RPCBase.Run
+- uid: Global.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: String
 - uid: '{P}'
   commentId: '!:P'
   definition: P
   name: P
   nameWithType: P
   fullName: P
-- uid: NPCEngine.ResultFuture{{R}}
-  commentId: T:NPCEngine.ResultFuture{``1}
-  parent: NPCEngine
-  definition: NPCEngine.ResultFuture`1
-  name: ResultFuture<R>
-  nameWithType: ResultFuture<R>
-  fullName: NPCEngine.ResultFuture<R>
-  nameWithType.vb: ResultFuture(Of R)
-  fullName.vb: NPCEngine.ResultFuture(Of R)
-  name.vb: ResultFuture(Of R)
+- uid: Global.Action{{R}}
+  commentId: '!:Global.Action{``1}'
+  definition: Global.Action`1
+  name: Action<R>
+  nameWithType: Action<R>
+  fullName: Action<R>
+  nameWithType.vb: Action(Of R)
+  fullName.vb: Action(Of R)
+  name.vb: Action(Of R)
   spec.csharp:
-  - uid: NPCEngine.ResultFuture`1
-    name: ResultFuture
-    nameWithType: ResultFuture
-    fullName: NPCEngine.ResultFuture
+  - uid: Global.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: Action
+    isExternal: true
   - name: <
     nameWithType: <
     fullName: <
@@ -166,10 +204,11 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: NPCEngine.ResultFuture`1
-    name: ResultFuture
-    nameWithType: ResultFuture
-    fullName: NPCEngine.ResultFuture
+  - uid: Global.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: Action
+    isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
@@ -179,49 +218,105 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: Global.Action{NPCEngine.NPCEngineException}
+  commentId: '!:Global.Action{NPCEngine.NPCEngineException}'
+  definition: Global.Action`1
+  name: Action<NPCEngineException>
+  nameWithType: Action<NPCEngineException>
+  fullName: Action<NPCEngine.NPCEngineException>
+  nameWithType.vb: Action(Of NPCEngineException)
+  fullName.vb: Action(Of NPCEngine.NPCEngineException)
+  name.vb: Action(Of NPCEngineException)
+  spec.csharp:
+  - uid: Global.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: NPCEngine.NPCEngineException
+    name: NPCEngineException
+    nameWithType: NPCEngineException
+    fullName: NPCEngine.NPCEngineException
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: NPCEngine.NPCEngineException
+    name: NPCEngineException
+    nameWithType: NPCEngineException
+    fullName: NPCEngine.NPCEngineException
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.IEnumerator
+  commentId: T:System.Collections.IEnumerator
+  parent: System.Collections
+  isExternal: true
+  name: IEnumerator
+  nameWithType: IEnumerator
+  fullName: System.Collections.IEnumerator
 - uid: P
   commentId: '!:P'
   name: P
   nameWithType: P
   fullName: P
-- uid: NPCEngine.ResultFuture`1
-  commentId: T:NPCEngine.ResultFuture`1
-  name: ResultFuture<ReturnType>
-  nameWithType: ResultFuture<ReturnType>
-  fullName: NPCEngine.ResultFuture<ReturnType>
-  nameWithType.vb: ResultFuture(Of ReturnType)
-  fullName.vb: NPCEngine.ResultFuture(Of ReturnType)
-  name.vb: ResultFuture(Of ReturnType)
+- uid: Global.Action`1
+  isExternal: true
+  name: Action<>
+  nameWithType: Action<>
+  fullName: Action<>
+  nameWithType.vb: Action(Of )
+  fullName.vb: Action(Of )
+  name.vb: Action(Of )
   spec.csharp:
-  - uid: NPCEngine.ResultFuture`1
-    name: ResultFuture
-    nameWithType: ResultFuture
-    fullName: NPCEngine.ResultFuture
+  - uid: Global.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: Action
+    isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: ReturnType
-    nameWithType: ReturnType
-    fullName: ReturnType
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: NPCEngine.ResultFuture`1
-    name: ResultFuture
-    nameWithType: ResultFuture
-    fullName: NPCEngine.ResultFuture
+  - uid: Global.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: Action
+    isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: ReturnType
-    nameWithType: ReturnType
-    fullName: ReturnType
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: )
     nameWithType: )
     fullName: )
-- uid: NPCEngine
-  commentId: N:NPCEngine
-  name: NPCEngine
-  nameWithType: NPCEngine
-  fullName: NPCEngine
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections
+- uid: NPCEngine.RPC.RPCBase.UpdateServerType*
+  commentId: Overload:NPCEngine.RPC.RPCBase.UpdateServerType
+  name: UpdateServerType
+  nameWithType: RPCBase.UpdateServerType
+  fullName: NPCEngine.RPC.RPCBase.UpdateServerType

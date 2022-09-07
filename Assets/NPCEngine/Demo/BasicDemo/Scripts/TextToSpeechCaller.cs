@@ -15,49 +15,32 @@ public class TextToSpeechCaller : MonoBehaviour
 
     public InputField text;
     public InputField speakerId;
-    public Text availableSpeakerIds;
     public InputField nChunks;
-
-    private ResultFuture<List<string>> speakerIdsResult;
-    private ResultFuture<List<float>> textToSpeechResult;
 
     // Start is called before the first frame update
     void OnEnable()
     {
-        speakerIdsResult = NPCEngineManager.Instance.GetAPI<TextToSpeech>().GetSpeakerIdsFuture();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-        if (speakerIdsResult != null && speakerIdsResult.ResultReady)
+        StartCoroutine(NPCEngineManager.Instance.GetAPI<TextToSpeech>().GetSpeakerIds((result) =>
         {
-            var speakerIds = String.Join(", ", speakerIdsResult.Result.ToArray());
-            availableSpeakerIds.text += " " + speakerIds;
-            speakerIdsResult = null;
-        }
-
-        if (textToSpeechResult != null && textToSpeechResult.ResultReady)
-        {
-            try
-            {
-                var result = textToSpeechResult.Result;
-                var clip = AudioClip.Create("tmp", result.Count, 1, 22050, false);
-                clip.SetData(result.ToArray(), 0);
-                audioQueue.PlaySound(clip);
-                textToSpeechResult = NPCEngineManager.Instance.GetAPI<TextToSpeech>().GetNextResultFuture();
-            }
-            catch (NPCEngineException)
-            {
-                textToSpeechResult = null;
-            }
-        }
+            var speakerIds = String.Join(", ", result.ToArray());
+        }));
     }
 
     public void RunTextToSpeech()
     {
-        NPCEngineManager.Instance.GetAPI<TextToSpeech>().StartTTSFuture(speakerId.text, text.text, Int32.Parse(nChunks.text));
-        textToSpeechResult = NPCEngineManager.Instance.GetAPI<TextToSpeech>().GetNextResultFuture();
+        StartCoroutine(NPCEngineManager.Instance.GetAPI<TextToSpeech>().StartTTS(speakerId.text, text.text, Int32.Parse(nChunks.text), () => { 
+            PlaySoundAndStartNext();
+        }));
+    }
+
+    public void PlaySoundAndStartNext()
+    {
+        StartCoroutine(NPCEngineManager.Instance.GetAPI<TextToSpeech>().GetNextResult((result) =>
+        {
+            var clip = AudioClip.Create("tmp", result.Count, 1, 22050, false);
+            clip.SetData(result.ToArray(), 0);
+            audioQueue.PlaySound(clip);
+            PlaySoundAndStartNext();
+        }));
     }
 }

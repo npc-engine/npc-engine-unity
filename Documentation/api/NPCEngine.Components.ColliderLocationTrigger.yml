@@ -17,7 +17,7 @@ items:
   source:
     id: ColliderLocationTrigger
     path: ''
-    startLine: 1350
+    startLine: 1386
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -27,6 +27,7 @@ items:
     content: 'public class ColliderLocationTrigger : MonoBehaviour'
     content.vb: >-
       Public Class ColliderLocationTrigger
+
           Inherits MonoBehaviour
   inheritance:
   - System.Object
@@ -50,7 +51,7 @@ items:
   source:
     id: location
     path: ''
-    startLine: 1356
+    startLine: 1392
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -79,7 +80,7 @@ items:
   source:
     id: locationCollider
     path: ''
-    startLine: 1361
+    startLine: 1397
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components

@@ -22,7 +22,7 @@ items:
   source:
     id: ServiceStatus
     path: ''
-    startLine: 530
+    startLine: 726
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -51,7 +51,7 @@ items:
   source:
     id: UNKNOWN
     path: ''
-    startLine: 532
+    startLine: 728
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -79,7 +79,7 @@ items:
   source:
     id: STARTING
     path: ''
-    startLine: 533
+    startLine: 729
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -107,7 +107,7 @@ items:
   source:
     id: RUNNING
     path: ''
-    startLine: 534
+    startLine: 730
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -135,7 +135,7 @@ items:
   source:
     id: STOPPED
     path: ''
-    startLine: 535
+    startLine: 731
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -163,7 +163,7 @@ items:
   source:
     id: AWAITING
     path: ''
-    startLine: 536
+    startLine: 732
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -191,7 +191,7 @@ items:
   source:
     id: TIMEOUT
     path: ''
-    startLine: 537
+    startLine: 733
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -219,7 +219,7 @@ items:
   source:
     id: ERROR
     path: ''
-    startLine: 538
+    startLine: 734
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API

@@ -2825,6 +2825,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21b41f7dbbfb6694f8ff2750909bf519, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxLines: 10
   defaultThreshold: 0.87
   character: {fileID: 11400000, guid: 4b43d847cf921e5459421bf917490cbb, type: 2}
   history: []
@@ -3942,6 +3943,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21b41f7dbbfb6694f8ff2750909bf519, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxLines: 10
   defaultThreshold: 0.87
   character: {fileID: 11400000, guid: a927f41f844df5e48b8001d70a61efc9, type: 2}
   history: []
@@ -5470,6 +5472,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21b41f7dbbfb6694f8ff2750909bf519, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxLines: 10
   defaultThreshold: 0.87
   character: {fileID: 11400000, guid: c81071cedf2b1e443bf29325ef28c630, type: 2}
   history: []
@@ -16675,6 +16678,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21b41f7dbbfb6694f8ff2750909bf519, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxLines: 10
   defaultThreshold: 0.87
   character: {fileID: 11400000, guid: 745a07649277b644caa66d17eaade8bc, type: 2}
   history: []
@@ -18010,6 +18014,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1480138458, guid: 649bd79ce63a6e9449715449439999df, type: 3}
+      propertyPath: debugLogs
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1480138458, guid: 649bd79ce63a6e9449715449439999df, type: 3}
+      propertyPath: serverConsole
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1480138458, guid: 649bd79ce63a6e9449715449439999df, type: 3}
+      propertyPath: services.Array.data[1].type
+      value: FlowtronTTS
+      objectReference: {fileID: 0}
     - target: {fileID: 826819703477927490, guid: 649bd79ce63a6e9449715449439999df, type: 3}
       propertyPath: m_Name
       value: NPCEngineManager
@@ -18885,6 +18901,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21b41f7dbbfb6694f8ff2750909bf519, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxLines: 10
   defaultThreshold: 0.87
   character: {fileID: 11400000, guid: e84153344d993674f9aebdf76b2bee03, type: 2}
   history: []
@@ -20073,6 +20090,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21b41f7dbbfb6694f8ff2750909bf519, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxLines: 10
   defaultThreshold: 0.87
   character: {fileID: 11400000, guid: 3eed93491ea63254b9058b384e0be5d4, type: 2}
   history: []
@@ -20568,6 +20586,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21b41f7dbbfb6694f8ff2750909bf519, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxLines: 10
   defaultThreshold: 0.87
   character: {fileID: 11400000, guid: 41bd9c791edf3514c894875cad46693c, type: 2}
   history: []

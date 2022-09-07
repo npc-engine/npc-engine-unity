@@ -1,9 +1,9 @@
+using System;
 using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using NPCEngine.RPC;
 using NPCEngine.API;
 using NPCEngine.Utility;
 
@@ -14,6 +14,7 @@ namespace NPCEngine.Components
     public class NonPlayerCharacter : MonoBehaviour
     {
 
+        public int maxLines = 10;
         /// <summary>
         /// Default semantic similarity threshold for dialogue tree triggers.
         /// </summary>
@@ -164,6 +165,10 @@ namespace NPCEngine.Components
                 {
                     history.Add(new ChatLine { speaker = otherName, line = line });
 
+                    if(history.Count > maxLines)
+                    {
+                        history.RemoveAt(0);
+                    }
                     OnDialogueLine?.Invoke(new ChatLine { speaker = otherName, line = line }, false);
                     yield return HandlePlayerLineCoroutine(otherName, otherPersona, line);
                 }
@@ -228,10 +233,14 @@ namespace NPCEngine.Components
             };
             string reply = "";
             yield return NPCEngineManager.Instance.GetAPI<FantasyChatbotTextGeneration>()
-                .GenerateReply(context, (output) => { reply = output; }, NPCEngineConfig.Instance.temperature, NPCEngineConfig.Instance.topK);
+                .GenerateReply(context, character.temperature, character.topK, character.numSampled, (output) => { reply = output; }, (e)=> { Debug.LogError(e); });
 
             OnDialogueLine?.Invoke(new ChatLine { speaker = character.Name, line = reply }, false);
             history.Add(new ChatLine { speaker = character.Name, line = reply });
+            if(history.Count > maxLines)
+            {
+                history.RemoveAt(0);
+            }
             yield return GenerateAndPlaySpeech(reply);
         }
 
@@ -249,6 +258,10 @@ namespace NPCEngine.Components
                 lastLine = line;
                 var audio = dialogueSystem.CurrentNodeNPCAudio();
                 history.Add(new ChatLine { speaker = character.Name, line = line });
+                if(history.Count > maxLines)
+                {
+                    history.RemoveAt(0);
+                }
                 OnDialogueLine?.Invoke(new ChatLine { speaker = character.Name, line = line }, true);
                 if (audio != null)
                 {
@@ -257,6 +270,11 @@ namespace NPCEngine.Components
                 else
                 {
                     yield return GenerateAndPlaySpeech(line);
+                }
+                if(dialogueSystem.IsEnd())
+                {
+                    EndDialogue();
+                    break;
                 }
                 dialogueSystem.Next();
                 line = dialogueSystem.CurrentNodeNPCLine();
@@ -276,8 +294,14 @@ namespace NPCEngine.Components
             do
             {
                 audioData = new List<float>();
-                yield return NPCEngineManager.Instance.GetAPI<TextToSpeech>().GetNextResult((output) => { audioData = output; });
-
+                yield return NPCEngineManager.Instance.GetAPI<TextToSpeech>().GetNextResult(
+                    (output) => { audioData = output; },
+                    (e) => { if(e.Message.Contains("StopIteration")) return; else Debug.LogError(e); }   
+                );
+                if(audioData == null)
+                {
+                    break;
+                }
                 if (audioData.Count > 0)
                 {
                     var clip = AudioClip.Create("tmp", audioData.Count, 1, 22050, false);
@@ -310,7 +334,12 @@ namespace NPCEngine.Components
                         PlayerCharacter.Instance.RegisterDialogueCandidate(this);
                         active = true;
                     }
-                    else if (!inDialog && active && !PlayerCharacter.Instance.CheckIsSeen(audioSourceQueue.audioSource.transform.position))
+                    else if (
+                        !inDialog 
+                        && active 
+                        && !PlayerCharacter.Instance.CheckIsSeen(audioSourceQueue.audioSource.transform.position)
+                        && PlayerCharacter.Instance.IsRegistered(this) 
+                    )
                     {
                         PlayerCharacter.Instance.DeregisterDialogueCandidate(this);
                         active = false;

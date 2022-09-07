@@ -21,7 +21,7 @@ items:
   source:
     id: AbstractSpeechToText
     path: ''
-    startLine: 1271
+    startLine: 1287
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -31,6 +31,7 @@ items:
     content: 'public abstract class AbstractSpeechToText : MonoBehaviour'
     content.vb: >-
       Public MustInherit Class AbstractSpeechToText
+
           Inherits MonoBehaviour
   inheritance:
   - System.Object
@@ -59,7 +60,7 @@ items:
   source:
     id: Context
     path: ''
-    startLine: 1277
+    startLine: 1293
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -94,7 +95,7 @@ items:
   source:
     id: StartListening
     path: ''
-    startLine: 1294
+    startLine: 1310
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -124,7 +125,7 @@ items:
   source:
     id: StopListening
     path: ''
-    startLine: 1299
+    startLine: 1315
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -154,7 +155,7 @@ items:
   source:
     id: OnSpeechRecognized
     path: ''
-    startLine: 1304
+    startLine: 1320
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -163,7 +164,7 @@ items:
   syntax:
     content: public event Action<string> OnSpeechRecognized
     return:
-      type: System.Action{System.String}
+      type: Global.Action{System.String}
     content.vb: Public Event OnSpeechRecognized As Action(Of String)
   modifiers.csharp:
   - public
@@ -183,7 +184,7 @@ items:
   source:
     id: OnSpeechRecognitionFailed
     path: ''
-    startLine: 1308
+    startLine: 1324
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -192,7 +193,7 @@ items:
   syntax:
     content: public event Action<string> OnSpeechRecognitionFailed
     return:
-      type: System.Action{System.String}
+      type: Global.Action{System.String}
     content.vb: Public Event OnSpeechRecognitionFailed As Action(Of String)
   modifiers.csharp:
   - public
@@ -212,7 +213,7 @@ items:
   source:
     id: SpeechRecognized
     path: ''
-    startLine: 1311
+    startLine: 1327
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -268,21 +269,20 @@ references:
   name: StopListening
   nameWithType: AbstractSpeechToText.StopListening
   fullName: NPCEngine.Components.AbstractSpeechToText.StopListening
-- uid: System.Action{System.String}
-  commentId: T:System.Action{System.String}
-  parent: System
-  definition: System.Action`1
+- uid: Global.Action{System.String}
+  commentId: '!:Global.Action{System.String}'
+  definition: Global.Action`1
   name: Action<String>
   nameWithType: Action<String>
-  fullName: System.Action<System.String>
+  fullName: Action<System.String>
   nameWithType.vb: Action(Of String)
-  fullName.vb: System.Action(Of System.String)
+  fullName.vb: Action(Of System.String)
   name.vb: Action(Of String)
   spec.csharp:
-  - uid: System.Action`1
+  - uid: Global.Action`1
     name: Action
     nameWithType: Action
-    fullName: System.Action
+    fullName: Action
     isExternal: true
   - name: <
     nameWithType: <
@@ -296,10 +296,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Action`1
+  - uid: Global.Action`1
     name: Action
     nameWithType: Action
-    fullName: System.Action
+    fullName: Action
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -312,42 +312,41 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Action`1
-  commentId: T:System.Action`1
+- uid: Global.Action`1
   isExternal: true
-  name: Action<T>
-  nameWithType: Action<T>
-  fullName: System.Action<T>
-  nameWithType.vb: Action(Of T)
-  fullName.vb: System.Action(Of T)
-  name.vb: Action(Of T)
+  name: Action<>
+  nameWithType: Action<>
+  fullName: Action<>
+  nameWithType.vb: Action(Of )
+  fullName.vb: Action(Of )
+  name.vb: Action(Of )
   spec.csharp:
-  - uid: System.Action`1
+  - uid: Global.Action`1
     name: Action
     nameWithType: Action
-    fullName: System.Action
+    fullName: Action
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: T
-    nameWithType: T
-    fullName: T
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Action`1
+  - uid: Global.Action`1
     name: Action
     nameWithType: Action
-    fullName: System.Action
+    fullName: Action
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: T
-    nameWithType: T
-    fullName: T
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: )
     nameWithType: )
     fullName: )

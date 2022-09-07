@@ -17,25 +17,15 @@ items:
   source:
     id: ChatLine
     path: ''
-    startLine: 2633
+    startLine: 2853
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
   syntax:
-    content: >-
-      [Serializable]
-
-      public class ChatLine
-    content.vb: >-
-      <Serializable>
-
-      Public Class ChatLine
+    content: public class ChatLine
+    content.vb: Public Class ChatLine
   inheritance:
   - System.Object
-  attributes:
-  - type: System.SerializableAttribute
-    ctor: System.SerializableAttribute.#ctor
-    arguments: []
   modifiers.csharp:
   - public
   - class
@@ -56,7 +46,7 @@ items:
   source:
     id: speaker
     path: ''
-    startLine: 2636
+    startLine: 2856
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -83,7 +73,7 @@ items:
   source:
     id: line
     path: ''
-    startLine: 2637
+    startLine: 2857
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components

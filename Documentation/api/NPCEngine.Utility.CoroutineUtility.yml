@@ -7,6 +7,9 @@ items:
   children:
   - NPCEngine.Utility.CoroutineUtility.GetGameObjectPath(MonoBehaviour)
   - NPCEngine.Utility.CoroutineUtility.IsRunning(MonoBehaviour,System.String)
+  - NPCEngine.Utility.CoroutineUtility.PrintCoroutines
+  - NPCEngine.Utility.CoroutineUtility.PrintEditorCoroutines
+  - NPCEngine.Utility.CoroutineUtility.PrintRunningCoroutines
   - NPCEngine.Utility.CoroutineUtility.StartCoroutine(System.Collections.IEnumerator,MonoBehaviour,System.String)
   - NPCEngine.Utility.CoroutineUtility.StopAllEditorCoroutines
   - NPCEngine.Utility.CoroutineUtility.StopAllEditorCoroutines(MonoBehaviour)
@@ -23,7 +26,7 @@ items:
   source:
     id: CoroutineUtility
     path: ''
-    startLine: 4520
+    startLine: 4815
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Utility
@@ -33,6 +36,7 @@ items:
     content: 'public class CoroutineUtility : Singleton<CoroutineUtility>'
     content.vb: >-
       Public Class CoroutineUtility
+
           Inherits Singleton(Of CoroutineUtility)
   inheritance:
   - System.Object
@@ -60,7 +64,7 @@ items:
   source:
     id: IsRunning
     path: ''
-    startLine: 4571
+    startLine: 4866
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Utility
@@ -95,7 +99,7 @@ items:
   source:
     id: StartCoroutine
     path: ''
-    startLine: 4590
+    startLine: 4931
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Utility
@@ -130,7 +134,7 @@ items:
   source:
     id: StopCoroutine
     path: ''
-    startLine: 4656
+    startLine: 5012
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Utility
@@ -163,7 +167,7 @@ items:
   source:
     id: StopAllPlayingCoroutines
     path: ''
-    startLine: 4702
+    startLine: 5067
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Utility
@@ -194,7 +198,7 @@ items:
   source:
     id: StopAllEditorCoroutines
     path: ''
-    startLine: 4721
+    startLine: 5081
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Utility
@@ -222,7 +226,7 @@ items:
   source:
     id: StopAllEditorCoroutines
     path: ''
-    startLine: 4736
+    startLine: 5099
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Utility
@@ -253,7 +257,7 @@ items:
   source:
     id: WaitForSeconds
     path: ''
-    startLine: 4750
+    startLine: 5113
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Utility
@@ -286,7 +290,7 @@ items:
   source:
     id: GetGameObjectPath
     path: ''
-    startLine: 4762
+    startLine: 5127
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Utility
@@ -305,6 +309,84 @@ items:
   modifiers.vb:
   - Public
   - Shared
+- uid: NPCEngine.Utility.CoroutineUtility.PrintCoroutines
+  commentId: M:NPCEngine.Utility.CoroutineUtility.PrintCoroutines
+  id: PrintCoroutines
+  parent: NPCEngine.Utility.CoroutineUtility
+  langs:
+  - csharp
+  - vb
+  name: PrintCoroutines()
+  nameWithType: CoroutineUtility.PrintCoroutines()
+  fullName: NPCEngine.Utility.CoroutineUtility.PrintCoroutines()
+  type: Method
+  source:
+    id: PrintCoroutines
+    path: ''
+    startLine: 5140
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Utility
+  syntax:
+    content: public void PrintCoroutines()
+    content.vb: Public Sub PrintCoroutines
+  overload: NPCEngine.Utility.CoroutineUtility.PrintCoroutines*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.Utility.CoroutineUtility.PrintEditorCoroutines
+  commentId: M:NPCEngine.Utility.CoroutineUtility.PrintEditorCoroutines
+  id: PrintEditorCoroutines
+  parent: NPCEngine.Utility.CoroutineUtility
+  langs:
+  - csharp
+  - vb
+  name: PrintEditorCoroutines()
+  nameWithType: CoroutineUtility.PrintEditorCoroutines()
+  fullName: NPCEngine.Utility.CoroutineUtility.PrintEditorCoroutines()
+  type: Method
+  source:
+    id: PrintEditorCoroutines
+    path: ''
+    startLine: 5155
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Utility
+  syntax:
+    content: public void PrintEditorCoroutines()
+    content.vb: Public Sub PrintEditorCoroutines
+  overload: NPCEngine.Utility.CoroutineUtility.PrintEditorCoroutines*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.Utility.CoroutineUtility.PrintRunningCoroutines
+  commentId: M:NPCEngine.Utility.CoroutineUtility.PrintRunningCoroutines
+  id: PrintRunningCoroutines
+  parent: NPCEngine.Utility.CoroutineUtility
+  langs:
+  - csharp
+  - vb
+  name: PrintRunningCoroutines()
+  nameWithType: CoroutineUtility.PrintRunningCoroutines()
+  fullName: NPCEngine.Utility.CoroutineUtility.PrintRunningCoroutines()
+  type: Method
+  source:
+    id: PrintRunningCoroutines
+    path: ''
+    startLine: 5172
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Utility
+  syntax:
+    content: public void PrintRunningCoroutines()
+    content.vb: Public Sub PrintRunningCoroutines
+  overload: NPCEngine.Utility.CoroutineUtility.PrintRunningCoroutines*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 references:
 - uid: NPCEngine.Utility
   commentId: N:NPCEngine.Utility
@@ -550,3 +632,18 @@ references:
   name: GetGameObjectPath
   nameWithType: CoroutineUtility.GetGameObjectPath
   fullName: NPCEngine.Utility.CoroutineUtility.GetGameObjectPath
+- uid: NPCEngine.Utility.CoroutineUtility.PrintCoroutines*
+  commentId: Overload:NPCEngine.Utility.CoroutineUtility.PrintCoroutines
+  name: PrintCoroutines
+  nameWithType: CoroutineUtility.PrintCoroutines
+  fullName: NPCEngine.Utility.CoroutineUtility.PrintCoroutines
+- uid: NPCEngine.Utility.CoroutineUtility.PrintEditorCoroutines*
+  commentId: Overload:NPCEngine.Utility.CoroutineUtility.PrintEditorCoroutines
+  name: PrintEditorCoroutines
+  nameWithType: CoroutineUtility.PrintEditorCoroutines
+  fullName: NPCEngine.Utility.CoroutineUtility.PrintEditorCoroutines
+- uid: NPCEngine.Utility.CoroutineUtility.PrintRunningCoroutines*
+  commentId: Overload:NPCEngine.Utility.CoroutineUtility.PrintRunningCoroutines
+  name: PrintRunningCoroutines
+  nameWithType: CoroutineUtility.PrintRunningCoroutines
+  fullName: NPCEngine.Utility.CoroutineUtility.PrintRunningCoroutines

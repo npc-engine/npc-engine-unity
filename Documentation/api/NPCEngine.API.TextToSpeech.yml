@@ -5,11 +5,9 @@ items:
   id: TextToSpeech
   parent: NPCEngine.API
   children:
-  - NPCEngine.API.TextToSpeech.GetNextResult(System.Action{System.Collections.Generic.List{System.Single}})
-  - NPCEngine.API.TextToSpeech.GetNextResultFuture
-  - NPCEngine.API.TextToSpeech.GetSpeakerIdsFuture
-  - NPCEngine.API.TextToSpeech.StartTTS(System.String,System.String,System.Int32,System.Action)
-  - NPCEngine.API.TextToSpeech.StartTTSFuture(System.String,System.String,System.Int32)
+  - NPCEngine.API.TextToSpeech.GetNextResult(Action{System.Collections.Generic.List{System.Single}},Action{NPCEngine.NPCEngineException})
+  - NPCEngine.API.TextToSpeech.GetSpeakerIds(Action{System.Collections.Generic.List{System.String}},Action{NPCEngine.NPCEngineException})
+  - NPCEngine.API.TextToSpeech.StartTTS(System.String,System.String,System.Int32,Action,Action{NPCEngine.NPCEngineException})
   langs:
   - csharp
   - vb
@@ -20,7 +18,7 @@ items:
   source:
     id: TextToSpeech
     path: ''
-    startLine: 1120
+    startLine: 1167
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -30,6 +28,7 @@ items:
     content: 'public class TextToSpeech : RPCBase'
     content.vb: >-
       Public Class TextToSpeech
+
           Inherits RPCBase
   inheritance:
   - System.Object
@@ -39,115 +38,26 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: NPCEngine.API.TextToSpeech.StartTTSFuture(System.String,System.String,System.Int32)
-  commentId: M:NPCEngine.API.TextToSpeech.StartTTSFuture(System.String,System.String,System.Int32)
-  id: StartTTSFuture(System.String,System.String,System.Int32)
+- uid: NPCEngine.API.TextToSpeech.StartTTS(System.String,System.String,System.Int32,Action,Action{NPCEngine.NPCEngineException})
+  commentId: M:NPCEngine.API.TextToSpeech.StartTTS(System.String,System.String,System.Int32,Action,Action{NPCEngine.NPCEngineException})
+  id: StartTTS(System.String,System.String,System.Int32,Action,Action{NPCEngine.NPCEngineException})
   parent: NPCEngine.API.TextToSpeech
   langs:
   - csharp
   - vb
-  name: StartTTSFuture(String, String, Int32)
-  nameWithType: TextToSpeech.StartTTSFuture(String, String, Int32)
-  fullName: NPCEngine.API.TextToSpeech.StartTTSFuture(System.String, System.String, System.Int32)
-  type: Method
-  source:
-    id: StartTTSFuture
-    path: ''
-    startLine: 1140
-  assemblies:
-  - cs.temp.dll
-  namespace: NPCEngine.API
-  syntax:
-    content: public void StartTTSFuture(string speaker_id, string text, int n_chunks = 1)
-    parameters:
-    - id: speaker_id
-      type: System.String
-    - id: text
-      type: System.String
-    - id: n_chunks
-      type: System.Int32
-    content.vb: Public Sub StartTTSFuture(speaker_id As String, text As String, n_chunks As Integer = 1)
-  overload: NPCEngine.API.TextToSpeech.StartTTSFuture*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: NPCEngine.API.TextToSpeech.GetSpeakerIdsFuture
-  commentId: M:NPCEngine.API.TextToSpeech.GetSpeakerIdsFuture
-  id: GetSpeakerIdsFuture
-  parent: NPCEngine.API.TextToSpeech
-  langs:
-  - csharp
-  - vb
-  name: GetSpeakerIdsFuture()
-  nameWithType: TextToSpeech.GetSpeakerIdsFuture()
-  fullName: NPCEngine.API.TextToSpeech.GetSpeakerIdsFuture()
-  type: Method
-  source:
-    id: GetSpeakerIdsFuture
-    path: ''
-    startLine: 1151
-  assemblies:
-  - cs.temp.dll
-  namespace: NPCEngine.API
-  syntax:
-    content: public ResultFuture<List<string>> GetSpeakerIdsFuture()
-    return:
-      type: NPCEngine.ResultFuture{System.Collections.Generic.List{System.String}}
-    content.vb: Public Function GetSpeakerIdsFuture As ResultFuture(Of List(Of String))
-  overload: NPCEngine.API.TextToSpeech.GetSpeakerIdsFuture*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: NPCEngine.API.TextToSpeech.GetNextResultFuture
-  commentId: M:NPCEngine.API.TextToSpeech.GetNextResultFuture
-  id: GetNextResultFuture
-  parent: NPCEngine.API.TextToSpeech
-  langs:
-  - csharp
-  - vb
-  name: GetNextResultFuture()
-  nameWithType: TextToSpeech.GetNextResultFuture()
-  fullName: NPCEngine.API.TextToSpeech.GetNextResultFuture()
-  type: Method
-  source:
-    id: GetNextResultFuture
-    path: ''
-    startLine: 1156
-  assemblies:
-  - cs.temp.dll
-  namespace: NPCEngine.API
-  syntax:
-    content: public ResultFuture<List<float>> GetNextResultFuture()
-    return:
-      type: NPCEngine.ResultFuture{System.Collections.Generic.List{System.Single}}
-    content.vb: Public Function GetNextResultFuture As ResultFuture(Of List(Of Single))
-  overload: NPCEngine.API.TextToSpeech.GetNextResultFuture*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: NPCEngine.API.TextToSpeech.StartTTS(System.String,System.String,System.Int32,System.Action)
-  commentId: M:NPCEngine.API.TextToSpeech.StartTTS(System.String,System.String,System.Int32,System.Action)
-  id: StartTTS(System.String,System.String,System.Int32,System.Action)
-  parent: NPCEngine.API.TextToSpeech
-  langs:
-  - csharp
-  - vb
-  name: StartTTS(String, String, Int32, Action)
-  nameWithType: TextToSpeech.StartTTS(String, String, Int32, Action)
-  fullName: NPCEngine.API.TextToSpeech.StartTTS(System.String, System.String, System.Int32, System.Action)
+  name: StartTTS(String, String, Int32, Action, Action<NPCEngineException>)
+  nameWithType: TextToSpeech.StartTTS(String, String, Int32, Action, Action<NPCEngineException>)
+  fullName: NPCEngine.API.TextToSpeech.StartTTS(System.String, System.String, System.Int32, Action, Action<NPCEngine.NPCEngineException>)
   type: Method
   source:
     id: StartTTS
     path: ''
-    startLine: 1162
+    startLine: 1186
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
   syntax:
-    content: public IEnumerator StartTTS(string voiceId, string line, int n_chunks, Action outputCallback)
+    content: public IEnumerator StartTTS(string voiceId, string line, int n_chunks, Action outputCallback, Action<NPCEngineException> errorCallback = null)
     parameters:
     - id: voiceId
       type: System.String
@@ -156,49 +66,92 @@ items:
     - id: n_chunks
       type: System.Int32
     - id: outputCallback
-      type: System.Action
+      type: Global.Action
+    - id: errorCallback
+      type: Global.Action{NPCEngine.NPCEngineException}
     return:
       type: System.Collections.IEnumerator
-    content.vb: Public Function StartTTS(voiceId As String, line As String, n_chunks As Integer, outputCallback As Action) As IEnumerator
+    content.vb: Public Function StartTTS(voiceId As String, line As String, n_chunks As Integer, outputCallback As Action, errorCallback As Action(Of NPCEngineException) = Nothing) As IEnumerator
   overload: NPCEngine.API.TextToSpeech.StartTTS*
+  nameWithType.vb: TextToSpeech.StartTTS(String, String, Int32, Action, Action(Of NPCEngineException))
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: NPCEngine.API.TextToSpeech.GetNextResult(System.Action{System.Collections.Generic.List{System.Single}})
-  commentId: M:NPCEngine.API.TextToSpeech.GetNextResult(System.Action{System.Collections.Generic.List{System.Single}})
-  id: GetNextResult(System.Action{System.Collections.Generic.List{System.Single}})
+  fullName.vb: NPCEngine.API.TextToSpeech.StartTTS(System.String, System.String, System.Int32, Action, Action(Of NPCEngine.NPCEngineException))
+  name.vb: StartTTS(String, String, Int32, Action, Action(Of NPCEngineException))
+- uid: NPCEngine.API.TextToSpeech.GetNextResult(Action{System.Collections.Generic.List{System.Single}},Action{NPCEngine.NPCEngineException})
+  commentId: M:NPCEngine.API.TextToSpeech.GetNextResult(Action{System.Collections.Generic.List{System.Single}},Action{NPCEngine.NPCEngineException})
+  id: GetNextResult(Action{System.Collections.Generic.List{System.Single}},Action{NPCEngine.NPCEngineException})
   parent: NPCEngine.API.TextToSpeech
   langs:
   - csharp
   - vb
-  name: GetNextResult(Action<List<Single>>)
-  nameWithType: TextToSpeech.GetNextResult(Action<List<Single>>)
-  fullName: NPCEngine.API.TextToSpeech.GetNextResult(System.Action<System.Collections.Generic.List<System.Single>>)
+  name: GetNextResult(Action<List<Single>>, Action<NPCEngineException>)
+  nameWithType: TextToSpeech.GetNextResult(Action<List<Single>>, Action<NPCEngineException>)
+  fullName: NPCEngine.API.TextToSpeech.GetNextResult(Action<System.Collections.Generic.List<System.Single>>, Action<NPCEngine.NPCEngineException>)
   type: Method
   source:
     id: GetNextResult
     path: ''
-    startLine: 1175
+    startLine: 1192
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
   syntax:
-    content: public IEnumerator GetNextResult(Action<List<float>> outputCallback)
+    content: public IEnumerator GetNextResult(Action<List<float>> outputCallback = null, Action<NPCEngineException> errorCallback = null)
     parameters:
     - id: outputCallback
-      type: System.Action{System.Collections.Generic.List{System.Single}}
+      type: Global.Action{System.Collections.Generic.List{System.Single}}
+    - id: errorCallback
+      type: Global.Action{NPCEngine.NPCEngineException}
     return:
       type: System.Collections.IEnumerator
-    content.vb: Public Function GetNextResult(outputCallback As Action(Of List(Of Single))) As IEnumerator
+    content.vb: Public Function GetNextResult(outputCallback As Action(Of List(Of Single)) = Nothing, errorCallback As Action(Of NPCEngineException) = Nothing) As IEnumerator
   overload: NPCEngine.API.TextToSpeech.GetNextResult*
-  nameWithType.vb: TextToSpeech.GetNextResult(Action(Of List(Of Single)))
+  nameWithType.vb: TextToSpeech.GetNextResult(Action(Of List(Of Single)), Action(Of NPCEngineException))
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: NPCEngine.API.TextToSpeech.GetNextResult(System.Action(Of System.Collections.Generic.List(Of System.Single)))
-  name.vb: GetNextResult(Action(Of List(Of Single)))
+  fullName.vb: NPCEngine.API.TextToSpeech.GetNextResult(Action(Of System.Collections.Generic.List(Of System.Single)), Action(Of NPCEngine.NPCEngineException))
+  name.vb: GetNextResult(Action(Of List(Of Single)), Action(Of NPCEngineException))
+- uid: NPCEngine.API.TextToSpeech.GetSpeakerIds(Action{System.Collections.Generic.List{System.String}},Action{NPCEngine.NPCEngineException})
+  commentId: M:NPCEngine.API.TextToSpeech.GetSpeakerIds(Action{System.Collections.Generic.List{System.String}},Action{NPCEngine.NPCEngineException})
+  id: GetSpeakerIds(Action{System.Collections.Generic.List{System.String}},Action{NPCEngine.NPCEngineException})
+  parent: NPCEngine.API.TextToSpeech
+  langs:
+  - csharp
+  - vb
+  name: GetSpeakerIds(Action<List<String>>, Action<NPCEngineException>)
+  nameWithType: TextToSpeech.GetSpeakerIds(Action<List<String>>, Action<NPCEngineException>)
+  fullName: NPCEngine.API.TextToSpeech.GetSpeakerIds(Action<System.Collections.Generic.List<System.String>>, Action<NPCEngine.NPCEngineException>)
+  type: Method
+  source:
+    id: GetSpeakerIds
+    path: ''
+    startLine: 1197
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.API
+  syntax:
+    content: public IEnumerator GetSpeakerIds(Action<List<string>> outputCallback = null, Action<NPCEngineException> errorCallback = null)
+    parameters:
+    - id: outputCallback
+      type: Global.Action{System.Collections.Generic.List{System.String}}
+    - id: errorCallback
+      type: Global.Action{NPCEngine.NPCEngineException}
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Public Function GetSpeakerIds(outputCallback As Action(Of List(Of String)) = Nothing, errorCallback As Action(Of NPCEngineException) = Nothing) As IEnumerator
+  overload: NPCEngine.API.TextToSpeech.GetSpeakerIds*
+  nameWithType.vb: TextToSpeech.GetSpeakerIds(Action(Of List(Of String)), Action(Of NPCEngineException))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: NPCEngine.API.TextToSpeech.GetSpeakerIds(Action(Of System.Collections.Generic.List(Of System.String)), Action(Of NPCEngine.NPCEngineException))
+  name.vb: GetSpeakerIds(Action(Of List(Of String)), Action(Of NPCEngineException))
 references:
 - uid: NPCEngine.API
   commentId: N:NPCEngine.API
@@ -218,11 +171,11 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: NPCEngine.API.TextToSpeech.StartTTSFuture*
-  commentId: Overload:NPCEngine.API.TextToSpeech.StartTTSFuture
-  name: StartTTSFuture
-  nameWithType: TextToSpeech.StartTTSFuture
-  fullName: NPCEngine.API.TextToSpeech.StartTTSFuture
+- uid: NPCEngine.API.TextToSpeech.StartTTS*
+  commentId: Overload:NPCEngine.API.TextToSpeech.StartTTS
+  name: StartTTS
+  nameWithType: TextToSpeech.StartTTS
+  fullName: NPCEngine.API.TextToSpeech.StartTTS
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -237,197 +190,52 @@ references:
   name: Int32
   nameWithType: Int32
   fullName: System.Int32
-- uid: NPCEngine.API.TextToSpeech.GetSpeakerIdsFuture*
-  commentId: Overload:NPCEngine.API.TextToSpeech.GetSpeakerIdsFuture
-  name: GetSpeakerIdsFuture
-  nameWithType: TextToSpeech.GetSpeakerIdsFuture
-  fullName: NPCEngine.API.TextToSpeech.GetSpeakerIdsFuture
-- uid: NPCEngine.ResultFuture{System.Collections.Generic.List{System.String}}
-  commentId: T:NPCEngine.ResultFuture{System.Collections.Generic.List{System.String}}
-  parent: NPCEngine
-  definition: NPCEngine.ResultFuture`1
-  name: ResultFuture<List<String>>
-  nameWithType: ResultFuture<List<String>>
-  fullName: NPCEngine.ResultFuture<System.Collections.Generic.List<System.String>>
-  nameWithType.vb: ResultFuture(Of List(Of String))
-  fullName.vb: NPCEngine.ResultFuture(Of System.Collections.Generic.List(Of System.String))
-  name.vb: ResultFuture(Of List(Of String))
-  spec.csharp:
-  - uid: NPCEngine.ResultFuture`1
-    name: ResultFuture
-    nameWithType: ResultFuture
-    fullName: NPCEngine.ResultFuture
-  - name: <
-    nameWithType: <
-    fullName: <
-  - uid: System.Collections.Generic.List`1
-    name: List
-    nameWithType: List
-    fullName: System.Collections.Generic.List
-    isExternal: true
-  - name: <
-    nameWithType: <
-    fullName: <
-  - uid: System.String
-    name: String
-    nameWithType: String
-    fullName: System.String
-    isExternal: true
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: NPCEngine.ResultFuture`1
-    name: ResultFuture
-    nameWithType: ResultFuture
-    fullName: NPCEngine.ResultFuture
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - uid: System.Collections.Generic.List`1
-    name: List
-    nameWithType: List
-    fullName: System.Collections.Generic.List
-    isExternal: true
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - uid: System.String
-    name: String
-    nameWithType: String
-    fullName: System.String
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: NPCEngine.ResultFuture`1
-  commentId: T:NPCEngine.ResultFuture`1
-  name: ResultFuture<ReturnType>
-  nameWithType: ResultFuture<ReturnType>
-  fullName: NPCEngine.ResultFuture<ReturnType>
-  nameWithType.vb: ResultFuture(Of ReturnType)
-  fullName.vb: NPCEngine.ResultFuture(Of ReturnType)
-  name.vb: ResultFuture(Of ReturnType)
-  spec.csharp:
-  - uid: NPCEngine.ResultFuture`1
-    name: ResultFuture
-    nameWithType: ResultFuture
-    fullName: NPCEngine.ResultFuture
-  - name: <
-    nameWithType: <
-    fullName: <
-  - name: ReturnType
-    nameWithType: ReturnType
-    fullName: ReturnType
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: NPCEngine.ResultFuture`1
-    name: ResultFuture
-    nameWithType: ResultFuture
-    fullName: NPCEngine.ResultFuture
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - name: ReturnType
-    nameWithType: ReturnType
-    fullName: ReturnType
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: NPCEngine
-  commentId: N:NPCEngine
-  name: NPCEngine
-  nameWithType: NPCEngine
-  fullName: NPCEngine
-- uid: NPCEngine.API.TextToSpeech.GetNextResultFuture*
-  commentId: Overload:NPCEngine.API.TextToSpeech.GetNextResultFuture
-  name: GetNextResultFuture
-  nameWithType: TextToSpeech.GetNextResultFuture
-  fullName: NPCEngine.API.TextToSpeech.GetNextResultFuture
-- uid: NPCEngine.ResultFuture{System.Collections.Generic.List{System.Single}}
-  commentId: T:NPCEngine.ResultFuture{System.Collections.Generic.List{System.Single}}
-  parent: NPCEngine
-  definition: NPCEngine.ResultFuture`1
-  name: ResultFuture<List<Single>>
-  nameWithType: ResultFuture<List<Single>>
-  fullName: NPCEngine.ResultFuture<System.Collections.Generic.List<System.Single>>
-  nameWithType.vb: ResultFuture(Of List(Of Single))
-  fullName.vb: NPCEngine.ResultFuture(Of System.Collections.Generic.List(Of System.Single))
-  name.vb: ResultFuture(Of List(Of Single))
-  spec.csharp:
-  - uid: NPCEngine.ResultFuture`1
-    name: ResultFuture
-    nameWithType: ResultFuture
-    fullName: NPCEngine.ResultFuture
-  - name: <
-    nameWithType: <
-    fullName: <
-  - uid: System.Collections.Generic.List`1
-    name: List
-    nameWithType: List
-    fullName: System.Collections.Generic.List
-    isExternal: true
-  - name: <
-    nameWithType: <
-    fullName: <
-  - uid: System.Single
-    name: Single
-    nameWithType: Single
-    fullName: System.Single
-    isExternal: true
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: NPCEngine.ResultFuture`1
-    name: ResultFuture
-    nameWithType: ResultFuture
-    fullName: NPCEngine.ResultFuture
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - uid: System.Collections.Generic.List`1
-    name: List
-    nameWithType: List
-    fullName: System.Collections.Generic.List
-    isExternal: true
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - uid: System.Single
-    name: Single
-    nameWithType: Single
-    fullName: System.Single
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: NPCEngine.API.TextToSpeech.StartTTS*
-  commentId: Overload:NPCEngine.API.TextToSpeech.StartTTS
-  name: StartTTS
-  nameWithType: TextToSpeech.StartTTS
-  fullName: NPCEngine.API.TextToSpeech.StartTTS
-- uid: System.Action
-  commentId: T:System.Action
-  parent: System
+- uid: Global.Action
   isExternal: true
   name: Action
   nameWithType: Action
-  fullName: System.Action
+  fullName: Action
+- uid: Global.Action{NPCEngine.NPCEngineException}
+  commentId: '!:Global.Action{NPCEngine.NPCEngineException}'
+  definition: Global.Action`1
+  name: Action<NPCEngineException>
+  nameWithType: Action<NPCEngineException>
+  fullName: Action<NPCEngine.NPCEngineException>
+  nameWithType.vb: Action(Of NPCEngineException)
+  fullName.vb: Action(Of NPCEngine.NPCEngineException)
+  name.vb: Action(Of NPCEngineException)
+  spec.csharp:
+  - uid: Global.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: NPCEngine.NPCEngineException
+    name: NPCEngineException
+    nameWithType: NPCEngineException
+    fullName: NPCEngine.NPCEngineException
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: NPCEngine.NPCEngineException
+    name: NPCEngineException
+    nameWithType: NPCEngineException
+    fullName: NPCEngine.NPCEngineException
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Collections.IEnumerator
   commentId: T:System.Collections.IEnumerator
   parent: System.Collections
@@ -435,6 +243,44 @@ references:
   name: IEnumerator
   nameWithType: IEnumerator
   fullName: System.Collections.IEnumerator
+- uid: Global.Action`1
+  isExternal: true
+  name: Action<>
+  nameWithType: Action<>
+  fullName: Action<>
+  nameWithType.vb: Action(Of )
+  fullName.vb: Action(Of )
+  name.vb: Action(Of )
+  spec.csharp:
+  - uid: Global.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: System.Collections
   commentId: N:System.Collections
   isExternal: true
@@ -446,21 +292,20 @@ references:
   name: GetNextResult
   nameWithType: TextToSpeech.GetNextResult
   fullName: NPCEngine.API.TextToSpeech.GetNextResult
-- uid: System.Action{System.Collections.Generic.List{System.Single}}
-  commentId: T:System.Action{System.Collections.Generic.List{System.Single}}
-  parent: System
-  definition: System.Action`1
+- uid: Global.Action{System.Collections.Generic.List{System.Single}}
+  commentId: '!:Global.Action{System.Collections.Generic.List{System.Single}}'
+  definition: Global.Action`1
   name: Action<List<Single>>
   nameWithType: Action<List<Single>>
-  fullName: System.Action<System.Collections.Generic.List<System.Single>>
+  fullName: Action<System.Collections.Generic.List<System.Single>>
   nameWithType.vb: Action(Of List(Of Single))
-  fullName.vb: System.Action(Of System.Collections.Generic.List(Of System.Single))
+  fullName.vb: Action(Of System.Collections.Generic.List(Of System.Single))
   name.vb: Action(Of List(Of Single))
   spec.csharp:
-  - uid: System.Action`1
+  - uid: Global.Action`1
     name: Action
     nameWithType: Action
-    fullName: System.Action
+    fullName: Action
     isExternal: true
   - name: <
     nameWithType: <
@@ -485,10 +330,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Action`1
+  - uid: Global.Action`1
     name: Action
     nameWithType: Action
-    fullName: System.Action
+    fullName: Action
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -512,42 +357,73 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Action`1
-  commentId: T:System.Action`1
-  isExternal: true
-  name: Action<T>
-  nameWithType: Action<T>
-  fullName: System.Action<T>
-  nameWithType.vb: Action(Of T)
-  fullName.vb: System.Action(Of T)
-  name.vb: Action(Of T)
+- uid: NPCEngine.API.TextToSpeech.GetSpeakerIds*
+  commentId: Overload:NPCEngine.API.TextToSpeech.GetSpeakerIds
+  name: GetSpeakerIds
+  nameWithType: TextToSpeech.GetSpeakerIds
+  fullName: NPCEngine.API.TextToSpeech.GetSpeakerIds
+- uid: Global.Action{System.Collections.Generic.List{System.String}}
+  commentId: '!:Global.Action{System.Collections.Generic.List{System.String}}'
+  definition: Global.Action`1
+  name: Action<List<String>>
+  nameWithType: Action<List<String>>
+  fullName: Action<System.Collections.Generic.List<System.String>>
+  nameWithType.vb: Action(Of List(Of String))
+  fullName.vb: Action(Of System.Collections.Generic.List(Of System.String))
+  name.vb: Action(Of List(Of String))
   spec.csharp:
-  - uid: System.Action`1
+  - uid: Global.Action`1
     name: Action
     nameWithType: Action
-    fullName: System.Action
+    fullName: Action
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: T
-    nameWithType: T
-    fullName: T
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Action`1
+  - uid: Global.Action`1
     name: Action
     nameWithType: Action
-    fullName: System.Action
+    fullName: Action
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: T
-    nameWithType: T
-    fullName: T
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
   - name: )
     nameWithType: )
     fullName: )

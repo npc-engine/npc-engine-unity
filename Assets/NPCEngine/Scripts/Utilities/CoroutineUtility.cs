@@ -12,28 +12,28 @@ namespace NPCEngine.Utility
     /// <summary>
     /// Utility that allows to run coroutines in a coherent way both in editor and in player modes.
     /// </summary>
-    [ExecuteInEditMode]
-    public class CoroutineUtility : Singleton<CoroutineUtility>
+    [ExecuteAlways]
+    public class CoroutineUtility: Singleton<CoroutineUtility>
     {
 #if UNITY_EDITOR
-        private Dictionary<
+        private static Dictionary<
             string,
             Dictionary<string, EditorCoroutine>
         > EditorCoroutines;
 #endif
-        private Dictionary<
+        private static Dictionary<
             string,
             Dictionary<string, Coroutine>
         > Coroutines;
 
-        private Dictionary<
+        private static Dictionary<
             string,
             Dictionary<string, IEnumerator>
         > CoroutinesRunning;
 
+        private static List<MonoBehaviour> owners;
 
-
-        private void CheckInitVariables()
+        private static void CheckInitVariables()
         {
             if (Coroutines == null)
             {
@@ -51,7 +51,7 @@ namespace NPCEngine.Utility
 #endif
         }
 
-        private IEnumerator WrapCoroutine(MonoBehaviour behaviour, IEnumerator coroutine, string name)
+        private static IEnumerator WrapCoroutine(MonoBehaviour behaviour, IEnumerator coroutine, string name)
         {
 
             if (!CoroutinesRunning.ContainsKey(GetGameObjectPath(behaviour)))
@@ -65,12 +65,12 @@ namespace NPCEngine.Utility
 
         public static bool IsRunning(MonoBehaviour owner, string name)
         {
-            Instance.CheckInitVariables();
-            if (!Instance.CoroutinesRunning.ContainsKey(GetGameObjectPath(owner)))
+            CheckInitVariables();
+            if (!CoroutinesRunning.ContainsKey(GetGameObjectPath(owner)))
             {
                 return false;
             }
-            if (!Instance.CoroutinesRunning[GetGameObjectPath(owner)].ContainsKey(name))
+            if (!CoroutinesRunning[GetGameObjectPath(owner)].ContainsKey(name))
             {
                 return false;
             }
@@ -79,162 +79,230 @@ namespace NPCEngine.Utility
 
         void OnDisable()
         {
+            CheckInitVariables();
+            if(owners == null)
+            {
+                owners = new List<MonoBehaviour>();
+            }
             StopAllEditorCoroutines();
+            if(Application.isPlaying)
+            {
+                foreach(var owner in owners)
+                {
+                    if(owner != null)
+                    {
+                        StopAllPlayingCoroutines(owner);
+                    }
+                }
+                owners.Clear();
+                Coroutines.Clear();
+                CoroutinesRunning.Clear();
+            }
+        }
+
+        void OnEnable()
+        {
+            CheckInitVariables();
+            if(owners == null)
+            {
+                owners = new List<MonoBehaviour>();
+            }
+            StopAllEditorCoroutines();
+            if(Application.isPlaying)
+            {
+                foreach(var owner in owners)
+                {
+                    if(owner != null)
+                    {
+                        StopAllPlayingCoroutines(owner);
+                    }
+                }
+                owners.Clear();
+                Coroutines.Clear();
+                CoroutinesRunning.Clear();
+            }
+            else
+            {
+                StopAllEditorCoroutines();
+            }
+
         }
 
         public static void StartCoroutine(IEnumerator routine, MonoBehaviour owner, string id)
         {
-            Instance.CheckInitVariables();
-            if (!Instance.CoroutinesRunning.ContainsKey(GetGameObjectPath(owner)))
+            CheckInitVariables();
+            if (owner == null)
             {
-                Instance.CoroutinesRunning.Add(GetGameObjectPath(owner), new Dictionary<string, IEnumerator>());
+                return;
             }
-            Instance.CoroutinesRunning[GetGameObjectPath(owner)][id] = routine;
+            owners.Add(owner);
+            if (!CoroutinesRunning.ContainsKey(GetGameObjectPath(owner)))
+            {
+                CoroutinesRunning.Add(GetGameObjectPath(owner), new Dictionary<string, IEnumerator>());
+            }
+            CoroutinesRunning[GetGameObjectPath(owner)][id] = routine;
 
             if (Application.isPlaying)
             {
-                if (Instance.Coroutines.ContainsKey(GetGameObjectPath(owner)))
-                {
-                    if (Instance.Coroutines[GetGameObjectPath(owner)].ContainsKey(id))
-                    {
-                        try
-                        {
-                            owner.StopCoroutine(Instance.Coroutines[GetGameObjectPath(owner)][id]);
-                        }
-                        catch (Exception e)
-                        {
-                            Debug.LogError(e);
-                        }
-                    }
-                }
-                else
-                {
-                    Instance.Coroutines[GetGameObjectPath(owner)] = new Dictionary<string, Coroutine>();
-                }
-                Instance.Coroutines[GetGameObjectPath(owner)][id] = owner.StartCoroutine(Instance.WrapCoroutine(owner, routine, id));
-
+                StartCouroutinePlayMode(routine, owner, id);
             }
             else
             {
-                
-#if UNITY_EDITOR
-
-                if (Instance.EditorCoroutines.ContainsKey(GetGameObjectPath(owner)))
-                {
-                    if (Instance.EditorCoroutines[GetGameObjectPath(owner)].ContainsKey(id))
-                    {
-                        try
-                        {
-                            EditorCoroutineUtility.StopCoroutine(Instance.EditorCoroutines[GetGameObjectPath(owner)][id]);
-                        }
-                        catch (Exception e)
-                        {
-                            Debug.LogError(e);
-                        }
-                    }
-                }
-                else
-                {
-                    string log = "";
-                    foreach(var kvp in Instance.EditorCoroutines)
-                    {
-                        log += ", " + kvp.Key + " " + id;
-                    }
-                    Instance.EditorCoroutines[GetGameObjectPath(owner)] = new Dictionary<string, EditorCoroutine>();
-                }
-                Instance.EditorCoroutines[GetGameObjectPath(owner)][id] = EditorCoroutineUtility.StartCoroutineOwnerless(Instance.WrapCoroutine(owner, routine, id));
-#endif
+                StartCoroutineEditMode(routine, owner, id);
             }
+        }
 
+        private static void StartCouroutinePlayMode(IEnumerator routine, MonoBehaviour owner, string id)
+        {
+            if (Coroutines.ContainsKey(GetGameObjectPath(owner)))
+            {
+                if (Coroutines[GetGameObjectPath(owner)].ContainsKey(id))
+                {
+                    try
+                    {
+                        owner.StopCoroutine(Coroutines[GetGameObjectPath(owner)][id]);
+                    }
+                    catch (Exception e)
+                    {
+                        Debug.LogError(e);
+                    }
+                }
+            }
+            else
+            {
+                Coroutines[GetGameObjectPath(owner)] = new Dictionary<string, Coroutine>();
+            }
+            Coroutines[GetGameObjectPath(owner)][id] = owner.StartCoroutine(WrapCoroutine(owner, routine, id));
+        }
+
+        private static void StartCoroutineEditMode(IEnumerator routine, MonoBehaviour owner, string id)
+        {
+#if UNITY_EDITOR
+            if (owner == null)
+            {
+                return;
+            }
+            if (EditorCoroutines.ContainsKey(GetGameObjectPath(owner)))
+            {
+                if (EditorCoroutines[GetGameObjectPath(owner)].ContainsKey(id))
+                {
+                    try
+                    {
+                        EditorCoroutineUtility.StopCoroutine(EditorCoroutines[GetGameObjectPath(owner)][id]);
+                    }
+                    catch (Exception e)
+                    {
+                        Debug.LogError(e);
+                    }
+                }
+            }
+            else
+            {
+                string log = "";
+                foreach(var kvp in EditorCoroutines)
+                {
+                    log += ", " + kvp.Key + " " + id;
+                }
+                EditorCoroutines[GetGameObjectPath(owner)] = new Dictionary<string, EditorCoroutine>();
+            }
+            EditorCoroutines[GetGameObjectPath(owner)][id] = EditorCoroutineUtility.StartCoroutine(WrapCoroutine(owner, routine, id), owner);
+#endif
         }
 
         public static void StopCoroutine(string id, MonoBehaviour owner)
         {
-            Instance.CheckInitVariables();
-            if (Instance.CoroutinesRunning.ContainsKey(GetGameObjectPath(owner)))
+            CheckInitVariables();
+            if (CoroutinesRunning.ContainsKey(GetGameObjectPath(owner)))
             {
-                Instance.CoroutinesRunning[GetGameObjectPath(owner)].Remove(id);
+                CoroutinesRunning[GetGameObjectPath(owner)].Remove(id);
             }
             if (Application.isPlaying)
             {
-                if (Instance.Coroutines.ContainsKey(GetGameObjectPath(owner)))
-                {
-                    if (Instance.Coroutines[GetGameObjectPath(owner)].ContainsKey(id))
-                    {
-                        try
-                        {
-                            owner.StopCoroutine(Instance.Coroutines[GetGameObjectPath(owner)][id]);
-                        }
-                        catch (Exception)
-                        {
-                        }
-                        Instance.Coroutines[GetGameObjectPath(owner)].Remove(id);
-                    }
-                }
+                StopCoroutinePlayMode(id, owner);
             }
             else
             {
-#if UNITY_EDITOR
-                if (Instance.EditorCoroutines.ContainsKey(GetGameObjectPath(owner)))
-                {
-                    if (Instance.EditorCoroutines[GetGameObjectPath(owner)].ContainsKey(id))
-                    {
-                        try
-                        {
-                            EditorCoroutineUtility.StopCoroutine(Instance.EditorCoroutines[GetGameObjectPath(owner)][id]);
-                        }
-                        catch (Exception)
-                        {
-                        }
-                        Instance.EditorCoroutines[GetGameObjectPath(owner)].Remove(id);
-                    }
-                }
-#endif
+                StopCoroutineEditMode(id, owner);
             }
+        }
 
+        private static void StopCoroutinePlayMode(string id, MonoBehaviour owner)
+        {
+            if (Coroutines.ContainsKey(GetGameObjectPath(owner)))
+            {
+                if (Coroutines[GetGameObjectPath(owner)].ContainsKey(id))
+                {
+                    try
+                    {
+                        owner.StopCoroutine(Coroutines[GetGameObjectPath(owner)][id]);
+                    }
+                    catch (Exception)
+                    {
+                    }
+                    Coroutines[GetGameObjectPath(owner)].Remove(id);
+                }
+            }
+        }
+
+        private static void StopCoroutineEditMode(string id, MonoBehaviour owner)
+        {
+#if UNITY_EDITOR
+            if (EditorCoroutines.ContainsKey(GetGameObjectPath(owner)))
+            {
+                if (EditorCoroutines[GetGameObjectPath(owner)].ContainsKey(id))
+                {
+                    try
+                    {
+                        EditorCoroutineUtility.StopCoroutine(EditorCoroutines[GetGameObjectPath(owner)][id]);
+                    }
+                    catch (Exception)
+                    {
+                    }
+                    EditorCoroutines[GetGameObjectPath(owner)].Remove(id);
+                }
+            }
+#endif
         }
 
         public static void StopAllPlayingCoroutines(MonoBehaviour owner)
         {
-            Instance.CheckInitVariables();
-            if (Instance.Coroutines.ContainsKey(GetGameObjectPath(owner)))
+            CheckInitVariables();
+            if (Coroutines.ContainsKey(GetGameObjectPath(owner)))
             {
-                foreach (var coroutine in Instance.Coroutines[GetGameObjectPath(owner)])
+                foreach (var coroutine in Coroutines[GetGameObjectPath(owner)])
                 {
-                    try
-                    {
-                        owner.StopCoroutine(coroutine.Value);
-                    }
-                    catch (Exception)
-                    { }
+                    owner.StopCoroutine(coroutine.Value);
                 }
-                Instance.Coroutines[GetGameObjectPath(owner)].Clear();
+                Coroutines[GetGameObjectPath(owner)].Clear();
             }
 
         }
 
         public static void StopAllEditorCoroutines()
         {
-            Instance.CheckInitVariables();
+            CheckInitVariables();
 #if UNITY_EDITOR
-            foreach (var owner in Instance.EditorCoroutines)
+            foreach (var owner in EditorCoroutines)
             {
                 foreach (var coroutine in owner.Value)
                 {
                     EditorCoroutineUtility.StopCoroutine(coroutine.Value);
                 }
             }
-            Instance.EditorCoroutines.Clear();
+            EditorCoroutines.Clear();
 #endif
         }
 
+
+        
+
         public static void StopAllEditorCoroutines(MonoBehaviour owner)
         {
-            Instance.CheckInitVariables();
+            CheckInitVariables();
 #if UNITY_EDITOR
-            if (Instance.EditorCoroutines.ContainsKey(GetGameObjectPath(owner)))
+            if (EditorCoroutines.ContainsKey(GetGameObjectPath(owner)))
             {
-                foreach (var coroutine in Instance.EditorCoroutines[GetGameObjectPath(owner)])
+                foreach (var coroutine in EditorCoroutines[GetGameObjectPath(owner)])
                 {
                     EditorCoroutineUtility.StopCoroutine(coroutine.Value);
                 }
@@ -250,7 +318,9 @@ namespace NPCEngine.Utility
             }
             else
             {
+                #if UNITY_EDITOR
                 yield return new EditorWaitForSeconds(seconds);
+                #endif
             }
         }
        
@@ -265,6 +335,53 @@ namespace NPCEngine.Utility
             }
             path = path + "/" + behaviour.GetType().Name;
             return path;
+        }
+
+        [ContextMenu("Check Coroutines")]
+        public void PrintCoroutines()
+        {
+            CheckInitVariables();
+            foreach (var kvp in Coroutines)
+            {
+                string coroutines_string = "";
+                foreach (var kvp2 in kvp.Value)
+                {
+                    coroutines_string += ", " + kvp2.Key;
+                }
+                Debug.LogFormat("Object: {0} Coroutines: {1}", kvp.Key, coroutines_string);
+            }
+        }
+
+        [ContextMenu("Check Editor Coroutines")]
+        public void PrintEditorCoroutines()
+        {
+            CheckInitVariables();
+            #if UNITY_EDITOR
+            foreach (var kvp in EditorCoroutines)
+            {
+                string coroutines_string = "";
+                foreach (var kvp2 in kvp.Value)
+                {
+                    coroutines_string += ", " + kvp2.Key;
+                }
+                Debug.LogFormat("Object: {0} Coroutines: {1}", kvp.Key, coroutines_string);
+            }
+            #endif
+        }
+
+        [ContextMenu("Check Running Coroutines")]
+        public void PrintRunningCoroutines()
+        {
+            CheckInitVariables();
+            foreach (var kvp in CoroutinesRunning)
+            {
+                string coroutines_string = "";
+                foreach (var kvp2 in kvp.Value)
+                {
+                    coroutines_string += ", " + kvp2.Key;
+                }
+                Debug.LogFormat("Object: {0} Coroutines: {1}", kvp.Key, coroutines_string);
+            }
         }
     }
 }

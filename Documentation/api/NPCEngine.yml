@@ -8,8 +8,8 @@ items:
   - NPCEngine.NPCEngineConfig
   - NPCEngine.NPCEngineConfigEditor
   - NPCEngine.NPCEngineException
-  - NPCEngine.ResultFuture`1
   - NPCEngine.ServiceConfigDescriptor
+  - NPCEngine.TTSGeneratorEditor
   langs:
   - csharp
   - vb
@@ -40,50 +40,13 @@ references:
   name: NPCEngineConfigEditor
   nameWithType: NPCEngineConfigEditor
   fullName: NPCEngine.NPCEngineConfigEditor
+- uid: NPCEngine.TTSGeneratorEditor
+  commentId: T:NPCEngine.TTSGeneratorEditor
+  name: TTSGeneratorEditor
+  nameWithType: TTSGeneratorEditor
+  fullName: NPCEngine.TTSGeneratorEditor
 - uid: NPCEngine.NPCEngineException
   commentId: T:NPCEngine.NPCEngineException
-  parent: NPCEngine
   name: NPCEngineException
   nameWithType: NPCEngineException
   fullName: NPCEngine.NPCEngineException
-- uid: NPCEngine.ResultFuture`1
-  commentId: T:NPCEngine.ResultFuture`1
-  name: ResultFuture<ReturnType>
-  nameWithType: ResultFuture<ReturnType>
-  fullName: NPCEngine.ResultFuture<ReturnType>
-  nameWithType.vb: ResultFuture(Of ReturnType)
-  fullName.vb: NPCEngine.ResultFuture(Of ReturnType)
-  name.vb: ResultFuture(Of ReturnType)
-  spec.csharp:
-  - uid: NPCEngine.ResultFuture`1
-    name: ResultFuture
-    nameWithType: ResultFuture
-    fullName: NPCEngine.ResultFuture
-  - name: <
-    nameWithType: <
-    fullName: <
-  - name: ReturnType
-    nameWithType: ReturnType
-    fullName: ReturnType
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: NPCEngine.ResultFuture`1
-    name: ResultFuture
-    nameWithType: ResultFuture
-    fullName: NPCEngine.ResultFuture
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - name: ReturnType
-    nameWithType: ReturnType
-    fullName: ReturnType
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: NPCEngine
-  commentId: N:NPCEngine
-  name: NPCEngine
-  nameWithType: NPCEngine
-  fullName: NPCEngine

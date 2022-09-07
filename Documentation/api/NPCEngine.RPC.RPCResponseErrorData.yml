@@ -1,0 +1,231 @@
+### YamlMime:ManagedReference
+items:
+- uid: NPCEngine.RPC.RPCResponseErrorData
+  commentId: T:NPCEngine.RPC.RPCResponseErrorData
+  id: RPCResponseErrorData
+  parent: NPCEngine.RPC
+  children:
+  - NPCEngine.RPC.RPCResponseErrorData.args
+  - NPCEngine.RPC.RPCResponseErrorData.message
+  - NPCEngine.RPC.RPCResponseErrorData.type
+  langs:
+  - csharp
+  - vb
+  name: RPCResponseErrorData
+  nameWithType: RPCResponseErrorData
+  fullName: NPCEngine.RPC.RPCResponseErrorData
+  type: Class
+  source:
+    id: RPCResponseErrorData
+    path: ''
+    startLine: 4595
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.RPC
+  summary: "\nRPC response error data.\n"
+  example: []
+  syntax:
+    content: public class RPCResponseErrorData
+    content.vb: Public Class RPCResponseErrorData
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: NPCEngine.RPC.RPCResponseErrorData.type
+  commentId: F:NPCEngine.RPC.RPCResponseErrorData.type
+  id: type
+  parent: NPCEngine.RPC.RPCResponseErrorData
+  langs:
+  - csharp
+  - vb
+  name: type
+  nameWithType: RPCResponseErrorData.type
+  fullName: NPCEngine.RPC.RPCResponseErrorData.type
+  type: Field
+  source:
+    id: type
+    path: ''
+    startLine: 4598
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.RPC
+  syntax:
+    content: public String type
+    return:
+      type: Global.String
+    content.vb: Public type As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.RPC.RPCResponseErrorData.args
+  commentId: F:NPCEngine.RPC.RPCResponseErrorData.args
+  id: args
+  parent: NPCEngine.RPC.RPCResponseErrorData
+  langs:
+  - csharp
+  - vb
+  name: args
+  nameWithType: RPCResponseErrorData.args
+  fullName: NPCEngine.RPC.RPCResponseErrorData.args
+  type: Field
+  source:
+    id: args
+    path: ''
+    startLine: 4599
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.RPC
+  syntax:
+    content: public List<String> args
+    return:
+      type: System.Collections.Generic.List{String}
+    content.vb: Public args As List(Of String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.RPC.RPCResponseErrorData.message
+  commentId: F:NPCEngine.RPC.RPCResponseErrorData.message
+  id: message
+  parent: NPCEngine.RPC.RPCResponseErrorData
+  langs:
+  - csharp
+  - vb
+  name: message
+  nameWithType: RPCResponseErrorData.message
+  fullName: NPCEngine.RPC.RPCResponseErrorData.message
+  type: Field
+  source:
+    id: message
+    path: ''
+    startLine: 4600
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.RPC
+  syntax:
+    content: public String message
+    return:
+      type: Global.String
+    content.vb: Public message As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: NPCEngine.RPC
+  commentId: N:NPCEngine.RPC
+  name: NPCEngine.RPC
+  nameWithType: NPCEngine.RPC
+  fullName: NPCEngine.RPC
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: String
+- uid: System.Collections.Generic.List{String}
+  commentId: T:System.Collections.Generic.List{String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<String>
+  nameWithType: List<String>
+  fullName: System.Collections.Generic.List<String>
+  nameWithType.vb: List(Of String)
+  fullName.vb: System.Collections.Generic.List(Of String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Global.String
+    name: String
+    nameWithType: String
+    fullName: String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Global.String
+    name: String
+    nameWithType: String
+    fullName: String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic

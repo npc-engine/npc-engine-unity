@@ -25,8 +25,6 @@ public class ChatbotCaller : MonoBehaviour
 
     public Button SendButton;
 
-    ResultFuture<string> result;
-
     public List<ChatLine> history;
 
     private void Start()
@@ -48,7 +46,14 @@ public class ChatbotCaller : MonoBehaviour
             other_persona = OtherPersona.text,
             history = this.history
         };
-        result = NPCEngineManager.Instance.GetAPI<FantasyChatbotTextGeneration>().GenerateReplyFuture(context, float.Parse(Temperature.text), Int32.Parse(TopK.text));
+        StartCoroutine(
+            NPCEngineManager.Instance.GetAPI<FantasyChatbotTextGeneration>()
+            .GenerateReply(context, float.Parse(Temperature.text), Int32.Parse(TopK.text), 3, (result) =>
+            {
+                history.Add(new ChatLine { speaker = Name.text, line = result });
+                RenderChat();
+                SendButton.interactable = true;
+            }));
         SendButton.interactable = false;
     }
 
@@ -67,15 +72,4 @@ public class ChatbotCaller : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (result != null && result.ResultReady)
-        {
-            history.Add(new ChatLine { speaker = Name.text, line = result.Result });
-            RenderChat();
-            SendButton.interactable = true;
-            result = null;
-        }
-    }
 }

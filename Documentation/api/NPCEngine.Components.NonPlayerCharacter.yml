@@ -9,13 +9,14 @@ items:
   - NPCEngine.Components.NonPlayerCharacter.character
   - NPCEngine.Components.NonPlayerCharacter.defaultThreshold
   - NPCEngine.Components.NonPlayerCharacter.dialogueSystem
-  - NPCEngine.Components.NonPlayerCharacter.EndDialog
+  - NPCEngine.Components.NonPlayerCharacter.EndDialogue
   - NPCEngine.Components.NonPlayerCharacter.GenerateAndPlaySpeech(System.String)
   - NPCEngine.Components.NonPlayerCharacter.GenerateReply(System.String,System.String,System.String)
   - NPCEngine.Components.NonPlayerCharacter.HandleLine(System.String,System.String,System.String)
   - NPCEngine.Components.NonPlayerCharacter.HandleLineCoroutine(System.String,System.String,System.String)
   - NPCEngine.Components.NonPlayerCharacter.HandlePlayerLineCoroutine(System.String,System.String,System.String)
   - NPCEngine.Components.NonPlayerCharacter.history
+  - NPCEngine.Components.NonPlayerCharacter.maxLines
   - NPCEngine.Components.NonPlayerCharacter.OnDialogueEnd
   - NPCEngine.Components.NonPlayerCharacter.OnDialogueLine
   - NPCEngine.Components.NonPlayerCharacter.OnDialogueStart
@@ -37,7 +38,7 @@ items:
   source:
     id: NonPlayerCharacter
     path: ''
-    startLine: 1674
+    startLine: 1710
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -45,6 +46,7 @@ items:
     content: 'public class NonPlayerCharacter : MonoBehaviour'
     content.vb: >-
       Public Class NonPlayerCharacter
+
           Inherits MonoBehaviour
   inheritance:
   - System.Object
@@ -54,6 +56,33 @@ items:
   modifiers.vb:
   - Public
   - Class
+- uid: NPCEngine.Components.NonPlayerCharacter.maxLines
+  commentId: F:NPCEngine.Components.NonPlayerCharacter.maxLines
+  id: maxLines
+  parent: NPCEngine.Components.NonPlayerCharacter
+  langs:
+  - csharp
+  - vb
+  name: maxLines
+  nameWithType: NonPlayerCharacter.maxLines
+  fullName: NPCEngine.Components.NonPlayerCharacter.maxLines
+  type: Field
+  source:
+    id: maxLines
+    path: ''
+    startLine: 1713
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  syntax:
+    content: public int maxLines
+    return:
+      type: System.Int32
+    content.vb: Public maxLines As Integer
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: NPCEngine.Components.NonPlayerCharacter.defaultThreshold
   commentId: F:NPCEngine.Components.NonPlayerCharacter.defaultThreshold
   id: defaultThreshold
@@ -68,7 +97,7 @@ items:
   source:
     id: defaultThreshold
     path: ''
-    startLine: 1681
+    startLine: 1717
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -97,7 +126,7 @@ items:
   source:
     id: character
     path: ''
-    startLine: 1686
+    startLine: 1722
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -126,7 +155,7 @@ items:
   source:
     id: history
     path: ''
-    startLine: 1691
+    startLine: 1727
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -155,7 +184,7 @@ items:
   source:
     id: OnDialogueStart
     path: ''
-    startLine: 1696
+    startLine: 1732
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -184,7 +213,7 @@ items:
   source:
     id: OnDialogueLine
     path: ''
-    startLine: 1702
+    startLine: 1738
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -213,7 +242,7 @@ items:
   source:
     id: OnProcessingStart
     path: ''
-    startLine: 1707
+    startLine: 1743
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -242,7 +271,7 @@ items:
   source:
     id: OnProcessingEnd
     path: ''
-    startLine: 1712
+    startLine: 1748
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -271,7 +300,7 @@ items:
   source:
     id: OnTopicHintsUpdate
     path: ''
-    startLine: 1717
+    startLine: 1753
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -300,7 +329,7 @@ items:
   source:
     id: OnDialogueEnd
     path: ''
-    startLine: 1722
+    startLine: 1758
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -329,7 +358,7 @@ items:
   source:
     id: audioSourceQueue
     path: ''
-    startLine: 1727
+    startLine: 1763
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -338,7 +367,7 @@ items:
   syntax:
     content: public AudioSourceQueue audioSourceQueue
     return:
-      type: NPCEngine.Utility.AudioSourceQueue
+      type: Global.AudioSourceQueue
     content.vb: Public audioSourceQueue As AudioSourceQueue
   modifiers.csharp:
   - public
@@ -358,7 +387,7 @@ items:
   source:
     id: voiceId
     path: ''
-    startLine: 1732
+    startLine: 1768
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -387,7 +416,7 @@ items:
   source:
     id: dialogueSystem
     path: ''
-    startLine: 1737
+    startLine: 1773
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -416,7 +445,7 @@ items:
   source:
     id: testLocation
     path: ''
-    startLine: 1751
+    startLine: 1787
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -443,7 +472,7 @@ items:
   source:
     id: testOtherCharacter
     path: ''
-    startLine: 1754
+    startLine: 1790
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -470,7 +499,7 @@ items:
   source:
     id: StartDialogue
     path: ''
-    startLine: 1773
+    startLine: 1809
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -484,30 +513,30 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: NPCEngine.Components.NonPlayerCharacter.EndDialog
-  commentId: M:NPCEngine.Components.NonPlayerCharacter.EndDialog
-  id: EndDialog
+- uid: NPCEngine.Components.NonPlayerCharacter.EndDialogue
+  commentId: M:NPCEngine.Components.NonPlayerCharacter.EndDialogue
+  id: EndDialogue
   parent: NPCEngine.Components.NonPlayerCharacter
   langs:
   - csharp
   - vb
-  name: EndDialog()
-  nameWithType: NonPlayerCharacter.EndDialog()
-  fullName: NPCEngine.Components.NonPlayerCharacter.EndDialog()
+  name: EndDialogue()
+  nameWithType: NonPlayerCharacter.EndDialogue()
+  fullName: NPCEngine.Components.NonPlayerCharacter.EndDialogue()
   type: Method
   source:
-    id: EndDialog
+    id: EndDialogue
     path: ''
-    startLine: 1785
+    startLine: 1824
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
   summary: "\nEnd dialogue.\n"
   example: []
   syntax:
-    content: public void EndDialog()
+    content: public void EndDialogue()
     content.vb: Public Sub
-  overload: NPCEngine.Components.NonPlayerCharacter.EndDialog*
+  overload: NPCEngine.Components.NonPlayerCharacter.EndDialogue*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -526,7 +555,7 @@ items:
   source:
     id: HandleLine
     path: ''
-    startLine: 1799
+    startLine: 1841
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -564,7 +593,7 @@ items:
   source:
     id: HandleLineCoroutine
     path: ''
-    startLine: 1808
+    startLine: 1850
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -601,7 +630,7 @@ items:
   source:
     id: HandlePlayerLineCoroutine
     path: ''
-    startLine: 1835
+    startLine: 1882
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -638,7 +667,7 @@ items:
   source:
     id: GenerateReply
     path: ''
-    startLine: 1871
+    startLine: 1918
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -679,7 +708,7 @@ items:
   source:
     id: SayNPCLines
     path: ''
-    startLine: 1896
+    startLine: 1947
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -710,7 +739,7 @@ items:
   source:
     id: GenerateAndPlaySpeech
     path: ''
-    startLine: 1925
+    startLine: 1985
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -750,6 +779,13 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
 - uid: System.Single
   commentId: T:System.Single
   parent: System
@@ -1067,17 +1103,12 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: NPCEngine.Utility.AudioSourceQueue
-  commentId: T:NPCEngine.Utility.AudioSourceQueue
-  parent: NPCEngine.Utility
+- uid: Global.AudioSourceQueue
+  commentId: '!:Global.AudioSourceQueue'
+  isExternal: true
   name: AudioSourceQueue
   nameWithType: AudioSourceQueue
-  fullName: NPCEngine.Utility.AudioSourceQueue
-- uid: NPCEngine.Utility
-  commentId: N:NPCEngine.Utility
-  name: NPCEngine.Utility
-  nameWithType: NPCEngine.Utility
-  fullName: NPCEngine.Utility
+  fullName: AudioSourceQueue
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -1102,11 +1133,11 @@ references:
   name: StartDialogue
   nameWithType: NonPlayerCharacter.StartDialogue
   fullName: NPCEngine.Components.NonPlayerCharacter.StartDialogue
-- uid: NPCEngine.Components.NonPlayerCharacter.EndDialog*
-  commentId: Overload:NPCEngine.Components.NonPlayerCharacter.EndDialog
-  name: EndDialog
-  nameWithType: NonPlayerCharacter.EndDialog
-  fullName: NPCEngine.Components.NonPlayerCharacter.EndDialog
+- uid: NPCEngine.Components.NonPlayerCharacter.EndDialogue*
+  commentId: Overload:NPCEngine.Components.NonPlayerCharacter.EndDialogue
+  name: EndDialogue
+  nameWithType: NonPlayerCharacter.EndDialogue
+  fullName: NPCEngine.Components.NonPlayerCharacter.EndDialogue
 - uid: NPCEngine.Components.NonPlayerCharacter.HandleLine*
   commentId: Overload:NPCEngine.Components.NonPlayerCharacter.HandleLine
   name: HandleLine

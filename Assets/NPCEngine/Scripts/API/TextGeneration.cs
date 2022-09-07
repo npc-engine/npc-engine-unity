@@ -31,67 +31,39 @@ namespace NPCEngine.API
             public ContextType context;
             public float temperature;
             public int topk;
-        }
-
-
-        public ResultFuture<string> GenerateReplyFuture(ContextType context, float temperature = 0.8f, int topk = 5)
-        {
-            var msg = new ChatbotMessage
-            {
-                context = context,
-                temperature = temperature,
-                topk = topk
-            };
-            return this.Run<ChatbotMessage, string>("generate_reply", msg);
-        }
-
-        public ResultFuture<Dictionary<string, string>> GetSpecialTokensFuture()
-        {
-            return this.Run<List<string>, Dictionary<string, string>>("get_special_tokens", new List<string>());
-        }
-
-        public ResultFuture<string> GetPromptTemplateFuture()
-        {
-            return this.Run<List<string>, string>("get_prompt_template", new List<string>());
+            public int num_sampled;
         }
 
         // GenerateReply in a coroutine
-        public IEnumerator GenerateReply(ContextType context, Action<string> outputCallback, float temperature = 0.8f, int topk = 5)
+        public IEnumerator GenerateReply(
+            ContextType context, 
+            float temperature = 0.8f, 
+            int topk = 5, 
+            int numSampled = 3,
+            Action<string> outputCallback = null, 
+            Action<NPCEngineException> errorCallback = null
+        )
         {
             var msg = new ChatbotMessage
             {
                 context = context,
                 temperature = temperature,
-                topk = topk
+                topk = topk,
+                num_sampled = numSampled
             };
-            var result = this.Run<ChatbotMessage, string>("generate_reply", msg);
-            while (!result.ResultReady)
-            {
-                yield return null;
-            }
-            outputCallback(result.Result);
+            yield return this.Run<ChatbotMessage, string>("generate_reply", msg, outputCallback, errorCallback);
         }
 
         // GetSpecialTokens in a coroutine
-        public IEnumerator GetSpecialTokens(Action<Dictionary<string, string>> outputCallback)
+        public IEnumerator GetSpecialTokens(Action<Dictionary<string, string>> outputCallback = null, Action<NPCEngineException> errorCallback = null)
         {
-            var result = this.Run<List<string>, Dictionary<string, string>>("get_special_tokens", new List<string>());
-            while (!result.ResultReady)
-            {
-                yield return null;
-            }
-            outputCallback(result.Result);
+            yield return this.Run<List<string>, Dictionary<string, string>>("get_special_tokens", new List<string>(), outputCallback, errorCallback);
         }
 
         //GetPromptTemplate in a coroutine
-        public IEnumerator GetPromptTemplate(Action<string> outputCallback)
+        public IEnumerator GetPromptTemplate(Action<string> outputCallback = null, Action<NPCEngineException> errorCallback = null)
         {
-            var result = this.Run<List<string>, string>("get_prompt_template", new List<string>());
-            while (!result.ResultReady)
-            {
-                yield return null;
-            }
-            outputCallback(result.Result);
+            yield return this.Run<List<string>, string>("get_prompt_template", new List<string>(), outputCallback, errorCallback);
         }
     }
 }

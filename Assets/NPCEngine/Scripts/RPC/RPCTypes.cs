@@ -13,74 +13,21 @@ namespace NPCEngine
     [Serializable()]
     public class NPCEngineException : System.Exception
     {
-
+        public string data;
         public NPCEngineException() : base() { }
-        public NPCEngineException(string message) : base(message) { }
+        public NPCEngineException(string message, string data = "") : base(message) { this.data = data; }
         public NPCEngineException(string message, System.Exception inner) : base(message, inner) { }
 
         // A constructor is needed for serialization when an
         // exception propagates from a remoting server to the client.
         protected NPCEngineException(System.Runtime.Serialization.SerializationInfo info,
-            System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
+            System.Runtime.Serialization.StreamingContext context) : base(info, context) { 
+                this.data = info.GetString("data");
+            }
     }
 
 
-    /// <summary>
-    /// Future result of RPC call.
-    /// </summary>
-    /// <typeparam name="ReturnType"></typeparam>
-    public class ResultFuture<ReturnType>
-    {
-        public bool ResultReady
-        {
-            get
-            {
-                return resultReady;
-            }
-        }
-
-        public ReturnType Result
-        {
-            get
-            {
-                if (resultReady)
-                {
-                    if (error != null)
-                    {
-                        throw error;
-                    }
-                    return result;
-                }
-                else
-                {
-                    throw new NPCEngineException("Computation not finished");
-                }
-            }
-        }
-        public NPCEngineException Error
-        {
-            get
-            {
-                return error;
-            }
-        }
-
-        private ReturnType result;
-        private NPCEngineException error;
-        private bool resultReady = false;
-
-        public void ResultFinishedCallback(ReturnType result)
-        {
-            this.result = result;
-            this.resultReady = true;
-        }
-
-        public void ErrorCallback(NPCEngineException error)
-        {
-            this.resultReady = true;
-            this.error = error;
-        }
-    }
+ 
 }
 
 namespace NPCEngine.RPC
@@ -146,8 +93,19 @@ namespace NPCEngine.RPC
     {
         public int code = 0;
         public String message = "";
+        public RPCResponseErrorData data;
     }
 
+    /// <summary>
+    /// RPC response error data.
+    /// </summary>
+    [Serializable()]
+    public class RPCResponseErrorData
+    {
+        public String type = "";
+        public List<String> args = new List<String>();
+        public String message = "";
+    }
     /// <summary>
     /// Transport layer for RPC enum.
     /// </summary>

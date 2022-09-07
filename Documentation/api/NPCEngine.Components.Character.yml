@@ -6,7 +6,10 @@ items:
   parent: NPCEngine.Components
   children:
   - NPCEngine.Components.Character.Name
+  - NPCEngine.Components.Character.numSampled
   - NPCEngine.Components.Character.Persona
+  - NPCEngine.Components.Character.temperature
+  - NPCEngine.Components.Character.topK
   langs:
   - csharp
   - vb
@@ -17,7 +20,7 @@ items:
   source:
     id: Character
     path: ''
-    startLine: 1327
+    startLine: 1343
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -27,6 +30,7 @@ items:
     content: 'public class Character : ScriptableObject'
     content.vb: >-
       Public Class Character
+
           Inherits ScriptableObject
   inheritance:
   - System.Object
@@ -50,7 +54,7 @@ items:
   source:
     id: Name
     path: ''
-    startLine: 1330
+    startLine: 1346
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -77,7 +81,7 @@ items:
   source:
     id: Persona
     path: ''
-    startLine: 1336
+    startLine: 1352
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -88,6 +92,93 @@ items:
     return:
       type: System.String
     content.vb: Public Persona As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.Components.Character.temperature
+  commentId: F:NPCEngine.Components.Character.temperature
+  id: temperature
+  parent: NPCEngine.Components.Character
+  langs:
+  - csharp
+  - vb
+  name: temperature
+  nameWithType: Character.temperature
+  fullName: NPCEngine.Components.Character.temperature
+  type: Field
+  source:
+    id: temperature
+    path: ''
+    startLine: 1359
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  summary: "\nSampling parameter for the character&apos;s text generation. Higher temperature means more variation in the generated text.\n"
+  example: []
+  syntax:
+    content: public float temperature
+    return:
+      type: System.Single
+    content.vb: Public temperature As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.Components.Character.topK
+  commentId: F:NPCEngine.Components.Character.topK
+  id: topK
+  parent: NPCEngine.Components.Character
+  langs:
+  - csharp
+  - vb
+  name: topK
+  nameWithType: Character.topK
+  fullName: NPCEngine.Components.Character.topK
+  type: Field
+  source:
+    id: topK
+    path: ''
+    startLine: 1366
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  summary: "\nSampling parameter for the character&apos;s text generation. TopK is the number of top tokens to be sampled from.\n"
+  example: []
+  syntax:
+    content: public int topK
+    return:
+      type: System.Int32
+    content.vb: Public topK As Integer
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.Components.Character.numSampled
+  commentId: F:NPCEngine.Components.Character.numSampled
+  id: numSampled
+  parent: NPCEngine.Components.Character
+  langs:
+  - csharp
+  - vb
+  name: numSampled
+  nameWithType: Character.numSampled
+  fullName: NPCEngine.Components.Character.numSampled
+  type: Field
+  source:
+    id: numSampled
+    path: ''
+    startLine: 1372
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  summary: "\nSampling parameter for the character&apos;s text generation. Number of sentences generated and selected from.\n"
+  example: []
+  syntax:
+    content: public int numSampled
+    return:
+      type: System.Int32
+    content.vb: Public numSampled As Integer
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -118,3 +209,17 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32

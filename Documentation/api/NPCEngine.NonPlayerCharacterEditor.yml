@@ -16,7 +16,7 @@ items:
   source:
     id: NonPlayerCharacterEditor
     path: ''
-    startLine: 2660
+    startLine: 2888
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine
@@ -24,6 +24,7 @@ items:
     content: 'public class NonPlayerCharacterEditor : Editor'
     content.vb: >-
       Public Class NonPlayerCharacterEditor
+
           Inherits Editor
   inheritance:
   - System.Object
@@ -47,7 +48,7 @@ items:
   source:
     id: OnInspectorGUI
     path: ''
-    startLine: 2723
+    startLine: 2953
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine
