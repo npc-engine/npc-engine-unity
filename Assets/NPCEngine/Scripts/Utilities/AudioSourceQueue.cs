@@ -24,6 +24,10 @@ namespace NPCEngine.Utility
         {
             while(true)
             {
+                if(audioSource == null)
+                {
+                    break;
+                }
                 if (audioSource.isPlaying == false && clipQueue.Count > 0)
                 {
                     audioSource.clip = clipQueue.Dequeue();
