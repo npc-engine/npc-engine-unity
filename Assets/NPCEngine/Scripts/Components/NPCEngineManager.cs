@@ -76,22 +76,26 @@ namespace NPCEngine.Components
             }
         }
 
-        [SerializeField]
-        [HideInInspector]
-        private int inferenceEngineProcessId;
+        private int inferenceEngineProcessId = -1;
 
         protected int InferenceEngineProcessId
         {
             get
             {
+                #if UNITY_EDITOR
+                if (inferenceEngineProcessId == -1)
+                {
+                    inferenceEngineProcessId = EditorPrefs.GetInt("NPCEngine.InferenceEngineProcessId");
+                }
+                #endif
                 return inferenceEngineProcessId;
             }
             set
             {
                 inferenceEngineProcessId = value;
-#if UNITY_EDITOR
-                EditorUtility.SetDirty(this);
-#endif
+                #if UNITY_EDITOR
+                EditorPrefs.SetInt("NPCEngine.InferenceEngineProcessId", inferenceEngineProcessId);
+                #endif
             }
         }
 
@@ -101,11 +105,11 @@ namespace NPCEngine.Components
         {
             get
             {
-                if (inferenceEngineProcessId != -1 && inferenceEngineProcess == null)
+                if (InferenceEngineProcessId != -1 && inferenceEngineProcess == null)
                 {
                     try
                     {
-                        inferenceEngineProcess = Process.GetProcessById(inferenceEngineProcessId);
+                        inferenceEngineProcess = Process.GetProcessById(InferenceEngineProcessId);
                     }
                     catch (ArgumentException)
                     {
@@ -115,6 +119,7 @@ namespace NPCEngine.Components
                 return (inferenceEngineProcess != null && !inferenceEngineProcess.HasExited);
             }
         }
+
 
         /// <summary>
         /// Starts the inference engine server and managing coroutines.
@@ -205,16 +210,23 @@ namespace NPCEngine.Components
         /// </summary>
         public void StopInferenceEngine()
         {
-            CoroutineUtility.StopCoroutine("UpdateServiceStatuses", this);
-            CoroutineUtility.StopCoroutine("UpdateServices", this);
+            if(!Application.isPlaying)
+            {
+                CoroutineUtility.StopCoroutine("StartAndMonitorServerLife", this);
+                CoroutineUtility.StopCoroutine("UpdateServiceStatuses", this);
+                CoroutineUtility.StopCoroutine("UpdateServices", this);
+            }
             serviceStatuses = null;
             services = null;
             foreach (var service in NPCEngineConfig.Instance.services)
             {
                 GetAPI<Control>().StopServiceNoConfirm(service.name);
             }
-            CoroutineUtility.StartCoroutine(StopInferenceEngineCoroutine(), this, "StopInferenceEngineCoroutine");
-            CoroutineUtility.StopCoroutine("ManagerHealthCheckCoroutine", this);
+            if(!Application.isPlaying)
+            {
+                CoroutineUtility.StartCoroutine(StopInferenceEngineCoroutine(), this, "StopInferenceEngineCoroutine");
+                CoroutineUtility.StopCoroutine("ManagerHealthCheckCoroutine", this);
+            }
         }
 
         private IEnumerator StopInferenceEngineCoroutine()
@@ -255,11 +267,11 @@ namespace NPCEngine.Components
             {
                 try
                 {
-                    var proc = Process.GetProcessById(inferenceEngineProcessId);
+                    var proc = Process.GetProcessById(InferenceEngineProcessId);
                 }
                 catch (ArgumentException e)
                 {
-                    UnityEngine.Debug.LogFormat("InferenceEngine process {0} is not running: {1}", inferenceEngineProcessId, e.Message);
+                    UnityEngine.Debug.LogFormat("InferenceEngine process {0} is not running: {1}", InferenceEngineProcessId, e.Message);
 
                     UnityEngine.Debug.LogError("Fatal error: Dialog InferenceEngine unresponsive");
                     InferenceEngineProcessId = -1;
@@ -272,12 +284,15 @@ namespace NPCEngine.Components
             yield return null;
         }
 
-        private void Start()
-        {
-            CoroutineUtility.StartCoroutine(StartAndMonitorServerLife(), this, "StartAndMonitorServerLife");
+
+        private void Awake() {
+            if(Application.isPlaying)
+            {
+                DontDestroyOnLoad(gameObject);
+            }
         }
 
-        void OnEnable()
+        private void Start()
         {
             if(!CoroutineUtility.IsRunning(this, "UpdateServiceStatuses"))
                 CoroutineUtility.StartCoroutine(UpdateServiceStatuses(), this, "UpdateServiceStatuses");
@@ -285,6 +300,24 @@ namespace NPCEngine.Components
                 CoroutineUtility.StartCoroutine(UpdateServices(), this, "UpdateServices");
             if(!CoroutineUtility.IsRunning(this, "StartAndMonitorServerLife"))
                 CoroutineUtility.StartCoroutine(StartAndMonitorServerLife(), this, "StartAndMonitorServerLife");
+        }
+
+        void OnEnable()
+        {
+            if(CoroutineUtility.IsRunning(this, "UpdateServiceStatuses"))
+                CoroutineUtility.StopCoroutine("UpdateServiceStatuses", this);
+
+            CoroutineUtility.StartCoroutine(UpdateServiceStatuses(), this, "UpdateServiceStatuses");
+
+            if(!CoroutineUtility.IsRunning(this, "UpdateServices"))
+                CoroutineUtility.StopCoroutine("UpdateServices", this);
+
+            CoroutineUtility.StartCoroutine(UpdateServices(), this, "UpdateServices");
+
+            if(!CoroutineUtility.IsRunning(this, "StartAndMonitorServerLife"))
+                CoroutineUtility.StopCoroutine("StartAndMonitorServerLife", this);
+
+            CoroutineUtility.StartCoroutine(StartAndMonitorServerLife(), this, "StartAndMonitorServerLife");
         }
 
         /// <summary>
@@ -394,11 +427,6 @@ namespace NPCEngine.Components
                 });
                 yield return CoroutineUtility.WaitForSeconds(4f);
             }
-        }
-
-        void OnDestroy()
-        {
-            StopInferenceEngine();
         }
     }
 }

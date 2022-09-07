@@ -17,7 +17,7 @@ namespace NPCEngine.Components
 
         void Awake()
         {
-            DontDestroyOnLoad(gameObject);
+            activeDialogAgents = new List<NonPlayerCharacter>();
         }
 
         /// <summary>
@@ -54,7 +54,7 @@ namespace NPCEngine.Components
 
         void Start()
         {
-            activeDialogAgents = new List<NonPlayerCharacter>();
+            
             if (SpeechToText == null)
             {
                 SpeechToText = GetComponent<AbstractSpeechToText>();
@@ -136,8 +136,10 @@ namespace NPCEngine.Components
                 foreach (var da in activeDialogAgents)
                 {
                     var new_magn = (da.gameObject.transform.position - transform.position).magnitude;
-                    if (new_magn < last_magnitude)
+
+                    if (new_magn < last_magnitude && new_magn < MaxRange)
                     {
+                        Debug.Log("Found closest NPC");
                         last_magnitude = new_magn;
                         currentDialog = da;
                     }

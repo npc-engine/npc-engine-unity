@@ -65,6 +65,8 @@ namespace NPCEngine.Components
         /// </summary>
         public abstract AudioClip CurrentNodeNPCAudio();
 
+        public abstract bool IsEnd();
+
     }
 
 }

@@ -11,8 +11,6 @@ namespace NPCEngine.Components
 
     public class NPCEngineSTT : AbstractSpeechToText
     {
-        ResultFuture<string> result;
-
         private void Start()
         {
             StartCoroutine(InitializationCoroutine());
@@ -24,25 +22,9 @@ namespace NPCEngine.Components
             CallSpeechToText();
         }
 
-        private void Update()
-        {
-            if (result != null && result.ResultReady)
-            {
-                if (result.Result == "")
-                {
-                    CallSpeechToText();
-                }
-                else
-                {
-                    SpeechRecognized(result.Result);
-                    result = null;
-                }
-            }
-        }
-
         public void CallSpeechToText()
         {
-            result = NPCEngineManager.Instance.GetAPI<SpeechToText>().ListenFuture(Context);
+            StartCoroutine(NPCEngineManager.Instance.GetAPI<SpeechToText>().Listen(Context));
         }
 
         public override void StartListening()
