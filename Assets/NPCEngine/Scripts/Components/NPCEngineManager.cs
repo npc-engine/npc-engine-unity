@@ -30,6 +30,10 @@ namespace NPCEngine.Components
         {
             get
             {
+                if (services == null)
+                {
+                    services = new List<ServiceMetadata>();
+                }
                 return services;
             }
         }
@@ -65,6 +69,10 @@ namespace NPCEngine.Components
         {
             get
             {
+                if (serviceStatuses == null || serviceStatuses.Count != Services.Count)
+                {
+                    serviceStatuses = new List<ServiceStatus>();
+                }
                 Dictionary<string, ServiceStatus> serviceStatusesDictionary = new Dictionary<string, ServiceStatus>();
                 int i = 0;
                 foreach (ServiceStatus serviceStatus in serviceStatuses)
@@ -169,13 +177,7 @@ namespace NPCEngine.Components
 
                 CoroutineUtility.StartCoroutine(InferenceEngineHealthCheck(), this, "ManagerHealthCheckCoroutine");
 
-                foreach (var service in NPCEngineConfig.Instance.services)
-                {
-                    if (service.start)
-                    {
-                        CoroutineUtility.StartCoroutine(GetAPI<Control>().StartService(service.name), this, "ManagerStartServiceCoroutine_" + service.name);
-                    }
-                }
+                CoroutineUtility.StartCoroutine(StartServices(), this, "StartServicesCoroutine");
             }
             else
             {
@@ -183,6 +185,43 @@ namespace NPCEngine.Components
             }
             CoroutineUtility.StartCoroutine(UpdateServiceStatuses(), this, "UpdateServiceStatuses");
             CoroutineUtility.StartCoroutine(UpdateServices(), this, "UpdateServices");
+        }
+
+        private IEnumerator StartServices()
+        {
+            bool all_started = false;
+            while (!all_started)
+            {
+                all_started = true;
+                foreach (var service in NPCEngineConfig.Instance.services)
+                {
+                    if (service.start)
+                    {
+                        var status = ServiceStatus.UNKNOWN;
+                        ServiceStatusesById.TryGetValue(service.name, out status);
+                        if (status != ServiceStatus.RUNNING)
+                        {
+                            all_started = false;
+                        }
+                    }
+                }
+                if (!all_started)
+                {
+                    yield return TryStartServices();
+                }
+                yield return new WaitForSeconds(1);
+            }
+        }
+
+        private IEnumerator TryStartServices()
+        {
+            foreach (var service in NPCEngineConfig.Instance.services)
+            {
+                if (service.start)
+                {
+                    yield return GetAPI<Control>().StartService(service.name);
+                }
+            }
         }
 
         /// <summary>

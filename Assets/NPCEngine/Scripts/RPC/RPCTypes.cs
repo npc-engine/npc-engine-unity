@@ -13,7 +13,7 @@ namespace NPCEngine
     [Serializable()]
     public class NPCEngineException : System.Exception
     {
-        string data;
+        public string data;
         public NPCEngineException() : base() { }
         public NPCEngineException(string message, string data = "") : base(message) { this.data = data; }
         public NPCEngineException(string message, System.Exception inner) : base(message, inner) { }
