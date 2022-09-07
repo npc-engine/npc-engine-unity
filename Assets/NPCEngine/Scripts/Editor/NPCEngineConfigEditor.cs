@@ -61,8 +61,6 @@ namespace NPCEngine
             }
             GUILayout.EndVertical();
 
-            if(NPCEngineManager.Instance.InferenceEngineRunning) GUI.enabled = false;
-
             VerticalLine(Color.black);
 
             LoadOnStartToggles();
@@ -74,8 +72,6 @@ namespace NPCEngine
             VerticalLine(Color.black);
 
             RemoveButtons();
-
-            GUI.enabled = true;
 
             GUILayout.EndHorizontal();
 
@@ -89,11 +85,22 @@ namespace NPCEngine
             {
                 if (GUILayout.Toggle(service.start, ""))
                 {
+                    var previous = service.start;
                     service.start = true;
+                    if (previous != service.start)
+                    {
+                        EditorUtility.SetDirty(config);
+                    }
+
                 }
                 else
                 {
+                    var previous = service.start;
                     service.start = false;
+                    if (previous != service.start)
+                    {
+                        EditorUtility.SetDirty(config);
+                    }
                 }
                 GUILayout.FlexibleSpace();
             }

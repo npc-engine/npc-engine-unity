@@ -28,6 +28,7 @@ namespace NPCEngine
         SerializedProperty audioSourceQueueProp;
         SerializedProperty voiceIdProp;
         SerializedProperty dialogueSystemProp;
+        SerializedProperty maxLines;
 
 //      Containers for UI data
 //          Foldout flags
@@ -72,12 +73,14 @@ namespace NPCEngine
             OnDialogueEndProp = serializedObject.FindProperty("OnDialogueEnd");
             audioSourceQueueProp = serializedObject.FindProperty("audioSourceQueue");
             dialogueSystemProp = serializedObject.FindProperty("dialogueSystem");
+            maxLines = serializedObject.FindProperty("maxLines");
         }
 
         public override void OnInspectorGUI() {
             showTextGeneration = EditorGUILayout.Foldout(showTextGeneration, "TextGeneration");
             if (showTextGeneration) {
                 EditorGUILayout.PropertyField(characterProp);
+                EditorGUILayout.PropertyField(maxLines);
                 EditorGUILayout.BeginHorizontal();
                 GUILayout.Space(15f);
                 EditorGUILayout.BeginVertical();
@@ -254,7 +257,12 @@ namespace NPCEngine
             };
             string reply = "";
             yield return NPCEngineManager.Instance.GetAPI<FantasyChatbotTextGeneration>()
-                .GenerateReply(context, (output) => { reply = output; }, NPCEngineConfig.Instance.temperature, NPCEngineConfig.Instance.topK);
+                .GenerateReply(context, 
+                    ((NonPlayerCharacter) target).character.temperature, 
+                    ((NonPlayerCharacter) target).character.topK,
+                    ((NonPlayerCharacter) target).character.numSampled,
+                    (output) => { reply = output; }
+                );
             
             testChatHistory += npc.character.Name + ": " + reply + "\n";
             generatingText = false;

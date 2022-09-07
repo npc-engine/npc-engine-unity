@@ -166,4 +166,16 @@ public class VIDEDialogueSystem : AbstractDialogueSystem
         }
     }
 
+    public override bool IsEnd()
+    {
+        if(VD.nodeData != null)
+        {
+            return VD.nodeData.isEnd;
+        }
+        else
+        {
+            return true;
+        }
+    }
+
 }
