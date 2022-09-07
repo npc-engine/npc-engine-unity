@@ -183,8 +183,13 @@ namespace NPCEngine.Components
             {
                 UnityEngine.Debug.LogWarning("Trying to start InferenceEngine that is already running");
             }
-            CoroutineUtility.StartCoroutine(UpdateServiceStatuses(), this, "UpdateServiceStatuses");
-            CoroutineUtility.StartCoroutine(UpdateServices(), this, "UpdateServices");
+
+            if(!CoroutineUtility.IsRunning(this, "UpdateServiceStatuses"))
+                CoroutineUtility.StartCoroutine(UpdateServiceStatuses(), this, "UpdateServiceStatuses");
+            if(!CoroutineUtility.IsRunning(this, "UpdateServices"))
+                CoroutineUtility.StartCoroutine(UpdateServices(), this, "UpdateServices");
+            if(!CoroutineUtility.IsRunning(this, "StartAndMonitorServerLife"))
+                CoroutineUtility.StartCoroutine(StartAndMonitorServerLife(), this, "StartAndMonitorServerLife");
         }
 
         private IEnumerator StartServices()
@@ -313,30 +318,11 @@ namespace NPCEngine.Components
 
         private void Start()
         {
-            if(!CoroutineUtility.IsRunning(this, "UpdateServiceStatuses"))
-                CoroutineUtility.StartCoroutine(UpdateServiceStatuses(), this, "UpdateServiceStatuses");
-            if(!CoroutineUtility.IsRunning(this, "UpdateServices"))
-                CoroutineUtility.StartCoroutine(UpdateServices(), this, "UpdateServices");
-            if(!CoroutineUtility.IsRunning(this, "StartAndMonitorServerLife"))
-                CoroutineUtility.StartCoroutine(StartAndMonitorServerLife(), this, "StartAndMonitorServerLife");
         }
 
         void OnEnable()
         {
-            if(CoroutineUtility.IsRunning(this, "UpdateServiceStatuses"))
-                CoroutineUtility.StopCoroutine("UpdateServiceStatuses", this);
-
-            CoroutineUtility.StartCoroutine(UpdateServiceStatuses(), this, "UpdateServiceStatuses");
-
-            if(!CoroutineUtility.IsRunning(this, "UpdateServices"))
-                CoroutineUtility.StopCoroutine("UpdateServices", this);
-
-            CoroutineUtility.StartCoroutine(UpdateServices(), this, "UpdateServices");
-
-            if(!CoroutineUtility.IsRunning(this, "StartAndMonitorServerLife"))
-                CoroutineUtility.StopCoroutine("StartAndMonitorServerLife", this);
-
-            CoroutineUtility.StartCoroutine(StartAndMonitorServerLife(), this, "StartAndMonitorServerLife");
+            StartInferenceEngine();
         }
 
         /// <summary>

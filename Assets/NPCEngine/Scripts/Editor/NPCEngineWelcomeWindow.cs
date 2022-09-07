@@ -8,7 +8,7 @@ using ICSharpCode.SharpZipLib.Zip;
 using System.Net;
 using System;
 using System.Diagnostics;
-
+using NPCEngine.Components;
 
 #if UNITY_EDITOR
 [InitializeOnLoad]
@@ -261,6 +261,11 @@ public class NPCEngineWelcomeWindow : EditorWindow
 
     IEnumerator DownloadAndExtractNPCEngine(string address)
     {
+        if(NPCEngineManager.Instance.InferenceEngineRunning)
+        {
+            NPCEngineManager.Instance.StopInferenceEngine();
+        }
+        yield return new WaitUntil(() => !NPCEngineManager.Instance.InferenceEngineRunning);
 
         progressId = Progress.Start("Downloading NPC Engine", "Downloading npc-engine", 0);
         Directory.CreateDirectory(Application.streamingAssetsPath);
