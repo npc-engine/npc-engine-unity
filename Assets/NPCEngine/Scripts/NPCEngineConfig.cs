@@ -11,9 +11,13 @@ namespace NPCEngine
     [Serializable]
     public class ServiceConfigDescriptor
     {
+        [SerializeField]
         public string name;
+        [SerializeField]
         public string type;
+        [SerializeField]
         public string path;
+        [SerializeField]
         public bool start;
     }
 
@@ -24,6 +28,7 @@ namespace NPCEngine
     public class NPCEngineConfig : Singleton<NPCEngineConfig>
     {
         [HideInInspector]
+        [SerializeField]
         public List<ServiceConfigDescriptor> services = null;
 
         public ServerType serverType = ServerType.HTTP;
@@ -47,12 +52,6 @@ namespace NPCEngine
         public bool debugLogs = false;
         public bool serverConsole = false;
         public bool connectToExistingServer = false;
-
-        [Header("Text Generation")]
-        [Range(0, 2)]
-        public float temperature = 1;
-        public int topK = 0;
-
         
         [Header("Speech Generation")]
         public int nChunksSpeechGeneration = 7;
