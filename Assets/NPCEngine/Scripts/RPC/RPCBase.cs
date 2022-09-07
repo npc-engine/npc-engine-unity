@@ -77,7 +77,8 @@ namespace NPCEngine.RPC
                                             "Error code: "
                                             + response.error.code.ToString()
                                             + " Message: " + response.error.message
-                                            + " Data: " + response.error.data
+                                            + ". Data.Type: " + response.error.data.type 
+                                            + ", Data.Message: " + response.error.data.message
                                         );
                                     }
                                     return;
