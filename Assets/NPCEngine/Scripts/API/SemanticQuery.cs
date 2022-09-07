@@ -32,32 +32,16 @@ namespace NPCEngine.API
             public List<string> context;
         }
 
-
-        public ResultFuture<List<float>> CompareFuture(string query, List<string> context)
+        public IEnumerable Cache(List<string> queryIds, Action<NPCEngineException> errorCallback = null)
         {
-            var message = new QueryMessage { query = query, context = context };
-            return this.Run<QueryMessage, List<float>>("compare", message);
-        }
-
-
-        public void Cache(List<string> queryIds)
-        {
-            this.Run<List<string>, bool>("compare", queryIds);
+            yield return this.Run<List<string>, bool>("compare", queryIds, (result) => { }, errorCallback);
         }
 
         //Compare in a coroutine   
-        public IEnumerator Compare(string query, List<string> context, Action<List<float>> outputCallback)
+        public IEnumerator Compare(string query, List<string> context, Action<List<float>> outputCallback = null, Action<NPCEngineException> errorCallback = null)
         {
             var message = new QueryMessage { query = query, context = context };
-            var result = this.Run<QueryMessage, List<float>>("compare", message);
-
-            while (!result.ResultReady)
-            {
-                yield return null;
-            }
-            outputCallback(result.Result);
+            yield return this.Run<QueryMessage, List<float>>("compare", message, outputCallback, errorCallback);
         }
-
-
     }
 }

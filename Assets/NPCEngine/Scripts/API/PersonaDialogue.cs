@@ -54,7 +54,8 @@ namespace NPCEngine.API
             string persona2,
             string location_name,
             string location_description,
-            Action<string> outputCallback,
+            Action<string> outputCallback = null,
+            Action<NPCEngineException> errorCallback = null,
             string dialogue_id = null)
         {
             var msg = new StartDialogueMessage
@@ -67,12 +68,7 @@ namespace NPCEngine.API
                 location_description = location_description,
                 dialogue_id = dialogue_id
             };
-            var result = this.Run<StartDialogueMessage, string>("start_dialogue", msg);
-            while (!result.ResultReady)
-            {
-                yield return null;
-            }
-            outputCallback(result.Result);
+            yield return this.Run<StartDialogueMessage, string>("start_dialogue", msg, outputCallback, errorCallback);
         }
 
         /// <summary>
@@ -96,7 +92,8 @@ namespace NPCEngine.API
             string dialogue_id,
             string speaker_id,
             bool update_history,
-            Action<Tuple<string, bool>> outputCallback,
+            Action<Tuple<string, bool>> outputCallback = null,
+            Action<NPCEngineException> errorCallback = null,
             float scripted_threshold = 0.5f,
             List<string> scripted_utterances = null,
             string utterance = null
@@ -111,12 +108,7 @@ namespace NPCEngine.API
                 scripted_threshold = scripted_threshold,
                 update_history = update_history
             };
-            var result = this.Run<StepDialogueMessage, Tuple<string, bool>>("step_dialogue", msg);
-            while (!result.ResultReady)
-            {
-                yield return null;
-            }
-            outputCallback(result.Result);
+            yield return this.Run<StepDialogueMessage, Tuple<string, bool>>("step_dialogue", msg, outputCallback, errorCallback);
         }
     }
 }

@@ -27,16 +27,11 @@ namespace NPCEngine.API
             public List<string> texts;
         }
 
-        public IEnumerator Classify(string query, List<string> context, Action<List<List<float>>> outputCallback)
+        public IEnumerator Classify(string query, List<string> context, Action<List<List<float>>> outputCallback = null, Action<NPCEngineException> errorCallback = null)
         {
             var message = new ClassifyMessage { texts = context };
-            var result = this.Run<ClassifyMessage, List<List<float>>>("classify", message);
+            yield return this.Run<ClassifyMessage, List<List<float>>>("classify", message, outputCallback, errorCallback);
 
-            while (!result.ResultReady)
-            {
-                yield return null;
-            }
-            outputCallback(result.Result);
         }
 
 

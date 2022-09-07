@@ -30,53 +30,20 @@ namespace NPCEngine.API
             public int n_chunks;
         }
 
-
-        public void StartTTSFuture(string speaker_id, string text, int n_chunks = 1)
-        {
-            var msg = new TTSMessage
-            {
-                speaker_id = speaker_id,
-                text = text,
-                n_chunks = n_chunks
-            };
-            this.Run<TTSMessage, string>("tts_start", msg);
-        }
-
-        public ResultFuture<List<string>> GetSpeakerIdsFuture()
-        {
-            return this.Run<List<string>, List<string>>("get_speaker_ids", new List<string>());
-        }
-
-        public ResultFuture<List<float>> GetNextResultFuture()
-        {
-            return this.Run<List<string>, List<float>>("tts_get_results", new List<string>());
-        }
-
-
-        public IEnumerator StartTTS(string voiceId, string line, int n_chunks, Action outputCallback)
+        public IEnumerator StartTTS(string voiceId, string line, int n_chunks, Action outputCallback, Action<NPCEngineException> errorCallback = null)
         {
             var msg = new TTSMessage { speaker_id = voiceId, text = line, n_chunks = n_chunks };
-            var result = this.Run<TTSMessage, bool?>("tts_start", msg);
-
-            while (!result.ResultReady)
-            {
-                yield return null;
-            }
-            var test_result = result.Result;
-            outputCallback();
+            yield return this.Run<TTSMessage, bool?>("tts_start", msg, (ok) => {outputCallback();}, errorCallback);
         }
 
-        public IEnumerator GetNextResult(Action<List<float>> outputCallback)
+        public IEnumerator GetNextResult(Action<List<float>> outputCallback = null, Action<NPCEngineException> errorCallback = null)
         {
-            var result = this.Run<List<string>, List<float>>("tts_get_results", new List<string>());
-            while (!result.ResultReady)
-            {
-                yield return null;
-            }
-            if (result.Error == null)
-            {
-                outputCallback(result.Result);
-            }
+            yield return this.Run<List<string>, List<float>>("tts_get_results", new List<string>(), outputCallback, errorCallback);
+        }
+
+        public IEnumerator GetSpeakerIds(Action<List<string>> outputCallback = null, Action<NPCEngineException> errorCallback = null)
+        {
+            yield return this.Run<List<string>, List<string>>("get_speaker_ids", new List<string>(), outputCallback, errorCallback);
         }
     }
 }
