@@ -197,30 +197,16 @@ namespace NPCEngine.Components
                 {
                     if (service.start)
                     {
-                        var status = ServiceStatus.UNKNOWN;
-                        ServiceStatusesById.TryGetValue(service.name, out status);
-                        if (status != ServiceStatus.RUNNING)
+                        ServiceStatus status = ServiceStatus.UNKNOWN;
+                        yield return GetAPI<Control>().GetServiceStatus(service.name, (x) => { status = x; });
+                        if (status != ServiceStatus.RUNNING || status != ServiceStatus.STARTING)
                         {
+                            yield return GetAPI<Control>().StartService(service.name);
                             all_started = false;
                         }
                     }
                 }
-                if (!all_started)
-                {
-                    yield return TryStartServices();
-                }
                 yield return new WaitForSeconds(1);
-            }
-        }
-
-        private IEnumerator TryStartServices()
-        {
-            foreach (var service in NPCEngineConfig.Instance.services)
-            {
-                if (service.start)
-                {
-                    yield return GetAPI<Control>().StartService(service.name);
-                }
             }
         }
 
@@ -249,29 +235,22 @@ namespace NPCEngine.Components
         /// </summary>
         public void StopInferenceEngine()
         {
-            if(!Application.isPlaying)
-            {
-                CoroutineUtility.StopCoroutine("StartAndMonitorServerLife", this);
-                CoroutineUtility.StopCoroutine("UpdateServiceStatuses", this);
-                CoroutineUtility.StopCoroutine("UpdateServices", this);
-            }
-            serviceStatuses = null;
-            services = null;
-            foreach (var service in NPCEngineConfig.Instance.services)
-            {
-                GetAPI<Control>().StopServiceNoConfirm(service.name);
-            }
-            if(!Application.isPlaying)
-            {
-                CoroutineUtility.StartCoroutine(StopInferenceEngineCoroutine(), this, "StopInferenceEngineCoroutine");
-                CoroutineUtility.StopCoroutine("ManagerHealthCheckCoroutine", this);
-            }
+            CoroutineUtility.StartCoroutine(StopInferenceEngineCoroutine(), this, "StopInferenceEngineCoroutine");
+
+            CoroutineUtility.StopCoroutine("StartAndMonitorServerLife", this);
+            CoroutineUtility.StopCoroutine("UpdateServiceStatuses", this);
+            CoroutineUtility.StopCoroutine("UpdateServices", this);
+            CoroutineUtility.StopCoroutine("ManagerHealthCheckCoroutine", this);
+            
         }
 
         private IEnumerator StopInferenceEngineCoroutine()
         {
             
-            yield return CoroutineUtility.WaitForSeconds(1f);
+            foreach (var service in NPCEngineConfig.Instance.services)
+            {
+                yield return GetAPI<Control>().StopService(service.name);
+            }
 
             try
             {
@@ -279,6 +258,7 @@ namespace NPCEngine.Components
                 {
                     inferenceEngineProcess.CloseMainWindow();
                     inferenceEngineProcess.WaitForExit();
+                    inferenceEngineProcess.Kill();
                     inferenceEngineProcess.Dispose();
                 }
                 else
@@ -400,6 +380,7 @@ namespace NPCEngine.Components
         /// </summary>
         public IEnumerator StartAndMonitorServerLife()
         {
+            yield return CoroutineUtility.WaitForSeconds(1f);
             while (true)
             {
                 if (!InferenceEngineRunning)
