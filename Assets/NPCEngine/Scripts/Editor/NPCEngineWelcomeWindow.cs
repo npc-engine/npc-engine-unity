@@ -36,7 +36,7 @@ public class NPCEngineWelcomeWindow : EditorWindow
     private static GUIStyle headerStyle = new GUIStyle();
     private static GUIStyle descriptionStyle = new GUIStyle();
 
-    private const string npcEngineVersion = "v0.1.6";
+    private const string npcEngineVersion = "v0.1.7";
     private string npcEngineURL = String.Format(
         "https://github.com/npc-engine/npc-engine/releases/download/{0}/npc-engine-{0}.zip", 
         npcEngineVersion
