@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
@@ -293,7 +294,10 @@ namespace NPCEngine.Components
             do
             {
                 audioData = new List<float>();
-                yield return NPCEngineManager.Instance.GetAPI<TextToSpeech>().GetNextResult((output) => { audioData = output; });
+                yield return NPCEngineManager.Instance.GetAPI<TextToSpeech>().GetNextResult(
+                    (output) => { audioData = output; },
+                    (e) => { if(e.Message.Contains("StopIteration")) return; else Debug.LogError(e); }   
+                );
                 if(audioData == null)
                 {
                     break;
