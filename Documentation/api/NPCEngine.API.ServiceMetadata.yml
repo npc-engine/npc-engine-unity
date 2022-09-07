@@ -22,27 +22,17 @@ items:
   source:
     id: ServiceMetadata
     path: ''
-    startLine: 486
+    startLine: 682
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
   summary: "\nData class containing service metadata.\n"
   example: []
   syntax:
-    content: >-
-      [Serializable]
-
-      public class ServiceMetadata
-    content.vb: >-
-      <Serializable>
-
-      Public Class ServiceMetadata
+    content: public class ServiceMetadata
+    content.vb: Public Class ServiceMetadata
   inheritance:
   - System.Object
-  attributes:
-  - type: System.SerializableAttribute
-    ctor: System.SerializableAttribute.#ctor
-    arguments: []
   modifiers.csharp:
   - public
   - class
@@ -63,7 +53,7 @@ items:
   source:
     id: id
     path: ''
-    startLine: 493
+    startLine: 689
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -92,7 +82,7 @@ items:
   source:
     id: service
     path: ''
-    startLine: 498
+    startLine: 694
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -121,7 +111,7 @@ items:
   source:
     id: api_name
     path: ''
-    startLine: 503
+    startLine: 699
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -150,7 +140,7 @@ items:
   source:
     id: path
     path: ''
-    startLine: 508
+    startLine: 704
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -179,7 +169,7 @@ items:
   source:
     id: service_short_description
     path: ''
-    startLine: 513
+    startLine: 709
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -208,7 +198,7 @@ items:
   source:
     id: service_description
     path: ''
-    startLine: 518
+    startLine: 714
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -237,7 +227,7 @@ items:
   source:
     id: readme
     path: ''
-    startLine: 523
+    startLine: 719
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API

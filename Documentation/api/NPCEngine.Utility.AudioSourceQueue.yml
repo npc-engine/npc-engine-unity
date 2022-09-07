@@ -17,7 +17,7 @@ items:
   source:
     id: AudioSourceQueue
     path: ''
-    startLine: 4329
+    startLine: 4620
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Utility
@@ -27,6 +27,7 @@ items:
     content: 'public class AudioSourceQueue : MonoBehaviour'
     content.vb: >-
       Public Class AudioSourceQueue
+
           Inherits MonoBehaviour
   inheritance:
   - System.Object
@@ -50,7 +51,7 @@ items:
   source:
     id: audioSource
     path: ''
-    startLine: 4333
+    startLine: 4624
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Utility
@@ -77,7 +78,7 @@ items:
   source:
     id: PlaySound
     path: ''
-    startLine: 4355
+    startLine: 4650
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Utility
@@ -112,7 +113,6 @@ references:
   nameWithType: System
   fullName: System
 - uid: Global.AudioSource
-  commentId: '!:Global.AudioSource'
   isExternal: true
   name: AudioSource
   nameWithType: AudioSource

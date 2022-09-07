@@ -14,6 +14,7 @@ items:
   - NPCEngine.Components.NPCEngineManager.ServicesById
   - NPCEngine.Components.NPCEngineManager.ServiceStatuses
   - NPCEngine.Components.NPCEngineManager.ServiceStatusesById
+  - NPCEngine.Components.NPCEngineManager.StartAndMonitorServerLife
   - NPCEngine.Components.NPCEngineManager.StartInferenceEngine
   - NPCEngine.Components.NPCEngineManager.StopInferenceEngine
   - NPCEngine.Components.NPCEngineManager.UpdateServices
@@ -28,7 +29,7 @@ items:
   source:
     id: NPCEngineManager
     path: ''
-    startLine: 2004
+    startLine: 2075
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -38,13 +39,10 @@ items:
     content: 'public class NPCEngineManager : Singleton<NPCEngineManager>'
     content.vb: >-
       Public Class NPCEngineManager
+
           Inherits Singleton(Of NPCEngineManager)
   inheritance:
   - System.Object
-  - NPCEngine.Utility.Singleton{NPCEngine.Components.NPCEngineManager}
-  inheritedMembers:
-  - NPCEngine.Utility.Singleton{NPCEngine.Components.NPCEngineManager}.Instance
-  - NPCEngine.Utility.Singleton{NPCEngine.Components.NPCEngineManager}.GetInstance
   modifiers.csharp:
   - public
   - class
@@ -65,7 +63,7 @@ items:
   source:
     id: Services
     path: ''
-    startLine: 2010
+    startLine: 2081
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -73,7 +71,7 @@ items:
     content: public List<ServiceMetadata> Services { get; }
     parameters: []
     return:
-      type: System.Collections.Generic.List{NPCEngine.API.ServiceMetadata}
+      type: System.Collections.Generic.List{ServiceMetadata}
     content.vb: Public ReadOnly Property Services As List(Of ServiceMetadata)
   overload: NPCEngine.Components.NPCEngineManager.Services*
   modifiers.csharp:
@@ -96,7 +94,7 @@ items:
   source:
     id: ServicesById
     path: ''
-    startLine: 2018
+    startLine: 2093
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -104,7 +102,7 @@ items:
     content: public Dictionary<string, ServiceMetadata> ServicesById { get; }
     parameters: []
     return:
-      type: System.Collections.Generic.Dictionary{System.String,NPCEngine.API.ServiceMetadata}
+      type: System.Collections.Generic.Dictionary{System.String,ServiceMetadata}
     content.vb: Public ReadOnly Property ServicesById As Dictionary(Of String, ServiceMetadata)
   overload: NPCEngine.Components.NPCEngineManager.ServicesById*
   modifiers.csharp:
@@ -127,7 +125,7 @@ items:
   source:
     id: ServiceStatuses
     path: ''
-    startLine: 2033
+    startLine: 2108
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -135,7 +133,7 @@ items:
     content: public List<ServiceStatus> ServiceStatuses { get; }
     parameters: []
     return:
-      type: System.Collections.Generic.List{NPCEngine.API.ServiceStatus}
+      type: System.Collections.Generic.List{ServiceStatus}
     content.vb: Public ReadOnly Property ServiceStatuses As List(Of ServiceStatus)
   overload: NPCEngine.Components.NPCEngineManager.ServiceStatuses*
   modifiers.csharp:
@@ -158,7 +156,7 @@ items:
   source:
     id: ServiceStatusesById
     path: ''
-    startLine: 2045
+    startLine: 2120
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -166,7 +164,7 @@ items:
     content: public Dictionary<string, ServiceStatus> ServiceStatusesById { get; }
     parameters: []
     return:
-      type: System.Collections.Generic.Dictionary{System.String,NPCEngine.API.ServiceStatus}
+      type: System.Collections.Generic.Dictionary{System.String,ServiceStatus}
     content.vb: Public ReadOnly Property ServiceStatusesById As Dictionary(Of String, ServiceStatus)
   overload: NPCEngine.Components.NPCEngineManager.ServiceStatusesById*
   modifiers.csharp:
@@ -189,7 +187,7 @@ items:
   source:
     id: InferenceEngineProcessId
     path: ''
-    startLine: 2064
+    startLine: 2141
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -220,7 +218,7 @@ items:
   source:
     id: InferenceEngineRunning
     path: ''
-    startLine: 2081
+    startLine: 2164
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -251,7 +249,7 @@ items:
   source:
     id: StartInferenceEngine
     path: ''
-    startLine: 2103
+    startLine: 2187
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -279,7 +277,7 @@ items:
   source:
     id: DownloadModel
     path: ''
-    startLine: 2168
+    startLine: 2269
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -311,7 +309,7 @@ items:
   source:
     id: StopInferenceEngine
     path: ''
-    startLine: 2187
+    startLine: 2288
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -339,7 +337,7 @@ items:
   source:
     id: GetAPI
     path: ''
-    startLine: 2279
+    startLine: 2399
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -348,6 +346,7 @@ items:
   syntax:
     content: >-
       public T GetAPI<T>()
+
           where T : RPCBase
     typeParameters:
     - id: T
@@ -378,7 +377,7 @@ items:
   source:
     id: GetAPI
     path: ''
-    startLine: 2295
+    startLine: 2415
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -387,6 +386,7 @@ items:
   syntax:
     content: >-
       public T GetAPI<T>(string id)
+
           where T : RPCBase
     parameters:
     - id: id
@@ -407,6 +407,36 @@ items:
   - Public
   fullName.vb: NPCEngine.Components.NPCEngineManager.GetAPI(Of T)(System.String)
   name.vb: GetAPI(Of T)(String)
+- uid: NPCEngine.Components.NPCEngineManager.StartAndMonitorServerLife
+  commentId: M:NPCEngine.Components.NPCEngineManager.StartAndMonitorServerLife
+  id: StartAndMonitorServerLife
+  parent: NPCEngine.Components.NPCEngineManager
+  langs:
+  - csharp
+  - vb
+  name: StartAndMonitorServerLife()
+  nameWithType: NPCEngineManager.StartAndMonitorServerLife()
+  fullName: NPCEngine.Components.NPCEngineManager.StartAndMonitorServerLife()
+  type: Method
+  source:
+    id: StartAndMonitorServerLife
+    path: ''
+    startLine: 2433
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  summary: "\n\n"
+  example: []
+  syntax:
+    content: public IEnumerator StartAndMonitorServerLife()
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Public Function StartAndMonitorServerLife As IEnumerator
+  overload: NPCEngine.Components.NPCEngineManager.StartAndMonitorServerLife*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: NPCEngine.Components.NPCEngineManager.UpdateServiceStatuses
   commentId: M:NPCEngine.Components.NPCEngineManager.UpdateServiceStatuses
   id: UpdateServiceStatuses
@@ -421,7 +451,7 @@ items:
   source:
     id: UpdateServiceStatuses
     path: ''
-    startLine: 2313
+    startLine: 2454
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -451,7 +481,7 @@ items:
   source:
     id: UpdateServices
     path: ''
-    startLine: 2348
+    startLine: 2489
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -480,183 +510,26 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
-- uid: NPCEngine.Utility.Singleton{NPCEngine.Components.NPCEngineManager}
-  commentId: T:NPCEngine.Utility.Singleton{NPCEngine.Components.NPCEngineManager}
-  parent: NPCEngine.Utility
-  definition: NPCEngine.Utility.Singleton`1
-  name: Singleton<NPCEngineManager>
-  nameWithType: Singleton<NPCEngineManager>
-  fullName: NPCEngine.Utility.Singleton<NPCEngine.Components.NPCEngineManager>
-  nameWithType.vb: Singleton(Of NPCEngineManager)
-  fullName.vb: NPCEngine.Utility.Singleton(Of NPCEngine.Components.NPCEngineManager)
-  name.vb: Singleton(Of NPCEngineManager)
-  spec.csharp:
-  - uid: NPCEngine.Utility.Singleton`1
-    name: Singleton
-    nameWithType: Singleton
-    fullName: NPCEngine.Utility.Singleton
-  - name: <
-    nameWithType: <
-    fullName: <
-  - uid: NPCEngine.Components.NPCEngineManager
-    name: NPCEngineManager
-    nameWithType: NPCEngineManager
-    fullName: NPCEngine.Components.NPCEngineManager
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: NPCEngine.Utility.Singleton`1
-    name: Singleton
-    nameWithType: Singleton
-    fullName: NPCEngine.Utility.Singleton
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - uid: NPCEngine.Components.NPCEngineManager
-    name: NPCEngineManager
-    nameWithType: NPCEngineManager
-    fullName: NPCEngine.Components.NPCEngineManager
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: NPCEngine.Utility.Singleton{NPCEngine.Components.NPCEngineManager}.Instance
-  commentId: P:NPCEngine.Utility.Singleton{NPCEngine.Components.NPCEngineManager}.Instance
-  parent: NPCEngine.Utility.Singleton{NPCEngine.Components.NPCEngineManager}
-  definition: NPCEngine.Utility.Singleton`1.Instance
-  name: Instance
-  nameWithType: Singleton<NPCEngineManager>.Instance
-  fullName: NPCEngine.Utility.Singleton<NPCEngine.Components.NPCEngineManager>.Instance
-  nameWithType.vb: Singleton(Of NPCEngineManager).Instance
-  fullName.vb: NPCEngine.Utility.Singleton(Of NPCEngine.Components.NPCEngineManager).Instance
-- uid: NPCEngine.Utility.Singleton{NPCEngine.Components.NPCEngineManager}.GetInstance
-  commentId: M:NPCEngine.Utility.Singleton{NPCEngine.Components.NPCEngineManager}.GetInstance
-  parent: NPCEngine.Utility.Singleton{NPCEngine.Components.NPCEngineManager}
-  definition: NPCEngine.Utility.Singleton`1.GetInstance
-  name: GetInstance()
-  nameWithType: Singleton<NPCEngineManager>.GetInstance()
-  fullName: NPCEngine.Utility.Singleton<NPCEngine.Components.NPCEngineManager>.GetInstance()
-  nameWithType.vb: Singleton(Of NPCEngineManager).GetInstance()
-  fullName.vb: NPCEngine.Utility.Singleton(Of NPCEngine.Components.NPCEngineManager).GetInstance()
-  spec.csharp:
-  - uid: NPCEngine.Utility.Singleton`1.GetInstance
-    name: GetInstance
-    nameWithType: Singleton<NPCEngineManager>.GetInstance
-    fullName: NPCEngine.Utility.Singleton<NPCEngine.Components.NPCEngineManager>.GetInstance
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: NPCEngine.Utility.Singleton`1.GetInstance
-    name: GetInstance
-    nameWithType: Singleton(Of NPCEngineManager).GetInstance
-    fullName: NPCEngine.Utility.Singleton(Of NPCEngine.Components.NPCEngineManager).GetInstance
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
   name: System
   nameWithType: System
   fullName: System
-- uid: NPCEngine.Utility.Singleton`1
-  commentId: T:NPCEngine.Utility.Singleton`1
-  name: Singleton<T>
-  nameWithType: Singleton<T>
-  fullName: NPCEngine.Utility.Singleton<T>
-  nameWithType.vb: Singleton(Of T)
-  fullName.vb: NPCEngine.Utility.Singleton(Of T)
-  name.vb: Singleton(Of T)
-  spec.csharp:
-  - uid: NPCEngine.Utility.Singleton`1
-    name: Singleton
-    nameWithType: Singleton
-    fullName: NPCEngine.Utility.Singleton
-  - name: <
-    nameWithType: <
-    fullName: <
-  - name: T
-    nameWithType: T
-    fullName: T
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: NPCEngine.Utility.Singleton`1
-    name: Singleton
-    nameWithType: Singleton
-    fullName: NPCEngine.Utility.Singleton
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - name: T
-    nameWithType: T
-    fullName: T
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: NPCEngine.Utility
-  commentId: N:NPCEngine.Utility
-  name: NPCEngine.Utility
-  nameWithType: NPCEngine.Utility
-  fullName: NPCEngine.Utility
-- uid: NPCEngine.Utility.Singleton`1.Instance
-  commentId: P:NPCEngine.Utility.Singleton`1.Instance
-  name: Instance
-  nameWithType: Singleton<T>.Instance
-  fullName: NPCEngine.Utility.Singleton<T>.Instance
-  nameWithType.vb: Singleton(Of T).Instance
-  fullName.vb: NPCEngine.Utility.Singleton(Of T).Instance
-- uid: NPCEngine.Utility.Singleton`1.GetInstance
-  commentId: M:NPCEngine.Utility.Singleton`1.GetInstance
-  name: GetInstance()
-  nameWithType: Singleton<T>.GetInstance()
-  fullName: NPCEngine.Utility.Singleton<T>.GetInstance()
-  nameWithType.vb: Singleton(Of T).GetInstance()
-  fullName.vb: NPCEngine.Utility.Singleton(Of T).GetInstance()
-  spec.csharp:
-  - uid: NPCEngine.Utility.Singleton`1.GetInstance
-    name: GetInstance
-    nameWithType: Singleton<T>.GetInstance
-    fullName: NPCEngine.Utility.Singleton<T>.GetInstance
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: NPCEngine.Utility.Singleton`1.GetInstance
-    name: GetInstance
-    nameWithType: Singleton(Of T).GetInstance
-    fullName: NPCEngine.Utility.Singleton(Of T).GetInstance
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: NPCEngine.Components.NPCEngineManager.Services*
   commentId: Overload:NPCEngine.Components.NPCEngineManager.Services
   name: Services
   nameWithType: NPCEngineManager.Services
   fullName: NPCEngine.Components.NPCEngineManager.Services
-- uid: System.Collections.Generic.List{NPCEngine.API.ServiceMetadata}
-  commentId: T:System.Collections.Generic.List{NPCEngine.API.ServiceMetadata}
+- uid: System.Collections.Generic.List{ServiceMetadata}
+  commentId: T:System.Collections.Generic.List{ServiceMetadata}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.List`1
   name: List<ServiceMetadata>
   nameWithType: List<ServiceMetadata>
-  fullName: System.Collections.Generic.List<NPCEngine.API.ServiceMetadata>
+  fullName: System.Collections.Generic.List<ServiceMetadata>
   nameWithType.vb: List(Of ServiceMetadata)
-  fullName.vb: System.Collections.Generic.List(Of NPCEngine.API.ServiceMetadata)
+  fullName.vb: System.Collections.Generic.List(Of ServiceMetadata)
   name.vb: List(Of ServiceMetadata)
   spec.csharp:
   - uid: System.Collections.Generic.List`1
@@ -667,10 +540,11 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: NPCEngine.API.ServiceMetadata
+  - uid: Global.ServiceMetadata
     name: ServiceMetadata
     nameWithType: ServiceMetadata
-    fullName: NPCEngine.API.ServiceMetadata
+    fullName: ServiceMetadata
+    isExternal: true
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -683,10 +557,11 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: NPCEngine.API.ServiceMetadata
+  - uid: Global.ServiceMetadata
     name: ServiceMetadata
     nameWithType: ServiceMetadata
-    fullName: NPCEngine.API.ServiceMetadata
+    fullName: ServiceMetadata
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -740,15 +615,15 @@ references:
   name: ServicesById
   nameWithType: NPCEngineManager.ServicesById
   fullName: NPCEngine.Components.NPCEngineManager.ServicesById
-- uid: System.Collections.Generic.Dictionary{System.String,NPCEngine.API.ServiceMetadata}
-  commentId: T:System.Collections.Generic.Dictionary{System.String,NPCEngine.API.ServiceMetadata}
+- uid: System.Collections.Generic.Dictionary{System.String,ServiceMetadata}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,ServiceMetadata}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.Dictionary`2
   name: Dictionary<String, ServiceMetadata>
   nameWithType: Dictionary<String, ServiceMetadata>
-  fullName: System.Collections.Generic.Dictionary<System.String, NPCEngine.API.ServiceMetadata>
+  fullName: System.Collections.Generic.Dictionary<System.String, ServiceMetadata>
   nameWithType.vb: Dictionary(Of String, ServiceMetadata)
-  fullName.vb: System.Collections.Generic.Dictionary(Of System.String, NPCEngine.API.ServiceMetadata)
+  fullName.vb: System.Collections.Generic.Dictionary(Of System.String, ServiceMetadata)
   name.vb: Dictionary(Of String, ServiceMetadata)
   spec.csharp:
   - uid: System.Collections.Generic.Dictionary`2
@@ -767,10 +642,11 @@ references:
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: NPCEngine.API.ServiceMetadata
+  - uid: Global.ServiceMetadata
     name: ServiceMetadata
     nameWithType: ServiceMetadata
-    fullName: NPCEngine.API.ServiceMetadata
+    fullName: ServiceMetadata
+    isExternal: true
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -791,10 +667,11 @@ references:
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: NPCEngine.API.ServiceMetadata
+  - uid: Global.ServiceMetadata
     name: ServiceMetadata
     nameWithType: ServiceMetadata
-    fullName: NPCEngine.API.ServiceMetadata
+    fullName: ServiceMetadata
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -854,15 +731,15 @@ references:
   name: ServiceStatuses
   nameWithType: NPCEngineManager.ServiceStatuses
   fullName: NPCEngine.Components.NPCEngineManager.ServiceStatuses
-- uid: System.Collections.Generic.List{NPCEngine.API.ServiceStatus}
-  commentId: T:System.Collections.Generic.List{NPCEngine.API.ServiceStatus}
+- uid: System.Collections.Generic.List{ServiceStatus}
+  commentId: T:System.Collections.Generic.List{ServiceStatus}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.List`1
   name: List<ServiceStatus>
   nameWithType: List<ServiceStatus>
-  fullName: System.Collections.Generic.List<NPCEngine.API.ServiceStatus>
+  fullName: System.Collections.Generic.List<ServiceStatus>
   nameWithType.vb: List(Of ServiceStatus)
-  fullName.vb: System.Collections.Generic.List(Of NPCEngine.API.ServiceStatus)
+  fullName.vb: System.Collections.Generic.List(Of ServiceStatus)
   name.vb: List(Of ServiceStatus)
   spec.csharp:
   - uid: System.Collections.Generic.List`1
@@ -873,10 +750,11 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: NPCEngine.API.ServiceStatus
+  - uid: Global.ServiceStatus
     name: ServiceStatus
     nameWithType: ServiceStatus
-    fullName: NPCEngine.API.ServiceStatus
+    fullName: ServiceStatus
+    isExternal: true
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -889,10 +767,11 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: NPCEngine.API.ServiceStatus
+  - uid: Global.ServiceStatus
     name: ServiceStatus
     nameWithType: ServiceStatus
-    fullName: NPCEngine.API.ServiceStatus
+    fullName: ServiceStatus
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -901,15 +780,15 @@ references:
   name: ServiceStatusesById
   nameWithType: NPCEngineManager.ServiceStatusesById
   fullName: NPCEngine.Components.NPCEngineManager.ServiceStatusesById
-- uid: System.Collections.Generic.Dictionary{System.String,NPCEngine.API.ServiceStatus}
-  commentId: T:System.Collections.Generic.Dictionary{System.String,NPCEngine.API.ServiceStatus}
+- uid: System.Collections.Generic.Dictionary{System.String,ServiceStatus}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,ServiceStatus}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.Dictionary`2
   name: Dictionary<String, ServiceStatus>
   nameWithType: Dictionary<String, ServiceStatus>
-  fullName: System.Collections.Generic.Dictionary<System.String, NPCEngine.API.ServiceStatus>
+  fullName: System.Collections.Generic.Dictionary<System.String, ServiceStatus>
   nameWithType.vb: Dictionary(Of String, ServiceStatus)
-  fullName.vb: System.Collections.Generic.Dictionary(Of System.String, NPCEngine.API.ServiceStatus)
+  fullName.vb: System.Collections.Generic.Dictionary(Of System.String, ServiceStatus)
   name.vb: Dictionary(Of String, ServiceStatus)
   spec.csharp:
   - uid: System.Collections.Generic.Dictionary`2
@@ -928,10 +807,11 @@ references:
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: NPCEngine.API.ServiceStatus
+  - uid: Global.ServiceStatus
     name: ServiceStatus
     nameWithType: ServiceStatus
-    fullName: NPCEngine.API.ServiceStatus
+    fullName: ServiceStatus
+    isExternal: true
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -952,10 +832,11 @@ references:
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: NPCEngine.API.ServiceStatus
+  - uid: Global.ServiceStatus
     name: ServiceStatus
     nameWithType: ServiceStatus
-    fullName: NPCEngine.API.ServiceStatus
+    fullName: ServiceStatus
+    isExternal: true
   - name: )
     nameWithType: )
     fullName: )
@@ -1020,11 +901,11 @@ references:
   name: T
   nameWithType: T
   fullName: T
-- uid: NPCEngine.Components.NPCEngineManager.UpdateServiceStatuses*
-  commentId: Overload:NPCEngine.Components.NPCEngineManager.UpdateServiceStatuses
-  name: UpdateServiceStatuses
-  nameWithType: NPCEngineManager.UpdateServiceStatuses
-  fullName: NPCEngine.Components.NPCEngineManager.UpdateServiceStatuses
+- uid: NPCEngine.Components.NPCEngineManager.StartAndMonitorServerLife*
+  commentId: Overload:NPCEngine.Components.NPCEngineManager.StartAndMonitorServerLife
+  name: StartAndMonitorServerLife
+  nameWithType: NPCEngineManager.StartAndMonitorServerLife
+  fullName: NPCEngine.Components.NPCEngineManager.StartAndMonitorServerLife
 - uid: System.Collections.IEnumerator
   commentId: T:System.Collections.IEnumerator
   parent: System.Collections
@@ -1038,6 +919,11 @@ references:
   name: System.Collections
   nameWithType: System.Collections
   fullName: System.Collections
+- uid: NPCEngine.Components.NPCEngineManager.UpdateServiceStatuses*
+  commentId: Overload:NPCEngine.Components.NPCEngineManager.UpdateServiceStatuses
+  name: UpdateServiceStatuses
+  nameWithType: NPCEngineManager.UpdateServiceStatuses
+  fullName: NPCEngine.Components.NPCEngineManager.UpdateServiceStatuses
 - uid: NPCEngine.Components.NPCEngineManager.UpdateServices*
   commentId: Overload:NPCEngine.Components.NPCEngineManager.UpdateServices
   name: UpdateServices

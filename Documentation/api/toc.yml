@@ -10,11 +10,10 @@
     name: NPCEngineConfigEditor
   - uid: NPCEngine.NPCEngineException
     name: NPCEngineException
-  - uid: NPCEngine.ResultFuture`1
-    name: ResultFuture<ReturnType>
-    name.vb: ResultFuture(Of ReturnType)
   - uid: NPCEngine.ServiceConfigDescriptor
     name: ServiceConfigDescriptor
+  - uid: NPCEngine.TTSGeneratorEditor
+    name: TTSGeneratorEditor
 - uid: NPCEngine.API
   name: NPCEngine.API
   items:
@@ -68,6 +67,8 @@
     name: NPCEngineSTT
   - uid: NPCEngine.Components.PlayerCharacter
     name: PlayerCharacter
+  - uid: NPCEngine.Components.TTSGenerator
+    name: TTSGenerator
 - uid: NPCEngine.RPC
   name: NPCEngine.RPC
   items:
@@ -86,6 +87,8 @@
     name.vb: RPCRequestMessage(Of ParametersType)
   - uid: NPCEngine.RPC.RPCResponseError
     name: RPCResponseError
+  - uid: NPCEngine.RPC.RPCResponseErrorData
+    name: RPCResponseErrorData
   - uid: NPCEngine.RPC.RPCResponseMessage`1
     name: RPCResponseMessage<ReturnType>
     name.vb: RPCResponseMessage(Of ReturnType)

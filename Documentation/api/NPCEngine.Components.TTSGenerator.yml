@@ -1,0 +1,415 @@
+### YamlMime:ManagedReference
+items:
+- uid: NPCEngine.Components.TTSGenerator
+  commentId: T:NPCEngine.Components.TTSGenerator
+  id: TTSGenerator
+  parent: NPCEngine.Components
+  children:
+  - NPCEngine.Components.TTSGenerator.audioSource
+  - NPCEngine.Components.TTSGenerator.clip
+  - NPCEngine.Components.TTSGenerator.GenerateAudioCoroutine(Action)
+  - NPCEngine.Components.TTSGenerator.Generating
+  - NPCEngine.Components.TTSGenerator.ResetGeneration
+  - NPCEngine.Components.TTSGenerator.SaveAudio
+  - NPCEngine.Components.TTSGenerator.savePath
+  - NPCEngine.Components.TTSGenerator.Saving
+  - NPCEngine.Components.TTSGenerator.text
+  - NPCEngine.Components.TTSGenerator.voiceId
+  langs:
+  - csharp
+  - vb
+  name: TTSGenerator
+  nameWithType: TTSGenerator
+  fullName: NPCEngine.Components.TTSGenerator
+  type: Class
+  source:
+    id: TTSGenerator
+    path: ''
+    startLine: 2740
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  summary: "\nScript for generating audio files using text to speech.\n"
+  example: []
+  syntax:
+    content: 'public class TTSGenerator : MonoBehaviour'
+    content.vb: >-
+      Public Class TTSGenerator
+
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: NPCEngine.Components.TTSGenerator.savePath
+  commentId: F:NPCEngine.Components.TTSGenerator.savePath
+  id: savePath
+  parent: NPCEngine.Components.TTSGenerator
+  langs:
+  - csharp
+  - vb
+  name: savePath
+  nameWithType: TTSGenerator.savePath
+  fullName: NPCEngine.Components.TTSGenerator.savePath
+  type: Field
+  source:
+    id: savePath
+    path: ''
+    startLine: 2742
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  syntax:
+    content: public string savePath
+    return:
+      type: System.String
+    content.vb: Public savePath As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.Components.TTSGenerator.audioSource
+  commentId: F:NPCEngine.Components.TTSGenerator.audioSource
+  id: audioSource
+  parent: NPCEngine.Components.TTSGenerator
+  langs:
+  - csharp
+  - vb
+  name: audioSource
+  nameWithType: TTSGenerator.audioSource
+  fullName: NPCEngine.Components.TTSGenerator.audioSource
+  type: Field
+  source:
+    id: audioSource
+    path: ''
+    startLine: 2743
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  syntax:
+    content: public AudioSource audioSource
+    return:
+      type: Global.AudioSource
+    content.vb: Public audioSource As AudioSource
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.Components.TTSGenerator.voiceId
+  commentId: F:NPCEngine.Components.TTSGenerator.voiceId
+  id: voiceId
+  parent: NPCEngine.Components.TTSGenerator
+  langs:
+  - csharp
+  - vb
+  name: voiceId
+  nameWithType: TTSGenerator.voiceId
+  fullName: NPCEngine.Components.TTSGenerator.voiceId
+  type: Field
+  source:
+    id: voiceId
+    path: ''
+    startLine: 2744
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  syntax:
+    content: public string voiceId
+    return:
+      type: System.String
+    content.vb: Public voiceId As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.Components.TTSGenerator.clip
+  commentId: F:NPCEngine.Components.TTSGenerator.clip
+  id: clip
+  parent: NPCEngine.Components.TTSGenerator
+  langs:
+  - csharp
+  - vb
+  name: clip
+  nameWithType: TTSGenerator.clip
+  fullName: NPCEngine.Components.TTSGenerator.clip
+  type: Field
+  source:
+    id: clip
+    path: ''
+    startLine: 2746
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  syntax:
+    content: public AudioClip clip
+    return:
+      type: Global.AudioClip
+    content.vb: Public clip As AudioClip
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.Components.TTSGenerator.text
+  commentId: F:NPCEngine.Components.TTSGenerator.text
+  id: text
+  parent: NPCEngine.Components.TTSGenerator
+  langs:
+  - csharp
+  - vb
+  name: text
+  nameWithType: TTSGenerator.text
+  fullName: NPCEngine.Components.TTSGenerator.text
+  type: Field
+  source:
+    id: text
+    path: ''
+    startLine: 2748
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  syntax:
+    content: public string text
+    return:
+      type: System.String
+    content.vb: Public text As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.Components.TTSGenerator.Generating
+  commentId: P:NPCEngine.Components.TTSGenerator.Generating
+  id: Generating
+  parent: NPCEngine.Components.TTSGenerator
+  langs:
+  - csharp
+  - vb
+  name: Generating
+  nameWithType: TTSGenerator.Generating
+  fullName: NPCEngine.Components.TTSGenerator.Generating
+  type: Property
+  source:
+    id: Generating
+    path: ''
+    startLine: 2753
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  syntax:
+    content: public bool Generating { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property Generating As Boolean
+  overload: NPCEngine.Components.TTSGenerator.Generating*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: NPCEngine.Components.TTSGenerator.Saving
+  commentId: P:NPCEngine.Components.TTSGenerator.Saving
+  id: Saving
+  parent: NPCEngine.Components.TTSGenerator
+  langs:
+  - csharp
+  - vb
+  name: Saving
+  nameWithType: TTSGenerator.Saving
+  fullName: NPCEngine.Components.TTSGenerator.Saving
+  type: Property
+  source:
+    id: Saving
+    path: ''
+    startLine: 2763
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  syntax:
+    content: public bool Saving { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property Saving As Boolean
+  overload: NPCEngine.Components.TTSGenerator.Saving*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: NPCEngine.Components.TTSGenerator.ResetGeneration
+  commentId: M:NPCEngine.Components.TTSGenerator.ResetGeneration
+  id: ResetGeneration
+  parent: NPCEngine.Components.TTSGenerator
+  langs:
+  - csharp
+  - vb
+  name: ResetGeneration()
+  nameWithType: TTSGenerator.ResetGeneration()
+  fullName: NPCEngine.Components.TTSGenerator.ResetGeneration()
+  type: Method
+  source:
+    id: ResetGeneration
+    path: ''
+    startLine: 2771
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  syntax:
+    content: public void ResetGeneration()
+    content.vb: Public Sub ResetGeneration
+  overload: NPCEngine.Components.TTSGenerator.ResetGeneration*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.Components.TTSGenerator.GenerateAudioCoroutine(Action)
+  commentId: M:NPCEngine.Components.TTSGenerator.GenerateAudioCoroutine(Action)
+  id: GenerateAudioCoroutine(Action)
+  parent: NPCEngine.Components.TTSGenerator
+  langs:
+  - csharp
+  - vb
+  name: GenerateAudioCoroutine(Action)
+  nameWithType: TTSGenerator.GenerateAudioCoroutine(Action)
+  fullName: NPCEngine.Components.TTSGenerator.GenerateAudioCoroutine(Action)
+  type: Method
+  source:
+    id: GenerateAudioCoroutine
+    path: ''
+    startLine: 2777
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  syntax:
+    content: public IEnumerator GenerateAudioCoroutine(Action generationReady = null)
+    parameters:
+    - id: generationReady
+      type: Global.Action
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Public Function GenerateAudioCoroutine(generationReady As Action = Nothing) As IEnumerator
+  overload: NPCEngine.Components.TTSGenerator.GenerateAudioCoroutine*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.Components.TTSGenerator.SaveAudio
+  commentId: M:NPCEngine.Components.TTSGenerator.SaveAudio
+  id: SaveAudio
+  parent: NPCEngine.Components.TTSGenerator
+  langs:
+  - csharp
+  - vb
+  name: SaveAudio()
+  nameWithType: TTSGenerator.SaveAudio()
+  fullName: NPCEngine.Components.TTSGenerator.SaveAudio()
+  type: Method
+  source:
+    id: SaveAudio
+    path: ''
+    startLine: 2801
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  syntax:
+    content: public IEnumerator SaveAudio()
+    return:
+      type: System.Collections.IEnumerator
+    content.vb: Public Function SaveAudio As IEnumerator
+  overload: NPCEngine.Components.TTSGenerator.SaveAudio*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: NPCEngine.Components
+  commentId: N:NPCEngine.Components
+  name: NPCEngine.Components
+  nameWithType: NPCEngine.Components
+  fullName: NPCEngine.Components
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Global.AudioSource
+  isExternal: true
+  name: AudioSource
+  nameWithType: AudioSource
+  fullName: AudioSource
+- uid: Global.AudioClip
+  isExternal: true
+  name: AudioClip
+  nameWithType: AudioClip
+  fullName: AudioClip
+- uid: NPCEngine.Components.TTSGenerator.Generating*
+  commentId: Overload:NPCEngine.Components.TTSGenerator.Generating
+  name: Generating
+  nameWithType: TTSGenerator.Generating
+  fullName: NPCEngine.Components.TTSGenerator.Generating
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: NPCEngine.Components.TTSGenerator.Saving*
+  commentId: Overload:NPCEngine.Components.TTSGenerator.Saving
+  name: Saving
+  nameWithType: TTSGenerator.Saving
+  fullName: NPCEngine.Components.TTSGenerator.Saving
+- uid: NPCEngine.Components.TTSGenerator.ResetGeneration*
+  commentId: Overload:NPCEngine.Components.TTSGenerator.ResetGeneration
+  name: ResetGeneration
+  nameWithType: TTSGenerator.ResetGeneration
+  fullName: NPCEngine.Components.TTSGenerator.ResetGeneration
+- uid: NPCEngine.Components.TTSGenerator.GenerateAudioCoroutine*
+  commentId: Overload:NPCEngine.Components.TTSGenerator.GenerateAudioCoroutine
+  name: GenerateAudioCoroutine
+  nameWithType: TTSGenerator.GenerateAudioCoroutine
+  fullName: NPCEngine.Components.TTSGenerator.GenerateAudioCoroutine
+- uid: Global.Action
+  isExternal: true
+  name: Action
+  nameWithType: Action
+  fullName: Action
+- uid: System.Collections.IEnumerator
+  commentId: T:System.Collections.IEnumerator
+  parent: System.Collections
+  isExternal: true
+  name: IEnumerator
+  nameWithType: IEnumerator
+  fullName: System.Collections.IEnumerator
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections
+- uid: NPCEngine.Components.TTSGenerator.SaveAudio*
+  commentId: Overload:NPCEngine.Components.TTSGenerator.SaveAudio
+  name: SaveAudio
+  nameWithType: TTSGenerator.SaveAudio
+  fullName: NPCEngine.Components.TTSGenerator.SaveAudio

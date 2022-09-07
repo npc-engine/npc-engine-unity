@@ -9,9 +9,10 @@ items:
   - NPCEngine.Components.AbstractDialogueSystem.CurrentNodeNPCAudio
   - NPCEngine.Components.AbstractDialogueSystem.CurrentNodeNPCLine
   - NPCEngine.Components.AbstractDialogueSystem.CurrentNodeThreshold
-  - NPCEngine.Components.AbstractDialogueSystem.EndDialog
+  - NPCEngine.Components.AbstractDialogueSystem.EndDialogue
   - NPCEngine.Components.AbstractDialogueSystem.GetCurrentNodeOptions
   - NPCEngine.Components.AbstractDialogueSystem.GetCurrentNodeTopics
+  - NPCEngine.Components.AbstractDialogueSystem.IsEnd
   - NPCEngine.Components.AbstractDialogueSystem.Next
   - NPCEngine.Components.AbstractDialogueSystem.SelectOption(System.Int32)
   - NPCEngine.Components.AbstractDialogueSystem.StartDialogue
@@ -25,7 +26,7 @@ items:
   source:
     id: AbstractDialogueSystem
     path: ''
-    startLine: 1200
+    startLine: 1214
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -35,6 +36,7 @@ items:
     content: 'public abstract class AbstractDialogueSystem : MonoBehaviour'
     content.vb: >-
       Public MustInherit Class AbstractDialogueSystem
+
           Inherits MonoBehaviour
   inheritance:
   - System.Object
@@ -60,7 +62,7 @@ items:
   source:
     id: StartDialogue
     path: ''
-    startLine: 1206
+    startLine: 1220
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -76,30 +78,30 @@ items:
   modifiers.vb:
   - Public
   - MustOverride
-- uid: NPCEngine.Components.AbstractDialogueSystem.EndDialog
-  commentId: M:NPCEngine.Components.AbstractDialogueSystem.EndDialog
-  id: EndDialog
+- uid: NPCEngine.Components.AbstractDialogueSystem.EndDialogue
+  commentId: M:NPCEngine.Components.AbstractDialogueSystem.EndDialogue
+  id: EndDialogue
   parent: NPCEngine.Components.AbstractDialogueSystem
   langs:
   - csharp
   - vb
-  name: EndDialog()
-  nameWithType: AbstractDialogueSystem.EndDialog()
-  fullName: NPCEngine.Components.AbstractDialogueSystem.EndDialog()
+  name: EndDialogue()
+  nameWithType: AbstractDialogueSystem.EndDialogue()
+  fullName: NPCEngine.Components.AbstractDialogueSystem.EndDialogue()
   type: Method
   source:
-    id: EndDialog
+    id: EndDialogue
     path: ''
-    startLine: 1211
+    startLine: 1225
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
   summary: "\nWill be called when dialogue ends.\n"
   example: []
   syntax:
-    content: public abstract void EndDialog()
+    content: public abstract void EndDialogue()
     content.vb: Public MustOverride Sub
-  overload: NPCEngine.Components.AbstractDialogueSystem.EndDialog*
+  overload: NPCEngine.Components.AbstractDialogueSystem.EndDialogue*
   modifiers.csharp:
   - public
   - abstract
@@ -120,7 +122,7 @@ items:
   source:
     id: CurrentNodeIsPlayer
     path: ''
-    startLine: 1216
+    startLine: 1230
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -152,7 +154,7 @@ items:
   source:
     id: GetCurrentNodeOptions
     path: ''
-    startLine: 1221
+    startLine: 1235
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -184,7 +186,7 @@ items:
   source:
     id: GetCurrentNodeTopics
     path: ''
-    startLine: 1226
+    startLine: 1240
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -216,7 +218,7 @@ items:
   source:
     id: SelectOption
     path: ''
-    startLine: 1231
+    startLine: 1245
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -249,7 +251,7 @@ items:
   source:
     id: Next
     path: ''
-    startLine: 1236
+    startLine: 1250
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -279,7 +281,7 @@ items:
   source:
     id: CurrentNodeThreshold
     path: ''
-    startLine: 1242
+    startLine: 1256
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -311,7 +313,7 @@ items:
   source:
     id: CurrentNodeNPCLine
     path: ''
-    startLine: 1248
+    startLine: 1262
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -343,7 +345,7 @@ items:
   source:
     id: CurrentNodeNPCAudio
     path: ''
-    startLine: 1254
+    startLine: 1268
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -355,6 +357,36 @@ items:
       type: Global.AudioClip
     content.vb: Public MustOverride Function CurrentNodeNPCAudio As AudioClip
   overload: NPCEngine.Components.AbstractDialogueSystem.CurrentNodeNPCAudio*
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
+- uid: NPCEngine.Components.AbstractDialogueSystem.IsEnd
+  commentId: M:NPCEngine.Components.AbstractDialogueSystem.IsEnd
+  id: IsEnd
+  parent: NPCEngine.Components.AbstractDialogueSystem
+  langs:
+  - csharp
+  - vb
+  name: IsEnd()
+  nameWithType: AbstractDialogueSystem.IsEnd()
+  fullName: NPCEngine.Components.AbstractDialogueSystem.IsEnd()
+  type: Method
+  source:
+    id: IsEnd
+    path: ''
+    startLine: 1270
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.Components
+  syntax:
+    content: public abstract bool IsEnd()
+    return:
+      type: System.Boolean
+    content.vb: Public MustOverride Function IsEnd As Boolean
+  overload: NPCEngine.Components.AbstractDialogueSystem.IsEnd*
   modifiers.csharp:
   - public
   - abstract
@@ -385,11 +417,11 @@ references:
   name: StartDialogue
   nameWithType: AbstractDialogueSystem.StartDialogue
   fullName: NPCEngine.Components.AbstractDialogueSystem.StartDialogue
-- uid: NPCEngine.Components.AbstractDialogueSystem.EndDialog*
-  commentId: Overload:NPCEngine.Components.AbstractDialogueSystem.EndDialog
-  name: EndDialog
-  nameWithType: AbstractDialogueSystem.EndDialog
-  fullName: NPCEngine.Components.AbstractDialogueSystem.EndDialog
+- uid: NPCEngine.Components.AbstractDialogueSystem.EndDialogue*
+  commentId: Overload:NPCEngine.Components.AbstractDialogueSystem.EndDialogue
+  name: EndDialogue
+  nameWithType: AbstractDialogueSystem.EndDialogue
+  fullName: NPCEngine.Components.AbstractDialogueSystem.EndDialogue
 - uid: NPCEngine.Components.AbstractDialogueSystem.CurrentNodeIsPlayer*
   commentId: Overload:NPCEngine.Components.AbstractDialogueSystem.CurrentNodeIsPlayer
   name: CurrentNodeIsPlayer
@@ -552,3 +584,8 @@ references:
   name: AudioClip
   nameWithType: AudioClip
   fullName: AudioClip
+- uid: NPCEngine.Components.AbstractDialogueSystem.IsEnd*
+  commentId: Overload:NPCEngine.Components.AbstractDialogueSystem.IsEnd
+  name: IsEnd
+  nameWithType: AbstractDialogueSystem.IsEnd
+  fullName: NPCEngine.Components.AbstractDialogueSystem.IsEnd

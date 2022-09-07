@@ -7,8 +7,9 @@ items:
   children:
   - NPCEngine.NPCEngineException.#ctor
   - NPCEngine.NPCEngineException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
-  - NPCEngine.NPCEngineException.#ctor(System.String)
   - NPCEngine.NPCEngineException.#ctor(System.String,System.Exception)
+  - NPCEngine.NPCEngineException.#ctor(System.String,System.String)
+  - NPCEngine.NPCEngineException.data
   langs:
   - csharp
   - vb
@@ -19,36 +20,56 @@ items:
   source:
     id: NPCEngineException
     path: ''
-    startLine: 4173
+    startLine: 4506
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine
   summary: "\nGeneral NPC Engine exception.\n"
   example: []
   syntax:
-    content: >-
-      [Serializable]
-
-      public class NPCEngineException : Exception, ISerializable, _Exception
+    content: 'public class NPCEngineException : Exception, ISerializable, _Exception'
     content.vb: >-
-      <Serializable>
-
       Public Class NPCEngineException
+
           Inherits Exception
+
           Implements ISerializable, _Exception
   inheritance:
   - System.Object
   - System.Exception
-  attributes:
-  - type: System.SerializableAttribute
-    ctor: System.SerializableAttribute.#ctor
-    arguments: []
   modifiers.csharp:
   - public
   - class
   modifiers.vb:
   - Public
   - Class
+- uid: NPCEngine.NPCEngineException.data
+  commentId: F:NPCEngine.NPCEngineException.data
+  id: data
+  parent: NPCEngine.NPCEngineException
+  langs:
+  - csharp
+  - vb
+  name: data
+  nameWithType: NPCEngineException.data
+  fullName: NPCEngine.NPCEngineException.data
+  type: Field
+  source:
+    id: data
+    path: ''
+    startLine: 4509
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine
+  syntax:
+    content: public string data
+    return:
+      type: System.String
+    content.vb: Public data As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: NPCEngine.NPCEngineException.#ctor
   commentId: M:NPCEngine.NPCEngineException.#ctor
   id: '#ctor'
@@ -63,7 +84,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 4177
+    startLine: 4510
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine
@@ -75,30 +96,32 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: NPCEngine.NPCEngineException.#ctor(System.String)
-  commentId: M:NPCEngine.NPCEngineException.#ctor(System.String)
-  id: '#ctor(System.String)'
+- uid: NPCEngine.NPCEngineException.#ctor(System.String,System.String)
+  commentId: M:NPCEngine.NPCEngineException.#ctor(System.String,System.String)
+  id: '#ctor(System.String,System.String)'
   parent: NPCEngine.NPCEngineException
   langs:
   - csharp
   - vb
-  name: NPCEngineException(String)
-  nameWithType: NPCEngineException.NPCEngineException(String)
-  fullName: NPCEngine.NPCEngineException.NPCEngineException(System.String)
+  name: NPCEngineException(String, String)
+  nameWithType: NPCEngineException.NPCEngineException(String, String)
+  fullName: NPCEngine.NPCEngineException.NPCEngineException(System.String, System.String)
   type: Constructor
   source:
     id: .ctor
     path: ''
-    startLine: 4178
+    startLine: 4511
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine
   syntax:
-    content: public NPCEngineException(string message)
+    content: public NPCEngineException(string message, string data = "")
     parameters:
     - id: message
       type: System.String
-    content.vb: Public Sub New(message As String)
+    - id: data
+      type: System.String
+    content.vb: Public Sub New(message As String, data As String = "")
   overload: NPCEngine.NPCEngineException.#ctor*
   modifiers.csharp:
   - public
@@ -118,7 +141,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 4179
+    startLine: 4512
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine
@@ -149,7 +172,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 4183
+    startLine: 4516
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine
@@ -192,11 +215,6 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: NPCEngine.NPCEngineException.#ctor*
-  commentId: Overload:NPCEngine.NPCEngineException.#ctor
-  name: NPCEngineException
-  nameWithType: NPCEngineException.NPCEngineException
-  fullName: NPCEngine.NPCEngineException.NPCEngineException
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -204,6 +222,11 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
+- uid: NPCEngine.NPCEngineException.#ctor*
+  commentId: Overload:NPCEngine.NPCEngineException.#ctor
+  name: NPCEngineException
+  nameWithType: NPCEngineException.NPCEngineException
+  fullName: NPCEngine.NPCEngineException.NPCEngineException
 - uid: System.Runtime.Serialization.SerializationInfo
   commentId: T:System.Runtime.Serialization.SerializationInfo
   parent: System.Runtime.Serialization

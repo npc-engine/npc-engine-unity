@@ -6,6 +6,7 @@ items:
   parent: NPCEngine.RPC
   children:
   - NPCEngine.RPC.RPCResponseError.code
+  - NPCEngine.RPC.RPCResponseError.data
   - NPCEngine.RPC.RPCResponseError.message
   langs:
   - csharp
@@ -17,27 +18,17 @@ items:
   source:
     id: RPCResponseError
     path: ''
-    startLine: 4304
+    startLine: 4584
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC
   summary: "\nRPC response error.\n"
   example: []
   syntax:
-    content: >-
-      [Serializable]
-
-      public class RPCResponseError
-    content.vb: >-
-      <Serializable>
-
-      Public Class RPCResponseError
+    content: public class RPCResponseError
+    content.vb: Public Class RPCResponseError
   inheritance:
   - System.Object
-  attributes:
-  - type: System.SerializableAttribute
-    ctor: System.SerializableAttribute.#ctor
-    arguments: []
   modifiers.csharp:
   - public
   - class
@@ -58,7 +49,7 @@ items:
   source:
     id: code
     path: ''
-    startLine: 4307
+    startLine: 4587
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC
@@ -85,15 +76,42 @@ items:
   source:
     id: message
     path: ''
-    startLine: 4308
+    startLine: 4588
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC
   syntax:
-    content: public string message
+    content: public String message
     return:
-      type: System.String
+      type: Global.String
     content.vb: Public message As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: NPCEngine.RPC.RPCResponseError.data
+  commentId: F:NPCEngine.RPC.RPCResponseError.data
+  id: data
+  parent: NPCEngine.RPC.RPCResponseError
+  langs:
+  - csharp
+  - vb
+  name: data
+  nameWithType: RPCResponseError.data
+  fullName: NPCEngine.RPC.RPCResponseError.data
+  type: Field
+  source:
+    id: data
+    path: ''
+    startLine: 4589
+  assemblies:
+  - cs.temp.dll
+  namespace: NPCEngine.RPC
+  syntax:
+    content: public RPCResponseErrorData data
+    return:
+      type: NPCEngine.RPC.RPCResponseErrorData
+    content.vb: Public data As RPCResponseErrorData
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -124,10 +142,14 @@ references:
   name: Int32
   nameWithType: Int32
   fullName: System.Int32
-- uid: System.String
-  commentId: T:System.String
-  parent: System
+- uid: Global.String
   isExternal: true
   name: String
   nameWithType: String
-  fullName: System.String
+  fullName: String
+- uid: NPCEngine.RPC.RPCResponseErrorData
+  commentId: T:NPCEngine.RPC.RPCResponseErrorData
+  parent: NPCEngine.RPC
+  name: RPCResponseErrorData
+  nameWithType: RPCResponseErrorData
+  fullName: NPCEngine.RPC.RPCResponseErrorData

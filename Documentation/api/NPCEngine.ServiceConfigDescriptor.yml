@@ -19,25 +19,15 @@ items:
   source:
     id: ServiceConfigDescriptor
     path: ''
-    startLine: 306
+    startLine: 508
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine
   syntax:
-    content: >-
-      [Serializable]
-
-      public class ServiceConfigDescriptor
-    content.vb: >-
-      <Serializable>
-
-      Public Class ServiceConfigDescriptor
+    content: public class ServiceConfigDescriptor
+    content.vb: Public Class ServiceConfigDescriptor
   inheritance:
   - System.Object
-  attributes:
-  - type: System.SerializableAttribute
-    ctor: System.SerializableAttribute.#ctor
-    arguments: []
   modifiers.csharp:
   - public
   - class
@@ -58,7 +48,7 @@ items:
   source:
     id: name
     path: ''
-    startLine: 309
+    startLine: 512
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine
@@ -85,7 +75,7 @@ items:
   source:
     id: type
     path: ''
-    startLine: 310
+    startLine: 514
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine
@@ -112,7 +102,7 @@ items:
   source:
     id: path
     path: ''
-    startLine: 311
+    startLine: 516
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine
@@ -139,7 +129,7 @@ items:
   source:
     id: start
     path: ''
-    startLine: 312
+    startLine: 518
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine

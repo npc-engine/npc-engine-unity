@@ -16,9 +16,7 @@ items:
   - NPCEngine.NPCEngineConfig.serverConsole
   - NPCEngine.NPCEngineConfig.serverType
   - NPCEngine.NPCEngineConfig.services
-  - NPCEngine.NPCEngineConfig.temperature
   - NPCEngine.NPCEngineConfig.ToBeStarted(System.String)
-  - NPCEngine.NPCEngineConfig.topK
   langs:
   - csharp
   - vb
@@ -29,7 +27,7 @@ items:
   source:
     id: NPCEngineConfig
     path: ''
-    startLine: 315
+    startLine: 521
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine
@@ -37,13 +35,10 @@ items:
     content: 'public class NPCEngineConfig : Singleton<NPCEngineConfig>'
     content.vb: >-
       Public Class NPCEngineConfig
+
           Inherits Singleton(Of NPCEngineConfig)
   inheritance:
   - System.Object
-  - NPCEngine.Utility.Singleton{NPCEngine.NPCEngineConfig}
-  inheritedMembers:
-  - NPCEngine.Utility.Singleton{NPCEngine.NPCEngineConfig}.Instance
-  - NPCEngine.Utility.Singleton{NPCEngine.NPCEngineConfig}.GetInstance
   modifiers.csharp:
   - public
   - class
@@ -64,7 +59,7 @@ items:
   source:
     id: services
     path: ''
-    startLine: 322
+    startLine: 529
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine
@@ -91,7 +86,7 @@ items:
   source:
     id: serverType
     path: ''
-    startLine: 324
+    startLine: 531
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine
@@ -118,7 +113,7 @@ items:
   source:
     id: serverAddress
     path: ''
-    startLine: 326
+    startLine: 533
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine
@@ -145,7 +140,7 @@ items:
   source:
     id: Port
     path: ''
-    startLine: 328
+    startLine: 535
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine
@@ -176,7 +171,7 @@ items:
   source:
     id: modelsPath
     path: ''
-    startLine: 337
+    startLine: 544
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine
@@ -203,7 +198,7 @@ items:
   source:
     id: npcEnginePath
     path: ''
-    startLine: 340
+    startLine: 547
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine
@@ -230,7 +225,7 @@ items:
   source:
     id: debugLogs
     path: ''
-    startLine: 342
+    startLine: 549
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine
@@ -257,7 +252,7 @@ items:
   source:
     id: serverConsole
     path: ''
-    startLine: 343
+    startLine: 550
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine
@@ -284,7 +279,7 @@ items:
   source:
     id: connectToExistingServer
     path: ''
-    startLine: 344
+    startLine: 551
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine
@@ -293,60 +288,6 @@ items:
     return:
       type: System.Boolean
     content.vb: Public connectToExistingServer As Boolean
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: NPCEngine.NPCEngineConfig.temperature
-  commentId: F:NPCEngine.NPCEngineConfig.temperature
-  id: temperature
-  parent: NPCEngine.NPCEngineConfig
-  langs:
-  - csharp
-  - vb
-  name: temperature
-  nameWithType: NPCEngineConfig.temperature
-  fullName: NPCEngine.NPCEngineConfig.temperature
-  type: Field
-  source:
-    id: temperature
-    path: ''
-    startLine: 348
-  assemblies:
-  - cs.temp.dll
-  namespace: NPCEngine
-  syntax:
-    content: public float temperature
-    return:
-      type: System.Single
-    content.vb: Public temperature As Single
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: NPCEngine.NPCEngineConfig.topK
-  commentId: F:NPCEngine.NPCEngineConfig.topK
-  id: topK
-  parent: NPCEngine.NPCEngineConfig
-  langs:
-  - csharp
-  - vb
-  name: topK
-  nameWithType: NPCEngineConfig.topK
-  fullName: NPCEngine.NPCEngineConfig.topK
-  type: Field
-  source:
-    id: topK
-    path: ''
-    startLine: 349
-  assemblies:
-  - cs.temp.dll
-  namespace: NPCEngine
-  syntax:
-    content: public int topK
-    return:
-      type: System.Int32
-    content.vb: Public topK As Integer
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -365,7 +306,7 @@ items:
   source:
     id: nChunksSpeechGeneration
     path: ''
-    startLine: 353
+    startLine: 554
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine
@@ -392,7 +333,7 @@ items:
   source:
     id: ToBeStarted
     path: ''
-    startLine: 364
+    startLine: 565
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine
@@ -423,7 +364,7 @@ items:
   source:
     id: RefreshServices
     path: ''
-    startLine: 382
+    startLine: 583
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine
@@ -448,169 +389,12 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
-- uid: NPCEngine.Utility.Singleton{NPCEngine.NPCEngineConfig}
-  commentId: T:NPCEngine.Utility.Singleton{NPCEngine.NPCEngineConfig}
-  parent: NPCEngine.Utility
-  definition: NPCEngine.Utility.Singleton`1
-  name: Singleton<NPCEngineConfig>
-  nameWithType: Singleton<NPCEngineConfig>
-  fullName: NPCEngine.Utility.Singleton<NPCEngine.NPCEngineConfig>
-  nameWithType.vb: Singleton(Of NPCEngineConfig)
-  fullName.vb: NPCEngine.Utility.Singleton(Of NPCEngine.NPCEngineConfig)
-  name.vb: Singleton(Of NPCEngineConfig)
-  spec.csharp:
-  - uid: NPCEngine.Utility.Singleton`1
-    name: Singleton
-    nameWithType: Singleton
-    fullName: NPCEngine.Utility.Singleton
-  - name: <
-    nameWithType: <
-    fullName: <
-  - uid: NPCEngine.NPCEngineConfig
-    name: NPCEngineConfig
-    nameWithType: NPCEngineConfig
-    fullName: NPCEngine.NPCEngineConfig
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: NPCEngine.Utility.Singleton`1
-    name: Singleton
-    nameWithType: Singleton
-    fullName: NPCEngine.Utility.Singleton
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - uid: NPCEngine.NPCEngineConfig
-    name: NPCEngineConfig
-    nameWithType: NPCEngineConfig
-    fullName: NPCEngine.NPCEngineConfig
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: NPCEngine.Utility.Singleton{NPCEngine.NPCEngineConfig}.Instance
-  commentId: P:NPCEngine.Utility.Singleton{NPCEngine.NPCEngineConfig}.Instance
-  parent: NPCEngine.Utility.Singleton{NPCEngine.NPCEngineConfig}
-  definition: NPCEngine.Utility.Singleton`1.Instance
-  name: Instance
-  nameWithType: Singleton<NPCEngineConfig>.Instance
-  fullName: NPCEngine.Utility.Singleton<NPCEngine.NPCEngineConfig>.Instance
-  nameWithType.vb: Singleton(Of NPCEngineConfig).Instance
-  fullName.vb: NPCEngine.Utility.Singleton(Of NPCEngine.NPCEngineConfig).Instance
-- uid: NPCEngine.Utility.Singleton{NPCEngine.NPCEngineConfig}.GetInstance
-  commentId: M:NPCEngine.Utility.Singleton{NPCEngine.NPCEngineConfig}.GetInstance
-  parent: NPCEngine.Utility.Singleton{NPCEngine.NPCEngineConfig}
-  definition: NPCEngine.Utility.Singleton`1.GetInstance
-  name: GetInstance()
-  nameWithType: Singleton<NPCEngineConfig>.GetInstance()
-  fullName: NPCEngine.Utility.Singleton<NPCEngine.NPCEngineConfig>.GetInstance()
-  nameWithType.vb: Singleton(Of NPCEngineConfig).GetInstance()
-  fullName.vb: NPCEngine.Utility.Singleton(Of NPCEngine.NPCEngineConfig).GetInstance()
-  spec.csharp:
-  - uid: NPCEngine.Utility.Singleton`1.GetInstance
-    name: GetInstance
-    nameWithType: Singleton<NPCEngineConfig>.GetInstance
-    fullName: NPCEngine.Utility.Singleton<NPCEngine.NPCEngineConfig>.GetInstance
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: NPCEngine.Utility.Singleton`1.GetInstance
-    name: GetInstance
-    nameWithType: Singleton(Of NPCEngineConfig).GetInstance
-    fullName: NPCEngine.Utility.Singleton(Of NPCEngine.NPCEngineConfig).GetInstance
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
   name: System
   nameWithType: System
   fullName: System
-- uid: NPCEngine.Utility.Singleton`1
-  commentId: T:NPCEngine.Utility.Singleton`1
-  name: Singleton<T>
-  nameWithType: Singleton<T>
-  fullName: NPCEngine.Utility.Singleton<T>
-  nameWithType.vb: Singleton(Of T)
-  fullName.vb: NPCEngine.Utility.Singleton(Of T)
-  name.vb: Singleton(Of T)
-  spec.csharp:
-  - uid: NPCEngine.Utility.Singleton`1
-    name: Singleton
-    nameWithType: Singleton
-    fullName: NPCEngine.Utility.Singleton
-  - name: <
-    nameWithType: <
-    fullName: <
-  - name: T
-    nameWithType: T
-    fullName: T
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: NPCEngine.Utility.Singleton`1
-    name: Singleton
-    nameWithType: Singleton
-    fullName: NPCEngine.Utility.Singleton
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - name: T
-    nameWithType: T
-    fullName: T
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: NPCEngine.Utility
-  commentId: N:NPCEngine.Utility
-  name: NPCEngine.Utility
-  nameWithType: NPCEngine.Utility
-  fullName: NPCEngine.Utility
-- uid: NPCEngine.Utility.Singleton`1.Instance
-  commentId: P:NPCEngine.Utility.Singleton`1.Instance
-  name: Instance
-  nameWithType: Singleton<T>.Instance
-  fullName: NPCEngine.Utility.Singleton<T>.Instance
-  nameWithType.vb: Singleton(Of T).Instance
-  fullName.vb: NPCEngine.Utility.Singleton(Of T).Instance
-- uid: NPCEngine.Utility.Singleton`1.GetInstance
-  commentId: M:NPCEngine.Utility.Singleton`1.GetInstance
-  name: GetInstance()
-  nameWithType: Singleton<T>.GetInstance()
-  fullName: NPCEngine.Utility.Singleton<T>.GetInstance()
-  nameWithType.vb: Singleton(Of T).GetInstance()
-  fullName.vb: NPCEngine.Utility.Singleton(Of T).GetInstance()
-  spec.csharp:
-  - uid: NPCEngine.Utility.Singleton`1.GetInstance
-    name: GetInstance
-    nameWithType: Singleton<T>.GetInstance
-    fullName: NPCEngine.Utility.Singleton<T>.GetInstance
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: NPCEngine.Utility.Singleton`1.GetInstance
-    name: GetInstance
-    nameWithType: Singleton(Of T).GetInstance
-    fullName: NPCEngine.Utility.Singleton(Of T).GetInstance
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System.Collections.Generic.List{NPCEngine.ServiceConfigDescriptor}
   commentId: T:System.Collections.Generic.List{NPCEngine.ServiceConfigDescriptor}
   parent: System.Collections.Generic
@@ -723,13 +507,6 @@ references:
   name: Boolean
   nameWithType: Boolean
   fullName: System.Boolean
-- uid: System.Single
-  commentId: T:System.Single
-  parent: System
-  isExternal: true
-  name: Single
-  nameWithType: Single
-  fullName: System.Single
 - uid: System.Int32
   commentId: T:System.Int32
   parent: System
