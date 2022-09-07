@@ -21,7 +21,7 @@ namespace NPCEngine.RPC
             this.address = address;
             this.id = id;
         }
-        public abstract IEnumerator DispatchRequestsCoroutine(Queue<Request> taskQueue);
+        public abstract IEnumerator DispatchRequestCoroutine(Request task);
     }
 
     /// <summary>
@@ -47,28 +47,20 @@ namespace NPCEngine.RPC
             NetMQConfig.Cleanup(false);
         }
 
-        public override IEnumerator DispatchRequestsCoroutine(Queue<Request> taskQueue)
+        public override IEnumerator DispatchRequestCoroutine(Request task)
         {
-            while (true)
-            {
-                while (taskQueue.Count == 0)
-                {
-                    yield return null;
-                }
-                Tuple<string, Action<string>> task = taskQueue.Dequeue();
-                if (NPCEngineConfig.Instance.debugLogs) UnityEngine.Debug.Log(string.Format("SendMessage, {0}", task.Item1));
+            if (NPCEngineConfig.Instance.debugLogs) UnityEngine.Debug.Log(string.Format("SendMessage, {0}", task.Item1));
 
-                while (!zmqClient.TrySendFrame(task.Item1))
-                {
-                    yield return null;
-                }
-                string reply;
-                while (!zmqClient.TryReceiveFrameString(out reply))
-                {
-                    yield return null;
-                }
-                task.Item2(reply);
+            while (!zmqClient.TrySendFrame(task.Item1))
+            {
+                yield return null;
             }
+            string reply;
+            while (!zmqClient.TryReceiveFrameString(out reply))
+            {
+                yield return null;
+            }
+            task.Item2(reply);
         }
     }
 
@@ -95,56 +87,56 @@ namespace NPCEngine.RPC
             return requestU;
         }
 
-        public override IEnumerator DispatchRequestsCoroutine(Queue<Request> taskQueue)
+        public override IEnumerator DispatchRequestCoroutine(Request task)
         {
-            while (true)
+            UnityWebRequest request = null;
+            UnityWebRequestAsyncOperation requestOp = null;
+            try
             {
-                while (taskQueue.Count == 0)
-                {
-                    yield return null;
-                }
-                Tuple<string, Action<string>> task = taskQueue.Dequeue();
-                UnityWebRequest request = null;
-                UnityWebRequestAsyncOperation requestOp = null;
-                try
-                {
 
-                    if (NPCEngineConfig.Instance.debugLogs) UnityEngine.Debug.Log(string.Format("SendMessage, {0}", task.Item1));
-                    request = CreateUnityWebRequest(this.id != "" ? ("http://" + address + "/" + this.id) : "http://" + address, task.Item1);
-                    requestOp = request.SendWebRequest();
-                }
-                catch (Exception e)
-                {
-                    UnityEngine.Debug.LogError(e.Message);
-                }
-                while (requestOp != null && !requestOp.isDone)
-                {
-                    yield return null;
-                }
-                string reply;
+                if (NPCEngineConfig.Instance.debugLogs) UnityEngine.Debug.Log(string.Format("SendMessage, {0}", task.Item1));
+                request = CreateUnityWebRequest(this.id != "" ? ("http://" + address + "/" + this.id) : "http://" + address, task.Item1);
+                requestOp = request.SendWebRequest();
+            }
+            catch (Exception e)
+            {
+                UnityEngine.Debug.LogError(e.Message);
+                request.uploadHandler.Dispose();
+                request.downloadHandler.Dispose();
+                request.Dispose();
+            }
+            while (requestOp != null && !requestOp.isDone)
+            {
+                yield return null;
+            }
+            string reply;
 
-                try
+            try
+            {
+                if (request.error != null)
                 {
-                    if (request.error != null)
-                    {
-                        reply = request.error;
-                    }
-                    else
-                    {
-                        reply = request.downloadHandler.text;
-                    }
+                    reply = request.error;
                 }
-                catch (Exception e)
+                else
                 {
-                    UnityEngine.Debug.LogError(e.Message);
-                    reply = "";
+                    reply = request.downloadHandler.text;
                 }
+            }
+            catch (Exception e)
+            {
+                UnityEngine.Debug.LogError(e.Message);
+                reply = "";
+            }
+            finally
+            {
                 if(request != null)
                 {
                     request.Dispose();
-                }
-                task.Item2(reply);
+                }                
             }
+
+            task.Item2(reply);
+
         }
     }
 }
