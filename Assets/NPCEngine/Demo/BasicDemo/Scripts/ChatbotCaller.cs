@@ -53,7 +53,6 @@ public class ChatbotCaller : MonoBehaviour
                 history.Add(new ChatLine { speaker = Name.text, line = result });
                 RenderChat();
                 SendButton.interactable = true;
-                ChatWindow.text += result + "\n";
             }));
         SendButton.interactable = false;
     }

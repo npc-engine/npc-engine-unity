@@ -15,7 +15,6 @@ public class TextToSpeechCaller : MonoBehaviour
 
     public InputField text;
     public InputField speakerId;
-    public Text availableSpeakerIds;
     public InputField nChunks;
 
     // Start is called before the first frame update
@@ -24,7 +23,6 @@ public class TextToSpeechCaller : MonoBehaviour
         StartCoroutine(NPCEngineManager.Instance.GetAPI<TextToSpeech>().GetSpeakerIds((result) =>
         {
             var speakerIds = String.Join(", ", result.ToArray());
-            availableSpeakerIds.text += " " + speakerIds;
         }));
     }
 
