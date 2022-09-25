@@ -45,7 +45,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a4e2dad63d287d47b74a8d98c4cc196, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inferenceEngineProcessId: 19828
 --- !u!114 &1480138458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64,7 +63,7 @@ MonoBehaviour:
     path: D:/UnityProjects/npc engine unity/Assets/StreamingAssets\.models/exported-bart-light-gail-chatbot
     start: 1
   - name: exported-flowtron-waveglow-librispeech-tts
-    type: '"FlowtronTTS"'
+    type: FlowtronTTS
     path: D:/UnityProjects/npc engine unity/Assets/StreamingAssets\.models/exported-flowtron-waveglow-librispeech-tts
     start: 1
   - name: exported-paraphrase-MiniLM-L6-v2
@@ -78,9 +77,7 @@ MonoBehaviour:
   debugLogs: 0
   serverConsole: 0
   connectToExistingServer: 0
-  temperature: 1
-  topK: 40
-  nChunksSpeechGeneration: 7
+  chunkCharacters: 10
 --- !u!114 &1839733435
 MonoBehaviour:
   m_ObjectHideFlags: 0

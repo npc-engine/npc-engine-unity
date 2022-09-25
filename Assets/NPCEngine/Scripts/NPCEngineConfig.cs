@@ -54,7 +54,7 @@ namespace NPCEngine
         public bool connectToExistingServer = false;
         
         [Header("Speech Generation")]
-        public int nChunksSpeechGeneration = 7;
+        public int chunkCharacters = 20;
 
         private void Awake()
         {

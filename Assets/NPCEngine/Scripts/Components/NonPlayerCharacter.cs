@@ -198,6 +198,12 @@ namespace NPCEngine.Components
                     var maxScoreIndex = scores.IndexOf(maxScore);
                     dialogueSystem.SelectOption(maxScoreIndex);
                     dialogueSystem.Next();
+                    if(dialogueSystem.IsEnd())
+                    {
+                        EndDialogue();
+                        UnityEngine.Debug.Log("End of dialogue");
+                        yield break;
+                    }
                     yield return SayNPCLines();
                 }
                 else
@@ -274,6 +280,7 @@ namespace NPCEngine.Components
                 if(dialogueSystem.IsEnd())
                 {
                     EndDialogue();
+                    UnityEngine.Debug.Log("End of dialogue");
                     break;
                 }
                 dialogueSystem.Next();
@@ -288,7 +295,7 @@ namespace NPCEngine.Components
         /// <returns></returns>
         public IEnumerator GenerateAndPlaySpeech(string line)
         {
-            yield return NPCEngineManager.Instance.GetAPI<TextToSpeech>().StartTTS(voiceId, line, NPCEngineConfig.Instance.nChunksSpeechGeneration, () => { });
+            yield return NPCEngineManager.Instance.GetAPI<TextToSpeech>().StartTTS(voiceId, line, (line.Length / NPCEngineConfig.Instance.chunkCharacters), () => { });
 
             List<float> audioData;
             do

@@ -121,6 +121,7 @@ namespace NPCEngine.Components
                     }
                     catch (ArgumentException)
                     {
+                        UnityEngine.Debug.LogWarning("Inference engine process not found.");
                         InferenceEngineProcessId = -1;
                         inferenceEngineProcess = null;
                     }
@@ -128,7 +129,9 @@ namespace NPCEngine.Components
                 try {
                     return (inferenceEngineProcess != null && !inferenceEngineProcess.HasExited);
                 } catch (InvalidOperationException) {
-                    return false;
+                    UnityEngine.Debug.LogWarning("Inference engine process object is no longer relevant.");
+                    inferenceEngineProcess = null;
+                    return InferenceEngineRunning;
                 }
             }
         }
