@@ -122,9 +122,14 @@ namespace NPCEngine.Components
                     catch (ArgumentException)
                     {
                         InferenceEngineProcessId = -1;
+                        inferenceEngineProcess = null;
                     }
                 }
-                return (inferenceEngineProcess != null && !inferenceEngineProcess.HasExited);
+                try {
+                    return (inferenceEngineProcess != null && !inferenceEngineProcess.HasExited);
+                } catch (InvalidOperationException) {
+                    return false;
+                }
             }
         }
 
