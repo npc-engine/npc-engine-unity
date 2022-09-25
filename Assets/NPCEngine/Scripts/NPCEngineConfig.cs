@@ -43,6 +43,34 @@ namespace NPCEngine
             }
         }
 
+        public bool NPCEngineInstalled
+        {
+            get
+            {
+                try{
+                    return File.Exists(Path.Combine(Application.streamingAssetsPath, npcEnginePath));
+                }
+                catch(DirectoryNotFoundException)
+                {
+                    return false;
+                }
+            }
+        }
+
+        public bool ModelsPathExists
+        {
+            get
+            {
+                try{
+                    return Directory.Exists(Path.Combine(Application.streamingAssetsPath, modelsPath));
+                }
+                catch(DirectoryNotFoundException)
+                {
+                    return false;
+                }
+            }
+        }
+
         [Tooltip("Relative to StreamingAssets folder")]
         public string modelsPath = ".models/";
 
@@ -90,6 +118,10 @@ namespace NPCEngine
 
         private List<ServiceConfigDescriptor> GetServicesManually()
         {
+            if(!NPCEngineInstalled || !ModelsPathExists)
+            {
+                return new List<ServiceConfigDescriptor>();
+            }
             // Get all directories in models folder
             string[] directories = Directory.GetDirectories(Path.Combine(Application.streamingAssetsPath, NPCEngineConfig.Instance.modelsPath));
             List<ServiceConfigDescriptor> services = new List<ServiceConfigDescriptor>();

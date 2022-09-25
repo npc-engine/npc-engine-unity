@@ -142,6 +142,11 @@ namespace NPCEngine.Components
         /// </summary>
         public void StartInferenceEngine()
         {
+            if (!NPCEngineConfig.Instance.NPCEngineInstalled)
+            {
+                UnityEngine.Debug.LogWarning("NPCEngine not installed. Please install it before starting the inference engine.");
+                return;
+            }
             if (!InferenceEngineRunning && !NPCEngineConfig.Instance.connectToExistingServer)
             {
                 inferenceEngineProcess = new Process();
@@ -190,6 +195,11 @@ namespace NPCEngine.Components
             else
             {
                 UnityEngine.Debug.LogWarning("Trying to start InferenceEngine that is already running");
+            }
+
+            if(NPCEngineConfig.Instance.connectToExistingServer)
+            {
+                CoroutineUtility.StartCoroutine(StartServices(), this, "StartServicesCoroutine");
             }
 
             if(!CoroutineUtility.IsRunning(this, "UpdateServiceStatuses"))
@@ -248,6 +258,11 @@ namespace NPCEngine.Components
         /// </summary>
         public void StopInferenceEngine()
         {
+            if (!NPCEngineConfig.Instance.NPCEngineInstalled)
+            {
+                UnityEngine.Debug.LogWarning("NPCEngine not installed. Please install it before stopping the inference engine.");
+                return;
+            }
             CoroutineUtility.StartCoroutine(StopInferenceEngineCoroutine(), this, "StopInferenceEngineCoroutine");
 
             CoroutineUtility.StopCoroutine("StartAndMonitorServerLife", this);
