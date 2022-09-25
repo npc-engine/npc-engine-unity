@@ -27,8 +27,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3158342005816763275}
-  m_LocalRotation: {x: -0, y: 0.6706453, z: -0, w: 0.7417782}
-  m_LocalPosition: {x: 61.706, y: 22.506, z: 44.525}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3158342006960408700}
@@ -36,7 +36,7 @@ Transform:
   - {fileID: 3158342007032875296}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 84.234, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3158342005816763277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57,15 +57,18 @@ MonoBehaviour:
   - demo_Narration
   - Example3Dialogue
   - Example4_dialogue
+  - Guard
   - Item_LookUp
   - Laura
   - MrCube
   - NPCOnly
+  - Placeholder
   - QuestChartDemo
+  - Tavernkeeper
   - TriggeredDude
   - VillageElder
   - Witch
-  assignedIndex: 13
+  assignedIndex: 16
   assignedID: 31356
   assignedDialogue: VillageElder
   interactionCount: 0
@@ -105,18 +108,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21b41f7dbbfb6694f8ff2750909bf519, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  temperature: 1
-  topk: 40
-  nChunksTextGeneration: 10
+  maxLines: 10
   defaultThreshold: 0.95
-  characterName: Village Elder Crowford
-  persona: 'I am an elder of Bakhmut village
-
-    I have two sons and a loving wife
-
-    I
-    am old and wise'
-  voiceId: 10
+  character: {fileID: 0}
   history: []
   OnDialogueStart:
     m_PersistentCalls:
@@ -160,6 +154,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnProcessingStart:
+    m_PersistentCalls:
+      m_Calls: []
+  OnProcessingEnd:
+    m_PersistentCalls:
+      m_Calls: []
   OnTopicHintsUpdate:
     m_PersistentCalls:
       m_Calls: []
@@ -191,7 +191,10 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   audioSourceQueue: {fileID: 3158342006960408701}
+  voiceId: 10
   dialogueSystem: {fileID: 5726517429596400417}
+  testLocation: {fileID: 0}
+  testOtherCharacter: {fileID: 0}
 --- !u!114 &3586037370129399460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -425,6 +428,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3158342005816763278}
     m_Modifications:
+    - target: {fileID: 4053080744715794405, guid: b53d5867f2e10e045bd57e62a3fa7b1c, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4053080744715794408, guid: b53d5867f2e10e045bd57e62a3fa7b1c, type: 3}
       propertyPath: m_Name
       value: DialogueUI

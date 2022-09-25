@@ -87,9 +87,9 @@ namespace NPCEngine.API
             {
                 NPCEngineException exc = null;
                 yield return this.Run<List<string>, List<string>>("start_service", new List<string> { service_id, }, (x)=>{}, (e)=>{exc = e;});
-                if(exc != null)
+                if(exc != null && !exc.data.Contains("is already running"))
                 {
-                    Debug.LogWarning(exc.Message + " Retrying... " + i.ToString());
+                    Debug.LogWarning("Error: " + exc.Message + " Details: " + exc.data + " Retrying... " + i.ToString());
                     yield return this.Run<List<string>, List<string>>("start_service", new List<string> { service_id, }, (x)=>{}, (e)=>{exc = e;});
                     continue;
                 }
