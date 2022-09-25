@@ -14,21 +14,24 @@ public class TextToSpeechCaller : MonoBehaviour
     public AudioSourceQueue audioQueue;
 
     public InputField text;
-    public InputField speakerId;
+    public Dropdown speakerId;
     public InputField nChunks;
+
 
     // Start is called before the first frame update
     void OnEnable()
     {
         StartCoroutine(NPCEngineManager.Instance.GetAPI<TextToSpeech>().GetSpeakerIds((result) =>
         {
-            var speakerIds = String.Join(", ", result.ToArray());
+            speakerId.ClearOptions();
+            speakerId.AddOptions(result);
         }));
+        
     }
 
     public void RunTextToSpeech()
     {
-        StartCoroutine(NPCEngineManager.Instance.GetAPI<TextToSpeech>().StartTTS(speakerId.text, text.text, Int32.Parse(nChunks.text), () => { 
+        StartCoroutine(NPCEngineManager.Instance.GetAPI<TextToSpeech>().StartTTS(speakerId.options[speakerId.value].text, text.text, Int32.Parse(nChunks.text), () => { 
             PlaySoundAndStartNext();
         }));
     }
