@@ -295,15 +295,19 @@ namespace NPCEngine.Components
         /// <returns></returns>
         public IEnumerator GenerateAndPlaySpeech(string line)
         {
-            yield return NPCEngineManager.Instance.GetAPI<TextToSpeech>().StartTTS(voiceId, line, (line.Length / NPCEngineConfig.Instance.chunkCharacters), () => { });
-
+            yield return NPCEngineManager.Instance.GetAPI<TextToSpeech>().StartTTS(
+                voiceId, 
+                line, 
+                Mathf.Max(1, line.Length / NPCEngineConfig.Instance.chunkCharacters), 
+                () => { }
+            );
             List<float> audioData;
             do
             {
                 audioData = new List<float>();
                 yield return NPCEngineManager.Instance.GetAPI<TextToSpeech>().GetNextResult(
                     (output) => { audioData = output; },
-                    (e) => { if(e.Message.Contains("StopIteration")) return; else Debug.LogError(e); }   
+                    (e) => { if(e.data.Contains("StopIteration")) return; else Debug.LogError(e); }   
                 );
                 if(audioData == null)
                 {
