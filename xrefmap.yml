@@ -1733,6 +1733,12 @@ references:
   commentId: T:NPCEngine.NPCEngineConfig
   fullName: NPCEngine.NPCEngineConfig
   nameWithType: NPCEngineConfig
+- uid: NPCEngine.NPCEngineConfig.chunkCharacters
+  name: chunkCharacters
+  href: api/NPCEngine.NPCEngineConfig.html#NPCEngine_NPCEngineConfig_chunkCharacters
+  commentId: F:NPCEngine.NPCEngineConfig.chunkCharacters
+  fullName: NPCEngine.NPCEngineConfig.chunkCharacters
+  nameWithType: NPCEngineConfig.chunkCharacters
 - uid: NPCEngine.NPCEngineConfig.connectToExistingServer
   name: connectToExistingServer
   href: api/NPCEngine.NPCEngineConfig.html#NPCEngine_NPCEngineConfig_connectToExistingServer
@@ -1751,12 +1757,32 @@ references:
   commentId: F:NPCEngine.NPCEngineConfig.modelsPath
   fullName: NPCEngine.NPCEngineConfig.modelsPath
   nameWithType: NPCEngineConfig.modelsPath
-- uid: NPCEngine.NPCEngineConfig.nChunksSpeechGeneration
-  name: nChunksSpeechGeneration
-  href: api/NPCEngine.NPCEngineConfig.html#NPCEngine_NPCEngineConfig_nChunksSpeechGeneration
-  commentId: F:NPCEngine.NPCEngineConfig.nChunksSpeechGeneration
-  fullName: NPCEngine.NPCEngineConfig.nChunksSpeechGeneration
-  nameWithType: NPCEngineConfig.nChunksSpeechGeneration
+- uid: NPCEngine.NPCEngineConfig.ModelsPathExists
+  name: ModelsPathExists
+  href: api/NPCEngine.NPCEngineConfig.html#NPCEngine_NPCEngineConfig_ModelsPathExists
+  commentId: P:NPCEngine.NPCEngineConfig.ModelsPathExists
+  fullName: NPCEngine.NPCEngineConfig.ModelsPathExists
+  nameWithType: NPCEngineConfig.ModelsPathExists
+- uid: NPCEngine.NPCEngineConfig.ModelsPathExists*
+  name: ModelsPathExists
+  href: api/NPCEngine.NPCEngineConfig.html#NPCEngine_NPCEngineConfig_ModelsPathExists_
+  commentId: Overload:NPCEngine.NPCEngineConfig.ModelsPathExists
+  isSpec: "True"
+  fullName: NPCEngine.NPCEngineConfig.ModelsPathExists
+  nameWithType: NPCEngineConfig.ModelsPathExists
+- uid: NPCEngine.NPCEngineConfig.NPCEngineInstalled
+  name: NPCEngineInstalled
+  href: api/NPCEngine.NPCEngineConfig.html#NPCEngine_NPCEngineConfig_NPCEngineInstalled
+  commentId: P:NPCEngine.NPCEngineConfig.NPCEngineInstalled
+  fullName: NPCEngine.NPCEngineConfig.NPCEngineInstalled
+  nameWithType: NPCEngineConfig.NPCEngineInstalled
+- uid: NPCEngine.NPCEngineConfig.NPCEngineInstalled*
+  name: NPCEngineInstalled
+  href: api/NPCEngine.NPCEngineConfig.html#NPCEngine_NPCEngineConfig_NPCEngineInstalled_
+  commentId: Overload:NPCEngine.NPCEngineConfig.NPCEngineInstalled
+  isSpec: "True"
+  fullName: NPCEngine.NPCEngineConfig.NPCEngineInstalled
+  nameWithType: NPCEngineConfig.NPCEngineInstalled
 - uid: NPCEngine.NPCEngineConfig.npcEnginePath
   name: npcEnginePath
   href: api/NPCEngine.NPCEngineConfig.html#NPCEngine_NPCEngineConfig_npcEnginePath
