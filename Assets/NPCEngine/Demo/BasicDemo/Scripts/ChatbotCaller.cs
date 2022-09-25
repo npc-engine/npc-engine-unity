@@ -10,6 +10,7 @@ using NPCEngine.Components;
 
 public class ChatbotCaller : MonoBehaviour
 {
+    public InputField NumBeams;
     public InputField Temperature;
     public InputField TopK;
     public InputField LocationName;
@@ -48,7 +49,7 @@ public class ChatbotCaller : MonoBehaviour
         };
         StartCoroutine(
             NPCEngineManager.Instance.GetAPI<FantasyChatbotTextGeneration>()
-            .GenerateReply(context, float.Parse(Temperature.text), Int32.Parse(TopK.text), 3, (result) =>
+            .GenerateReply(context, float.Parse(Temperature.text), Int32.Parse(TopK.text), Int32.Parse(NumBeams.text), (result) =>
             {
                 history.Add(new ChatLine { speaker = Name.text, line = result });
                 RenderChat();
