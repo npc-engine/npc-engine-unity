@@ -83,35 +83,113 @@
 <p>First lets go through and play around with the basic demo scene.<br>Its located under this path: <code>NPCEngine/Demo/BasicDemo/Basic.unity</code></p>
 <p>When you start it the first thing you&#39;ll see is this screen:
 <img src="../resources/basic_scene_first.png" alt="First thing seen when starting basic demo scene"></p>
-<p>Since NPC Engine is a server that starts alongside unity and it&#39;s startup takes some time you can keep it running between playtests and just connect to existing one.  </p>
-<p>When started you should see some Unity logs regarding connecting to the server as well as server console pop up with server logs. This behaviour is debug only and can be turned off by disabling <code>Server Console</code> and <code>Debug Logs</code> flags in <code>NPCEngineManager</code> game object.
-<img src="../resources/npc_engine_console.png" alt="Server console"></p>
-<p>If NPC Engine starts successfully, menu options will become interactable and you will be able to play around with different APIs.</p>
+<p>Buttons will be enabled almost immediately because NPC Engine process is started when the NPCEngineManager component is created. You don&#39;t have to worry about it most of the time, but keep in mind that when running game build it will take 10-30 seconds to start so make sure to e.g. add loading screens and wait until it&#39;s started.</p>
 <h2 id="available-api-demos">Available API Demos</h2>
 <h3 id="text-to-speech-demo">Text To Speech Demo</h3>
 <p>This demo shows you the API that allows you to generate speech from text with multiple voices.</p>
 <p><img src="../resources/text_to_speech.png" alt="Text to speech"></p>
+<h3 id="using-tts-in-c">Using TTS in C#</h3>
+<p>You can see how TTS API is used in <code>Assets\NPCEngine\Demo\BasicDemo\Scripts\TextToSpeechCaller.cs</code>.</p>
+<p>There are two coroutines to be called:</p>
+<ul>
+<li>First one is <code>TextToSpeechCaller.StartTTS</code> which takes a voice ID, text, number of chunks to generate speech in and a callback function that will be called when TTS is initialized. Note that there are no computations done in this function, it just creates required resources internally and returns immediately. </li>
+</ul>
+<p>All the parameters are self explanatory except the number of chunks:</p>
+<p>Our TTS API is able to split the audio generated into parts and compute them sequentially, so that there is less latency during speech generation. The larger number of chunks means smaller latency, but the quality might suffer if chunks are too small. Good strategy is to select number of chunks based on the length of the text.</p>
+<p>Depending on your hardware TTS solution might not be faster than realtime and would not produce next chunk in time to play it. In this case just pick 1 chunk and it will produce it in one go. </p>
+<pre><code class="lang-csharp">    StartCoroutine(
+        NPCEngineManager.Instance.GetAPI&lt;TextToSpeech&gt;().StartTTS(
+            speakerId.options[speakerId.value].text, 
+            text.text, 
+            Int32.Parse(nChunks.text), 
+            () =&gt; { 
+                PlaySoundAndStartNext();
+            }
+        )
+    );
+</code></pre><ul>
+<li>Second one is <code>TextToSpeechCaller.PlaySoundAndStartNext</code>. It generates a part of speech audio and calls the callback function with a result as an argument.
+When all the speech chunks were retrieved it will return an error with <code>StopIteration</code> in a message. </li>
+</ul>
+<pre><code class="lang-csharp">    StartCoroutine(
+        NPCEngineManager.Instance.GetAPI&lt;TextToSpeech&gt;().GetNextResult(
+            (result) =&gt;
+            {
+                var clip = AudioClip.Create(&quot;tmp&quot;, result.Count, 1, 22050, false);
+                clip.SetData(result.ToArray(), 0);
+                audioQueue.PlaySound(clip);
+                PlaySoundAndStartNext();
+            }
+        )
+    );
+</code></pre><p>Note how we use <code>audioQueue</code> to play the audio. It&#39;s a simple wrapper around Unity&#39;s <code>AudioSource</code> that allows us to play multiple audio clips in a row when previous is finished, so that if TTS produces audio faster than it can be played output is a smooth generated audio.</p>
 <h3 id="fantasy-chatbot-demo">Fantasy Chatbot Demo</h3>
 <p>This demo shows you the chatbot API. It enables you to describe a fantasy character via the chatbot context and chat with your character.</p>
-<p>Right now it&#39;s available only in the single style (Fantasy) but we are already working on the other chatbot neural networks with diffirent styles as well as tutorials how to train them yourself.</p>
+<p>Right now it&#39;s available only in the single style (Fantasy) but we are already working on the other chatbot neural networks with different styles as well as tutorials how to train them yourself.</p>
 <p>This demo greets you with a context in which you can fill in different descriptions to simulate different situations.</p>
 <p><img src="../resources/chatbot_context.png" alt="Chatbot context demo"></p>
 <p><code>Chat</code> button will take you to chat window where you can talk to the character defined in the context.</p>
 <p><img src="../resources/chatbot_chat.png" alt="Chatbot chat demo"></p>
 <p><code>Clear history</code> button will restart the dialogue.</p>
+<h3 id="using-chatbot-in-c">Using Chatbot in C#</h3>
+<p>You can see how Chatbot API is used in <code>Assets\NPCEngine\Demo\BasicDemo\Scripts\ChatbotCaller.cs</code>.</p>
+<p>Each chatbot neural network will probably expect different context to be supplied.   </p>
+<p>You can also create your own context and train your own chatbot neural network but it will be covered in the other tutorials. We have already provided a context for the default fantasy chatbot and defined it&#39;s API in <code>Assets\NPCEngine\Scripts\Components\ChatbotContexts\FantasyChatbotTextGeneration.cs</code>.</p>
+<p>To generate chatbot replies you will have to populate the context in a similar way it&#39;s done in ChatbotCaller demo.</p>
+<pre><code class="lang-csharp">
+    var context = new FantasyChatbotContext
+    {
+        location = Location.text,
+        location_name = LocationName.text,
+        name = Name.text,
+        persona = Persona.text,
+        other_name = OtherName.text,
+        other_persona = OtherPersona.text,
+        history = this.history
+    };
+</code></pre><p>Then you can call the coroutine for generating a reply. Result will appear in the callback. </p>
+<pre><code class="lang-csharp">    StartCoroutine(
+        NPCEngineManager.Instance
+        .GetAPI&lt;FantasyChatbotTextGeneration&gt;()
+        .GenerateReply(
+            context, 
+            float.Parse(Temperature.text), 
+            Int32.Parse(TopK.text), 
+            Int32.Parse(NumBeams.text), 
+            (result) =&gt;
+            {
+                history.Add(new ChatLine { speaker = Name.text, line = result });
+                RenderChat();
+                SendButton.interactable = true;
+            }
+        )
+    );
+</code></pre><p>Important parameters are:</p>
+<ul>
+<li>Temperature - controls the randomness of the generated text. The higher the temperature the more random the text. </li>
+<li>TopK - controls diversity. The higher the TopK the less probable tokens can appear in the text.</li>
+<li>Number of beams - api then generates multiple replies and selects the best one. The higher the number the better the reply but the slower the generation is.</li>
+</ul>
 <h3 id="semantic-similarity-demo">Semantic Similarity Demo</h3>
 <p>This demo shows the API to compare two sentences via their meaning.<br>When you press <code>Compute Similarity</code> the score is shown in range of <code>[-1,1]</code></p>
 <p>Where -1 means that phrases are completely unrelated and 1 is that phrases are the same. Usually the most meaningful scores are in the range <code>[0,1]</code> </p>
 <p><img src="../resources/semantic_similarity.png" alt="Semantic similarity demo"></p>
-<h3 id="speech-to-text-demo">Speech To Text Demo</h3>
-<p>This demo shows you the API that allows you to listen to microphone input and 
-transcribe it to text.</p>
-<p>Just press <code>Listen</code> button and say something into the microphone.<br>Note that it will only work in low noise environment and with slow articulate speech.</p>
-<p>!!! note &quot;Experimental API&quot;
-    This API is very WIP and experimental so it&#39;s performance is not yet ready
-    for any production usage, you should use 
-    <a href="https://docs.unity3d.com/ScriptReference/Windows.Speech.DictationRecognizer.html">UnityEngine.Windows.Speech.DictationRecognizer</a> instead</p>
-<p><img src="../resources/speech_to_text.png" alt="Text to speech"></p>
+<h3 id="using-semantic-similarity-in-c">Using Semantic Similarity in C#</h3>
+<p>You can see how Semantic Similarity API is used in <code>Assets\NPCEngine\Demo\BasicDemo\Scripts\SemanticSimilarityCaller.cs</code>.</p>
+<p>It is the simplest one to use, just call a coroutine:</p>
+<pre><code class="lang-csharp">    StartCoroutine(
+        NPCEngineManager.Instance
+        .GetAPI&lt;SemanticQuery&gt;()
+        .Compare(
+            prompt1.text, 
+            new List&lt;string&gt; { prompt2.text }, 
+            (result) =&gt;
+            {
+                outputLabel.text = result[0].ToString();
+            }
+        )
+    );
+</code></pre><p>All the sentences are cached so repeated calls with the same sentences will be much faster.</p>
 <h2 id="server-lifetime">Server Lifetime</h2>
 <p>Two most important NPC Engine classes are: </p>
 <ul>
@@ -119,11 +197,13 @@ transcribe it to text.</p>
 <li>Script that contains configuration <code>NPCEngine.NPCEngineConfig</code></li>
 </ul>
 <p>They are attached to <code>NPCEngineManager</code> game object in the scene.<br>NPC Engine core server&#39;s main purpose is to run inference services. 
-When started it will start a core service called <code>control</code> that allows to control and get information about other services.
-Services mentioned as <code>Load on start</code> in the configuration are started as well.</p>
-<p>Stopped services do not take up any resources (except disk space).
-Services configs will take effect on start/restart.
-Each service is blocking only for its own thread and does not block other services.</p>
+Usually it is started automatically and you don&#39;t have to worry about it.</p>
+<p>You can control what services to start in the configuration script.
+You can also start or stop services via <code>Control</code> API</p>
+<pre><code class="lang-csharp">    NPCEngineManager.Instance.GetAPI&lt;Control&gt;().StartService(&quot;exported-paraphrase-MiniLM-L6-v2&quot;);
+    NPCEngineManager.Instance.GetAPI&lt;Control&gt;().StopService(&quot;exported-paraphrase-MiniLM-L6-v2&quot;);
+</code></pre><p>Stopped services do not take up any resources (except the disk space).
+Services configs will take effect on start/restart.</p>
 </article>
           </div>
           
