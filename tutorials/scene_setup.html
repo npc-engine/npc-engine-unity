@@ -113,9 +113,7 @@
 <p>You can read about all the other NonPlayerCharacter parameters in the <a href="../api/NPCEngine.Components.NonPlayerCharacter.html">API docs</a>. </p>
 <h2 id="testing">Testing</h2>
 <h3 id="starting-npc-engine-server">Starting NPC Engine server</h3>
-<p>To test the character we must first start NPC Engine server and services. Go to NPCEngineManager inspector and press the big button.</p>
-<p><img src="../resources/setup-scene-manager-start.PNG" alt="Big Button"></p>
-<p>Make sure that you have some services for text generation, TTS and semantic similarity, and that they are running.</p>
+<p>Make sure that you have some services for text generation, TTS and semantic similarity, and that they are running. (it&#39;s ok if you don&#39;t have <code>exported-nemo-quartznet-ctc-stt</code> service as it&#39;s deprecated for now and is not required)</p>
 <p><img src="../resources/setup-scene-manager-started.PNG" alt="Services"></p>
 <h3 id="testing-character">Testing character</h3>
 <p>To test chat you must also provide two more scripted objects: <code>Character</code> that you would impersonate during test and a <code>Location</code> where the dialogue is happening.</p>
