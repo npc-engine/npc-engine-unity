@@ -13,7 +13,7 @@ items:
   - NPCEngine.Components.DialogueUI.highlightColor
   - NPCEngine.Components.DialogueUI.lineLimit
   - NPCEngine.Components.DialogueUI.uiObject
-  - NPCEngine.Components.DialogueUI.UpdateTopics(System.Collections.Generic.List{System.String})
+  - NPCEngine.Components.DialogueUI.UpdateTopics(List{System.String})
   - NPCEngine.Components.DialogueUI.usernameColor
   langs:
   - csharp
@@ -25,7 +25,7 @@ items:
   source:
     id: DialogueUI
     path: ''
-    startLine: 1422
+    startLine: 1218
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -35,7 +35,6 @@ items:
     content: 'public class DialogueUI : MonoBehaviour'
     content.vb: >-
       Public Class DialogueUI
-
           Inherits MonoBehaviour
   inheritance:
   - System.Object
@@ -59,7 +58,7 @@ items:
   source:
     id: uiObject
     path: ''
-    startLine: 1428
+    startLine: 1224
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -88,7 +87,7 @@ items:
   source:
     id: lineLimit
     path: ''
-    startLine: 1433
+    startLine: 1229
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -117,7 +116,7 @@ items:
   source:
     id: dialogueHistory
     path: ''
-    startLine: 1440
+    startLine: 1236
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -146,7 +145,7 @@ items:
   source:
     id: dialogueTopics
     path: ''
-    startLine: 1446
+    startLine: 1242
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -175,7 +174,7 @@ items:
   source:
     id: usernameColor
     path: ''
-    startLine: 1448
+    startLine: 1244
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -202,7 +201,7 @@ items:
   source:
     id: highlightColor
     path: ''
-    startLine: 1449
+    startLine: 1245
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -229,7 +228,7 @@ items:
   source:
     id: AddLine
     path: ''
-    startLine: 1457
+    startLine: 1253
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -248,21 +247,21 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: NPCEngine.Components.DialogueUI.UpdateTopics(System.Collections.Generic.List{System.String})
-  commentId: M:NPCEngine.Components.DialogueUI.UpdateTopics(System.Collections.Generic.List{System.String})
-  id: UpdateTopics(System.Collections.Generic.List{System.String})
+- uid: NPCEngine.Components.DialogueUI.UpdateTopics(List{System.String})
+  commentId: M:NPCEngine.Components.DialogueUI.UpdateTopics(List{System.String})
+  id: UpdateTopics(List{System.String})
   parent: NPCEngine.Components.DialogueUI
   langs:
   - csharp
   - vb
   name: UpdateTopics(List<String>)
   nameWithType: DialogueUI.UpdateTopics(List<String>)
-  fullName: NPCEngine.Components.DialogueUI.UpdateTopics(System.Collections.Generic.List<System.String>)
+  fullName: NPCEngine.Components.DialogueUI.UpdateTopics(List<System.String>)
   type: Method
   source:
     id: UpdateTopics
     path: ''
-    startLine: 1477
+    startLine: 1273
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -272,7 +271,7 @@ items:
     content: public void UpdateTopics(List<string> topics)
     parameters:
     - id: topics
-      type: System.Collections.Generic.List{System.String}
+      type: Global.List{System.String}
     content.vb: Public Sub UpdateTopics(topics As List(Of String))
   overload: NPCEngine.Components.DialogueUI.UpdateTopics*
   nameWithType.vb: DialogueUI.UpdateTopics(List(Of String))
@@ -280,7 +279,7 @@ items:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: NPCEngine.Components.DialogueUI.UpdateTopics(System.Collections.Generic.List(Of System.String))
+  fullName.vb: NPCEngine.Components.DialogueUI.UpdateTopics(List(Of System.String))
   name.vb: UpdateTopics(List(Of String))
 - uid: NPCEngine.Components.DialogueUI.Enable
   commentId: M:NPCEngine.Components.DialogueUI.Enable
@@ -296,7 +295,7 @@ items:
   source:
     id: Enable
     path: ''
-    startLine: 1485
+    startLine: 1281
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -324,7 +323,7 @@ items:
   source:
     id: Disable
     path: ''
-    startLine: 1495
+    startLine: 1291
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -403,21 +402,20 @@ references:
   name: UpdateTopics
   nameWithType: DialogueUI.UpdateTopics
   fullName: NPCEngine.Components.DialogueUI.UpdateTopics
-- uid: System.Collections.Generic.List{System.String}
-  commentId: T:System.Collections.Generic.List{System.String}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.List`1
+- uid: Global.List{System.String}
+  commentId: '!:Global.List{System.String}'
+  definition: Global.List`1
   name: List<String>
   nameWithType: List<String>
-  fullName: System.Collections.Generic.List<System.String>
+  fullName: List<System.String>
   nameWithType.vb: List(Of String)
-  fullName.vb: System.Collections.Generic.List(Of System.String)
+  fullName.vb: List(Of System.String)
   name.vb: List(Of String)
   spec.csharp:
-  - uid: System.Collections.Generic.List`1
+  - uid: Global.List`1
     name: List
     nameWithType: List
-    fullName: System.Collections.Generic.List
+    fullName: List
     isExternal: true
   - name: <
     nameWithType: <
@@ -431,10 +429,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.List`1
+  - uid: Global.List`1
     name: List
     nameWithType: List
-    fullName: System.Collections.Generic.List
+    fullName: List
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -447,51 +445,44 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Collections.Generic.List`1
-  commentId: T:System.Collections.Generic.List`1
+- uid: Global.List`1
   isExternal: true
-  name: List<T>
-  nameWithType: List<T>
-  fullName: System.Collections.Generic.List<T>
-  nameWithType.vb: List(Of T)
-  fullName.vb: System.Collections.Generic.List(Of T)
-  name.vb: List(Of T)
+  name: List<>
+  nameWithType: List<>
+  fullName: List<>
+  nameWithType.vb: List(Of )
+  fullName.vb: List(Of )
+  name.vb: List(Of )
   spec.csharp:
-  - uid: System.Collections.Generic.List`1
+  - uid: Global.List`1
     name: List
     nameWithType: List
-    fullName: System.Collections.Generic.List
+    fullName: List
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: T
-    nameWithType: T
-    fullName: T
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.List`1
+  - uid: Global.List`1
     name: List
     nameWithType: List
-    fullName: System.Collections.Generic.List
+    fullName: List
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: T
-    nameWithType: T
-    fullName: T
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Collections.Generic
-  commentId: N:System.Collections.Generic
-  isExternal: true
-  name: System.Collections.Generic
-  nameWithType: System.Collections.Generic
-  fullName: System.Collections.Generic
 - uid: NPCEngine.Components.DialogueUI.Enable*
   commentId: Overload:NPCEngine.Components.DialogueUI.Enable
   name: Enable

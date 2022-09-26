@@ -20,7 +20,7 @@ items:
   source:
     id: RPCResponseMessage
     path: ''
-    startLine: 4562
+    startLine: 4383
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC
@@ -56,7 +56,7 @@ items:
   source:
     id: id
     path: ''
-    startLine: 4565
+    startLine: 4386
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC
@@ -85,7 +85,7 @@ items:
   source:
     id: jsonrpc
     path: ''
-    startLine: 4566
+    startLine: 4387
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC
@@ -114,7 +114,7 @@ items:
   source:
     id: result
     path: ''
-    startLine: 4568
+    startLine: 4389
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC
@@ -143,7 +143,7 @@ items:
   source:
     id: error
     path: ''
-    startLine: 4570
+    startLine: 4391
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC
@@ -172,7 +172,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 4572
+    startLine: 4393
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC

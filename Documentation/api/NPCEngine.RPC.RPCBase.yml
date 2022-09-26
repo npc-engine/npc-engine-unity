@@ -18,7 +18,7 @@ items:
   source:
     id: RPCBase
     path: ''
-    startLine: 4216
+    startLine: 4037
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC
@@ -26,7 +26,6 @@ items:
     content: 'public abstract class RPCBase : MonoBehaviour'
     content.vb: >-
       Public MustInherit Class RPCBase
-
           Inherits MonoBehaviour
   inheritance:
   - System.Object
@@ -52,7 +51,7 @@ items:
   source:
     id: serviceId
     path: ''
-    startLine: 4223
+    startLine: 4044
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC
@@ -79,14 +78,13 @@ items:
   source:
     id: Run
     path: ''
-    startLine: 4228
+    startLine: 4049
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC
   syntax:
     content: >-
       public IEnumerator Run<P, R>(String methodName, P parameters, Action<R> resultCallback, Action<NPCEngineException> errorCallback)
-
           where P : new()
     parameters:
     - id: methodName
@@ -125,7 +123,7 @@ items:
   source:
     id: UpdateServerType
     path: ''
-    startLine: 4330
+    startLine: 4151
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC

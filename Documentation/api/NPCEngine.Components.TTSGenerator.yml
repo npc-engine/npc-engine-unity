@@ -25,7 +25,7 @@ items:
   source:
     id: TTSGenerator
     path: ''
-    startLine: 2740
+    startLine: 2556
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -35,7 +35,6 @@ items:
     content: 'public class TTSGenerator : MonoBehaviour'
     content.vb: >-
       Public Class TTSGenerator
-
           Inherits MonoBehaviour
   inheritance:
   - System.Object
@@ -59,7 +58,7 @@ items:
   source:
     id: savePath
     path: ''
-    startLine: 2742
+    startLine: 2558
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -86,7 +85,7 @@ items:
   source:
     id: audioSource
     path: ''
-    startLine: 2743
+    startLine: 2559
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -113,7 +112,7 @@ items:
   source:
     id: voiceId
     path: ''
-    startLine: 2744
+    startLine: 2560
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -140,7 +139,7 @@ items:
   source:
     id: clip
     path: ''
-    startLine: 2746
+    startLine: 2562
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -167,7 +166,7 @@ items:
   source:
     id: text
     path: ''
-    startLine: 2748
+    startLine: 2564
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -194,7 +193,7 @@ items:
   source:
     id: Generating
     path: ''
-    startLine: 2753
+    startLine: 2569
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -225,7 +224,7 @@ items:
   source:
     id: Saving
     path: ''
-    startLine: 2763
+    startLine: 2579
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -256,7 +255,7 @@ items:
   source:
     id: ResetGeneration
     path: ''
-    startLine: 2771
+    startLine: 2587
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -282,7 +281,7 @@ items:
   source:
     id: GenerateAudioCoroutine
     path: ''
-    startLine: 2777
+    startLine: 2593
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -313,7 +312,7 @@ items:
   source:
     id: SaveAudio
     path: ''
-    startLine: 2801
+    startLine: 2617
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components

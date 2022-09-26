@@ -6,7 +6,7 @@ items:
   parent: NPCEngine.API
   children:
   - NPCEngine.API.Control.GetServiceMetadata(System.String,Action{NPCEngine.API.ServiceMetadata},Action{NPCEngine.NPCEngineException})
-  - NPCEngine.API.Control.GetServicesMetadata(Action{System.Collections.Generic.List{NPCEngine.API.ServiceMetadata}},Action{NPCEngine.NPCEngineException})
+  - NPCEngine.API.Control.GetServicesMetadata(Action{List{NPCEngine.API.ServiceMetadata}},Action{NPCEngine.NPCEngineException})
   - NPCEngine.API.Control.GetServiceStatus(System.String,Action{NPCEngine.API.ServiceStatus},Action{NPCEngine.NPCEngineException})
   - NPCEngine.API.Control.RestartService(System.String,Action{NPCEngine.API.ServiceStatus},Action{NPCEngine.NPCEngineException})
   - NPCEngine.API.Control.StartService(System.String)
@@ -23,7 +23,7 @@ items:
   source:
     id: Control
     path: ''
-    startLine: 740
+    startLine: 536
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -33,7 +33,6 @@ items:
     content: 'public class Control : RPCBase'
     content.vb: >-
       Public Class Control
-
           Inherits RPCBase
   inheritance:
   - System.Object
@@ -57,7 +56,7 @@ items:
   source:
     id: StartService
     path: ''
-    startLine: 753
+    startLine: 549
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -88,7 +87,7 @@ items:
   source:
     id: StopService
     path: ''
-    startLine: 770
+    startLine: 566
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -119,7 +118,7 @@ items:
   source:
     id: GetServiceStatus
     path: ''
-    startLine: 792
+    startLine: 588
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -162,7 +161,7 @@ items:
   source:
     id: RestartService
     path: ''
-    startLine: 830
+    startLine: 626
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -204,7 +203,7 @@ items:
   source:
     id: GetServiceMetadata
     path: ''
-    startLine: 843
+    startLine: 639
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -233,21 +232,21 @@ items:
   - Public
   fullName.vb: NPCEngine.API.Control.GetServiceMetadata(System.String, Action(Of NPCEngine.API.ServiceMetadata), Action(Of NPCEngine.NPCEngineException))
   name.vb: GetServiceMetadata(String, Action(Of ServiceMetadata), Action(Of NPCEngineException))
-- uid: NPCEngine.API.Control.GetServicesMetadata(Action{System.Collections.Generic.List{NPCEngine.API.ServiceMetadata}},Action{NPCEngine.NPCEngineException})
-  commentId: M:NPCEngine.API.Control.GetServicesMetadata(Action{System.Collections.Generic.List{NPCEngine.API.ServiceMetadata}},Action{NPCEngine.NPCEngineException})
-  id: GetServicesMetadata(Action{System.Collections.Generic.List{NPCEngine.API.ServiceMetadata}},Action{NPCEngine.NPCEngineException})
+- uid: NPCEngine.API.Control.GetServicesMetadata(Action{List{NPCEngine.API.ServiceMetadata}},Action{NPCEngine.NPCEngineException})
+  commentId: M:NPCEngine.API.Control.GetServicesMetadata(Action{List{NPCEngine.API.ServiceMetadata}},Action{NPCEngine.NPCEngineException})
+  id: GetServicesMetadata(Action{List{NPCEngine.API.ServiceMetadata}},Action{NPCEngine.NPCEngineException})
   parent: NPCEngine.API.Control
   langs:
   - csharp
   - vb
   name: GetServicesMetadata(Action<List<ServiceMetadata>>, Action<NPCEngineException>)
   nameWithType: Control.GetServicesMetadata(Action<List<ServiceMetadata>>, Action<NPCEngineException>)
-  fullName: NPCEngine.API.Control.GetServicesMetadata(Action<System.Collections.Generic.List<NPCEngine.API.ServiceMetadata>>, Action<NPCEngine.NPCEngineException>)
+  fullName: NPCEngine.API.Control.GetServicesMetadata(Action<List<NPCEngine.API.ServiceMetadata>>, Action<NPCEngine.NPCEngineException>)
   type: Method
   source:
     id: GetServicesMetadata
     path: ''
-    startLine: 855
+    startLine: 651
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -257,7 +256,7 @@ items:
     content: public IEnumerator GetServicesMetadata(Action<List<ServiceMetadata>> outputCallback = null, Action<NPCEngineException> errorCallback = null)
     parameters:
     - id: outputCallback
-      type: Global.Action{System.Collections.Generic.List{NPCEngine.API.ServiceMetadata}}
+      type: Global.Action{List{NPCEngine.API.ServiceMetadata}}
       description: Callback action to consume results.
     - id: errorCallback
       type: Global.Action{NPCEngine.NPCEngineException}
@@ -271,7 +270,7 @@ items:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: NPCEngine.API.Control.GetServicesMetadata(Action(Of System.Collections.Generic.List(Of NPCEngine.API.ServiceMetadata)), Action(Of NPCEngine.NPCEngineException))
+  fullName.vb: NPCEngine.API.Control.GetServicesMetadata(Action(Of List(Of NPCEngine.API.ServiceMetadata)), Action(Of NPCEngine.NPCEngineException))
   name.vb: GetServicesMetadata(Action(Of List(Of ServiceMetadata)), Action(Of NPCEngineException))
 - uid: NPCEngine.API.Control.StopServiceNoConfirm(System.String)
   commentId: M:NPCEngine.API.Control.StopServiceNoConfirm(System.String)
@@ -287,7 +286,7 @@ items:
   source:
     id: StopServiceNoConfirm
     path: ''
-    startLine: 862
+    startLine: 658
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -318,7 +317,7 @@ items:
   source:
     id: StartServiceNoConfirm
     path: ''
-    startLine: 867
+    startLine: 663
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -565,14 +564,14 @@ references:
   name: GetServicesMetadata
   nameWithType: Control.GetServicesMetadata
   fullName: NPCEngine.API.Control.GetServicesMetadata
-- uid: Global.Action{System.Collections.Generic.List{NPCEngine.API.ServiceMetadata}}
-  commentId: '!:Global.Action{System.Collections.Generic.List{NPCEngine.API.ServiceMetadata}}'
+- uid: Global.Action{List{NPCEngine.API.ServiceMetadata}}
+  commentId: '!:Global.Action{List{NPCEngine.API.ServiceMetadata}}'
   definition: Global.Action`1
   name: Action<List<ServiceMetadata>>
   nameWithType: Action<List<ServiceMetadata>>
-  fullName: Action<System.Collections.Generic.List<NPCEngine.API.ServiceMetadata>>
+  fullName: Action<List<NPCEngine.API.ServiceMetadata>>
   nameWithType.vb: Action(Of List(Of ServiceMetadata))
-  fullName.vb: Action(Of System.Collections.Generic.List(Of NPCEngine.API.ServiceMetadata))
+  fullName.vb: Action(Of List(Of NPCEngine.API.ServiceMetadata))
   name.vb: Action(Of List(Of ServiceMetadata))
   spec.csharp:
   - uid: Global.Action`1
@@ -583,10 +582,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: System.Collections.Generic.List`1
+  - uid: Global.List`1
     name: List
     nameWithType: List
-    fullName: System.Collections.Generic.List
+    fullName: List
     isExternal: true
   - name: <
     nameWithType: <
@@ -610,10 +609,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: System.Collections.Generic.List`1
+  - uid: Global.List`1
     name: List
     nameWithType: List
-    fullName: System.Collections.Generic.List
+    fullName: List
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '

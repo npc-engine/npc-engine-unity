@@ -19,7 +19,7 @@ items:
   source:
     id: ServiceConfigDescriptor
     path: ''
-    startLine: 508
+    startLine: 272
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine
@@ -48,7 +48,7 @@ items:
   source:
     id: name
     path: ''
-    startLine: 512
+    startLine: 276
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine
@@ -75,7 +75,7 @@ items:
   source:
     id: type
     path: ''
-    startLine: 514
+    startLine: 278
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine
@@ -102,7 +102,7 @@ items:
   source:
     id: path
     path: ''
-    startLine: 516
+    startLine: 280
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine
@@ -129,7 +129,7 @@ items:
   source:
     id: start
     path: ''
-    startLine: 518
+    startLine: 282
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine

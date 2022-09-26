@@ -20,7 +20,7 @@ items:
   source:
     id: RPCRequestMessage
     path: ''
-    startLine: 4539
+    startLine: 4360
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC
@@ -29,7 +29,6 @@ items:
   syntax:
     content: >-
       public class RPCRequestMessage<ParametersType>
-
           where ParametersType : new()
     typeParameters:
     - id: ParametersType
@@ -60,7 +59,7 @@ items:
   source:
     id: id
     path: ''
-    startLine: 4543
+    startLine: 4364
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC
@@ -89,7 +88,7 @@ items:
   source:
     id: jsonrpc
     path: ''
-    startLine: 4544
+    startLine: 4365
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC
@@ -118,7 +117,7 @@ items:
   source:
     id: method
     path: ''
-    startLine: 4545
+    startLine: 4366
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC
@@ -147,7 +146,7 @@ items:
   source:
     id: parameters
     path: ''
-    startLine: 4548
+    startLine: 4369
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC
@@ -176,7 +175,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 4550
+    startLine: 4371
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC

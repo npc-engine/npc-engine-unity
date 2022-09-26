@@ -19,7 +19,7 @@ items:
   source:
     id: RequestDispatcherImpl
     path: ''
-    startLine: 4366
+    startLine: 4187
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC
@@ -55,7 +55,7 @@ items:
   source:
     id: id
     path: ''
-    startLine: 4368
+    startLine: 4189
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC
@@ -82,7 +82,7 @@ items:
   source:
     id: address
     path: ''
-    startLine: 4369
+    startLine: 4190
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC
@@ -109,7 +109,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 4370
+    startLine: 4191
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC
@@ -140,7 +140,7 @@ items:
   source:
     id: DispatchRequestCoroutine
     path: ''
-    startLine: 4375
+    startLine: 4196
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC

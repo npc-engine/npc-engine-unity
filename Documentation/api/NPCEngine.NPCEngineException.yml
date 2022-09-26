@@ -20,7 +20,7 @@ items:
   source:
     id: NPCEngineException
     path: ''
-    startLine: 4506
+    startLine: 4327
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine
@@ -30,9 +30,7 @@ items:
     content: 'public class NPCEngineException : Exception, ISerializable, _Exception'
     content.vb: >-
       Public Class NPCEngineException
-
           Inherits Exception
-
           Implements ISerializable, _Exception
   inheritance:
   - System.Object
@@ -57,7 +55,7 @@ items:
   source:
     id: data
     path: ''
-    startLine: 4509
+    startLine: 4330
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine
@@ -84,7 +82,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 4510
+    startLine: 4331
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine
@@ -110,7 +108,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 4511
+    startLine: 4332
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine
@@ -141,7 +139,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 4512
+    startLine: 4333
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine
@@ -172,7 +170,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 4516
+    startLine: 4337
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine

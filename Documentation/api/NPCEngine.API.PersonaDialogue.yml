@@ -6,7 +6,7 @@ items:
   parent: NPCEngine.API
   children:
   - NPCEngine.API.PersonaDialogue.StartDialogue(System.String,System.String,System.String,System.String,System.String,System.String,Action{System.String},Action{NPCEngine.NPCEngineException},System.String)
-  - NPCEngine.API.PersonaDialogue.StepDialogue(System.String,System.String,System.Boolean,Action{Tuple{System.String,System.Boolean}},Action{NPCEngine.NPCEngineException},System.Single,System.Collections.Generic.List{System.String},System.String)
+  - NPCEngine.API.PersonaDialogue.StepDialogue(System.String,System.String,System.Boolean,Action{Tuple{System.String,System.Boolean}},Action{NPCEngine.NPCEngineException},System.Single,List{System.String},System.String)
   langs:
   - csharp
   - vb
@@ -17,7 +17,7 @@ items:
   source:
     id: PersonaDialogue
     path: ''
-    startLine: 887
+    startLine: 683
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -27,7 +27,6 @@ items:
     content: 'public class PersonaDialogue : RPCBase'
     content.vb: >-
       Public Class PersonaDialogue
-
           Inherits RPCBase
   inheritance:
   - System.Object
@@ -51,7 +50,7 @@ items:
   source:
     id: StartDialogue
     path: ''
-    startLine: 922
+    startLine: 718
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -87,21 +86,21 @@ items:
   - Public
   fullName.vb: NPCEngine.API.PersonaDialogue.StartDialogue(System.String, System.String, System.String, System.String, System.String, System.String, Action(Of System.String), Action(Of NPCEngine.NPCEngineException), System.String)
   name.vb: StartDialogue(String, String, String, String, String, String, Action(Of String), Action(Of NPCEngineException), String)
-- uid: NPCEngine.API.PersonaDialogue.StepDialogue(System.String,System.String,System.Boolean,Action{Tuple{System.String,System.Boolean}},Action{NPCEngine.NPCEngineException},System.Single,System.Collections.Generic.List{System.String},System.String)
-  commentId: M:NPCEngine.API.PersonaDialogue.StepDialogue(System.String,System.String,System.Boolean,Action{Tuple{System.String,System.Boolean}},Action{NPCEngine.NPCEngineException},System.Single,System.Collections.Generic.List{System.String},System.String)
-  id: StepDialogue(System.String,System.String,System.Boolean,Action{Tuple{System.String,System.Boolean}},Action{NPCEngine.NPCEngineException},System.Single,System.Collections.Generic.List{System.String},System.String)
+- uid: NPCEngine.API.PersonaDialogue.StepDialogue(System.String,System.String,System.Boolean,Action{Tuple{System.String,System.Boolean}},Action{NPCEngine.NPCEngineException},System.Single,List{System.String},System.String)
+  commentId: M:NPCEngine.API.PersonaDialogue.StepDialogue(System.String,System.String,System.Boolean,Action{Tuple{System.String,System.Boolean}},Action{NPCEngine.NPCEngineException},System.Single,List{System.String},System.String)
+  id: StepDialogue(System.String,System.String,System.Boolean,Action{Tuple{System.String,System.Boolean}},Action{NPCEngine.NPCEngineException},System.Single,List{System.String},System.String)
   parent: NPCEngine.API.PersonaDialogue
   langs:
   - csharp
   - vb
   name: StepDialogue(String, String, Boolean, Action<Tuple<String, Boolean>>, Action<NPCEngineException>, Single, List<String>, String)
   nameWithType: PersonaDialogue.StepDialogue(String, String, Boolean, Action<Tuple<String, Boolean>>, Action<NPCEngineException>, Single, List<String>, String)
-  fullName: NPCEngine.API.PersonaDialogue.StepDialogue(System.String, System.String, System.Boolean, Action<Tuple<System.String, System.Boolean>>, Action<NPCEngine.NPCEngineException>, System.Single, System.Collections.Generic.List<System.String>, System.String)
+  fullName: NPCEngine.API.PersonaDialogue.StepDialogue(System.String, System.String, System.Boolean, Action<Tuple<System.String, System.Boolean>>, Action<NPCEngine.NPCEngineException>, System.Single, List<System.String>, System.String)
   type: Method
   source:
     id: StepDialogue
     path: ''
-    startLine: 963
+    startLine: 759
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -128,7 +127,7 @@ items:
       type: System.Single
       description: ''
     - id: scripted_utterances
-      type: System.Collections.Generic.List{System.String}
+      type: Global.List{System.String}
       description: ''
     - id: utterance
       type: System.String
@@ -143,7 +142,7 @@ items:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: NPCEngine.API.PersonaDialogue.StepDialogue(System.String, System.String, System.Boolean, Action(Of Tuple(Of System.String, System.Boolean)), Action(Of NPCEngine.NPCEngineException), System.Single, System.Collections.Generic.List(Of System.String), System.String)
+  fullName.vb: NPCEngine.API.PersonaDialogue.StepDialogue(System.String, System.String, System.Boolean, Action(Of Tuple(Of System.String, System.Boolean)), Action(Of NPCEngine.NPCEngineException), System.Single, List(Of System.String), System.String)
   name.vb: StepDialogue(String, String, Boolean, Action(Of Tuple(Of String, Boolean)), Action(Of NPCEngineException), Single, List(Of String), String)
 references:
 - uid: NPCEngine.API
@@ -411,21 +410,20 @@ references:
   name: Single
   nameWithType: Single
   fullName: System.Single
-- uid: System.Collections.Generic.List{System.String}
-  commentId: T:System.Collections.Generic.List{System.String}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.List`1
+- uid: Global.List{System.String}
+  commentId: '!:Global.List{System.String}'
+  definition: Global.List`1
   name: List<String>
   nameWithType: List<String>
-  fullName: System.Collections.Generic.List<System.String>
+  fullName: List<System.String>
   nameWithType.vb: List(Of String)
-  fullName.vb: System.Collections.Generic.List(Of System.String)
+  fullName.vb: List(Of System.String)
   name.vb: List(Of String)
   spec.csharp:
-  - uid: System.Collections.Generic.List`1
+  - uid: Global.List`1
     name: List
     nameWithType: List
-    fullName: System.Collections.Generic.List
+    fullName: List
     isExternal: true
   - name: <
     nameWithType: <
@@ -439,10 +437,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.List`1
+  - uid: Global.List`1
     name: List
     nameWithType: List
-    fullName: System.Collections.Generic.List
+    fullName: List
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -455,48 +453,41 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Collections.Generic.List`1
-  commentId: T:System.Collections.Generic.List`1
+- uid: Global.List`1
   isExternal: true
-  name: List<T>
-  nameWithType: List<T>
-  fullName: System.Collections.Generic.List<T>
-  nameWithType.vb: List(Of T)
-  fullName.vb: System.Collections.Generic.List(Of T)
-  name.vb: List(Of T)
+  name: List<>
+  nameWithType: List<>
+  fullName: List<>
+  nameWithType.vb: List(Of )
+  fullName.vb: List(Of )
+  name.vb: List(Of )
   spec.csharp:
-  - uid: System.Collections.Generic.List`1
+  - uid: Global.List`1
     name: List
     nameWithType: List
-    fullName: System.Collections.Generic.List
+    fullName: List
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: T
-    nameWithType: T
-    fullName: T
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.List`1
+  - uid: Global.List`1
     name: List
     nameWithType: List
-    fullName: System.Collections.Generic.List
+    fullName: List
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: T
-    nameWithType: T
-    fullName: T
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Collections.Generic
-  commentId: N:System.Collections.Generic
-  isExternal: true
-  name: System.Collections.Generic
-  nameWithType: System.Collections.Generic
-  fullName: System.Collections.Generic

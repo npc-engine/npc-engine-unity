@@ -16,7 +16,7 @@ items:
   source:
     id: NPCEngineConfigEditor
     path: ''
-    startLine: 3208
+    startLine: 3024
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine
@@ -24,7 +24,6 @@ items:
     content: 'public class NPCEngineConfigEditor : Editor'
     content.vb: >-
       Public Class NPCEngineConfigEditor
-
           Inherits Editor
   inheritance:
   - System.Object
@@ -48,7 +47,7 @@ items:
   source:
     id: OnInspectorGUI
     path: ''
-    startLine: 3215
+    startLine: 3031
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine

@@ -26,7 +26,7 @@ items:
   source:
     id: CoroutineUtility
     path: ''
-    startLine: 4815
+    startLine: 4636
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Utility
@@ -36,7 +36,6 @@ items:
     content: 'public class CoroutineUtility : Singleton<CoroutineUtility>'
     content.vb: >-
       Public Class CoroutineUtility
-
           Inherits Singleton(Of CoroutineUtility)
   inheritance:
   - System.Object
@@ -64,7 +63,7 @@ items:
   source:
     id: IsRunning
     path: ''
-    startLine: 4866
+    startLine: 4687
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Utility
@@ -99,7 +98,7 @@ items:
   source:
     id: StartCoroutine
     path: ''
-    startLine: 4931
+    startLine: 4752
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Utility
@@ -134,7 +133,7 @@ items:
   source:
     id: StopCoroutine
     path: ''
-    startLine: 5012
+    startLine: 4833
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Utility
@@ -167,7 +166,7 @@ items:
   source:
     id: StopAllPlayingCoroutines
     path: ''
-    startLine: 5067
+    startLine: 4888
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Utility
@@ -198,7 +197,7 @@ items:
   source:
     id: StopAllEditorCoroutines
     path: ''
-    startLine: 5081
+    startLine: 4902
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Utility
@@ -226,7 +225,7 @@ items:
   source:
     id: StopAllEditorCoroutines
     path: ''
-    startLine: 5099
+    startLine: 4920
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Utility
@@ -257,7 +256,7 @@ items:
   source:
     id: WaitForSeconds
     path: ''
-    startLine: 5113
+    startLine: 4934
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Utility
@@ -290,7 +289,7 @@ items:
   source:
     id: GetGameObjectPath
     path: ''
-    startLine: 5127
+    startLine: 4948
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Utility
@@ -323,7 +322,7 @@ items:
   source:
     id: PrintCoroutines
     path: ''
-    startLine: 5140
+    startLine: 4961
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Utility
@@ -349,7 +348,7 @@ items:
   source:
     id: PrintEditorCoroutines
     path: ''
-    startLine: 5155
+    startLine: 4976
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Utility
@@ -375,7 +374,7 @@ items:
   source:
     id: PrintRunningCoroutines
     path: ''
-    startLine: 5172
+    startLine: 4993
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Utility

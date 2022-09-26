@@ -7,7 +7,7 @@ items:
   children:
   - NPCEngine.API.TextGeneration`1.GenerateReply(`0,System.Single,System.Int32,System.Int32,Action{System.String},Action{NPCEngine.NPCEngineException})
   - NPCEngine.API.TextGeneration`1.GetPromptTemplate(Action{System.String},Action{NPCEngine.NPCEngineException})
-  - NPCEngine.API.TextGeneration`1.GetSpecialTokens(Action{System.Collections.Generic.Dictionary{System.String,System.String}},Action{NPCEngine.NPCEngineException})
+  - NPCEngine.API.TextGeneration`1.GetSpecialTokens(Action{Dictionary{System.String,System.String}},Action{NPCEngine.NPCEngineException})
   langs:
   - csharp
   - vb
@@ -18,7 +18,7 @@ items:
   source:
     id: TextGeneration
     path: ''
-    startLine: 1099
+    startLine: 895
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -30,10 +30,11 @@ items:
     - id: ContextType
     content.vb: >-
       Public Class TextGeneration(Of ContextType As New)
-
           Inherits RPCBase
   inheritance:
   - System.Object
+  derivedClasses:
+  - NPCEngine.Components.FantasyChatbotTextGeneration
   nameWithType.vb: TextGeneration(Of ContextType)
   modifiers.csharp:
   - public
@@ -57,7 +58,7 @@ items:
   source:
     id: GenerateReply
     path: ''
-    startLine: 1122
+    startLine: 918
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -87,21 +88,21 @@ items:
   - Public
   fullName.vb: NPCEngine.API.TextGeneration(Of ContextType).GenerateReply(ContextType, System.Single, System.Int32, System.Int32, Action(Of System.String), Action(Of NPCEngine.NPCEngineException))
   name.vb: GenerateReply(ContextType, Single, Int32, Int32, Action(Of String), Action(Of NPCEngineException))
-- uid: NPCEngine.API.TextGeneration`1.GetSpecialTokens(Action{System.Collections.Generic.Dictionary{System.String,System.String}},Action{NPCEngine.NPCEngineException})
-  commentId: M:NPCEngine.API.TextGeneration`1.GetSpecialTokens(Action{System.Collections.Generic.Dictionary{System.String,System.String}},Action{NPCEngine.NPCEngineException})
-  id: GetSpecialTokens(Action{System.Collections.Generic.Dictionary{System.String,System.String}},Action{NPCEngine.NPCEngineException})
+- uid: NPCEngine.API.TextGeneration`1.GetSpecialTokens(Action{Dictionary{System.String,System.String}},Action{NPCEngine.NPCEngineException})
+  commentId: M:NPCEngine.API.TextGeneration`1.GetSpecialTokens(Action{Dictionary{System.String,System.String}},Action{NPCEngine.NPCEngineException})
+  id: GetSpecialTokens(Action{Dictionary{System.String,System.String}},Action{NPCEngine.NPCEngineException})
   parent: NPCEngine.API.TextGeneration`1
   langs:
   - csharp
   - vb
   name: GetSpecialTokens(Action<Dictionary<String, String>>, Action<NPCEngineException>)
   nameWithType: TextGeneration<ContextType>.GetSpecialTokens(Action<Dictionary<String, String>>, Action<NPCEngineException>)
-  fullName: NPCEngine.API.TextGeneration<ContextType>.GetSpecialTokens(Action<System.Collections.Generic.Dictionary<System.String, System.String>>, Action<NPCEngine.NPCEngineException>)
+  fullName: NPCEngine.API.TextGeneration<ContextType>.GetSpecialTokens(Action<Dictionary<System.String, System.String>>, Action<NPCEngine.NPCEngineException>)
   type: Method
   source:
     id: GetSpecialTokens
     path: ''
-    startLine: 1142
+    startLine: 938
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -109,7 +110,7 @@ items:
     content: public IEnumerator GetSpecialTokens(Action<Dictionary<string, string>> outputCallback = null, Action<NPCEngineException> errorCallback = null)
     parameters:
     - id: outputCallback
-      type: Global.Action{System.Collections.Generic.Dictionary{System.String,System.String}}
+      type: Global.Action{Dictionary{System.String,System.String}}
     - id: errorCallback
       type: Global.Action{NPCEngine.NPCEngineException}
     return:
@@ -121,7 +122,7 @@ items:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: NPCEngine.API.TextGeneration(Of ContextType).GetSpecialTokens(Action(Of System.Collections.Generic.Dictionary(Of System.String, System.String)), Action(Of NPCEngine.NPCEngineException))
+  fullName.vb: NPCEngine.API.TextGeneration(Of ContextType).GetSpecialTokens(Action(Of Dictionary(Of System.String, System.String)), Action(Of NPCEngine.NPCEngineException))
   name.vb: GetSpecialTokens(Action(Of Dictionary(Of String, String)), Action(Of NPCEngineException))
 - uid: NPCEngine.API.TextGeneration`1.GetPromptTemplate(Action{System.String},Action{NPCEngine.NPCEngineException})
   commentId: M:NPCEngine.API.TextGeneration`1.GetPromptTemplate(Action{System.String},Action{NPCEngine.NPCEngineException})
@@ -137,7 +138,7 @@ items:
   source:
     id: GetPromptTemplate
     path: ''
-    startLine: 1148
+    startLine: 944
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.API
@@ -352,14 +353,14 @@ references:
   fullName: NPCEngine.API.TextGeneration<ContextType>.GetSpecialTokens
   nameWithType.vb: TextGeneration(Of ContextType).GetSpecialTokens
   fullName.vb: NPCEngine.API.TextGeneration(Of ContextType).GetSpecialTokens
-- uid: Global.Action{System.Collections.Generic.Dictionary{System.String,System.String}}
-  commentId: '!:Global.Action{System.Collections.Generic.Dictionary{System.String,System.String}}'
+- uid: Global.Action{Dictionary{System.String,System.String}}
+  commentId: '!:Global.Action{Dictionary{System.String,System.String}}'
   definition: Global.Action`1
   name: Action<Dictionary<String, String>>
   nameWithType: Action<Dictionary<String, String>>
-  fullName: Action<System.Collections.Generic.Dictionary<System.String, System.String>>
+  fullName: Action<Dictionary<System.String, System.String>>
   nameWithType.vb: Action(Of Dictionary(Of String, String))
-  fullName.vb: Action(Of System.Collections.Generic.Dictionary(Of System.String, System.String))
+  fullName.vb: Action(Of Dictionary(Of System.String, System.String))
   name.vb: Action(Of Dictionary(Of String, String))
   spec.csharp:
   - uid: Global.Action`1
@@ -370,10 +371,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: System.Collections.Generic.Dictionary`2
+  - uid: Global.Dictionary`2
     name: Dictionary
     nameWithType: Dictionary
-    fullName: System.Collections.Generic.Dictionary
+    fullName: Dictionary
     isExternal: true
   - name: <
     nameWithType: <
@@ -406,10 +407,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: System.Collections.Generic.Dictionary`2
+  - uid: Global.Dictionary`2
     name: Dictionary
     nameWithType: Dictionary
-    fullName: System.Collections.Generic.Dictionary
+    fullName: Dictionary
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
