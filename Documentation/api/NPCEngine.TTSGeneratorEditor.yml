@@ -16,7 +16,7 @@ items:
   source:
     id: TTSGeneratorEditor
     path: ''
-    startLine: 4164
+    startLine: 3985
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine
@@ -24,7 +24,6 @@ items:
     content: 'public class TTSGeneratorEditor : Editor'
     content.vb: >-
       Public Class TTSGeneratorEditor
-
           Inherits Editor
   inheritance:
   - System.Object
@@ -48,7 +47,7 @@ items:
   source:
     id: OnInspectorGUI
     path: ''
-    startLine: 4166
+    startLine: 3987
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine

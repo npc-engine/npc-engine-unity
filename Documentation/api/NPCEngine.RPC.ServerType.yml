@@ -17,7 +17,7 @@ items:
   source:
     id: ServerType
     path: ''
-    startLine: 4605
+    startLine: 4426
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC
@@ -46,7 +46,7 @@ items:
   source:
     id: HTTP
     path: ''
-    startLine: 4607
+    startLine: 4428
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC
@@ -74,7 +74,7 @@ items:
   source:
     id: ZMQ
     path: ''
-    startLine: 4608
+    startLine: 4429
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC

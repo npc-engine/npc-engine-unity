@@ -18,7 +18,7 @@ items:
   source:
     id: NPCEngineSTT
     path: ''
-    startLine: 2516
+    startLine: 2332
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -26,7 +26,6 @@ items:
     content: 'public class NPCEngineSTT : AbstractSpeechToText'
     content.vb: >-
       Public Class NPCEngineSTT
-
           Inherits AbstractSpeechToText
   inheritance:
   - System.Object
@@ -56,7 +55,7 @@ items:
   source:
     id: CallSpeechToText
     path: ''
-    startLine: 2529
+    startLine: 2345
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -82,7 +81,7 @@ items:
   source:
     id: StartListening
     path: ''
-    startLine: 2534
+    startLine: 2350
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -111,7 +110,7 @@ items:
   source:
     id: StopListening
     path: ''
-    startLine: 2539
+    startLine: 2355
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components

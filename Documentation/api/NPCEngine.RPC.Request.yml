@@ -16,7 +16,7 @@ items:
   source:
     id: Request
     path: ''
-    startLine: 4528
+    startLine: 4349
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC
@@ -24,7 +24,6 @@ items:
     content: 'public class Request : Tuple<string, Action<string>>'
     content.vb: >-
       Public Class Request
-
           Inherits Tuple(Of String, Action(Of String))
   inheritance:
   - System.Object
@@ -48,7 +47,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 4530
+    startLine: 4351
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC

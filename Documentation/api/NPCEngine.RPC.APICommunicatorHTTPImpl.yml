@@ -17,7 +17,7 @@ items:
   source:
     id: APICommunicatorHTTPImpl
     path: ''
-    startLine: 4421
+    startLine: 4242
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC
@@ -27,7 +27,6 @@ items:
     content: 'public class APICommunicatorHTTPImpl : RequestDispatcherImpl'
     content.vb: >-
       Public Class APICommunicatorHTTPImpl
-
           Inherits RequestDispatcherImpl
   inheritance:
   - System.Object
@@ -55,7 +54,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 4424
+    startLine: 4245
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC
@@ -86,7 +85,7 @@ items:
   source:
     id: DispatchRequestCoroutine
     path: ''
-    startLine: 4441
+    startLine: 4262
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.RPC

@@ -20,7 +20,7 @@ items:
   source:
     id: DictationRecognizerSTT
     path: ''
-    startLine: 1527
+    startLine: 1323
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -30,7 +30,6 @@ items:
     content: 'public class DictationRecognizerSTT : AbstractSpeechToText'
     content.vb: >-
       Public Class DictationRecognizerSTT
-
           Inherits AbstractSpeechToText
   inheritance:
   - System.Object
@@ -60,7 +59,7 @@ items:
   source:
     id: debugLogs
     path: ''
-    startLine: 1532
+    startLine: 1328
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -89,7 +88,7 @@ items:
   source:
     id: PolicyNotAccepted
     path: ''
-    startLine: 1537
+    startLine: 1333
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -122,7 +121,7 @@ items:
   source:
     id: RecognizerStarted
     path: ''
-    startLine: 1548
+    startLine: 1344
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -155,7 +154,7 @@ items:
   source:
     id: StartListening
     path: ''
-    startLine: 1655
+    startLine: 1451
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -184,7 +183,7 @@ items:
   source:
     id: StopListening
     path: ''
-    startLine: 1660
+    startLine: 1456
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components

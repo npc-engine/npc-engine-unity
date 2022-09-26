@@ -21,7 +21,7 @@ items:
   source:
     id: AbstractSpeechToText
     path: ''
-    startLine: 1287
+    startLine: 1083
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -31,7 +31,6 @@ items:
     content: 'public abstract class AbstractSpeechToText : MonoBehaviour'
     content.vb: >-
       Public MustInherit Class AbstractSpeechToText
-
           Inherits MonoBehaviour
   inheritance:
   - System.Object
@@ -60,7 +59,7 @@ items:
   source:
     id: Context
     path: ''
-    startLine: 1293
+    startLine: 1089
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -95,7 +94,7 @@ items:
   source:
     id: StartListening
     path: ''
-    startLine: 1310
+    startLine: 1106
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -125,7 +124,7 @@ items:
   source:
     id: StopListening
     path: ''
-    startLine: 1315
+    startLine: 1111
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -155,7 +154,7 @@ items:
   source:
     id: OnSpeechRecognized
     path: ''
-    startLine: 1320
+    startLine: 1116
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -184,7 +183,7 @@ items:
   source:
     id: OnSpeechRecognitionFailed
     path: ''
-    startLine: 1324
+    startLine: 1120
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -213,7 +212,7 @@ items:
   source:
     id: SpeechRecognized
     path: ''
-    startLine: 1327
+    startLine: 1123
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components

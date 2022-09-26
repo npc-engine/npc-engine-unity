@@ -20,7 +20,7 @@ items:
   source:
     id: Character
     path: ''
-    startLine: 1343
+    startLine: 1139
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -30,7 +30,6 @@ items:
     content: 'public class Character : ScriptableObject'
     content.vb: >-
       Public Class Character
-
           Inherits ScriptableObject
   inheritance:
   - System.Object
@@ -54,7 +53,7 @@ items:
   source:
     id: Name
     path: ''
-    startLine: 1346
+    startLine: 1142
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -81,7 +80,7 @@ items:
   source:
     id: Persona
     path: ''
-    startLine: 1352
+    startLine: 1148
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -110,7 +109,7 @@ items:
   source:
     id: temperature
     path: ''
-    startLine: 1359
+    startLine: 1155
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -139,7 +138,7 @@ items:
   source:
     id: topK
     path: ''
-    startLine: 1366
+    startLine: 1162
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -168,7 +167,7 @@ items:
   source:
     id: numSampled
     path: ''
-    startLine: 1372
+    startLine: 1168
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components

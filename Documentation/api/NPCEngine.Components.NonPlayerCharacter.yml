@@ -38,7 +38,7 @@ items:
   source:
     id: NonPlayerCharacter
     path: ''
-    startLine: 1710
+    startLine: 1506
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -46,7 +46,6 @@ items:
     content: 'public class NonPlayerCharacter : MonoBehaviour'
     content.vb: >-
       Public Class NonPlayerCharacter
-
           Inherits MonoBehaviour
   inheritance:
   - System.Object
@@ -70,7 +69,7 @@ items:
   source:
     id: maxLines
     path: ''
-    startLine: 1713
+    startLine: 1509
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -97,7 +96,7 @@ items:
   source:
     id: defaultThreshold
     path: ''
-    startLine: 1717
+    startLine: 1513
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -126,7 +125,7 @@ items:
   source:
     id: character
     path: ''
-    startLine: 1722
+    startLine: 1518
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -155,7 +154,7 @@ items:
   source:
     id: history
     path: ''
-    startLine: 1727
+    startLine: 1523
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -164,7 +163,7 @@ items:
   syntax:
     content: public List<ChatLine> history
     return:
-      type: System.Collections.Generic.List{NPCEngine.Components.ChatLine}
+      type: Global.List{NPCEngine.Components.ChatLine}
     content.vb: Public history As List(Of ChatLine)
   modifiers.csharp:
   - public
@@ -184,7 +183,7 @@ items:
   source:
     id: OnDialogueStart
     path: ''
-    startLine: 1732
+    startLine: 1528
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -213,7 +212,7 @@ items:
   source:
     id: OnDialogueLine
     path: ''
-    startLine: 1738
+    startLine: 1534
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -242,7 +241,7 @@ items:
   source:
     id: OnProcessingStart
     path: ''
-    startLine: 1743
+    startLine: 1539
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -271,7 +270,7 @@ items:
   source:
     id: OnProcessingEnd
     path: ''
-    startLine: 1748
+    startLine: 1544
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -300,7 +299,7 @@ items:
   source:
     id: OnTopicHintsUpdate
     path: ''
-    startLine: 1753
+    startLine: 1549
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -309,7 +308,7 @@ items:
   syntax:
     content: public UnityEvent<List<string>> OnTopicHintsUpdate
     return:
-      type: Global.UnityEvent{System.Collections.Generic.List{System.String}}
+      type: Global.UnityEvent{List{System.String}}
     content.vb: Public OnTopicHintsUpdate As UnityEvent(Of List(Of String))
   modifiers.csharp:
   - public
@@ -329,7 +328,7 @@ items:
   source:
     id: OnDialogueEnd
     path: ''
-    startLine: 1758
+    startLine: 1554
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -358,7 +357,7 @@ items:
   source:
     id: audioSourceQueue
     path: ''
-    startLine: 1763
+    startLine: 1559
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -367,7 +366,7 @@ items:
   syntax:
     content: public AudioSourceQueue audioSourceQueue
     return:
-      type: Global.AudioSourceQueue
+      type: NPCEngine.Utility.AudioSourceQueue
     content.vb: Public audioSourceQueue As AudioSourceQueue
   modifiers.csharp:
   - public
@@ -387,7 +386,7 @@ items:
   source:
     id: voiceId
     path: ''
-    startLine: 1768
+    startLine: 1564
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -416,7 +415,7 @@ items:
   source:
     id: dialogueSystem
     path: ''
-    startLine: 1773
+    startLine: 1569
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -445,7 +444,7 @@ items:
   source:
     id: testLocation
     path: ''
-    startLine: 1787
+    startLine: 1583
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -472,7 +471,7 @@ items:
   source:
     id: testOtherCharacter
     path: ''
-    startLine: 1790
+    startLine: 1586
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -499,7 +498,7 @@ items:
   source:
     id: StartDialogue
     path: ''
-    startLine: 1809
+    startLine: 1605
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -527,7 +526,7 @@ items:
   source:
     id: EndDialogue
     path: ''
-    startLine: 1824
+    startLine: 1620
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -555,7 +554,7 @@ items:
   source:
     id: HandleLine
     path: ''
-    startLine: 1841
+    startLine: 1637
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -593,7 +592,7 @@ items:
   source:
     id: HandleLineCoroutine
     path: ''
-    startLine: 1850
+    startLine: 1646
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -630,7 +629,7 @@ items:
   source:
     id: HandlePlayerLineCoroutine
     path: ''
-    startLine: 1882
+    startLine: 1678
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -667,7 +666,7 @@ items:
   source:
     id: GenerateReply
     path: ''
-    startLine: 1918
+    startLine: 1720
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -708,7 +707,7 @@ items:
   source:
     id: SayNPCLines
     path: ''
-    startLine: 1947
+    startLine: 1749
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -739,7 +738,7 @@ items:
   source:
     id: GenerateAndPlaySpeech
     path: ''
-    startLine: 1985
+    startLine: 1788
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -799,21 +798,20 @@ references:
   name: Character
   nameWithType: Character
   fullName: NPCEngine.Components.Character
-- uid: System.Collections.Generic.List{NPCEngine.Components.ChatLine}
-  commentId: T:System.Collections.Generic.List{NPCEngine.Components.ChatLine}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.List`1
+- uid: Global.List{NPCEngine.Components.ChatLine}
+  commentId: '!:Global.List{NPCEngine.Components.ChatLine}'
+  definition: Global.List`1
   name: List<ChatLine>
   nameWithType: List<ChatLine>
-  fullName: System.Collections.Generic.List<NPCEngine.Components.ChatLine>
+  fullName: List<NPCEngine.Components.ChatLine>
   nameWithType.vb: List(Of ChatLine)
-  fullName.vb: System.Collections.Generic.List(Of NPCEngine.Components.ChatLine)
+  fullName.vb: List(Of NPCEngine.Components.ChatLine)
   name.vb: List(Of ChatLine)
   spec.csharp:
-  - uid: System.Collections.Generic.List`1
+  - uid: Global.List`1
     name: List
     nameWithType: List
-    fullName: System.Collections.Generic.List
+    fullName: List
     isExternal: true
   - name: <
     nameWithType: <
@@ -826,10 +824,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.List`1
+  - uid: Global.List`1
     name: List
     nameWithType: List
-    fullName: System.Collections.Generic.List
+    fullName: List
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -841,51 +839,44 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Collections.Generic.List`1
-  commentId: T:System.Collections.Generic.List`1
+- uid: Global.List`1
   isExternal: true
-  name: List<T>
-  nameWithType: List<T>
-  fullName: System.Collections.Generic.List<T>
-  nameWithType.vb: List(Of T)
-  fullName.vb: System.Collections.Generic.List(Of T)
-  name.vb: List(Of T)
+  name: List<>
+  nameWithType: List<>
+  fullName: List<>
+  nameWithType.vb: List(Of )
+  fullName.vb: List(Of )
+  name.vb: List(Of )
   spec.csharp:
-  - uid: System.Collections.Generic.List`1
+  - uid: Global.List`1
     name: List
     nameWithType: List
-    fullName: System.Collections.Generic.List
+    fullName: List
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: T
-    nameWithType: T
-    fullName: T
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.List`1
+  - uid: Global.List`1
     name: List
     nameWithType: List
-    fullName: System.Collections.Generic.List
+    fullName: List
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: T
-    nameWithType: T
-    fullName: T
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Collections.Generic
-  commentId: N:System.Collections.Generic
-  isExternal: true
-  name: System.Collections.Generic
-  nameWithType: System.Collections.Generic
-  fullName: System.Collections.Generic
 - uid: Global.UnityEvent
   isExternal: true
   name: UnityEvent
@@ -999,14 +990,14 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Global.UnityEvent{System.Collections.Generic.List{System.String}}
-  commentId: '!:Global.UnityEvent{System.Collections.Generic.List{System.String}}'
+- uid: Global.UnityEvent{List{System.String}}
+  commentId: '!:Global.UnityEvent{List{System.String}}'
   definition: Global.UnityEvent`1
   name: UnityEvent<List<String>>
   nameWithType: UnityEvent<List<String>>
-  fullName: UnityEvent<System.Collections.Generic.List<System.String>>
+  fullName: UnityEvent<List<System.String>>
   nameWithType.vb: UnityEvent(Of List(Of String))
-  fullName.vb: UnityEvent(Of System.Collections.Generic.List(Of System.String))
+  fullName.vb: UnityEvent(Of List(Of System.String))
   name.vb: UnityEvent(Of List(Of String))
   spec.csharp:
   - uid: Global.UnityEvent`1
@@ -1017,10 +1008,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: System.Collections.Generic.List`1
+  - uid: Global.List`1
     name: List
     nameWithType: List
-    fullName: System.Collections.Generic.List
+    fullName: List
     isExternal: true
   - name: <
     nameWithType: <
@@ -1045,10 +1036,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: System.Collections.Generic.List`1
+  - uid: Global.List`1
     name: List
     nameWithType: List
-    fullName: System.Collections.Generic.List
+    fullName: List
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -1103,12 +1094,17 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Global.AudioSourceQueue
-  commentId: '!:Global.AudioSourceQueue'
-  isExternal: true
+- uid: NPCEngine.Utility.AudioSourceQueue
+  commentId: T:NPCEngine.Utility.AudioSourceQueue
+  parent: NPCEngine.Utility
   name: AudioSourceQueue
   nameWithType: AudioSourceQueue
-  fullName: AudioSourceQueue
+  fullName: NPCEngine.Utility.AudioSourceQueue
+- uid: NPCEngine.Utility
+  commentId: N:NPCEngine.Utility
+  name: NPCEngine.Utility
+  nameWithType: NPCEngine.Utility
+  fullName: NPCEngine.Utility
 - uid: System.String
   commentId: T:System.String
   parent: System

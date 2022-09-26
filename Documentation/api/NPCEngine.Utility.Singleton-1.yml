@@ -17,7 +17,7 @@ items:
   source:
     id: Singleton
     path: ''
-    startLine: 5379
+    startLine: 5200
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Utility
@@ -30,11 +30,13 @@ items:
       description: ''
     content.vb: >-
       Public Class Singleton(Of T As MonoBehaviour)
-
           Inherits MonoBehaviour
   inheritance:
   - System.Object
   derivedClasses:
+  - NPCEngine.Components.NPCEngineManager
+  - NPCEngine.Components.PlayerCharacter
+  - NPCEngine.NPCEngineConfig
   - NPCEngine.Utility.CoroutineUtility
   nameWithType.vb: Singleton(Of T)
   modifiers.csharp:
@@ -59,7 +61,7 @@ items:
   source:
     id: Instance
     path: ''
-    startLine: 5383
+    startLine: 5204
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Utility
@@ -94,7 +96,7 @@ items:
   source:
     id: GetInstance
     path: ''
-    startLine: 5402
+    startLine: 5223
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Utility

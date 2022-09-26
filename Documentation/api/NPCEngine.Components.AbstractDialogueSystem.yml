@@ -26,7 +26,7 @@ items:
   source:
     id: AbstractDialogueSystem
     path: ''
-    startLine: 1214
+    startLine: 1010
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -36,7 +36,6 @@ items:
     content: 'public abstract class AbstractDialogueSystem : MonoBehaviour'
     content.vb: >-
       Public MustInherit Class AbstractDialogueSystem
-
           Inherits MonoBehaviour
   inheritance:
   - System.Object
@@ -62,7 +61,7 @@ items:
   source:
     id: StartDialogue
     path: ''
-    startLine: 1220
+    startLine: 1016
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -92,7 +91,7 @@ items:
   source:
     id: EndDialogue
     path: ''
-    startLine: 1225
+    startLine: 1021
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -122,7 +121,7 @@ items:
   source:
     id: CurrentNodeIsPlayer
     path: ''
-    startLine: 1230
+    startLine: 1026
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -154,7 +153,7 @@ items:
   source:
     id: GetCurrentNodeOptions
     path: ''
-    startLine: 1235
+    startLine: 1031
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -163,7 +162,7 @@ items:
   syntax:
     content: public abstract List<string> GetCurrentNodeOptions()
     return:
-      type: System.Collections.Generic.List{System.String}
+      type: Global.List{System.String}
     content.vb: Public MustOverride Function GetCurrentNodeOptions As List(Of String)
   overload: NPCEngine.Components.AbstractDialogueSystem.GetCurrentNodeOptions*
   modifiers.csharp:
@@ -186,7 +185,7 @@ items:
   source:
     id: GetCurrentNodeTopics
     path: ''
-    startLine: 1240
+    startLine: 1036
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -195,7 +194,7 @@ items:
   syntax:
     content: public abstract List<string> GetCurrentNodeTopics()
     return:
-      type: System.Collections.Generic.List{System.String}
+      type: Global.List{System.String}
     content.vb: Public MustOverride Function GetCurrentNodeTopics As List(Of String)
   overload: NPCEngine.Components.AbstractDialogueSystem.GetCurrentNodeTopics*
   modifiers.csharp:
@@ -218,7 +217,7 @@ items:
   source:
     id: SelectOption
     path: ''
-    startLine: 1245
+    startLine: 1041
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -251,7 +250,7 @@ items:
   source:
     id: Next
     path: ''
-    startLine: 1250
+    startLine: 1046
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -281,7 +280,7 @@ items:
   source:
     id: CurrentNodeThreshold
     path: ''
-    startLine: 1256
+    startLine: 1052
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -313,7 +312,7 @@ items:
   source:
     id: CurrentNodeNPCLine
     path: ''
-    startLine: 1262
+    startLine: 1058
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -345,7 +344,7 @@ items:
   source:
     id: CurrentNodeNPCAudio
     path: ''
-    startLine: 1268
+    startLine: 1064
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -377,7 +376,7 @@ items:
   source:
     id: IsEnd
     path: ''
-    startLine: 1270
+    startLine: 1066
   assemblies:
   - cs.temp.dll
   namespace: NPCEngine.Components
@@ -439,21 +438,20 @@ references:
   name: GetCurrentNodeOptions
   nameWithType: AbstractDialogueSystem.GetCurrentNodeOptions
   fullName: NPCEngine.Components.AbstractDialogueSystem.GetCurrentNodeOptions
-- uid: System.Collections.Generic.List{System.String}
-  commentId: T:System.Collections.Generic.List{System.String}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.List`1
+- uid: Global.List{System.String}
+  commentId: '!:Global.List{System.String}'
+  definition: Global.List`1
   name: List<String>
   nameWithType: List<String>
-  fullName: System.Collections.Generic.List<System.String>
+  fullName: List<System.String>
   nameWithType.vb: List(Of String)
-  fullName.vb: System.Collections.Generic.List(Of System.String)
+  fullName.vb: List(Of System.String)
   name.vb: List(Of String)
   spec.csharp:
-  - uid: System.Collections.Generic.List`1
+  - uid: Global.List`1
     name: List
     nameWithType: List
-    fullName: System.Collections.Generic.List
+    fullName: List
     isExternal: true
   - name: <
     nameWithType: <
@@ -467,10 +465,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.List`1
+  - uid: Global.List`1
     name: List
     nameWithType: List
-    fullName: System.Collections.Generic.List
+    fullName: List
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -483,51 +481,44 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Collections.Generic.List`1
-  commentId: T:System.Collections.Generic.List`1
+- uid: Global.List`1
   isExternal: true
-  name: List<T>
-  nameWithType: List<T>
-  fullName: System.Collections.Generic.List<T>
-  nameWithType.vb: List(Of T)
-  fullName.vb: System.Collections.Generic.List(Of T)
-  name.vb: List(Of T)
+  name: List<>
+  nameWithType: List<>
+  fullName: List<>
+  nameWithType.vb: List(Of )
+  fullName.vb: List(Of )
+  name.vb: List(Of )
   spec.csharp:
-  - uid: System.Collections.Generic.List`1
+  - uid: Global.List`1
     name: List
     nameWithType: List
-    fullName: System.Collections.Generic.List
+    fullName: List
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: T
-    nameWithType: T
-    fullName: T
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.List`1
+  - uid: Global.List`1
     name: List
     nameWithType: List
-    fullName: System.Collections.Generic.List
+    fullName: List
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: T
-    nameWithType: T
-    fullName: T
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Collections.Generic
-  commentId: N:System.Collections.Generic
-  isExternal: true
-  name: System.Collections.Generic
-  nameWithType: System.Collections.Generic
-  fullName: System.Collections.Generic
 - uid: NPCEngine.Components.AbstractDialogueSystem.GetCurrentNodeTopics*
   commentId: Overload:NPCEngine.Components.AbstractDialogueSystem.GetCurrentNodeTopics
   name: GetCurrentNodeTopics
