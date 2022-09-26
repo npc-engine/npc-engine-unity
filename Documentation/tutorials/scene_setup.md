@@ -63,11 +63,7 @@ You can read about all the other NonPlayerCharacter parameters in the [API docs]
 
 ### Starting NPC Engine server
 
-To test the character we must first start NPC Engine server and services. Go to NPCEngineManager inspector and press the big button.
-
-![Big Button](../resources/setup-scene-manager-start.PNG)
-
-Make sure that you have some services for text generation, TTS and semantic similarity, and that they are running.
+Make sure that you have some services for text generation, TTS and semantic similarity, and that they are running. (it's ok if you don't have `exported-nemo-quartznet-ctc-stt` service as it's deprecated for now and is not required)
 
 ![Services](../resources/setup-scene-manager-started.PNG)
 

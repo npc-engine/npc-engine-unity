@@ -81,8 +81,8 @@ But it does provide the best quality of recognition.
     It requires speech to be very clear and understandable as well as low noise environment.
     It also can be quite confusing for the chatbots when it does not recognize speech properly.
 
-Advanced demo scene uses `DictatinRecognizerSTT` by default, but you can try `NPCEngineSTT` just by replacing components in `FirstPersonController` gameobject.
-
+!!! note 
+    `NPCEngine.Components.NPCEngineSTT` is deprecated and does not work right now. We will update it in the future.
 ### CollisionLocationTrigger
 
 If your game has a lot of locations, you can use this component to make it easier to assign location names and descriptions to your player character.
